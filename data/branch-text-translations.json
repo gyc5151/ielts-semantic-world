@@ -392,6 +392,304 @@
           "feedback": "提出可执行规则，并承认它对访客体验的影响。"
         }
       }
+    },
+    "S11.A01": {
+      "title": "贴出照片之前",
+      "goal": "询问是否允许使用照片，接受拒绝并提出替代方案。",
+      "situation": "透明捐款箱里只有几枚硬币。阿莎想为另一个饮水站筹款。林很高兴能帮忙，但账本上还缺费用数字。旁边桌上，一张海报草稿上有梅太太站在助行架旁的照片。她的表情变了。林一时不知道该说什么。阿莎放下胶带，问道：“您愿意让我们在海报上使用这张照片吗？”\n\n梅太太坦率地回答：“我支持饮水站，但请不要使用我的照片。如果把我只呈现为一个需要帮助的人，我会感到怨恨。”她坐到安静角落的椅子上，身旁是她的知己，一位年长的志愿者；对方没有替她发言。梅太太又说：“如何对待一位邻居很重要。我们展示饮水站本身吧。”阿莎把草稿翻到背面。“当然可以。换成饮水站和它位置的示意图，您觉得怎么样？”胶带仍留在桌上。",
+      "paragraphs": [
+        {
+          "en": "The clear donation box held only a few coins. Asha wanted to raise money for another drinking-water station. Lin was delighted to help, but the cost was still missing from the ledger. At the next table, a draft poster showed Mrs Mei beside her walking frame. Her expression changed. Lin was momentarily unsure what to say. Asha put down the tape. \"Would you be comfortable with us using this photograph on the poster?\" she asked.",
+          "zh": "透明捐款箱里只有几枚硬币。阿莎想为另一个饮水站筹款。林很高兴能帮忙，但账本上还缺费用数字。旁边桌上，一张海报草稿上有梅太太站在助行架旁的照片。她的表情变了。林一时不知道该说什么。阿莎放下胶带，问道：“您愿意让我们在海报上使用这张照片吗？”"
+        },
+        {
+          "en": "Mrs Mei answered with candour. \"I support the station, but please do not use my photograph. I would resent being shown only as someone who needs help.\" She sat on a chair in a quiet corner with her confidant, an older volunteer, who did not speak for her. \"The treatment of a neighbour matters,\" Mrs Mei added. \"Let us show the station instead.\" Asha turned the draft face down. \"Of course. How about a drawing of the station and its location?\" The tape stayed on the table.",
+          "zh": "梅太太坦率地回答：“我支持饮水站，但请不要使用我的照片。如果把我只呈现为一个需要帮助的人，我会感到怨恨。”她坐到安静角落的椅子上，身旁是她的知己，一位年长的志愿者；对方没有替她发言。梅太太又说：“如何对待一位邻居很重要。我们展示饮水站本身吧。”阿莎把草稿翻到背面。“当然可以。换成饮水站和它位置的示意图，您觉得怎么样？”胶带仍留在桌上。"
+        }
+      ],
+      "prompts": {
+        "S11.A01.P01": {
+          "function": "询问具体使用意愿",
+          "cue": "你准备在社区海报上放一张照片。询问梅太太是否同意这种用途。",
+          "acceptableAnswers": [
+            "您愿意让我们在海报上使用这张照片吗？"
+          ],
+          "feedback": "说清是哪张照片、会放在哪里。提出请求不等于取得许可。"
+        },
+        "S11.A01.P02": {
+          "function": "拒绝并提出替代",
+          "cue": "梅太太支持饮水站，但不愿公开自己的照片。以她的身份回应，并建议另一种图。",
+          "acceptableAnswers": [
+            "请不要使用我的照片。可以换成饮水站的示意图吗？"
+          ],
+          "feedback": "拒绝可以清楚且礼貌。支持项目不代表同意使用照片。"
+        },
+        "S11.A01.P03": {
+          "function": "召回选择与理由",
+          "cue": "来到安静角落的椅子旁，说明梅太太会对什么感到怨恨，以及她想在海报上展示什么。",
+          "acceptableAnswers": [
+            "她会对被仅仅呈现为一个需要帮助的人感到怨恨。她希望海报改为展示饮水站。",
+            "她不希望只被呈现为一个需要帮助的人。她希望海报展示饮水站。"
+          ],
+          "feedback": "说明她已经表达的意愿，不要把她本人当作要解决的问题。"
+        },
+        "S11.A01.T01": {
+          "function": "向新社区提出不同用途的请求",
+          "cue": "新图书馆想把一位志愿者的照片放在公开网站上。写一段简短请求，说明用途，并为拒绝提供替代选择。",
+          "acceptableAnswers": [
+            "我们想在图书馆网站上使用您的照片。您愿意吗？如果不愿意，我们可以改用图书馆的照片。"
+          ],
+          "feedback": "改变使用目的和发布位置，让对方确实可以选择。"
+        }
+      }
+    },
+    "S11.A02": {
+      "title": "为选择留出空间的海报",
+      "goal": "承认计划缺少的步骤，修改筹款安排，并说明一个好处及其成立条件。",
+      "situation": "照片仍扣在桌上，阿莎打开规划本。“我们的计划有个薄弱之处，”她说，“我们一直没有加上征求许可这一步。”她接受批评，并把这个步骤写进本子，表现出谦逊。梅太太把一张新纸拉到面前。她画出通往饮水站的路，为助行架留出足够空间。林称赞这张图时，梅太太谦虚地回答：“路是你量的。我只是把它画在纸上。”\n\n他们同意避开那些为了让人同情某位邻居而使用的照片。阿莎在修改后的海报上写明每笔捐款会买什么。团队还需要供应商报价，于是她把费用标为估算。在承诺公示板前，她把自己的名字换成一句承诺：“我们会公布最终费用。”“这件事不能围着虚荣打转，”她说。林把海报带回同一个透明捐款箱。这次，下一步清清楚楚：印刷之前先拿到报价。",
+      "paragraphs": [
+        {
+          "en": "The photograph lay face down while Asha opened the planning book. \"There is a weakness in our plan,\" she said. \"We never added a step for asking permission.\" She showed humility by accepting the criticism and writing that step into the book. Mrs Mei pulled a fresh sheet towards her. She drew the path to the water station, leaving enough room for a walking frame. When Lin praised the drawing, Mrs Mei answered with modesty: \"You measured the path. I only put it on paper.\"",
+          "zh": "照片仍扣在桌上，阿莎打开规划本。“我们的计划有个薄弱之处，”她说，“我们一直没有加上征求许可这一步。”她接受批评，并把这个步骤写进本子，表现出谦逊。梅太太把一张新纸拉到面前。她画出通往饮水站的路，为助行架留出足够空间。林称赞这张图时，梅太太谦虚地回答：“路是你量的。我只是把它画在纸上。”"
+        },
+        {
+          "en": "They agreed to steer clear of pictures used to make people feel sorry for a neighbour. On the revised poster, Asha wrote what each donation would buy. The group still needed a price from the supplier, so she marked the cost as an estimate. At the pledge board, she replaced her own name with a promise: \"We will publish the final cost.\" \"This must not be about vanity,\" she said. Lin carried the poster back to the same clear donation box. This time, the next step was visible: get the price before printing.",
+          "zh": "他们同意避开那些为了让人同情某位邻居而使用的照片。阿莎在修改后的海报上写明每笔捐款会买什么。团队还需要供应商报价，于是她把费用标为估算。在承诺公示板前，她把自己的名字换成一句承诺：“我们会公布最终费用。”“这件事不能围着虚荣打转，”她说。林把海报带回同一个透明捐款箱。这次，下一步清清楚楚：印刷之前先拿到报价。"
+        }
+      ],
+      "prompts": {
+        "S11.A02.P01": {
+          "function": "承认缺失步骤",
+          "cue": "来到规划本前，修改这条指示。承认缺少征求许可的步骤，并补到任何照片使用之前。",
+          "acceptableAnswers": [
+            "我们的计划有个薄弱之处：没有征求许可。使用照片前，我们会补上这一步。"
+          ],
+          "feedback": "明确改变流程的哪一步，不要只有道歉。",
+          "draft": "在海报上使用一位邻居的照片。"
+        },
+        "S11.A02.P02": {
+          "function": "区分估算与确认的价格",
+          "cue": "供应商还未报价。阿莎该如何标记海报上的费用，印刷前还必须做什么？",
+          "acceptableAnswers": [
+            "她应把费用标为估算，并在印刷前取得供应商报价。"
+          ],
+          "feedback": "筹款目标需要明确费用；不能把估算当作已确认价格。"
+        },
+        "S11.A02.P03": {
+          "function": "召回宣传选择",
+          "cue": "来到修改后的海报旁，说明团队会避开什么，又改为展示什么。",
+          "acceptableAnswers": [
+            "团队会避开让人同情某位邻居的照片。它会展示饮水站，以及每笔捐款会买什么。"
+          ],
+          "feedback": "召回具体设计决定和替代方案，不要只列抽象态度词。"
+        },
+        "S11.A02.T01": {
+          "function": "展开一个好处与一个条件",
+          "cue": "另一个社区想用志愿者的故事为阅览室筹款。写两三句，说明一个好处和一个条件。",
+          "acceptableAnswers": [
+            "个人故事可以帮助社区为阅览室筹款。例如，一位志愿者可以解释它如何帮助家庭。不过，团队应在发布故事前征求许可，并说明资金会如何使用。"
+          ],
+          "feedback": "这是原创雅思式段落练习。提出新例子和明确条件，不要把课文当成真实证据。"
+        }
+      }
+    },
+    "S03.G01": {
+      "title": "模型上的那扇门",
+      "goal": "询问路线，并比较模型与实际入口的通行情况。",
+      "situation": "旧地图放在市中心广场的小模型旁。林在地图上沿着一条蓝线找到公交站。旁边的说明写着，这块场地曾属于一处私有庄园。如今，规划图上是一座圆形花园。细木柱立在花园边缘，临街处留着一扇门。在纸上，到达这里似乎很简单。\n\n到了真实的公交站，林问一名工人：“入口往哪边走？”他指向广场另一侧。一辆送货车停在大门旁，只留下一道窄缝。林等在一旁，看着一位家长试图推着婴儿车过去，却转身返回。模型展示了一条敞开的路，却没有展示那辆车。林在笔记本里写下一个问题：人们需要进入时，这个入口能方便通行吗？提出改动之前，她想先看看另一侧。",
+      "paragraphs": [
+        {
+          "en": "An old map rested beside a small model of a downtown square. On the map, Lin followed a blue line to the bus stop. This site had once been part of a private estate, the note said. Now the plan showed a circular garden. Thin wooden posts stood around its edge, with a gate facing the road. On paper, arriving looked simple.",
+          "zh": "旧地图放在市中心广场的小模型旁。林在地图上沿着一条蓝线找到公交站。旁边的说明写着，这块场地曾属于一处私有庄园。如今，规划图上是一座圆形花园。细木柱立在花园边缘，临街处留着一扇门。在纸上，到达这里似乎很简单。"
+        },
+        {
+          "en": "At the real bus stop, Lin asked a worker, \"Which way is the entrance?\" He pointed across the square. A delivery van stood beside the gate, leaving a narrow gap. Lin waited while a parent tried to get through with a pram. The parent turned back. The model had shown an open path, but it had not shown the van. Lin wrote a question in her notebook: would this entrance work when people needed it? Before asking for a change, she wanted to check the other side.",
+          "zh": "到了真实的公交站，林问一名工人：“入口往哪边走？”他指向广场另一侧。一辆送货车停在大门旁，只留下一道窄缝。林等在一旁，看着一位家长试图推着婴儿车过去，却转身返回。模型展示了一条敞开的路，却没有展示那辆车。林在笔记本里写下一个问题：人们需要进入时，这个入口能方便通行吗？提出改动之前，她想先看看另一侧。"
+        }
+      ],
+      "prompts": {
+        "S03.G01.P01": {
+          "function": "询问方向",
+          "cue": "你到了公交站。向工人问入口往哪边走。",
+          "acceptableAnswers": [
+            "入口往哪边走？"
+          ],
+          "feedback": "提出一个工人可以指方向回答的简短问题。"
+        },
+        "S03.G01.P02": {
+          "function": "说明入口位置",
+          "cue": "朋友手中只有模型。说明模型里大门的位置。",
+          "acceptableAnswers": [
+            "大门朝向道路，在木柱旁。"
+          ],
+          "feedback": "用朋友能够在模型上找到的位置关系说明。"
+        },
+        "S03.G01.P03": {
+          "function": "比较规划与现场",
+          "cue": "告诉规划人员模型漏了什么，以及为什么会影响带孩子的家长。",
+          "acceptableAnswers": [
+            "模型展示了敞开的路，但一辆车只留下一道窄缝。家长无法推着婴儿车通过。"
+          ],
+          "feedback": "把亲眼所见的障碍与需要通行的人联系起来。"
+        },
+        "S03.G01.T01": {
+          "function": "核实另一个入口",
+          "cue": "新图书馆的规划图上有一个宽阔入口。开放前建议核实一件事。",
+          "acceptableAnswers": [
+            "我会到现场，检查家长能否推着婴儿车通过。"
+          ],
+          "feedback": "把核实方法迁移到新地方，不要假设图书馆也停着同一辆车。"
+        }
+      }
+    },
+    "S03.G02": {
+      "title": "较安静一侧的座位",
+      "goal": "描述声景，并用观察到的情况说明一项改动的理由。",
+      "situation": "林坐在大门附近的长椅上。一辆公交车驶离，一辆货车倒车时发出尖锐的提示声。她几乎听不清朋友的话。他们走到花园另一侧，那里的树叶擦着墙面，发出轻柔的声音。只走了几步，声景就改变了。这里仍然是市中心的广场，较安静不代表完全没有声音。\n\n回到模型前，林保留了圆形花园和木柱。她把入口移到空间更充裕的一侧，并在图纸上标出送货车辆的路线。随后，她在墙边加了一个座位。“我们实地查看时，这一侧比较安静，”她告诉规划人员。“道路繁忙时，能不能再核实一次？”新座位的位置有了理由，但她没有保证它永远宁静。铅笔停在原先那扇小门旁，下一次讨论可以从这里开始。",
+      "paragraphs": [
+        {
+          "en": "Lin sat on a bench near the gate. A bus pulled away, and Lin heard a sharp warning sound as a van moved backwards. She could hardly hear her friend. They walked to the other side of the garden, where leaves made a soft sound against the wall. The soundscape changed within a few steps. It was still a downtown square; quiet did not mean silent.",
+          "zh": "林坐在大门附近的长椅上。一辆公交车驶离，一辆货车倒车时发出尖锐的提示声。她几乎听不清朋友的话。他们走到花园另一侧，那里的树叶擦着墙面，发出轻柔的声音。只走了几步，声景就改变了。这里仍然是市中心的广场，较安静不代表完全没有声音。"
+        },
+        {
+          "en": "Back at the model, Lin kept the circular garden and its wooden posts. She moved the entrance to the side with more room and marked the delivery route on the drawing. Then she added a seat near the wall. \"This side was quieter during our visit,\" she told the planner. \"Could we check it again when the road is busy?\" She had a reason for the new seat, but not a promise that it would always be peaceful. Her pencil stopped beside the same little gate. The next conversation could begin there.",
+          "zh": "回到模型前，林保留了圆形花园和木柱。她把入口移到空间更充裕的一侧，并在图纸上标出送货车辆的路线。随后，她在墙边加了一个座位。“我们实地查看时，这一侧比较安静，”她告诉规划人员。“道路繁忙时，能不能再核实一次？”新座位的位置有了理由，但她没有保证它永远宁静。铅笔停在原先那扇小门旁，下一次讨论可以从这里开始。"
+        }
+      ],
+      "prompts": {
+        "S03.G02.P01": {
+          "function": "描述听到的声音",
+          "cue": "朋友没参加实走。描述长椅与墙边之间的一处声音变化。",
+          "acceptableAnswers": [
+            "大门附近，我们听到尖锐的提示声。墙边，我们听到树叶发出轻柔的声音。"
+          ],
+          "feedback": "把两个位置都说清楚，让变化在故事中有位置。"
+        },
+        "S03.G02.P02": {
+          "function": "建议座位位置",
+          "cue": "规划人员询问座位放在哪里。根据实走给出一个位置和理由。",
+          "acceptableAnswers": [
+            "我会把座位放在墙边，因为我们查看时那一侧比较安静。"
+          ],
+          "feedback": "用观察结果说明理由，并保留观察的时间范围。"
+        },
+        "S03.G02.P03": {
+          "function": "说明图纸修改",
+          "cue": "圆形花园保留。向同事说明改了什么以及理由。",
+          "acceptableAnswers": [
+            "我们把入口移到空间更充裕的一侧，并标出了送货路线。人们需要一条畅通的进入路线。"
+          ],
+          "feedback": "区分通行条件的改动与花园形状的改动。"
+        },
+        "S03.G02.T01": {
+          "function": "提出审慎建议",
+          "cue": "学校想设室外阅读角。你去过一次，发现一处安静墙边。选定之前建议再核实什么。",
+          "acceptableAnswers": [
+            "我查看时墙边区域很安静。选定阅读角前，我会在道路繁忙时再核实声景。"
+          ],
+          "feedback": "迁移观察与核实的方法，保留对学校实际情况的开放判断。"
+        }
+      }
+    },
+    "S05.C01": {
+      "title": "比房间更大的承诺",
+      "goal": "区分工作坊的宣传承诺与可观察的动作，并改写一项承诺。",
+      "situation": "大学展示屏旁夹着的橙色传单吸引了林的注意。一个周六工作坊许诺，要在一小时内“发掘先天潜能”，并帮助每个孩子“掌握前沿技术”。林取下传单，顺着箭头走进房间，里面有铅笔、纸张和一台平板。房间看起来很亲切，但对一次短暂来访来说，这些承诺似乎太大了。她把传单放在空白纸旁，观看第一项活动。\n\n一个孩子正在画桥。他的第一条线歪向一边。于是他调整握笔姿势，放轻力度，再试一次。这些动作体现了动作技能的运用：手部细小而受控制的运动。林可以描述这些动作，而不声称它们揭示了孩子的未来。一位志愿者指导孩子使用一个简单的绘图工具。林划掉第二项承诺，写下：“孩子们可以在指导下尝试一个数字工具。”孩子举起新画作；这展示的是他今天实际做过的事。",
+      "paragraphs": [
+        {
+          "en": "The orange leaflet clipped beside the university screen caught Lin's eye. A Saturday workshop promised to \"develop inborn potentials\" and help every child \"master cutting-edge technology\" in one hour. Lin took the leaflet and followed the arrow into a room with pencils, paper and one tablet. The room looked welcoming, but the promises seemed too large for a short visit. She put the leaflet beside a blank sheet and watched the first activity.",
+          "zh": "大学展示屏旁夹着的橙色传单吸引了林的注意。一个周六工作坊许诺，要在一小时内“发掘先天潜能”，并帮助每个孩子“掌握前沿技术”。林取下传单，顺着箭头走进房间，里面有铅笔、纸张和一台平板。房间看起来很亲切，但对一次短暂来访来说，这些承诺似乎太大了。她把传单放在空白纸旁，观看第一项活动。"
+        },
+        {
+          "en": "A child was drawing a bridge. His first line bent to one side. He adjusted his grip, pressed more lightly and tried again. These were motor skills in use: small, controlled movements of his hand. Lin could describe the action without claiming that it revealed his future. A volunteer offered guidance on a simple drawing tool. Lin crossed out the second promise and wrote, \"Children can try a digital tool with guidance.\" The child lifted his new drawing; it was an example of what he had done today.",
+          "zh": "一个孩子正在画桥。他的第一条线歪向一边。于是他调整握笔姿势，放轻力度，再试一次。这些动作体现了动作技能的运用：手部细小而受控制的运动。林可以描述这些动作，而不声称它们揭示了孩子的未来。一位志愿者指导孩子使用一个简单的绘图工具。林划掉第二项承诺，写下：“孩子们可以在指导下尝试一个数字工具。”孩子举起新画作；这展示的是他今天实际做过的事。"
+        }
+      ],
+      "prompts": {
+        "S05.C01.P01": {
+          "function": "改写过大的承诺",
+          "cue": "传单承诺每个孩子一小时内掌握一项新技术。改成房间条件实际能支持的安排。",
+          "acceptableAnswers": [
+            "孩子们可以在指导下尝试一个数字工具。"
+          ],
+          "feedback": "说明活动与支持条件，不承诺完全掌握。",
+          "draft": "每个孩子都将在一小时内掌握前沿技术。"
+        },
+        "S05.C01.P02": {
+          "function": "描述可见动作",
+          "cue": "孩子调整握笔姿势，放轻力度。把它说成一项观察。",
+          "acceptableAnswers": [
+            "孩子调整了握笔姿势，并运用了细小、受控制的动作。这是在运用动作技能。"
+          ],
+          "feedback": "描述发生的事情。一张画不能证明技能提高，也不能揭示孩子未来。"
+        },
+        "S05.C01.P03": {
+          "function": "提出带条件的小范围观点",
+          "cue": "一个家庭问短工作坊是否值得尝试。给出一个依赖指导条件的适度观点。",
+          "acceptableAnswers": [
+            "如果能获得指导，短工作坊可能给孩子尝试数字工具的机会。"
+          ],
+          "feedback": "may 和 if 限定观点；这是一种可能的好处，不是已证实的结果。"
+        },
+        "S05.C01.T01": {
+          "function": "迁移：一个观点加一个理由",
+          "cue": "图书馆提供有志愿者指导的短时手工活动。给一个观点，并用可观察的活动说明理由。",
+          "acceptableAnswers": [
+            "如果有指导，这项活动可能有用，因为孩子可以尝试绘画并练习动作技能。"
+          ],
+          "feedback": "换到新场景；用具体活动支持有限观点，不承诺智力改变。"
+        }
+      }
+    },
+    "S05.C02": {
+      "title": "页边的三个日期",
+      "goal": "用观察支持适度观点，并区分可能的好处与因果证据。",
+      "situation": "吴教授把三张画放在橙色传单旁。每张都标着此前课程中不同一周的日期。最后一座桥的线条更直，但林不知道孩子在家练习过什么。教授博学，书架上摆满了书，可她写在页边的批注很朴素：“先描述作品，再谈孩子的未来。”一次观察可以引出问题，却不能把问题就此定论。\n\n她们讨论了认知发展：孩子思考和理解方式随时间发生的变化。一次短工作坊也许能提供提问的机会，尤其是在耐心指导下。但仅凭这些画，无法说明这门课程造成了那些变化。林把邀请函的安排缩小并写清楚：画一座桥、尝试一个工具、聊一聊下一步想做什么。家长可以观察活动，再决定是否回来。林把改好的邀请函夹在展示屏旁原来的橙色传单上。现在，她们有具体的活动可以提供，也留下了继续了解后续变化的余地。",
+      "paragraphs": [
+        {
+          "en": "Professor Wu placed three drawings beside the orange leaflet. Each carried a date from a different week of an earlier course. The last bridge had straighter lines, but Lin did not know what the child had practised at home. The professor was erudite; her shelves were full of books. Yet her note in the margin was plain: \"Describe the work before you describe the child's future.\" One observation could start a question, not settle it.",
+          "zh": "吴教授把三张画放在橙色传单旁。每张都标着此前课程中不同一周的日期。最后一座桥的线条更直，但林不知道孩子在家练习过什么。教授博学，书架上摆满了书，可她写在页边的批注很朴素：“先描述作品，再谈孩子的未来。”一次观察可以引出问题，却不能把问题就此定论。"
+        },
+        {
+          "en": "They discussed cognitive development: changes in how children think and understand over time. A short workshop might offer a chance to ask questions, especially with patient guidance. The drawings alone did not show that this course caused those changes. Lin made the invitation smaller and clearer: draw a bridge, try a tool and talk about a next step. A parent could watch the activity and decide whether to return. Lin clipped the corrected invitation over the same orange leaflet beside the screen. Now there was something specific to offer, and room to ask what happened later.",
+          "zh": "她们讨论了认知发展：孩子思考和理解方式随时间发生的变化。一次短工作坊也许能提供提问的机会，尤其是在耐心指导下。但仅凭这些画，无法说明这门课程造成了那些变化。林把邀请函的安排缩小并写清楚：画一座桥、尝试一个工具、聊一聊下一步想做什么。家长可以观察活动，再决定是否回来。林把改好的邀请函夹在展示屏旁原来的橙色传单上。现在，她们有具体的活动可以提供，也留下了继续了解后续变化的余地。"
+        }
+      ],
+      "prompts": {
+        "S05.C02.P01": {
+          "function": "比较观察与结论",
+          "cue": "后来的画线条更直，但孩子在家练习的情况未知。说出结果与一项限制。",
+          "acceptableAnswers": [
+            "后来的画线条更直，但一次观察不能说明是课程造成了变化。"
+          ],
+          "feedback": "先说可见差别，将尚未知晓的原因与观察分开。"
+        },
+        "S05.C02.P02": {
+          "function": "表达谨慎的教育可能性",
+          "cue": "说明有指导的活动可能与认知发展有什么关系，不把作用说成已经证实。",
+          "acceptableAnswers": [
+            "有指导的活动可能随着时间推移支持认知发展，但这些画不能证明这门课程做到了这一点。"
+          ],
+          "feedback": "may 表示可能性；over time 交代范围。这两处限定都不会把故事变为科学证据。"
+        },
+        "S05.C02.P03": {
+          "function": "把宏大邀请改为具体活动",
+          "cue": "邀请函做出宏大承诺，没有说清活动。为家长改写成两项活动与一个下一步。",
+          "acceptableAnswers": [
+            "孩子可以画桥，在耐心指导下尝试工具，并谈一谈下一步。"
+          ],
+          "feedback": "给出可以核实的活动。家庭不依靠孩子命运的承诺，也能判断安排。",
+          "draft": "孩子们将在一小时内发掘先天潜能并掌握前沿技术。"
+        },
+        "S05.C02.T01": {
+          "function": "迁移：观点与可观察的理由",
+          "cue": "博物馆组织短活动，让孩子分类物品并解释选择。给一个有限观点与一个理由。",
+          "acceptableAnswers": [
+            "在耐心指导下，这项活动可能有用，因为孩子可以解释选择并提问。一次来访不能证明持久的认知发展。"
+          ],
+          "feedback": "让观点与理由保持具体。最后的限定避免把观察变成长期改变的断言。"
+        }
+      }
     }
   }
 }

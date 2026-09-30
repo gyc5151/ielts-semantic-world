@@ -1,0 +1,158 @@
+{
+  "id": "S05.C01",
+  "branchId": "workshop-leaflet",
+  "navTitle": "传单与铅笔",
+  "title": "A promise larger than the room",
+  "goal": "Separate a workshop promise from an observable action and rewrite one claim.",
+  "memoryNodes": [
+    {
+      "object": "Orange leaflet",
+      "zh": "橙色传单",
+      "cue": "Which two promises need to be rewritten?",
+      "cueZh": "哪两个承诺需要改写？"
+    },
+    {
+      "object": "Pencil and bridge",
+      "zh": "铅笔与桥的画作",
+      "cue": "What did the child actually change?",
+      "cueZh": "孩子实际调整了什么？"
+    },
+    {
+      "object": "Tablet beside paper",
+      "zh": "纸张旁的平板",
+      "cue": "What can the invitation honestly offer?",
+      "cueZh": "邀请函可以诚实地提供什么？"
+    }
+  ],
+  "situation": "The orange leaflet clipped beside the university screen caught Lin's eye. A Saturday workshop promised to \"develop inborn potentials\" and help every child \"master cutting-edge technology\" in one hour. Lin took the leaflet and followed the arrow into a room with pencils, paper and one tablet. The room looked welcoming, but the promises seemed too large for a short visit. She put the leaflet beside a blank sheet and watched the first activity. A child was drawing a bridge. His first line bent to one side. He adjusted his grip, pressed more lightly and tried again. These were motor skills in use: small, controlled movements of his hand. Lin could describe the action without claiming that it revealed his future. A volunteer offered guidance on a simple drawing tool. Lin crossed out the second promise and wrote, \"Children can try a digital tool with guidance.\" The child lifted his new drawing; it was an example of what he had done today.",
+  "zhSupport": "先看传单许诺什么，再看孩子实际做了什么。两句原资料广告用语供识别与批改，不作为主动输出目标。",
+  "wordFile": "./data/s05-c01-words.json",
+  "provenance": {
+    "type": "Researcher inference",
+    "adaptedFrom": "IELTS_记忆宫殿_S01-S03与S05_基础词英文支线_V1.md · S05-C",
+    "note": "从项目既有支线改编为短课；人物、情节、题目与译解为原创。不是官方IELTS材料。"
+  },
+  "terms": [
+    {
+      "term": "develop inborn potentials",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 563; 雅思 PRO 班级词汇表 p.22 U9 [Writing]",
+      "canonicalTerm": "develop inborn potentials",
+      "originalContext": "雅思 PRO 班级词汇表 | Writing | 发掘潜力和兴趣 | A good education system should help students to develop their inborn potentials."
+    },
+    {
+      "term": "master cutting-edge technology",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 1179; 雅思 PRO 班级词汇表 p.22 U9 [Writing]",
+      "canonicalTerm": "master cutting-edge technology",
+      "originalContext": "雅思 PRO 班级词汇表 | Writing | 掌握前沿技术 | The course is designed for students who want to master cutting-edge technology."
+    },
+    {
+      "term": "motor skills",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 1246; 雅思 PRO 班级词汇表 p.14 U6 [Writing]",
+      "canonicalTerm": "motor skills",
+      "originalContext": "雅思 PRO 班级词汇表 | Writing | 运动技能 | Activities like drawing and painting help children to develop their fine motor skills."
+    }
+  ],
+  "glossary": [
+    {
+      "id": "S05.C01.G01",
+      "text": "develop inborn potentials",
+      "zh": "发掘先天潜能（此处是待质疑的宣传承诺）",
+      "note": "Source-derived 原词项完整保留。这里只是对传单用语的引用，不能从一小时活动推断先天潜能已被开发；不推荐作为套句输出。",
+      "type": "chunk",
+      "sourceTerm": "develop inborn potentials"
+    },
+    {
+      "id": "S05.C01.G02",
+      "text": "master cutting-edge technology",
+      "zh": "掌握前沿技术（此处是待修改的宣传承诺）",
+      "note": "Source-derived 原词项完整保留。master 的承诺强于 try；本故事的一小时体验不能支持人人掌握前沿技术。请练习改写，而不是照搬。",
+      "type": "chunk",
+      "sourceTerm": "master cutting-edge technology"
+    },
+    {
+      "id": "S05.C01.G03",
+      "text": "motor skills in use",
+      "zh": "正在运用的动作技能",
+      "note": "motor skills 指控制身体运动的技能；本句观察握笔和力度，不证明技能已因这次活动而提高。",
+      "type": "chunk",
+      "sourceTerm": "motor skills"
+    },
+    {
+      "id": "S05.C01.G04",
+      "text": "adjusted his grip",
+      "zh": "调整了握笔姿势",
+      "note": "adjust the grip 可描述可见动作；his 在此指这个孩子。",
+      "type": "chunk"
+    },
+    {
+      "id": "S05.C01.G05",
+      "text": "try a digital tool with guidance",
+      "zh": "在指导下尝试一个数字工具",
+      "note": "try 的范围小于 master；with guidance 交代条件。",
+      "type": "chunk"
+    }
+  ],
+  "retrievalPrompts": [
+    {
+      "id": "S05.C01.P01",
+      "function": "Rewrite an oversized promise",
+      "cue": "The leaflet promises that every child will master a new technology in one hour. Replace it with an offer the room can support.",
+      "acceptableAnswers": [
+        "Children can try a digital tool with guidance."
+      ],
+      "feedback": "Name the activity and the support; do not promise mastery.",
+      "activity": "rewrite",
+      "draft": "Every child will master cutting-edge technology in one hour.",
+      "targetTerms": [
+        "try a digital tool with guidance"
+      ]
+    },
+    {
+      "id": "S05.C01.P02",
+      "function": "Describe a visible action",
+      "cue": "The child changes how he holds the pencil and presses more lightly. Describe this as an observation.",
+      "acceptableAnswers": [
+        "The child adjusted his grip and used small, controlled movements. These are motor skills in use."
+      ],
+      "feedback": "Describe what happened. One drawing does not establish improvement or reveal a child's future.",
+      "activity": "explain",
+      "targetTerms": [
+        "motor skills",
+        "adjusted his grip"
+      ]
+    },
+    {
+      "id": "S05.C01.P03",
+      "function": "Give a limited opinion with a condition",
+      "cue": "A family asks whether a short workshop is worth trying. Give one modest view that depends on guidance.",
+      "acceptableAnswers": [
+        "A short workshop may give children a chance to try a digital tool if guidance is available."
+      ],
+      "feedback": "May and if limit the claim. You are offering a possible benefit, not a proven result.",
+      "activity": "opinion",
+      "targetTerms": [
+        "try a digital tool"
+      ]
+    }
+  ],
+  "transferPrompt": {
+    "id": "S05.C01.T01",
+    "function": "Transfer one opinion and one reason",
+    "cue": "A library offers a short craft session with a volunteer. Give one opinion and a reason based on an activity you could see.",
+    "acceptableAnswers": [
+      "The session may be useful if guidance is available, because children can try drawing and practise motor skills."
+    ],
+    "feedback": "Use a new setting. Connect a limited opinion to a specific activity rather than a promise about intelligence.",
+    "activity": "opinion",
+    "targetTerms": [
+      "motor skills",
+      "if guidance is available"
+    ]
+  }
+}

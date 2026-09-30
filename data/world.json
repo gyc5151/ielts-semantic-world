@@ -1,7 +1,7 @@
 {
   "sceneId": "WORLD",
   "title": "IELTS Semantic World",
-  "version": "pilot-7-0",
+  "version": "pilot-8-0",
   "dictionaryFile": "./data/wordnet-s01.json",
   "dictionaryContextFile": "./data/s01-dictionary-context.json",
   "dictionaryTranslationFile": "./data/wordnet-translations-s01.json",
@@ -23,7 +23,13 @@
     "./data/s04-w01.json",
     "./data/s04-w02.json",
     "./data/s15-w01.json",
-    "./data/s15-w02.json"
+    "./data/s15-w02.json",
+    "./data/s11-a01.json",
+    "./data/s11-a02.json",
+    "./data/s03-g01.json",
+    "./data/s03-g02.json",
+    "./data/s05-c01.json",
+    "./data/s05-c02.json"
   ],
   "textTranslationFile": "./data/s01-text-translations.json",
   "dictionaryChineseFile": "./data/wordnet-zh-s01.json",
@@ -140,6 +146,71 @@
         "S15.W01",
         "S15.W02"
       ]
+    },
+    {
+      "id": "photo-consent",
+      "title": "未征同意的照片",
+      "subtitle": "The photograph nobody asked for",
+      "theme": "community",
+      "kind": "S11 社区支线",
+      "description": "照片还没有得到许可。听清一个人的意愿，再把募款计划写得透明而具体。",
+      "entry": "社区广场 · 透明捐款箱后的规划室",
+      "returnLabel": "回到透明捐款箱，带上修改后的计划",
+      "route": [
+        "未填完整的账本",
+        "未获许可的照片",
+        "安静角落的椅子",
+        "划掉人像的海报",
+        "团队承诺板"
+      ],
+      "sceneIds": [
+        "S11.A01",
+        "S11.A02"
+      ]
+    },
+    {
+      "id": "square-gate",
+      "title": "门后的声音",
+      "subtitle": "The sound behind the gate",
+      "theme": "urban",
+      "kind": "S03 广场支线",
+      "description": "从旧地图和小模型走到真实广场。找到入口，听见两侧的差别，再带着理由修改图纸。",
+      "entry": "广场庭院模型 · 小木门",
+      "returnLabel": "回到庭院模型的小木门",
+      "route": [
+        "旧地图",
+        "模型木柱",
+        "实际通道",
+        "听声长椅",
+        "墙边树叶",
+        "修改的图纸"
+      ],
+      "sceneIds": [
+        "S03.G01",
+        "S03.G02"
+      ]
+    },
+    {
+      "id": "workshop-leaflet",
+      "title": "传单背后的工作坊",
+      "subtitle": "What a short workshop can offer",
+      "theme": "campus",
+      "kind": "S05 大学支线",
+      "description": "走进橙色传单后的真实房间：看孩子握笔，比较三张画，把宏大承诺改成具体活动。",
+      "entry": "大学展示屏旁 · 橙色推广传单",
+      "returnLabel": "回到展示屏旁的橙色传单",
+      "route": [
+        "橙色传单",
+        "铅笔与桥",
+        "纸张旁的平板",
+        "三张日期画",
+        "页边批注",
+        "改好的邀请函"
+      ],
+      "sceneIds": [
+        "S05.C01",
+        "S05.C02"
+      ]
     }
   ],
   "textTranslationFiles": [
@@ -148,7 +219,8 @@
   ],
   "dictionaryContextFiles": [
     "./data/s01-dictionary-context.json",
-    "./data/branch-dictionary-context.json"
+    "./data/branch-dictionary-context.json",
+    "./data/branch-v8-dictionary-context.json"
   ],
   "uiWordsFile": "./data/world-ui-words.json"
 }

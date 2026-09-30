@@ -35,6 +35,20 @@
   --side-bg: #2b432f; --side-mark: #496442;
   --hero-start: #fcfced; --hero-end: #e3ecd8; --theme-accent: #49693b;
 }
+[data-theme="urban"] {
+  --canvas: #f1f1eb; --paper: #fffef9; --paper-warm: #e6eceb;
+  --ink: #283b43; --muted: #607176; --line: #ced9d8;
+  --teal: #3b6570; --teal-deep: #284d56; --teal-pale: #e0eceb;
+  --side-bg: #293e44; --side-mark: #46646a;
+  --hero-start: #f7faf5; --hero-end: #e2eae6; --theme-accent: #3b6570;
+}
+[data-theme="campus"] {
+  --canvas: #f4f1f6; --paper: #fffdf9; --paper-warm: #eee7f0;
+  --ink: #383047; --muted: #71657c; --line: #ded5e2;
+  --teal: #675285; --teal-deep: #4b3867; --teal-pale: #eee6f5;
+  --side-bg: #3c324b; --side-mark: #655572;
+  --hero-start: #fffaf0; --hero-end: #ece5f2; --theme-accent: #675285;
+}
 .sidebar { background: var(--side-bg); }
 .brand-mark { background: var(--side-mark); }
 .hero { background: linear-gradient(122deg, var(--hero-start), var(--hero-end)); border-color: var(--line); }
@@ -81,6 +95,41 @@
 .side-door > span { color: var(--muted); font-size: .78rem; }
 .side-door h2 { margin: 6px 0; }
 .side-door p { margin: 8px 0 16px; }
+.route-tools { margin: 0 0 24px; padding: 20px 24px; border: 1px solid var(--line); border-radius: 16px; background: var(--paper); }
+.route-tools > label { display: block; font-size: .88rem; font-weight: 650; margin-bottom: 10px; }
+.route-tools input { width: 100%; min-height: 45px; border: 1px solid var(--line); border-radius: 8px; padding: 9px 12px; color: var(--ink); background: var(--canvas); }
+.route-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.route-filter { padding: 6px 12px; border: 1px solid var(--line); border-radius: 20px; color: var(--muted); background: var(--paper); font-size: .82rem; }
+.route-filter[aria-pressed="true"] { color: var(--teal-deep); background: var(--teal-pale); border-color: var(--teal); font-weight: 700; }
+.route-tools #routeResultCount { margin: 12px 0 0; }
+.activity-intro { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.activity-label { font-size: .8rem; padding: 4px 10px; border-radius: 5px; color: var(--teal-deep); background: var(--teal-pale); }
+.rewrite-draft { margin: 22px 0; padding: 24px; border: 1px solid var(--line); border-left: 4px solid var(--gold); border-radius: 8px; background: var(--paper-warm); }
+.rewrite-draft > span { font-size: .78rem; color: var(--muted); }
+.rewrite-draft > p { font-family: var(--font-display); font-size: 1.25rem; margin: 10px 0 16px; }
+.rewrite-draft > small { color: var(--muted); }
+.activity-check { color: var(--teal-deep); padding: 10px 14px; border-left: 3px solid var(--teal); background: var(--teal-pale); }
+.prompt-page[data-activity="compare"] .prompt-card { border-bottom: 4px solid var(--teal); }
+.prompt-page[data-activity="request"] .answer-input { border-left: 4px solid var(--teal); }
+.prompt-page[data-activity="opinion"] .answer-label span { display: block; padding-top: 6px; }
+/* Public square: spatial planning, route markers and observed constraints. */
+[data-theme="urban"] .branch-art,
+html[data-theme="urban"] .branch-hero { background-image: linear-gradient(90deg, #3b657010 2px, transparent 2px), linear-gradient(#3b657010 2px, transparent 2px); background-size: 45px 45px; background-color: var(--paper-warm); }
+html[data-theme="urban"] .memory-map { border-left: 4px solid var(--teal); }
+html[data-theme="urban"] .object-route { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+html[data-theme="urban"] .object-route li { background: var(--canvas); border-radius: 4px; }
+html[data-theme="urban"] .object-route li span { display: grid; place-items: center; width: 27px; height: 27px; border-radius: 50%; background: var(--teal-pale); }
+html[data-theme="urban"] .story-card { border-radius: 4px 20px 20px 4px; border-left: 4px solid #af9470; }
+/* University: an annotated leaflet, dated drawings and modest claims. */
+[data-theme="campus"] .branch-art { background-image: repeating-linear-gradient(0deg, transparent, transparent 24px, #67528512 25px); }
+html[data-theme="campus"] .story-card { border-top: 5px solid #b6a2cb; border-radius: 3px 3px 15px 15px; box-shadow: 5px 6px 0 #e3dbe9; }
+html[data-theme="campus"] .object-route li { border-bottom: 3px solid #b6a2cb; }
+html[data-theme="campus"] .memory-station > summary { font-family: var(--font-display); }
+html[data-theme="campus"] .rewrite-draft { border-left-color: #907044; background: #fbf4e4; }
+/* Community photo loop: leave room for the person's choices and alternatives. */
+html[data-branch="photo-consent"] .story-card { border-top: 1px solid var(--line); border-left: 5px solid #aeb9c9; }
+html[data-branch="photo-consent"] .object-route { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+html[data-branch="photo-consent"] .object-route li { align-items: start; }
 /* Housing: warm paper, photograph corners, and the blue bill as a return cue. */
 html[data-theme="home"] .story-card { border-color: #daceb8; box-shadow: 6px 7px 0 #e8decb; }
 [data-theme="home"] .branch-art { background-image: repeating-linear-gradient(0deg, transparent, transparent 25px, #ded0b733 26px); }
@@ -123,6 +172,9 @@ html[data-theme="nature"] .memory-station { border-bottom: 3px solid #b6c7a4; }
   .object-route { gap: 8px; }
   html[data-theme="science"] .memory-station { border-right: 0; border-bottom: 1px solid var(--line); }
   html[data-theme="science"] .memory-station:last-child { border-bottom: 0; }
+  html[data-theme="urban"] .object-route,
+  html[data-branch="photo-consent"] .object-route { grid-template-columns: minmax(0, 1fr); }
+  .route-tools { padding: 18px; }
 }
 @media (max-width: 480px) {
   .branch-kind { max-width: none; }
@@ -130,3 +182,7 @@ html[data-theme="nature"] .memory-station { border-bottom: 3px solid #b6c7a4; }
   .object-route li { padding: 8px 10px; }
   html[data-theme="nature"] .story-card { padding-left: 29px; background-position: 16px 0; }
 }
+
+.recognition-note { margin: 1.25rem 0; padding: 1rem 1.2rem; border-left: 3px solid var(--theme-accent); background: var(--theme-soft); }
+.recognition-note p { margin: .6rem 0; }
+.recognition-note small { line-height: 1.7; }

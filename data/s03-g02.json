@@ -1,0 +1,179 @@
+{
+  "id": "S03.G02",
+  "branchId": "square-gate",
+  "navTitle": "听一听再改图",
+  "title": "A seat on the quieter side",
+  "goal": "Describe a soundscape and explain a change using what you observed.",
+  "memoryNodes": [
+    {
+      "object": "Listening bench",
+      "zh": "听声的长椅",
+      "cue": "What made conversation difficult?",
+      "cueZh": "什么让交谈变得困难？"
+    },
+    {
+      "object": "Leaves against the wall",
+      "zh": "墙边的树叶",
+      "cue": "How did the soundscape change?",
+      "cueZh": "声景发生了什么变化？"
+    },
+    {
+      "object": "Revised drawing",
+      "zh": "修改后的图纸",
+      "cue": "Which changes have a reason, and what needs another check?",
+      "cueZh": "哪些改动有依据，还有什么需要再核实？"
+    }
+  ],
+  "situation": "Lin sat on a bench near the gate. A bus pulled away, and Lin heard a sharp warning sound as a van moved backwards. She could hardly hear her friend. They walked to the other side of the garden, where leaves made a soft sound against the wall. The soundscape changed within a few steps. It was still a downtown square; quiet did not mean silent. Back at the model, Lin kept the circular garden and its wooden posts. She moved the entrance to the side with more room and marked the delivery route on the drawing. Then she added a seat near the wall. \"This side was quieter during our visit,\" she told the planner. \"Could we check it again when the road is busy?\" She had a reason for the new seat, but not a promise that it would always be peaceful. Her pencil stopped beside the same little gate. The next conversation could begin there.",
+  "zhSupport": "沿听声长椅走到墙边，再回到图纸与模型门。不要把较安静等同于绝对安静；一次查看仅说明当时的情况。迁移题是原创练习，不是官方雅思题目。",
+  "wordFile": "./data/s03-g02-words.json",
+  "provenance": {
+    "type": "Researcher inference",
+    "adaptedFrom": "IELTS_记忆宫殿_S01-S03与S05_基础词英文支线_V1.md · S03-G",
+    "note": "从项目既有支线改编为短课；人物、情节、题目与译解为原创。不是官方IELTS材料。"
+  },
+  "terms": [
+    {
+      "term": "soundscape",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 1779; 大全直 PRO 听力预习词表 p.8 U4 [Listening]",
+      "canonicalTerm": "soundscape",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 声景 | the mixture of different sounds that are heard in a particular place"
+    },
+    {
+      "term": "circular",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 336; 大全直 PRO 听力预习词表 p.12 U6 [Listening] | 雅思 PRO 班级词汇表 p.12 U5 [Writing]",
+      "canonicalTerm": "circular",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | adj. | 圆形的 | shaped like a circle || 雅思 PRO 班级词汇表 | Writing | adj. | 环形的，循环的 | They sat around a large circular table."
+    },
+    {
+      "term": "posts",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 1451; 大全直 PRO 听力预习词表 p.11 U5 [Listening]",
+      "canonicalTerm": "posts",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 柱、杆 | long, sturdy pieces of timber or metal set upright"
+    },
+    {
+      "term": "entrance",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 706; 大全直 PRO 听力预习词表 p.13 U6 [Listening] | 大全直 PRO 听力预习词表 p.14 U7 [Listening] | 大全直 PRO 听力预习词表 p.14 U8 [Listening]",
+      "canonicalTerm": "entrance",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 入口 | a door or gate to enter a place"
+    },
+    {
+      "term": "gate",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 867; 大全直 PRO 听力预习词表 p.12 U6 [Listening]",
+      "canonicalTerm": "gate",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 大门 | a movable barrier in a wall or fence"
+    },
+    {
+      "term": "downtown",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 630; 大全直 PRO 听力预习词表 p.1 U1 [Listening]",
+      "canonicalTerm": "downtown",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | adj. | 市中心的"
+    }
+  ],
+  "glossary": [
+    {
+      "id": "S03.G02.G01",
+      "text": "the soundscape changed",
+      "zh": "声景改变了",
+      "note": "soundscape 指所处环境中声音的整体组合；不是只有音量这一维度。",
+      "type": "chunk",
+      "sourceTerm": "soundscape"
+    },
+    {
+      "id": "S03.G02.G02",
+      "text": "a few steps",
+      "zh": "几步路",
+      "note": "把听到的变化与实际移动的距离联系起来。",
+      "type": "chunk"
+    },
+    {
+      "id": "S03.G02.G03",
+      "text": "during our visit",
+      "zh": "在我们实地查看期间",
+      "note": "限定观察时间；不能凭一次查看断言始终如此。",
+      "type": "chunk"
+    },
+    {
+      "id": "S03.G02.G04",
+      "text": "marked the delivery route",
+      "zh": "标出了送货车辆的路线",
+      "note": "route 是车辆走的路线；图纸上的标注不等于已实施的安排。",
+      "type": "chunk"
+    },
+    {
+      "id": "S03.G02.G05",
+      "text": "when the road is busy",
+      "zh": "道路繁忙时",
+      "note": "用 when 给出核实条件，说明再次观察的目的。",
+      "type": "chunk"
+    }
+  ],
+  "retrievalPrompts": [
+    {
+      "id": "S03.G02.P01",
+      "function": "Describe what you heard",
+      "cue": "Your friend missed the walk. Describe one change between the bench and the wall.",
+      "acceptableAnswers": [
+        "Near the gate we heard a sharp signal. By the wall, we heard leaves making a soft sound."
+      ],
+      "feedback": "Describe both locations so the change has a place in the story.",
+      "activity": "compare",
+      "targetTerms": [
+        "soundscape",
+        "gate"
+      ]
+    },
+    {
+      "id": "S03.G02.P02",
+      "function": "Recommend a seat",
+      "cue": "The planner asks where to put a seat. Give a location and a reason from the visit.",
+      "acceptableAnswers": [
+        "I would put a seat near the wall because that side was quieter during our visit."
+      ],
+      "feedback": "Give an observation as your reason, with its time limit.",
+      "activity": "opinion",
+      "targetTerms": [
+        "soundscape"
+      ]
+    },
+    {
+      "id": "S03.G02.P03",
+      "function": "Explain a revision",
+      "cue": "The circular garden stays. Tell a colleague what changed and why.",
+      "acceptableAnswers": [
+        "We moved the entrance to the side with more room and marked the delivery route. People need a clear way in."
+      ],
+      "feedback": "Separate a change in access from a change in the garden shape.",
+      "activity": "explain",
+      "targetTerms": [
+        "entrance",
+        "circular"
+      ]
+    }
+  ],
+  "transferPrompt": {
+    "id": "S03.G02.T01",
+    "function": "Make a cautious recommendation",
+    "cue": "A school wants an outdoor reading corner. You visited once and found a quiet spot near a wall. Recommend a check before choosing it.",
+    "acceptableAnswers": [
+      "The area near the wall was quiet during my visit. I would check the soundscape again when the road is busy before choosing the reading corner."
+    ],
+    "feedback": "Transfer the observation and check, while leaving the school situation open.",
+    "activity": "opinion",
+    "targetTerms": [
+      "soundscape"
+    ]
+  }
+}

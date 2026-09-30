@@ -1,0 +1,375 @@
+{
+  "S03.G01": {
+    "estate": {
+      "senseId": "n:13246662",
+      "zh": "庄园；大片私有土地",
+      "example": "The site was once part of a private estate.",
+      "exampleZh": "这块场地曾是一处私有庄园的一部分。",
+      "usageNote": "此处对应 extensive landed property；estate agent 是另一个组合表达，不能把本句 estate 当成中介。",
+      "provenance": "External evidence · WordNet 3.0 sense ID; Researcher inference · 语境匹配、中文辅助义与原创项目例句。"
+    },
+    "posts": {
+      "senseId": "n:03988170",
+      "zh": "竖立的木柱或金属杆",
+      "example": "Wooden posts stand around the garden.",
+      "exampleZh": "木柱立在花园周围。",
+      "usageNote": "本句为 post 的名词复数。这里只限定 posts 词形，不把所有 post 动词用法也标成柱杆。",
+      "provenance": "External evidence · WordNet 3.0 sense ID; Researcher inference · 语境匹配、中文辅助义与原创项目例句。",
+      "contrasts": [
+        {
+          "senseId": "n:00586262",
+          "zh": "职位",
+          "example": "She applied for a post at the library.",
+          "exampleZh": "她申请了图书馆的一个职位。",
+          "provenance": "Researcher inference · 本项目对比例句，非 WordNet 原例句。"
+        }
+      ]
+    },
+    "site": {
+      "senseId": "n:08651247",
+      "zh": "场地；某物所在或拟建的地块",
+      "example": "Lin visited the site before suggesting a new entrance.",
+      "exampleZh": "林在建议新入口前去了现场。",
+      "usageNote": "本课 site 是实际地块，不是动词选址；匹配范围只在本课。",
+      "provenance": "External evidence · WordNet 3.0 sense ID; Researcher inference · 语境匹配、中文辅助义与原创项目例句。",
+      "contrasts": [
+        {
+          "senseId": "n:06359193",
+          "zh": "网站（WordNet 此义定义偏向承载网页的互联网计算机）",
+          "example": "The library site gives its opening hours.",
+          "exampleZh": "图书馆网站列出开放时间。",
+          "provenance": "Researcher inference · 本项目对比例句，非 WordNet 原例句。"
+        }
+      ]
+    },
+    "entrance": {
+      "senseId": "n:03290771",
+      "zh": "入口；供人进入的通道",
+      "example": "Which way is the entrance?",
+      "exampleZh": "入口往哪边走？",
+      "usageNote": "本课为名词入口；不是动词使人着迷。",
+      "provenance": "External evidence · WordNet 3.0 sense ID; Researcher inference · 语境匹配、中文辅助义与原创项目例句。"
+    },
+    "gate": {
+      "senseId": "n:03427296",
+      "zh": "栅栏或围墙上的可开关大门",
+      "example": "The gate faces the road.",
+      "exampleZh": "大门朝向道路。",
+      "usageNote": "本句大门是有形通行设施，区别于 gate 的登机口或逻辑电路等义。",
+      "provenance": "External evidence · WordNet 3.0 sense ID; Researcher inference · 语境匹配、中文辅助义与原创项目例句。"
+    },
+    "model": {
+      "senseId": "n:03777283",
+      "zh": "缩小的实体模型",
+      "example": "The model shows an open path beside the gate.",
+      "exampleZh": "模型展示了大门旁一条敞开的路。",
+      "usageNote": "本课名词 model 是广场的实体表示；不是模特、理论模型或动词建模。",
+      "provenance": "External evidence · WordNet 3.0 sense ID; Researcher inference · 语境匹配、中文辅助义与原创项目例句。"
+    }
+  },
+  "S03.G02": {
+    "posts": {
+      "senseId": "n:03988170",
+      "zh": "竖立的木柱或金属杆",
+      "example": "Wooden posts stand around the garden.",
+      "exampleZh": "木柱立在花园周围。",
+      "usageNote": "本句为 post 的名词复数。这里只限定 posts 词形，不把所有 post 动词用法也标成柱杆。",
+      "provenance": "External evidence · WordNet 3.0 sense ID; Researcher inference · 语境匹配、中文辅助义与原创项目例句。",
+      "contrasts": [
+        {
+          "senseId": "n:00586262",
+          "zh": "职位",
+          "example": "She applied for a post at the library.",
+          "exampleZh": "她申请了图书馆的一个职位。",
+          "provenance": "Researcher inference · 本项目对比例句，非 WordNet 原例句。"
+        }
+      ]
+    },
+    "entrance": {
+      "senseId": "n:03290771",
+      "zh": "入口；供人进入的通道",
+      "example": "Which way is the entrance?",
+      "exampleZh": "入口往哪边走？",
+      "usageNote": "本课为名词入口；不是动词使人着迷。",
+      "provenance": "External evidence · WordNet 3.0 sense ID; Researcher inference · 语境匹配、中文辅助义与原创项目例句。"
+    },
+    "gate": {
+      "senseId": "n:03427296",
+      "zh": "栅栏或围墙上的可开关大门",
+      "example": "The gate faces the road.",
+      "exampleZh": "大门朝向道路。",
+      "usageNote": "本句大门是有形通行设施，区别于 gate 的登机口或逻辑电路等义。",
+      "provenance": "External evidence · WordNet 3.0 sense ID; Researcher inference · 语境匹配、中文辅助义与原创项目例句。"
+    },
+    "soundscape": {
+      "zh": "声景；特定地点各种声音的整体",
+      "noMatch": true,
+      "note": "本地完整 WordNet 3.0 的四个词性索引均无 soundscape，未找到可连接的真实义项。本项目保留原资料词项和情境解释，不借用 sound 的义项冒充。",
+      "usageNote": "本地完整 WordNet 3.0 的四个词性索引均无 soundscape，未找到可连接的真实义项。本项目保留原资料词项和情境解释，不借用 sound 的义项冒充。",
+      "provenance": "Researcher inference · 未强行匹配；来源为本地完整 WordNet 3.0 候选。",
+      "example": "The soundscape changed when Lin walked from the gate to the wall.",
+      "exampleZh": "林从大门走到墙边时，声景改变了。"
+    },
+    "model": {
+      "senseId": "n:03777283",
+      "zh": "缩小的实体模型",
+      "example": "The model shows an open path beside the gate.",
+      "exampleZh": "模型展示了大门旁一条敞开的路。",
+      "usageNote": "本课名词 model 是广场的实体表示；不是模特、理论模型或动词建模。",
+      "provenance": "External evidence · WordNet 3.0 sense ID; Researcher inference · 语境匹配、中文辅助义与原创项目例句。"
+    },
+    "clear": {
+      "zh": "需结合本句判断的 clear",
+      "noMatch": true,
+      "note": "本场景中 clear 可描述透明物件、明确表达或通行条件；只有匹配到下面的短语时才连接具体 WordNet 义项，避免用一个默认义覆盖全部句子。",
+      "usageNote": "本场景中 clear 可描述透明物件、明确表达或通行条件；只有匹配到下面的短语时才连接具体 WordNet 义项，避免用一个默认义覆盖全部句子。",
+      "provenance": "Researcher inference · 未强行匹配；来源为本地完整 WordNet 3.0 候选。",
+      "uses": [
+        {
+          "senseId": "s:01622505",
+          "zh": "畅通的；可通过的",
+          "example": "People need a clear way in.",
+          "exampleZh": "人们需要一条畅通的进入路线。",
+          "usageNote": "此对应只用于正则匹配到的本句短语；未匹配的 clear 仍保留需要结合本句判断的提示。",
+          "provenance": "External evidence · WordNet 3.0 sense ID; Researcher inference · 语境匹配、中文辅助义与原创项目例句。",
+          "id": "clear-passage",
+          "pattern": "\\bclear\\s+way\\b",
+          "noMatch": false,
+          "note": "已按具体短语连接 WordNet 原义项。"
+        }
+      ]
+    }
+  },
+  "S05.C01": {
+    "motor": {
+      "zh": "动作的；与身体运动和控制有关的（motor skills）",
+      "noMatch": true,
+      "note": "WordNet 3.0 的 motor 形容词候选为从中枢神经系统向肌肉传递信息或引起运动；它们未直接覆盖本课 motor skills 所说的动作控制技能。这里不把较窄的神经传递义或名词发动机义当成本句精确义项。",
+      "usageNote": "WordNet 3.0 的 motor 形容词候选为从中枢神经系统向肌肉传递信息或引起运动；它们未直接覆盖本课 motor skills 所说的动作控制技能。这里不把较窄的神经传递义或名词发动机义当成本句精确义项。",
+      "provenance": "Researcher inference · 未强行匹配；来源为本地完整 WordNet 3.0 候选。",
+      "example": "The child practised motor skills while drawing a line.",
+      "exampleZh": "孩子画线时练习了动作技能。"
+    },
+    "master": {
+      "senseId": "v:00597634",
+      "zh": "熟练掌握（此处为待修改的宣传承诺）",
+      "example": "The leaflet promised that every child would master a new tool in one hour.",
+      "exampleZh": "传单承诺每个孩子都能在一小时内熟练掌握一个新工具。",
+      "usageNote": "动词义项解释传单措辞，项目不推荐该承诺。可改为 Children can try a digital tool with guidance. 原词项 develop inborn potentials/master cutting-edge technology 作为来源记录保留，不作效果证据。",
+      "provenance": "External evidence · WordNet 3.0 sense ID; Researcher inference · 语境匹配、中文辅助义与原创项目例句。"
+    }
+  },
+  "S05.C02": {
+    "cognitive": {
+      "senseId": "a:02898584",
+      "zh": "认知的；涉及思考与理解的",
+      "example": "They discussed cognitive development, not a result proved by one drawing.",
+      "exampleZh": "他们讨论的是认知发展，而非一幅画就证明的结果。",
+      "usageNote": "词典义项支持 cognitive 的认知义，不证明短课促进认知发展的因果效果。",
+      "provenance": "External evidence · WordNet 3.0 sense ID; Researcher inference · 语境匹配、中文辅助义与原创项目例句。"
+    },
+    "erudite": {
+      "senseId": "s:02084358",
+      "zh": "博学的；知识渊博的",
+      "example": "The professor was erudite, but her note was plain.",
+      "exampleZh": "教授很博学，但她的批注朴素易懂。",
+      "usageNote": "此词作为识别词保留；不要求每次赞扬老师都用它，也不据此认定老师的所有判断正确。",
+      "provenance": "External evidence · WordNet 3.0 sense ID; Researcher inference · 语境匹配、中文辅助义与原创项目例句。"
+    },
+    "master": {
+      "senseId": "v:00597634",
+      "zh": "熟练掌握（此处为待修改的宣传承诺）",
+      "example": "The leaflet promised that every child would master a new tool in one hour.",
+      "exampleZh": "传单承诺每个孩子都能在一小时内熟练掌握一个新工具。",
+      "usageNote": "动词义项解释传单措辞，项目不推荐该承诺。可改为 Children can try a digital tool with guidance. 原词项 develop inborn potentials/master cutting-edge technology 作为来源记录保留，不作效果证据。",
+      "provenance": "External evidence · WordNet 3.0 sense ID; Researcher inference · 语境匹配、中文辅助义与原创项目例句。"
+    }
+  },
+  "S11.A01": {
+    "raise": {
+      "senseId": "v:02306281",
+      "zh": "为特定目的筹集资金",
+      "example": "Asha wanted to raise money for a water station.",
+      "exampleZh": "阿莎想为饮水站筹款。",
+      "usageNote": "本课 raise money 是筹款行为；词典义项不说明项目已筹到钱。",
+      "provenance": "External evidence · WordNet 3.0 sense ID; Researcher inference · 语境匹配、中文辅助义与原创项目例句。",
+      "contrasts": [
+        {
+          "senseId": "v:01974062",
+          "zh": "举起；抬高",
+          "example": "Lin raised her hand to ask a question.",
+          "exampleZh": "林举起手来提问。",
+          "provenance": "Researcher inference · 本项目对比例句，非 WordNet 原例句。"
+        }
+      ]
+    },
+    "expression": {
+      "senseId": "n:04679738",
+      "zh": "面部表情",
+      "example": "Her expression changed when she saw the poster.",
+      "exampleZh": "看到海报时，她的表情变了。",
+      "usageNote": "这里观察表情变化，不能仅凭表情替她猜出意愿；还需直接询问。",
+      "provenance": "External evidence · WordNet 3.0 sense ID; Researcher inference · 语境匹配、中文辅助义与原创项目例句。",
+      "contrasts": [
+        {
+          "senseId": "n:07151380",
+          "zh": "词语；习惯表达",
+          "example": "The teacher explained the expression get through.",
+          "exampleZh": "老师解释了 get through 这个表达。",
+          "provenance": "Researcher inference · 本项目对比例句，非 WordNet 原例句。"
+        }
+      ]
+    },
+    "treatment": {
+      "senseId": "n:01134861",
+      "zh": "对待某人的方式",
+      "example": "The treatment of a neighbour matters when choosing a photograph.",
+      "exampleZh": "选择照片时，对待邻居的方式很重要。",
+      "usageNote": "本课为人与人之间的对待方式，不是治疗方案。",
+      "provenance": "External evidence · WordNet 3.0 sense ID; Researcher inference · 语境匹配、中文辅助义与原创项目例句。",
+      "contrasts": [
+        {
+          "senseId": "n:00658082",
+          "zh": "治疗；用于改善情况的照护",
+          "example": "The clinic explained the treatment before it began.",
+          "exampleZh": "诊所在开始前说明了治疗安排。",
+          "provenance": "Researcher inference · 本项目对比例句，非 WordNet 原例句。"
+        }
+      ]
+    },
+    "confidant": {
+      "senseId": "n:09954639",
+      "zh": "知己；可以倾诉私事的人",
+      "example": "Her confidant stayed beside her without speaking for her.",
+      "exampleZh": "她的知己待在她身旁，却没有替她发言。",
+      "usageNote": "confidant 是名词；不同于形容词 confident（有信心的）。本课知己不替当事人决定照片用途。",
+      "provenance": "External evidence · WordNet 3.0 sense ID; Researcher inference · 语境匹配、中文辅助义与原创项目例句。"
+    },
+    "clear": {
+      "zh": "需结合本句判断的 clear",
+      "noMatch": true,
+      "note": "本场景中 clear 可描述透明物件、明确表达或通行条件；只有匹配到下面的短语时才连接具体 WordNet 义项，避免用一个默认义覆盖全部句子。",
+      "usageNote": "本场景中 clear 可描述透明物件、明确表达或通行条件；只有匹配到下面的短语时才连接具体 WordNet 义项，避免用一个默认义覆盖全部句子。",
+      "provenance": "Researcher inference · 未强行匹配；来源为本地完整 WordNet 3.0 候选。",
+      "uses": [
+        {
+          "senseId": "a:00431447",
+          "zh": "透明的",
+          "example": "The clear donation box held a few coins.",
+          "exampleZh": "透明捐款箱里有几枚硬币。",
+          "usageNote": "此对应只用于正则匹配到的本句短语；未匹配的 clear 仍保留需要结合本句判断的提示。",
+          "provenance": "External evidence · WordNet 3.0 sense ID; Researcher inference · 语境匹配、中文辅助义与原创项目例句。",
+          "id": "clear-transparent",
+          "pattern": "\\bclear\\s+donation\\s+box\\b",
+          "noMatch": false,
+          "note": "已按具体短语连接 WordNet 原义项。"
+        },
+        {
+          "senseId": "a:00697923",
+          "zh": "明确说明的；清楚表述的",
+          "example": "A refusal can be clear and polite.",
+          "exampleZh": "拒绝可以表达得清楚而有礼貌。",
+          "usageNote": "此对应只用于正则匹配到的本句短语；未匹配的 clear 仍保留需要结合本句判断的提示。",
+          "provenance": "External evidence · WordNet 3.0 sense ID; Researcher inference · 语境匹配、中文辅助义与原创项目例句。",
+          "id": "clear-statement",
+          "pattern": "\\bclear\\s+(?:and\\s+polite|cost|condition)\\b",
+          "noMatch": false,
+          "note": "已按具体短语连接 WordNet 原义项。"
+        }
+      ]
+    }
+  },
+  "S11.A02": {
+    "raise": {
+      "senseId": "v:02306281",
+      "zh": "为特定目的筹集资金",
+      "example": "Asha wanted to raise money for a water station.",
+      "exampleZh": "阿莎想为饮水站筹款。",
+      "usageNote": "本课 raise money 是筹款行为；词典义项不说明项目已筹到钱。",
+      "provenance": "External evidence · WordNet 3.0 sense ID; Researcher inference · 语境匹配、中文辅助义与原创项目例句。",
+      "contrasts": [
+        {
+          "senseId": "v:01974062",
+          "zh": "举起；抬高",
+          "example": "Lin raised her hand to ask a question.",
+          "exampleZh": "林举起手来提问。",
+          "provenance": "Researcher inference · 本项目对比例句，非 WordNet 原例句。"
+        }
+      ]
+    },
+    "weakness": {
+      "senseId": "n:14462946",
+      "zh": "计划的缺点；薄弱之处",
+      "example": "There is a weakness in our plan: we did not ask permission.",
+      "exampleZh": "我们的计划有一个缺点：没有征求许可。",
+      "usageNote": "这里指流程缺漏，不是人物身体虚弱，也不把邻居称为计划中的问题。",
+      "provenance": "External evidence · WordNet 3.0 sense ID; Researcher inference · 语境匹配、中文辅助义与原创项目例句。",
+      "contrasts": [
+        {
+          "senseId": "n:05040275",
+          "zh": "身体或精神力量不足",
+          "example": "After the illness, she still felt weakness in her legs.",
+          "exampleZh": "病后她仍感到双腿无力。",
+          "provenance": "Researcher inference · 本项目对比例句，非 WordNet 原例句。"
+        }
+      ]
+    },
+    "humility": {
+      "senseId": "n:04889527",
+      "zh": "谦逊；不自大",
+      "example": "Asha showed humility by accepting criticism and changing the plan.",
+      "exampleZh": "阿莎接受批评并修改计划，表现出谦逊。",
+      "usageNote": "用可观察的接受批评与修改行为联系抽象词，而不把自我贬低当作任务要求。",
+      "provenance": "External evidence · WordNet 3.0 sense ID; Researcher inference · 语境匹配、中文辅助义与原创项目例句。"
+    },
+    "modesty": {
+      "senseId": "n:04900947",
+      "zh": "谦虚；不自夸",
+      "example": "Mrs Mei answered the praise with modesty.",
+      "exampleZh": "梅太太谦虚地回应称赞。",
+      "usageNote": "本课为回应称赞时不自夸的态度，不是衣着或举止合乎礼节这一另义。",
+      "provenance": "External evidence · WordNet 3.0 sense ID; Researcher inference · 语境匹配、中文辅助义与原创项目例句。"
+    },
+    "vanity": {
+      "senseId": "n:04887129",
+      "zh": "虚荣；过度自负",
+      "example": "Asha did not want the poster to be about vanity.",
+      "exampleZh": "阿莎不希望海报围绕虚荣心展开。",
+      "usageNote": "描述过度自负的态度，不是梳妆台。此处反思宣传目的，并非鼓励学生用它给他人贴标签。",
+      "provenance": "External evidence · WordNet 3.0 sense ID; Researcher inference · 语境匹配、中文辅助义与原创项目例句。"
+    },
+    "clear": {
+      "zh": "需结合本句判断的 clear",
+      "noMatch": true,
+      "note": "本场景中 clear 可描述透明物件、明确表达或通行条件；只有匹配到下面的短语时才连接具体 WordNet 义项，避免用一个默认义覆盖全部句子。",
+      "usageNote": "本场景中 clear 可描述透明物件、明确表达或通行条件；只有匹配到下面的短语时才连接具体 WordNet 义项，避免用一个默认义覆盖全部句子。",
+      "provenance": "Researcher inference · 未强行匹配；来源为本地完整 WordNet 3.0 候选。",
+      "uses": [
+        {
+          "senseId": "a:00431447",
+          "zh": "透明的",
+          "example": "The clear donation box held a few coins.",
+          "exampleZh": "透明捐款箱里有几枚硬币。",
+          "usageNote": "此对应只用于正则匹配到的本句短语；未匹配的 clear 仍保留需要结合本句判断的提示。",
+          "provenance": "External evidence · WordNet 3.0 sense ID; Researcher inference · 语境匹配、中文辅助义与原创项目例句。",
+          "id": "clear-transparent",
+          "pattern": "\\bclear\\s+donation\\s+box\\b",
+          "noMatch": false,
+          "note": "已按具体短语连接 WordNet 原义项。"
+        },
+        {
+          "senseId": "a:00697923",
+          "zh": "明确说明的；清楚表述的",
+          "example": "A refusal can be clear and polite.",
+          "exampleZh": "拒绝可以表达得清楚而有礼貌。",
+          "usageNote": "此对应只用于正则匹配到的本句短语；未匹配的 clear 仍保留需要结合本句判断的提示。",
+          "provenance": "External evidence · WordNet 3.0 sense ID; Researcher inference · 语境匹配、中文辅助义与原创项目例句。",
+          "id": "clear-statement",
+          "pattern": "\\bclear\\s+(?:and\\s+polite|cost|condition)\\b",
+          "noMatch": false,
+          "note": "已按具体短语连接 WordNet 原义项。"
+        }
+      ]
+    }
+  }
+}

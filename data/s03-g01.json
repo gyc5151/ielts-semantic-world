@@ -1,0 +1,191 @@
+{
+  "id": "S03.G01",
+  "branchId": "square-gate",
+  "navTitle": "旧地图与入口",
+  "title": "A gate on the model",
+  "goal": "Ask for a route and compare a model with the actual entrance.",
+  "memoryNodes": [
+    {
+      "object": "Old map",
+      "zh": "旧地图",
+      "cue": "What was here before the garden?",
+      "cueZh": "花园规划之前，这里是什么？"
+    },
+    {
+      "object": "Wooden posts",
+      "zh": "木柱",
+      "cue": "Where is the gate in the model?",
+      "cueZh": "模型中的大门在什么位置？"
+    },
+    {
+      "object": "Narrow gap",
+      "zh": "窄缝",
+      "cue": "Who could not get through?",
+      "cueZh": "谁没能通过？"
+    }
+  ],
+  "situation": "An old map rested beside a small model of a downtown square. On the map, Lin followed a blue line to the bus stop. This site had once been part of a private estate, the note said. Now the plan showed a circular garden. Thin wooden posts stood around its edge, with a gate facing the road. On paper, arriving looked simple. At the real bus stop, Lin asked a worker, \"Which way is the entrance?\" He pointed across the square. A delivery van stood beside the gate, leaving a narrow gap. Lin waited while a parent tried to get through with a pram. The parent turned back. The model had shown an open path, but it had not shown the van. Lin wrote a question in her notebook: would this entrance work when people needed it? Before asking for a change, she wanted to check the other side.",
+  "zhSupport": "先看旧地图，再看模型木柱，最后看实际通道。estate 此处指土地；posts 此处是柱杆。路线询问与现场比较是原创学习任务，不是原教材例句。",
+  "wordFile": "./data/s03-g01-words.json",
+  "provenance": {
+    "type": "Researcher inference",
+    "adaptedFrom": "IELTS_记忆宫殿_S01-S03与S05_基础词英文支线_V1.md · S03-G",
+    "note": "从项目既有支线改编为短课；人物、情节、题目与译解为原创。不是官方IELTS材料。"
+  },
+  "terms": [
+    {
+      "term": "downtown",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 630; 大全直 PRO 听力预习词表 p.1 U1 [Listening]",
+      "canonicalTerm": "downtown",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | adj. | 市中心的"
+    },
+    {
+      "term": "estate",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 721; 大全直 PRO 听力预习词表 p.20 U11 [Listening]",
+      "canonicalTerm": "estate",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 庄园，私有土地 | a large area of land owned by one person or organization"
+    },
+    {
+      "term": "site",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 1757; 大全直 PRO 听力预习词表 p.13 U6 [Listening] | 大全直 PRO 听力预习词表 p.23 U12 [Listening]",
+      "canonicalTerm": "site",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 地点 | a place where something is located || 大全直 PRO 听力预习词表 | Listening | n. | 场地，位置 | a location where something is built or happens"
+    },
+    {
+      "term": "circular",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 336; 大全直 PRO 听力预习词表 p.12 U6 [Listening] | 雅思 PRO 班级词汇表 p.12 U5 [Writing]",
+      "canonicalTerm": "circular",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | adj. | 圆形的 | shaped like a circle || 雅思 PRO 班级词汇表 | Writing | adj. | 环形的，循环的 | They sat around a large circular table."
+    },
+    {
+      "term": "posts",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 1451; 大全直 PRO 听力预习词表 p.11 U5 [Listening]",
+      "canonicalTerm": "posts",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 柱、杆 | long, sturdy pieces of timber or metal set upright"
+    },
+    {
+      "term": "entrance",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 706; 大全直 PRO 听力预习词表 p.13 U6 [Listening] | 大全直 PRO 听力预习词表 p.14 U7 [Listening] | 大全直 PRO 听力预习词表 p.14 U8 [Listening]",
+      "canonicalTerm": "entrance",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 入口 | a door or gate to enter a place"
+    },
+    {
+      "term": "gate",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 867; 大全直 PRO 听力预习词表 p.12 U6 [Listening]",
+      "canonicalTerm": "gate",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 大门 | a movable barrier in a wall or fence"
+    }
+  ],
+  "glossary": [
+    {
+      "id": "S03.G01.G01",
+      "text": "a downtown square",
+      "zh": "市中心的一处广场",
+      "note": "downtown 在此修饰 square；原词项保留市中心的这一用法。",
+      "type": "chunk",
+      "sourceTerm": "downtown"
+    },
+    {
+      "id": "S03.G01.G02",
+      "text": "part of a private estate",
+      "zh": "一处私有庄园的一部分",
+      "note": "estate 在本课是土地；不是售房中介，也不是本文未谈及的遗产义。",
+      "type": "chunk",
+      "sourceTerm": "estate"
+    },
+    {
+      "id": "S03.G01.G03",
+      "text": "a circular garden",
+      "zh": "一座圆形花园",
+      "note": "本句指形状，不是循环过程。",
+      "type": "chunk",
+      "sourceTerm": "circular"
+    },
+    {
+      "id": "S03.G01.G04",
+      "text": "Which way is the entrance?",
+      "zh": "入口往哪边走？",
+      "note": "向现场人员询问方向；也可问 Which way should I go?",
+      "type": "chunk",
+      "sourceTerm": "entrance"
+    },
+    {
+      "id": "S03.G01.G05",
+      "text": "get through with a pram",
+      "zh": "推着婴儿车通过",
+      "note": "get through 在此指穿过狭窄通道；不要套用完成工作这一义。",
+      "type": "chunk"
+    }
+  ],
+  "retrievalPrompts": [
+    {
+      "id": "S03.G01.P01",
+      "function": "Ask for directions",
+      "cue": "You have arrived at the bus stop. Ask a worker how to find the entrance.",
+      "acceptableAnswers": [
+        "Which way is the entrance?"
+      ],
+      "feedback": "Ask a short question that the worker can answer by pointing.",
+      "activity": "request",
+      "targetTerms": [
+        "entrance"
+      ]
+    },
+    {
+      "id": "S03.G01.P02",
+      "function": "Locate an entrance",
+      "cue": "Your friend has only the model. Explain where its gate is.",
+      "acceptableAnswers": [
+        "The gate faces the road, beside the wooden posts."
+      ],
+      "feedback": "Use a position that your friend can find on the model.",
+      "activity": "explain",
+      "targetTerms": [
+        "gate",
+        "posts"
+      ]
+    },
+    {
+      "id": "S03.G01.P03",
+      "function": "Compare plan and visit",
+      "cue": "Tell the planner what the model missed and why it matters to a parent.",
+      "acceptableAnswers": [
+        "The model shows an open path, but a van leaves a narrow gap. A parent cannot get through with a pram."
+      ],
+      "feedback": "Link an observed obstacle to a person who needs access.",
+      "activity": "compare",
+      "targetTerms": [
+        "gate",
+        "entrance"
+      ]
+    }
+  ],
+  "transferPrompt": {
+    "id": "S03.G01.T01",
+    "function": "Check a different entrance",
+    "cue": "A new library has a wide entrance on its plan. Suggest one check before it opens.",
+    "acceptableAnswers": [
+      "I would visit the site and check whether a parent can get through with a pram."
+    ],
+    "feedback": "Move the check to a new place; do not assume the library has the same van.",
+    "activity": "opinion",
+    "targetTerms": [
+      "site",
+      "entrance"
+    ]
+  }
+}

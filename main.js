@@ -1,5 +1,5 @@
-import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-7-0";
-import { nextReview } from "./learning.mjs?v=pilot-7-0";
+import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-8-0";
+import { nextReview } from "./learning.mjs?v=pilot-8-0";
 const DATA_URL = "./data/world.json";
 const STORAGE_KEY = "ielts-semantic-world-s01-trial-v1";
 
@@ -9,6 +9,9 @@ const nav = document.querySelector("#sceneNav");
 const glossaryDialog = document.querySelector("#glossaryDialog");
 let glossaryReturnFocus = null;
 let content;
+let contentReady = false;
+let worldQuery = "";
+let worldCategory = "all";
 let activeBranchId = "housing";
 let wordnet = null;
 let dictionaryContext = {};
@@ -72,7 +75,7 @@ function allPrompts() {
 function assertWordCoverage(scene) {
   const passages = [scene.title, scene.goal, scene.situation, ...(scene.memoryNodes || []).flatMap((n) => [n.object, n.cue])];
   for (const prompt of promptsFor(scene)) {
-    passages.push(prompt.function, prompt.cue, prompt.feedback, ...(prompt.acceptableAnswers || []));
+    passages.push(prompt.function, prompt.cue, prompt.feedback, prompt.draft || "", ...(prompt.acceptableAnswers || []));
   }
   const missing = new Set();
   for (const passage of passages) {
@@ -120,6 +123,7 @@ function renderChrome() {
   const branch = scene ? branchForScene(scene) : ui.page === "branch" ? getBranch(activeBranchId) : null;
   if (branch) activeBranchId = branch.id;
   document.documentElement.dataset.theme = branch?.theme || "world";
+  document.documentElement.dataset.branch = branch?.id || "world";
   document.querySelector("#sidebarEyebrow").textContent = branch ? branch.kind : "IELTS / SEMANTIC WORLD";
   document.querySelector("#sidebarTitle").textContent = branch?.title || "从一个场景，走进一个世界。";
   document.querySelector("#sidebarDescription").textContent = branch?.description || "用真实的决定串起物件、动作与英语。今天只选一条路。";
@@ -146,6 +150,7 @@ function renderChrome() {
 }
 
 function navigate(page, sceneId = null, { updateUrl = true } = {}) {
+  if (!contentReady) return;
   if (ui.page === "prompt" && !ui.revealed) {
     const input = app.querySelector("#answerInput");
     if (input) drafts[`${ui.sceneId}:${ui.promptIndex}`] = { response: input.value, support: ui.support };
@@ -173,8 +178,8 @@ function restoreRoute() {
   navigate("home", null, { updateUrl: false });
 }
 
-window.addEventListener("popstate", () => { if (content?.microScenes) restoreRoute(); });
-window.addEventListener("hashchange", () => { if (content?.microScenes) restoreRoute(); });
+window.addEventListener("popstate", () => { if (contentReady) restoreRoute(); });
+window.addEventListener("hashchange", () => { if (contentReady) restoreRoute(); });
 
 function render() {
   if (!content) return;
@@ -192,6 +197,8 @@ function themeIllustration(theme) {
     home: '<path d="M35 103V50l57-34 57 34v53M58 103V65h33v38M106 64h22v22h-22M158 104h41l-5-23h-31zM179 81V48m0 14c-30-1-25-26-25-26 22 0 25 26 25 26m0 5c30-1 25-26 25-26-22 0-25 26-25 26"/>',
     community: '<rect x="25" y="18" width="116" height="90" rx="4"/><path d="M42 37h62M42 50h82M42 72h38m-38 13h48m3-17 20 12-20 12"/><circle cx="181" cy="56" r="29"/><path d="M181 38v20l16 9M162 100h39"/>',
     science: '<path d="M47 17h36m-28 0v34l-29 47q-4 10 7 10h64q11 0 7-10L75 51V17M41 81h47M145 33h49m-41 0v55q16 38 33 0V33M153 69h33M124 108h91"/><path d="m119 19 14 11 18-15"/>',
+    urban: '<path d="M25 22h180v82H25zM25 48h180M25 78h180M66 22v82M147 22v82"/><path d="M85 58h43v11H85M104 84v19M52 29v10m113 22v12"/><circle cx="177" cy="35" r="7"/>',
+    campus: '<path d="M36 14h103l22 21v77H36zM139 14v21h22M52 48h86M52 64h70M52 82h39M52 94h77"/><path d="m181 92 24-59-9-4-24 59-1 16zM181 92l-9-4M67 21l13 5"/>',
     nature: '<path d="M22 92q45-18 89 0t89 0M22 107q45-18 89 0t89 0M44 78V46m0 15L30 47m14 8 14-20M168 76V31m0 22 16-15m-16 21-16-18M79 36q9-12 18 0 9-12 18 0M111 57q9-12 18 0 9-12 18 0"/><circle cx="188" cy="20" r="9"/>'
   };
   return `<svg class="theme-illustration" viewBox="0 0 230 125" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${art[theme] || art.home}</svg>`;
@@ -206,11 +213,13 @@ function renderHome() {
       <div class="world-stats"><span>${content.branches.length} 条路线</span><span>${content.microScenes.length} 个短场景</span><span>${allPrompts().length} 个表达任务</span></div>
     </section>
     <section class="section-heading"><div><div class="eyebrow">CHOOSE A SIDE DOOR</div><h2>今天，选一条路。</h2></div><p>先选 3–4 个有用表达。每条路都能回到它的起点。</p></section>
+    <section class="route-tools" aria-label="筛选学习路线"><label for="routeSearch">找一个场景或想说的事</label><input id="routeSearch" type="search" placeholder="例如：大学、照片、问路、water…" autocomplete="off" />
+    <div class="route-filters" aria-label="路线分类">${[['all','全部'],['life','日常生活'],['public','社区与城市'],['study','学习与研究'],['nature','自然环境']].map(([id,label]) => `<button class="route-filter" type="button" data-route-filter="${id}" aria-pressed="${worldCategory === id}">${label}</button>`).join('')}</div><p id="routeResultCount" class="meta" role="status" aria-live="polite"></p></section>
     <div class="branch-grid">${content.branches.map((branch) => {
       const scenes = branchScenes(branch);
       const tasks = scenes.flatMap(promptsFor);
       const done = tasks.filter((prompt) => practice.reviews[prompt.id]).length;
-      return `<article class="branch-card" data-theme="${escapeHtml(branch.theme)}">
+      return `<article class="branch-card" data-branch-card="${escapeHtml(branch.id)}" data-theme="${escapeHtml(branch.theme)}">
         <div class="branch-art">${themeIllustration(branch.theme)}<span class="branch-kind">${escapeHtml(branch.kind)}</span></div>
         <div class="branch-card-body"><h3>${escapeHtml(branch.title)}</h3><p class="branch-subtitle" lang="en">${annotatedEnglish(branch.subtitle, scenes[0])}</p>
         <p>${escapeHtml(branch.description)}</p><div class="branch-mini-route">${branch.route.slice(0, 3).map(escapeHtml).join(' → ')} → …</div>
@@ -218,11 +227,43 @@ function renderHome() {
         <button class="secondary-btn" type="button" data-open-branch="${escapeHtml(branch.id)}">${branch.kind === '主线' ? '进入找房主线' : `走进${escapeHtml(branch.title)}`} <span aria-hidden="true">↗</span></button></div>
       </article>`;
     }).join('')}</div>
+    <div class="empty-state" id="routeEmpty" hidden>没有找到这条路线。试试场景里的物件、地点或英文关键词。</div>
     <section class="principle-strip"><strong>记住路线，是为了说出事件。</strong><span>英中文辅助、单词与搭配弹窗、独立召回和到期复习，所有主题都使用同一套操作。</span></section>`;
   app.querySelector('#startFirst').addEventListener('click', () => openBranch('housing'));
   app.querySelector('#openReview').addEventListener('click', () => navigate('review'));
   app.querySelectorAll('[data-open-branch]').forEach((button) => button.addEventListener('click', () => openBranch(button.dataset.openBranch)));
+  app.querySelector('#routeSearch').value = worldQuery;
+  app.querySelector('#routeSearch').addEventListener('input', (event) => { worldQuery = event.target.value; filterRoutes(); });
+  app.querySelectorAll('[data-route-filter]').forEach((button) => button.addEventListener('click', () => {
+    worldCategory = button.dataset.routeFilter;
+    app.querySelectorAll('[data-route-filter]').forEach((item) => item.setAttribute('aria-pressed', String(item.dataset.routeFilter === worldCategory)));
+    filterRoutes();
+  }));
+  filterRoutes();
 }
+
+function filterRoutes() {
+  const groups = { home: 'life', community: 'public', urban: 'public', science: 'study', campus: 'study', nature: 'nature' };
+  const query = worldQuery.trim().toLocaleLowerCase();
+  let visible = 0;
+  for (const card of app.querySelectorAll('[data-branch-card]')) {
+    const branch = getBranch(card.dataset.branchCard);
+    const search = [branch.title, branch.subtitle, branch.description, ...branch.route, ...branchScenes(branch).flatMap((scene) => [scene.navTitle, scene.title, scene.goal, textTranslations[scene.id]?.goal || '', ...(scene.terms || []).map((term) => term.term), ...(scene.glossary || []).flatMap((entry) => [entry.text, entry.zh])])].join(' ').toLocaleLowerCase();
+    const matches = (!query || search.includes(query)) && (worldCategory === 'all' || groups[branch.theme] === worldCategory);
+    card.hidden = !matches;
+    if (matches) visible += 1;
+  }
+  app.querySelector('#routeResultCount').textContent = `显示 ${visible} / ${content.branches.length} 条路线`;
+  app.querySelector('#routeEmpty').hidden = visible !== 0;
+}
+
+const ACTIVITY_META = {
+  explain: { label: '说明发生了什么', title: '把这件事说明白。', hint: '用英语说一两句：信息 → 原因或下一步。', placeholder: 'Explain what happened and why…', goal: '说明关键事实，并给出它带来的原因或行动。' },
+  request: { label: '开口询问', title: '这次，请开口询问。', hint: '写一句明确、礼貌、对方能够回答的请求或问题。', placeholder: 'Ask what you need to know…', goal: '把人物需要知道或需要对方做的事说清楚。' },
+  compare: { label: '比较两边', title: '把两边的信息说清楚。', hint: '写两句：两者在哪一方面不同，这如何影响选择？', placeholder: 'Compare the two options or observations…', goal: '沿同一个比较维度说出差异与后果。' },
+  rewrite: { label: '修改一句话', title: '让这句话更准确。', hint: '重新写一句：保留有根据的信息，修改过大的承诺或遗漏。', placeholder: 'Write a clearer, more accurate version…', goal: '根据情境修改原句；不需要把所有词都换掉。' },
+  opinion: { label: '观点与条件', title: '说出观点，也留好条件。', hint: '写两三句：你的观点 → 一个具体理由或例子 → 必要条件。', placeholder: 'Give a view, a reason and a condition…', goal: '提出可解释的看法，并说明它在哪些条件下适用。' }
+};
 
 function renderBranch() {
   const branch = getBranch(activeBranchId);
@@ -417,6 +458,7 @@ function renderScene() {
         <div class="story-text">${readingHtml(scene)}</div>
       </div>
       ${memoryRouteHtml(scene)}
+      ${scene.recognitionTerms?.length ? `<aside class="recognition-note"><strong>这些词先读懂即可</strong><p>${scene.recognitionTerms.map((term) => annotatedEnglish(term, scene)).join(" · ")}</p><small>主动练习先完成询问、解释或建议；不必把这些词全部放进答案。</small></aside>` : ""}
       ${sideDoors.map((branch) => `<section class="side-door"><span>这张桌子旁还有一扇侧门</span><h2>${escapeHtml(branch.title)}</h2><p>${escapeHtml(branch.description)}</p><button class="secondary-btn" type="button" data-side-door="${escapeHtml(branch.id)}">先走这条支线 ↗</button></section>`).join('')}
       <div class="callout"><strong>下一步</strong><span>点击“合上原文，开始说英语”。练习页不会先显示目标词。卡住时可打开情节支架；系统会记录是否用了提示。</span></div>
       <div class="button-row"><button class="primary-btn" type="button" id="beginScene">${done === total ? "重新练习本场景" : "合上原文，开始说英语"}</button>${nextScene ? `<button class="secondary-btn" type="button" id="nextScene">进入下一站：${escapeHtml(nextScene.navTitle || nextScene.title)} →</button>` : ""}<button class="secondary-btn" type="button" id="backHome">返回当前路线</button></div>
@@ -449,25 +491,27 @@ function renderPrompt() {
   const prompt = prompts[ui.promptIndex];
   if (!prompt) return navigate("scene", scene.id);
   const isTransfer = ui.promptIndex === prompts.length - 1;
+  const activity = ACTIVITY_META[prompt.activity] || ACTIVITY_META.explain;
   const draft = drafts[`${scene.id}:${ui.promptIndex}`];
   if (!ui.revealed && ui.support === "none" && draft) ui.support = draft.support;
   const translated = textTranslations[scene.id]?.prompts?.[prompt.id];
   const saved = ui.submittedAttemptId ? practice.attempts.find((attempt) => attempt.id === ui.submittedAttemptId) : null;
   app.innerHTML = `
-    <section class="prompt-page">
+    <section class="prompt-page" data-activity="${escapeHtml(prompt.activity || "explain")}">
       <div class="prompt-topline"><span class="eyebrow">${escapeHtml(scene.id)} / ${isTransfer ? "NEW SITUATION" : `RETRIEVAL ${ui.promptIndex + 1} OF ${prompts.length - 1}`}</span><span class="badge">${ui.reviewMode ? "到期复习" : "无英文答案提示"}</span></div>
-      <h1>${isTransfer ? "换一个情境，再说一次。" : "现在轮到你说。"}</h1>
+      <h1>${isTransfer ? "换一个情境，再说一次。" : activity.title}</h1>
       <p class="lead">${ui.revealed ? annotatedEnglish(prompt.function || scene.goal || "", scene) : "先根据下面的情境，用自己的英语表达要说的信息、判断或请求。"}</p>
       <div class="prompt-card">
-        <div class="eyebrow">SITUATION → LANGUAGE</div>
+        <div class="activity-intro"><span class="eyebrow">SITUATION → LANGUAGE</span><span class="activity-label">${activity.label}</span></div>
         <h2>${annotatedEnglish(prompt.cue || "", scene)}</h2>
         ${textTranslation(translated?.cue, "显示题目中文（记为提示）")}
         <p class="meta">你可以用自己的正确说法回答；不必猜中某个唯一词。</p>
       </div>
+      ${prompt.draft ? `<section class="rewrite-draft"><span>需要修改的原句</span><p lang="en">${annotatedEnglish(prompt.draft, scene)}</p>${textTranslation(translated?.draft, '原句中文（记为提示）')}<small>结合上面的事实，写出更准确、合适的表达。</small></section>` : ""}
       ${ui.support === "chinese" || ui.support === "story" ? `<div class="hint-panel"><strong>${ui.support === "story" ? "原文已重新打开" : "情节支架"}</strong>${ui.support === "story" ? readingHtml(scene) : `<p>${escapeHtml(isTransfer ? "先说清新人物遇到什么问题、有哪些条件，再给出行动、判断或请求。用自己的句子表达。" : (scene.zhSupport || "先说清谁遇到什么问题、想得到什么结果，再找英语表达。"))}</p>`}<small>这次答题将标记为“使用提示”。</small></div>` : ""}
       ${!ui.revealed ? `
-        <label class="answer-label" for="answerInput">Your answer <span>用英语说一两句即可</span></label>
-        <textarea id="answerInput" class="answer-input" rows="5" placeholder="Write what you would actually say…" autocomplete="off" spellcheck="true"></textarea>
+        <label class="answer-label" for="answerInput">Your answer <span>${activity.hint}</span></label>
+        <textarea id="answerInput" class="answer-input" rows="5" placeholder="${activity.placeholder}" autocomplete="off" spellcheck="true"></textarea>
         <div class="button-row"><button class="primary-btn" type="button" id="submitAnswer">提交并查看参考表达</button><button class="secondary-btn" type="button" id="cannotRecall">暂时想不出</button></div>
         ${scene.memoryNodes?.length ? `<details class="memory-hint" data-memory-hint><summary>借物件路线回想（记为提示）</summary>${memoryRouteHtml(scene)}</details>` : ""}
         <div class="hint-actions"><button class="text-btn" type="button" id="showChinese">${ui.support === "chinese" ? "已显示情节支架" : "需要情节支架？"}</button>${isTransfer ? "" : `<button class="text-btn" type="button" id="showStory">重新看英文情境</button>`}</div>
@@ -495,7 +539,7 @@ function renderPrompt() {
 
 function termsForPrompt(scene, prompt) {
   const names = new Set((prompt.targetTerms || []).map((term) => String(term).toLowerCase()));
-  if (!names.size) return scene.terms || [];
+  if (!names.size) return Array.isArray(prompt.targetTerms) ? [] : scene.terms || [];
   return (scene.terms || []).filter((item) => names.has(String(item.term).toLowerCase()));
 }
 
@@ -508,6 +552,7 @@ function renderFeedback(scene, prompt, attempt) {
     <div class="feedback" role="region" aria-label="参考表达与自评">
       <div class="eyebrow">COMPARE / THEN DECIDE</div>
       <h2>先核对表达的意图，再核对用词。</h2>
+      <p class="activity-check">${(ACTIVITY_META[prompt.activity] || ACTIVITY_META.explain).goal}</p>
       <div class="your-answer"><span class="meta">你的原答${attempt?.support !== "none" ? " · 使用了提示" : " · 未使用提示"}</span><p>${attempt?.response ? escapeHtml(attempt.response) : "（这次暂时想不出）"}</p></div>
       <div class="sample-answers"><strong>参考说法 <small>点单词看释义，点 ↗ 看整块表达</small></strong>${answers.map((answer, index) => `<div><p lang="en">“${annotatedEnglish(answer, scene)}”</p>${textTranslation(translated?.acceptableAnswers?.[index], "参考表达中文")}</div>`).join("")}</div>
       <p class="feedback-note">${annotatedEnglish(prompt.feedback || "比较你的说法是否完成了情境中的交流目的。合理改述也可以正确。", scene)}</p>
@@ -539,6 +584,7 @@ function submitAnswer(empty) {
     promptId: prompt.id,
     sceneId: scene.id,
     contentVersion: content.version || "v1",
+    activity: prompt.activity || "explain",
     attemptedAt: now,
     response,
     support: ui.support,
@@ -608,7 +654,7 @@ function renderReview() {
 function renderAbout() {
   app.innerHTML = `
     <section class="simple-page"><div class="eyebrow">ABOUT THIS TRIAL</div><h1>这是一段学习实验。</h1>
-      <div class="about-copy"><p>本原型目前包含 ${content.branches.length} 条路线、${content.microScenes.length} 个文字微场景、${allPrompts().length} 个表达任务。S01 找房主线之外，已接入住房、社区、研究与湿地支线。不同内容采用不同纸张、颜色和物件排布，学习操作保持一致。它展示从情境到英语表达的学习流程，不是正式 IELTS 考试，也不提供自动语言评分。</p>
+      <div class="about-copy"><p>本原型目前包含 ${content.branches.length} 条路线、${content.microScenes.length} 个文字微场景、${allPrompts().length} 个表达任务。S01 找房主线之外，已接入住房、社区、研究、湿地、广场规划与大学工作坊支线。不同内容采用不同纸张、颜色和物件排布，学习操作保持一致。它展示从情境到英语表达的学习流程，不是正式 IELTS 考试，也不提供自动语言评分。</p>
       <p>阅读页、英文题目和答题后的参考说法中，每个英文单词都可点击查看本情境的中文意思。表达块末尾的 ↗ 打开整块搭配说明；单词弹窗里也可以跳到它所属的表达块。答题前查词会记录为使用了提示。</p>
       <p>这里的“表达块”指适合整体调用的说法，不表示其中每个词都只能这样搭配。普通单词的中文义是为本场景编写的辅助释义，不等于原始资料里的定义。</p>
       <p>阅读页可显示全文英中对照；题目、参考说法和反馈也可以展开中文。答题前查看中文算作提示，答题后查看译文不改变这次记录。词典里的“显示中文释义与例句译文”可以一次展开全部已载入译文。词典中文分为项目译解与机器辅助译文；机器译文未逐条人工校订，遇到不自然或不明确的说法，应以英文原义核对。</p>
@@ -794,6 +840,7 @@ try {
     const response = await fetch(content.dictionaryChineseFile || "./data/wordnet-zh-s01.json", { cache: "no-store" });
     if (response.ok) dictionaryChinese = (await response.json()).senses || {};
   } catch (_) { /* Original dictionary data remains available. */ }
+  contentReady = true;
   restoreRoute();
 } catch (error) {
   app.innerHTML = `<section class="simple-page"><h1>内容尚未载入</h1><p>${escapeHtml(error.message)}</p><p>请刷新重试；如果持续无法载入，请检查网络连接。</p></section>`;

@@ -8,4 +8,4 @@
 
 复现脚本 `prototype/scripts/build_dictionary_translations.py` 使用独立环境中的CTranslate2/SentencePiece；传入模型解压目录。`wordnet-definition-translations-s01.json` 与 `wordnet-translations-s01.json` 保留项目译解并优先覆盖机器草稿。原始English键与义项ID均可追溯到WordNet，原始WordNet许可另见 `WORDNET_LICENSE.txt`。
 
-`data/s01-text-translations.json` 与 `data/branch-text-translations.json` 是本项目为17个场景77个表达任务编写的中文层；它不使用上述机器草稿作为教学译文。场景原英文继续保存在各场景 JSON 中。
+`data/s01-text-translations.json` 与 `data/branch-text-translations.json` 是本项目为23个场景101个表达任务编写的中文层；它不使用上述机器草稿作为教学译文。场景原英文继续保存在各场景 JSON 中。
