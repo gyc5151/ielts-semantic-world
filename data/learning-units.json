@@ -371,7 +371,7 @@
       "type": "chunk",
       "meaningZh": "参观这套公寓的预约",
       "sense": "appointment 是约定时间的见面；整句是语境组合，不是必须逐字背诵的固定搭配。",
-      "tier": "core",
+      "tier": "support",
       "sceneIds": [
         "S01.M02"
       ],
@@ -481,7 +481,7 @@
       "type": "word",
       "meaningZh": "预约；约定的见面",
       "sense": "可指在特定时间会面或参观；这里指与中介约好看房。",
-      "tier": "support",
+      "tier": "core",
       "sceneIds": [
         "S01.M02"
       ],

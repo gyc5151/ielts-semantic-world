@@ -240,7 +240,7 @@
       "cueZh": "电话里听不清：中介说周二还是周四六点看房？周二与你的工作冲突。确认日期后再答应。",
       "unitIds": [
         "U.CLARIFICATION.DID_YOU_SAY",
-        "U.HOUSING.VIEWING_APPOINTMENT",
+        "U.ARRANGEMENT.APPOINTMENT.N",
         "U.CLARIFICATION.CONFIRM.V"
       ],
       "checks": [

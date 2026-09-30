@@ -165,7 +165,8 @@
       "cue": "Lin's train is crowded, and the journey leaves little time at home. Explain why she starts looking for another place.",
       "acceptableAnswers": [
         "Her commute during rush hour takes too long, so she wants to live closer to work.",
-        "She is looking for a new home because the crowded journey to work takes too much time."
+        "She is looking for a new home because the crowded journey to work takes too much time.",
+        "Her daily commute during rush hour takes too long, so she wants to live closer to work."
       ],
       "feedback": "Rush hour names the busy travel period; commute names the regular journey. Give a cause and the housing need it creates.",
       "cueZh": "林每天往返工作地点很花时间，高峰时段又挤。解释她为什么开始找新住处。",
