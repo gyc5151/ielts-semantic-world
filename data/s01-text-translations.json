@@ -1,0 +1,563 @@
+{
+  "provenance": "Researcher inference · 本项目中文译解，原英文保持不变。",
+  "scenes": {
+    "S01.M01": {
+      "title": "名单上的两处住处",
+      "goal": "说明住房需求，按地点、房型和预算筛选，留下几处房源，供之后联系询问。",
+      "situation": "又挤过一个晚高峰，林很晚才到家，打开了租房网站。火车票价不断上涨，每天通勤后几乎没时间做晚饭。她在地图上以工作地点为中心画了一个圈，设了三项筛选条件：公寓或单间公寓、路程不超过三十分钟、广告价格在每月预算之内。\n\n最先出现的是工作地点附近的一套单间公寓。房子虽小，但位置值得考虑。城郊有一套更便宜的公寓，可还是得坐那么久的火车，她便排除了这条房源。她把单间公寓和车站附近的另一套公寓加入候选名单。两处都不完美，而且全部费用尚待核实。下一步，她准备联系询问这两套房子。",
+      "prompts": {
+        "S01.M01.P01": {
+          "function": "解释为什么需要新住处",
+          "cue": "林乘坐的火车很拥挤，路程又让她在家的时间很少。解释她为什么开始另找住处。",
+          "acceptableAnswers": [
+            "高峰期通勤太费时间，所以她想住得离工作地点近些。",
+            "她在找新住处，因为每天拥挤的上班路程占去了太多时间。"
+          ],
+          "feedback": "rush hour 指出行高峰时段；commute 指固定的往返通勤。说清原因，以及由此产生的住房需求。"
+        },
+        "S01.M01.P02": {
+          "function": "设定地点和路程筛选条件",
+          "cue": "城外一处便宜住处仍意味着很长的火车路程。提出一个有用的地点或路程限制。",
+          "acceptableAnswers": [
+            "我想找一处距离工作地点三十分钟以内的住处，缩短通勤。",
+            "请给我看看工作地点附近的房源；住在城郊还是得走很远。"
+          ],
+          "feedback": "地点筛选要能改变通勤才有用。说出具体时间或区域，并解释为什么排除远处的选项。"
+        },
+        "S01.M01.P03": {
+          "function": "说明可以接受的房型",
+          "cue": "林可以接受两种房型：一种有几个房间，另一种主要在一个空间内起居和睡觉。说出她的找房偏好。",
+          "acceptableAnswers": [
+            "我想在工作地点附近找公寓或单间公寓。",
+            "请在搜索中同时包括公寓和单间公寓。"
+          ],
+          "feedback": "flat 是英式英语中公寓的常用说法。studio 主要在同一个房间内起居和睡觉。现阶段两种都可以保留。"
+        },
+        "S01.M01.P04": {
+          "function": "设定价格上限并建立候选名单",
+          "cue": "两套房源的广告价格在林的预算内。她想先保存房源，稍后再询问全部费用。说明这一步。",
+          "acceptableAnswers": [
+            "我设定了每月预算，并把两条房源加入了候选名单。",
+            "两套房子都在价格上限以内，我会先将它们列为候选，之后再核实总费用。"
+          ],
+          "feedback": "shortlist 是供下一轮询问的小范围候选名单。广告价格只是初步筛选条件，不能据此认定全部费用。"
+        },
+        "S01.M01.T01": {
+          "function": "把住房筛选迁移到新的校园通勤",
+          "cue": "一位朋友到新校区的路程很长。每月预算上限为900，希望找到距校园二十分钟以内的单间公寓。不重新打开林的故事，说明筛选条件和下一步如何选房。",
+          "acceptableAnswers": [
+            "我会找距校园二十分钟以内、月租低于900的单间公寓，再选出两处合适住处列为候选。",
+            "我的每月预算为900，所以我会筛选校园附近的单间公寓，保存几个通勤更短的选项。"
+          ],
+          "feedback": "替换目的地和数字，保留有用的动作：设定房型、路程上限与预算，然后留下几处房源供询问。"
+        }
+      },
+      "paragraphs": [
+        {
+          "en": "After another crowded rush hour, Lin reached home late and opened a rental website. The train fare was rising, and her daily commute left little time for dinner. She drew a circle around her workplace on a map, then set three filters: a flat or studio, a journey of no more than thirty minutes, and an advertised price within her monthly budget.",
+          "zh": "又挤过一个晚高峰，林很晚才到家，打开了租房网站。火车票价不断上涨，每天通勤后几乎没时间做晚饭。她在地图上以工作地点为中心画了一个圈，设了三项筛选条件：公寓或单间公寓、路程不超过三十分钟、广告价格在每月预算之内。"
+        },
+        {
+          "en": "A studio near work appeared first. It was small, but its location made it worth considering. A cheaper flat in the suburb would leave her with the same long train journey, so she removed that listing. She saved the studio and a second flat near a station to a shortlist. Neither was perfect, and she still needed to check the full costs. Her next step was to ask about both listings.",
+          "zh": "最先出现的是工作地点附近的一套单间公寓。房子虽小，但位置值得考虑。城郊有一套更便宜的公寓，可还是得坐那么久的火车，她便排除了这条房源。她把单间公寓和车站附近的另一套公寓加入候选名单。两处都不完美，而且全部费用尚待核实。下一步，她准备联系询问这两套房子。"
+        }
+      ]
+    },
+    "S01.M02": {
+      "title": "星期四的电话",
+      "goal": "确认公寓是否仍可租、何时能入住，并在电话误听后核对看房时间和地址。",
+      "situation": "第二天，林从候选名单里选了车站附近的公寓。广告已经刊出一周，她便打电话给房产中介，询问是否仍可出租。房子还在。现租客月底搬走，林可以在下月初入住。中介提议星期四六点看房。\n\n他说话时，一辆公交车经过，林听成了星期二。星期二与她的班次冲突，于是她复述日期以作核实。“星期四，”他说，随后给出地址：公园路18号。林复述了门牌号，中介确认无误。星期四她有空。她保存了地址，约好在楼外见面。",
+      "prompts": {
+        "S01.M02.P01": {
+          "function": "询问广告中的住处是否仍可租",
+          "cue": "广告已经刊出一周。你打电话询问这处住处，想知道是否已被别人租走。提出一个明确的问题。",
+          "acceptableAnswers": [
+            "这套公寓现在还可以租吗？",
+            "这套公寓还在出租吗？"
+          ],
+          "feedback": "available 询问公寓当前的出租状态。广告可能过时，因此 still 很有用。"
+        },
+        "S01.M02.P02": {
+          "function": "询问最早入住日期",
+          "cue": "现租客月底离开。询问中介你什么时候能开始住进公寓。",
+          "acceptableAnswers": [
+            "我什么时候可以入住？",
+            "我最早哪天能搬进这套公寓？"
+          ],
+          "feedback": "move in 表示开始在此居住。要区分入住日期与看房日期。"
+        },
+        "S01.M02.P03": {
+          "function": "误听后核实看房日期",
+          "cue": "中介约六点看房，但噪声让星期二和星期四难以分辨。星期二与你的工作冲突。答应之前先核对日期。",
+          "acceptableAnswers": [
+            "能确认一下是星期四六点看房吗？",
+            "不好意思，你说的是星期二还是星期四六点？"
+          ],
+          "feedback": "复述两个可能的日期，或请求确认。具体日期很重要，因为其中一天与工作冲突。"
+        },
+        "S01.M02.P04": {
+          "function": "挂断前核对完整地址",
+          "cue": "你听到了公园路，但还需要门牌号。询问完整地址，并核对记下的号码。",
+          "acceptableAnswers": [
+            "能给我完整地址，包括门牌号吗？是公园路18号吗？",
+            "能帮我确认一下地址吗？我记下的是公园路18号。"
+          ],
+          "feedback": "address 包括门牌号和街道。复述号码，让中介有机会纠正误听。"
+        },
+        "S01.M02.T01": {
+          "function": "把电话核实迁移到另一处住房询问",
+          "cue": "一名学生打电话询问校园附近的房间。广告可能已过时，现住户27日搬走。中介说周一或周五五点看房，但线路不清楚。不重新打开林的电话情境，询问是否仍可租、何时入住，以及看房日期和楼宇地址是否准确。",
+          "acceptableAnswers": [
+            "房间还可以租吗？我什么时候可以入住？能确认一下看房是周一还是周五五点，并给我完整地址吗？",
+            "我还能租这个房间吗？最早什么时候能入住？不好意思，你说的是周一还是周五五点？地址是什么？"
+          ],
+          "feedback": "住处、住户和备选日期变了，但信息步骤相同：确认可租状态、询问入住时间，再复述不确定的日期并索要完整地址。"
+        }
+      },
+      "paragraphs": [
+        {
+          "en": "The next day, Lin chose the flat near the station from her shortlist. Its advert was a week old, so she phoned the estate agent to enquire whether it was still available. It was. The current tenant would leave at the end of the month, so Lin could move in early next month. The agent offered an appointment to see the flat on Thursday at six.",
+          "zh": "第二天，林从候选名单里选了车站附近的公寓。广告已经刊出一周，她便打电话给房产中介，询问是否仍可出租。房子还在。现租客月底搬走，林可以在下月初入住。中介提议星期四六点看房。"
+        },
+        {
+          "en": "A bus passed as he spoke, and Lin heard Tuesday. Because Tuesday clashed with her shift, she repeated the day to check. 'Thursday,' he said, then gave her the address: 18 Park Road. Lin repeated the street number, and he confirmed it. Thursday suited her. She saved the address and agreed to meet him outside the building.",
+          "zh": "他说话时，一辆公交车经过，林听成了星期二。星期二与她的班次冲突，于是她复述日期以作核实。“星期四，”他说，随后给出地址：公园路18号。林复述了门牌号，中介确认无误。星期四她有空。她保存了地址，约好在楼外见面。"
+        }
+      ]
+    },
+    "S01.M03": {
+      "title": "看房时的窗户",
+      "goal": "检查可能租住的房屋，描述状况，并在决定前提出维修请求。",
+      "situation": "星期四傍晚，林跟着中介走进公寓。小客厅令人感到温馨。沙发和桌子已经摆好，一盏灯照亮了角落，她希望在那里放张书桌。她把笔记本放在桌上。\n\n厨房窗户打不开，尽管她试了两次把手。空气里有股潮湿的气味。中介给她看了中央供暖，并记下她对通风的疑问。林短暂打开淋浴，看着水排走。她喜欢这处住处，却无法忽略卡住的窗户。她问房东能否在她决定租房之前安排维修。离开时，这个问题仍没有答案。",
+      "prompts": {
+        "S01.M03.P01": {
+          "function": "安排看房",
+          "cue": "你想和中介去看一套可能租住的公寓。请求安排在星期六看房。",
+          "acceptableAnswers": [
+            "我可以安排星期六看这套公寓吗？",
+            "中介能在星期六带我看这套公寓吗？"
+          ],
+          "feedback": "viewing 指检查房屋的看房活动。明确的请求包括目的和一个可行时间。"
+        },
+        "S01.M03.P02": {
+          "function": "描述优点和问题",
+          "cue": "屋里已有沙发和桌子，房间让人觉得舒适。厨房窗户却打不开。用一句话描述两方面。",
+          "acceptableAnswers": [
+            "公寓带家具，也很温馨，但我担心厨房通风不好。",
+            "这是一套温馨、带家具的公寓，但厨房窗户打不开。"
+          ],
+          "feedback": "把第一印象与具体问题连起来。卡住的窗户和潮湿气味使人担忧通风，不能据此断言每个房间都通风不良。"
+        },
+        "S01.M03.P03": {
+          "function": "检查设施",
+          "cue": "决定之前，你需要知道公寓的供暖是否正常。直接询问中介。",
+          "acceptableAnswers": [
+            "中央供暖正常吗？",
+            "我可以检查一下中央供暖是否正常吗？"
+          ],
+          "feedback": "指出设施并询问状况。简短、直接的问题就够了。"
+        },
+        "S01.M03.P04": {
+          "function": "作出承诺前要求维修",
+          "cue": "窗户卡住了，你要先知道能否修好再决定。先请求房主处理。",
+          "acceptableAnswers": [
+            "房东能在我决定之前安排维修吗？",
+            "我希望先把窗户修好，再同意租这套公寓。"
+          ],
+          "feedback": "landlord 是房东。作决定之前，说出故障和你需要的处理动作。"
+        },
+        "S01.M03.T01": {
+          "function": "不依靠原文或图片迁移房屋检查表达",
+          "cue": "校园附近的一间学生房没有家具，暖气还会发出噪声。不重新打开林的故事，描述房间，并询问能否在你作决定前修好。",
+          "acceptableAnswers": [
+            "房间不带家具，暖气有噪声。房东能在我决定前安排维修吗？",
+            "房间里没有家具，供暖似乎有噪声。能在我同意租之前检查一下吗？"
+          ],
+          "feedback": "房间和故障变了，仍保留有用的功能：描述状况、指出问题、请求处理。不需要复述原句。"
+        }
+      },
+      "paragraphs": [
+        {
+          "en": "On Thursday evening, Lin followed the estate agent into the flat. The little living room felt cosy. A sofa and table were already there, and light from a lamp reached the corner where she hoped to put a desk. She placed her notebook on the table.",
+          "zh": "星期四傍晚，林跟着中介走进公寓。小客厅令人感到温馨。沙发和桌子已经摆好，一盏灯照亮了角落，她希望在那里放张书桌。她把笔记本放在桌上。"
+        },
+        {
+          "en": "In the kitchen, the window would not open even when she tried the handle twice. The air smelled damp. The agent showed her the central heating, then wrote down her question about ventilation. Lin briefly ran the shower and watched the water drain away. She liked the place, yet she could not ignore the stuck window. She asked whether the landlord would arrange a repair before she decided to rent it. She left with the question still open.",
+          "zh": "厨房窗户打不开，尽管她试了两次把手。空气里有股潮湿的气味。中介给她看了中央供暖，并记下她对通风的疑问。林短暂打开淋浴，看着水排走。她喜欢这处住处，却无法忽略卡住的窗户。她问房东能否在她决定租房之前安排维修。离开时，这个问题仍没有答案。"
+        }
+      ]
+    },
+    "S01.M04": {
+      "title": "两套公寓，一个普通工作日",
+      "goal": "比较两套公寓的空间、噪音、租金和通勤，说明暂定偏好，以及决定前还需要核实什么。",
+      "situation": "看房后，中介又推荐了城另一头的公寓。林原先嫌路程长，没有把它列入候选，但还是去比较了更大的房间和更低的价格。第一套公寓虽小，厨房窗户也需要维修，却位于安静街道，步行到工作地点只需十五分钟；每月租金高出90英镑。\n\n新公寓足够宽敞，能放下书桌，也在预算之内。但卧室外的车流带来持续噪声，坐公交上班要将近一小时。上完晚班再在车站等待，会让人疲惫。现在，她更清楚这个取舍了。综合来看，她更喜欢小公寓，但仍需得到维修的答复。决定前，她还会核实高峰期的公交路线，比较完整的月度费用。",
+      "prompts": {
+        "S01.M04.P01": {
+          "function": "比较空间与租金",
+          "cue": "工作地点附近的公寓放书桌的空间很小，每月贵90英镑。另一套能放书桌，也更便宜。比较它们。",
+          "acceptableAnswers": [
+            "第二套公寓更宽敞，月租也较低，但离工作地点更远。",
+            "工作地点附近的公寓更小，每月贵90英镑；另一套能放书桌，价格也在预算内。"
+          ],
+          "feedback": "spacious 描述可使用的空间；monthly rent 是定期支付的住房租金。在同样的维度上比较两套房，再核实是否包含账单费用。"
+        },
+        "S01.M04.P02": {
+          "function": "比较噪音和每日出行",
+          "cue": "更便宜的公寓靠着繁忙道路。非高峰时段坐公交上班也要近一小时。解释选择它带来的日常代价。",
+          "acceptableAnswers": [
+            "宽敞的公寓更便宜，但道路噪音和将近一小时的通勤会每天影响我。",
+            "它空间更大，但卧室吵，公交路程近一小时；高峰期可能更久。"
+          ],
+          "feedback": "指出噪音来源并给出已知路程时间。高峰期尚未测量，那部分只能描述为可能发生。"
+        },
+        "S01.M04.P03": {
+          "function": "解释住房选择中的取舍",
+          "cue": "你在晚班之后，更看重安静和时间，而不是书桌空间。说明得到和放弃了什么，再给出目前偏好。",
+          "acceptableAnswers": [
+            "这个取舍是用更小的空间和更高的租金，换取更安静的住处与更短的通勤。综合来看，我更喜欢工作地点附近的公寓。",
+            "虽然近处公寓更贵、更小，但只要总费用负担得起，我会为了安静的街道和更短的步行路程选择它。"
+          ],
+          "feedback": "清楚的选择同时说明收益与代价。on balance 引出比较后的总体看法，不代表所有问题都已解决。"
+        },
+        "S01.M04.P04": {
+          "function": "说明暂定选择和待核实事项",
+          "cue": "你倾向工作地点附近的公寓，但厨房窗户需要维修。完整费用和另一条公交路线的高峰耗时也没核实。说出偏好和准备核实的内容。",
+          "acceptableAnswers": [
+            "综合来看，我更喜欢工作地点附近的公寓，但决定前会询问窗户能否修好，并核实完整月度费用。",
+            "我倾向小公寓。我要核实维修和费用，并在高峰期试走另一条通勤路线。"
+          ],
+          "feedback": "prefer 或 lean toward 可以表达暂定选择。最终决定前，询问维修安排、核实总月度费用，并在真实出行时段测试另一条路线。"
+        },
+        "S01.M04.T01": {
+          "function": "把比较和选择迁移到两个学生房间",
+          "cue": "朋友在两间房之间选择：一间小而安静，距学院十分钟；另一间更大，靠主干道，每月便宜60英镑，但公交需四十分钟。不重新打开林的故事，比较四个因素，提出暂定选择并指出一项待核实事实。",
+          "acceptableAnswers": [
+            "大房间更便宜、更宽敞，但道路噪音和四十分钟公交路程会困扰我。综合来看，只要完整月度费用在预算内，我更喜欢小房间。",
+            "我大概会选学院附近的房间。为安静和短路程，我会牺牲一些空间，多付60英镑。同意之前会核实租金是否包含账单。"
+          ],
+          "feedback": "使用新的价格和路程时间。说明得到与放弃什么，给出暂定选择，并指出一个缺失事实。只要有解释，选任一间都可能合理。"
+        }
+      },
+      "paragraphs": [
+        {
+          "en": "After the viewing, the agent suggested another flat across town. It had not made Lin's shortlist because the journey looked long, but she went to compare its larger rooms and lower price. The first flat was small and had a kitchen window needing repair, but it stood on a quiet street, a fifteen-minute walk from work. Its monthly rent was £90 higher.",
+          "zh": "看房后，中介又推荐了城另一头的公寓。林原先嫌路程长，没有把它列入候选，但还是去比较了更大的房间和更低的价格。第一套公寓虽小，厨房窗户也需要维修，却位于安静街道，步行到工作地点只需十五分钟；每月租金高出90英镑。"
+        },
+        {
+          "en": "The new flat was spacious enough for her desk and stayed within her budget. Yet traffic outside its bedroom brought constant noise, and the commute would take nearly an hour by bus. After a late shift, that wait at the stop would be tiring. The trade-off was clearer now. On balance, she preferred the smaller flat, although she still needed an answer about the repair. She would also check the bus route at rush hour and compare full monthly costs before choosing.",
+          "zh": "新公寓足够宽敞，能放下书桌，也在预算之内。但卧室外的车流带来持续噪声，坐公交上班要将近一小时。上完晚班再在车站等待，会让人疲惫。现在，她更清楚这个取舍了。综合来看，她更喜欢小公寓，但仍需得到维修的答复。决定前，她还会核实高峰期的公交路线，比较完整的月度费用。"
+        }
+      ]
+    },
+    "S01.M05": {
+      "title": "租金下面的那个数字",
+      "goal": "区分经常性费用与入住前押金，核实额外收费，并在签字前要求书面条款。",
+      "situation": "比较完两套公寓后，林回到桌前，在笔记本上画了两栏：每月，以及入住之前。近处公寓的广告租金只占了一行。中介确认，水电等账单需要另付；拿钥匙之前还要交押金。\n\n林加上这些费用，再打开合同草稿。她沿着页面逐行查看，寻找之前提出的厨房窗户维修要求，合同里却没有提到。她又打电话问中介，房东是否会安排维修，并把计划写下来。只有知道全部费用、维修也约定好了，她才能决定。在那之前，她没有签合同。",
+      "prompts": {
+        "S01.M05.P01": {
+          "function": "核实报价租金包含什么",
+          "cue": "广告价格看起来负担得起，但你不知道水电是否另收。询问中介。",
+          "acceptableAnswers": [
+            "水电等账单包含在月租里吗？",
+            "租金包括水费和电费吗？"
+          ],
+          "feedback": "要询问完整的经常性费用，而不只是广告数字。用 utility bills 或直白的水电费问法都自然实用。"
+        },
+        "S01.M05.P02": {
+          "function": "区分经常性费用和预付款",
+          "cue": "解释哪些住房费用每月支付，哪笔金额在入住之前支付。",
+          "acceptableAnswers": [
+            "我每月支付租金和水电等账单，入住之前交押金。",
+            "租金和账单是月度费用；押金在入住前支付。"
+          ],
+          "feedback": "说清时间区别。押金是预先支付的金额；协议应说明附带的具体条件。"
+        },
+        "S01.M05.P03": {
+          "function": "询问额外收费与付款时间",
+          "cue": "广告价格下方出现一笔费用，你不知道首笔付款何时到期。提两个简短问题。",
+          "acceptableAnswers": [
+            "还有额外收费吗？首笔款项什么时候要付？",
+            "我需要付哪些额外费用？首笔款项什么时候支付？"
+          ],
+          "feedback": "charges 是另外要求支付的费用。要询问金额和到期日期，不要从广告猜测。"
+        },
+        "S01.M05.P04": {
+          "function": "签字前要求书面条款",
+          "cue": "你问过能否修厨房窗户，但协议草稿没有提到。说出签字之前需要什么。",
+          "acceptableAnswers": [
+            "能在我签字之前把窗户维修写进合同吗？",
+            "能在我签字之前把窗户维修计划加入租约吗？"
+          ],
+          "feedback": "指出缺失的维修条件，要求书面修改。contract 是一般性的协议；lease 更具体地指房产租赁协议。"
+        },
+        "S01.M05.T01": {
+          "function": "不靠原文或图片迁移费用与合同询问",
+          "cue": "校园房间的广告给出月度价格，但电费另付。拿钥匙前还要交一笔以后可能退还的钱。不重新打开林的故事，询问完整持续费用，并要求把一项付款时间条件写进协议。",
+          "acceptableAnswers": [
+            "能告诉我包括电费的每月总费用吗？请在我签字之前把押金和付款日期写进合同。",
+            "月租包括电费吗？能把押金和首笔付款日期写入租约吗？"
+          ],
+          "feedback": "这是费用不同的新房间。询问完整月度金额，并提出一项明确书面条款；具体措辞可以不同。"
+        }
+      },
+      "paragraphs": [
+        {
+          "en": "Back at her desk after comparing the two flats, Lin drew two columns in her notebook: every month and before moving in. The advertised rent for the nearer flat filled only one line. The estate agent confirmed that utility bills were extra; a deposit was due before she received a key.",
+          "zh": "比较完两套公寓后，林回到桌前，在笔记本上画了两栏：每月，以及入住之前。近处公寓的广告租金只占了一行。中介确认，水电等账单需要另付；拿钥匙之前还要交押金。"
+        },
+        {
+          "en": "Lin added the charges, then opened the draft contract. She ran a finger down the page, looking for the kitchen window repair she had asked about. It was not mentioned. She called the agent again and asked whether the landlord would arrange it and put the plan in writing. If she knew the full cost and the repair was agreed, she could decide. Until then, she left the contract unsigned.",
+          "zh": "林加上这些费用，再打开合同草稿。她沿着页面逐行查看，寻找之前提出的厨房窗户维修要求，合同里却没有提到。她又打电话问中介，房东是否会安排维修，并把计划写下来。只有知道全部费用、维修也约定好了，她才能决定。在那之前，她没有签合同。"
+        }
+      ]
+    },
+    "S01.M06": {
+      "title": "日期与窗户的记录",
+      "goal": "核对约定的开始日期，纠正房屋状况的书面记录，并在交接时确认钥匙。",
+      "situation": "房东书面同意安排厨房窗户维修。中介给林发来修改后的合同，加入了维修计划和全部费用。林准备签字，却发现开始日期写着11月1日，而之前讨论的入住日期是11月3日。她请中介核实，中介发来修正副本。\n\n3日，林到公寓与中介办理交接。物品清单列着沙发和桌子，但状况备注写着厨房窗户可以打开，实际却仍然打不开。林给中介看了窗户，请他记录真实状况。中介补上备注，并发给她一份副本。林核对钥匙清单，签好更新后的文件，带着钥匙回家。",
+      "prompts": {
+        "S01.M06.P01": {
+          "function": "核对并更正书面开始日期",
+          "cue": "文件写11月1日，但之前讨论的是11月3日。询问安排从哪天开始，并要求在同意之前提供修正副本。",
+          "acceptableAnswers": [
+            "能把合同开始日期改成11月3日，并给我更新后的副本吗？",
+            "我们之前讨论的是11月3日。能在我签字前更正合同开始日期吗？"
+          ],
+          "feedback": "核对书面日期与之前讨论的日期。要求更正副本，不要假定两个日期意思相同。"
+        },
+        "S01.M06.P02": {
+          "function": "对比物品清单与房屋实际状况",
+          "cue": "清单列有沙发和桌子。另一条备注写厨房窗户能打开，但实际打不开。告诉中介哪些一致、哪些需要核实。",
+          "acceptableAnswers": [
+            "沙发和桌子在物品清单上，但状况备注不对：厨房窗户打不开。",
+            "物品清单准确列出了家具，但能核实一下窗户状况吗？它仍然卡住。"
+          ],
+          "feedback": "inventory 列出现有物品；condition note 描述物品状态。说出不一致之处，不要声称维修已完成。"
+        },
+        "S01.M06.P03": {
+          "function": "要求准确记录故障",
+          "cue": "书面备注声称窗户很容易打开。你看到它仍然卡住。要求中介在办完文件前记下实际观察。",
+          "acceptableAnswers": [
+            "能记下厨房窗户仍然卡住吗？",
+            "请记录它的真实状况：窗户打不开。"
+          ],
+          "feedback": "record 在这里是动词，要求把观察到的状况写下来。直白描述故障，并要求更新副本。"
+        },
+        "S01.M06.P04": {
+          "function": "确认钥匙交接",
+          "cue": "日期和书面备注现在与之前讨论的一致。询问中介何时交给你开前门的钥匙，以及会有几把。",
+          "acceptableAnswers": [
+            "什么时候交钥匙，我会收到几把？",
+            "能告诉我什么时候可以领钥匙，以及共有几把吗？"
+          ],
+          "feedback": "hand over 表示把东西交给另一个人。要确认交付时间和钥匙数量，不要自行假定。"
+        },
+        "S01.M06.T01": {
+          "function": "把文件与交接核实迁移到另一间房",
+          "cue": "学生要租另一车站附近的带家具房间。文件写3月5日，但双方讨论的是3月7日。书面清单漏记了损坏的书桌抽屉。不重新打开林的故事，在中介交付房间使用权前要求更正日期并记录抽屉。",
+          "acceptableAnswers": [
+            "能把合同开始日期改成3月7日，并在物品清单里记录损坏的抽屉吗？什么时候交钥匙？",
+            "合同写3月5日，但我们讨论的是3月7日。能在我领钥匙前更正开始日期，并把抽屉状况加入物品清单吗？"
+          ],
+          "feedback": "房间与故障不同。核实约定日期、要求准确的书面备注，并在细节确定后核实如何获得房间使用权。"
+        }
+      },
+      "paragraphs": [
+        {
+          "en": "The landlord agreed in writing to arrange the kitchen window repair. The agent sent Lin a revised contract with that plan and the full cost. Lin was ready to sign, but the start date said 1 November; she had discussed 3 November for moving in. She asked the agent to check, and he sent a corrected copy.",
+          "zh": "房东书面同意安排厨房窗户维修。中介给林发来修改后的合同，加入了维修计划和全部费用。林准备签字，却发现开始日期写着11月1日，而之前讨论的入住日期是11月3日。她请中介核实，中介发来修正副本。"
+        },
+        {
+          "en": "On the third, Lin met him at the flat for the handover. The inventory listed a sofa and a table, but its condition note said the kitchen window opened. It still would not move. Lin showed him the window and asked him to record its actual condition. He added a note and sent her a copy. Lin checked the list of keys, signed the updated papers, and took the keys home.",
+          "zh": "3日，林到公寓与中介办理交接。物品清单列着沙发和桌子，但状况备注写着厨房窗户可以打开，实际却仍然打不开。林给中介看了窗户，请他记录真实状况。中介补上备注，并发给她一份副本。林核对钥匙清单，签好更新后的文件，带着钥匙回家。"
+        }
+      ]
+    },
+    "S01.M07": {
+      "title": "门边的箱子",
+      "goal": "描述打包、搬运和安置物品的顺序，寻求实际帮助，并索要书桌缺失的零件。",
+      "situation": "钥匙装进口袋，林准备搬入公寓。她和朋友玛雅把箱子搬上楼。越来越多箱子堆在门边，只剩下一条通向厨房的窄道。“能帮我搬一下这些吗？”林问。玛雅搬重箱子，林开始整理自己的物品。\n\n她事先把书单独打包，便于放在沙发上方的架子上。冬天的外套收进储物间。然后，她们想在窗边组装一张小书桌，可少了一颗螺丝，桌子无法稳当立住。林翻找包装，仍没找到，便打电话向家具店索要替换螺丝。到了傍晚，门口清出了通道，但未完成的书桌还在等最后一个零件。",
+      "prompts": {
+        "S01.M07.P01": {
+          "function": "向帮忙的人说明打包与搬运顺序",
+          "cue": "你有两箱书，其中一箱很重。门口必须保持通畅。告诉朋友先做什么、再做什么。",
+          "acceptableAnswers": [
+            "先把书装箱，再把重箱搬上楼，并在箱子堆到门边前整理好里面的东西。",
+            "我们先把书装箱、搬进来，在安置其他东西前清理门口。"
+          ],
+          "feedback": "给出清楚顺序：准备箱子、搬运，并保持入口可用。stack up 表示随着箱子增加，堆积起来。"
+        },
+        "S01.M07.P02": {
+          "function": "安置物品并组装家具",
+          "cue": "本周用不到冬季外套，但书应该容易拿到。告诉玛雅放在哪里，以及新书桌怎么处理。",
+          "acceptableAnswers": [
+            "把冬季外套放进储物间，然后在窗边组装书桌。",
+            "先把外套收进小储物间，把书放上架子，再组装书桌。"
+          ],
+          "feedback": "storeroom 存放暂时不用的东西。assemble the desk 表示把部件拼装起来；第二种答案用更简单自然的动词。"
+        },
+        "S01.M07.P03": {
+          "function": "报告缺失零件并索要替换件",
+          "cue": "新书桌因为包装里少了一个金属小零件，无法稳当立住。打电话问商店能怎么处理。",
+          "acceptableAnswers": [
+            "书桌套件少了一颗螺丝。能寄一个替换件吗？",
+            "书桌送来时少了一颗螺丝。我能拿到替换螺丝吗？"
+          ],
+          "feedback": "说出具体缺失零件并要求替换。不必猜是谁弄丢的。"
+        },
+        "S01.M07.P04": {
+          "function": "向朋友寻求实际帮助",
+          "cue": "重箱子堵住走廊，你一个人抬不动。请玛雅帮忙搬动，并说明该放在哪里。",
+          "acceptableAnswers": [
+            "能帮我搬一下这个箱子吗？把它移开，别挡着门口。",
+            "玛雅，你能帮我抬这个箱子，把它放进储物间吗？"
+          ],
+          "feedback": "give me a hand 是自然的求助表达。说明哪个箱子和目的位置，让请求更有用。"
+        },
+        "S01.M07.T01": {
+          "function": "把搬家和求助迁移到合住房间",
+          "cue": "萨姆刚搬进合住房间。碗碟箱堵住入口，新架子因为少了一个支架无法立住。不重新打开林的故事，向室友求助，说明清理顺序，并联系商店处理缺失零件。",
+          "acceptableAnswers": [
+            "能帮我搬一下这些箱子吗？我们可以先把它们移开门口，整理碗碟，再组装架子。少了一个支架，我会请商店提供替换件。",
+            "你能帮我把箱子搬进来吗？先清理门口，把碗碟收好。组装架子之前，我会打电话向商店索要缺失的支架。"
+          ],
+          "feedback": "使用新人物、新房间和新零件。说明能保持入口通畅的顺序，请求具体帮助，并告诉商店需要哪个替换件。"
+        }
+      },
+      "paragraphs": [
+        {
+          "en": "With the key in her pocket, Lin was ready to move in. She and her friend Maya carried the boxes up to the flat. More boxes began to stack up beside the door, leaving only a narrow path to the kitchen. 'Could you give me a hand with these?' Lin asked. Maya lifted the heavy ones while Lin began to sort out her belongings.",
+          "zh": "钥匙装进口袋，林准备搬入公寓。她和朋友玛雅把箱子搬上楼。越来越多箱子堆在门边，只剩下一条通向厨房的窄道。“能帮我搬一下这些吗？”林问。玛雅搬重箱子，林开始整理自己的物品。"
+        },
+        {
+          "en": "She had taken time to pack her books separately, so she could put them on the shelf above the sofa. Winter coats went into the storeroom. Then they tried to assemble a small desk by the window. One screw was missing, so the desk would not stand safely. Lin searched the packaging but could not find it. She called the furniture shop for a replacement screw. By evening, the doorway was clear, although the unfinished desk still waited for its last piece.",
+          "zh": "她事先把书单独打包，便于放在沙发上方的架子上。冬天的外套收进储物间。然后，她们想在窗边组装一张小书桌，可少了一颗螺丝，桌子无法稳当立住。林翻找包装，仍没找到，便打电话向家具店索要替换螺丝。到了傍晚，门口清出了通道，但未完成的书桌还在等最后一个零件。"
+        }
+      ]
+    },
+    "S01.M08": {
+      "title": "水槽下面的滴水声",
+      "goal": "报告家中故障及其可能影响，请求维修，协商上门时间，并检查维修结果。",
+      "situation": "入住十天后，林听见厨房持续滴水。水龙头在水槽下方的连接处漏水。碗接住了大部分水，但一道细细的水痕已流到下面的木柜。她擦干、拍照，发消息向房东报告故障：“厨房水龙头漏水，水可能损坏柜子。能安排维修吗？”\n\n房东安排水管工星期二下午来，但林那时要上班。她回复两个可以在家的时段，请他确认星期四上午。她还问，在那之前是否应保持关闭供水。星期四，水管工更换了磨损的垫圈。林开水一分钟，查看水槽下面。木头是干的，滴水已经停止。",
+      "prompts": {
+        "S01.M08.P01": {
+          "function": "报告故障及可能影响",
+          "cue": "厨房水槽下面有水，正流向木柜。告诉房主发生了什么，以及为什么需要处理。",
+          "acceptableAnswers": [
+            "我要报告一个故障：厨房水龙头漏水，水可能损坏柜子。",
+            "水从水龙头流出，可能损坏下面的柜子。能查看处理一下吗？"
+          ],
+          "feedback": "说明地点和可见故障，再区分可能的后果与已经观察到的损坏。"
+        },
+        "S01.M08.P02": {
+          "function": "请求合适的维修帮助",
+          "cue": "这个问题需要修水管的人。请房主派这个人来，并说明什么需要修。",
+          "acceptableAnswers": [
+            "能安排维修，请水管工看看厨房水龙头吗？",
+            "能请水管工来修漏水的水龙头吗？"
+          ],
+          "feedback": "有用的请求指出需要的人或动作，以及出故障的物件。"
+        },
+        "S01.M08.P03": {
+          "function": "协商并确认上门时间",
+          "cue": "对方提议星期二下午上门，但你在上班。提出星期四上午，并要求明确回复。",
+          "acceptableAnswers": [
+            "星期二下午我不在家。能把预约改到星期四上午，并确认时间吗？",
+            "星期四上午我方便。能确认维修人员什么时候来吗？"
+          ],
+          "feedback": "解释时间冲突，提出具体替代时间，并请对方确认。"
+        },
+        "S01.M08.P04": {
+          "function": "检查故障是否修好",
+          "cue": "维修人员更换了一个磨损零件。说明如何检查水槽下面是否还在漏水。",
+          "acceptableAnswers": [
+            "我会开水一分钟，检查水槽下面是否还漏水。",
+            "我会打开水龙头，查看下面，确认漏水停止。"
+          ],
+          "feedback": "检查原先出问题的同一位置。要看实际结果，不能只因为换了零件就认定修好了。"
+        },
+        "S01.M08.T01": {
+          "function": "把故障报告迁移到另一间房与另一套设施",
+          "cue": "冬夜里，一间学生房的暖气一直不热。你星期三不在家，但星期五上午在家。不重新打开林的故事，告诉管理员发生了什么，请求帮助，并约定上门时间。",
+          "acceptableAnswers": [
+            "我要报告暖气无法正常工作。能安排维修吗？我星期五上午在家，请确认预约。",
+            "暖气开了也一直不热。星期五上午能来人检查，并确认一下时间吗？"
+          ],
+          "feedback": "故障和房间变了。保留动作：描述发生的事、请求补救、约好你确实能在家的时间。"
+        }
+      },
+      "paragraphs": [
+        {
+          "en": "Ten days after moving in, Lin heard a steady drip in the kitchen. The tap was leaking from a connection beneath the sink. A bowl caught most of the water, but a thin line had reached the wooden cupboard below. She wiped it dry, took a photo, and reported the fault to the landlord in a message. 'The kitchen tap is leaking, and the water may damage the cupboard. Could you arrange a repair?' she wrote.",
+          "zh": "入住十天后，林听见厨房持续滴水。水龙头在水槽下方的连接处漏水。碗接住了大部分水，但一道细细的水痕已流到下面的木柜。她擦干、拍照，发消息向房东报告故障：“厨房水龙头漏水，水可能损坏柜子。能安排维修吗？”"
+        },
+        {
+          "en": "He offered an appointment with a plumber on Tuesday afternoon, when Lin would be at work. Lin replied with two times she could be home and asked him to confirm Thursday morning. She also asked whether she should leave the water off until then. On Thursday, the plumber replaced a worn washer. Lin ran the tap for a minute and checked below the sink. The wood was dry; the dripping had stopped.",
+          "zh": "房东安排水管工星期二下午来，但林那时要上班。她回复两个可以在家的时段，请他确认星期四上午。她还问，在那之前是否应保持关闭供水。星期四，水管工更换了磨损的垫圈。林开水一分钟，查看水槽下面。木头是干的，滴水已经停止。"
+        }
+      ]
+    },
+    "S01.M09": {
+      "title": "新公寓出发的三个早晨",
+      "goal": "询问绕过封路的走法，比较实际出行时间和费用，选择可靠的日常路线。",
+      "situation": "修好水龙头的下一周，林比较了三种上班方式。星期一她步行出发，地图上的直达路线却被道路施工堵住了。她向店主问路，绕过公园，共用了十八分钟。\n\n星期二，她查了公交时刻表，但车来晚了。高峰车流又使公交延误，车程花了三十分钟，还要付车费。星期三，她沿较安静的街道骑车，十四分钟到达，不过有一个路口让她觉得天黑后不安全。林把实际时间写进笔记本。步行免费，比公交可靠；天气晴朗的早晨，骑车最快。她决定上班前二十五分钟出门，只有天气让其他方式不好走时才乘公交。",
+      "prompts": {
+        "S01.M09.P01": {
+          "function": "询问绕过封路的走法",
+          "cue": "地图上的街道因为施工关闭。向附近商店的人询问如何换路到办公室。",
+          "acceptableAnswers": [
+            "能告诉我走另一条路线去办公室的方向吗？",
+            "去办公室还有别的路线吗？地图上的这条街封了。"
+          ],
+          "feedback": "说明目的地，并解释平常路线为什么无法通行。"
+        },
+        "S01.M09.P02": {
+          "function": "解释计划到达时间为什么不准",
+          "cue": "印出的时刻表说车能较早到达，但早晨拥堵让它晚点。解释计划与真实路程的差别。",
+          "acceptableAnswers": [
+            "公交时刻表显示能较早到达，但高峰期车流使公交延误。",
+            "本应更早到，但公交在高峰期延误，所以路程花了更久。"
+          ],
+          "feedback": "区分计划时间和实际延误；如果知道原因，指出原因。"
+        },
+        "S01.M09.P03": {
+          "function": "比较出行方式、时间和费用",
+          "cue": "你可以步行、骑车或付费乘车。根据林的实际观察，比较两种方式。",
+          "acceptableAnswers": [
+            "步行花了十八分钟，不花钱；骑车花了十四分钟。",
+            "骑车最快，公交花了三十分钟，还要付车费。"
+          ],
+          "feedback": "使用实际时间与费用，不能把最短距离当作全部答案。"
+        },
+        "S01.M09.P04": {
+          "function": "选择可靠的日常路线",
+          "cue": "短程步行通常耗时差不多，但车经常晚点。说出通常会选哪种，为什么。",
+          "acceptableAnswers": [
+            "我通常会步行，因为这条路线比公交可靠。",
+            "大多数日子我会走路；虽然骑车可能更快，但步行时间可靠。"
+          ],
+          "feedback": "reliable 描述可以据此作计划的选项。你的选择可以随天黑或坏天气改变。"
+        },
+        "S01.M09.T01": {
+          "function": "把通勤比较迁移到新的上课安排",
+          "cue": "一名学生要去上晚课。换乘一次的火车准点时很快，但到达时间不稳定。步行每次都要二十五分钟。不重新打开林的故事，解释你会核实什么，以及重要课程会选哪种方式。",
+          "acceptableAnswers": [
+            "我会查看火车时刻表和延误情况，但如果步行能更可靠地到达，就会走路去。",
+            "重要课程我会选步行，因为耗时稳定在二十五分钟；只把火车时刻表作为备用方案查看。"
+          ],
+          "feedback": "目的地和时段变了。比较计划与实际的可靠性，再选符合新安排的路线。"
+        }
+      },
+      "paragraphs": [
+        {
+          "en": "The week after the tap repair, Lin compared three ways to get to work. On Monday she set out on foot. Roadworks blocked the direct route on her map, so she asked a shopkeeper for directions and walked around the park. It took eighteen minutes.",
+          "zh": "修好水龙头的下一周，林比较了三种上班方式。星期一她步行出发，地图上的直达路线却被道路施工堵住了。她向店主问路，绕过公园，共用了十八分钟。"
+        },
+        {
+          "en": "On Tuesday she checked the bus timetable, but the bus came late. Rush hour traffic delayed it again, and the ride took thirty minutes, plus a fare. On Wednesday she cycled along a quieter street and arrived in fourteen minutes, although one crossing felt unsafe after dark. Lin wrote the actual times in her notebook. Walking was free and more reliable than the bus; cycling was quickest on bright mornings. She decided to leave twenty-five minutes before work, using the bus only when the weather made the other choices difficult.",
+          "zh": "星期二，她查了公交时刻表，但车来晚了。高峰车流又使公交延误，车程花了三十分钟，还要付车费。星期三，她沿较安静的街道骑车，十四分钟到达，不过有一个路口让她觉得天黑后不安全。林把实际时间写进笔记本。步行免费，比公交可靠；天气晴朗的早晨，骑车最快。她决定上班前二十五分钟出门，只有天气让其他方式不好走时才乘公交。"
+        }
+      ]
+    }
+  }
+}

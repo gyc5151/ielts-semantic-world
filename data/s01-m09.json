@@ -1,0 +1,219 @@
+{
+  "id": "S01.M09",
+  "navTitle": "通勤试走",
+  "wordFile": "./data/s01-m09-words.json",
+  "title": "Three mornings from the new flat",
+  "situation": "The week after the tap repair, Lin compared three ways to get to work. On Monday she set out on foot. Roadworks blocked the direct route on her map, so she asked a shopkeeper for directions and walked around the park. It took eighteen minutes. On Tuesday she checked the bus timetable, but the bus came late. Rush hour traffic delayed it again, and the ride took thirty minutes, plus a fare. On Wednesday she cycled along a quieter street and arrived in fourteen minutes, although one crossing felt unsafe after dark. Lin wrote the actual times in her notebook. Walking was free and more reliable than the bus; cycling was quickest on bright mornings. She decided to leave twenty-five minutes before work, using the bus only when the weather made the other choices difficult.",
+  "goal": "Ask for a way around a blocked path, compare real travel time and cost, and choose a reliable daily journey.",
+  "zhSupport": "搬家后，林分别试了步行、公交和骑车。施工让原先地图上的直路走不通；高峰期的公交晚点且花钱；骑车最快，但天黑后有一处路口让她不放心。她记录实际耗时，选择平日更可靠的走法。先用英文问路、比较，再作决定。",
+  "glossary": [
+    {
+      "id": "S01.M09.G01",
+      "text": "on foot",
+      "type": "chunk",
+      "zh": "步行；徒步",
+      "note": "用来说明出行方式，可与 by bus、by bike 对比。",
+      "sourceTerm": "on foot"
+    },
+    {
+      "id": "S01.M09.G02",
+      "text": "direct route",
+      "type": "chunk",
+      "zh": "直接的路线",
+      "note": "route 是从一地到另一地走的路；direct 强调不绕路。",
+      "sourceTerm": "route"
+    },
+    {
+      "id": "S01.M09.G03",
+      "text": "asked a shopkeeper for directions",
+      "type": "chunk",
+      "zh": "向店员问路",
+      "note": "ask someone for directions：向某人询问怎么走；shopkeeper 是这个故事中提供帮助的人。",
+      "sourceTerm": "direction"
+    },
+    {
+      "id": "S01.M09.G04",
+      "text": "bus timetable",
+      "type": "chunk",
+      "zh": "公交时刻表",
+      "note": "时刻表给出计划时间，不保证车辆实际准点。",
+      "sourceTerm": "timetable"
+    },
+    {
+      "id": "S01.M09.G05",
+      "text": "rush hour",
+      "type": "chunk",
+      "zh": "交通高峰期",
+      "note": "在这里解释车辆为什么容易被拥堵影响。",
+      "sourceTerm": "rush hour"
+    },
+    {
+      "id": "S01.M09.G06",
+      "text": "more reliable than the bus",
+      "type": "chunk",
+      "zh": "比公交更可靠",
+      "note": "reliable 在此比较每天耗时是否稳定，不等于一定最快。",
+      "sourceTerm": "reliable"
+    },
+    {
+      "id": "S01.M09.G07",
+      "text": "fare",
+      "type": "word",
+      "zh": "车费",
+      "note": "这里指坐公交需要付的费用；步行不需这笔费用。",
+      "sourceTerm": "fare"
+    },
+    {
+      "id": "S01.M09.G08",
+      "text": "cycled",
+      "type": "word",
+      "zh": "骑自行车",
+      "note": "cycle 的过去式；故事中周三骑车去上班。",
+      "sourceTerm": "cycle"
+    },
+    {
+      "id": "S01.M09.G09",
+      "text": "delayed",
+      "type": "word",
+      "zh": "使晚点；耽误",
+      "note": "这里是动词 delay 的过去式，高峰交通让公交更慢。",
+      "sourceTerm": "delay"
+    }
+  ],
+  "terms": [
+    {
+      "term": "route",
+      "kind": "BRG",
+      "sourceLabel": "Source-derived · Master bridge S07 → S01, path sense",
+      "sourceRef": "Master V1.2 R00158; 大全直 PRO 听力预习词表 PDF p.5, route, n., 路线. Master primary S07, bridge S01."
+    },
+    {
+      "term": "direction",
+      "kind": "BRG",
+      "sourceLabel": "Source-derived · Master bridge S07 → S01, way-to-go sense",
+      "sourceRef": "Master V1.2 R00616; 大全直 PRO 听力预习词表 PDF p.17, direction, n., 方向. Master primary S07, bridge S01; directions for a route is this scene's use."
+    },
+    {
+      "term": "cycle",
+      "kind": "BRG",
+      "sourceLabel": "Source-derived · Master bridge S04 → S01, bicycle verb sense",
+      "sourceRef": "Master V1.2 R00005; 大全直 PRO 听力预习词表 PDF p.1, cycle, v., 骑自行车. Master primary S04, bridge S01; distinguish R00757 cycle, n., 循环."
+    },
+    {
+      "term": "timetable",
+      "kind": "BRG",
+      "sourceLabel": "Source-derived word · researcher bridge from S02 to S01",
+      "sourceRef": "Master V1.2 R00210; 大全直 PRO 听力预习词表 PDF p.7, timetable, n., 时间表. Master primary S02, bridge S05, not S01; bus timetable is project scene adaptation."
+    },
+    {
+      "term": "rush hour",
+      "kind": "BRG",
+      "sourceLabel": "Source-derived · Master bridge S07 → S01",
+      "sourceRef": "Master V1.2 R00007; 大全直 PRO 听力预习词表 PDF p.1, rush hour, n., 交通高峰期. Master primary S07, bridge S01."
+    },
+    {
+      "term": "fare",
+      "kind": "BRG",
+      "sourceLabel": "Source-derived word · researcher bridge from S07 to S01",
+      "sourceRef": "Master V1.2 R00017; 大全直 PRO 听力预习词表 PDF p.1, fare, n., 车/船费. Master primary S07, bridge S08, not S01; bus fare is project scene adaptation."
+    },
+    {
+      "term": "reliable",
+      "kind": "EXP",
+      "sourceLabel": "External evidence · Cambridge Dictionary, dependable behaviour",
+      "sourceRef": "Cambridge Dictionary: reliable, adjective; applying it to journey-time consistency is project inference.",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/reliable"
+    },
+    {
+      "term": "delay",
+      "kind": "EXP",
+      "sourceLabel": "External evidence · Cambridge Dictionary, make something happen later",
+      "sourceRef": "Cambridge Dictionary: delay, verb; rush-hour traffic delaying a bus is this scene's application.",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/delay"
+    },
+    {
+      "term": "on foot",
+      "kind": "COL",
+      "sourceLabel": "External evidence · Cambridge Dictionary, travel by walking",
+      "sourceRef": "Cambridge Dictionary: on foot, A2 phrase meaning walking.",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/on-foot"
+    }
+  ],
+  "retrievalPrompts": [
+    {
+      "id": "S01.M09.P01",
+      "function": "Ask for a way around a blocked path",
+      "targetTerms": [
+        "route",
+        "direction"
+      ],
+      "cue": "The street shown on your map is closed for building work. Ask a person in a nearby shop how to reach the office another way.",
+      "acceptableAnswers": [
+        "Could you give me directions to the office by another route?",
+        "Is there another route to the office? The street on my map is closed."
+      ],
+      "feedback": "Say where you need to go and explain why the usual path cannot be used."
+    },
+    {
+      "id": "S01.M09.P02",
+      "function": "Explain why the planned arrival time was wrong",
+      "targetTerms": [
+        "timetable",
+        "rush hour",
+        "delay"
+      ],
+      "cue": "The printed schedule suggests the vehicle will arrive early, but heavy morning traffic makes it late. Explain the difference between the plan and the real journey.",
+      "acceptableAnswers": [
+        "The bus timetable showed an early arrival, but rush hour traffic delayed the bus.",
+        "It was due earlier, but the bus was delayed in rush hour, so the journey took longer."
+      ],
+      "feedback": "Separate the planned time from the observed delay and name the cause if you know it."
+    },
+    {
+      "id": "S01.M09.P03",
+      "function": "Compare travel modes, time and cost",
+      "targetTerms": [
+        "cycle",
+        "on foot",
+        "fare"
+      ],
+      "cue": "You can walk, use a bicycle, or pay for a vehicle ride. Compare two choices using what Lin actually observed.",
+      "acceptableAnswers": [
+        "On foot it took eighteen minutes and cost nothing; when she cycled, it took fourteen minutes.",
+        "Cycling was quickest, while the bus took thirty minutes and also cost a fare."
+      ],
+      "feedback": "Use actual times and cost rather than treating the shortest distance as the whole answer."
+    },
+    {
+      "id": "S01.M09.P04",
+      "function": "Choose a reliable ordinary route",
+      "targetTerms": [
+        "reliable",
+        "route"
+      ],
+      "cue": "A short walk usually takes about the same time, while the vehicle often arrives late. Say what you will normally choose and why.",
+      "acceptableAnswers": [
+        "I will usually take the walking route because it is more reliable than the bus.",
+        "I would walk on most days; it is a reliable journey even if cycling can be faster."
+      ],
+      "feedback": "A reliable option is one you can plan around. Your choice can change with darkness or bad weather."
+    }
+  ],
+  "transferPrompt": {
+    "id": "S01.M09.T01",
+    "function": "Transfer journey comparison to a new class schedule",
+    "targetTerms": [
+      "route",
+      "timetable",
+      "delay",
+      "reliable",
+      "on foot"
+    ],
+    "cue": "A student must reach an evening class. A train with one change is fast when it runs on time, but its arrival varies. Walking takes twenty-five minutes every time. Without reopening Lin's story, explain what you would check and which journey you would choose for an important class.",
+    "acceptableAnswers": [
+      "I would check the train timetable and any delay, but I would go on foot if that route gives me a more reliable arrival time.",
+      "For an important class, I would choose the walking route because it reliably takes twenty-five minutes; I would check the train timetable only as a backup."
+    ],
+    "feedback": "The destination and time of day changed. Compare planned and actual reliability, then choose a route that fits the new commitment."
+  }
+}

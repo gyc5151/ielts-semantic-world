@@ -1,0 +1,762 @@
+{
+  "sceneId": "S01.M05",
+  "words": {
+    "a": {
+      "zh": "一个；某个",
+      "note": "放在单数可数名词前，此处如 a deposit。"
+    },
+    "about": {
+      "zh": "关于"
+    },
+    "add": {
+      "zh": "加上；加入",
+      "note": "add ... to ... 表示把某项内容加入合同。"
+    },
+    "added": {
+      "zh": "加上了；合计了",
+      "note": "add 的过去式；Lin added the charges 表示她把各项费用算进去。"
+    },
+    "additional": {
+      "zh": "额外的"
+    },
+    "advert": {
+      "zh": "广告；招租信息",
+      "note": "此处指房间的招租广告。"
+    },
+    "advertised": {
+      "zh": "广告上写明的；宣传的"
+    },
+    "affordable": {
+      "zh": "负担得起的"
+    },
+    "after": {
+      "zh": "在……之后"
+    },
+    "again": {
+      "zh": "再次"
+    },
+    "agent": {
+      "zh": "中介；代理人",
+      "note": "estate agent 指房产中介。"
+    },
+    "agreed": {
+      "zh": "达成一致的；同意的",
+      "note": "条件从句中表示维修事项若能获得双方同意。"
+    },
+    "agreement": {
+      "zh": "协议；合同"
+    },
+    "also": {
+      "zh": "也；此外"
+    },
+    "amount": {
+      "zh": "金额"
+    },
+    "amounts": {
+      "zh": "金额；款项",
+      "note": "amount 的复数，指多笔金额。"
+    },
+    "an": {
+      "zh": "一个；某个",
+      "note": "用在元音音素开头的单数可数名词前，如 an upfront deposit。"
+    },
+    "and": {
+      "zh": "和；并且"
+    },
+    "any": {
+      "zh": "任何；一些",
+      "note": "疑问句 Are there any extra charges? 中表示“有额外费用吗”。"
+    },
+    "appears": {
+      "zh": "出现；显示在",
+      "note": "此处指一项收费出现在标价下方。"
+    },
+    "are": {
+      "zh": "是；处于",
+      "note": "be 的现在时复数形式，也用于 you 和 they。"
+    },
+    "arrange": {
+      "zh": "安排；协调"
+    },
+    "ask": {
+      "zh": "询问；请求"
+    },
+    "asked": {
+      "zh": "要求的；索取的",
+      "note": "amounts asked for 指被要求支付的金额。"
+    },
+    "at": {
+      "zh": "在",
+      "note": "at her desk 指在她的书桌旁。"
+    },
+    "attached": {
+      "zh": "附带的；相关的",
+      "note": "conditions attached to it 指押金所附的条件。"
+    },
+    "back": {
+      "zh": "回到；取回",
+      "note": "Back at her desk 是回到书桌旁；get it back 是取回押金。"
+    },
+    "be": {
+      "zh": "是；被",
+      "note": "在 be written into 中与过去分词构成被动。"
+    },
+    "before": {
+      "zh": "在……之前"
+    },
+    "below": {
+      "zh": "在……下方"
+    },
+    "bill": {
+      "zh": "账单",
+      "note": "electricity bill 指电费账单。"
+    },
+    "bills": {
+      "zh": "账单；费用单",
+      "note": "utility bills 指水电燃气等公用事业账单。"
+    },
+    "both": {
+      "zh": "两者都"
+    },
+    "but": {
+      "zh": "但是"
+    },
+    "called": {
+      "zh": "打电话给",
+      "note": "此处 she called the agent again 是她又给中介打电话。"
+    },
+    "campus": {
+      "zh": "校园"
+    },
+    "change": {
+      "zh": "改动；修改"
+    },
+    "charges": {
+      "zh": "收费项目；费用",
+      "note": "名词复数；extra charges 指额外收费。"
+    },
+    "clarify": {
+      "zh": "弄清；澄清"
+    },
+    "clear": {
+      "zh": "清楚的；明确的"
+    },
+    "columns": {
+      "zh": "栏；列",
+      "note": "笔记本里用两栏区分每月费用和入住前费用。"
+    },
+    "come": {
+      "zh": "发生；到来",
+      "note": "costs come every month 指费用每月都会产生。"
+    },
+    "comparing": {
+      "zh": "比较；对比"
+    },
+    "complete": {
+      "zh": "完整的"
+    },
+    "condition": {
+      "zh": "条件；条款"
+    },
+    "conditions": {
+      "zh": "条件；条款",
+      "note": "此处指押金返还等具体条件。"
+    },
+    "confirmed": {
+      "zh": "确认了"
+    },
+    "contract": {
+      "zh": "合同",
+      "note": "此处指写明租赁约定的合同。"
+    },
+    "cost": {
+      "zh": "费用；成本",
+      "note": "可指总费用，也可指某一项费用，依句意判断。"
+    },
+    "costs": {
+      "zh": "各项费用",
+      "note": "复数形式，指租金、电费等不同支出。"
+    },
+    "could": {
+      "zh": "能否；可以；可能",
+      "note": "Could you ...? 用来礼貌地提出请求。"
+    },
+    "date": {
+      "zh": "日期",
+      "note": "payment date 指付款日期。"
+    },
+    "decide": {
+      "zh": "决定"
+    },
+    "deposit": {
+      "zh": "押金",
+      "note": "在此租房场景中指入住前支付、可能按条件退还的款项。"
+    },
+    "desk": {
+      "zh": "书桌；办公桌"
+    },
+    "different": {
+      "zh": "不同的"
+    },
+    "distinction": {
+      "zh": "区别",
+      "note": "time distinction 指付款时间上的区别。"
+    },
+    "do": {
+      "zh": "助动词；做",
+      "note": "在 do not know 和 do I make 中帮助构成否定或疑问。"
+    },
+    "does": {
+      "zh": "助动词；做",
+      "note": "在 Does the rent include ...? 中帮助构成疑问。"
+    },
+    "down": {
+      "zh": "下来",
+      "note": "written down 表示写下来、记录下来。"
+    },
+    "draft": {
+      "zh": "草拟的；初稿",
+      "note": "draft contract 是尚待核对和签署的合同草稿。"
+    },
+    "drew": {
+      "zh": "画了",
+      "note": "draw 的过去式；drew two columns 指画出两栏。"
+    },
+    "due": {
+      "zh": "到期应付的",
+      "note": "payment is due 指款项到了应付时间。"
+    },
+    "each": {
+      "zh": "每个；每",
+      "note": "each month 指每个月。"
+    },
+    "either": {
+      "zh": "两者中的任何一个",
+      "note": "Either ... or ... 表示两种提问方式任选其一。"
+    },
+    "electricity": {
+      "zh": "电；电费",
+      "note": "句中 electricity costs extra 指电费另算。"
+    },
+    "english": {
+      "zh": "英语",
+      "note": "plain-English question 指用简单英语表达的问题。"
+    },
+    "estate": {
+      "zh": "房产的",
+      "note": "estate agent 是英式英语中的房产中介。"
+    },
+    "every": {
+      "zh": "每一个；每",
+      "note": "every month 指每个月。"
+    },
+    "exact": {
+      "zh": "确切的；具体的"
+    },
+    "explain": {
+      "zh": "说明；解释"
+    },
+    "extra": {
+      "zh": "额外的；另外收费的"
+    },
+    "fee": {
+      "zh": "费用；收费项目"
+    },
+    "figure": {
+      "zh": "数字；金额",
+      "note": "此处指租房广告中给出的价格数字。"
+    },
+    "filled": {
+      "zh": "填满了；占了",
+      "note": "rent filled only one line 指租金只占一行。"
+    },
+    "finger": {
+      "zh": "手指"
+    },
+    "first": {
+      "zh": "第一笔的；首次的",
+      "note": "first payment 指首笔付款。"
+    },
+    "flat": {
+      "zh": "公寓；英式英语"
+    },
+    "flats": {
+      "zh": "公寓；住宅单元（复数）"
+    },
+    "for": {
+      "zh": "为了；针对；索取",
+      "note": "ask for 表示索取；for one condition 表示针对一项条件。"
+    },
+    "from": {
+      "zh": "从；根据",
+      "note": "guessing from the advert 指根据广告猜测。"
+    },
+    "full": {
+      "zh": "全部的；完整的"
+    },
+    "general": {
+      "zh": "一般的；通用的"
+    },
+    "get": {
+      "zh": "得到；取回",
+      "note": "get it back 指以后取回这笔钱。"
+    },
+    "gives": {
+      "zh": "给出；提供",
+      "note": "advert gives a monthly price 指广告列出月租价。"
+    },
+    "guessing": {
+      "zh": "猜测"
+    },
+    "had": {
+      "zh": "有；已经"
+    },
+    "hand": {
+      "zh": "交给；交付",
+      "note": "hand over a sum of money 表示交付一笔钱。"
+    },
+    "her": {
+      "zh": "她的；她",
+      "note": "her desk 中是“她的”；宾语位置可表示“她”。"
+    },
+    "housing": {
+      "zh": "住房；租房",
+      "note": "housing costs 指住房相关费用。"
+    },
+    "i": {
+      "zh": "我"
+    },
+    "identify": {
+      "zh": "指出；明确"
+    },
+    "if": {
+      "zh": "如果"
+    },
+    "image": {
+      "zh": "图片；图像"
+    },
+    "in": {
+      "zh": "在……里；在……方面",
+      "note": "moving in 指搬进去；in the contract 指写在合同里。"
+    },
+    "include": {
+      "zh": "包括；包含"
+    },
+    "included": {
+      "zh": "被包含在内的",
+      "note": "Are utility bills included ...? 询问账单是否已包含。"
+    },
+    "includes": {
+      "zh": "包括；包含",
+      "note": "include 的第三人称单数形式。"
+    },
+    "including": {
+      "zh": "包括；包含……在内"
+    },
+    "instead": {
+      "zh": "而不是；改为",
+      "note": "instead of guessing 表示别靠猜测，改为询问。"
+    },
+    "into": {
+      "zh": "进入；写入",
+      "note": "written into the agreement 指写入协议。"
+    },
+    "is": {
+      "zh": "是；处于",
+      "note": "be 的现在时第三人称单数形式。"
+    },
+    "it": {
+      "zh": "它；这件事；这笔钱",
+      "note": "可指合同、押金或前文提到的事物，依句意判断。"
+    },
+    "keep": {
+      "zh": "保持；使……清楚",
+      "note": "Keep the time distinction clear 指把付款时间的区别说清楚。"
+    },
+    "key": {
+      "zh": "钥匙",
+      "note": "此处是房间或公寓的钥匙。"
+    },
+    "kitchen": {
+      "zh": "厨房"
+    },
+    "knew": {
+      "zh": "知道"
+    },
+    "know": {
+      "zh": "知道；了解"
+    },
+    "landlord": {
+      "zh": "房东"
+    },
+    "later": {
+      "zh": "以后；稍后"
+    },
+    "lease": {
+      "zh": "租赁合同",
+      "note": "相较 contract，更具体地指房产租赁协议。"
+    },
+    "left": {
+      "zh": "使……只剩；离开了"
+    },
+    "lin": {
+      "zh": "林",
+      "note": "故事人物的名字。"
+    },
+    "lin's": {
+      "zh": "林的",
+      "note": "人名 Lin 的所有格。"
+    },
+    "line": {
+      "zh": "一行",
+      "note": "指笔记本中的一行记录。"
+    },
+    "looking": {
+      "zh": "寻找中；看着"
+    },
+    "looks": {
+      "zh": "看起来"
+    },
+    "make": {
+      "zh": "进行；支付",
+      "note": "make the first payment 指支付首笔款项。"
+    },
+    "may": {
+      "zh": "可能"
+    },
+    "me": {
+      "zh": "我",
+      "note": "I 的宾格。"
+    },
+    "mention": {
+      "zh": "提及"
+    },
+    "mentioned": {
+      "zh": "提及了",
+      "note": "合同草稿里没有写到窗户维修。"
+    },
+    "missing": {
+      "zh": "缺失的；没有写上的",
+      "note": "此处指维修承诺没有出现在合同中。"
+    },
+    "money": {
+      "zh": "钱；款项"
+    },
+    "month": {
+      "zh": "月；月份"
+    },
+    "monthly": {
+      "zh": "每月的；按月的"
+    },
+    "more": {
+      "zh": "更；更为",
+      "note": "more specific 表示更具体。"
+    },
+    "move": {
+      "zh": "搬家；搬入",
+      "note": "move in 指搬进新住所。"
+    },
+    "moving": {
+      "zh": "搬入",
+      "note": "before moving in 指入住前。"
+    },
+    "must": {
+      "zh": "必须"
+    },
+    "natural": {
+      "zh": "自然的；地道的",
+      "note": "natural question 指符合英语习惯的问法。"
+    },
+    "nearer": {
+      "zh": "更近的"
+    },
+    "need": {
+      "zh": "需要"
+    },
+    "new": {
+      "zh": "新的"
+    },
+    "not": {
+      "zh": "不；没有"
+    },
+    "notebook": {
+      "zh": "笔记本"
+    },
+    "number": {
+      "zh": "数字；数额",
+      "note": "标题中指租金下方列出的另一个金额。"
+    },
+    "of": {
+      "zh": "……的",
+      "note": "sum of money 表示一笔钱。"
+    },
+    "one": {
+      "zh": "一个；某一项"
+    },
+    "ongoing": {
+      "zh": "持续发生的",
+      "note": "ongoing cost 指持续需要支付的费用。"
+    },
+    "only": {
+      "zh": "仅；只"
+    },
+    "opened": {
+      "zh": "打开了"
+    },
+    "or": {
+      "zh": "或者"
+    },
+    "over": {
+      "zh": "出去；转交",
+      "note": "hand over 是“交出、交付”的搭配。"
+    },
+    "page": {
+      "zh": "页面；一页"
+    },
+    "paid": {
+      "zh": "支付的；付了",
+      "note": "pay 的过去式或过去分词；is paid 表示被支付。"
+    },
+    "pay": {
+      "zh": "支付"
+    },
+    "payment": {
+      "zh": "付款；支付的款项"
+    },
+    "plain": {
+      "zh": "简单明白的",
+      "note": "plain-English 指用浅显英语表达的。"
+    },
+    "plan": {
+      "zh": "维修方案；计划",
+      "note": "此处指是否安排窗户维修及其书面处理方案。"
+    },
+    "please": {
+      "zh": "请",
+      "note": "用于礼貌请求。"
+    },
+    "price": {
+      "zh": "价格；标价"
+    },
+    "property": {
+      "zh": "房产；房屋",
+      "note": "property agreement 指房屋相关协议。"
+    },
+    "put": {
+      "zh": "写入；放入",
+      "note": "put ... in the contract 指把内容写进合同。"
+    },
+    "question": {
+      "zh": "问题；提问"
+    },
+    "questions": {
+      "zh": "问题；提问",
+      "note": "question 的复数。"
+    },
+    "quoted": {
+      "zh": "报出的；给出的",
+      "note": "quoted rent 指中介或广告报出的租金。"
+    },
+    "ran": {
+      "zh": "沿着……移动",
+      "note": "ran a finger down the page 指用手指顺着页面往下找。"
+    },
+    "receive": {
+      "zh": "收到；拿到"
+    },
+    "received": {
+      "zh": "收到了；拿到了",
+      "note": "receive 的过去式。"
+    },
+    "recurring": {
+      "zh": "定期发生的；反复产生的",
+      "note": "recurring costs 指每月等定期要付的费用。"
+    },
+    "rent": {
+      "zh": "租金；租用",
+      "note": "此处主要作名词，指每月支付的房租。"
+    },
+    "reopening": {
+      "zh": "重新打开；重新查看",
+      "note": "without reopening Lin's story 指不重新查看林的故事。"
+    },
+    "repair": {
+      "zh": "维修；修理",
+      "note": "window repair 指窗户维修；也可作动词。"
+    },
+    "repaired": {
+      "zh": "修好的；被修理"
+    },
+    "request": {
+      "zh": "请求；要求"
+    },
+    "room": {
+      "zh": "房间"
+    },
+    "say": {
+      "zh": "说出；说明"
+    },
+    "separate": {
+      "zh": "区分；分开",
+      "note": "separate recurring costs from a deposit 指分清经常性费用和押金。"
+    },
+    "she": {
+      "zh": "她"
+    },
+    "short": {
+      "zh": "简短的"
+    },
+    "should": {
+      "zh": "应该"
+    },
+    "sign": {
+      "zh": "签字；签署",
+      "note": "before I sign 指我签署合同前。"
+    },
+    "signing": {
+      "zh": "签署；签字",
+      "note": "before signing 指签署前。"
+    },
+    "specific": {
+      "zh": "具体的；明确的"
+    },
+    "story": {
+      "zh": "故事；情境"
+    },
+    "sum": {
+      "zh": "一笔金额；款项",
+      "note": "a sum of money 指一笔钱。"
+    },
+    "tell": {
+      "zh": "告诉；说明",
+      "note": "Could you tell me ...? 是礼貌询问。"
+    },
+    "term": {
+      "zh": "条款",
+      "note": "written term 指写在合同中的条款。"
+    },
+    "that": {
+      "zh": "那个；那件事；……这一点",
+      "note": "既可指前文事物，也可引出从句，依句意判断。"
+    },
+    "the": {
+      "zh": "这；那；特指的",
+      "note": "放在名词前，指双方已知或前文提到的人、物、费用。"
+    },
+    "then": {
+      "zh": "然后；那时"
+    },
+    "there": {
+      "zh": "有；那里",
+      "note": "Are there ...? 中与 be 连用表示“有……吗”。"
+    },
+    "this": {
+      "zh": "这个；这件事"
+    },
+    "time": {
+      "zh": "时间"
+    },
+    "timing": {
+      "zh": "时间安排",
+      "note": "payment timing 指付款时间安排。"
+    },
+    "to": {
+      "zh": "到；向；用于引出动词",
+      "note": "在 to repair 中引出不定式；在 attached to it 中表示“与……相关”。"
+    },
+    "total": {
+      "zh": "总计的；总额"
+    },
+    "transfer": {
+      "zh": "迁移运用；换情境使用",
+      "note": "此处指把学到的提问方式用于新租房情境。"
+    },
+    "two": {
+      "zh": "两个"
+    },
+    "unsigned": {
+      "zh": "尚未签字的"
+    },
+    "until": {
+      "zh": "直到……为止"
+    },
+    "upfront": {
+      "zh": "预先支付的；前期的",
+      "note": "upfront deposit 指入住前先付的押金。"
+    },
+    "useful": {
+      "zh": "有用的"
+    },
+    "utility": {
+      "zh": "水电燃气等公用事业的",
+      "note": "utility bills 指水、电、燃气等账单。"
+    },
+    "vary": {
+      "zh": "有所不同；变化"
+    },
+    "was": {
+      "zh": "是；处于",
+      "note": "be 的过去时单数形式。"
+    },
+    "water": {
+      "zh": "水；水费",
+      "note": "在租房费用问题中也可指水费。"
+    },
+    "we": {
+      "zh": "我们"
+    },
+    "were": {
+      "zh": "是；处于",
+      "note": "be 的过去时复数形式，也用于 you。"
+    },
+    "what": {
+      "zh": "什么；哪些",
+      "note": "what extra charges 指哪些额外收费。"
+    },
+    "when": {
+      "zh": "什么时候；当……时"
+    },
+    "whether": {
+      "zh": "是否"
+    },
+    "which": {
+      "zh": "哪一个；哪些"
+    },
+    "will": {
+      "zh": "会；将",
+      "note": "表示将来或意愿，如 What ... will I pay?"
+    },
+    "window": {
+      "zh": "窗户",
+      "note": "故事中指承诺要维修的厨房窗户。"
+    },
+    "with": {
+      "zh": "带有；用；关于",
+      "note": "with utility bills 表示包含或涉及水电账单，依句意判断。"
+    },
+    "without": {
+      "zh": "没有；不",
+      "note": "without reopening 指不重新打开查看。"
+    },
+    "word": {
+      "zh": "词；用词"
+    },
+    "wording": {
+      "zh": "措辞；表达方式"
+    },
+    "would": {
+      "zh": "会；愿意",
+      "note": "I would pay 表示假设情境下需要支付。"
+    },
+    "writing": {
+      "zh": "书面形式；写下来"
+    },
+    "written": {
+      "zh": "书面的；写下的",
+      "note": "write 的过去分词；be written into 指被写入。"
+    },
+    "you": {
+      "zh": "你；您"
+    }
+  }
+}

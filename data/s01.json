@@ -1,0 +1,22 @@
+{
+  "sceneId": "S01",
+  "title": "Housing & Commuting",
+  "version": "pilot-6-0",
+  "dictionaryFile": "./data/wordnet-s01.json",
+  "dictionaryContextFile": "./data/s01-dictionary-context.json",
+  "dictionaryTranslationFile": "./data/wordnet-translations-s01.json",
+  "sourceBasis": "The three original IELTS vocabulary files and Master Lexicon V1.2 remain separate from this prototype. SRC/BRG terms trace back to source-derived records; EXP/COL terms cite external evidence; scene narratives, prompts, and word-by-word contextual Chinese glosses are researcher inference. WordNet 3.0 dictionary senses/examples are an independent licensed external evidence layer, while scene sense matching and contrast examples are researcher inference.",
+  "sceneFiles": [
+    "./data/s01-m01.json",
+    "./data/s01-m02.json",
+    "./data/s01-m03.json",
+    "./data/s01-m04.json",
+    "./data/s01-m05.json",
+    "./data/s01-m06.json",
+    "./data/s01-m07.json",
+    "./data/s01-m08.json",
+    "./data/s01-m09.json"
+  ],
+  "textTranslationFile": "./data/s01-text-translations.json",
+  "dictionaryChineseFile": "./data/wordnet-zh-s01.json"
+}

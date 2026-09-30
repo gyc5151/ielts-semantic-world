@@ -1,0 +1,200 @@
+{
+  "id": "S01.M01",
+  "navTitle": "住房需求",
+  "wordFile": "./data/s01-m01-words.json",
+  "title": "Two homes on the list",
+  "situation": "After another crowded rush hour, Lin reached home late and opened a rental website. The train fare was rising, and her daily commute left little time for dinner. She drew a circle around her workplace on a map, then set three filters: a flat or studio, a journey of no more than thirty minutes, and an advertised price within her monthly budget. A studio near work appeared first. It was small, but its location made it worth considering. A cheaper flat in the suburb would leave her with the same long train journey, so she removed that listing. She saved the studio and a second flat near a station to a shortlist. Neither was perfect, and she still needed to check the full costs. Her next step was to ask about both listings.",
+  "goal": "Describe housing needs, set filters for location, home type and budget, and make a shortlist for later enquiries.",
+  "zhSupport": "林的早高峰通勤又长又贵。她在租房平台按地点、房型、路程与预算筛选，排除仍要久坐火车的城郊房源，留下两处待询问的住处。她尚未看房，也没有确认全部费用。先用英文说出筛选理由，再看示例。",
+  "glossary": [
+    {
+      "id": "S01.M01.G01",
+      "text": "rush hour",
+      "type": "chunk",
+      "zh": "交通高峰期",
+      "note": "指上下班人流与车流集中的时段；这里是林拥挤通勤的背景。",
+      "sourceTerm": "rush hour"
+    },
+    {
+      "id": "S01.M01.G02",
+      "text": "daily commute",
+      "type": "chunk",
+      "zh": "日常通勤",
+      "note": "commute 在这里是名词，指住处与工作地点之间经常往返的路程。",
+      "sourceTerm": "commute"
+    },
+    {
+      "id": "S01.M01.G03",
+      "text": "set three filters",
+      "type": "chunk",
+      "zh": "设置三项筛选条件",
+      "note": "在找房平台上按房型、路程和价格缩小结果范围；three 可按实际条件替换。"
+    },
+    {
+      "id": "S01.M01.G04",
+      "text": "within her monthly budget",
+      "type": "chunk",
+      "zh": "在她的每月预算之内",
+      "note": "within budget 表示不超过可支配的预算；广告价格只是初筛依据，实际总费用还要核对。",
+      "sourceTerm": "budget"
+    },
+    {
+      "id": "S01.M01.G05",
+      "text": "fare",
+      "type": "word",
+      "zh": "车费",
+      "note": "这里是火车票价，不是房租。",
+      "sourceTerm": "fare"
+    },
+    {
+      "id": "S01.M01.G06",
+      "text": "flat",
+      "type": "word",
+      "zh": "公寓",
+      "note": "英式英语中指公寓住房；这里与单间公寓 studio 比较。",
+      "sourceTerm": "flat"
+    },
+    {
+      "id": "S01.M01.G07",
+      "text": "studio",
+      "type": "word",
+      "zh": "单间公寓",
+      "note": "通常以一个主要房间兼作起居与睡眠空间；不能只凭户型推断是否合适。",
+      "sourceTerm": "studio"
+    },
+    {
+      "id": "S01.M01.G08",
+      "text": "suburb",
+      "type": "word",
+      "zh": "城郊",
+      "note": "城市中心外围的居住区；这里便宜的房源仍会让林花很长时间坐火车。",
+      "sourceTerm": "suburb"
+    },
+    {
+      "id": "S01.M01.G09",
+      "text": "budget",
+      "type": "word",
+      "zh": "预算",
+      "note": "名词；在本场景中指林为每月住房支出设定的上限。",
+      "sourceTerm": "budget"
+    },
+    {
+      "id": "S01.M01.G10",
+      "text": "shortlist",
+      "type": "word",
+      "zh": "候选短名单",
+      "note": "从较多选项中选出少数值得进一步了解的对象；在这里还没有决定租哪一套。",
+      "sourceTerm": "shortlist"
+    }
+  ],
+  "terms": [
+    {
+      "term": "rush hour",
+      "kind": "BRG",
+      "sourceLabel": "Source-derived · listening seed; Master maps S07 primary and S01 bridge",
+      "sourceRef": "Master V1.2 R00007; 大全直 PRO 听力预习词表 PDF p.1, item 7: rush hour, n., 交通高峰期"
+    },
+    {
+      "term": "fare",
+      "kind": "BRG",
+      "sourceLabel": "Source-derived listening seed; use for Lin's train cost is researcher inference, not a Master S01 mapping",
+      "sourceRef": "Master V1.2 R00017; 大全直 PRO 听力预习词表 PDF p.1, item 17: fare, n., 车/船费. Master maps S07 primary and S08 bridge; M01 use is project adaptation."
+    },
+    {
+      "term": "commute",
+      "kind": "EXP",
+      "sourceLabel": "External evidence · Cambridge Dictionary, regular home–work journey sense",
+      "sourceRef": "Cambridge Dictionary: commute, noun; daily commute",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/commute"
+    },
+    {
+      "term": "flat",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · listening seed, apartment dwelling sense",
+      "sourceRef": "Master V1.2 R00002; 大全直 PRO 听力预习词表 PDF p.1, item 2: flat, n., 公寓"
+    },
+    {
+      "term": "studio",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · listening seed, one-room apartment sense",
+      "sourceRef": "Master V1.2 R00019; 大全直 PRO 听力预习词表 PDF p.1, item 19: studio, n., 单间公寓"
+    },
+    {
+      "term": "suburb",
+      "kind": "BRG",
+      "sourceLabel": "Source-derived · listening seed; Master maps S03 primary and S01 bridge",
+      "sourceRef": "Master V1.2 R00001; 大全直 PRO 听力预习词表 PDF p.1, item 1: suburb, n., 城郊"
+    },
+    {
+      "term": "budget",
+      "kind": "BRG",
+      "sourceLabel": "Source-derived word; housing-filter placement is researcher inference, not a Master S01 mapping",
+      "sourceRef": "Master V1.2 R00062; 大全直 PRO 听力预习词表 PDF p.2, item 62: budget, n., 预算. Master maps S08 primary and S02 bridge; this housing use is project adaptation.",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/within-budget"
+    },
+    {
+      "term": "shortlist",
+      "kind": "EXP",
+      "sourceLabel": "External evidence · Cambridge Dictionary, reduced list of suitable candidates; housing use is researcher inference",
+      "sourceRef": "Cambridge Dictionary: shortlist, noun; applying the general selection idea to homes is project adaptation",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/shortlist"
+    }
+  ],
+  "retrievalPrompts": [
+    {
+      "id": "S01.M01.P01",
+      "function": "Explain why a new home is needed",
+      "targetTerms": ["rush hour", "commute"],
+      "cue": "Lin's train is crowded, and the journey leaves little time at home. Explain why she starts looking for another place.",
+      "acceptableAnswers": [
+        "Her commute during rush hour takes too long, so she wants to live closer to work.",
+        "She is looking for a new home because the crowded journey to work takes too much time."
+      ],
+      "feedback": "Rush hour names the busy travel period; commute names the regular journey. Give a cause and the housing need it creates."
+    },
+    {
+      "id": "S01.M01.P02",
+      "function": "Set location and journey filters",
+      "targetTerms": ["commute", "suburb"],
+      "cue": "A cheap place outside the city would still mean a long train ride. State a useful location or journey limit.",
+      "acceptableAnswers": [
+        "I want a place within thirty minutes of work so my commute is shorter.",
+        "Please show me homes near work; the suburb would leave me with a long journey."
+      ],
+      "feedback": "A location filter is useful when it changes the journey. State a concrete time or area, and explain why the distant option is removed."
+    },
+    {
+      "id": "S01.M01.P03",
+      "function": "Name acceptable home types",
+      "targetTerms": ["flat", "studio"],
+      "cue": "Lin is open to two kinds of homes. One has several rooms; the other has one main living and sleeping space. State her search preference.",
+      "acceptableAnswers": [
+        "I am looking for a flat or a studio near work.",
+        "Please include both flats and studios in my search."
+      ],
+      "feedback": "Flat is a general apartment term in British English. A studio has one main living and sleeping room. Either can remain an option at this stage."
+    },
+    {
+      "id": "S01.M01.P04",
+      "function": "Set a price limit and build a shortlist",
+      "targetTerms": ["budget", "shortlist"],
+      "cue": "Two advertised prices fit Lin's limit. She wants to save those homes and ask about the full cost later. Describe that step.",
+      "acceptableAnswers": [
+        "I set a monthly budget and saved two listings to my shortlist.",
+        "Both homes fit my price limit, so I will shortlist them and check the total cost later."
+      ],
+      "feedback": "A shortlist is a small set of options for the next enquiry. The advertised price is an initial filter; it does not establish the full cost."
+    }
+  ],
+  "transferPrompt": {
+    "id": "S01.M01.T01",
+    "function": "Transfer housing filters to a new campus journey",
+    "targetTerms": ["commute", "studio", "budget", "shortlist"],
+    "cue": "A friend has a long journey to a new campus. Their limit is 900 a month, and they want a one-room apartment within twenty minutes of campus. Without reopening Lin's story, describe the filters and the next selection step.",
+    "acceptableAnswers": [
+      "I would search for a studio within twenty minutes of campus and under 900 a month, then shortlist two suitable places.",
+      "My budget is 900 a month, so I would filter for studios near campus and save a few options with a shorter commute."
+    ],
+    "feedback": "Change the destination and figures while keeping the useful actions: set a home type, journey limit and budget, then save a few options for enquiries."
+  }
+}

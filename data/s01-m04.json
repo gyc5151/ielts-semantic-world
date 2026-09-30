@@ -1,0 +1,187 @@
+{
+  "id": "S01.M04",
+  "navTitle": "比较选择",
+  "wordFile": "./data/s01-m04-words.json",
+  "title": "Two flats, one ordinary weekday",
+  "situation": "After the viewing, the agent suggested another flat across town. It had not made Lin's shortlist because the journey looked long, but she went to compare its larger rooms and lower price. The first flat was small and had a kitchen window needing repair, but it stood on a quiet street, a fifteen-minute walk from work. Its monthly rent was £90 higher. The new flat was spacious enough for her desk and stayed within her budget. Yet traffic outside its bedroom brought constant noise, and the commute would take nearly an hour by bus. After a late shift, that wait at the stop would be tiring. The trade-off was clearer now. On balance, she preferred the smaller flat, although she still needed an answer about the repair. She would also check the bus route at rush hour and compare full monthly costs before choosing.",
+  "goal": "Compare two flats by space, noise, rent, and commute; explain a provisional preference and what to check before choosing.",
+  "zhSupport": "林把刚看过、厨房窗户仍有问题的近单位公寓，与中介新推荐的一套更宽敞但靠大路的房子相比。她需要衡量月租、空间、噪音和每天通勤；先说出暂定偏好，再核实维修、高峰路线与完整费用。",
+  "glossary": [
+    {
+      "id": "S01.M04.G01",
+      "text": "spacious",
+      "type": "word",
+      "zh": "宽敞的",
+      "note": "形容房间或住房空间大、活动余地足；可说 a spacious flat。",
+      "sourceTerm": "spacious"
+    },
+    {
+      "id": "S01.M04.G02",
+      "text": "monthly rent",
+      "type": "chunk",
+      "zh": "月租金",
+      "note": "monthly 修饰名词 rent；这里是每月付给房东的租金，是否包括账单还要核实。",
+      "sourceTerm": "monthly rent"
+    },
+    {
+      "id": "S01.M04.G03",
+      "text": "budget",
+      "type": "word",
+      "zh": "预算",
+      "note": "within her budget 表示在她能安排的预算范围内；仍须核对全部费用。",
+      "sourceTerm": "budget"
+    },
+    {
+      "id": "S01.M04.G04",
+      "text": "noise",
+      "type": "word",
+      "zh": "噪音；吵闹声",
+      "note": "这里指卧室外道路持续传来的声音；可说 road noise。",
+      "sourceTerm": "noise"
+    },
+    {
+      "id": "S01.M04.G05",
+      "text": "commute",
+      "type": "word",
+      "zh": "上下班的通勤路程",
+      "note": "这里是名词，指每天往返住处与工作地点的行程；a long commute 是通勤时间长。",
+      "sourceTerm": "commute"
+    },
+    {
+      "id": "S01.M04.G06",
+      "text": "trade-off",
+      "type": "chunk",
+      "zh": "取舍；得失权衡",
+      "note": "可数名词；a trade-off between space and travel time 表示空间与通勤时间之间的取舍。",
+      "sourceTerm": "trade-off"
+    },
+    {
+      "id": "S01.M04.G07",
+      "text": "on balance",
+      "type": "chunk",
+      "zh": "权衡各方面后",
+      "note": "在提到两边的利弊后，用 on balance 引出总体判断；不表示其他疑问都已解决。",
+      "sourceTerm": "on balance"
+    },
+    {
+      "id": "S01.M04.G08",
+      "text": "rush hour",
+      "type": "chunk",
+      "zh": "上下班交通高峰期",
+      "note": "指早晚大量人通勤、道路或公共交通较拥挤的时段；at rush hour 表示在高峰时段。",
+      "sourceTerm": "rush hour"
+    }
+  ],
+  "terms": [
+    {
+      "term": "spacious",
+      "kind": "BRG",
+      "sourceLabel": "Source-derived · class seed, room-size sense bridged S07 → S01",
+      "sourceRef": "Master V1.2 R01198: spacious, adj., 宽敞的，广阔的; 雅思 PRO 班级词汇表 PDF p.15, Unit 7 item 17 (hotel rooms example). The flat use here is a scene bridge."
+    },
+    {
+      "term": "monthly rent",
+      "kind": "COL",
+      "sourceLabel": "External evidence · Cambridge Dictionary, rent as a noun and monthly rent collocation",
+      "sourceRef": "Cambridge Dictionary: rent, noun (payment); annual/monthly rent. Master R00060 and listening PDF p.2 item 60 give rent as a verb only, so this noun phrase is not tagged SRC.",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/rent"
+    },
+    {
+      "term": "budget",
+      "kind": "BRG",
+      "sourceLabel": "Source-derived listening seed; housing use is researcher inference, not a Master S01 bridge",
+      "sourceRef": "Master V1.2 R00062: budget, n., 预算; 大全直 PRO 听力预习词表 PDF p.2, Unit 1 item 62 (money available and plan for spending it). Housing placement is researcher inference."
+    },
+    {
+      "term": "noise",
+      "kind": "EXP",
+      "sourceLabel": "External evidence · Cambridge Dictionary, unwanted sound",
+      "sourceRef": "Cambridge Dictionary: noise, noun (sound), especially unwanted, unpleasant, or loud; traffic noise.",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/noise"
+    },
+    {
+      "term": "commute",
+      "kind": "EXP",
+      "sourceLabel": "External evidence · Cambridge Dictionary, regular home–work journey",
+      "sourceRef": "Cambridge Dictionary: commute, noun (regular journey between work and home).",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/commute"
+    },
+    {
+      "term": "trade-off",
+      "kind": "EXP",
+      "sourceLabel": "External evidence · Cambridge Dictionary, noun for balancing wanted qualities",
+      "sourceRef": "Cambridge Dictionary: trade-off, noun; balancing two opposing situations or accepting a disadvantage for a benefit.",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/trade-off"
+    },
+    {
+      "term": "on balance",
+      "kind": "COL",
+      "sourceLabel": "External evidence · Cambridge Dictionary, idiom for an overall judgment",
+      "sourceRef": "Cambridge Dictionary: on balance, idiom; after considering both sides of a question. This scene's sentence is original project writing.",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/on-balance"
+    },
+    {
+      "term": "rush hour",
+      "kind": "BRG",
+      "sourceLabel": "Source-derived · listening seed, commute-time sense bridged S07 → S01",
+      "sourceRef": "Master V1.2 R00007: rush hour, n., 交通高峰期; 大全直 PRO 听力预习词表 PDF p.1, Unit 1 item 7 (roads and trains crowded as people travel to or from work)."
+    }
+  ],
+  "retrievalPrompts": [
+    {
+      "id": "S01.M04.P01",
+      "function": "Compare space and rent",
+      "targetTerms": ["spacious", "monthly rent", "budget"],
+      "cue": "The flat near work has little desk space and costs £90 more each month. The other has room for a desk and is cheaper. Compare them.",
+      "acceptableAnswers": [
+        "The second flat is more spacious and has lower monthly rent, but it is farther from work.",
+        "The flat near work is smaller and costs £90 more a month, while the other gives me room for a desk and fits my budget."
+      ],
+      "feedback": "Spacious describes the usable room; monthly rent is the regular housing payment. Compare both flats on the same points, and check later whether bills are included."
+    },
+    {
+      "id": "S01.M04.P02",
+      "function": "Compare noise and daily travel",
+      "targetTerms": ["noise", "commute", "rush hour"],
+      "cue": "The cheaper flat is beside a busy road. Its bus journey to work takes nearly an hour before peak traffic. Explain the everyday cost of choosing it.",
+      "acceptableAnswers": [
+        "The spacious flat is cheaper, but the road noise and nearly hour-long commute would affect me every day.",
+        "It has more room, but the bedroom is noisy and the bus journey takes almost an hour, perhaps longer at rush hour."
+      ],
+      "feedback": "Name the source of the noise and give the known journey time. The rush-hour time has not been measured, so describe that part as a possibility."
+    },
+    {
+      "id": "S01.M04.P03",
+      "function": "Explain a housing trade-off",
+      "targetTerms": ["trade-off", "on balance", "commute"],
+      "cue": "You value quiet and time after late shifts more than desk space. Explain what you gain and give up, then state your present preference.",
+      "acceptableAnswers": [
+        "The trade-off is less space and higher rent for a quieter home and a much shorter commute. On balance, I prefer the flat near work.",
+        "Although the nearer flat costs more and is smaller, I would choose it for the quiet street and shorter walk, provided I can afford the total cost."
+      ],
+      "feedback": "A clear choice names both the benefit and the cost. On balance introduces your overall view after comparing the options; it does not mean every issue is settled."
+    },
+    {
+      "id": "S01.M04.P04",
+      "function": "State a provisional choice and checks",
+      "targetTerms": ["on balance", "monthly rent", "rush hour"],
+      "cue": "You favour the near-work flat, but its kitchen window needs repair. You have not checked the full costs or the second bus route at peak time. Say which flat you favour and what you will check.",
+      "acceptableAnswers": [
+        "On balance, I prefer the flat near work, but I will ask whether the window can be repaired and check the full monthly cost before deciding.",
+        "I am leaning toward the smaller flat. I will check the repair and costs, and test the other commute at rush hour."
+      ],
+      "feedback": "Prefer or lean toward can express a tentative choice. Ask whether the repair will be arranged, check the total monthly cost, and test the other route at a realistic travel time before making a final decision."
+    }
+  ],
+  "transferPrompt": {
+    "id": "S01.M04.T01",
+    "function": "Transfer comparison and choice language to two student rooms",
+    "targetTerms": ["spacious", "monthly rent", "noise", "trade-off", "on balance"],
+    "cue": "A friend is choosing between a small, quiet room ten minutes from college and a larger room beside a main road. The larger room is £60 cheaper each month but needs a forty-minute bus ride. Without reopening Lin's story, compare the four factors, give a tentative choice, and name one fact to check.",
+    "acceptableAnswers": [
+      "The larger room is cheaper and more spacious, but the road noise and forty-minute bus ride would bother me. On balance, I prefer the small room, provided its full monthly cost fits my budget.",
+      "I would probably take the room near college. I would give up some space and pay £60 more for quiet and a short journey. I would check whether bills are included before agreeing."
+    ],
+    "feedback": "Use the new prices and journey times. State what you gain and give up, make a provisional choice, and identify one missing fact; either room can be a reasonable choice if you explain it."
+  }
+}

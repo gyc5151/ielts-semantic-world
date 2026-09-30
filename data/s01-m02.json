@@ -1,0 +1,234 @@
+{
+  "id": "S01.M02",
+  "navTitle": "联系房源",
+  "wordFile": "./data/s01-m02-words.json",
+  "title": "The Thursday call",
+  "situation": "The next day, Lin chose the flat near the station from her shortlist. Its advert was a week old, so she phoned the estate agent to enquire whether it was still available. It was. The current tenant would leave at the end of the month, so Lin could move in early next month. The agent offered an appointment to see the flat on Thursday at six. A bus passed as he spoke, and Lin heard Tuesday. Because Tuesday clashed with her shift, she repeated the day to check. 'Thursday,' he said, then gave her the address: 18 Park Road. Lin repeated the street number, and he confirmed it. Thursday suited her. She saved the address and agreed to meet him outside the building.",
+  "goal": "Check whether the flat is available, find out when moving in is possible, and confirm the visit time and address after a phone misunderstanding.",
+  "zhSupport": "林因通勤太久联系一套离办公室较近的公寓。电话噪音使她把星期四听成星期二；她需要核对看房时间、地址及可入住时间。先自己用英文说，再看示例。",
+  "glossary": [
+    {
+      "id": "S01.M02.G01",
+      "text": "still available",
+      "type": "chunk",
+      "zh": "现在仍可租到；尚未被租走",
+      "note": "still 追问广告发布后状态是否发生变化；Is the flat still available? 是自然问法。",
+      "sourceTerm": "available"
+    },
+    {
+      "id": "S01.M02.G02",
+      "text": "estate agent",
+      "type": "chunk",
+      "zh": "房产中介",
+      "note": "英式英语。原课程释义偏重房屋买卖；本场景的租赁业务用法另有剑桥词典支持。",
+      "sourceTerm": "estate agent"
+    },
+    {
+      "id": "S01.M02.G03",
+      "text": "enquire whether",
+      "type": "chunk",
+      "zh": "询问是否……",
+      "note": "enquire 为英式拼写；enquire whether the flat is available 可用于较正式的问询。",
+      "sourceTerm": "enquire"
+    },
+    {
+      "id": "S01.M02.G04",
+      "text": "an appointment to see the flat",
+      "type": "chunk",
+      "zh": "参观这套公寓的预约",
+      "note": "appointment 是约定时间的见面；整句是语境组合，不是必须逐字背诵的固定搭配。",
+      "sourceTerm": "appointment"
+    },
+    {
+      "id": "S01.M02.G05",
+      "text": "move in",
+      "type": "chunk",
+      "zh": "搬入；开始在新住所居住",
+      "note": "常问 When could I move in?，与看房日期不同。",
+      "sourceTerm": "move in"
+    },
+    {
+      "id": "S01.M02.G06",
+      "text": "confirm the address",
+      "type": "chunk",
+      "zh": "确认地址",
+      "note": "电话里可重复门牌号和街道名，再请对方确认；这是沟通功能，不是不可拆的固定搭配。",
+      "sourceTerm": "confirm"
+    },
+    {
+      "id": "S01.M02.G07",
+      "text": "flat",
+      "type": "word",
+      "zh": "公寓",
+      "note": "英式英语中的住房名词；这里是出租广告中的整套公寓。",
+      "sourceTerm": "flat"
+    },
+    {
+      "id": "S01.M02.G08",
+      "text": "available",
+      "type": "word",
+      "zh": "可得到的；这里指可租的",
+      "note": "形容词，在房源语境表示现在仍可供租用。",
+      "sourceTerm": "available"
+    },
+    {
+      "id": "S01.M02.G09",
+      "text": "appointment",
+      "type": "word",
+      "zh": "预约；约定的见面",
+      "note": "可指在特定时间会面或参观；这里指与中介约好看房。",
+      "sourceTerm": "appointment"
+    },
+    {
+      "id": "S01.M02.G10",
+      "text": "address",
+      "type": "word",
+      "zh": "地址",
+      "note": "可包含门牌号、街道名和城市；电话核对时不要只问街名。",
+      "sourceTerm": "address"
+    },
+    {
+      "id": "S01.M02.G11",
+      "text": "enquire",
+      "type": "word",
+      "zh": "询问；咨询",
+      "note": "英式拼写；口语中也可用 ask。",
+      "sourceTerm": "enquire"
+    },
+    {
+      "id": "S01.M02.G12",
+      "text": "confirm",
+      "type": "word",
+      "zh": "确认；核实",
+      "note": "confirm the time / address；对方在故事中 confirmed the number。",
+      "sourceTerm": "confirm"
+    }
+  ],
+  "terms": [
+    {
+      "term": "flat",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · listening seed, home noun",
+      "sourceRef": "Master V1.2 R00002; 大全直 PRO 听力预习词表 PDF p.1, Unit 1 item 2: flat, n., 公寓"
+    },
+    {
+      "term": "estate agent",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · listening seed, property intermediary; rental role checked separately",
+      "sourceRef": "Master V1.2 R00012; 大全直 PRO 听力预习词表 PDF p.1, Unit 1 item 12: estate agent, n., 房产中介. The source definition specifically mentions selling houses and land; Cambridge also records renting.",
+      "sourceUrl": "https://dictionary.cambridge.org/us/dictionary/english/estate-agent"
+    },
+    {
+      "term": "available",
+      "kind": "BRG",
+      "sourceLabel": "Source-derived word · researcher bridge from S08 to S01 rental enquiry",
+      "sourceRef": "Master V1.2 R00040; 大全直 PRO 听力预习词表 PDF p.2, Unit 1 item 40: available, adj., 可得到的; that you can get, buy or find. Master V1.2 primary S08; no S01 bridge. Its rental-enquiry use here is project scene adaptation."
+    },
+    {
+      "term": "enquire",
+      "kind": "BRG",
+      "sourceLabel": "Source-derived word · researcher bridge from S08 to S01 rental enquiry",
+      "sourceRef": "Master V1.2 R00041; 大全直 PRO 听力预习词表 PDF p.2, Unit 1 item 41: enquire, v., 咨询; to ask sb for some information. Master V1.2 primary S08, bridge S02; no S01 bridge. Its rental-enquiry use here is project scene adaptation."
+    },
+    {
+      "term": "appointment",
+      "kind": "BRG",
+      "sourceLabel": "Source-derived word · researcher bridge from S02 to S01 rental enquiry",
+      "sourceRef": "Master V1.2 R00011; 大全直 PRO 听力预习词表 PDF p.1, Unit 1 item 11: appointment, n., 预约; a formal arrangement to meet or visit somebody at a particular time. Master V1.2 primary S02; no S01 bridge. Its rental-enquiry use here is project scene adaptation."
+    },
+    {
+      "term": "address",
+      "kind": "EXP",
+      "sourceLabel": "External evidence · Cambridge Learner's Dictionary, building details",
+      "sourceRef": "Cambridge Learner's Dictionary: address, noun, building number and road details",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/learner-english/address"
+    },
+    {
+      "term": "move in",
+      "kind": "EXP",
+      "sourceLabel": "External evidence · Cambridge Learner's Dictionary, begin living in a new home",
+      "sourceRef": "Cambridge Learner's Dictionary: move in, phrasal verb, B1 home sense",
+      "sourceUrl": "https://dictionary.cambridge.org/us/dictionary/learner-english/move-in"
+    },
+    {
+      "term": "confirm",
+      "kind": "EXP",
+      "sourceLabel": "External evidence · Cambridge Dictionary, make an arrangement certain",
+      "sourceRef": "Cambridge Dictionary: confirm, verb, make certain an arrangement or meeting",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/confirm"
+    }
+  ],
+  "retrievalPrompts": [
+    {
+      "id": "S01.M02.P01",
+      "function": "Ask whether an advertised home can still be rented",
+      "targetTerms": [
+        "flat",
+        "available"
+      ],
+      "cue": "The advert is a week old. You call about the home and want to know whether anyone has taken it. Ask one clear question.",
+      "acceptableAnswers": [
+        "Is the flat still available to rent?",
+        "Is this flat still available?"
+      ],
+      "feedback": "Available asks about the current status of the flat. Still is useful because the advert may be out of date."
+    },
+    {
+      "id": "S01.M02.P02",
+      "function": "Ask for the earliest possible moving date",
+      "targetTerms": [
+        "move in"
+      ],
+      "cue": "The current tenant leaves at the end of the month. Ask the agent when you could start living in the flat.",
+      "acceptableAnswers": [
+        "When could I move in?",
+        "What is the earliest date I could move into the flat?"
+      ],
+      "feedback": "Move in means begin living there. Keep the moving date separate from the date of a visit."
+    },
+    {
+      "id": "S01.M02.P03",
+      "function": "Clarify a visit day after hearing it incorrectly",
+      "targetTerms": [
+        "appointment",
+        "confirm"
+      ],
+      "cue": "The agent offers a visit at six, but noise makes Tuesday and Thursday hard to distinguish. Tuesday conflicts with work. Check the day before agreeing.",
+      "acceptableAnswers": [
+        "Could you confirm that the appointment is on Thursday at six?",
+        "Sorry, did you say Tuesday or Thursday at six?"
+      ],
+      "feedback": "Repeat the two possible days or ask for confirmation. The exact day matters because one option conflicts with work."
+    },
+    {
+      "id": "S01.M02.P04",
+      "function": "Check the full location before ending the call",
+      "targetTerms": [
+        "address",
+        "confirm"
+      ],
+      "cue": "You heard Park Road, but you need the building number as well. Ask for the complete location and check the number you wrote down.",
+      "acceptableAnswers": [
+        "Could you give me the full address, including the building number? Is it 18 Park Road?",
+        "Could you confirm the address for me? I wrote down 18 Park Road."
+      ],
+      "feedback": "An address includes the building number as well as the street. Repeating the number gives the agent a chance to correct a mistake."
+    }
+  ],
+  "transferPrompt": {
+    "id": "S01.M02.T01",
+    "function": "Transfer phone clarification to a different home enquiry",
+    "targetTerms": [
+      "available",
+      "move in",
+      "appointment",
+      "address"
+    ],
+    "cue": "A student calls about a room near campus. The advert may be old, and the current occupant leaves on the twenty seventh. The agent offers a visit on Monday or Friday at five, but the line is unclear. Without reopening Lin's call, ask if the room can still be rented, when you could live there, and which visit day and building details are correct.",
+    "acceptableAnswers": [
+      "Is the room still available? When could I move in? Could you confirm whether the appointment is on Monday or Friday at five, and give me the full address?",
+      "Can I still rent the room, and what is the earliest move in date? Sorry, did you say Monday or Friday at five? What is the address?"
+    ],
+    "feedback": "The home, occupant, and possible days have changed. Keep the information steps: check availability, ask about moving in, then repeat the uncertain day and request the complete address."
+  }
+}

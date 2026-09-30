@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f4ee" />
+    <title>IELTS Semantic World · S01 Trial</title>
+    <link rel="stylesheet" href="./styles.css?v=pilot-6-0" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="学习导航">
+        <a class="brand" href="#home" id="brandLink">
+          <span class="brand-mark" aria-hidden="true">ISW</span>
+          <span><strong>IELTS Semantic World</strong><small>Situation → Language</small></span>
+        </a>
+        <div class="sidebar-section">
+          <div class="eyebrow">S01 / Housing &amp; Commuting</div>
+          <h2>一间房，几次真实的决定。</h2>
+          <p class="meta">先理解发生了什么，再把需要说的话用英语说出来。</p>
+        </div>
+        <p class="scene-nav-hint" id="sceneNavHint"></p>
+        <nav class="scene-nav" id="sceneNav" aria-label="微场景"></nav>
+        <div class="sidebar-section sidebar-bottom">
+          <div class="progress-label"><span>本地练习记录</span><strong id="progressCount">0 / 0</strong></div>
+          <div class="progress" aria-hidden="true"><div class="progress-track"><span class="progress-fill" id="progressBar"></span></div></div>
+          <div class="sidebar-actions">
+            <button class="secondary-btn" type="button" id="reviewNav">到期复习 <span id="dueCount">0</span></button>
+            <button class="text-btn" type="button" id="exportBtn">导出记录</button>
+          </div>
+          <p class="tiny-note">进度只保存在当前浏览器；本版不上传答题内容。</p>
+        </div>
+      </aside>
+
+      <div class="content-column">
+        <header class="topbar">
+          <span class="eyebrow" id="sceneCountLabel">文字原型 · 微场景</span>
+          <div class="topbar-actions">
+            <button class="text-btn" type="button" id="homeNav">学习路线</button>
+            <button class="text-btn" type="button" id="reviewTopNav">复习</button>
+            <button class="text-btn" type="button" id="aboutNav">关于试学</button>
+          </div>
+        </header>
+        <p class="storage-warning" id="storageStatus" role="status" hidden>浏览器暂时不能保存记录；请在离开前导出练习记录。</p>
+        <main class="main" id="app" tabindex="-1">
+          <div class="loading">正在打开 S01…</div>
+        </main>
+        <footer class="site-footer">IELTS Semantic World · S01 learning prototype · Original practice material, not official IELTS questions.</footer>
+      </div>
+    </div>
+    <dialog id="glossaryDialog" class="glossary-dialog" aria-labelledby="glossaryHeadword"></dialog>
+    <script type="module" src="./main.js?v=pilot-6-0"></script>
+  </body>
+</html>
