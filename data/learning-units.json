@@ -1,0 +1,649 @@
+{
+  "schemaVersion": 1,
+  "version": "pilot-9-0",
+  "scope": "S01.M01–M02 editorial pilot; not total seed coverage or learner mastery",
+  "units": [
+    {
+      "id": "U.HOUSING.RUSH_HOUR",
+      "form": "rush hour",
+      "type": "chunk",
+      "meaningZh": "交通高峰期",
+      "sense": "指上下班人流与车流集中的时段；这里是林拥挤通勤的背景。",
+      "tier": "core",
+      "sceneIds": [
+        "S01.M01"
+      ],
+      "glossaryIds": [
+        "S01.M01.G01"
+      ],
+      "example": "Her commute during rush hour takes too long.",
+      "evidenceLabel": "Researcher inference · editorial unit and example",
+      "sourceKind": "BRG",
+      "sourceRecords": [
+        {
+          "term": "rush hour",
+          "kind": "BRG",
+          "sourceLabel": "Source-derived · listening seed; Master maps S07 primary and S01 bridge",
+          "sourceRef": "Master V1.2 R00007; 大全直 PRO 听力预习词表 PDF p.1, item 7: rush hour, n., 交通高峰期"
+        }
+      ],
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-9-0"
+    },
+    {
+      "id": "U.HOUSING.DAILY_COMMUTE",
+      "form": "daily commute",
+      "type": "chunk",
+      "meaningZh": "日常通勤",
+      "sense": "commute 在这里是名词，指住处与工作地点之间经常往返的路程。",
+      "tier": "core",
+      "sceneIds": [
+        "S01.M01"
+      ],
+      "glossaryIds": [
+        "S01.M01.G02"
+      ],
+      "example": "My daily commute takes thirty minutes.",
+      "evidenceLabel": "Researcher inference · editorial unit and example",
+      "sourceKind": "COMPOSITION",
+      "sourceRecords": [
+        {
+          "term": "commute",
+          "kind": "EXP",
+          "sourceLabel": "External evidence · Cambridge Dictionary, regular home–work journey sense",
+          "sourceRef": "Cambridge Dictionary: commute, noun; daily commute",
+          "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/commute"
+        }
+      ],
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-9-0"
+    },
+    {
+      "id": "U.HOUSING.SET_FILTERS",
+      "form": "set three filters",
+      "type": "chunk",
+      "meaningZh": "设置三项筛选条件",
+      "sense": "在找房平台上按房型、路程和价格缩小结果范围；three 可按实际条件替换。",
+      "tier": "support",
+      "sceneIds": [
+        "S01.M01"
+      ],
+      "glossaryIds": [
+        "S01.M01.G03"
+      ],
+      "example": "I set three filters: location, home type and budget.",
+      "evidenceLabel": "Researcher inference · editorial unit and example",
+      "sourceKind": "COMPOSITION",
+      "sourceRecords": [],
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-9-0"
+    },
+    {
+      "id": "U.HOUSING.WITHIN_BUDGET",
+      "form": "within her monthly budget",
+      "type": "chunk",
+      "meaningZh": "在她的每月预算之内",
+      "sense": "within budget 表示不超过可支配的预算；广告价格只是初筛依据，实际总费用还要核对。",
+      "tier": "core",
+      "sceneIds": [
+        "S01.M01"
+      ],
+      "glossaryIds": [
+        "S01.M01.G04",
+        "S01.M01.G12"
+      ],
+      "example": "I want a flat within my monthly budget.",
+      "evidenceLabel": "Researcher inference · editorial unit and example",
+      "sourceKind": "COMPOSITION",
+      "sourceRecords": [
+        {
+          "term": "budget",
+          "kind": "BRG",
+          "sourceLabel": "Source-derived word; housing-filter placement is researcher inference, not a Master S01 mapping",
+          "sourceRef": "Master V1.2 R00062; 大全直 PRO 听力预习词表 PDF p.2, item 62: budget, n., 预算. Master maps S08 primary and S02 bridge; this housing use is project adaptation.",
+          "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/within-budget"
+        }
+      ],
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-9-0"
+    },
+    {
+      "id": "U.TRAVEL.FARE.N",
+      "form": "fare",
+      "type": "word",
+      "meaningZh": "车费",
+      "sense": "这里是火车票价，不是房租。",
+      "tier": "support",
+      "sceneIds": [
+        "S01.M01"
+      ],
+      "glossaryIds": [
+        "S01.M01.G05"
+      ],
+      "example": "The train fare is rising.",
+      "evidenceLabel": "Researcher inference · editorial unit and example",
+      "sourceKind": "BRG",
+      "sourceRecords": [
+        {
+          "term": "fare",
+          "kind": "BRG",
+          "sourceLabel": "Source-derived listening seed; use for Lin's train cost is researcher inference, not a Master S01 mapping",
+          "sourceRef": "Master V1.2 R00017; 大全直 PRO 听力预习词表 PDF p.1, item 17: fare, n., 车/船费. Master maps S07 primary and S08 bridge; M01 use is project adaptation."
+        }
+      ],
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-9-0"
+    },
+    {
+      "id": "U.HOUSING.FLAT.N",
+      "form": "flat",
+      "type": "word",
+      "meaningZh": "公寓",
+      "sense": "英式英语中指公寓住房；这里与单间公寓 studio 比较。",
+      "tier": "core",
+      "sceneIds": [
+        "S01.M01",
+        "S01.M02"
+      ],
+      "glossaryIds": [
+        "S01.M01.G06",
+        "S01.M02.G07"
+      ],
+      "example": "I am looking for a flat near work.",
+      "evidenceLabel": "Researcher inference · editorial unit and example",
+      "sourceKind": "SRC",
+      "sourceRecords": [
+        {
+          "term": "flat",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · listening seed, apartment dwelling sense",
+          "sourceRef": "Master V1.2 R00002; 大全直 PRO 听力预习词表 PDF p.1, item 2: flat, n., 公寓"
+        },
+        {
+          "term": "flat",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · listening seed, home noun",
+          "sourceRef": "Master V1.2 R00002; 大全直 PRO 听力预习词表 PDF p.1, Unit 1 item 2: flat, n., 公寓"
+        }
+      ],
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-9-0",
+      "sceneTiers": {
+        "S01.M01": "core",
+        "S01.M02": "support"
+      }
+    },
+    {
+      "id": "U.HOUSING.STUDIO.N",
+      "form": "studio",
+      "type": "word",
+      "meaningZh": "单间公寓",
+      "sense": "通常以一个主要房间兼作起居与睡眠空间；不能只凭户型推断是否合适。",
+      "tier": "core",
+      "sceneIds": [
+        "S01.M01"
+      ],
+      "glossaryIds": [
+        "S01.M01.G07"
+      ],
+      "example": "A studio has one main living and sleeping space.",
+      "evidenceLabel": "Researcher inference · editorial unit and example",
+      "sourceKind": "SRC",
+      "sourceRecords": [
+        {
+          "term": "studio",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · listening seed, one-room apartment sense",
+          "sourceRef": "Master V1.2 R00019; 大全直 PRO 听力预习词表 PDF p.1, item 19: studio, n., 单间公寓"
+        }
+      ],
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-9-0"
+    },
+    {
+      "id": "U.HOUSING.SUBURB.N",
+      "form": "suburb",
+      "type": "word",
+      "meaningZh": "城郊",
+      "sense": "城市中心外围的居住区；这里便宜的房源仍会让林花很长时间坐火车。",
+      "tier": "recognition",
+      "sceneIds": [
+        "S01.M01"
+      ],
+      "glossaryIds": [
+        "S01.M01.G08"
+      ],
+      "example": "The cheaper flat in the suburb means a longer journey.",
+      "evidenceLabel": "Researcher inference · editorial unit and example",
+      "sourceKind": "BRG",
+      "sourceRecords": [
+        {
+          "term": "suburb",
+          "kind": "BRG",
+          "sourceLabel": "Source-derived · listening seed; Master maps S03 primary and S01 bridge",
+          "sourceRef": "Master V1.2 R00001; 大全直 PRO 听力预习词表 PDF p.1, item 1: suburb, n., 城郊"
+        }
+      ],
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-9-0"
+    },
+    {
+      "id": "U.PLANNING.BUDGET.N",
+      "form": "budget",
+      "type": "word",
+      "meaningZh": "预算",
+      "sense": "名词；在本场景中指林为每月住房支出设定的上限。",
+      "tier": "support",
+      "sceneIds": [
+        "S01.M01"
+      ],
+      "glossaryIds": [
+        "S01.M01.G09"
+      ],
+      "example": "My monthly budget is limited.",
+      "evidenceLabel": "Researcher inference · editorial unit and example",
+      "sourceKind": "BRG",
+      "sourceRecords": [
+        {
+          "term": "budget",
+          "kind": "BRG",
+          "sourceLabel": "Source-derived word; housing-filter placement is researcher inference, not a Master S01 mapping",
+          "sourceRef": "Master V1.2 R00062; 大全直 PRO 听力预习词表 PDF p.2, item 62: budget, n., 预算. Master maps S08 primary and S02 bridge; this housing use is project adaptation.",
+          "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/within-budget"
+        }
+      ],
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-9-0"
+    },
+    {
+      "id": "U.SELECTION.SHORTLIST.N",
+      "form": "shortlist",
+      "type": "word",
+      "meaningZh": "候选短名单",
+      "sense": "从较多选项中选出少数值得进一步了解的对象；在这里还没有决定租哪一套。",
+      "tier": "support",
+      "sceneIds": [
+        "S01.M01"
+      ],
+      "glossaryIds": [
+        "S01.M01.G10"
+      ],
+      "example": "I saved two homes to a shortlist.",
+      "evidenceLabel": "Researcher inference · editorial unit and example",
+      "sourceKind": "EXP",
+      "sourceRecords": [
+        {
+          "term": "shortlist",
+          "kind": "EXP",
+          "sourceLabel": "External evidence · Cambridge Dictionary, reduced list of suitable candidates; housing use is researcher inference",
+          "sourceRef": "Cambridge Dictionary: shortlist, noun; applying the general selection idea to homes is project adaptation",
+          "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/shortlist"
+        }
+      ],
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-9-0"
+    },
+    {
+      "id": "U.HOUSING.STILL_AVAILABLE",
+      "form": "still available",
+      "type": "chunk",
+      "meaningZh": "现在仍可租到；尚未被租走",
+      "sense": "still 追问广告发布后状态是否发生变化；Is the flat still available? 是自然问法。",
+      "tier": "core",
+      "sceneIds": [
+        "S01.M02"
+      ],
+      "glossaryIds": [
+        "S01.M02.G01"
+      ],
+      "example": "Is the flat still available?",
+      "evidenceLabel": "Researcher inference · editorial unit and example",
+      "sourceKind": "COMPOSITION",
+      "sourceRecords": [
+        {
+          "term": "available",
+          "kind": "BRG",
+          "sourceLabel": "Source-derived word · researcher bridge from S08 to S01 rental enquiry",
+          "sourceRef": "Master V1.2 R00040; 大全直 PRO 听力预习词表 PDF p.2, Unit 1 item 40: available, adj., 可得到的; that you can get, buy or find. Master V1.2 primary S08; no S01 bridge. Its rental-enquiry use here is project scene adaptation."
+        }
+      ],
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-9-0"
+    },
+    {
+      "id": "U.HOUSING.ESTATE_AGENT.N",
+      "form": "estate agent",
+      "type": "chunk",
+      "meaningZh": "房产中介",
+      "sense": "英式英语。原课程释义偏重房屋买卖；本场景的租赁业务用法另有剑桥词典支持。",
+      "tier": "support",
+      "sceneIds": [
+        "S01.M02"
+      ],
+      "glossaryIds": [
+        "S01.M02.G02"
+      ],
+      "example": "I phoned the estate agent about the flat.",
+      "evidenceLabel": "Researcher inference · editorial unit and example",
+      "sourceKind": "SRC",
+      "sourceRecords": [
+        {
+          "term": "estate agent",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · listening seed, property intermediary; rental role checked separately",
+          "sourceRef": "Master V1.2 R00012; 大全直 PRO 听力预习词表 PDF p.1, Unit 1 item 12: estate agent, n., 房产中介. The source definition specifically mentions selling houses and land; Cambridge also records renting.",
+          "sourceUrl": "https://dictionary.cambridge.org/us/dictionary/english/estate-agent"
+        }
+      ],
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-9-0"
+    },
+    {
+      "id": "U.ENQUIRY.ENQUIRE_WHETHER",
+      "form": "enquire whether",
+      "type": "chunk",
+      "meaningZh": "询问是否……",
+      "sense": "enquire 为英式拼写；enquire whether the flat is available 可用于较正式的问询。",
+      "tier": "recognition",
+      "sceneIds": [
+        "S01.M02"
+      ],
+      "glossaryIds": [
+        "S01.M02.G03"
+      ],
+      "example": "I phoned to enquire whether the flat was still available.",
+      "evidenceLabel": "Researcher inference · editorial unit and example",
+      "sourceKind": "COMPOSITION",
+      "sourceRecords": [
+        {
+          "term": "enquire",
+          "kind": "BRG",
+          "sourceLabel": "Source-derived word · researcher bridge from S08 to S01 rental enquiry",
+          "sourceRef": "Master V1.2 R00041; 大全直 PRO 听力预习词表 PDF p.2, Unit 1 item 41: enquire, v., 咨询; to ask sb for some information. Master V1.2 primary S08, bridge S02; no S01 bridge. Its rental-enquiry use here is project scene adaptation."
+        }
+      ],
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-9-0"
+    },
+    {
+      "id": "U.HOUSING.VIEWING_APPOINTMENT",
+      "form": "an appointment to see the flat",
+      "type": "chunk",
+      "meaningZh": "参观这套公寓的预约",
+      "sense": "appointment 是约定时间的见面；整句是语境组合，不是必须逐字背诵的固定搭配。",
+      "tier": "core",
+      "sceneIds": [
+        "S01.M02"
+      ],
+      "glossaryIds": [
+        "S01.M02.G04"
+      ],
+      "example": "Could I make an appointment to see the flat?",
+      "evidenceLabel": "Researcher inference · editorial unit and example",
+      "sourceKind": "COMPOSITION",
+      "sourceRecords": [
+        {
+          "term": "appointment",
+          "kind": "BRG",
+          "sourceLabel": "Source-derived word · researcher bridge from S02 to S01 rental enquiry",
+          "sourceRef": "Master V1.2 R00011; 大全直 PRO 听力预习词表 PDF p.1, Unit 1 item 11: appointment, n., 预约; a formal arrangement to meet or visit somebody at a particular time. Master V1.2 primary S02; no S01 bridge. Its rental-enquiry use here is project scene adaptation."
+        }
+      ],
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-9-0"
+    },
+    {
+      "id": "U.HOUSING.MOVE_IN",
+      "form": "move in",
+      "type": "chunk",
+      "meaningZh": "搬入；开始在新住所居住",
+      "sense": "常问 When could I move in?，与看房日期不同。",
+      "tier": "core",
+      "sceneIds": [
+        "S01.M02"
+      ],
+      "glossaryIds": [
+        "S01.M02.G05"
+      ],
+      "example": "When could I move in?",
+      "evidenceLabel": "Researcher inference · editorial unit and example",
+      "sourceKind": "EXP",
+      "sourceRecords": [
+        {
+          "term": "move in",
+          "kind": "EXP",
+          "sourceLabel": "External evidence · Cambridge Learner's Dictionary, begin living in a new home",
+          "sourceRef": "Cambridge Learner's Dictionary: move in, phrasal verb, B1 home sense",
+          "sourceUrl": "https://dictionary.cambridge.org/us/dictionary/learner-english/move-in"
+        }
+      ],
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-9-0"
+    },
+    {
+      "id": "U.CLARIFICATION.CONFIRM_ADDRESS",
+      "form": "confirm the address",
+      "type": "chunk",
+      "meaningZh": "确认地址",
+      "sense": "电话里可重复门牌号和街道名，再请对方确认；这是沟通功能，不是不可拆的固定搭配。",
+      "tier": "core",
+      "sceneIds": [
+        "S01.M02"
+      ],
+      "glossaryIds": [
+        "S01.M02.G06"
+      ],
+      "example": "Could you confirm the address for me?",
+      "evidenceLabel": "Researcher inference · editorial unit and example",
+      "sourceKind": "COMPOSITION",
+      "sourceRecords": [
+        {
+          "term": "confirm",
+          "kind": "EXP",
+          "sourceLabel": "External evidence · Cambridge Dictionary, make an arrangement certain",
+          "sourceRef": "Cambridge Dictionary: confirm, verb, make certain an arrangement or meeting",
+          "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/confirm"
+        }
+      ],
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-9-0"
+    },
+    {
+      "id": "U.AVAILABILITY.AVAILABLE.ADJ",
+      "form": "available",
+      "type": "word",
+      "meaningZh": "可得到的；这里指可租的",
+      "sense": "形容词，在房源语境表示现在仍可供租用。",
+      "tier": "support",
+      "sceneIds": [
+        "S01.M02"
+      ],
+      "glossaryIds": [
+        "S01.M02.G08"
+      ],
+      "example": "The flat is still available.",
+      "evidenceLabel": "Researcher inference · editorial unit and example",
+      "sourceKind": "BRG",
+      "sourceRecords": [
+        {
+          "term": "available",
+          "kind": "BRG",
+          "sourceLabel": "Source-derived word · researcher bridge from S08 to S01 rental enquiry",
+          "sourceRef": "Master V1.2 R00040; 大全直 PRO 听力预习词表 PDF p.2, Unit 1 item 40: available, adj., 可得到的; that you can get, buy or find. Master V1.2 primary S08; no S01 bridge. Its rental-enquiry use here is project scene adaptation."
+        }
+      ],
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-9-0"
+    },
+    {
+      "id": "U.ARRANGEMENT.APPOINTMENT.N",
+      "form": "appointment",
+      "type": "word",
+      "meaningZh": "预约；约定的见面",
+      "sense": "可指在特定时间会面或参观；这里指与中介约好看房。",
+      "tier": "support",
+      "sceneIds": [
+        "S01.M02"
+      ],
+      "glossaryIds": [
+        "S01.M02.G09"
+      ],
+      "example": "The appointment is on Thursday at six.",
+      "evidenceLabel": "Researcher inference · editorial unit and example",
+      "sourceKind": "BRG",
+      "sourceRecords": [
+        {
+          "term": "appointment",
+          "kind": "BRG",
+          "sourceLabel": "Source-derived word · researcher bridge from S02 to S01 rental enquiry",
+          "sourceRef": "Master V1.2 R00011; 大全直 PRO 听力预习词表 PDF p.1, Unit 1 item 11: appointment, n., 预约; a formal arrangement to meet or visit somebody at a particular time. Master V1.2 primary S02; no S01 bridge. Its rental-enquiry use here is project scene adaptation."
+        }
+      ],
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-9-0"
+    },
+    {
+      "id": "U.LOCATION.ADDRESS.N",
+      "form": "address",
+      "type": "word",
+      "meaningZh": "地址",
+      "sense": "可包含门牌号、街道名和城市；电话核对时不要只问街名。",
+      "tier": "support",
+      "sceneIds": [
+        "S01.M02"
+      ],
+      "glossaryIds": [
+        "S01.M02.G10"
+      ],
+      "example": "Could you give me the full address?",
+      "evidenceLabel": "Researcher inference · editorial unit and example",
+      "sourceKind": "EXP",
+      "sourceRecords": [
+        {
+          "term": "address",
+          "kind": "EXP",
+          "sourceLabel": "External evidence · Cambridge Learner's Dictionary, building details",
+          "sourceRef": "Cambridge Learner's Dictionary: address, noun, building number and road details",
+          "sourceUrl": "https://dictionary.cambridge.org/dictionary/learner-english/address"
+        }
+      ],
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-9-0"
+    },
+    {
+      "id": "U.ENQUIRY.ENQUIRE.V",
+      "form": "enquire",
+      "type": "word",
+      "meaningZh": "询问；咨询",
+      "sense": "英式拼写；口语中也可用 ask。",
+      "tier": "recognition",
+      "sceneIds": [
+        "S01.M02"
+      ],
+      "glossaryIds": [
+        "S01.M02.G11"
+      ],
+      "example": "She phoned to enquire about the flat.",
+      "evidenceLabel": "Researcher inference · editorial unit and example",
+      "sourceKind": "BRG",
+      "sourceRecords": [
+        {
+          "term": "enquire",
+          "kind": "BRG",
+          "sourceLabel": "Source-derived word · researcher bridge from S08 to S01 rental enquiry",
+          "sourceRef": "Master V1.2 R00041; 大全直 PRO 听力预习词表 PDF p.2, Unit 1 item 41: enquire, v., 咨询; to ask sb for some information. Master V1.2 primary S08, bridge S02; no S01 bridge. Its rental-enquiry use here is project scene adaptation."
+        }
+      ],
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-9-0"
+    },
+    {
+      "id": "U.CLARIFICATION.CONFIRM.V",
+      "form": "confirm",
+      "type": "word",
+      "meaningZh": "确认；核实",
+      "sense": "confirm the time / address；对方在故事中 confirmed the number。",
+      "tier": "support",
+      "sceneIds": [
+        "S01.M02"
+      ],
+      "glossaryIds": [
+        "S01.M02.G12"
+      ],
+      "example": "Could you confirm the visit time?",
+      "evidenceLabel": "Researcher inference · editorial unit and example",
+      "sourceKind": "EXP",
+      "sourceRecords": [
+        {
+          "term": "confirm",
+          "kind": "EXP",
+          "sourceLabel": "External evidence · Cambridge Dictionary, make an arrangement certain",
+          "sourceRef": "Cambridge Dictionary: confirm, verb, make certain an arrangement or meeting",
+          "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/confirm"
+        }
+      ],
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-9-0"
+    },
+    {
+      "id": "U.REQUEST.LOOKING_FOR",
+      "form": "I am looking for …",
+      "type": "construction",
+      "meaningZh": "正在找……",
+      "sense": "用正在寻找的住处及条件表达需求",
+      "tier": "support",
+      "sceneIds": [
+        "S01.M01"
+      ],
+      "glossaryIds": [
+        "S01.M01.G11"
+      ],
+      "example": "I am looking for a flat near work.",
+      "sourceKind": "COMPOSITION",
+      "sourceRecords": [],
+      "evidenceLabel": "Researcher inference · productive construction from existing practice",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-9-0"
+    },
+    {
+      "id": "U.CLARIFICATION.DID_YOU_SAY",
+      "form": "Did you say … or …?",
+      "type": "construction",
+      "meaningZh": "你说的是……还是……？",
+      "sense": "重复两个可能听到的选项，核实信息",
+      "tier": "core",
+      "sceneIds": [
+        "S01.M02"
+      ],
+      "glossaryIds": [
+        "S01.M02.G13"
+      ],
+      "example": "Did you say Tuesday or Thursday at six?",
+      "sourceKind": "COMPOSITION",
+      "sourceRecords": [],
+      "evidenceLabel": "Researcher inference · productive construction from existing practice",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-9-0"
+    },
+    {
+      "id": "U.REQUEST.COULD_YOU",
+      "form": "Could you …?",
+      "type": "construction",
+      "meaningZh": "可以请你……吗？",
+      "sense": "用具体动作提出礼貌请求；could you后接动词原形",
+      "tier": "support",
+      "sceneIds": [
+        "S01.M02"
+      ],
+      "glossaryIds": [
+        "S01.M02.G14"
+      ],
+      "example": "Could you give me the full address?",
+      "sourceKind": "COMPOSITION",
+      "sourceRecords": [],
+      "evidenceLabel": "Researcher inference · productive construction from existing practice",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-9-0"
+    }
+  ]
+}

@@ -4,7 +4,7 @@ Situation → Language: learn English through decisions, objects and events.
 
 **[Open the learning website](https://gyc5151.github.io/ielts-semantic-world/)**
 
-## Current version: pilot-8-0
+## Current version: pilot-9-0
 
 8 routes, 23 short bilingual scenes, 101 retrieval/transfer tasks:
 
@@ -19,7 +19,7 @@ Situation → Language: learn English through decisions, objects and events.
 | Workshop leaflet | Two university side scenes | Leaflet and margin notes |
 | Photograph and consent | Two community side scenes | Poster and planning book |
 
-Every route uses clickable English words and expression blocks, optional Chinese support, contextual usage, multiple WordNet senses and original examples, independent recall and spaced review. Branch scenes have expandable object cues. Using cues before answering is recorded as assisted practice.
+Every route uses clickable English words and expression blocks, optional Chinese support, contextual usage, multiple WordNet senses and original examples, independent recall and spaced review. S01 main lessons and branch scenes have expandable object cues. The first two S01 lessons also have 24 editorial word-sense/chunk/construction units with self-checked observations, sentence listening and session-only recording. Using cues before answering is recorded as assisted practice.
 
 Direct links:
 
@@ -33,7 +33,7 @@ Direct links:
 
 New lessons distinguish requests, comparisons, explanations, rewriting and conditional opinions. Rewrite prompts show the draft separately from reference answers. Route search and category filters help choose a setting. Some advanced attitude words are marked for comprehension first.
 
-Practice records are stored in the current browser. No account service or cross-device synchronization is provided. Export records for a backup. This version keeps the existing S01 storage key and prompt IDs, so earlier records on this domain remain usable.
+Practice records are stored in the current browser. No account service or cross-device synchronization is provided. Export records for a backup; preview and merge a JSON backup in About. Recording audio stays in the current practice session and is not included in backups. This version keeps the existing S01 storage key and prompt IDs, so earlier records on this domain remain usable.
 
 These are original practice materials, not official IELTS questions. English stories, Chinese support, object cues and exercises are project-authored adaptations. Source-derived target terms keep separate provenance. Machine-assisted dictionary translations are marked and have not all been individually reviewed. Dictionary coverage gaps are explicitly indicated.
 

@@ -1918,3 +1918,38 @@ ul.review-list {
 .export-preview textarea { width: 100%; max-width: 100%; margin: 8px 0 12px; padding: 12px; font-family: monospace; font-size: .75rem; resize: vertical; }
 .clear-confirm { margin: 20px 0; padding: 20px; border: 1px solid #e7c6b8; border-radius: 12px; background: #fff5ee; }
 .clear-confirm h2 { font-size: 1.25rem; }
+
+/* First unit pilot: keep narrative first and distinguish evidence from task progress. */
+.easy-summary, .unit-learning, .listening-panel, .unit-assessment, .revision-panel, .import-panel, .specific-checks {
+  border: 1px solid var(--border, #dedbd2); border-radius: 16px; padding: 1.2rem; margin: 1.2rem 0; background: var(--paper, #fffdf8);
+}
+.unit-learning h2, .listening-panel h2 { font-size: 1.3rem; margin-top: 0; }
+.unit-learning > details { margin: .8rem 0; }
+.unit-learning summary, .easy-summary summary, .oral-panel summary { cursor: pointer; font-weight: 650; line-height: 1.6; }
+.unit-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: .8rem; }
+.unit-cards article { background: rgba(127, 126, 98, .045); padding: 1rem; border-radius: 12px; min-width: 0; }
+.unit-cards article > strong { font-size: 1.05rem; }
+.unit-cards article p { margin: .55rem 0; line-height: 1.6; }
+.unit-cards article small { color: var(--muted, #6c6a61); }
+.unit-assessment label { display: grid; gap: .5rem; padding: .8rem 0; border-bottom: 1px solid var(--border, #dedbd2); }
+.unit-assessment select, .listening-panel select { max-width: 100%; padding: .65rem; font: inherit; border: 1px solid var(--border, #dedbd2); border-radius: 8px; background: #fff; color: #242b29; }
+.listening-panel label, .revision-panel label { display: block; margin: .8rem 0; font-weight: 650; }
+.oral-panel { margin: 1rem 0; padding: 1rem; background: rgba(91, 109, 93, .06); border-radius: 12px; }
+.oral-panel audio { display: block; width: 100%; margin: 1rem 0; }
+.oral-panel audio[hidden] { display: none; }
+.unit-progress-list { display: grid; gap: 1rem; }
+.unit-progress-list article { padding: 1.2rem; border: 1px solid var(--border, #dedbd2); border-radius: 16px; }
+.unit-progress-list h2 { font-size: 1.2rem; margin: 0; }
+.unit-progress-list dl { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .7rem; }
+.unit-progress-list dt { font-size: .8rem; color: var(--muted, #6c6a61); }
+.unit-progress-list dd { margin: .4rem 0 0; font-weight: 600; }
+.unit-progress-list .text-btn { margin-top: .65rem; display: block; }
+.import-panel input { display: block; max-width: 100%; margin: .8rem 0; }
+.specific-checks li { margin: .4rem 0; }
+@media (max-width: 640px) {
+  .unit-cards { grid-template-columns: 1fr; }
+  .unit-progress-list dl { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .unit-assessment, .listening-panel, .unit-learning { padding: 1rem; }
+  .topbar-actions { flex-wrap: wrap; }
+}
+.feedback-recording { width: 100%; margin: .8rem 0; }

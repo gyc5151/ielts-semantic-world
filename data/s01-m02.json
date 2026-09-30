@@ -102,6 +102,20 @@
       "zh": "确认；核实",
       "note": "confirm the time / address；对方在故事中 confirmed the number。",
       "sourceTerm": "confirm"
+    },
+    {
+      "id": "S01.M02.G13",
+      "text": "Did you say Tuesday or Thursday",
+      "type": "chunk",
+      "zh": "你说的是周二还是周四？",
+      "note": "重复两个听到的可能选项；日期可按实际情况替换。 本项目构式/表达组合，不冒充原资料固定搭配。"
+    },
+    {
+      "id": "S01.M02.G14",
+      "text": "Could you give me",
+      "type": "chunk",
+      "zh": "可以请你给我……吗？",
+      "note": "礼貌请求给出信息；整个请求句由具体信息补全。 本项目构式/表达组合，不冒充原资料固定搭配。"
     }
   ],
   "terms": [
@@ -171,7 +185,19 @@
         "Is the flat still available to rent?",
         "Is this flat still available?"
       ],
-      "feedback": "Available asks about the current status of the flat. Still is useful because the advert may be out of date."
+      "feedback": "Available asks about the current status of the flat. Still is useful because the advert may be out of date.",
+      "cueZh": "房源广告已经发布一周。打电话询问这套公寓现在是否还能租到。",
+      "unitIds": [
+        "U.HOUSING.STILL_AVAILABLE"
+      ],
+      "checks": [
+        "是否询问现在的出租状态？",
+        "是否表达广告发布之后状态可能已经变化？"
+      ],
+      "feedbackZh": "问当前状态；不用把广告内容重复一遍。",
+      "taskMode": "recall",
+      "activity": "request",
+      "unitVersion": "pilot-9-0"
     },
     {
       "id": "S01.M02.P02",
@@ -184,7 +210,19 @@
         "When could I move in?",
         "What is the earliest date I could move into the flat?"
       ],
-      "feedback": "Move in means begin living there. Keep the moving date separate from the date of a visit."
+      "feedback": "Move in means begin living there. Keep the moving date separate from the date of a visit.",
+      "cueZh": "现在的住户月底搬走。问中介你最早什么时候能开始住进去。",
+      "unitIds": [
+        "U.HOUSING.MOVE_IN"
+      ],
+      "checks": [
+        "是否询问开始居住的时间？",
+        "是否把入住日和看房日分清？"
+      ],
+      "feedbackZh": "这里问实际入住，不是参观房子的日期。",
+      "taskMode": "recall",
+      "activity": "request",
+      "unitVersion": "pilot-9-0"
     },
     {
       "id": "S01.M02.P03",
@@ -198,7 +236,21 @@
         "Could you confirm that the appointment is on Thursday at six?",
         "Sorry, did you say Tuesday or Thursday at six?"
       ],
-      "feedback": "Repeat the two possible days or ask for confirmation. The exact day matters because one option conflicts with work."
+      "feedback": "Repeat the two possible days or ask for confirmation. The exact day matters because one option conflicts with work.",
+      "cueZh": "电话里听不清：中介说周二还是周四六点看房？周二与你的工作冲突。确认日期后再答应。",
+      "unitIds": [
+        "U.CLARIFICATION.DID_YOU_SAY",
+        "U.HOUSING.VIEWING_APPOINTMENT",
+        "U.CLARIFICATION.CONFIRM.V"
+      ],
+      "checks": [
+        "是否确认了不确定的日期？",
+        "是否用重复两个选项或请求核实的方式澄清？"
+      ],
+      "feedbackZh": "合理澄清方式都可以；未使用某个目标表达就记未观察。",
+      "taskMode": "recall",
+      "activity": "request",
+      "unitVersion": "pilot-9-0"
     },
     {
       "id": "S01.M02.P04",
@@ -212,7 +264,21 @@
         "Could you give me the full address, including the building number? Is it 18 Park Road?",
         "Could you confirm the address for me? I wrote down 18 Park Road."
       ],
-      "feedback": "An address includes the building number as well as the street. Repeating the number gives the agent a chance to correct a mistake."
+      "feedback": "An address includes the building number as well as the street. Repeating the number gives the agent a chance to correct a mistake.",
+      "cueZh": "你听到了街道名，但还缺门牌号。请中介给出完整地点，并核对你写下的十八号。",
+      "unitIds": [
+        "U.CLARIFICATION.CONFIRM_ADDRESS",
+        "U.LOCATION.ADDRESS.N",
+        "U.REQUEST.COULD_YOU"
+      ],
+      "checks": [
+        "是否询问完整地址？",
+        "是否重复门牌号给对方纠正的机会？"
+      ],
+      "feedbackZh": "地址应包含门牌号和街道；具体核对比笼统说没听懂更有效。",
+      "taskMode": "recall",
+      "activity": "request",
+      "unitVersion": "pilot-9-0"
     }
   ],
   "transferPrompt": {
@@ -229,6 +295,39 @@
       "Is the room still available? When could I move in? Could you confirm whether the appointment is on Monday or Friday at five, and give me the full address?",
       "Can I still rent the room, and what is the earliest move in date? Sorry, did you say Monday or Friday at five? What is the address?"
     ],
-    "feedback": "The home, occupant, and possible days have changed. Keep the information steps: check availability, ask about moving in, then repeat the uncertain day and request the complete address."
-  }
+    "feedback": "The home, occupant, and possible days have changed. Keep the information steps: check availability, ask about moving in, then repeat the uncertain day and request the complete address.",
+    "cueZh": "你是找校园附近房间的学生。广告可能过时，原住户二十七日搬走；电话中听不清看房是周一还是周五五点。询问能否租到、最早入住日，并核实看房日期和完整地址。",
+    "unitIds": [
+      "U.HOUSING.STILL_AVAILABLE",
+      "U.HOUSING.MOVE_IN",
+      "U.CLARIFICATION.DID_YOU_SAY",
+      "U.CLARIFICATION.CONFIRM_ADDRESS"
+    ],
+    "checks": [
+      "是否依次核实房源、入住日、看房安排和地址？",
+      "是否适应了新人物和新日期？"
+    ],
+    "feedbackZh": "先核状态，再问入住，最后核对不确定的安排与地点。",
+    "taskMode": "transfer",
+    "activity": "request",
+    "unitVersion": "pilot-9-0"
+  },
+  "learningUnitIds": [
+    "U.HOUSING.FLAT.N",
+    "U.HOUSING.STILL_AVAILABLE",
+    "U.HOUSING.ESTATE_AGENT.N",
+    "U.ENQUIRY.ENQUIRE_WHETHER",
+    "U.HOUSING.VIEWING_APPOINTMENT",
+    "U.HOUSING.MOVE_IN",
+    "U.CLARIFICATION.CONFIRM_ADDRESS",
+    "U.AVAILABILITY.AVAILABLE.ADJ",
+    "U.ARRANGEMENT.APPOINTMENT.N",
+    "U.LOCATION.ADDRESS.N",
+    "U.ENQUIRY.ENQUIRE.V",
+    "U.CLARIFICATION.CONFIRM.V",
+    "U.CLARIFICATION.DID_YOU_SAY",
+    "U.REQUEST.COULD_YOU"
+  ],
+  "easySummary": "Lin calls about a flat. She asks if she can rent it and when she can move in. The call is hard to hear. She checks the day, time and address.",
+  "easySummaryZh": "林打电话问公寓能不能租、何时入住。电话听不清，所以她核对日期、时间和地址。"
 }

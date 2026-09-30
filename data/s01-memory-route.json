@@ -1,0 +1,534 @@
+{
+  "schemaVersion": 1,
+  "id": "S01.MEMORY_ROUTE.V1",
+  "evidenceType": "Researcher inference",
+  "designStatus": "Text-first pilot; learning effects not yet evaluated",
+  "routeMode": "Three loci per lesson; optional chronological links across lessons",
+  "routeNoteZh": "27 个节点分成九组，每课沿三个固定位置回想。跨课链接表示故事时间与事件顺序，不代表一次不停步的实地行走。所有空间布局与问句均为项目教学设计，不改写原资料或承诺记忆效果。",
+  "scenes": {
+    "S01.M01": {
+      "memoryNodes": [
+        {
+          "id": "S01.M01.L01",
+          "locationZh": "原住处书桌左侧：工作地点地图",
+          "zh": "原住处书桌左侧：工作地点地图",
+          "object": "map",
+          "cue": "Why is Lin looking for another place?",
+          "questionZh": "她为什么要换住处？",
+          "cueZh": "她为什么要换住处？",
+          "locationRelationZh": "从回家后的书桌开始；左侧地图表示原住处与工作地点的路程。",
+          "anchorTerms": [
+            "rush hour",
+            "daily commute",
+            "fare"
+          ],
+          "previousNodeId": null,
+          "nextNodeId": "S01.M01.L02",
+          "evidenceType": "Researcher inference"
+        },
+        {
+          "id": "S01.M01.L02",
+          "locationZh": "书桌正中：租房网页的筛选区域",
+          "zh": "书桌正中：租房网页的筛选区域",
+          "object": "rental website",
+          "cue": "Does this home fit her needs and price limit?",
+          "questionZh": "哪些房型与价格范围适合她？",
+          "cueZh": "哪些房型与价格范围适合她？",
+          "locationRelationZh": "沿书桌从地图移到屏幕中部；先把需求变成可操作的筛选条件。",
+          "anchorTerms": [
+            "flat",
+            "studio",
+            "set three filters",
+            "within her monthly budget"
+          ],
+          "previousNodeId": "S01.M01.L01",
+          "nextNodeId": "S01.M01.L03",
+          "evidenceType": "Researcher inference"
+        },
+        {
+          "id": "S01.M01.L03",
+          "locationZh": "屏幕右侧：保存的两条房源",
+          "zh": "屏幕右侧：保存的两条房源",
+          "object": "two listings",
+          "cue": "Why save both homes, and when will she check full costs?",
+          "questionZh": "应留下哪些房源，下一步还要核对什么？",
+          "cueZh": "应留下哪些房源，下一步还要核对什么？",
+          "locationRelationZh": "从筛选区移到右侧保存区域；这一步保留候选，还没有作出租房决定。",
+          "anchorTerms": [
+            "shortlist",
+            "suburb",
+            "budget"
+          ],
+          "previousNodeId": "S01.M01.L02",
+          "nextNodeId": "S01.M02.L01",
+          "evidenceType": "Researcher inference"
+        }
+      ]
+    },
+    "S01.M02": {
+      "memoryNodes": [
+        {
+          "id": "S01.M02.L01",
+          "locationZh": "次日书桌左侧：打开的房源广告",
+          "zh": "次日书桌左侧：打开的房源广告",
+          "object": "advert",
+          "cue": "What can Lin ask about the advert?",
+          "questionZh": "广告发布后，首先需要确认房源的什么状态？",
+          "cueZh": "广告发布后，首先需要确认房源的什么状态？",
+          "locationRelationZh": "隔天回到书桌，以左侧广告作为电话问询的起点；不把看房等同于入住。",
+          "anchorTerms": [
+            "estate agent",
+            "enquire whether",
+            "still available"
+          ],
+          "previousNodeId": "S01.M01.L03",
+          "nextNodeId": "S01.M02.L02",
+          "evidenceType": "Researcher inference"
+        },
+        {
+          "id": "S01.M02.L02",
+          "locationZh": "电话右侧：记下的日期与时间",
+          "zh": "电话右侧：记下的日期与时间",
+          "object": "Thursday at six",
+          "cue": "Which day and time can Lin repeat?",
+          "questionZh": "噪音造成误听后，应该怎样核对看房日期与时间？",
+          "cueZh": "噪音造成误听后，应该怎样核对看房日期与时间？",
+          "locationRelationZh": "从广告移到电话旁的预约记录；分别核对看房时间和可入住时间。",
+          "anchorTerms": [
+            "an appointment to see the flat",
+            "appointment",
+            "move in"
+          ],
+          "previousNodeId": "S01.M02.L01",
+          "nextNodeId": "S01.M02.L03",
+          "evidenceType": "Researcher inference"
+        },
+        {
+          "id": "S01.M02.L03",
+          "locationZh": "电话记录下方：门牌号与街道",
+          "zh": "电话记录下方：门牌号与街道",
+          "object": "18 Park Road",
+          "cue": "What can Lin repeat before agreeing to meet the agent?",
+          "questionZh": "答应见面前，需要重复核对哪些地址信息？",
+          "cueZh": "答应见面前，需要重复核对哪些地址信息？",
+          "locationRelationZh": "沿同一记录向下走到地址；确认后，下一课才来到约定的楼外。",
+          "anchorTerms": [
+            "confirm the address",
+            "address",
+            "confirm"
+          ],
+          "previousNodeId": "S01.M02.L02",
+          "nextNodeId": "S01.M03.L01",
+          "evidenceType": "Researcher inference"
+        }
+      ]
+    },
+    "S01.M03": {
+      "memoryNodes": [
+        {
+          "id": "S01.M03.L01",
+          "locationZh": "公寓入口右前方：客厅的沙发与桌子",
+          "zh": "公寓入口右前方：客厅的沙发与桌子",
+          "object": "sofa and table",
+          "cue": "Does the room have furniture, and is it cosy?",
+          "questionZh": "房间已有些什么，它给人什么感觉？",
+          "cueZh": "房间已有些什么，它给人什么感觉？",
+          "locationRelationZh": "从楼外跟中介进屋，先停在客厅；家具状态与主观感受分开描述。",
+          "anchorTerms": [
+            "furnished flat",
+            "furnished",
+            "cosy"
+          ],
+          "previousNodeId": "S01.M02.L03",
+          "nextNodeId": "S01.M03.L02",
+          "evidenceType": "Researcher inference"
+        },
+        {
+          "id": "S01.M03.L02",
+          "locationZh": "客厅旁的厨房：打不开的窗户",
+          "zh": "客厅旁的厨房：打不开的窗户",
+          "object": "kitchen window",
+          "cue": "Does the window open, and is the air damp?",
+          "questionZh": "什么打不开，为什么值得在决定前询问？",
+          "cueZh": "什么打不开，为什么值得在决定前询问？",
+          "locationRelationZh": "从客厅走到厨房窗前；空气与窗户功能构成问题线索，不凭气味作专业诊断。",
+          "anchorTerms": [
+            "poor ventilation",
+            "ventilation"
+          ],
+          "previousNodeId": "S01.M03.L01",
+          "nextNodeId": "S01.M03.L03",
+          "evidenceType": "Researcher inference"
+        },
+        {
+          "id": "S01.M03.L03",
+          "locationZh": "厨房之后的设施检查点：暖气与淋浴",
+          "zh": "厨房之后的设施检查点：暖气与淋浴",
+          "object": "central heating and shower",
+          "cue": "Can Lin check the heating and shower, then ask the landlord to arrange a repair?",
+          "questionZh": "还应检查哪些设施，窗户问题应向谁请求安排处理？",
+          "cueZh": "还应检查哪些设施，窗户问题应向谁请求安排处理？",
+          "locationRelationZh": "继续检查供暖与淋浴，再回到窗户问题向中介提问；房间顺序是教学路线，不主张已知真实户型。",
+          "anchorTerms": [
+            "central heating",
+            "landlord",
+            "arrange a repair"
+          ],
+          "previousNodeId": "S01.M03.L02",
+          "nextNodeId": "S01.M04.L01",
+          "evidenceType": "Researcher inference"
+        }
+      ]
+    },
+    "S01.M04": {
+      "memoryNodes": [
+        {
+          "id": "S01.M04.L01",
+          "locationZh": "第二套房的房间中央：能放下书桌的空间",
+          "zh": "第二套房的房间中央：能放下书桌的空间",
+          "object": "larger rooms",
+          "cue": "What does the larger flat give her?",
+          "questionZh": "较大的住处满足了什么需要？",
+          "cueZh": "较大的住处满足了什么需要？",
+          "locationRelationZh": "看过第一套后进入第二套的房间；先描述增加的空间及价格条件。",
+          "anchorTerms": [
+            "spacious",
+            "budget"
+          ],
+          "previousNodeId": "S01.M03.L03",
+          "nextNodeId": "S01.M04.L02",
+          "evidenceType": "Researcher inference"
+        },
+        {
+          "id": "S01.M04.L02",
+          "locationZh": "第二套房卧室窗边：街道与交通",
+          "zh": "第二套房卧室窗边：街道与交通",
+          "object": "traffic outside its bedroom",
+          "cue": "What would make an ordinary weekday tiring?",
+          "questionZh": "平常的工作日，哪些条件会让住在这里变累？",
+          "cueZh": "平常的工作日，哪些条件会让住在这里变累？",
+          "locationRelationZh": "从房间中央移到卧室窗边，联结室外噪音与实际上下班时间。",
+          "anchorTerms": [
+            "noise",
+            "commute",
+            "rush hour"
+          ],
+          "previousNodeId": "S01.M04.L01",
+          "nextNodeId": "S01.M04.L03",
+          "evidenceType": "Researcher inference"
+        },
+        {
+          "id": "S01.M04.L03",
+          "locationZh": "比较记录末行：最终偏好与未决问题",
+          "zh": "比较记录末行：最终偏好与未决问题",
+          "object": "full monthly costs",
+          "cue": "Which flat would she prefer, and what still needs an answer?",
+          "questionZh": "权衡后更偏好哪一处，还有什么未解决？",
+          "cueZh": "权衡后更偏好哪一处，还有什么未解决？",
+          "locationRelationZh": "离开第二套后把两处条件放到同一比较记录；这里的记录位置是教学安放，故事未新增一次决定。",
+          "anchorTerms": [
+            "monthly rent",
+            "trade-off",
+            "on balance"
+          ],
+          "previousNodeId": "S01.M04.L02",
+          "nextNodeId": "S01.M05.L01",
+          "evidenceType": "Researcher inference"
+        }
+      ]
+    },
+    "S01.M05": {
+      "memoryNodes": [
+        {
+          "id": "S01.M05.L01",
+          "locationZh": "书桌左侧账目栏：每月费用",
+          "zh": "书桌左侧账目栏：每月费用",
+          "object": "every month",
+          "cue": "What must Lin add to the advertised price?",
+          "questionZh": "广告价格之外，每月还需加上什么费用？",
+          "cueZh": "广告价格之外，每月还需加上什么费用？",
+          "locationRelationZh": "回到书桌，先沿左侧每月栏核对反复发生的支出。",
+          "anchorTerms": [
+            "monthly rent",
+            "utility bills",
+            "extra charges"
+          ],
+          "previousNodeId": "S01.M04.L03",
+          "nextNodeId": "S01.M05.L02",
+          "evidenceType": "Researcher inference"
+        },
+        {
+          "id": "S01.M05.L02",
+          "locationZh": "同页右侧账目栏：入住前付款",
+          "zh": "同页右侧账目栏：入住前付款",
+          "object": "before moving in",
+          "cue": "What must be paid before a key is received?",
+          "questionZh": "拿到钥匙之前需要付什么，并核对什么时间？",
+          "cueZh": "拿到钥匙之前需要付什么，并核对什么时间？",
+          "locationRelationZh": "从每月栏横移到入住前栏；一次性付款与持续费用分开记录。",
+          "anchorTerms": [
+            "deposit",
+            "before moving in",
+            "first payment date",
+            "payment"
+          ],
+          "previousNodeId": "S01.M05.L01",
+          "nextNodeId": "S01.M05.L03",
+          "evidenceType": "Researcher inference"
+        },
+        {
+          "id": "S01.M05.L03",
+          "locationZh": "账目页下方：未签署的合同",
+          "zh": "账目页下方：未签署的合同",
+          "object": "draft contract",
+          "cue": "What is missing from the page, and what must Lin ask before signing?",
+          "questionZh": "作决定和签署之前，合同里还缺哪项约定？",
+          "cueZh": "作决定和签署之前，合同里还缺哪项约定？",
+          "locationRelationZh": "沿账目记录向下到合同；寻找修窗约定，没有书面答复时仍保持未签状态。",
+          "anchorTerms": [
+            "contract",
+            "lease",
+            "before I sign"
+          ],
+          "previousNodeId": "S01.M05.L02",
+          "nextNodeId": "S01.M06.L01",
+          "evidenceType": "Researcher inference"
+        }
+      ]
+    },
+    "S01.M06": {
+      "memoryNodes": [
+        {
+          "id": "S01.M06.L01",
+          "locationZh": "签署前书桌上沿：更正后的合同日期",
+          "zh": "签署前书桌上沿：更正后的合同日期",
+          "object": "corrected copy",
+          "cue": "Which date needs checking before Lin is ready to sign?",
+          "questionZh": "签署前，需要确认哪一天开始？",
+          "cueZh": "签署前，需要确认哪一天开始？",
+          "locationRelationZh": "先在签署前核对日期；随后才在约定的日期走进公寓交接。",
+          "anchorTerms": [
+            "revised contract",
+            "start date",
+            "moving in"
+          ],
+          "previousNodeId": "S01.M05.L03",
+          "nextNodeId": "S01.M06.L02",
+          "evidenceType": "Researcher inference"
+        },
+        {
+          "id": "S01.M06.L02",
+          "locationZh": "交接时厨房窗前：清单与实物对照",
+          "zh": "交接时厨房窗前：清单与实物对照",
+          "object": "inventory and kitchen window",
+          "cue": "Does the written note match what Lin can see?",
+          "questionZh": "清单中的状态描述与眼前实物相符吗？",
+          "cueZh": "清单中的状态描述与眼前实物相符吗？",
+          "locationRelationZh": "从合同日期跨到交接当天的厨房窗前；重复同一扇窗的空间锚点，联结前次发现与当前记录。",
+          "anchorTerms": [
+            "the inventory",
+            "condition note",
+            "record its actual condition"
+          ],
+          "previousNodeId": "S01.M06.L01",
+          "nextNodeId": "S01.M06.L03",
+          "evidenceType": "Researcher inference"
+        },
+        {
+          "id": "S01.M06.L03",
+          "locationZh": "交接出口处：钥匙与更新的文件",
+          "zh": "交接出口处：钥匙与更新的文件",
+          "object": "keys and updated papers",
+          "cue": "What will Lin check before taking the keys home?",
+          "questionZh": "拿钥匙离开之前，应该核对和保存哪些信息？",
+          "cueZh": "拿钥匙离开之前，应该核对和保存哪些信息？",
+          "locationRelationZh": "从窗前回到出口的文件与钥匙；记录实际状态后结束交接，不暗示窗户已经修好。",
+          "anchorTerms": [
+            "hand over the keys",
+            "keys",
+            "record",
+            "condition"
+          ],
+          "previousNodeId": "S01.M06.L02",
+          "nextNodeId": "S01.M07.L01",
+          "evidenceType": "Researcher inference"
+        }
+      ]
+    },
+    "S01.M07": {
+      "memoryNodes": [
+        {
+          "id": "S01.M07.L01",
+          "locationZh": "搬入日门内：堆起的箱子与窄通道",
+          "zh": "搬入日门内：堆起的箱子与窄通道",
+          "object": "boxes beside the door",
+          "cue": "What help can Lin ask for to keep the path clear?",
+          "questionZh": "怎样请求帮助，让入口通道保持可通行？",
+          "cueZh": "怎样请求帮助，让入口通道保持可通行？",
+          "locationRelationZh": "用上一课拿到的钥匙进门，先处理门边搬入的箱子。",
+          "anchorTerms": [
+            "move in",
+            "stack up",
+            "give me a hand"
+          ],
+          "previousNodeId": "S01.M06.L03",
+          "nextNodeId": "S01.M07.L02",
+          "evidenceType": "Researcher inference"
+        },
+        {
+          "id": "S01.M07.L02",
+          "locationZh": "客厅书架到储藏室：分开的书与冬衣",
+          "zh": "客厅书架到储藏室：分开的书与冬衣",
+          "object": "books and winter coats",
+          "cue": "Where should Lin put her belongings?",
+          "questionZh": "怎样分类并安放书与冬衣？",
+          "cueZh": "怎样分类并安放书与冬衣？",
+          "locationRelationZh": "从门边沿客厅书架走到储藏室；保持书与冬衣各有真实去处。",
+          "anchorTerms": [
+            "sort out",
+            "pack",
+            "storeroom"
+          ],
+          "previousNodeId": "S01.M07.L01",
+          "nextNodeId": "S01.M07.L03",
+          "evidenceType": "Researcher inference"
+        },
+        {
+          "id": "S01.M07.L03",
+          "locationZh": "窗边书桌安装点：缺少螺丝的部件",
+          "zh": "窗边书桌安装点：缺少螺丝的部件",
+          "object": "small desk and missing screw",
+          "cue": "What part is missing from the desk, and what should Lin ask for?",
+          "questionZh": "书桌为什么不能安全站稳，她需要向商店提出什么请求？",
+          "cueZh": "书桌为什么不能安全站稳，她需要向商店提出什么请求？",
+          "locationRelationZh": "最后走到窗边的书桌部件；先定位缺件，再请求替换，不声称当晚已经组装完毕。",
+          "anchorTerms": [
+            "assemble",
+            "replacement"
+          ],
+          "previousNodeId": "S01.M07.L02",
+          "nextNodeId": "S01.M08.L01",
+          "evidenceType": "Researcher inference"
+        }
+      ]
+    },
+    "S01.M08": {
+      "memoryNodes": [
+        {
+          "id": "S01.M08.L01",
+          "locationZh": "厨房水槽下左侧：接水的碗与柜子",
+          "zh": "厨房水槽下左侧：接水的碗与柜子",
+          "object": "bowl and wooden cupboard",
+          "cue": "What is happening below the sink, and why is it a problem?",
+          "questionZh": "水槽下发生了什么，可能造成什么后果？",
+          "cueZh": "水槽下发生了什么，可能造成什么后果？",
+          "locationRelationZh": "搬入十天后回到厨房，先低头观察水槽下的水与木柜。",
+          "anchorTerms": [
+            "the kitchen tap is leaking",
+            "reported the fault",
+            "damage the cupboard"
+          ],
+          "previousNodeId": "S01.M07.L03",
+          "nextNodeId": "S01.M08.L02",
+          "evidenceType": "Researcher inference"
+        },
+        {
+          "id": "S01.M08.L02",
+          "locationZh": "水槽旁：发给房东的消息",
+          "zh": "水槽旁：发给房东的消息",
+          "object": "message to the landlord",
+          "cue": "Who should help, and when can Lin be home?",
+          "questionZh": "需要谁来处理，她在哪些时间能在家配合？",
+          "cueZh": "需要谁来处理，她在哪些时间能在家配合？",
+          "locationRelationZh": "从漏水处起身到发消息的位置；说明问题、商定上门时间，并把时间冲突讲清。",
+          "anchorTerms": [
+            "arrange a repair",
+            "an appointment with a plumber",
+            "confirm Thursday morning"
+          ],
+          "previousNodeId": "S01.M08.L01",
+          "nextNodeId": "S01.M08.L03",
+          "evidenceType": "Researcher inference"
+        },
+        {
+          "id": "S01.M08.L03",
+          "locationZh": "维修后同一水槽下右侧：重新检查的连接处",
+          "zh": "维修后同一水槽下右侧：重新检查的连接处",
+          "object": "tap and dry wood",
+          "cue": "How can Lin check whether the work solved the problem?",
+          "questionZh": "维修后，怎样核验原先漏水处是否仍有问题？",
+          "cueZh": "维修后，怎样核验原先漏水处是否仍有问题？",
+          "locationRelationZh": "星期四处理后回到同一水槽的检查点；用实际观察核验，不凭换过部件就假定修好了。",
+          "anchorTerms": [
+            "tap",
+            "leaking",
+            "fault"
+          ],
+          "previousNodeId": "S01.M08.L02",
+          "nextNodeId": "S01.M09.L01",
+          "evidenceType": "Researcher inference"
+        }
+      ]
+    },
+    "S01.M09": {
+      "memoryNodes": [
+        {
+          "id": "S01.M09.L01",
+          "locationZh": "步行试走日：施工路段旁的商店",
+          "zh": "步行试走日：施工路段旁的商店",
+          "object": "map and shop",
+          "cue": "What will Lin ask when the street is closed?",
+          "questionZh": "地图上的街道封闭时，应怎样问另一条走法？",
+          "cueZh": "地图上的街道封闭时，应怎样问另一条走法？",
+          "locationRelationZh": "修好水龙头后的下一周，从公寓出发遇到施工，先在附近商店问路。",
+          "anchorTerms": [
+            "direct route",
+            "asked a shopkeeper for directions",
+            "on foot"
+          ],
+          "previousNodeId": "S01.M08.L03",
+          "nextNodeId": "S01.M09.L02",
+          "evidenceType": "Researcher inference"
+        },
+        {
+          "id": "S01.M09.L02",
+          "locationZh": "公交试走日：候车点的时刻表",
+          "zh": "公交试走日：候车点的时刻表",
+          "object": "bus timetable",
+          "cue": "Why was the real journey longer than the plan?",
+          "questionZh": "为什么实际行程比计划用时更长，还需考虑哪笔钱？",
+          "cueZh": "为什么实际行程比计划用时更长，还需考虑哪笔钱？",
+          "locationRelationZh": "另一个早晨到候车点；计划表与实际拥堵作比较，不把不同早晨伪装成一次连续行程。",
+          "anchorTerms": [
+            "bus timetable",
+            "rush hour",
+            "delayed",
+            "fare"
+          ],
+          "previousNodeId": "S01.M09.L01",
+          "nextNodeId": "S01.M09.L03",
+          "evidenceType": "Researcher inference"
+        },
+        {
+          "id": "S01.M09.L03",
+          "locationZh": "骑车试走后：记录三次用时的笔记本",
+          "zh": "骑车试走后：记录三次用时的笔记本",
+          "object": "notebook",
+          "cue": "Which way would Lin choose on most days, and why?",
+          "questionZh": "结合时间、费用和安全，平日应选哪种方式？",
+          "cueZh": "结合时间、费用和安全，平日应选哪种方式？",
+          "locationRelationZh": "第三次试走后回到笔记本比较真实用时；结尾作日常选择，同时保留天气与天黑条件。",
+          "anchorTerms": [
+            "cycled",
+            "more reliable than the bus",
+            "on foot",
+            "route"
+          ],
+          "previousNodeId": "S01.M09.L02",
+          "nextNodeId": null,
+          "evidenceType": "Researcher inference"
+        }
+      ]
+    }
+  }
+}
