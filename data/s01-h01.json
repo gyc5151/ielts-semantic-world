@@ -1,0 +1,186 @@
+{
+  "id": "S01.H01",
+  "branchId": "blue-bill",
+  "navTitle": "照片与房间",
+  "title": "Behind the white-room photograph",
+  "goal": "Compare an advertisement with a real room and describe what makes accommodation comfortable.",
+  "memoryNodes": [
+    {
+      "object": "Photograph",
+      "zh": "广告照片",
+      "cue": "What did the advertisement promise?",
+      "cueZh": "广告许诺了什么？"
+    },
+    {
+      "object": "Adjoining doors",
+      "zh": "相邻门口",
+      "cue": "What did the visit reveal?",
+      "cueZh": "现场看房发现了什么？"
+    },
+    {
+      "object": "Blanket and plant",
+      "zh": "毯子与盆栽",
+      "cue": "What felt comfortable, and what still needed checking?",
+      "cueZh": "什么让人舒适，还有什么需要核实？"
+    }
+  ],
+  "situation": "A photograph was clipped to the blue bill on the contract table. The advertisement called the accommodation immaculate. Lin imagined a white room with sunlight across the floor. When she visited, the window frame was worn. A narrow passage led to an adjoining kitchen. She put the photograph away and looked at the room itself. Mrs Mei had folded a blanket beside a potted plant. A paper decoration hung above the shelf. The chair was comfortable, and the kitchen felt close enough for a quiet conversation. Lin liked these ordinary details, but she still asked about noise at night. A warm first impression was a reason to look further, not a reason to sign.",
+  "zhSupport": "比较广告与实物，描述让住处舒适的具体条件。",
+  "wordFile": "./data/s01-h01-words.json",
+  "provenance": {
+    "type": "Researcher inference",
+    "adaptedFrom": "IELTS_记忆宫殿_S01-S03与S05_基础词英文支线_V1.md",
+    "note": "从项目既有支线改编为短课；人物、情节、题目与译解为原创。不是官方IELTS材料。"
+  },
+  "terms": [
+    {
+      "term": "accommodation",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 28; 大全直 PRO 听力预习词表 p.1 U1 [Listening]",
+      "canonicalTerm": "accommodation",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 住宿 | somewhere to live or stay, often also providing food or other services"
+    },
+    {
+      "term": "immaculate",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 961; 雅思一万词汇班 p.72 [The most difficult words in IELTS]",
+      "canonicalTerm": "immaculate",
+      "originalContext": "雅思一万词汇班 | The most difficult words in IELTS | immaculate | ɪˈmakjʊlət | a. ⽆无⽐比⼲干净的；完美⽆无瑕的；"
+    },
+    {
+      "term": "adjoining",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 51; 大全直 PRO 听力预习词表 p.13 U6 [Listening]",
+      "canonicalTerm": "adjoining",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | adj. | 相邻的 | next to or joined with something"
+    },
+    {
+      "term": "blanket",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 229; 大全直 PRO 听力预习词表 p.20 U11 [Listening]",
+      "canonicalTerm": "blanket",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 毯子 | a large piece of woolen cloth used for warmth"
+    },
+    {
+      "term": "potted plant",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 1454; 大全直 PRO 听力预习词表 p.3 U1 [Listening]",
+      "canonicalTerm": "potted plant",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | phrase | 盆栽植物 | a plant that is grown in a pot"
+    },
+    {
+      "term": "decoration",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 515; 大全直 PRO 听力预习词表 p.2 U1 [Listening]",
+      "canonicalTerm": "decoration",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 装饰，装饰物 | a thing that makes sth look more attractive on special occasions"
+    },
+    {
+      "term": "comfortable",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 371; 大全直 PRO 听力预习词表 p.12 U5 [Listening]",
+      "canonicalTerm": "comfortable",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | adj. | 舒服的 | providing physical ease and relaxation"
+    }
+  ],
+  "glossary": [
+    {
+      "id": "S01.H01.G01",
+      "text": "the accommodation",
+      "zh": "这处住处",
+      "note": "accommodation 在此通常为不可数名词；不写 an accommodation。",
+      "type": "chunk",
+      "sourceTerm": "accommodation"
+    },
+    {
+      "id": "S01.H01.G02",
+      "text": "an adjoining kitchen",
+      "zh": "相邻且连接的厨房",
+      "note": "adjoining 描述相邻、连接的位置；不是厨房的大小。",
+      "type": "chunk",
+      "sourceTerm": "adjoining"
+    },
+    {
+      "id": "S01.H01.G03",
+      "text": "a potted plant",
+      "zh": "一盆盆栽",
+      "note": "potted 表示种在盆里的；完整词项来自种子资料。",
+      "type": "chunk",
+      "sourceTerm": "potted plant"
+    },
+    {
+      "id": "S01.H01.G04",
+      "text": "a warm first impression",
+      "zh": "温暖的第一印象",
+      "note": "first impression 可作评价起点，后面仍要给核实过的事实。",
+      "type": "chunk"
+    },
+    {
+      "id": "S01.H01.G05",
+      "text": "immaculate",
+      "zh": "一尘不染的",
+      "note": "这是广告措辞，故事没有认定现场完全符合它。",
+      "type": "word",
+      "sourceTerm": "immaculate"
+    }
+  ],
+  "retrievalPrompts": [
+    {
+      "id": "S01.H01.P01",
+      "function": "Describe the actual condition",
+      "cue": "The photograph shows a perfect room, but the window frame is worn. Explain the difference.",
+      "acceptableAnswers": [
+        "The advertisement calls the accommodation immaculate, but the window frame is worn."
+      ],
+      "feedback": "Separate the claim from what Lin actually saw.",
+      "targetTerms": [
+        "accommodation",
+        "immaculate"
+      ]
+    },
+    {
+      "id": "S01.H01.P02",
+      "function": "Describe the layout",
+      "cue": "The kitchen can be reached through a passage beside the room. Describe its position.",
+      "acceptableAnswers": [
+        "There is an adjoining kitchen beside the room."
+      ],
+      "feedback": "Adjoining describes the connection between spaces.",
+      "targetTerms": [
+        "adjoining"
+      ]
+    },
+    {
+      "id": "S01.H01.P03",
+      "function": "Explain comfort without assuming silence",
+      "cue": "The chair feels good, but Lin has not stayed overnight. Give a positive detail and a question.",
+      "acceptableAnswers": [
+        "The chair is comfortable, but is the room quiet at night?"
+      ],
+      "feedback": "Feeling comfortable does not establish the noise level.",
+      "targetTerms": [
+        "comfortable"
+      ]
+    }
+  ],
+  "transferPrompt": {
+    "id": "S01.H01.T01",
+    "function": "Evaluate a different home",
+    "cue": "A friend likes a bright flat near a busy road. Give one useful check before they agree to rent it.",
+    "acceptableAnswers": [
+      "The flat looks comfortable, but I would check the noise at night before signing."
+    ],
+    "feedback": "Change the home while keeping the difference between an impression and a check.",
+    "targetTerms": [
+      "comfortable",
+      "accommodation"
+    ]
+  }
+}

@@ -1,23 +1,40 @@
 # IELTS Semantic World
 
-Situation → Language: a text-based IELTS vocabulary learning prototype.
+Situation → Language: learn English through decisions, objects and events.
 
-Live site: https://gyc5151.github.io/ielts-semantic-world/
+**[Open the learning website](https://gyc5151.github.io/ielts-semantic-world/)**
 
-## Current scope
+## Current version: pilot-7-0
 
-S01 Housing & Commuting: nine micro-scenes and 45 retrieval/transfer tasks. English scene reading, full-text Chinese support, clickable words and chunks, contextual usage, multiple WordNet senses and examples, and spaced review.
+Five routes, 17 short bilingual scenes, 77 retrieval/transfer tasks:
 
-Practice records are saved only in the current browser. There is no account service or cross-device synchronization. Use the export function to keep a backup. Records from the localhost prototype do not automatically transfer to this domain.
+| Route | Contents | UI setting |
+|---|---|---|
+| Housing & Commuting | Nine scenes from searching to settling in | Warm paper |
+| Blue bill | Two housing side scenes | Home and household budget |
+| Changed notice | Two community-centre side scenes | Notice board |
+| Water sample | Two research side scenes | Laboratory record |
+| Tides and birds | Two wetland side scenes | Field notebook |
 
-These are original practice materials, not official IELTS questions. Machine-assisted dictionary translations are explicitly marked and have not been individually reviewed. They are learning aids rather than authoritative Chinese dictionary entries.
+Every route uses clickable English words and expression blocks, optional Chinese support, contextual usage, multiple WordNet senses and original examples, independent recall and spaced review. Branch scenes have expandable object cues. Using cues before answering is recorded as assisted practice.
+
+Direct links:
+
+- [Blue bill](https://gyc5151.github.io/ielts-semantic-world/#branch/blue-bill)
+- [Changed notice](https://gyc5151.github.io/ielts-semantic-world/#branch/notice)
+- [Water sample](https://gyc5151.github.io/ielts-semantic-world/#branch/water-lab)
+- [Tides and birds](https://gyc5151.github.io/ielts-semantic-world/#branch/tidal-hide)
+
+Practice records are stored in the current browser. No account service or cross-device synchronization is provided. Export records for a backup. This version keeps the existing S01 storage key and prompt IDs, so earlier records on this domain remain usable.
+
+These are original practice materials, not official IELTS questions. English stories, Chinese support, object cues and exercises are project-authored adaptations. Source-derived target terms keep separate provenance. Machine-assisted dictionary translations are marked and have not all been individually reviewed. Dictionary coverage gaps are explicitly indicated.
 
 ## Attribution
 
 WordNet 3.0 © 2006 Princeton University. See [license](data/WORDNET_LICENSE.txt).
 
-The auxiliary Chinese translation layer uses an Argos/OPUS-MT model. See [model attribution](data/TRANSLATION_MODEL_ATTRIBUTION.md). Project Chinese explanations and translations are kept separately from the original English dictionary material.
+The Chinese dictionary support layer uses an Argos/OPUS-MT model. See [model attribution](data/TRANSLATION_MODEL_ATTRIBUTION.md). The original English dictionary remains separate from project Chinese support.
 
 ## Deployment
 
-This repository contains the static runtime website only. GitHub Pages publishes the root of `main`. `.nojekyll` disables Jekyll processing. Open with a static HTTP server for local development.
+Only static runtime website files and attribution are included. GitHub Pages publishes the root of `main`; `.nojekyll` skips Jekyll processing. Authoring files, original source materials, models and practice/audit records are not part of this repository.

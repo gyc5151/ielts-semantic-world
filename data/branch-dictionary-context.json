@@ -1,0 +1,414 @@
+{
+  "S01.H01": {
+    "accommodation": {
+      "senseId": "n:02672371",
+      "zh": "住处；住宿",
+      "example": "The accommodation is close to work.",
+      "exampleZh": "这处住处离工作地点很近。"
+    },
+    "immaculate": {
+      "senseId": "s:00418364",
+      "zh": "一尘不染的（广告说法）",
+      "example": "The advertisement calls the room immaculate.",
+      "exampleZh": "广告称房间一尘不染。"
+    },
+    "adjoining": {
+      "zh": "相邻且连接的",
+      "noMatch": true,
+      "note": "WordNet 3.0 的当前候选收录 adjoin 动词，未收录本句中 adjoining 作形容词的用法；不要把动词词性当作本句词性。",
+      "usageNote": "WordNet 3.0 的当前候选收录 adjoin 动词，未收录本句中 adjoining 作形容词的用法；不要把动词词性当作本句词性。"
+    },
+    "plant": {
+      "senseId": "n:00017222",
+      "zh": "植物",
+      "example": "A potted plant stands beside the chair.",
+      "exampleZh": "椅子旁放着一盆植物。",
+      "contrasts": [
+        {
+          "senseId": "n:03956922",
+          "zh": "工厂",
+          "example": "The plant produces building materials.",
+          "exampleZh": "这家工厂生产建筑材料。"
+        }
+      ]
+    },
+    "potted": {
+      "senseId": "a:01834121",
+      "zh": "种在盆里的",
+      "example": "The potted plant belongs to Mrs Mei.",
+      "exampleZh": "这盆盆栽属于梅太太。"
+    },
+    "comfortable": {
+      "senseId": "a:00476819",
+      "zh": "舒适的",
+      "example": "The chair is comfortable.",
+      "exampleZh": "椅子坐着舒适。"
+    },
+    "table": {
+      "senseId": "n:04379243",
+      "zh": "桌子",
+      "example": "The unsigned agreement lies on the table.",
+      "exampleZh": "尚未签字的协议放在桌上。",
+      "contrasts": [
+        {
+          "senseId": "n:08266235",
+          "zh": "数据表",
+          "example": "The table lists the measured values.",
+          "exampleZh": "表格列出测量数值。"
+        }
+      ]
+    }
+  },
+  "S01.H02": {
+    "household": {
+      "senseId": "n:08078020",
+      "zh": "共同生活的一组人；家庭",
+      "example": "Her household needs an affordable home.",
+      "exampleZh": "她的家庭需要一处负担得起的住处。"
+    },
+    "table": {
+      "senseId": "n:04379243",
+      "zh": "桌子",
+      "example": "The unsigned agreement lies on the table.",
+      "exampleZh": "尚未签字的协议放在桌上。",
+      "contrasts": [
+        {
+          "senseId": "n:08266235",
+          "zh": "数据表",
+          "example": "The table lists the measured values.",
+          "exampleZh": "表格列出测量数值。"
+        }
+      ]
+    }
+  },
+  "S02.T01": {
+    "notice": {
+      "senseId": "n:06793426",
+      "zh": "张贴的通知；公告",
+      "example": "The notice gives the new room number.",
+      "exampleZh": "公告写着新的房间号。"
+    },
+    "session": {
+      "senseId": "n:01232091",
+      "zh": "一次课程或活动",
+      "example": "The session will take place in Room B.",
+      "exampleZh": "这次活动将在B室举行。"
+    },
+    "temporarily": {
+      "senseId": "r:00088303",
+      "zh": "暂时地",
+      "example": "Room A is closed temporarily.",
+      "exampleZh": "A室暂时关闭。"
+    },
+    "overdue": {
+      "zh": "早该完成却尚未完成的",
+      "noMatch": true,
+      "note": "本句指更正拖延；WordNet 当前义项较窄，强调到期未支付，不直接对应此处公告更正。",
+      "usageNote": "本句指更正拖延；WordNet 当前义项较窄，强调到期未支付，不直接对应此处公告更正。"
+    },
+    "onwards": {
+      "zh": "从某个时间起往后",
+      "noMatch": true,
+      "note": "本句 from Tuesday onwards 为时间用法；WordNet 当前义项为向前方向，不能直接作为本句对应义项。",
+      "usageNote": "本句 from Tuesday onwards 为时间用法；WordNet 当前义项为向前方向，不能直接作为本句对应义项。"
+    },
+    "instruction": {
+      "senseId": "n:06786629",
+      "zh": "指示；行动说明",
+      "example": "The instruction points towards the side corridor.",
+      "exampleZh": "指示指向侧边走廊。"
+    },
+    "regularity": {
+      "senseId": "n:04767347",
+      "zh": "规律性；固定安排",
+      "example": "The regularity helps people plan their evenings.",
+      "exampleZh": "固定安排帮助大家规划晚上。"
+    },
+    "dated": {
+      "senseId": "v:00734927",
+      "zh": "注明日期的（动词过去分词作修饰语）",
+      "example": "A dated update will appear on the board.",
+      "exampleZh": "公告板上将出现带日期的更新通知。",
+      "usageNote": "本句 dated 表示被注明日期的；不是旧式、过时的 dated。WordNet 对应动词 mark with a date。",
+      "contrasts": [
+        {
+          "senseId": "s:00974404",
+          "zh": "过时的",
+          "example": "The room has a dated design.",
+          "exampleZh": "房间设计已过时。"
+        }
+      ]
+    }
+  },
+  "S02.T02": {
+    "notice": {
+      "senseId": "n:06793426",
+      "zh": "张贴的通知；公告",
+      "example": "The notice gives the new room number.",
+      "exampleZh": "公告写着新的房间号。"
+    },
+    "session": {
+      "senseId": "n:01232091",
+      "zh": "一次课程或活动",
+      "example": "The session will take place in Room B.",
+      "exampleZh": "这次活动将在B室举行。"
+    },
+    "instruction": {
+      "senseId": "n:06786629",
+      "zh": "指示；行动说明",
+      "example": "The instruction points towards the side corridor.",
+      "exampleZh": "指示指向侧边走廊。"
+    },
+    "underway": {
+      "senseId": "s:00666784",
+      "zh": "正在进行",
+      "example": "The session is already underway.",
+      "exampleZh": "活动已经开始了。"
+    },
+    "timing": {
+      "senseId": "n:05046009",
+      "zh": "事情发生的时机",
+      "example": "The timing of the notice matters.",
+      "exampleZh": "公告发出的时机很重要。"
+    },
+    "dated": {
+      "senseId": "v:00734927",
+      "zh": "注明日期的（动词过去分词作修饰语）",
+      "example": "A dated update will appear on the board.",
+      "exampleZh": "公告板上将出现带日期的更新通知。",
+      "usageNote": "本句 dated 表示被注明日期的；不是旧式、过时的 dated。WordNet 对应动词 mark with a date。",
+      "contrasts": [
+        {
+          "senseId": "s:00974404",
+          "zh": "过时的",
+          "example": "The room has a dated design.",
+          "exampleZh": "房间设计已过时。"
+        }
+      ]
+    }
+  },
+  "S04.W01": {
+    "table": {
+      "senseId": "n:04379243",
+      "zh": "数据桌（家具）",
+      "example": "The report is back on the data table.",
+      "exampleZh": "报告回到了数据桌上。",
+      "contrasts": [
+        {
+          "senseId": "n:08266235",
+          "zh": "数据表",
+          "example": "The table lists the measured values.",
+          "exampleZh": "表格列出测量数值。"
+        }
+      ]
+    },
+    "fieldwork": {
+      "zh": "实地调查",
+      "noMatch": true,
+      "note": "WordNet 3.0 当前候选仅收录军事临时工事，与本课实地研究不匹配；本课情境义由项目编写。",
+      "usageNote": "WordNet 3.0 当前候选仅收录军事临时工事，与本课实地研究不匹配；本课情境义由项目编写。"
+    },
+    "samples": {
+      "senseId": "n:05821775",
+      "zh": "样本",
+      "example": "The team compares two samples.",
+      "exampleZh": "团队比较两份样本。",
+      "forms": [
+        "sample"
+      ]
+    },
+    "precise": {
+      "senseId": "a:01837744",
+      "zh": "准确明确的",
+      "example": "Record the precise location.",
+      "exampleZh": "记录准确地点。"
+    },
+    "apparatus": {
+      "senseId": "n:02727825",
+      "zh": "仪器装置",
+      "example": "The apparatus must be checked first.",
+      "exampleZh": "必须先检查仪器装置。"
+    }
+  },
+  "S04.W02": {
+    "table": {
+      "senseId": "n:04379243",
+      "zh": "数据桌（家具）",
+      "example": "The report is back on the data table.",
+      "exampleZh": "报告回到了数据桌上。",
+      "contrasts": [
+        {
+          "senseId": "n:08266235",
+          "zh": "数据表",
+          "example": "The table lists the measured values.",
+          "exampleZh": "表格列出测量数值。"
+        }
+      ]
+    },
+    "samples": {
+      "senseId": "n:05821775",
+      "zh": "样本",
+      "example": "The team compares two samples.",
+      "exampleZh": "团队比较两份样本。",
+      "forms": [
+        "sample"
+      ]
+    },
+    "flask": {
+      "senseId": "n:03359566",
+      "zh": "烧瓶",
+      "example": "The fluid is inside the flask.",
+      "exampleZh": "液体在烧瓶内。"
+    },
+    "fluid": {
+      "senseId": "n:14939445",
+      "zh": "流体；此处指液体",
+      "example": "The substance dissolves in the fluid.",
+      "exampleZh": "这种物质溶解在液体中。"
+    },
+    "dissolve": {
+      "senseId": "v:00446329",
+      "zh": "溶解",
+      "example": "The test substance dissolves in water.",
+      "exampleZh": "检测物质溶解在水中。",
+      "forms": [
+        "dissolves"
+      ]
+    },
+    "qualitative": {
+      "senseId": "a:01914521",
+      "zh": "定性的",
+      "example": "The colour notes are qualitative observations.",
+      "exampleZh": "颜色记录是定性观察。"
+    },
+    "quantitative": {
+      "senseId": "a:02977198",
+      "zh": "定量的",
+      "example": "The numbers are quantitative measurements.",
+      "exampleZh": "这些数字是定量测量。"
+    },
+    "database": {
+      "senseId": "n:06637824",
+      "zh": "数据库",
+      "example": "The records are stored in a database.",
+      "exampleZh": "记录保存在数据库中。"
+    },
+    "claim": {
+      "senseId": "n:06730563",
+      "zh": "断言；主张",
+      "example": "One result is not enough for a causal claim.",
+      "exampleZh": "一项结果不足以支持因果断言。"
+    }
+  },
+  "S15.W01": {
+    "hide": {
+      "zh": "观鸟屋",
+      "noMatch": true,
+      "note": "WordNet 3.0 未在此词形下收录观鸟屋这一英式用法；动物皮毛或隐藏动作不是本句意思。",
+      "usageNote": "WordNet 3.0 未在此词形下收录观鸟屋这一英式用法；动物皮毛或隐藏动作不是本句意思。"
+    },
+    "tide": {
+      "senseId": "n:07402519",
+      "zh": "潮汐",
+      "example": "The first count was made at low tide.",
+      "exampleZh": "第一次计数在低潮时进行。",
+      "forms": [
+        "tides"
+      ]
+    },
+    "bay": {
+      "senseId": "n:09215664",
+      "zh": "海湾",
+      "example": "The river reaches a small bay.",
+      "exampleZh": "河流流到一处小海湾。",
+      "contrasts": [
+        {
+          "senseId": "n:02812631",
+          "zh": "机舱内的隔间",
+          "example": "The equipment is stored in a cargo bay.",
+          "exampleZh": "设备存放在货舱隔间。"
+        }
+      ]
+    },
+    "shore": {
+      "senseId": "n:09433442",
+      "zh": "岸边",
+      "example": "Wet sand marks the shore.",
+      "exampleZh": "岸边的湿沙留下水线。"
+    },
+    "organism": {
+      "senseId": "n:00004475",
+      "zh": "生物体",
+      "example": "The shell contains a living organism.",
+      "exampleZh": "贝壳内有一个活的生物。"
+    }
+  },
+  "S15.W02": {
+    "hide": {
+      "zh": "观鸟屋",
+      "noMatch": true,
+      "note": "WordNet 3.0 未在此词形下收录观鸟屋这一英式用法；动物皮毛或隐藏动作不是本句意思。",
+      "usageNote": "WordNet 3.0 未在此词形下收录观鸟屋这一英式用法；动物皮毛或隐藏动作不是本句意思。"
+    },
+    "reproduction": {
+      "senseId": "n:13550318",
+      "zh": "繁殖",
+      "example": "Successful reproduction needs further evidence.",
+      "exampleZh": "成功繁殖还需要更多证据。",
+      "contrasts": [
+        {
+          "senseId": "n:04076533",
+          "zh": "复制品",
+          "example": "The gallery displays a reproduction of the painting.",
+          "exampleZh": "画廊展示这幅画的复制品。"
+        }
+      ]
+    },
+    "breeding": {
+      "senseId": "n:00849523",
+      "zh": "繁殖活动",
+      "example": "The rope protects the breeding area.",
+      "exampleZh": "绳索保护繁殖区。"
+    },
+    "seasonal": {
+      "senseId": "a:01494273",
+      "zh": "季节性的",
+      "example": "This is a seasonal observation.",
+      "exampleZh": "这是季节性观察。"
+    },
+    "migration": {
+      "senseId": "n:07312616",
+      "zh": "鸟类迁徙",
+      "example": "The map shows a migration route.",
+      "exampleZh": "地图显示一条迁徙路线。",
+      "contrasts": [
+        {
+          "senseId": "n:01123095",
+          "zh": "人口迁移",
+          "example": "The report discusses migration between regions.",
+          "exampleZh": "报告讨论地区之间的人口迁移。"
+        }
+      ]
+    },
+    "perched": {
+      "senseId": "v:01543731",
+      "zh": "停栖在",
+      "example": "A bird perched on the marker.",
+      "exampleZh": "一只鸟停在标杆上。"
+    },
+    "spring": {
+      "senseId": "n:15237044",
+      "zh": "春季",
+      "example": "The visits were made in spring.",
+      "exampleZh": "这些到访记录来自春季。",
+      "contrasts": [
+        {
+          "senseId": "n:04288272",
+          "zh": "弹簧",
+          "example": "The spring pushes the door closed.",
+          "exampleZh": "弹簧把门推回关闭位置。"
+        }
+      ]
+    }
+  }
+}

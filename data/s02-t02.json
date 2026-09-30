@@ -1,0 +1,163 @@
+{
+  "id": "S02.T02",
+  "branchId": "notice",
+  "navTitle": "箭头与通知",
+  "title": "An arrow at a locked staircase",
+  "goal": "Run through an access route and explain how to communicate a change without confusing visitors.",
+  "memoryNodes": [
+    {
+      "object": "Route arrows",
+      "zh": "路线箭头",
+      "cue": "Where does the first arrow lead?",
+      "cueZh": "第一支箭头指向哪里？"
+    },
+    {
+      "object": "Locked staircase",
+      "zh": "锁住的楼梯",
+      "cue": "What changes after walking the route?",
+      "cueZh": "实走后修改了什么？"
+    },
+    {
+      "object": "Clock and green tab",
+      "zh": "钟与绿色标签",
+      "cue": "Why does the timing of the message matter?",
+      "cueZh": "通知发出的时机为什么重要？"
+    }
+  ],
+  "situation": "The volunteer drew an arrow from the front door to Room B. It pointed at a locked staircase. Lin asked him to run through the route with her. They followed it together, found the blocked turn and drew a new arrow towards the side corridor. The instruction was easy to read; only walking the route showed that it was wrong. The repair finished sooner than expected. Another volunteer wanted to change the notice again before the session was underway. Lin looked at the clock beside the board. Two different messages in one afternoon could leave people unsure. She kept the current plan for that session and prepared a dated update for the next one. Then she returned the pen to the green tab on the same timetable.",
+  "zhSupport": "实走并核对通行路线，说明如何清晰通知访客。",
+  "wordFile": "./data/s02-t02-words.json",
+  "provenance": {
+    "type": "Researcher inference",
+    "adaptedFrom": "IELTS_记忆宫殿_S01-S03与S05_基础词英文支线_V1.md",
+    "note": "从项目既有支线改编为短课；人物、情节、题目与译解为原创。不是官方IELTS材料。"
+  },
+  "terms": [
+    {
+      "term": "run through",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 1675; 大全直 PRO 听力预习词表 p.21 U11 [Listening]",
+      "canonicalTerm": "run through",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | v. | 浏览，过一遍 | to review or rehearse quickly"
+    },
+    {
+      "term": "instruction",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 1040; 大全直 PRO 听力预习词表 p.20 U11 [Listening]",
+      "canonicalTerm": "instruction",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 指示 | a direction or order"
+    },
+    {
+      "term": "sooner",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 1774; 大全直 PRO 听力预习词表 p.23 U12 [Listening]",
+      "canonicalTerm": "sooner",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | adv. | 更快地 | earlier than expected"
+    },
+    {
+      "term": "underway",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 1996; 大全直 PRO 听力预习词表 p.10 U4 [Listening]",
+      "canonicalTerm": "underway",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | adj. | 在进行中的 | having started"
+    },
+    {
+      "term": "timing",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 1945; 雅思 PRO 班级词汇表 p.25 U11 [Reading]",
+      "canonicalTerm": "timing",
+      "originalContext": "雅思 PRO 班级词汇表 | Reading | n. | 时机 | The timing of his announcement was perfect."
+    }
+  ],
+  "glossary": [
+    {
+      "id": "S02.T02.G01",
+      "text": "run through the route",
+      "zh": "把路线走一遍、核对一遍",
+      "note": "run through 可指排练或逐项检查；此处伴随实走路线。",
+      "type": "chunk",
+      "sourceTerm": "run through"
+    },
+    {
+      "id": "S02.T02.G02",
+      "text": "sooner than expected",
+      "zh": "比预期更早",
+      "note": "sooner 是时间上的更早，不是更快速度。",
+      "type": "chunk",
+      "sourceTerm": "sooner"
+    },
+    {
+      "id": "S02.T02.G03",
+      "text": "the session was underway",
+      "zh": "活动正在进行",
+      "note": "underway 描述已经开始的状态。",
+      "type": "chunk",
+      "sourceTerm": "underway"
+    },
+    {
+      "id": "S02.T02.G04",
+      "text": "the timing of the message",
+      "zh": "通知发出的时机",
+      "note": "timing 是何时进行某事；不同于完成某事所需时长。",
+      "type": "chunk",
+      "sourceTerm": "timing"
+    }
+  ],
+  "retrievalPrompts": [
+    {
+      "id": "S02.T02.P01",
+      "function": "Ask to check a route",
+      "cue": "An arrow looks clear, but you have not tried the route. Ask the volunteer to check it with you.",
+      "acceptableAnswers": [
+        "Could we run through the route together before visitors arrive?"
+      ],
+      "feedback": "Request an action that can reveal a blocked route.",
+      "targetTerms": [
+        "run through"
+      ]
+    },
+    {
+      "id": "S02.T02.P02",
+      "function": "Correct an instruction",
+      "cue": "The first arrow points towards a locked staircase. Explain the correction.",
+      "acceptableAnswers": [
+        "The staircase is locked, so the instruction should direct people along the side corridor."
+      ],
+      "feedback": "Say what is wrong and where people should go.",
+      "targetTerms": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "S02.T02.P03",
+      "function": "Explain a communication decision",
+      "cue": "The repair is finished, but two room changes in one afternoon may confuse people. Explain why Lin keeps the plan.",
+      "acceptableAnswers": [
+        "The repair finished sooner than expected, but changing the message again could confuse visitors."
+      ],
+      "feedback": "Earlier completion does not require an immediate change of message.",
+      "targetTerms": [
+        "sooner",
+        "timing"
+      ]
+    }
+  ],
+  "transferPrompt": {
+    "id": "S02.T02.T01",
+    "function": "Plan a notice for a new venue",
+    "cue": "A museum closes its main staircase for a day. Suggest one check and one way to inform visitors.",
+    "acceptableAnswers": [
+      "I would walk the alternative route and place a clear dated instruction at the entrance."
+    ],
+    "feedback": "Connect a usable route to a message people will actually see.",
+    "targetTerms": [
+      "instruction",
+      "run through"
+    ]
+  }
+}

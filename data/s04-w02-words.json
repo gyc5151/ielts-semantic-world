@@ -1,0 +1,486 @@
+{
+  "sceneId": "S04.W02",
+  "provenance": "Researcher inference · 本课辅助词义",
+  "words": {
+    "a": {
+      "zh": "一个；某个"
+    },
+    "action": {
+      "zh": "行动；处理办法"
+    },
+    "added": {
+      "zh": "加上了；合计了"
+    },
+    "amount": {
+      "zh": "金额"
+    },
+    "an": {
+      "zh": "一个；某个"
+    },
+    "analysis": {
+      "zh": "分析"
+    },
+    "and": {
+      "zh": "和；并且"
+    },
+    "another": {
+      "zh": "另一个；又一个"
+    },
+    "are": {
+      "zh": "是；是否"
+    },
+    "as": {
+      "zh": "当……时；像；也（as well）"
+    },
+    "at": {
+      "zh": "在；于"
+    },
+    "attached": {
+      "zh": "附带的；相关的",
+      "note": "conditions attached to it 指押金所附的条件。"
+    },
+    "back": {
+      "zh": "回到；取回",
+      "note": "Back at her desk 是回到书桌旁；get it back 是取回押金。"
+    },
+    "been": {
+      "zh": "已经；be 的过去分词"
+    },
+    "before": {
+      "zh": "在……之前"
+    },
+    "both": {
+      "zh": "两者都"
+    },
+    "but": {
+      "zh": "但是"
+    },
+    "can": {
+      "zh": "能；可以"
+    },
+    "careful": {
+      "zh": "谨慎的；仔细的"
+    },
+    "causal": {
+      "zh": "因果的"
+    },
+    "cause": {
+      "zh": "原因；导致"
+    },
+    "caused": {
+      "zh": "造成了"
+    },
+    "cautious": {
+      "zh": "谨慎的"
+    },
+    "change": {
+      "zh": "改动；修改"
+    },
+    "changed": {
+      "zh": "变了；改变了"
+    },
+    "checked": {
+      "zh": "检查过；请人检查",
+      "note": "have it checked 指让人检查它。"
+    },
+    "chemical": {
+      "zh": "化学的"
+    },
+    "claim": {
+      "zh": "断言；主张"
+    },
+    "classrooms": {
+      "zh": "教室"
+    },
+    "collated": {
+      "zh": "整理核对了"
+    },
+    "colour": {
+      "zh": "颜色"
+    },
+    "column": {
+      "zh": "栏；列"
+    },
+    "columns": {
+      "zh": "栏；列",
+      "note": "笔记本里用两栏区分每月费用和入住前费用。"
+    },
+    "compare": {
+      "zh": "比较；对比"
+    },
+    "comparison": {
+      "zh": "比较；对照"
+    },
+    "conclusion": {
+      "zh": "结论"
+    },
+    "current": {
+      "zh": "目前的；现任的",
+      "note": "current tenant 指目前居住在此的租客。"
+    },
+    "data": {
+      "zh": "数据"
+    },
+    "database": {
+      "zh": "数据库"
+    },
+    "date": {
+      "zh": "日期；这里指起始日期",
+      "note": "start date 在故事中指书面约定的租住起始日期。"
+    },
+    "describe": {
+      "zh": "描述"
+    },
+    "describes": {
+      "zh": "描述；说明"
+    },
+    "descriptions": {
+      "zh": "描述"
+    },
+    "determine": {
+      "zh": "查明；确定（此处为查明）"
+    },
+    "differ": {
+      "zh": "不同；有差异"
+    },
+    "difference": {
+      "zh": "差别"
+    },
+    "different": {
+      "zh": "不同的"
+    },
+    "disappears": {
+      "zh": "消失；此处指溶入液体"
+    },
+    "dissolve": {
+      "zh": "溶解"
+    },
+    "dissolves": {
+      "zh": "溶解（第三人称单数）"
+    },
+    "distinguish": {
+      "zh": "区分；辨别"
+    },
+    "does": {
+      "zh": "助动词；做"
+    },
+    "established": {
+      "zh": "已查明；已确定"
+    },
+    "every": {
+      "zh": "每一个"
+    },
+    "evidence": {
+      "zh": "证据"
+    },
+    "explain": {
+      "zh": "说明；解释"
+    },
+    "far": {
+      "zh": "远的"
+    },
+    "finding": {
+      "zh": "研究发现"
+    },
+    "flask": {
+      "zh": "烧瓶"
+    },
+    "fluid": {
+      "zh": "液体"
+    },
+    "for": {
+      "zh": "为；为了；对于"
+    },
+    "found": {
+      "zh": "发现了"
+    },
+    "from": {
+      "zh": "从；根据"
+    },
+    "give": {
+      "zh": "给出"
+    },
+    "gives": {
+      "zh": "给出；提供"
+    },
+    "had": {
+      "zh": "有；已经",
+      "note": "the adverts had suggested 指广告此前给人的印象。"
+    },
+    "happened": {
+      "zh": "发生了；完成了"
+    },
+    "has": {
+      "zh": "有"
+    },
+    "have": {
+      "zh": "有；让……被做"
+    },
+    "held": {
+      "zh": "存放着；记录着"
+    },
+    "in": {
+      "zh": "在……里面；在……方面"
+    },
+    "inside": {
+      "zh": "在里面；往屋里"
+    },
+    "instrument": {
+      "zh": "仪器"
+    },
+    "into": {
+      "zh": "进入；move into 指搬进"
+    },
+    "it": {
+      "zh": "它；这件事"
+    },
+    "its": {
+      "zh": "它的"
+    },
+    "kinds": {
+      "zh": "种类"
+    },
+    "laboratory": {
+      "zh": "实验室"
+    },
+    "left": {
+      "zh": "左边的（此处为方位）"
+    },
+    "levels": {
+      "zh": "水平；数值"
+    },
+    "limit": {
+      "zh": "上限；限制"
+    },
+    "limited": {
+      "zh": "有限的；有局限的"
+    },
+    "lin": {
+      "zh": "林"
+    },
+    "location": {
+      "zh": "地点；位置"
+    },
+    "making": {
+      "zh": "作出；做",
+      "note": "making a decision 指作决定。"
+    },
+    "measured": {
+      "zh": "实测了；量过"
+    },
+    "measurement": {
+      "zh": "测量"
+    },
+    "measurements": {
+      "zh": "测量结果"
+    },
+    "measures": {
+      "zh": "测量（动词）"
+    },
+    "more": {
+      "zh": "更多的；更……"
+    },
+    "naming": {
+      "zh": "说出具体名称"
+    },
+    "need": {
+      "zh": "需要"
+    },
+    "new": {
+      "zh": "新的"
+    },
+    "noise": {
+      "zh": "噪音；吵闹声",
+      "note": "这里指道路传进卧室的声音。"
+    },
+    "not": {
+      "zh": "不；没有"
+    },
+    "notes": {
+      "zh": "备注；记录"
+    },
+    "numbers": {
+      "zh": "数字"
+    },
+    "observation": {
+      "zh": "观察；观察记录"
+    },
+    "observations": {
+      "zh": "观察记录"
+    },
+    "of": {
+      "zh": "……的"
+    },
+    "one": {
+      "zh": "一个；某一项"
+    },
+    "opening": {
+      "zh": "打开"
+    },
+    "other": {
+      "zh": "其他的"
+    },
+    "part": {
+      "zh": "部分；方面",
+      "note": "that part 指尚未测过的高峰行程。"
+    },
+    "play": {
+      "zh": "发挥；此处play a role为起作用"
+    },
+    "pollution": {
+      "zh": "污染"
+    },
+    "proof": {
+      "zh": "证明"
+    },
+    "qualitative": {
+      "zh": "定性的"
+    },
+    "quantitative": {
+      "zh": "定量的"
+    },
+    "record": {
+      "zh": "记录（名词）"
+    },
+    "recorded": {
+      "zh": "记录了"
+    },
+    "records": {
+      "zh": "记录（名词）"
+    },
+    "repeated": {
+      "zh": "重复了；复述了"
+    },
+    "report": {
+      "zh": "报告；说明故障"
+    },
+    "researcher": {
+      "zh": "研究员"
+    },
+    "result": {
+      "zh": "结果"
+    },
+    "results": {
+      "zh": "结果"
+    },
+    "right": {
+      "zh": "右边的（此处为方位）"
+    },
+    "roles": {
+      "zh": "作用"
+    },
+    "sample": {
+      "zh": "样本"
+    },
+    "samples": {
+      "zh": "样本"
+    },
+    "sat": {
+      "zh": "坐着；放着（过去式）"
+    },
+    "say": {
+      "zh": "说出；说明"
+    },
+    "sentence": {
+      "zh": "句子"
+    },
+    "set": {
+      "zh": "设定；设置",
+      "note": "set filters 表示设置筛选条件。"
+    },
+    "setting": {
+      "zh": "情境；场所"
+    },
+    "sheet": {
+      "zh": "表单；纸张"
+    },
+    "single": {
+      "zh": "单次的；单个的"
+    },
+    "small": {
+      "zh": "小的"
+    },
+    "so": {
+      "zh": "因此；所以"
+    },
+    "source": {
+      "zh": "来源；此处指差异来源"
+    },
+    "state": {
+      "zh": "状态；状况"
+    },
+    "stayed": {
+      "zh": "保持；处于",
+      "note": "stayed within her budget 指仍在预算内。"
+    },
+    "substance": {
+      "zh": "物质"
+    },
+    "such": {
+      "zh": "这样的"
+    },
+    "table": {
+      "zh": "桌子"
+    },
+    "team": {
+      "zh": "团队"
+    },
+    "test": {
+      "zh": "试走；实测"
+    },
+    "the": {
+      "zh": "这；那；特指的"
+    },
+    "to": {
+      "zh": "到；向；用于引出动词"
+    },
+    "transfer": {
+      "zh": "迁移运用"
+    },
+    "transparent": {
+      "zh": "透明的"
+    },
+    "two": {
+      "zh": "两个"
+    },
+    "unchanged": {
+      "zh": "未改变的"
+    },
+    "visible": {
+      "zh": "看得见的"
+    },
+    "was": {
+      "zh": "是；处于（过去时）"
+    },
+    "watched": {
+      "zh": "看着"
+    },
+    "water": {
+      "zh": "水；水费"
+    },
+    "we": {
+      "zh": "我们"
+    },
+    "what": {
+      "zh": "什么；哪些"
+    },
+    "which": {
+      "zh": "哪一个；哪些"
+    },
+    "who": {
+      "zh": "谁"
+    },
+    "why": {
+      "zh": "为什么"
+    },
+    "without": {
+      "zh": "没有；不"
+    },
+    "write": {
+      "zh": "写下；书写"
+    },
+    "wrote": {
+      "zh": "写了；记录了"
+    }
+  }
+}

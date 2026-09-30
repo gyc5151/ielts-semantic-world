@@ -1,0 +1,172 @@
+{
+  "id": "S02.T01",
+  "branchId": "notice",
+  "navTitle": "日历与改动",
+  "title": "The Tuesday squares",
+  "goal": "Explain a temporary change and give a clear starting date for a regular session.",
+  "memoryNodes": [
+    {
+      "object": "Curled notice",
+      "zh": "卷边公告",
+      "cue": "Which detail is out of date?",
+      "cueZh": "哪条信息已经过时？"
+    },
+    {
+      "object": "Tuesday squares",
+      "zh": "周二日历格",
+      "cue": "What remains regular?",
+      "cueZh": "哪部分安排仍然固定？"
+    },
+    {
+      "object": "Room key",
+      "zh": "借来的房间钥匙",
+      "cue": "When does the temporary change begin?",
+      "cueZh": "临时改动何时开始？"
+    }
+  ],
+  "situation": "At the community centre, a curled notice still sent visitors to Room A. Its correction was overdue. Lin looked at the timetable: a row of Tuesday squares marked the regular session. People came after work, and the regularity helped them plan their evenings. Changing the room mattered even if the weekly time stayed the same. A ceiling panel needed repair, so Room A would close temporarily. The volunteer offered Room B. Lin wrote a new notice: Use Room B from Tuesday onwards until a dated update appears here. She put the date above the new room number. A temporary plan needed a clear beginning and a clear place to check for its end.",
+  "zhSupport": "解释临时改动，为例行课程说明明确的起始日期。",
+  "wordFile": "./data/s02-t01-words.json",
+  "provenance": {
+    "type": "Researcher inference",
+    "adaptedFrom": "IELTS_记忆宫殿_S01-S03与S05_基础词英文支线_V1.md",
+    "note": "从项目既有支线改编为短课；人物、情节、题目与译解为原创。不是官方IELTS材料。"
+  },
+  "terms": [
+    {
+      "term": "overdue",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 1332; 大全直 PRO 听力预习词表 p.16 U9 [Listening]",
+      "canonicalTerm": "overdue",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | adj. | 过期的 | not done or happening by the expected time"
+    },
+    {
+      "term": "session",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 1733; 大全直 PRO 听力预习词表 p.4 U2 [Listening]",
+      "canonicalTerm": "session",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 一场（活动） | a particular activity is a period of that activity"
+    },
+    {
+      "term": "regularity",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 1593; 大全直 PRO 听力预习词表 p.23 U12 [Listening]",
+      "canonicalTerm": "regularity",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 规律 | the quality of being regular or repeated"
+    },
+    {
+      "term": "temporarily",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 1907; 大全直 PRO 听力预习词表 p.14 U7 [Listening]",
+      "canonicalTerm": "temporarily",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | adv. | 短暂地 | for a limited time only"
+    },
+    {
+      "term": "onwards",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 1308; 雅思 PRO 班级词汇表 p.8 U4 [Reading]",
+      "canonicalTerm": "onwards",
+      "originalContext": "雅思 PRO 班级词汇表 | Reading | adv. | 向前；在前面 | The new policy will be effective from the 1st of May onwards."
+    }
+  ],
+  "glossary": [
+    {
+      "id": "S02.T01.G01",
+      "text": "the regular session",
+      "zh": "例行课程",
+      "note": "session 指一次课程或活动；regular 指按规律举行。",
+      "type": "chunk",
+      "sourceTerm": "session"
+    },
+    {
+      "id": "S02.T01.G02",
+      "text": "close temporarily",
+      "zh": "暂时关闭",
+      "note": "temporarily 修饰关闭状态，不代表永久停用。",
+      "type": "chunk",
+      "sourceTerm": "temporarily"
+    },
+    {
+      "id": "S02.T01.G03",
+      "text": "from Tuesday onwards",
+      "zh": "从周二起",
+      "note": "from + 起始时间 + onwards；还需要说明何时或如何查看更新。",
+      "type": "chunk",
+      "sourceTerm": "onwards"
+    },
+    {
+      "id": "S02.T01.G04",
+      "text": "a dated update",
+      "zh": "带日期的更新通知",
+      "note": "dated 在此表示注明日期，不是过时的。",
+      "type": "chunk"
+    },
+    {
+      "id": "S02.T01.G05",
+      "text": "overdue",
+      "zh": "早该完成却尚未完成的",
+      "note": "这里说公告更正已拖延，不是课程日期已经过去。",
+      "type": "word",
+      "sourceTerm": "overdue"
+    }
+  ],
+  "retrievalPrompts": [
+    {
+      "id": "S02.T01.P01",
+      "function": "Explain the temporary closure",
+      "cue": "Room A needs a ceiling repair. Tell a visitor what has changed.",
+      "acceptableAnswers": [
+        "Room A is closed temporarily, so the session will take place in Room B."
+      ],
+      "feedback": "Name the change and the alternative.",
+      "targetTerms": [
+        "temporarily",
+        "session"
+      ]
+    },
+    {
+      "id": "S02.T01.P02",
+      "function": "Give a starting date",
+      "cue": "The new room will be used starting next Tuesday. Write the main instruction.",
+      "acceptableAnswers": [
+        "Please use Room B from Tuesday onwards until a dated update appears."
+      ],
+      "feedback": "Onwards gives a starting point, not a single visit.",
+      "targetTerms": [
+        "onwards"
+      ]
+    },
+    {
+      "id": "S02.T01.P03",
+      "function": "Explain why a notice matters",
+      "cue": "The weekly time is unchanged, but people may go to the old room. Explain why the correction is needed.",
+      "acceptableAnswers": [
+        "The correction is overdue because visitors may still go to Room A."
+      ],
+      "feedback": "A regular time does not make a changed location clear.",
+      "targetTerms": [
+        "overdue",
+        "regularity"
+      ]
+    }
+  ],
+  "transferPrompt": {
+    "id": "S02.T01.T01",
+    "function": "Announce a different temporary change",
+    "cue": "A library study group moves to the ground floor from Monday while its usual room is repaired. Tell members.",
+    "acceptableAnswers": [
+      "Our session will take place on the ground floor from Monday onwards while the usual room is repaired."
+    ],
+    "feedback": "Keep the location, starting date and reason clear.",
+    "targetTerms": [
+      "session",
+      "onwards",
+      "temporarily"
+    ]
+  }
+}

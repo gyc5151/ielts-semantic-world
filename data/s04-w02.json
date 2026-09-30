@@ -1,0 +1,215 @@
+{
+  "id": "S04.W02",
+  "branchId": "water-lab",
+  "navTitle": "结果与证据",
+  "title": "Two columns, one careful conclusion",
+  "goal": "Distinguish qualitative observations from quantitative measurements and report a limited conclusion.",
+  "memoryNodes": [
+    {
+      "object": "Transparent flask",
+      "zh": "透明烧瓶",
+      "cue": "What changed in the fluid?",
+      "cueZh": "液体中发生了什么变化？"
+    },
+    {
+      "object": "Two columns",
+      "zh": "双栏结果表",
+      "cue": "Which record describes, and which measures?",
+      "cueZh": "哪栏描述，哪栏测量？"
+    },
+    {
+      "object": "Database record",
+      "zh": "数据库归档号",
+      "cue": "What can the report say so far?",
+      "cueZh": "报告目前能说到哪一步？"
+    }
+  ],
+  "situation": "A small amount of water sat in a transparent flask. The researcher added a test substance and watched it dissolve in the fluid. Another sample was left unchanged for comparison. Lin recorded what happened before opening the results sheet. A visible change was part of the chemical analysis, not proof of who had caused the difference. The left column held qualitative observations, such as colour. The right held quantitative measurements from the checked instrument. The team repeated the test and collated the records in a database. Both location and date stayed attached to every result. Back at the data table, Lin wrote: We found a difference, but we need more evidence to determine its source.",
+  "zhSupport": "区分定性观察与定量测量，写出符合证据范围的结论。",
+  "wordFile": "./data/s04-w02-words.json",
+  "provenance": {
+    "type": "Researcher inference",
+    "adaptedFrom": "IELTS_记忆宫殿_S04水质实验支线施工稿_V1.md",
+    "note": "从项目既有支线改编为短课；人物、情节、题目与译解为原创。不是官方IELTS材料。"
+  },
+  "terms": [
+    {
+      "term": "flask",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 821; 雅思一万词汇班 p.10 [Scientific research 科研类]",
+      "canonicalTerm": "flask",
+      "originalContext": "雅思一万词汇班 | Scientific research 科研类 | n. | test tube 试管 flask n. 烧瓶"
+    },
+    {
+      "term": "fluid",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 836; 大全直 PRO 听力预习词表 p.10 U4 [Listening]",
+      "canonicalTerm": "fluid",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 液体 | a liquid; a substance that can flow"
+    },
+    {
+      "term": "dissolve",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 610; 雅思 PRO 班级词汇表 p.9 U4 [Writing] | 雅思一万词汇班 p.14 [Scientific processes 科学过程]",
+      "canonicalTerm": "dissolve",
+      "originalContext": "雅思 PRO 班级词汇表 | Writing | v. | 溶化；解除 | Stir the mixture until the sugar completely dissolves. || 雅思一万词汇班 | Scientific processes 科学过程 | dissolve | BrE dɪˈzɒlv, AmE dəˈzɑlv |"
+    },
+    {
+      "term": "chemical",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 325; 大全直 PRO 听力预习词表 p.17 U9 [Listening] | 大全直 PRO 听力预习词表 p.21 U11 [Listening] | 雅思 PRO 班级词汇表 p.6 U3 [Reading]",
+      "canonicalTerm": "chemical",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | adj. | 化学的 | relating to chemistry or chemicals || 大全直 PRO 听力预习词表 | Listening | adj. | 化学的 | relating to chemistry"
+    },
+    {
+      "term": "analysis",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 110; 大全直 PRO 听力预习词表 p.17 U9 [Listening]",
+      "canonicalTerm": "analysis",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 分析 | a detailed examination of the elements or structure of something"
+    },
+    {
+      "term": "qualitative",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 1533; 雅思一万词汇班 p.63 [Research methods 研究手段]",
+      "canonicalTerm": "qualitative",
+      "originalContext": "雅思一万词汇班 | Research methods 研究手段 | qualitative | BrE ˈkwɒlɪtətɪv, | a. 定性的；性质的；"
+    },
+    {
+      "term": "quantitative",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 1534; 雅思一万词汇班 p.63 [Research methods 研究手段]",
+      "canonicalTerm": "quantitative",
+      "originalContext": "雅思一万词汇班 | Research methods 研究手段 | quantitative | BrE ˈkwɒntɪtətɪv, | a. 定量量的；量量化的；"
+    },
+    {
+      "term": "collate",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 361; 雅思一万词汇班 p.62 [Research methods 研究手段]",
+      "canonicalTerm": "collate",
+      "originalContext": "雅思一万词汇班 | Research methods 研究手段 | collate | kəˈleɪt | vt. 核对；校勘 ~ A _?_ B data collation"
+    },
+    {
+      "term": "database",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 505; 大全直 PRO 听力预习词表 p.5 U2 [Listening]",
+      "canonicalTerm": "database",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 数据库"
+    },
+    {
+      "term": "determine",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 560; 大全直 PRO 听力预习词表 p.10 U4 [Listening]",
+      "canonicalTerm": "determine",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | v. | 查明 | to discover the facts about sth; to calculate sth exactly"
+    }
+  ],
+  "glossary": [
+    {
+      "id": "S04.W02.G01",
+      "text": "chemical analysis",
+      "zh": "化学分析",
+      "note": "analysis 是分析过程；不能把一次分析等同于因果证明。",
+      "type": "chunk",
+      "sourceTerm": "analysis"
+    },
+    {
+      "id": "S04.W02.G02",
+      "text": "qualitative observations",
+      "zh": "定性观察",
+      "note": "记录颜色等特征，不只是“质量好坏”。",
+      "type": "chunk",
+      "sourceTerm": "qualitative"
+    },
+    {
+      "id": "S04.W02.G03",
+      "text": "quantitative measurements",
+      "zh": "定量测量",
+      "note": "记录数值与单位；有数字也仍需检查测量条件。",
+      "type": "chunk",
+      "sourceTerm": "quantitative"
+    },
+    {
+      "id": "S04.W02.G04",
+      "text": "determine its source",
+      "zh": "查明其来源",
+      "note": "determine 在此为查明，不是决定要选哪件东西。",
+      "type": "chunk",
+      "sourceTerm": "determine"
+    },
+    {
+      "id": "S04.W02.G05",
+      "text": "dissolve",
+      "zh": "溶解",
+      "note": "在此指物质溶入液体，不是机构解散。",
+      "type": "word",
+      "sourceTerm": "dissolve"
+    }
+  ],
+  "retrievalPrompts": [
+    {
+      "id": "S04.W02.P01",
+      "function": "Describe the laboratory action",
+      "cue": "A substance disappears into the water in the flask. Describe the action without naming a pollution source.",
+      "acceptableAnswers": [
+        "The test substance dissolves in the fluid inside the flask."
+      ],
+      "feedback": "Describe an observation before making a causal claim.",
+      "targetTerms": [
+        "dissolve",
+        "fluid",
+        "flask"
+      ]
+    },
+    {
+      "id": "S04.W02.P02",
+      "function": "Distinguish two kinds of record",
+      "cue": "One column describes colour. The other gives measured numbers. Explain the difference.",
+      "acceptableAnswers": [
+        "The colour notes are qualitative observations; the numbers are quantitative measurements."
+      ],
+      "feedback": "Numbers and descriptions play different roles in the comparison.",
+      "targetTerms": [
+        "qualitative",
+        "quantitative"
+      ]
+    },
+    {
+      "id": "S04.W02.P03",
+      "function": "Report a cautious conclusion",
+      "cue": "The samples differ, but the cause has not been established. Write a sentence for the report.",
+      "acceptableAnswers": [
+        "We found a difference, but we need more evidence to determine its source."
+      ],
+      "feedback": "State the finding and its current limit.",
+      "targetTerms": [
+        "determine",
+        "analysis"
+      ]
+    }
+  ],
+  "transferPrompt": {
+    "id": "S04.W02.T01",
+    "function": "Compare a new set of records",
+    "cue": "Two classrooms have different measured noise levels. A single measurement does not explain the cause. Give a cautious conclusion.",
+    "acceptableAnswers": [
+      "The measurements differ, but we need repeated observations to determine why."
+    ],
+    "feedback": "Transfer the limit of the evidence to a different setting.",
+    "targetTerms": [
+      "quantitative",
+      "qualitative",
+      "determine"
+    ]
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "id": "S15.W01",
+  "branchId": "tidal-hide",
+  "navTitle": "水线与计数",
+  "title": "The birds beyond the waterline",
+  "goal": "Compare observations made at different tides and explain why one count is not a trend.",
+  "memoryNodes": [
+    {
+      "object": "Tide dial",
+      "zh": "潮汐刻度盘",
+      "cue": "At what water level was each count made?",
+      "cueZh": "每次计数时的水位是什么？"
+    },
+    {
+      "object": "Bay railing",
+      "zh": "海湾栏杆",
+      "cue": "Where does the waterline move?",
+      "cueZh": "水线如何移动？"
+    },
+    {
+      "object": "Moving shell",
+      "zh": "会动的贝壳",
+      "cue": "What might an observer miss?",
+      "cueZh": "观察者可能漏掉什么？"
+    }
+  ],
+  "situation": "Lin opened the bird hide by its shell-shaped handle. Yesterday, birds had filled the mud below the window. Today she saw mostly water. Noor turned the brass tide dial. The earlier count had been made at low tide. A tidal change had covered the feeding area; it had not proved that the birds were gone. Lin wrote the time beside both counts. At the bay railing, the river met the sea. Wind moved across the open coast, while wet sand marked the quieter shore. A tray held seaweed and a small invertebrate. Lin almost counted its shell as empty until the animal moved. She noted the living organism and the water level, then walked towards the nesting rope with a better question: Were the two visits really comparable?",
+  "zhSupport": "比较不同潮位下的观察，说明为何一次计数不等于趋势。",
+  "wordFile": "./data/s15-w01-words.json",
+  "provenance": {
+    "type": "Researcher inference",
+    "adaptedFrom": "IELTS_记忆宫殿_S15_湿地三支线_English_First_V1.md",
+    "note": "从项目既有支线改编为短课；人物、情节、题目与译解为原创。不是官方IELTS材料。"
+  },
+  "terms": [
+    {
+      "term": "tide",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 1942; 大全直 PRO 听力预习词表 p.18 U9 [Listening]",
+      "canonicalTerm": "tide",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 潮汐 | the regular rise and fall of the sea"
+    },
+    {
+      "term": "low tide",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 1151; 大全直 PRO 听力预习词表 p.4 U2 [Listening]",
+      "canonicalTerm": "low tide",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | （大海的）低潮 | the time when the sea is at its lowest level; the sea at this tim"
+    },
+    {
+      "term": "tidal",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 1941; 雅思一万词汇班 p.35 [Physical geography 自然地理学]",
+      "canonicalTerm": "tidal",
+      "originalContext": "雅思一万词汇班 | Physical geography 自然地理学 | tidal | BrE ˈtʌɪd(ə)l, AmE ˈtaɪdl | a. 潮汐的； ~ forces 潮汐⼒力力"
+    },
+    {
+      "term": "bay",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 203; 大全直 PRO 听力预习词表 p.17 U9 [Listening]",
+      "canonicalTerm": "bay",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 海湾 | a broad inlet of the sea where the land curves inward"
+    },
+    {
+      "term": "coast",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 351; 大全直 PRO 听力预习词表 p.16 U8 [Listening]",
+      "canonicalTerm": "coast",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 海岸 | the land beside the sea"
+    },
+    {
+      "term": "shore",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 1744; 大全直 PRO 听力预习词表 p.17 U9 [Listening]",
+      "canonicalTerm": "shore",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 海岸，河岸 | the land along the edge of a sea, lake, or river"
+    },
+    {
+      "term": "seaweed",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 1703; 大全直 PRO 听力预习词表 p.10 U4 [Listening]",
+      "canonicalTerm": "seaweed",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 海草 | a plant that grows in the sea or ocean, or on rocks at the edge of the sea or ocean"
+    },
+    {
+      "term": "invertebrate",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 1073; 雅思一万词汇班 p.28 [nervous system 神经系统]",
+      "canonicalTerm": "invertebrate",
+      "originalContext": "雅思一万词汇班 | nervous system 神经系统 | n. | invertebrate n. ⽆无脊椎动物 a. ⽆无脊椎的"
+    },
+    {
+      "term": "organism",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 1321; 大全直 PRO 听力预习词表 p.18 U9 [Listening]",
+      "canonicalTerm": "organism",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 生物体，有机体 | an individual animal, plant, or single-celled life form"
+    }
+  ],
+  "glossary": [
+    {
+      "id": "S15.W01.G01",
+      "text": "at low tide",
+      "zh": "在低潮时",
+      "note": "at 表示某种潮位状态；比较观察时同时记下时间。",
+      "type": "chunk",
+      "sourceTerm": "low tide"
+    },
+    {
+      "id": "S15.W01.G02",
+      "text": "a tidal change",
+      "zh": "潮汐变化",
+      "note": "tidal 修饰由潮汐造成的变化。",
+      "type": "chunk",
+      "sourceTerm": "tidal"
+    },
+    {
+      "id": "S15.W01.G03",
+      "text": "the feeding area",
+      "zh": "觅食区",
+      "note": "feeding 在这里不是人喂鸟，而是鸟寻找食物。",
+      "type": "chunk"
+    },
+    {
+      "id": "S15.W01.G04",
+      "text": "a living organism",
+      "zh": "活的生物",
+      "note": "organism 指生物体，不能仅按空壳计数。",
+      "type": "chunk",
+      "sourceTerm": "organism"
+    },
+    {
+      "id": "S15.W01.G05",
+      "text": "comparable",
+      "zh": "可比较的",
+      "note": "条件不同的两次观察未必能直接比较。",
+      "type": "word"
+    }
+  ],
+  "retrievalPrompts": [
+    {
+      "id": "S15.W01.P01",
+      "function": "Explain the different counts",
+      "cue": "Yesterday the mud was exposed. Today it is under water. Explain why fewer visible birds may not mean fewer birds overall.",
+      "acceptableAnswers": [
+        "The first count was made at low tide, but the feeding area is covered today."
+      ],
+      "feedback": "Mention the changed observation condition before suggesting a trend.",
+      "targetTerms": [
+        "low tide",
+        "tidal"
+      ]
+    },
+    {
+      "id": "S15.W01.P02",
+      "function": "Describe the river mouth",
+      "cue": "Lin follows the river to a sheltered part of the sea. Describe the place.",
+      "acceptableAnswers": [
+        "The river meets the sea in a small bay beside the shore."
+      ],
+      "feedback": "Use the geographical words to locate the observation.",
+      "targetTerms": [
+        "bay",
+        "shore",
+        "coast"
+      ]
+    },
+    {
+      "id": "S15.W01.P03",
+      "function": "Record a living animal",
+      "cue": "A tiny animal moves inside a shell. Explain what Lin should record.",
+      "acceptableAnswers": [
+        "She should record a living organism rather than an empty shell."
+      ],
+      "feedback": "An observation can correct an initial guess.",
+      "targetTerms": [
+        "organism",
+        "invertebrate"
+      ]
+    }
+  ],
+  "transferPrompt": {
+    "id": "S15.W01.T01",
+    "function": "Compare observations in a new park",
+    "cue": "A park looks empty in the rain but busy on a sunny day. What should be checked before reporting a fall in visitors?",
+    "acceptableAnswers": [
+      "We should compare visits made at similar times and in similar weather."
+    ],
+    "feedback": "Move from a single impression to comparable observations.",
+    "targetTerms": [
+      "tidal",
+      "tide"
+    ]
+  }
+}

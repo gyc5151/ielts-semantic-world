@@ -1,0 +1,145 @@
+{
+  "id": "S01.H02",
+  "branchId": "blue-bill",
+  "navTitle": "账单与决定",
+  "title": "The pen beside the blue bill",
+  "goal": "Compare total household costs and ask for written figures before signing a rental agreement.",
+  "memoryNodes": [
+    {
+      "object": "Budget card",
+      "zh": "家庭预算卡",
+      "cue": "Which three costs must be added?",
+      "cueZh": "哪三项费用要相加？"
+    },
+    {
+      "object": "Unsigned paper",
+      "zh": "未签租约",
+      "cue": "Which figure is still an estimate?",
+      "cueZh": "哪项数字仍是估算？"
+    },
+    {
+      "object": "Blue bill",
+      "zh": "蓝色账单",
+      "cue": "What does Lin need before signing?",
+      "cueZh": "签字前林还需要什么？"
+    }
+  ],
+  "situation": "At the kitchen table, Lin placed the train fare beside the rent. A heating estimate lay underneath. The cheaper flat meant a longer journey; the nearer room cost more to rent. Her household needed a home it could afford throughout the year, not just on moving day. She added the three figures instead of comparing rent alone. The pen waited beside the unsigned rental agreement. Lin asked for the final figures in writing and kept the heating estimate clearly marked as an estimate. She returned to the same blue bill on the contract table. The room might become her home, but the decision would wait until the missing costs were clear.",
+  "zhSupport": "比较家庭总支出，在签租约前索要书面费用。",
+  "wordFile": "./data/s01-h02-words.json",
+  "provenance": {
+    "type": "Researcher inference",
+    "adaptedFrom": "IELTS_记忆宫殿_S01-S03与S05_基础词英文支线_V1.md",
+    "note": "从项目既有支线改编为短课；人物、情节、题目与译解为原创。不是官方IELTS材料。"
+  },
+  "terms": [
+    {
+      "term": "household",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 935; 大全直 PRO 听力预习词表 p.18 U9 [Listening]",
+      "canonicalTerm": "household",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 家用的，家庭 | a house and its occupants considered as a unit"
+    },
+    {
+      "term": "rental",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 1617; 大全直 PRO 听力预习词表 p.3 U1 [Listening]",
+      "canonicalTerm": "rental",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 租赁 | the act of renting sth or an arrangement to rent sth"
+    },
+    {
+      "term": "comfortable",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 371; 大全直 PRO 听力预习词表 p.12 U5 [Listening]",
+      "canonicalTerm": "comfortable",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | adj. | 舒服的 | providing physical ease and relaxation"
+    }
+  ],
+  "glossary": [
+    {
+      "id": "S01.H02.G01",
+      "text": "her household",
+      "zh": "她的家庭",
+      "note": "household 是共同生活的一组人；不是房屋本身。",
+      "type": "chunk",
+      "sourceTerm": "household"
+    },
+    {
+      "id": "S01.H02.G02",
+      "text": "a rental agreement",
+      "zh": "租赁协议",
+      "note": "rental 在此修饰 agreement；不与 deposit 等单项费用混同。",
+      "type": "chunk",
+      "sourceTerm": "rental"
+    },
+    {
+      "id": "S01.H02.G03",
+      "text": "in writing",
+      "zh": "以书面形式",
+      "note": "ask for / confirm something in writing；用于核对可追溯的约定。",
+      "type": "chunk"
+    },
+    {
+      "id": "S01.H02.G04",
+      "text": "an estimate",
+      "zh": "一项估算",
+      "note": "estimate 是预估，不等于最终账单。",
+      "type": "chunk"
+    }
+  ],
+  "retrievalPrompts": [
+    {
+      "id": "S01.H02.P01",
+      "function": "Compare total costs",
+      "cue": "One flat has lower rent but a higher train fare. Explain what the household should compare.",
+      "acceptableAnswers": [
+        "We should compare rent, travel and heating costs, not rent alone."
+      ],
+      "feedback": "Include costs that change the real monthly budget.",
+      "targetTerms": [
+        "household",
+        "rental"
+      ]
+    },
+    {
+      "id": "S01.H02.P02",
+      "function": "Ask for a written figure",
+      "cue": "The agreement does not give the final total. Ask the agent for a clear record.",
+      "acceptableAnswers": [
+        "Could you confirm the total cost in writing before I sign the rental agreement?"
+      ],
+      "feedback": "Ask politely for a specific record before making the decision.",
+      "targetTerms": [
+        "rental"
+      ]
+    },
+    {
+      "id": "S01.H02.P03",
+      "function": "State a limit in the evidence",
+      "cue": "The heating figure is only an estimate. Explain why the decision is still open.",
+      "acceptableAnswers": [
+        "The heating cost is an estimate, so we still need the final figures."
+      ],
+      "feedback": "Do not turn an estimate into a confirmed bill.",
+      "targetTerms": [
+        "household"
+      ]
+    }
+  ],
+  "transferPrompt": {
+    "id": "S01.H02.T01",
+    "function": "Budget for a different journey",
+    "cue": "A student finds a cheaper room far from campus. Suggest what to check before signing.",
+    "acceptableAnswers": [
+      "I would add the travel cost to the rent and ask for the full amount in writing."
+    ],
+    "feedback": "Transfer the budget action rather than repeating the story.",
+    "targetTerms": [
+      "rental",
+      "household"
+    ]
+  }
+}

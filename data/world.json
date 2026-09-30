@@ -1,0 +1,154 @@
+{
+  "sceneId": "WORLD",
+  "title": "IELTS Semantic World",
+  "version": "pilot-7-0",
+  "dictionaryFile": "./data/wordnet-s01.json",
+  "dictionaryContextFile": "./data/s01-dictionary-context.json",
+  "dictionaryTranslationFile": "./data/wordnet-translations-s01.json",
+  "sourceBasis": "The three original IELTS vocabulary files and Master Lexicon V1.2 remain separate from this prototype. SRC/BRG terms trace back to source-derived records; EXP/COL terms cite external evidence; scene narratives, prompts, and word-by-word contextual Chinese glosses are researcher inference. WordNet 3.0 dictionary senses/examples are an independent licensed external evidence layer, while scene sense matching and contrast examples are researcher inference.",
+  "sceneFiles": [
+    "./data/s01-m01.json",
+    "./data/s01-m02.json",
+    "./data/s01-m03.json",
+    "./data/s01-m04.json",
+    "./data/s01-m05.json",
+    "./data/s01-m06.json",
+    "./data/s01-m07.json",
+    "./data/s01-m08.json",
+    "./data/s01-m09.json",
+    "./data/s01-h01.json",
+    "./data/s01-h02.json",
+    "./data/s02-t01.json",
+    "./data/s02-t02.json",
+    "./data/s04-w01.json",
+    "./data/s04-w02.json",
+    "./data/s15-w01.json",
+    "./data/s15-w02.json"
+  ],
+  "textTranslationFile": "./data/s01-text-translations.json",
+  "dictionaryChineseFile": "./data/wordnet-zh-s01.json",
+  "branches": [
+    {
+      "id": "housing",
+      "title": "找房到安顿",
+      "subtitle": "Housing & Commuting",
+      "theme": "home",
+      "kind": "主线",
+      "description": "从第一次筛选到搬入后的通勤，用英语完成真实的住房决定。",
+      "entry": "一张找房清单",
+      "returnLabel": "回到生活里的下一次决定",
+      "route": [
+        "找房清单",
+        "看房钥匙",
+        "合同桌",
+        "搬家箱",
+        "通勤路线"
+      ],
+      "sceneIds": [
+        "S01.M01",
+        "S01.M02",
+        "S01.M03",
+        "S01.M04",
+        "S01.M05",
+        "S01.M06",
+        "S01.M07",
+        "S01.M08",
+        "S01.M09"
+      ]
+    },
+    {
+      "id": "blue-bill",
+      "title": "蓝色账单",
+      "subtitle": "A room that felt like home",
+      "theme": "home",
+      "kind": "S01 住房支线",
+      "description": "照片里的完美房间，真的适合日常生活吗？看过两扇门，再算一张账单。",
+      "entry": "S01 费用与合同 · 蓝色账单",
+      "entrySceneId": "S01.M05",
+      "returnLabel": "回到费用与合同",
+      "route": [
+        "房间照片",
+        "相邻门口",
+        "毯子与盆栽",
+        "家庭预算卡",
+        "未签的租约"
+      ],
+      "sceneIds": [
+        "S01.H01",
+        "S01.H02"
+      ]
+    },
+    {
+      "id": "notice",
+      "title": "改动的通知",
+      "subtitle": "The notice that arrived in time",
+      "theme": "community",
+      "kind": "S02 社区支线",
+      "description": "房间暂时关闭。把新地点和日期传到真正需要它们的人手里。",
+      "entry": "社区中心 · 时刻表绿色标签",
+      "returnLabel": "回到同一张时刻表",
+      "route": [
+        "卷边公告",
+        "周二日历",
+        "借来的钥匙",
+        "三支路线箭头",
+        "公告旁的钟"
+      ],
+      "sceneIds": [
+        "S02.T01",
+        "S02.T02"
+      ]
+    },
+    {
+      "id": "water-lab",
+      "title": "异常水样",
+      "subtitle": "The sample with a missing label",
+      "theme": "science",
+      "kind": "S04 研究支线",
+      "description": "一个红点还不能说明原因。带上样本、校准记录和谨慎的结论，返回数据桌。",
+      "entry": "研究楼 · 数据桌上的红点",
+      "returnLabel": "回到数据桌，更新结论",
+      "route": [
+        "取样标签",
+        "仪器检查板",
+        "透明烧瓶",
+        "双栏结果表",
+        "数据库归档号"
+      ],
+      "sceneIds": [
+        "S04.W01",
+        "S04.W02"
+      ]
+    },
+    {
+      "id": "tidal-hide",
+      "title": "潮汐与鸟",
+      "subtitle": "Beyond the shell-shaped handle",
+      "theme": "nature",
+      "kind": "S15 湿地支线",
+      "description": "昨天的鸟在哪里？沿着水线与脚印，分清一次观察和长期变化。",
+      "entry": "湿地 · 观鸟屋贝壳门把手",
+      "returnLabel": "回到同一个贝壳门把手",
+      "route": [
+        "潮汐刻度盘",
+        "海湾栏杆",
+        "会动的贝壳",
+        "繁殖区绳索",
+        "迁徙地图"
+      ],
+      "sceneIds": [
+        "S15.W01",
+        "S15.W02"
+      ]
+    }
+  ],
+  "textTranslationFiles": [
+    "./data/s01-text-translations.json",
+    "./data/branch-text-translations.json"
+  ],
+  "dictionaryContextFiles": [
+    "./data/s01-dictionary-context.json",
+    "./data/branch-dictionary-context.json"
+  ],
+  "uiWordsFile": "./data/world-ui-words.json"
+}
