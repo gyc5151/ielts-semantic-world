@@ -149,12 +149,14 @@
   },
   "v:00529759": {
     "examples": {
-      "Water leaked out of the can into the backpack": "水从罐子里漏出来，流进了背包。"
+      "Water leaked out of the can into the backpack": "水从罐子里漏出来，流进了背包。",
+      "Gas leaked into the basement": "气体泄漏进入地下室。"
     }
   },
   "v:00258109": {
     "examples": {
-      "The container leaked gasoline": "容器漏出了汽油。"
+      "The container leaked gasoline": "容器漏出了汽油。",
+      "the roof leaks badly": "屋顶漏得很厉害。"
     }
   },
   "v:02460199": {
@@ -268,6 +270,11 @@
   "v:00590924": {
     "examples": {
       "I cannot digest all this information": "我无法理解并吸收所有这些信息。"
+    }
+  },
+  "n:13827426": {
+    "examples": {
+      "he checked the direction and velocity of the wind": "他查看了风向和风速。"
     }
   }
 }

@@ -1,7 +1,7 @@
-import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-13-0";
-import { nextReview, reviewDue } from "./learning.mjs?v=pilot-13-0";
-import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-13-0";
-import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-13-0";
+import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-14-0";
+import { nextReview, reviewDue } from "./learning.mjs?v=pilot-14-0";
+import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-14-0";
+import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-14-0";
 const DATA_URL = "./data/world.json";
 const STORAGE_KEY = "ielts-semantic-world-s01-trial-v1";
 
@@ -904,7 +904,12 @@ try {
   for (const path of content.dictionaryContextFiles || [content.dictionaryContextFile || "./data/s01-dictionary-context.json"]) {
     try {
       const contextResponse = await fetch(path, { cache: "no-store" });
-      if (contextResponse.ok) Object.assign(dictionaryContext, await contextResponse.json());
+      if (contextResponse.ok) {
+        const scopes = await contextResponse.json();
+        for (const [scope, entries] of Object.entries(scopes)) {
+          dictionaryContext[scope] = { ...dictionaryContext[scope], ...entries };
+        }
+      }
     } catch (_) { /* Unmatched senses retain an explicit caveat. */ }
   }
   for (const path of content.textTranslationFiles || [content.textTranslationFile || "./data/s01-text-translations.json"]) {
@@ -946,7 +951,14 @@ async function ensureDictionary() {
   if (!wordnet) dictionaryLoading = null;
 }
 
-function unitsForScene(scene) { return learningUnits.filter((u) => u.sceneIds.includes(scene.id)).map((u) => ({ ...u, tier: u.sceneTiers?.[scene.id] || u.tier })); }
+function unitsForScene(scene) {
+  return learningUnits.filter((u) => u.sceneIds.includes(scene.id)).map((u) => ({
+    ...u,
+    tier: u.sceneTiers?.[scene.id] || u.tier,
+    example: u.sceneExamples?.[scene.id] || u.example,
+    exampleZh: u.sceneExampleZhs?.[scene.id] || u.exampleZh,
+  }));
+}
 function promptCue(scene, prompt) {
   const hasTarget = (text) => (prompt.targetTerms || []).some((term) => {
     const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -958,13 +970,18 @@ function promptCue(scene, prompt) {
 }
 function unitSourceHtml(unit) {
   if (!unit.sourceRecords.length) return "<p>项目依据本课沟通行为整理的构式。</p>";
-  return unit.sourceRecords.map((r) => `<p>${escapeHtml(r.kind)} · ${escapeHtml(r.sourceRef)}</p>${r.sourceRecord ? `<p class="meta">原记录词性：${escapeHtml(r.sourceRecord.POS || "未提供")} · 原中文：${escapeHtml(r.sourceRecord.Chinese_Meaning || "未提供")}</p>` : ""}`).join("");
+  return unit.sourceRecords.map((r) => `<p>${escapeHtml(r.kind)} · ${escapeHtml(r.sourceRef)}</p>${r.sourceRecord ? `<p class="meta">原记录词性：${escapeHtml(r.sourceRecord.POS || "未提供")} · 原中文：${escapeHtml(r.sourceRecord.Chinese_Meaning || "未提供")}</p>` : ""}${r.auditNote ? `<p class="meta">用义与来源核对：${escapeHtml(r.auditNote)}</p>` : ""}`).join("");
+}
+function unitMemoryHtml(unit, scene) {
+  const ids = unit.sceneMemoryNodeIds?.[scene.id] || [];
+  const places = (scene.memoryNodes || []).filter((node) => ids.includes(node.id));
+  return places.length ? `<p class="meta">回想位置：${places.map((node) => escapeHtml(node.zh)).join("；")}</p>` : "";
 }
 function unitLearningHtml(scene) {
   const units = unitsForScene(scene);
   if (!units.length) return "";
   const names = { core: "本节主动练", support: "需要时借用", recognition: "先读懂即可" };
-  return `<section class="unit-learning"><h2>先选少量表达，完成一件事</h2>${Object.entries(names).map(([tier, label]) => `<details ${tier === "core" ? "open" : ""}><summary>${label} · ${units.filter((u) => u.tier === tier).length}</summary><div class="unit-cards">${units.filter((u) => u.tier === tier).map((u) => `<article><strong lang="en">${annotatedEnglish(u.form, scene, u.type === "word" ? u.example : null)}</strong><p>${escapeHtml(u.meaningZh)}</p><p class="meta">${escapeHtml(u.sense)}</p><p lang="en">${annotatedEnglish(u.example, scene)}</p>${textTranslation(u.exampleZh, "例句中文")}<small>项目编写的例句</small><details><summary>组成词依据</summary>${unitSourceHtml(u)}<small>表达组合与例句为项目编写；原词条不修改。</small></details></article>`).join("")}</div></details>`).join("")}<small>分层是本批编辑建议；读过、点击过均不计为掌握。</small></section>`;
+  return `<section class="unit-learning"><h2>先选少量表达，完成一件事</h2>${Object.entries(names).map(([tier, label]) => `<details ${tier === "core" ? "open" : ""}><summary>${label} · ${units.filter((u) => u.tier === tier).length}</summary><div class="unit-cards">${units.filter((u) => u.tier === tier).map((u) => `<article><strong lang="en">${annotatedEnglish(u.form, scene, u.type === "word" ? u.example : null)}</strong><p>${escapeHtml(u.meaningZh)}</p><p class="meta">${escapeHtml(u.sense)}</p><p lang="en">${annotatedEnglish(u.example, scene)}</p>${textTranslation(u.exampleZh, "例句中文")}${unitMemoryHtml(u, scene)}<small>项目编写的例句</small><details><summary>组成词依据</summary>${unitSourceHtml(u)}<small>表达组合与例句为项目编写；原词条不修改。</small></details></article>`).join("")}</div></details>`).join("")}<small>分层是本批编辑建议；读过、点击过均不计为掌握。</small></section>`;
 }
 function unitAssessmentHtml(prompt, attempt) {
   const units = (prompt.unitIds || []).map((id) => learningUnits.find((u) => u.id === id)).filter(Boolean);

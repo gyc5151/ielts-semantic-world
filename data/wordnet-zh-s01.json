@@ -4,11 +4,11 @@
     "engine": "OPUS-MT via Argos English–Chinese 1.9 / CTranslate2",
     "modelLicense": "CC-BY 4.0",
     "modelSource": "https://github.com/argosopentech/argospm-index",
-    "generatedAt": "2026-10-01",
+    "generatedAt": "2026-10-02",
     "uniqueSenses": 10218,
     "examplePlacements": 13351,
-    "projectDefinitionCount": 141,
-    "projectOriginalExampleCount": 63
+    "projectDefinitionCount": 144,
+    "projectOriginalExampleCount": 66
   },
   "senses": {
     "n:13658027": {
@@ -31985,12 +31985,12 @@
       }
     },
     "n:13827426": {
-      "definition": "某物与其指向或移动方向之间的空间关系",
-      "definitionStatus": "machine",
+      "definition": "某个事物与其所指或移动路线之间的空间关系。",
+      "definitionStatus": "project",
       "examples": {
         "he checked the direction and velocity of the wind": {
-          "text": "他检查了风的方向和速度",
-          "status": "machine"
+          "text": "他查看了风向和风速。",
+          "status": "project"
         }
       }
     },
@@ -58105,16 +58105,16 @@
       }
     },
     "v:00529759": {
-      "definition": "进入或逃脱,如穿过一个洞或裂缝或裂缝",
-      "definitionStatus": "machine",
+      "definition": "像从孔洞、裂缝或裂隙中那样进入或逸出。",
+      "definitionStatus": "project",
       "examples": {
         "Water leaked out of the can into the backpack": {
           "text": "水从罐子里漏出来，流进了背包。",
           "status": "project"
         },
         "Gas leaked into the basement": {
-          "text": "气体漏进地下室",
-          "status": "machine"
+          "text": "气体泄漏进入地下室。",
+          "status": "project"
         }
       }
     },
@@ -58127,8 +58127,8 @@
           "status": "project"
         },
         "the roof leaks badly": {
-          "text": "屋顶漏水很严重",
-          "status": "machine"
+          "text": "屋顶漏得很厉害。",
+          "status": "project"
         }
       }
     },
@@ -74168,8 +74168,8 @@
       "examples": {}
     },
     "n:01120448": {
-      "definition": "支付金钱的行为",
-      "definitionStatus": "machine",
+      "definition": "付钱的行为。",
+      "definitionStatus": "project",
       "examples": {}
     },
     "n:01235137": {

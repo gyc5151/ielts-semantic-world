@@ -86,6 +86,66 @@
       "zh": "水管工；管道维修人员",
       "note": "可处理水管、水龙头等给排水设备问题。",
       "sourceTerm": "plumber"
+    },
+    {
+      "id": "S01.M08.UG01",
+      "text": "leak",
+      "type": "word",
+      "zh": "液体从不该流出的地方漏出",
+      "note": "本课动词；is leaking表示正在漏水，名词a leak另可描述漏水处或事件。",
+      "sourceTerm": "leak"
+    },
+    {
+      "id": "S01.M08.UG02",
+      "text": "damage",
+      "type": "word",
+      "zh": "损坏",
+      "note": "采用来源动词义。may damage表达可能后果；故事未确认木柜已经损坏。",
+      "sourceTerm": "damage"
+    },
+    {
+      "id": "S01.M08.UG03",
+      "text": "report",
+      "type": "word",
+      "zh": "向有关人员告知问题",
+      "note": "本课动词，用I would like to report说明报告具体故障，不用研究报告名词义。",
+      "sourceTerm": "report"
+    },
+    {
+      "id": "S01.M08.UG04",
+      "text": "appointment",
+      "type": "word",
+      "zh": "约定的会面时间",
+      "note": "沿用M02预约单位；本课为维修上门，来源原记录没有英文上下文。",
+      "sourceTerm": "appointment"
+    },
+    {
+      "id": "S01.M08.UG05",
+      "text": "confirm",
+      "type": "word",
+      "zh": "确认安排或信息",
+      "note": "沿用M02确认动词单位；本课要求对方给出清楚时间，不能把自己提出的时间说成已确认。",
+      "sourceTerm": "confirm"
+    },
+    {
+      "id": "S01.M08.UG06",
+      "text": "I cannot … on … Could we … on …?",
+      "type": "construction",
+      "zh": "说明时间冲突并提议另一时间",
+      "note": "先说明不可行时间，再给具体替代；could we后接动词原形，日期前常用on。",
+      "matchTexts": [
+        "I cannot be home on Tuesday. Could we arrange the visit on Thursday?"
+      ]
+    },
+    {
+      "id": "S01.M08.UG07",
+      "text": "I will … to check whether …",
+      "type": "construction",
+      "zh": "通过具体观察核实问题是否解决",
+      "note": "to check whether说明观察目的；核验原故障处，不仅因为换过部件就宣称修好。",
+      "matchTexts": [
+        "I will look below the sink to check whether it is still leaking."
+      ]
     }
   ],
   "terms": [
@@ -166,7 +226,22 @@
         "I need to report a fault: the kitchen tap is leaking, and the water may damage the cupboard.",
         "Water is coming from the tap and could damage the cupboard below. Could you look into it?"
       ],
-      "feedback": "Name the place and the visible fault, then distinguish a possible consequence from damage you have already seen."
+      "feedback": "Name the place and the visible fault, then distinguish a possible consequence from damage you have already seen.",
+      "unitIds": [
+        "U.HOUSING.M08.TAP",
+        "U.HOUSING.M08.LEAK",
+        "U.HOUSING.M08.REPORT",
+        "U.HOUSING.M08.DAMAGE"
+      ],
+      "cueZh": "厨房水槽下面有水，正接近木柜。告诉业主发生了什么，以及为什么需要处理。",
+      "checks": [
+        "说具体位置与正在漏水。",
+        "潜在木柜损坏用可能。",
+        "不声称已见到损坏。"
+      ],
+      "feedbackZh": "把可见故障与可能后果分开。",
+      "taskMode": "recall",
+      "unitVersion": "pilot-14-0"
     },
     {
       "id": "S01.M08.P02",
@@ -180,7 +255,19 @@
         "Could you arrange a repair and ask a plumber to look at the kitchen tap?",
         "Could a plumber come to fix the leaking tap?"
       ],
-      "feedback": "A useful request names the person or action needed and the item that is faulty."
+      "feedback": "A useful request names the person or action needed and the item that is faulty.",
+      "unitIds": [
+        "U.HOUSING.ARRANGE_REPAIR",
+        "U.HOUSING.M08.PLUMBER"
+      ],
+      "cueZh": "问题需要修理水管的人处理。请业主安排，并说明要检查什么。",
+      "checks": [
+        "说明人员或维修动作。",
+        "指出厨房水龙头。"
+      ],
+      "feedbackZh": "请求应落到具体对象与动作。",
+      "taskMode": "recall",
+      "unitVersion": "pilot-14-0"
     },
     {
       "id": "S01.M08.P03",
@@ -194,7 +281,21 @@
         "I cannot be home on Tuesday afternoon. Could we move the appointment to Thursday morning and confirm the time?",
         "Thursday morning would work for me. Could you confirm when the worker will come?"
       ],
-      "feedback": "Explain the conflict, propose a specific alternative, and ask the other person to confirm it."
+      "feedback": "Explain the conflict, propose a specific alternative, and ask the other person to confirm it.",
+      "unitIds": [
+        "U.ARRANGEMENT.APPOINTMENT.N",
+        "U.CLARIFICATION.CONFIRM.V",
+        "U.HOUSING.M08.RESCHEDULE"
+      ],
+      "cueZh": "对方提出周二下午来，但你那时上班。改提周四上午，并请求明确答复。",
+      "checks": [
+        "说明原时段冲突。",
+        "给出具体新时段。",
+        "请求确认，不当成已商定。"
+      ],
+      "feedbackZh": "先解释冲突，再提出可行时间并等待确认。",
+      "taskMode": "recall",
+      "unitVersion": "pilot-14-0"
     },
     {
       "id": "S01.M08.P04",
@@ -208,7 +309,19 @@
         "I will run the tap for a minute and check whether it is still leaking below the sink.",
         "I will turn on the tap and look underneath to make sure the leak has stopped."
       ],
-      "feedback": "Check the same place where the original problem occurred; the result matters more than assuming a new part solved it."
+      "feedback": "Check the same place where the original problem occurred; the result matters more than assuming a new part solved it.",
+      "unitIds": [
+        "U.HOUSING.M08.LEAK",
+        "U.HOUSING.M08.CHECK"
+      ],
+      "cueZh": "工人换了一个磨损部件。说明你怎样核实水槽下面还会不会出水。",
+      "checks": [
+        "检查原漏水位置。",
+        "观察实际结果。"
+      ],
+      "feedbackZh": "回到原故障处核验，而不是仅凭换件就推断修好。",
+      "taskMode": "recall",
+      "unitVersion": "pilot-14-0"
     }
   ],
   "transferPrompt": {
@@ -225,6 +338,37 @@
       "I would like to report that the heater is not working. Could you arrange a repair? I am home on Friday morning; please confirm the appointment.",
       "The heater stays cold even when I turn it on. Could someone check it on Friday morning and confirm the time?"
     ],
-    "feedback": "The fault and room have changed. Keep the actions: describe what happened, ask for a remedy, and agree a time you can actually be there."
-  }
+    "feedback": "The fault and room have changed. Keep the actions: describe what happened, ask for a remedy, and agree a time you can actually be there.",
+    "unitIds": [
+      "U.HOUSING.M08.REPORT",
+      "U.HOUSING.ARRANGE_REPAIR",
+      "U.ARRANGEMENT.APPOINTMENT.N",
+      "U.CLARIFICATION.CONFIRM.V",
+      "U.HOUSING.M08.RESCHEDULE"
+    ],
+    "cueZh": "另一间学生房的暖气在冬夜仍冷。你周三不在，周五上午在家。报告情况、请求帮助，并商定上门时间。",
+    "checks": [
+      "故障改为暖气。",
+      "使用周五上午。",
+      "请求确认时间。"
+    ],
+    "feedbackZh": "迁移报告、请求和协调时间；不照搬漏水部件。",
+    "taskMode": "transfer",
+    "unitVersion": "pilot-14-0"
+  },
+  "easySummary": "Water is leaking below the kitchen sink. Lin tells the landlord about the fault and asks for a repair. Tuesday does not work for her, so she asks to confirm Thursday morning. After the work, she checks the same place again.",
+  "easySummaryZh": "厨房水槽下漏水。林告诉房东故障并请求维修。周二她不在家，所以请对方确认周四上午。维修后，她再次检查原处。",
+  "learningUnitIds": [
+    "U.HOUSING.M08.TAP",
+    "U.HOUSING.M08.LEAK",
+    "U.HOUSING.M08.DAMAGE",
+    "U.HOUSING.M08.REPORT",
+    "U.HOUSING.M08.FAULT",
+    "U.HOUSING.ARRANGE_REPAIR",
+    "U.HOUSING.M08.PLUMBER",
+    "U.ARRANGEMENT.APPOINTMENT.N",
+    "U.CLARIFICATION.CONFIRM.V",
+    "U.HOUSING.M08.RESCHEDULE",
+    "U.HOUSING.M08.CHECK"
+  ]
 }

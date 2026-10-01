@@ -92,6 +92,16 @@
       "zh": "房东",
       "note": "名词，指出租房屋的业主；女房东也可称 landlady。",
       "sourceTerm": "landlord"
+    },
+    {
+      "id": "S01.M03.UG01",
+      "text": "… is …, but …",
+      "type": "construction",
+      "zh": "说明优点，同时提出问题",
+      "note": "but连接相反的观察或评价；第二部分应说明可见问题，不能只堆多个形容词。",
+      "matchTexts": [
+        "The flat is furnished, but the kitchen window does not open."
+      ]
     }
   ],
   "terms": [
@@ -155,7 +165,19 @@
         "Could I arrange a viewing of the flat on Saturday?",
         "Could the estate agent show me the flat on Saturday?"
       ],
-      "feedback": "A viewing is the visit to inspect a property. A clear request gives both the purpose and a possible time."
+      "feedback": "A viewing is the visit to inspect a property. A clear request gives both the purpose and a possible time.",
+      "unitIds": [
+        "U.HOUSING.M03.VIEWING",
+        "U.HOUSING.ESTATE_AGENT.N"
+      ],
+      "cueZh": "你想让中介带你实地看看一套房，提出周六去的请求。",
+      "checks": [
+        "说明想看哪套房。",
+        "给出周六这个时间。"
+      ],
+      "feedbackZh": "说清参观目的和可能的日期即可；不需要背诵唯一句子。",
+      "taskMode": "recall",
+      "unitVersion": "pilot-14-0"
     },
     {
       "id": "S01.M03.P02",
@@ -170,7 +192,22 @@
         "The flat is furnished and cosy, but I am worried about poor ventilation in the kitchen.",
         "It is a cosy, furnished flat, but the kitchen window does not open."
       ],
-      "feedback": "Connect the first impression to the specific problem. The stuck window and damp smell raise a concern about ventilation; they do not prove that every room has poor ventilation."
+      "feedback": "Connect the first impression to the specific problem. The stuck window and damp smell raise a concern about ventilation; they do not prove that every room has poor ventilation.",
+      "unitIds": [
+        "U.HOUSING.M03.FURNISHED",
+        "U.HOUSING.M03.COSY",
+        "U.HOUSING.M03.VENTILATION",
+        "U.HOUSING.M03.CONTRAST"
+      ],
+      "cueZh": "房里已有沙发和桌子，感觉舒服；厨房窗户打不开。用一句话同时说明好处与问题。",
+      "checks": [
+        "家具状态与舒适感可以分开描述。",
+        "说明打不开的是厨房窗户。",
+        "通风担忧不扩大成已经确定的整屋问题。"
+      ],
+      "feedbackZh": "把优点与具体缺点连起来。也可以用简单的“有家具”“窗户打不开”完成意图。",
+      "taskMode": "recall",
+      "unitVersion": "pilot-14-0"
     },
     {
       "id": "S01.M03.P03",
@@ -183,7 +220,18 @@
         "Does the central heating work?",
         "Could I check whether the central heating works?"
       ],
-      "feedback": "Name the facility and ask about its condition. A short, direct question is enough."
+      "feedback": "Name the facility and ask about its condition. A short, direct question is enough.",
+      "unitIds": [
+        "U.HOUSING.M03.HEATING"
+      ],
+      "cueZh": "决定之前，你要核实房里的供暖能否正常工作。直接问中介。",
+      "checks": [
+        "指出要检查的设施。",
+        "问是否正常工作，而不是只问有没有。"
+      ],
+      "feedbackZh": "简短直接的功能问题就足够。",
+      "taskMode": "recall",
+      "unitVersion": "pilot-14-0"
     },
     {
       "id": "S01.M03.P04",
@@ -196,7 +244,19 @@
         "Could the landlord arrange a repair before I decide?",
         "I would like the window repaired before I agree to rent the flat."
       ],
-      "feedback": "The landlord owns the property. State the fault and the action you need before making a decision."
+      "feedback": "The landlord owns the property. State the fault and the action you need before making a decision.",
+      "unitIds": [
+        "U.HOUSING.ARRANGE_REPAIR",
+        "U.HOUSING.M03.LANDLORD"
+      ],
+      "cueZh": "窗户卡住了。你想先知道业主是否会安排处理，再决定租不租。提出请求。",
+      "checks": [
+        "说明需要处理窗户。",
+        "说清决定前想得到什么答复。"
+      ],
+      "feedbackZh": "提出具体维修请求；不要把请求说成对方已经完成维修。",
+      "taskMode": "recall",
+      "unitVersion": "pilot-14-0"
     }
   ],
   "transferPrompt": {
@@ -211,6 +271,34 @@
       "The room is not furnished, and the heater makes a noise. Could the landlord arrange a repair before I decide?",
       "There is no furniture in the room, and the heating seems noisy. Could you have it checked before I agree to rent it?"
     ],
-    "feedback": "The room and fault have changed. Keep the useful functions: describe the condition, identify the problem, and request an action. You do not need to repeat the original sentence."
-  }
+    "feedback": "The room and fault have changed. Keep the useful functions: describe the condition, identify the problem, and request an action. You do not need to repeat the original sentence.",
+    "unitIds": [
+      "U.HOUSING.M03.FURNISHED",
+      "U.HOUSING.ARRANGE_REPAIR",
+      "U.HOUSING.M03.CONTRAST",
+      "U.HOUSING.M03.LANDLORD"
+    ],
+    "cueZh": "另一个校园房间没有家具，暖气还有异响。不要重看林的故事：描述房间，并问决定前能否安排处理。",
+    "checks": [
+      "使用新房间的无家具状态。",
+      "故障换成暖气异响。",
+      "提出检查或维修请求。"
+    ],
+    "feedbackZh": "迁移的是描述状态和请求处理的功能，不是原场景中的家具和窗户。",
+    "taskMode": "transfer",
+    "unitVersion": "pilot-14-0"
+  },
+  "easySummary": "Lin visits a flat with an agent. It has furniture and feels cosy, but the kitchen window will not open. She checks the heating and asks about a repair before deciding.",
+  "easySummaryZh": "林跟中介看房。房里有家具，也很温馨，但厨房窗户打不开。她检查供暖，并在决定前询问维修。",
+  "learningUnitIds": [
+    "U.HOUSING.M03.VIEWING",
+    "U.HOUSING.ESTATE_AGENT.N",
+    "U.HOUSING.M03.FURNISHED",
+    "U.HOUSING.M03.COSY",
+    "U.HOUSING.M03.VENTILATION",
+    "U.HOUSING.M03.HEATING",
+    "U.HOUSING.M03.LANDLORD",
+    "U.HOUSING.ARRANGE_REPAIR",
+    "U.HOUSING.M03.CONTRAST"
+  ]
 }

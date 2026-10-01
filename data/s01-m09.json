@@ -78,6 +78,75 @@
       "zh": "使晚点；耽误",
       "note": "这里是动词 delay 的过去式，高峰交通让公交更慢。",
       "sourceTerm": "delay"
+    },
+    {
+      "id": "S01.M09.UG01",
+      "text": "route",
+      "type": "word",
+      "zh": "从一处到另一处的路径",
+      "note": "采用来源名词路线义；direct route指直接走法，不保证永远畅通。",
+      "sourceTerm": "route"
+    },
+    {
+      "id": "S01.M09.UG02",
+      "text": "direction",
+      "type": "word",
+      "zh": "移动的方向",
+      "note": "原R00616是course of movement方向义。复数directions作路线指示是外部延伸，不能归作来源原定义。",
+      "sourceTerm": "direction"
+    },
+    {
+      "id": "S01.M09.UG03",
+      "text": "Could you give me directions to …?",
+      "type": "construction",
+      "zh": "请求到某处的走法说明",
+      "note": "复数directions在这里指路线指示，与原记录方向名词相关但不相同；to后接目的地。",
+      "sourceTerm": "direction",
+      "matchTexts": [
+        "Could you give me directions to the office by another route?"
+      ]
+    },
+    {
+      "id": "S01.M09.UG04",
+      "text": "timetable",
+      "type": "word",
+      "zh": "列出计划事件时间的表",
+      "note": "本来源为一般时间表；本课公交应用是项目桥接，计划表不等同实际到达。",
+      "sourceTerm": "timetable"
+    },
+    {
+      "id": "S01.M09.UG05",
+      "text": "delay",
+      "type": "word",
+      "zh": "使事情晚于计划发生",
+      "note": "本课及物动词；traffic delayed the bus，或the bus was delayed。不是延长所有路程的固有性质。",
+      "sourceTerm": "delay"
+    },
+    {
+      "id": "S01.M09.UG06",
+      "text": "cycle",
+      "type": "word",
+      "zh": "骑自行车",
+      "note": "明确登记R00005动词义；不把R00757循环名词义并入。",
+      "sourceTerm": "cycle"
+    },
+    {
+      "id": "S01.M09.UG07",
+      "text": "reliable",
+      "type": "word",
+      "zh": "结果可以依靠、便于计划的",
+      "note": "本课形容旅程用时较稳定。几次观察支持人物选择，不是长期统计或永久保证。",
+      "sourceTerm": "reliable"
+    },
+    {
+      "id": "S01.M09.UG08",
+      "text": "I would choose … because …",
+      "type": "construction",
+      "zh": "选择一种做法并说明原因",
+      "note": "沿用餐厅选择构式，选择对象从菜品换成路线；相同选择与理由功能不另登记一次。",
+      "matchTexts": [
+        "I would choose the walking route because the arrival time is more reliable."
+      ]
     }
   ],
   "terms": [
@@ -152,7 +221,20 @@
         "Could you give me directions to the office by another route?",
         "Is there another route to the office? The street on my map is closed."
       ],
-      "feedback": "Say where you need to go and explain why the usual path cannot be used."
+      "feedback": "Say where you need to go and explain why the usual path cannot be used.",
+      "unitIds": [
+        "U.HOUSING.M09.ROUTE",
+        "U.HOUSING.M09.DIRECTIONS"
+      ],
+      "cueZh": "地图上的街道因施工封闭。问附近店员怎样换一条路到办公室。",
+      "checks": [
+        "给出目的地。",
+        "说明原路不能走。",
+        "请求可用走法。"
+      ],
+      "feedbackZh": "目的地和阻断原因都说清楚。",
+      "taskMode": "recall",
+      "unitVersion": "pilot-14-0"
     },
     {
       "id": "S01.M09.P02",
@@ -167,7 +249,20 @@
         "The bus timetable showed an early arrival, but rush hour traffic delayed the bus.",
         "It was due earlier, but the bus was delayed in rush hour, so the journey took longer."
       ],
-      "feedback": "Separate the planned time from the observed delay and name the cause if you know it."
+      "feedback": "Separate the planned time from the observed delay and name the cause if you know it.",
+      "unitIds": [
+        "U.HOUSING.M09.TIMETABLE",
+        "U.HOUSING.RUSH_HOUR",
+        "U.HOUSING.M09.DELAY"
+      ],
+      "cueZh": "时刻表显示车辆会较早到达，但早上车多，实际晚了。说明计划与实际不同的原因。",
+      "checks": [
+        "计划时间与实际时间分开。",
+        "说明已知车流原因。"
+      ],
+      "feedbackZh": "可以用主动或被动表达延误，不把时刻表当成已经发生的结果。",
+      "taskMode": "recall",
+      "unitVersion": "pilot-14-0"
     },
     {
       "id": "S01.M09.P03",
@@ -182,7 +277,21 @@
         "On foot it took eighteen minutes and cost nothing; when she cycled, it took fourteen minutes.",
         "Cycling was quickest, while the bus took thirty minutes and also cost a fare."
       ],
-      "feedback": "Use actual times and cost rather than treating the shortest distance as the whole answer."
+      "feedback": "Use actual times and cost rather than treating the shortest distance as the whole answer.",
+      "unitIds": [
+        "U.HOUSING.M09.CYCLE",
+        "U.HOUSING.M09.FOOT",
+        "U.TRAVEL.FARE.N"
+      ],
+      "cueZh": "步行、骑车、付车费坐公交三种选择中，比较两种，使用林实际测得的用时。",
+      "checks": [
+        "步行18分钟，骑车14分钟，公交30分钟。",
+        "只用实际观察信息。",
+        "需要时比较车费。"
+      ],
+      "feedbackZh": "最短距离不能替代实际时间、费用与适用条件。",
+      "taskMode": "recall",
+      "unitVersion": "pilot-14-0"
     },
     {
       "id": "S01.M09.P04",
@@ -196,7 +305,20 @@
         "I will usually take the walking route because it is more reliable than the bus.",
         "I would walk on most days; it is a reliable journey even if cycling can be faster."
       ],
-      "feedback": "A reliable option is one you can plan around. Your choice can change with darkness or bad weather."
+      "feedback": "A reliable option is one you can plan around. Your choice can change with darkness or bad weather.",
+      "unitIds": [
+        "U.HOUSING.M09.RELIABLE",
+        "U.HOUSING.M09.ROUTE",
+        "U.KITCHEN_TABLE.K01.CHOOSE_BECAUSE"
+      ],
+      "cueZh": "步行用时通常差不多，车辆常晚到。说明你平常会选哪种方式，为什么。",
+      "checks": [
+        "理由是用时可计划。",
+        "允许天气或天黑改变选择。"
+      ],
+      "feedbackZh": "可靠是可以据以计划，不等于任何条件下永远最快。",
+      "taskMode": "recall",
+      "unitVersion": "pilot-14-0"
     }
   ],
   "transferPrompt": {
@@ -214,6 +336,37 @@
       "I would check the train timetable and any delay, but I would go on foot if that route gives me a more reliable arrival time.",
       "For an important class, I would choose the walking route because it reliably takes twenty-five minutes; I would check the train timetable only as a backup."
     ],
-    "feedback": "The destination and time of day changed. Compare planned and actual reliability, then choose a route that fits the new commitment."
-  }
+    "feedback": "The destination and time of day changed. Compare planned and actual reliability, then choose a route that fits the new commitment.",
+    "unitIds": [
+      "U.HOUSING.M09.ROUTE",
+      "U.HOUSING.M09.TIMETABLE",
+      "U.HOUSING.M09.DELAY",
+      "U.HOUSING.M09.RELIABLE",
+      "U.KITCHEN_TABLE.K01.CHOOSE_BECAUSE"
+    ],
+    "cueZh": "学生要去晚课。换乘一次的火车准点时很快，但到达时间波动；步行每次25分钟。说明你要核实什么，以及重要课程那天会选什么。",
+    "checks": [
+      "目的地改为晚课。",
+      "使用25分钟的新事实。",
+      "区分计划时间与实际稳定性。"
+    ],
+    "feedbackZh": "根据新承诺选路线，而不是机械套用林的早班选择。",
+    "taskMode": "transfer",
+    "unitVersion": "pilot-14-0"
+  },
+  "easySummary": "Lin tries walking, taking a bus and cycling on different mornings. A closed road changes her walk, and traffic delays the bus. She records the actual times and chooses walking on most days, keeping weather and darkness in mind.",
+  "easySummaryZh": "林在不同早晨试了步行、公交和骑车。封路改变了步行路线，交通延误了公交。她记录实际用时，多数日子选择步行，同时考虑天气和天黑。",
+  "learningUnitIds": [
+    "U.HOUSING.M09.ROUTE",
+    "U.HOUSING.M09.DIRECTION",
+    "U.HOUSING.M09.DIRECTIONS",
+    "U.HOUSING.M09.FOOT",
+    "U.HOUSING.M09.TIMETABLE",
+    "U.HOUSING.RUSH_HOUR",
+    "U.HOUSING.M09.DELAY",
+    "U.TRAVEL.FARE.N",
+    "U.HOUSING.M09.CYCLE",
+    "U.HOUSING.M09.RELIABLE",
+    "U.KITCHEN_TABLE.K01.CHOOSE_BECAUSE"
+  ]
 }

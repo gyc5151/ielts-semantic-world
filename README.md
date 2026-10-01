@@ -4,7 +4,7 @@ Situation → Language: learn English through decisions, objects and events.
 
 **[Open the learning website](https://gyc5151.github.io/ielts-semantic-world/)**
 
-## Current version: pilot-13-0
+## Current version: pilot-14-0
 
 13 routes, 51 short bilingual scenes, 213 retrieval/transfer tasks:
 
@@ -24,7 +24,7 @@ Situation → Language: learn English through decisions, objects and events.
 | A recipe on the kitchen table | Four food scenes about a menu, preparation, equipment and the table | Recipe paper and kitchen counter |
 | The notes at the clinic | 7 health-language scenes about checking in, describing symptoms, asking about services and checking records | Arrival card and records tray |
 
-Every route uses clickable English words and expression blocks, optional Chinese support, contextual usage, multiple WordNet senses and original examples, independent recall and spaced review. S01 main lessons and branch scenes have expandable object cues. 30 lessons have 228 editorial word-sense/chunk/construction units with self-checked observations, sentence listening and session-only recording. Each of these lessons has at most five Core targets; Support and Recognition expressions remain available for understanding. Search and route filters are available in expression records. Using cues before answering is recorded as assisted practice.
+Every route uses clickable English words and expression blocks, optional Chinese support, contextual usage, multiple WordNet senses and original examples, independent recall and spaced review. S01 main lessons and branch scenes have expandable object cues. 37 lessons have 282 editorial word-sense/chunk/construction units with self-checked observations, sentence listening and session-only recording. Each of these lessons has at most five Core targets; Support and Recognition expressions remain available for understanding. Search and route filters are available in expression records. Using cues before answering is recorded as assisted practice.
 
 Direct links:
 

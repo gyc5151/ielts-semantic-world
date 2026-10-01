@@ -100,6 +100,34 @@
       "zh": "租约",
       "note": "名词，指约定房屋租用条件与期限的协议；可说 sign a lease。",
       "sourceTerm": "lease"
+    },
+    {
+      "id": "S01.M05.UG01",
+      "text": "charge",
+      "type": "word",
+      "zh": "收取的费用",
+      "note": "本课名词；常用复数charges询问多项收费，不使用指控或充电动词义。",
+      "sourceTerm": "charge"
+    },
+    {
+      "id": "S01.M05.UG02",
+      "text": "Is … included in the price?",
+      "type": "construction",
+      "zh": "询问某项目是否已计入价格",
+      "note": "沿用旅社价格询问构式，把宾语换成水电账单；原旅社记录与房屋账单来源分开保留。",
+      "matchTexts": [
+        "Are utility bills included in the price?"
+      ]
+    },
+    {
+      "id": "S01.M05.UG03",
+      "text": "Could you put … in writing before …?",
+      "type": "construction",
+      "zh": "请求行动前把约定写下来",
+      "note": "put something in writing说明书面记录；before后给出后续行动。不是对文件法律性质的判断。",
+      "matchTexts": [
+        "Could you put the repair plan in writing before I sign?"
+      ]
     }
   ],
   "terms": [
@@ -163,7 +191,20 @@
         "Are utility bills included in the monthly rent?",
         "Does the rent include water and electricity bills?"
       ],
-      "feedback": "Ask about the full recurring cost, not only the advertised figure. Either a natural question with utility bills or a plain-English question is useful."
+      "feedback": "Ask about the full recurring cost, not only the advertised figure. Either a natural question with utility bills or a plain-English question is useful.",
+      "unitIds": [
+        "U.HOUSING.M05.BILLS",
+        "U.STATION_STAY.J03.INCLUDED",
+        "U.HOUSING.MONTHLY_RENT"
+      ],
+      "cueZh": "广告上的价格看起来负担得起，但你不知道水和电是否另收费。问中介。",
+      "checks": [
+        "问清水电是否包含。",
+        "指明所说的租金或总价格。"
+      ],
+      "feedbackZh": "核对完整持续支出，不只重复广告上的数字。",
+      "taskMode": "recall",
+      "unitVersion": "pilot-14-0"
     },
     {
       "id": "S01.M05.P02",
@@ -178,7 +219,20 @@
         "I would pay the rent and utility bills each month, and a deposit before moving in.",
         "The rent and bills are monthly costs; the deposit is paid before I move in."
       ],
-      "feedback": "Keep the time distinction clear. A deposit is an upfront amount; the agreement should explain the exact conditions attached to it."
+      "feedback": "Keep the time distinction clear. A deposit is an upfront amount; the agreement should explain the exact conditions attached to it.",
+      "unitIds": [
+        "U.HOUSING.MONTHLY_RENT",
+        "U.HOUSING.M05.BILLS",
+        "U.HOUSING.M05.DEPOSIT"
+      ],
+      "cueZh": "说明租房哪些钱每月付，哪一笔要在拿钥匙前交。",
+      "checks": [
+        "区分持续支出和入住前付款。",
+        "不把保证金说成每月费用。"
+      ],
+      "feedbackZh": "这里的时间区别比把所有费用名字堆进一句话更重要。",
+      "taskMode": "recall",
+      "unitVersion": "pilot-14-0"
     },
     {
       "id": "S01.M05.P03",
@@ -192,7 +246,19 @@
         "Are there any extra charges? When is the first payment due?",
         "What extra charges will I pay, and when do I make the first payment?"
       ],
-      "feedback": "Charges are additional amounts asked for. Ask for both the amount and the due date instead of guessing from the advert."
+      "feedback": "Charges are additional amounts asked for. Ask for both the amount and the due date instead of guessing from the advert.",
+      "unitIds": [
+        "U.HOUSING.M05.CHARGE",
+        "U.HOUSING.M05.PAYMENT"
+      ],
+      "cueZh": "广告价格下还有一项费用，首次付钱的时间也不明。提出两个短问题。",
+      "checks": [
+        "问额外金额或收费项。",
+        "问首次付款期限。"
+      ],
+      "feedbackZh": "不要根据广告自行猜测收费或到期日期。",
+      "taskMode": "recall",
+      "unitVersion": "pilot-14-0"
     },
     {
       "id": "S01.M05.P04",
@@ -206,7 +272,21 @@
         "Could you put the window repair in the contract before I sign?",
         "Could we add the window repair plan to the lease before I sign it?"
       ],
-      "feedback": "Identify the missing repair condition and request a written change. Contract is a general agreement word; lease is a more specific property agreement word."
+      "feedback": "Identify the missing repair condition and request a written change. Contract is a general agreement word; lease is a more specific property agreement word.",
+      "unitIds": [
+        "U.HOUSING.CONTRACT.N",
+        "U.HOUSING.M05.LEASE",
+        "U.HOUSING.M05.WRITING"
+      ],
+      "cueZh": "你问过修厨房窗户，但协议草稿没有提及。说清签署前你想补进的约定。",
+      "checks": [
+        "明确是修窗计划。",
+        "请求书面补充。",
+        "保持尚未签署的状态。"
+      ],
+      "feedbackZh": "可以用一般合同词，也可以识别更具体的租赁协议词；不要求两个都使用。",
+      "taskMode": "recall",
+      "unitVersion": "pilot-14-0"
     }
   ],
   "transferPrompt": {
@@ -225,6 +305,35 @@
       "Could you tell me the total monthly cost, including electricity? Please put the deposit and payment date in the contract before I sign.",
       "Does the monthly rent include the electricity bill? Could the deposit and first payment date be written into the lease?"
     ],
-    "feedback": "This is a new room with different costs. Ask for a complete monthly figure and one clear written term; exact wording may vary."
-  }
+    "feedback": "This is a new room with different costs. Ask for a complete monthly figure and one clear written term; exact wording may vary.",
+    "unitIds": [
+      "U.HOUSING.M05.BILLS",
+      "U.HOUSING.M05.DEPOSIT",
+      "U.HOUSING.M05.PAYMENT",
+      "U.HOUSING.CONTRACT.N",
+      "U.HOUSING.M05.WRITING"
+    ],
+    "cueZh": "另一间校园房按月收费，电费另付；拿钥匙前还要交一笔以后可能退还的钱。询问完整每月费用，并要求把一项付款时间写进协议。",
+    "checks": [
+      "费用以新校园房为准。",
+      "提出付款日期或保证金条件的具体问题。",
+      "要求写明，不能断言一定退还。"
+    ],
+    "feedbackZh": "完整费用和书面条件都要说清楚；这里不提供退款权利判断。",
+    "taskMode": "transfer",
+    "unitVersion": "pilot-14-0"
+  },
+  "easySummary": "Lin writes down costs paid every month and costs paid before moving in. Bills are extra and a deposit is due before she gets a key. The repair is missing from the draft contract, so she asks for it in writing and waits before signing.",
+  "easySummaryZh": "林分别写下每月支出和入住前支出。账单另付，拿钥匙前还要交保证金。合同草稿没有维修计划，她要求写下来，并暂缓签署。",
+  "learningUnitIds": [
+    "U.HOUSING.MONTHLY_RENT",
+    "U.HOUSING.M05.BILLS",
+    "U.HOUSING.M05.CHARGE",
+    "U.HOUSING.M05.DEPOSIT",
+    "U.HOUSING.M05.PAYMENT",
+    "U.HOUSING.CONTRACT.N",
+    "U.HOUSING.M05.LEASE",
+    "U.STATION_STAY.J03.INCLUDED",
+    "U.HOUSING.M05.WRITING"
+  ]
 }

@@ -70,6 +70,34 @@
       "zh": "替换件；替代品",
       "note": "a replacement screw 指用来补上缺失螺丝的另一颗螺丝。",
       "sourceTerm": "replacement"
+    },
+    {
+      "id": "S01.M07.UG01",
+      "text": "a replacement",
+      "type": "chunk",
+      "zh": "替换品；替换件",
+      "note": "与商店换袋子的单位相同一般物品替代义，沿用ID；本课替换缺少的螺丝。",
+      "sourceTerm": "replacement"
+    },
+    {
+      "id": "S01.M07.UG02",
+      "text": "First, … Then …",
+      "type": "construction",
+      "zh": "说明先后顺序",
+      "note": "先清出通道，再安放或组装；连词本身不保证任何次序都合理。",
+      "matchTexts": [
+        "First, clear the doorway. Then sort out the books."
+      ]
+    },
+    {
+      "id": "S01.M07.UG03",
+      "text": "One … is missing. Could you …?",
+      "type": "construction",
+      "zh": "报告缺件并提出具体请求",
+      "note": "is missing说明未找到某个部件；请求说明需要哪个部件，不说整件商品一定坏了。",
+      "matchTexts": [
+        "One screw is missing. Could you send a replacement?"
+      ]
     }
   ],
   "terms": [
@@ -130,57 +158,160 @@
     {
       "id": "S01.M07.P01",
       "function": "Tell a helper the order of packing and moving",
-      "targetTerms": ["pack", "stack up", "sort out"],
+      "targetTerms": [
+        "pack",
+        "stack up",
+        "sort out"
+      ],
       "cue": "You have two boxes of books, one of them heavy. The doorway must stay clear. Tell your friend what to do first and next.",
       "acceptableAnswers": [
         "First, pack the books in boxes. Then carry the heavy boxes upstairs and sort out the contents before they stack up by the door.",
         "Let's put the books into boxes, carry them inside, and clear the doorway before we arrange anything else."
       ],
-      "feedback": "Give a clear sequence: prepare the boxes, carry them, and keep the entrance usable. Stack up means the pile grows as more boxes arrive."
+      "feedback": "Give a clear sequence: prepare the boxes, carry them, and keep the entrance usable. Stack up means the pile grows as more boxes arrive.",
+      "unitIds": [
+        "U.HOUSING.M07.PACK",
+        "U.HOUSING.M07.STACK",
+        "U.HOUSING.M07.SORT",
+        "U.HOUSING.M07.SEQUENCE"
+      ],
+      "cueZh": "你有两箱书，一箱很重；门口必须保持畅通。告诉朋友先做什么、接着做什么。",
+      "checks": [
+        "次序能保持门口可通行。",
+        "重箱可以请求协助。",
+        "整理在必要搬运之后。"
+      ],
+      "feedbackZh": "说清次序即可；不需要为了用目标表达安排不合理动作。",
+      "taskMode": "recall",
+      "unitVersion": "pilot-14-0"
     },
     {
       "id": "S01.M07.P02",
       "function": "Place belongings and assemble furniture",
-      "targetTerms": ["storeroom", "assemble", "sort out"],
+      "targetTerms": [
+        "storeroom",
+        "assemble",
+        "sort out"
+      ],
       "cue": "The winter coats are not needed this week, but the books should be easy to reach. Tell Maya where to put them and what to do with the new desk.",
       "acceptableAnswers": [
         "Put the winter coats in the storeroom, then let's assemble the desk by the window.",
         "Let's store the coats in the small storage room and put the books on the shelf before we build the desk."
       ],
-      "feedback": "The storeroom holds things not needed now. Assemble the desk means join its parts; the second answer uses a natural simpler verb."
+      "feedback": "The storeroom holds things not needed now. Assemble the desk means join its parts; the second answer uses a natural simpler verb.",
+      "unitIds": [
+        "U.HOUSING.M07.STOREROOM",
+        "U.HOUSING.M07.SORT",
+        "U.HOUSING.M07.ASSEMBLE"
+      ],
+      "cueZh": "这周不用冬衣，但书要方便取用。告诉玛雅怎样安放，再说新书桌要做什么。",
+      "checks": [
+        "冬衣和书有不同去处。",
+        "书桌还待组装。"
+      ],
+      "feedbackZh": "用用途和位置组织说明。",
+      "taskMode": "recall",
+      "unitVersion": "pilot-14-0"
     },
     {
       "id": "S01.M07.P03",
       "function": "Report a missing part and request a replacement",
-      "targetTerms": ["replacement", "assemble"],
+      "targetTerms": [
+        "replacement",
+        "assemble"
+      ],
       "cue": "The new desk cannot stand safely because one small metal part was absent from the box. Call the shop and ask what they can do.",
       "acceptableAnswers": [
         "One screw is missing from the desk kit. Could you send a replacement?",
         "The desk came without one screw. Can I get a replacement screw?"
       ],
-      "feedback": "Name the exact missing part and ask for a replacement. You do not need to guess who lost it."
+      "feedback": "Name the exact missing part and ask for a replacement. You do not need to guess who lost it.",
+      "unitIds": [
+        "U.SHOP_SERVICE.REPLACEMENT",
+        "U.HOUSING.M07.MISSING",
+        "U.HOUSING.M07.ASSEMBLE"
+      ],
+      "cueZh": "新书桌缺了箱里应有的小金属部件，因此不能稳稳站住。给商店打电话，说明缺件并提出请求。",
+      "checks": [
+        "明确缺螺丝。",
+        "请求替换件。",
+        "不声称已经安全组装完成。"
+      ],
+      "feedbackZh": "说明具体缺件比笼统说全部不能用更有助于沟通。",
+      "taskMode": "recall",
+      "unitVersion": "pilot-14-0"
     },
     {
       "id": "S01.M07.P04",
       "function": "Ask a friend for practical help",
-      "targetTerms": ["give me a hand", "storeroom"],
+      "targetTerms": [
+        "give me a hand",
+        "storeroom"
+      ],
       "cue": "A heavy box blocks the hallway and you cannot lift it alone. Ask Maya to help move it, and say where it should go.",
       "acceptableAnswers": [
         "Could you give me a hand with this box? Let's move it away from the doorway.",
         "Maya, can you help me lift this box and put it in the storeroom?"
       ],
-      "feedback": "Give me a hand is a natural request for practical help. Naming the box and its destination makes the request useful."
+      "feedback": "Give me a hand is a natural request for practical help. Naming the box and its destination makes the request useful.",
+      "unitIds": [
+        "U.HOUSING.M07.HELP"
+      ],
+      "cueZh": "重箱子挡住走道，你一个人搬不动。请玛雅帮忙，并说明要移到哪里。",
+      "checks": [
+        "请求实际协助。",
+        "指出哪个箱子与目的位置。"
+      ],
+      "feedbackZh": "帮忙表达与具体动作配合，避免只说一个抽象请求。",
+      "taskMode": "recall",
+      "unitVersion": "pilot-14-0"
     }
   ],
   "transferPrompt": {
     "id": "S01.M07.T01",
     "function": "Transfer moving and help requests to a shared room",
-    "targetTerms": ["pack", "sort out", "assemble", "replacement", "give me a hand"],
+    "targetTerms": [
+      "pack",
+      "sort out",
+      "assemble",
+      "replacement",
+      "give me a hand"
+    ],
     "cue": "Sam has just arrived at a shared room. Boxes of dishes block the entrance, and a new shelf cannot stand because one bracket is absent. Ask a flatmate for help, explain the order for clearing the room, and contact the shop about the absent part. Do this without reopening Lin's story.",
     "acceptableAnswers": [
       "Could you give me a hand with these boxes? We can move them away from the door, sort out the dishes, and then assemble the shelf. One bracket is missing, so I will ask the shop for a replacement.",
       "Can you help me carry these boxes inside? First, let's clear the doorway and put the dishes away. Then I will call the shop for the missing bracket before we build the shelf."
     ],
-    "feedback": "Use the new person, room, and missing part. State an order that keeps the entrance clear, ask for specific help, and tell the shop what replacement is needed."
-  }
+    "feedback": "Use the new person, room, and missing part. State an order that keeps the entrance clear, ask for specific help, and tell the shop what replacement is needed.",
+    "unitIds": [
+      "U.HOUSING.M07.HELP",
+      "U.HOUSING.M07.SORT",
+      "U.HOUSING.M07.ASSEMBLE",
+      "U.SHOP_SERVICE.REPLACEMENT",
+      "U.HOUSING.M07.SEQUENCE"
+    ],
+    "cueZh": "萨姆搬进合住房，装碗碟的箱子挡着入口，新架子缺一个支架。请室友帮忙，说明清理顺序，并向商店联系缺件。",
+    "checks": [
+      "物品换成碗碟和架子。",
+      "先处理入口。",
+      "缺件换成支架。"
+    ],
+    "feedbackZh": "用新物品和缺件完成顺序、帮助与联系商店的三种意图。",
+    "taskMode": "transfer",
+    "unitVersion": "pilot-14-0"
+  },
+  "easySummary": "Lin and Maya carry boxes into the flat. They clear the doorway and put books and coats in different places. The desk has a missing screw, so Lin asks the shop for a replacement before they finish it.",
+  "easySummaryZh": "林和玛雅把箱子搬进公寓。她们清出门口，把书与外套分别安放。书桌缺一颗螺丝，林向商店索要替换件，再继续组装。",
+  "learningUnitIds": [
+    "U.HOUSING.MOVE_IN",
+    "U.HOUSING.M07.STACK",
+    "U.HOUSING.M07.HELP",
+    "U.HOUSING.M07.SORT",
+    "U.HOUSING.M07.PACK",
+    "U.HOUSING.M07.STOREROOM",
+    "U.HOUSING.M07.ASSEMBLE",
+    "U.SHOP_SERVICE.REPLACEMENT",
+    "U.HOUSING.M07.SEQUENCE",
+    "U.HOUSING.M07.MISSING"
+  ]
 }
