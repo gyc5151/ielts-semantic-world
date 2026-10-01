@@ -5,10 +5,10 @@
     "modelLicense": "CC-BY 4.0",
     "modelSource": "https://github.com/argosopentech/argospm-index",
     "generatedAt": "2026-10-01",
-    "uniqueSenses": 9868,
-    "examplePlacements": 12997,
-    "projectDefinitionCount": 112,
-    "projectOriginalExampleCount": 45
+    "uniqueSenses": 10218,
+    "examplePlacements": 13351,
+    "projectDefinitionCount": 141,
+    "projectOriginalExampleCount": 63
   },
   "senses": {
     "n:13658027": {
@@ -2999,6 +2999,217 @@
       "definitionStatus": "machine",
       "examples": {}
     },
+    "n:05154908": {
+      "definition": "a 资源",
+      "definitionStatus": "machine",
+      "examples": {
+        "visual aids in teaching": {
+          "text": "教学中的视觉辅助",
+          "status": "machine"
+        }
+      }
+    },
+    "n:01207609": {
+      "definition": "有助于满足某项努力或目的的需要或推进某项努力或目的的活动",
+      "definitionStatus": "machine",
+      "examples": {
+        "he gave me an assist with the housework": {
+          "text": "他帮我做家务",
+          "status": "machine"
+        },
+        "could not walk without assistance": {
+          "text": "没有帮助就无法行走",
+          "status": "machine"
+        },
+        "rescue party went to their aid": {
+          "text": "救援队去救他们了",
+          "status": "machine"
+        },
+        "offered his help in unloading": {
+          "text": "帮助他卸货",
+          "status": "machine"
+        }
+      }
+    },
+    "n:13265904": {
+      "definition": "支持有价值人士或事业的金钱",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:00654885": {
+      "definition": "为某人或某物提供治疗或护理的工作",
+      "definitionStatus": "machine",
+      "examples": {
+        "no medical care was required": {
+          "text": "无需医疗",
+          "status": "machine"
+        },
+        "the old car needs constant attention": {
+          "text": "旧车需要不断的注意",
+          "status": "machine"
+        }
+      }
+    },
+    "v:02547586": {
+      "definition": "(b) 提供帮助或协助;",
+      "definitionStatus": "machine",
+      "examples": {
+        "Everyone helped out during the earthquake": {
+          "text": "大家都在地震中帮忙",
+          "status": "machine"
+        },
+        "Can you help me carry this table?": {
+          "text": "你能帮我搬这个桌子吗?",
+          "status": "machine"
+        },
+        "She never helps around the house": {
+          "text": "她从不帮家里的人",
+          "status": "machine"
+        }
+      }
+    },
+    "v:00082081": {
+      "definition": "改善儿童状况",
+      "definitionStatus": "machine",
+      "examples": {
+        "These pills will help the patient": {
+          "text": "这些药丸能帮助病人",
+          "status": "machine"
+        }
+      }
+    },
+    "n:14055408": {
+      "definition": "常常持续存在的身体不适或疾病；引起抱怨的原因。",
+      "definitionStatus": "project",
+      "examples": {}
+    },
+    "n:05982152": {
+      "definition": "旨在或指导您计划的行动的预期成果",
+      "definitionStatus": "machine",
+      "examples": {
+        "his intent was to provide a new translation": {
+          "text": "他的用意是提供一个新的翻译",
+          "status": "machine"
+        },
+        "good intentions are not enough": {
+          "text": "善良的用意还不够",
+          "status": "machine"
+        },
+        "it was created with the conscious aim of answering immediate needs": {
+          "text": "它的创建有意识地旨在满足眼前的需要",
+          "status": "machine"
+        },
+        "he made no secret of his designs": {
+          "text": "他对自己的计划没有秘密",
+          "status": "machine"
+        }
+      }
+    },
+    "n:05981230": {
+      "definition": "打算实现的目标(以及被认为可以实现的目标)",
+      "definitionStatus": "machine",
+      "examples": {
+        "the sole object of her trip was to see her children": {
+          "text": "她旅行的唯一目的就是见她的孩子",
+          "status": "machine"
+        }
+      }
+    },
+    "n:00815644": {
+      "definition": "指向物体的动作",
+      "definitionStatus": "machine",
+      "examples": {
+        "he took aim and fired": {
+          "text": "他瞄准并开火",
+          "status": "machine"
+        }
+      }
+    },
+    "n:08680888": {
+      "definition": "某物移动的方向或路径或它所沿的路径",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "v:01151110": {
+      "definition": "指向或导致(吹气、武器或摄影设备等物体)",
+      "definitionStatus": "machine",
+      "examples": {
+        "Please don't aim at your little brother!": {
+          "text": "请不要瞄准你的弟弟!",
+          "status": "machine"
+        },
+        "He trained his gun on the burglar": {
+          "text": "他用枪指着小偷",
+          "status": "machine"
+        },
+        "Don't train your camera on the women": {
+          "text": "别在女人身上训练相机",
+          "status": "machine"
+        },
+        "Take a swipe at one's opponent": {
+          "text": "给对手打个电话",
+          "status": "machine"
+        }
+      }
+    },
+    "v:00708980": {
+      "definition": "提议或打算",
+      "definitionStatus": "machine",
+      "examples": {
+        "I aim to arrive at noon": {
+          "text": "我准备在中午到达",
+          "status": "machine"
+        }
+      }
+    },
+    "v:01026975": {
+      "definition": "进入理想的谈话方向",
+      "definitionStatus": "machine",
+      "examples": {
+        "What are you driving at?": {
+          "text": "你开什么车?",
+          "status": "machine"
+        }
+      }
+    },
+    "v:00713015": {
+      "definition": "为某一公众专门设计产品、事件或活动",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "v:01150559": {
+      "definition": "打算(某)向某个目标迈进",
+      "definitionStatus": "machine",
+      "examples": {
+        "He aimed his fists towards his opponent's face": {
+          "text": "他用拳头指着对手的脸",
+          "status": "machine"
+        },
+        "criticism directed at her superior": {
+          "text": "批评她的上司",
+          "status": "machine"
+        },
+        "direct your anger towards others, not towards yourself": {
+          "text": "将你的愤怒指向他人,而不是你自己",
+          "status": "machine"
+        }
+      }
+    },
+    "v:00955472": {
+      "definition": "直接(评论)实现预定目标",
+      "definitionStatus": "machine",
+      "examples": {
+        "She wanted to aim a pun": {
+          "text": "她想用双关语",
+          "status": "machine"
+        }
+      }
+    },
+    "v:00705517": {
+      "definition": "有雄心勃勃的计划或崇高的目标",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
     "n:14841267": {
       "definition": "呼吸所需气体(特别是氧气)的混合物;",
       "definitionStatus": "machine",
@@ -3206,6 +3417,55 @@
       "definition": "教堂的一部分 由柱子或柱子平面划分",
       "definitionStatus": "machine",
       "examples": {}
+    },
+    "a:02612653": {
+      "definition": "具有过敏特征或由过敏引起的。",
+      "definitionStatus": "project",
+      "examples": {
+        "an allergic reaction": {
+          "text": "一次过敏反应。",
+          "status": "project"
+        }
+      }
+    },
+    "s:02360944": {
+      "definition": "有过敏症或特殊、过度敏感性，尤其是对某种特定因素敏感的。",
+      "definitionStatus": "project",
+      "examples": {
+        "allergic children": {
+          "text": "有过敏症的孩子。",
+          "status": "project"
+        },
+        "hypersensitive to pollen": {
+          "text": "对花粉高度敏感。",
+          "status": "project"
+        }
+      }
+    },
+    "n:14532816": {
+      "definition": "对特定过敏原的超敏反应；症状强度可有很大差异。",
+      "definitionStatus": "project",
+      "examples": {}
+    },
+    "v:00064095": {
+      "definition": "使身体获得缓解，例如缓解疼痛。",
+      "definitionStatus": "project",
+      "examples": {
+        "This pill will relieve your headaches": {
+          "text": "这种药片会缓解你的头痛。",
+          "status": "project"
+        }
+      }
+    },
+    "v:00518395": {
+      "definition": "方便点",
+      "definitionStatus": "machine",
+      "examples": {
+        "you could facilitate the process by sharing your knowledge": {
+          "text": "你可以通过分享知识来推动这一进程",
+          "status": "machine"
+        }
+      }
     },
     "v:02423183": {
       "definition": "*通过具体行动或缺乏行动,使发生某些事情成为可能",
@@ -4394,6 +4654,21 @@
           "status": "machine"
         }
       }
+    },
+    "n:02716866": {
+      "definition": "能够杀死微生物和治愈细菌感染的模具或细菌产生的化学物质",
+      "definitionStatus": "machine",
+      "examples": {
+        "when antibiotics were first discovered they were called wonder drugs": {
+          "text": "当抗生素被首次发现时,它们被称为神奇药物",
+          "status": "machine"
+        }
+      }
+    },
+    "a:02629301": {
+      "definition": "或与抗生素有关的药物",
+      "definitionStatus": "machine",
+      "examples": {}
     },
     "s:02267686": {
       "definition": "一个或若干个或每个或所有没有说明",
@@ -5863,38 +6138,6 @@
       "definitionStatus": "machine",
       "examples": {}
     },
-    "n:01207609": {
-      "definition": "有助于满足某项努力或目的的需要或推进某项努力或目的的活动",
-      "definitionStatus": "machine",
-      "examples": {
-        "he gave me an assist with the housework": {
-          "text": "他帮我做家务",
-          "status": "machine"
-        },
-        "could not walk without assistance": {
-          "text": "没有帮助就无法行走",
-          "status": "machine"
-        },
-        "rescue party went to their aid": {
-          "text": "救援队去救他们了",
-          "status": "machine"
-        },
-        "offered his help in unloading": {
-          "text": "帮助他卸货",
-          "status": "machine"
-        }
-      }
-    },
-    "n:05154908": {
-      "definition": "a 资源",
-      "definitionStatus": "machine",
-      "examples": {
-        "visual aids in teaching": {
-          "text": "教学中的视觉辅助",
-          "status": "machine"
-        }
-      }
-    },
     "n:09815790": {
       "definition": "协助满足某项需要或促进某项努力或宗旨的人;",
       "definitionStatus": "machine",
@@ -6322,6 +6565,78 @@
       "examples": {
         "she was very attached to her father": {
           "text": "她很依恋她的父亲",
+          "status": "machine"
+        }
+      }
+    },
+    "v:02612762": {
+      "definition": "出席(会议、教会服务、大学)等。",
+      "definitionStatus": "machine",
+      "examples": {
+        "She attends class regularly": {
+          "text": "她经常上课",
+          "status": "machine"
+        },
+        "I rarely attend services at my church": {
+          "text": "我很少在教堂参加礼拜",
+          "status": "machine"
+        },
+        "did you go to the meeting?": {
+          "text": "你参加过会议吗?",
+          "status": "machine"
+        }
+      }
+    },
+    "v:02549581": {
+      "definition": "负责或处理",
+      "definitionStatus": "machine",
+      "examples": {
+        "Could you see about lunch?": {
+          "text": "你能看看午餐吗?",
+          "status": "machine"
+        },
+        "I must attend to this matter": {
+          "text": "我一定要处理这件事",
+          "status": "machine"
+        },
+        "She took care of this business": {
+          "text": "她处理好这个生意了",
+          "status": "machine"
+        }
+      }
+    },
+    "v:02716567": {
+      "definition": "作为情况随附或因故随附",
+      "definitionStatus": "machine",
+      "examples": {
+        "Menuhin's playing was attended by a 15-minute standing ovation": {
+          "text": "Menuhin的演奏有15分钟的欢呼声",
+          "status": "machine"
+        }
+      }
+    },
+    "v:02540670": {
+      "definition": "服务于或服务于",
+      "definitionStatus": "machine",
+      "examples": {
+        "May I serve you?": {
+          "text": "我能为你效劳吗?",
+          "status": "machine"
+        },
+        "She attends the old lady in the wheelchair": {
+          "text": "她坐在轮椅上陪着老太太",
+          "status": "machine"
+        },
+        "Can you wait on our table, please?": {
+          "text": "你能在我们桌子上等吗?",
+          "status": "machine"
+        },
+        "Is a salesperson assisting you?": {
+          "text": "一个推销员在帮你吗?",
+          "status": "machine"
+        },
+        "The minister served the King for many years": {
+          "text": "大臣侍奉国王多年",
           "status": "machine"
         }
       }
@@ -7802,6 +8117,186 @@
       "examples": {
         "He was balancing on one foot": {
           "text": "他只用一只脚保持平衡",
+          "status": "machine"
+        }
+      }
+    },
+    "n:09213565": {
+      "definition": "斜坡(特别是水体旁的斜坡)",
+      "definitionStatus": "machine",
+      "examples": {
+        "they pulled the canoe up on the bank": {
+          "text": "他们把独木舟拉到岸上",
+          "status": "machine"
+        },
+        "he sat on the bank of the river and watched the currents": {
+          "text": "他坐在河岸上看着洋流",
+          "status": "machine"
+        }
+      }
+    },
+    "n:08420278": {
+      "definition": "接受存款并将资金转用于贷款活动的金融机构;",
+      "definitionStatus": "machine",
+      "examples": {
+        "he cashed a check at the bank": {
+          "text": "他兑现了银行的支票",
+          "status": "machine"
+        },
+        "that bank holds the mortgage on my home": {
+          "text": "那家银行在我家抵押贷款",
+          "status": "machine"
+        }
+      }
+    },
+    "n:09213434": {
+      "definition": "长脊或堆积",
+      "definitionStatus": "machine",
+      "examples": {
+        "a huge bank of earth": {
+          "text": "巨大的地球之岸",
+          "status": "machine"
+        }
+      }
+    },
+    "n:08462066": {
+      "definition": "在一个行或分级排列类似对象",
+      "definitionStatus": "machine",
+      "examples": {
+        "he operated a bank of switches": {
+          "text": "他开着一家开关银行",
+          "status": "machine"
+        }
+      }
+    },
+    "n:13368318": {
+      "definition": "供未来使用(特别是在紧急情况下)的储备物资或库存",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:13356402": {
+      "definition": "赌博店或商贩在赌博游戏中持有的资金",
+      "definitionStatus": "machine",
+      "examples": {
+        "he tried to break the bank at Monte Carlo": {
+          "text": "他试图打破在蒙特卡洛的银行",
+          "status": "machine"
+        }
+      }
+    },
+    "n:09213828": {
+      "definition": "公路或轨道转弯时的坡度;为了减少离心力的影响,外部比内部高.",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:04139859": {
+      "definition": "存放在家中的容器(通常在顶部有一个插槽)",
+      "definitionStatus": "machine",
+      "examples": {
+        "the coin bank was empty": {
+          "text": "硬币库是空的",
+          "status": "machine"
+        }
+      }
+    },
+    "n:02787772": {
+      "definition": "银行业务进行交易的大楼",
+      "definitionStatus": "machine",
+      "examples": {
+        "the bank is on the corner of Nassau and Witherspoon": {
+          "text": "银行在拿骚和威瑟斯庞的拐角",
+          "status": "machine"
+        }
+      }
+    },
+    "n:00169305": {
+      "definition": "飞行操作; 飞机横向提示其纵向轴线(特别是在转弯时)",
+      "definitionStatus": "machine",
+      "examples": {
+        "the plane went into a steep bank": {
+          "text": "飞机进入了一个陡峭的银行",
+          "status": "machine"
+        }
+      }
+    },
+    "v:02039413": {
+      "definition": "横向倾斜( T)",
+      "definitionStatus": "machine",
+      "examples": {
+        "the pilot had to bank the aircraft": {
+          "text": "机长必须把飞机藏起来",
+          "status": "machine"
+        }
+      }
+    },
+    "v:01587705": {
+      "definition": "与银行联系",
+      "definitionStatus": "machine",
+      "examples": {
+        "bank roads": {
+          "text": "银行道路",
+          "status": "machine"
+        }
+      }
+    },
+    "v:02343374": {
+      "definition": "与银行做生意或在银行开户",
+      "definitionStatus": "machine",
+      "examples": {
+        "Where do you bank in this town?": {
+          "text": "你在哪里银行在这个镇上?",
+          "status": "machine"
+        }
+      }
+    },
+    "v:02343252": {
+      "definition": "在游戏或赌博中扮演银行家",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "v:02343056": {
+      "definition": "从事银行业务",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "v:02310855": {
+      "definition": "把钱存入银行账户。",
+      "definitionStatus": "project",
+      "examples": {
+        "She deposits her paycheck every month": {
+          "text": "她每月把工资存入银行。",
+          "status": "project"
+        }
+      }
+    },
+    "v:01234793": {
+      "definition": "盖以灰烬,以控制燃烧的速度;",
+      "definitionStatus": "machine",
+      "examples": {
+        "bank a fire": {
+          "text": "库藏着火",
+          "status": "machine"
+        }
+      }
+    },
+    "v:00688377": {
+      "definition": "有信心或有信心于",
+      "definitionStatus": "machine",
+      "examples": {
+        "We can trust in God": {
+          "text": "我们可以相信上帝",
+          "status": "machine"
+        },
+        "Rely on your friends": {
+          "text": "{\\fn黑体\\fs22\\bord1\\shad0\\3aHBE\\4aH00\\fscx67\\fscy66\\2cHFFFFFF\\3cH808080}跟你的朋友说",
+          "status": "machine"
+        },
+        "bank on your good education": {
+          "text": "银行在你的好教育",
+          "status": "machine"
+        },
+        "I swear by my grandmother's recipes": {
+          "text": "我以祖母的秘方发誓",
           "status": "machine"
         }
       }
@@ -11395,6 +11890,131 @@
       "definitionStatus": "machine",
       "examples": {}
     },
+    "n:05216365": {
+      "definition": "生物体的整个结构(动物、植物或人类)",
+      "definitionStatus": "machine",
+      "examples": {
+        "he felt as if his whole body were on fire": {
+          "text": "他感觉好像全身着火了",
+          "status": "machine"
+        }
+      }
+    },
+    "n:07965085": {
+      "definition": "与某种共同关系或职业有关联并被视为实体的一群人",
+      "definitionStatus": "machine",
+      "examples": {
+        "the whole body filed out of the auditorium": {
+          "text": "整个尸体都从礼堂里拿出来了",
+          "status": "machine"
+        },
+        "the student body": {
+          "text": "学生身体",
+          "status": "machine"
+        },
+        "administrative body": {
+          "text": "行政机构",
+          "status": "machine"
+        }
+      }
+    },
+    "n:05217859": {
+      "definition": "由死亡动物或人组成的自然物体",
+      "definitionStatus": "machine",
+      "examples": {
+        "they found the body in the lake": {
+          "text": "他们发现尸体在湖里",
+          "status": "machine"
+        }
+      }
+    },
+    "n:09224911": {
+      "definition": "具有质量且可与其他物体区分的单个三维对象",
+      "definitionStatus": "machine",
+      "examples": {
+        "heavenly body": {
+          "text": "天堂的躯体",
+          "status": "machine"
+        }
+      }
+    },
+    "n:05549830": {
+      "definition": "身体,不包括头部和颈部和四肢",
+      "definitionStatus": "machine",
+      "examples": {
+        "they moved their arms and legs and bodies": {
+          "text": "他们的手臂、腿和身体都动了",
+          "status": "machine"
+        }
+      }
+    },
+    "n:08436288": {
+      "definition": "将细节汇编视为一种系统",
+      "definitionStatus": "machine",
+      "examples": {
+        "a body of law": {
+          "text": "一整套法律",
+          "status": "machine"
+        },
+        "a body of doctrine": {
+          "text": "一套理论",
+          "status": "machine"
+        },
+        "a body of precedents": {
+          "text": "一套先例",
+          "status": "machine"
+        }
+      }
+    },
+    "n:04934546": {
+      "definition": "共同保管和保留其形状的财产;",
+      "definitionStatus": "machine",
+      "examples": {
+        "wool has more body than rayon": {
+          "text": "羊毛的体型比光线还多",
+          "status": "machine"
+        },
+        "when the dough has enough consistency it is ready to bake": {
+          "text": "当钱有足够的一致性,它准备烤",
+          "status": "machine"
+        }
+      }
+    },
+    "n:06394701": {
+      "definition": "来文的中心信息",
+      "definitionStatus": "machine",
+      "examples": {
+        "the body of the message was short": {
+          "text": "信件的正文很短",
+          "status": "machine"
+        }
+      }
+    },
+    "n:05024616": {
+      "definition": "某物的主要质量",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:04261506": {
+      "definition": "乐器中的共鸣室(作为小提琴的躯体)",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:02861886": {
+      "definition": "车辆的外部结构",
+      "definitionStatus": "machine",
+      "examples": {
+        "the body of the car was badly rusted": {
+          "text": "车身严重锈蚀",
+          "status": "machine"
+        }
+      }
+    },
+    "v:02698944": {
+      "definition": "与机构投资或作为机构投资; 将机构交给",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
     "n:06410904": {
       "definition": "已出版的书面作品或组成(印在捆绑在一起的网页上)",
       "definitionStatus": "machine",
@@ -11406,8 +12026,8 @@
       }
     },
     "n:02870092": {
-      "definition": "由若干页连接在一起的物理对象",
-      "definitionStatus": "machine",
+      "definition": "由装订在一起的若干页组成的实体书册。",
+      "definitionStatus": "project",
       "examples": {
         "he used a large book as a doorstop": {
           "text": "他用一本大书当门店",
@@ -11416,8 +12036,8 @@
       }
     },
     "n:06636524": {
-      "definition": "有关某物或某人的已知事实汇编;",
-      "definitionStatus": "machine",
+      "definition": "关于某事或某人的已知事实汇编。",
+      "definitionStatus": "project",
       "examples": {
         "Al Smith used to say, `Let's look at the record'": {
           "text": "艾尔·史密斯曾说,‘让我们看看记录'",
@@ -11505,8 +12125,8 @@
       }
     },
     "v:02498320": {
-      "definition": "预先安排和储备(为他人安排)",
-      "definitionStatus": "machine",
+      "definition": "事先为某人安排并预留某物。",
+      "definitionStatus": "project",
       "examples": {
         "reserve me a seat on a flight": {
           "text": "留个座位给我坐飞机",
@@ -11534,6 +12154,11 @@
     },
     "v:02599754": {
       "definition": "在旅馆订户处登记",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "s:01988468": {
+      "definition": "预留",
       "definitionStatus": "machine",
       "examples": {}
     },
@@ -12732,6 +13357,146 @@
       "examples": {
         "his wife is British": {
           "text": "他老婆是英国人",
+          "status": "machine"
+        }
+      }
+    },
+    "n:09875663": {
+      "definition": "女性的名词",
+      "definitionStatus": "machine",
+      "examples": {
+        "a broad is a woman who can throw a mean punch": {
+          "text": "女人是女人,可以打一个小拳头",
+          "status": "machine"
+        }
+      }
+    },
+    "a:02560548": {
+      "definition": "从一边到另一边都有相当的(或一定的)程度,",
+      "definitionStatus": "machine",
+      "examples": {
+        "wide roads": {
+          "text": "宽宽道路",
+          "status": "machine"
+        },
+        "a wide necktie": {
+          "text": "宽的领带",
+          "status": "machine"
+        },
+        "wide margins": {
+          "text": "宽边距",
+          "status": "machine"
+        },
+        "three feet wide": {
+          "text": "宽三尺",
+          "status": "machine"
+        },
+        "a river two miles broad": {
+          "text": "一条两英里宽的河",
+          "status": "machine"
+        },
+        "broad shoulders": {
+          "text": "宽肩",
+          "status": "machine"
+        },
+        "a broad river": {
+          "text": "一条宽阔的河流",
+          "status": "machine"
+        }
+      }
+    },
+    "s:01101891": {
+      "definition": "未详细或具体",
+      "definitionStatus": "machine",
+      "examples": {
+        "a broad rule": {
+          "text": "一条宽泛的规则",
+          "status": "machine"
+        },
+        "the broad outlines of the plan": {
+          "text": "B. 计划大纲",
+          "status": "machine"
+        },
+        "felt an unspecific dread": {
+          "text": "感觉很恐怖",
+          "status": "machine"
+        }
+      }
+    },
+    "s:00428878": {
+      "definition": "缺乏微妙性;明显",
+      "definitionStatus": "machine",
+      "examples": {
+        "gave us a broad hint that it was time to leave": {
+          "text": "给了我们一个广泛的暗示 是时候离开",
+          "status": "machine"
+        }
+      }
+    },
+    "s:01211531": {
+      "definition": "处于顶点或终点",
+      "definitionStatus": "machine",
+      "examples": {
+        "broad daylight": {
+          "text": "光天化日之下",
+          "status": "machine"
+        },
+        "full summer": {
+          "text": "整个夏天",
+          "status": "machine"
+        }
+      }
+    },
+    "s:01384212": {
+      "definition": "范围或范围非常大",
+      "definitionStatus": "machine",
+      "examples": {
+        "a broad lawn": {
+          "text": "宽的草坪",
+          "status": "machine"
+        },
+        "the wide plains": {
+          "text": "宽阔的平原",
+          "status": "machine"
+        },
+        "a spacious view": {
+          "text": "宽阔的视图",
+          "status": "machine"
+        },
+        "spacious skies": {
+          "text": "宽阔的天空",
+          "status": "machine"
+        }
+      }
+    },
+    "s:01287160": {
+      "definition": "严重和显著的区域性",
+      "definitionStatus": "machine",
+      "examples": {
+        "a broad southern accent": {
+          "text": "广的南方口音",
+          "status": "machine"
+        }
+      }
+    },
+    "s:00286837": {
+      "definition": "B. 显示或具有广泛思想特征",
+      "definitionStatus": "machine",
+      "examples": {
+        "a broad political stance": {
+          "text": "广泛的政治立场",
+          "status": "machine"
+        },
+        "generous and broad sympathies": {
+          "text": "慷慨和广泛的同情心",
+          "status": "machine"
+        },
+        "a liberal newspaper": {
+          "text": "自由派报纸",
+          "status": "machine"
+        },
+        "tolerant of his opponent's opinions": {
+          "text": "容忍对手的意见",
           "status": "machine"
         }
       }
@@ -15311,6 +16076,130 @@
         }
       }
     },
+    "n:05615869": {
+      "definition": "避免伤害或危险是否明智",
+      "definitionStatus": "machine",
+      "examples": {
+        "he exercised caution in opening the door": {
+          "text": "他在开门时小心翼翼",
+          "status": "machine"
+        },
+        "he handled the vase with care": {
+          "text": "他小心地处理了花瓶",
+          "status": "machine"
+        }
+      }
+    },
+    "n:07524529": {
+      "definition": "一种焦虑的感觉",
+      "definitionStatus": "machine",
+      "examples": {
+        "care had aged him": {
+          "text": "照顾他长大了",
+          "status": "machine"
+        },
+        "they hushed it up out of fear of public reaction": {
+          "text": "他们因为害怕公众的反应而把它塞了起来",
+          "status": "machine"
+        }
+      }
+    },
+    "n:07505047": {
+      "definition": "引起人们的担忧",
+      "definitionStatus": "machine",
+      "examples": {
+        "his major care was the illness of his wife": {
+          "text": "他的主要照顾是妻子的病",
+          "status": "machine"
+        }
+      }
+    },
+    "n:00829378": {
+      "definition": "注意和管理意味着安全责任",
+      "definitionStatus": "machine",
+      "examples": {
+        "he is in the care of a bodyguard": {
+          "text": "他被保镖照顾着",
+          "status": "machine"
+        }
+      }
+    },
+    "n:00267522": {
+      "definition": "维持良好工作秩序的活动",
+      "definitionStatus": "machine",
+      "examples": {
+        "he wrote the manual on car care": {
+          "text": "他写了《汽车护理手册》",
+          "status": "machine"
+        }
+      }
+    },
+    "v:01822936": {
+      "definition": "感到担忧或兴趣",
+      "definitionStatus": "machine",
+      "examples": {
+        "I really care about my work": {
+          "text": "我真的很关心我的工作",
+          "status": "machine"
+        },
+        "I don't care": {
+          "text": "我无所谓",
+          "status": "machine"
+        }
+      }
+    },
+    "v:02550296": {
+      "definition": "提供护理",
+      "definitionStatus": "machine",
+      "examples": {
+        "The nurse was caring for the wounded": {
+          "text": "护士在照顾伤员",
+          "status": "machine"
+        }
+      }
+    },
+    "v:01824736": {
+      "definition": "喜欢或希望做一些事情",
+      "definitionStatus": "machine",
+      "examples": {
+        "Do you care to try this dish?": {
+          "text": "你想尝尝这菜吗?",
+          "status": "machine"
+        },
+        "Would you like to come along to the movies?": {
+          "text": "你想一起去看电影吗?",
+          "status": "machine"
+        }
+      }
+    },
+    "v:02436349": {
+      "definition": "负责、实施或处置",
+      "definitionStatus": "machine",
+      "examples": {
+        "I can deal with this crew of workers": {
+          "text": "我可以对付这帮工人",
+          "status": "machine"
+        },
+        "This blender can't handle nuts": {
+          "text": "这个搅拌机不能处理坚果",
+          "status": "machine"
+        },
+        "She managed her parents' affairs after they got too old": {
+          "text": "她父母太老了,她管理着自己的事",
+          "status": "machine"
+        }
+      }
+    },
+    "v:01766748": {
+      "definition": "B. 关注",
+      "definitionStatus": "machine",
+      "examples": {
+        "I worry about my grades": {
+          "text": "我担心我的成绩",
+          "status": "machine"
+        }
+      }
+    },
     "a:00309021": {
       "definition": "谨慎行事或给予照顾或注意;",
       "definitionStatus": "machine",
@@ -16651,6 +17540,21 @@
         }
       }
     },
+    "n:07997703": {
+      "definition": "共享共同属性的事物集",
+      "definitionStatus": "machine",
+      "examples": {
+        "there are two classes of detergents": {
+          "text": "洗涤剂有两种",
+          "status": "machine"
+        }
+      }
+    },
+    "n:05838765": {
+      "definition": "在概念计划中标出司或协调的一般概念",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
     "s:00323199": {
       "definition": "涉及或构成一项原因;",
       "definitionStatus": "machine",
@@ -17520,16 +18424,6 @@
       "examples": {
         "the battery needed a fresh charge": {
           "text": "电池需要新电荷",
-          "status": "machine"
-        }
-      }
-    },
-    "n:00829378": {
-      "definition": "注意和管理意味着安全责任",
-      "definitionStatus": "machine",
-      "examples": {
-        "he is in the care of a bodyguard": {
-          "text": "他被保镖照顾着",
           "status": "machine"
         }
       }
@@ -19065,16 +19959,6 @@
         }
       }
     },
-    "n:07997703": {
-      "definition": "共享共同属性的事物集",
-      "definitionStatus": "machine",
-      "examples": {
-        "there are two classes of detergents": {
-          "text": "洗涤剂有两种",
-          "status": "machine"
-        }
-      }
-    },
     "n:08238463": {
       "definition": "一群学生一起学习;",
       "definitionStatus": "machine",
@@ -19925,6 +20809,26 @@
           "status": "machine"
         }
       }
+    },
+    "n:08054076": {
+      "definition": "由一组医疗专家经营的医疗机构;",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:07146300": {
+      "definition": "在某项活动中举行诊断问题的会议以及指导或补救工作;",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:03043274": {
+      "definition": "提供门诊照护的医疗设施。",
+      "definitionStatus": "project",
+      "examples": {}
+    },
+    "n:09929577": {
+      "definition": "从事临床工作而不是实验室实验的(医学或心理学)从业者",
+      "definitionStatus": "machine",
+      "examples": {}
     },
     "n:03044418": {
       "definition": "一个小写板,上面有一个夹子 用来持有论文",
@@ -22035,6 +22939,202 @@
         }
       }
     },
+    "n:08615374": {
+      "definition": "一块在城市地区供娱乐用途的空地",
+      "definitionStatus": "machine",
+      "examples": {
+        "they went for a walk in the park": {
+          "text": "他们去公园散步了",
+          "status": "machine"
+        }
+      }
+    },
+    "a:00492677": {
+      "definition": "属于一个社区或由整个社区参加;",
+      "definitionStatus": "machine",
+      "examples": {
+        "for the common good": {
+          "text": "为共同利益服务",
+          "status": "machine"
+        },
+        "common lands are set aside for use by all members of a community": {
+          "text": "共有土地留给社区所有成员使用;",
+          "status": "machine"
+        }
+      }
+    },
+    "a:00485711": {
+      "definition": "没有特殊区别或质量; 广为人知或普遍遇到; 平均或一般或通常的;",
+      "definitionStatus": "machine",
+      "examples": {
+        "the common man": {
+          "text": "那个普通人",
+          "status": "machine"
+        },
+        "a common sailor": {
+          "text": "一个普通的水手",
+          "status": "machine"
+        },
+        "the common cold": {
+          "text": "常见的寒冷",
+          "status": "machine"
+        },
+        "a common nuisance": {
+          "text": "一个常见的烦恼",
+          "status": "machine"
+        },
+        "followed common procedure": {
+          "text": "遵循共同程序",
+          "status": "machine"
+        },
+        "it is common knowledge that she lives alone": {
+          "text": "常识是她独居",
+          "status": "machine"
+        },
+        "the common housefly": {
+          "text": "常见的室内飞行",
+          "status": "machine"
+        },
+        "a common brand of soap": {
+          "text": "一个常见的肥皂品牌",
+          "status": "machine"
+        }
+      }
+    },
+    "s:02152473": {
+      "definition": "两个或两个以上当事方共有或共有",
+      "definitionStatus": "machine",
+      "examples": {
+        "a common friend": {
+          "text": "一个普通朋友",
+          "status": "machine"
+        },
+        "the mutual interests of management and labor": {
+          "text": "管理层和劳动力的共同利益",
+          "status": "machine"
+        }
+      }
+    },
+    "s:00970610": {
+      "definition": "常见",
+      "definitionStatus": "machine",
+      "examples": {
+        "a common (or familiar) complaint": {
+          "text": "常见(或熟悉的)投诉",
+          "status": "machine"
+        },
+        "the usual greeting": {
+          "text": "寻常的问候",
+          "status": "machine"
+        }
+      }
+    },
+    "s:01046226": {
+      "definition": "具有或具有或适合日常语言的特点",
+      "definitionStatus": "machine",
+      "examples": {
+        "common parlance": {
+          "text": "通用术语",
+          "status": "machine"
+        },
+        "a vernacular term": {
+          "text": "a 方言术语",
+          "status": "machine"
+        },
+        "vernacular speakers": {
+          "text": "扬声器",
+          "status": "machine"
+        },
+        "the vulgar tongue of the masses": {
+          "text": "大众的粗俗舌头",
+          "status": "machine"
+        },
+        "the technical and vulgar names for an animal species": {
+          "text": "一种动物的技术和粗俗名称",
+          "status": "machine"
+        }
+      }
+    },
+    "s:01593079": {
+      "definition": "或与广大人民群众有关联",
+      "definitionStatus": "machine",
+      "examples": {
+        "the common people in those days suffered greatly": {
+          "text": "那些时候的普通人遭受了巨大的痛苦",
+          "status": "machine"
+        },
+        "behavior that branded him as common": {
+          "text": "以他为常识的行为",
+          "status": "machine"
+        },
+        "his square plebeian nose": {
+          "text": "他的平方圆鼻孔",
+          "status": "machine"
+        },
+        "a vulgar and objectionable person": {
+          "text": "粗俗和令人反感的人",
+          "status": "machine"
+        },
+        "the unwashed masses": {
+          "text": "未洗净的群众",
+          "status": "machine"
+        }
+      }
+    },
+    "s:02346557": {
+      "definition": "低或低质量或价值 - 莎士比亚",
+      "definitionStatus": "machine",
+      "examples": {
+        "of what coarse metal ye are molded": {
+          "text": "以你们所造化的粗金属盟誓,",
+          "status": "machine"
+        },
+        "produced...the common cloths used by the poorer population": {
+          "text": "生产... 穷人使用的普通布",
+          "status": "machine"
+        }
+      }
+    },
+    "s:01950198": {
+      "definition": "缺乏精炼、种植或品味",
+      "definitionStatus": "machine",
+      "examples": {
+        "he had coarse manners but a first-rate mind": {
+          "text": "他有粗鲁的礼貌,但一流的头脑",
+          "status": "machine"
+        },
+        "behavior that branded him as common": {
+          "text": "以他为常识的行为",
+          "status": "machine"
+        },
+        "an untutored and uncouth human being": {
+          "text": "无假无假的人",
+          "status": "machine"
+        },
+        "an uncouth soldier--a real tough guy": {
+          "text": "一个无耻的士兵一个真正的硬汉",
+          "status": "machine"
+        },
+        "appealing to the vulgar taste for violence": {
+          "text": "喜欢粗俗的暴力味道",
+          "status": "machine"
+        },
+        "the vulgar display of the newly rich": {
+          "text": "新富人的粗俗展示",
+          "status": "machine"
+        }
+      }
+    },
+    "s:01673815": {
+      "definition": "预期; 标准",
+      "definitionStatus": "machine",
+      "examples": {
+        "common decency": {
+          "text": "共同的尊严",
+          "status": "machine"
+        }
+      }
+    },
     "v:00742320": {
       "definition": "传送信息",
       "definitionStatus": "machine",
@@ -22322,11 +23422,6 @@
       "definitionStatus": "machine",
       "examples": {}
     },
-    "n:14055408": {
-      "definition": "经常持续的身体紊乱或疾病;",
-      "definitionStatus": "machine",
-      "examples": {}
-    },
     "n:07208930": {
       "definition": "(以前)痛苦或愤怒或悲伤的呐喊(或反复的呐喊)",
       "definitionStatus": "machine",
@@ -22576,26 +23671,56 @@
       "definitionStatus": "machine",
       "examples": {}
     },
+    "v:00402539": {
+      "definition": "弄得更复杂",
+      "definitionStatus": "machine",
+      "examples": {
+        "There was a new development that complicated the matter": {
+          "text": "有个新的发展使事情变得复杂",
+          "status": "machine"
+        }
+      }
+    },
+    "v:00400883": {
+      "definition": "更复杂、更复杂或更丰富",
+      "definitionStatus": "machine",
+      "examples": {
+        "refine a design or pattern": {
+          "text": "改进设计或图案",
+          "status": "machine"
+        }
+      }
+    },
+    "s:02177584": {
+      "definition": "难以分析或理解",
+      "definitionStatus": "machine",
+      "examples": {
+        "a complicated problem": {
+          "text": "一个复杂的问题",
+          "status": "machine"
+        },
+        "complicated Middle East politics": {
+          "text": "复杂的中东政治",
+          "status": "machine"
+        }
+      }
+    },
+    "n:03082979": {
+      "definition": "自动进行计算用的机器",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:09887034": {
+      "definition": "计算专家(或计算机器操作专家)",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
     "n:05670710": {
       "definition": "你感兴趣的东西,因为它很重要 或影响你",
       "definitionStatus": "machine",
       "examples": {
         "the safety of the ship is the captain's concern": {
           "text": "舰只的安全是船长关心的",
-          "status": "machine"
-        }
-      }
-    },
-    "n:07524529": {
-      "definition": "一种焦虑的感觉",
-      "definitionStatus": "machine",
-      "examples": {
-        "care had aged him": {
-          "text": "照顾他长大了",
-          "status": "machine"
-        },
-        "they hushed it up out of fear of public reaction": {
-          "text": "他们因为害怕公众的反应而把它塞了起来",
           "status": "machine"
         }
       }
@@ -24369,6 +25494,65 @@
       "examples": {
         "The manuscript must be shortened": {
           "text": "手稿必须缩短",
+          "status": "machine"
+        }
+      }
+    },
+    "n:13855627": {
+      "definition": "比较的事物的对立或异性,\"反之\"",
+      "definitionStatus": "machine",
+      "examples": {
+        "in contrast to": {
+          "text": "相对比",
+          "status": "machine"
+        },
+        "by contrast": {
+          "text": "对比",
+          "status": "machine"
+        }
+      }
+    },
+    "n:00651813": {
+      "definition": "通过比较差异加以区分的行为",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:05748786": {
+      "definition": "概念上的分离或区分",
+      "definitionStatus": "machine",
+      "examples": {
+        "there is a narrow line between sanity and insanity": {
+          "text": "理智和精神错乱之间的界限很窄",
+          "status": "machine"
+        }
+      }
+    },
+    "n:05711084": {
+      "definition": "不同颜色并列的感知效应",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:05126362": {
+      "definition": "摄影阴性或印刷品上的光学密度和声调范围(或电视屏幕上相邻区域在亮度上的差异程度)",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "v:00661213": {
+      "definition": "提出反对以显示或强调差异",
+      "definitionStatus": "machine",
+      "examples": {
+        "The middle school teacher contrasted her best student's work with that of her weakest student": {
+          "text": "中学老师把她最好的学生的工作 和最弱小的学生的工作对比",
+          "status": "machine"
+        }
+      }
+    },
+    "v:02666882": {
+      "definition": "比较时显示差异; 不同",
+      "definitionStatus": "machine",
+      "examples": {
+        "the students contrast considerably in their artistic abilities": {
+          "text": "学生的艺术能力大相径庭",
           "status": "machine"
         }
       }
@@ -26451,6 +27635,71 @@
       "definition": "用于存储空间的小型房间(或休息室)或柜子",
       "definitionStatus": "machine",
       "examples": {}
+    },
+    "n:04074482": {
+      "definition": "治疗疾病或缓解疼痛的药品或疗法",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "v:00081725": {
+      "definition": "提供一种治疗方法,让身体恢复健康",
+      "definitionStatus": "machine",
+      "examples": {
+        "The treatment cured the boy's acne": {
+          "text": "治好男孩的疮疮",
+          "status": "machine"
+        },
+        "The quack pretended to heal patients but never managed to": {
+          "text": "那个蠢货假装治好病人但从未成功过",
+          "status": "machine"
+        }
+      }
+    },
+    "v:00527572": {
+      "definition": "通过干燥、加盐或化学加工来制备,以保存",
+      "definitionStatus": "machine",
+      "examples": {
+        "cure meats": {
+          "text": "治疗肉类",
+          "status": "machine"
+        },
+        "cure pickles": {
+          "text": "泡菜的解药",
+          "status": "machine"
+        },
+        "cure hay": {
+          "text": "治疗干草",
+          "status": "machine"
+        }
+      }
+    },
+    "v:00527935": {
+      "definition": "使物质变得坚硬,并提高其可用性;",
+      "definitionStatus": "machine",
+      "examples": {
+        "cure resin": {
+          "text": "治疗树脂",
+          "status": "machine"
+        },
+        "cure cement": {
+          "text": "水泥",
+          "status": "machine"
+        },
+        "cure soap": {
+          "text": "治疗肥皂",
+          "status": "machine"
+        }
+      }
+    },
+    "v:00527801": {
+      "definition": "被保存或被保存起来",
+      "definitionStatus": "machine",
+      "examples": {
+        "the apricots cure in the sun": {
+          "text": "杏仁在太阳中解药",
+          "status": "machine"
+        }
+      }
     },
     "v:00362128": {
       "definition": "形成卷曲、曲折或折叠",
@@ -28554,6 +29803,87 @@
       "definitionStatus": "machine",
       "examples": {}
     },
+    "n:05093890": {
+      "definition": "在强度或数量或质量尺度上的位置",
+      "definitionStatus": "machine",
+      "examples": {
+        "a moderate grade of intelligence": {
+          "text": "中等智力水平",
+          "status": "machine"
+        },
+        "a high level of care is required": {
+          "text": "需要高水平的护理;",
+          "status": "machine"
+        },
+        "it is all a matter of degree": {
+          "text": "这都是程度问题",
+          "status": "machine"
+        }
+      }
+    },
+    "n:13939892": {
+      "definition": "在连续体或系列中,特别是在一个过程中,特定可识别的位置;",
+      "definitionStatus": "machine",
+      "examples": {
+        "a remarkable degree of frankness": {
+          "text": "相当坦率",
+          "status": "machine"
+        },
+        "at what stage are the social sciences?": {
+          "text": "社会科学是哪个阶段的?",
+          "status": "machine"
+        }
+      }
+    },
+    "n:06697331": {
+      "definition": "学院或大学颁发的奖项,表明获得者令人满意地完成了学习课程;",
+      "definitionStatus": "machine",
+      "examples": {
+        "he earned his degree at Princeton summa cum laude": {
+          "text": "他在普林斯顿大学获得硕士学位 成绩优异",
+          "status": "machine"
+        }
+      }
+    },
+    "n:13611207": {
+      "definition": "弧和角度的测量",
+      "definitionStatus": "machine",
+      "examples": {
+        "there are 360 degrees in a circle": {
+          "text": "一个圆圈里有360度",
+          "status": "machine"
+        }
+      }
+    },
+    "n:05861317": {
+      "definition": "一个词或变量的最高功率",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:13714184": {
+      "definition": "在指定尺度上的温度单位",
+      "definitionStatus": "machine",
+      "examples": {
+        "the game was played in spite of the 40-degree temperature": {
+          "text": "游戏尽管温度为40度",
+          "status": "machine"
+        }
+      }
+    },
+    "n:05094565": {
+      "definition": "某物的严重性(如烧伤或犯罪)",
+      "definitionStatus": "machine",
+      "examples": {
+        "murder in the second degree": {
+          "text": "二等谋杀",
+          "status": "machine"
+        },
+        "a second degree burn": {
+          "text": "二度烧伤",
+          "status": "machine"
+        }
+      }
+    },
     "n:15272029": {
       "definition": "等待某些行动的时间",
       "definitionStatus": "machine",
@@ -28852,6 +30182,36 @@
       "definitionStatus": "machine",
       "examples": {}
     },
+    "n:07115493": {
+      "definition": "和口香糖脊附近的舌尖一致",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "a:02711098": {
+      "definition": "牙齿或与牙齿有关",
+      "definitionStatus": "machine",
+      "examples": {
+        "dental floss": {
+          "text": "牙线",
+          "status": "machine"
+        }
+      }
+    },
+    "a:02711194": {
+      "definition": "或与牙科有关",
+      "definitionStatus": "machine",
+      "examples": {
+        "dental student": {
+          "text": "牙科学生",
+          "status": "machine"
+        }
+      }
+    },
+    "n:10004282": {
+      "definition": "具有牙科执业资格的人。",
+      "definitionStatus": "project",
+      "examples": {}
+    },
     "n:00042757": {
       "definition": "离开行为",
       "definitionStatus": "machine",
@@ -28948,16 +30308,6 @@
         "stick your thumb in the crack": {
           "text": "把拇指伸进裂缝里",
           "status": "machine"
-        }
-      }
-    },
-    "v:02310855": {
-      "definition": "把钱存入银行账户。",
-      "definitionStatus": "project",
-      "examples": {
-        "She deposits her paycheck every month": {
-          "text": "她每月把工资存入银行。",
-          "status": "project"
         }
       }
     },
@@ -29086,28 +30436,6 @@
       "examples": {
         "the coach had a design on the doors": {
           "text": "教练在门上有个设计",
-          "status": "machine"
-        }
-      }
-    },
-    "n:05982152": {
-      "definition": "旨在或指导您计划的行动的预期成果",
-      "definitionStatus": "machine",
-      "examples": {
-        "his intent was to provide a new translation": {
-          "text": "他的用意是提供一个新的翻译",
-          "status": "machine"
-        },
-        "good intentions are not enough": {
-          "text": "善良的用意还不够",
-          "status": "machine"
-        },
-        "it was created with the conscious aim of answering immediate needs": {
-          "text": "它的创建有意识地旨在满足眼前的需要",
-          "status": "machine"
-        },
-        "he made no secret of his designs": {
-          "text": "他对自己的计划没有秘密",
           "status": "machine"
         }
       }
@@ -29813,6 +31141,21 @@
       "definitionStatus": "machine",
       "examples": {}
     },
+    "v:00645552": {
+      "definition": "通过诊断分析确定或区分问题或疾病的性质;",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "v:00645771": {
+      "definition": "经医学分析",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:00152727": {
+      "definition": "查明某些现象的性质或原因",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
     "n:03186399": {
       "definition": "用于解释某物如何工作的绘图; 显示各部分间关系的绘图",
       "definitionStatus": "machine",
@@ -29974,6 +31317,41 @@
           "status": "machine"
         }
       }
+    },
+    "n:07561112": {
+      "definition": "规定选用的一组食物。",
+      "definitionStatus": "project",
+      "examples": {}
+    },
+    "n:08318777": {
+      "definition": "某些国家(如日本)的立法议会",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:07560903": {
+      "definition": "某种生物，包括人或动物，平常摄入的食物和饮料。",
+      "definitionStatus": "project",
+      "examples": {}
+    },
+    "n:01070187": {
+      "definition": "限制食物摄入(或特定食物摄入)的行为",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "v:01190012": {
+      "definition": "为健康原因,遵守某种药理或饮食;",
+      "definitionStatus": "machine",
+      "examples": {
+        "He has high blood pressure and must stick to a low-salt diet": {
+          "text": "他有高血压,必须坚持低盐量饮食",
+          "status": "machine"
+        }
+      }
+    },
+    "v:01189224": {
+      "definition": "为健康或减重而少量进食。",
+      "definitionStatus": "project",
+      "examples": {}
     },
     "v:02666239": {
       "definition": "变换",
@@ -30190,6 +31568,98 @@
         }
       }
     },
+    "n:06593542": {
+      "definition": "汇总新闻的定期刊物。",
+      "definitionStatus": "project",
+      "examples": {}
+    },
+    "n:06593099": {
+      "definition": "被编译(作为单一的书或文件) 的东西",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "v:01197338": {
+      "definition": "把食物转变成可吸收的物质。",
+      "definitionStatus": "project",
+      "examples": {
+        "I cannot digest milk products": {
+          "text": "我不能消化乳制品。",
+          "status": "project"
+        }
+      }
+    },
+    "v:00590924": {
+      "definition": "在头脑中整理并整合。",
+      "definitionStatus": "project",
+      "examples": {
+        "I cannot digest all this information": {
+          "text": "我无法理解并吸收所有这些信息。",
+          "status": "project"
+        }
+      }
+    },
+    "v:00668099": {
+      "definition": "忍受一些不愉快的事情或别人",
+      "definitionStatus": "machine",
+      "examples": {
+        "I cannot bear his constant criticism": {
+          "text": "我受不了他不断的批评",
+          "status": "machine"
+        },
+        "The new secretary had to endure a lot of unprofessional remarks": {
+          "text": "新任秘书不得不忍受很多不专业的言论",
+          "status": "machine"
+        },
+        "he learned to tolerate the heat": {
+          "text": "他学会了忍受热量",
+          "status": "machine"
+        },
+        "She stuck out two years in a miserable marriage": {
+          "text": "她活了两年的婚姻很悲惨",
+          "status": "machine"
+        }
+      }
+    },
+    "v:00481555": {
+      "definition": "被同化到体内",
+      "definitionStatus": "machine",
+      "examples": {
+        "Protein digests in a few hours": {
+          "text": "几小时后蛋白质消化",
+          "status": "machine"
+        }
+      }
+    },
+    "v:00481391": {
+      "definition": "系统化,如分类和总结",
+      "definitionStatus": "machine",
+      "examples": {
+        "the government digested the entire law into a code": {
+          "text": "政府将整部法律消化成一部法典",
+          "status": "machine"
+        }
+      }
+    },
+    "v:00397987": {
+      "definition": "软化或消散,例如通过接触热或水分",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "v:00244625": {
+      "definition": "更加简洁",
+      "definitionStatus": "machine",
+      "examples": {
+        "condense the contents of a book into a summary": {
+          "text": "将书的内容压缩为摘要",
+          "status": "machine"
+        }
+      }
+    },
+    "v:00209420": {
+      "definition": "通过化学作用、热量或水分等手段软化或分解",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
     "a:02713232": {
       "definition": "显示数字而不是缩放位置",
       "definitionStatus": "machine",
@@ -30258,24 +31728,6 @@
         }
       }
     },
-    "v:01150559": {
-      "definition": "打算(某)向某个目标迈进",
-      "definitionStatus": "machine",
-      "examples": {
-        "He aimed his fists towards his opponent's face": {
-          "text": "他用拳头指着对手的脸",
-          "status": "machine"
-        },
-        "criticism directed at her superior": {
-          "text": "批评她的上司",
-          "status": "machine"
-        },
-        "direct your anger towards others, not towards yourself": {
-          "text": "将你的愤怒指向他人,而不是你自己",
-          "status": "machine"
-        }
-      }
-    },
     "v:01710317": {
       "definition": "指导(游戏和电影)中的演员",
       "definitionStatus": "machine",
@@ -30322,28 +31774,6 @@
         }
       }
     },
-    "v:01151110": {
-      "definition": "指向或导致(吹气、武器或摄影设备等物体)",
-      "definitionStatus": "machine",
-      "examples": {
-        "Please don't aim at your little brother!": {
-          "text": "请不要瞄准你的弟弟!",
-          "status": "machine"
-        },
-        "He trained his gun on the burglar": {
-          "text": "他用枪指着小偷",
-          "status": "machine"
-        },
-        "Don't train your camera on the women": {
-          "text": "别在女人身上训练相机",
-          "status": "machine"
-        },
-        "Take a swipe at one's opponent": {
-          "text": "给对手打个电话",
-          "status": "machine"
-        }
-      }
-    },
     "v:01732921": {
       "definition": "领导,如在组成中的表现",
       "definitionStatus": "machine",
@@ -30363,11 +31793,6 @@
           "status": "machine"
         }
       }
-    },
-    "v:00713015": {
-      "definition": "为某一公众专门设计产品、事件或活动",
-      "definitionStatus": "machine",
-      "examples": {}
     },
     "v:01931768": {
       "definition": "指导课程; 确定旅行方向;",
@@ -30798,6 +32223,16 @@
           "status": "machine"
         }
       }
+    },
+    "n:14446652": {
+      "definition": "紧张和痛苦的状态",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:07495973": {
+      "definition": "对精神痛苦或痛苦感到不舒服",
+      "definitionStatus": "machine",
+      "examples": {}
     },
     "n:00362103": {
       "definition": "降低商品销售价格的行为;",
@@ -31677,6 +33112,40 @@
     },
     "n:01888411": {
       "definition": "哺乳动物的成熟雌性,其中雄性称为“buck”",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:08556491": {
+      "definition": "统治或控制的领土",
+      "definitionStatus": "machine",
+      "examples": {
+        "his domain extended into Europe": {
+          "text": "他的领地延伸到了欧洲",
+          "status": "machine"
+        },
+        "he made it the law of the land": {
+          "text": "他把它变成国法",
+          "status": "machine"
+        }
+      }
+    },
+    "n:08000118": {
+      "definition": "(数学)函数定义的独立变量的一组值",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:07965937": {
+      "definition": "特别是具有某种共同利益的人群",
+      "definitionStatus": "machine",
+      "examples": {
+        "the Western world": {
+          "text": "西方世界",
+          "status": "machine"
+        }
+      }
+    },
+    "n:05999266": {
+      "definition": "特定知识领域的内容",
       "definitionStatus": "machine",
       "examples": {}
     },
@@ -33516,16 +34985,6 @@
         }
       }
     },
-    "v:01026975": {
-      "definition": "进入理想的谈话方向",
-      "definitionStatus": "machine",
-      "examples": {
-        "What are you driving at?": {
-          "text": "你开什么车?",
-          "status": "machine"
-        }
-      }
-    },
     "v:02742232": {
       "definition": "驱动时具有某些属性",
       "definitionStatus": "machine",
@@ -34615,6 +36074,11 @@
       "definitionStatus": "machine",
       "examples": {}
     },
+    "n:07565161": {
+      "definition": "餐饮的非正式用语",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
     "n:08565701": {
       "definition": "表面的边界",
       "definitionStatus": "machine",
@@ -35584,6 +37048,40 @@
       "definition": "陷入幻觉中",
       "definitionStatus": "machine",
       "examples": {}
+    },
+    "n:06503724": {
+      "definition": "插入书面记录的项目",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:00238022": {
+      "definition": "开始新事物的行为",
+      "definitionStatus": "machine",
+      "examples": {
+        "they looked forward to the debut of their new product line": {
+          "text": "他们期待新产品线的开始",
+          "status": "machine"
+        }
+      }
+    },
+    "n:13405296": {
+      "definition": "商业交易的书面记录;",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:07167578": {
+      "definition": "某物(手册或建筑图和模型或所有流派的估计或艺术品等)提交他人评断(如在比赛中)",
+      "definitionStatus": "machine",
+      "examples": {
+        "several of his submissions were rejected by publishers": {
+          "text": "他的几份呈文被出版商拒绝",
+          "status": "machine"
+        },
+        "what was the date of submission of your proposal?": {
+          "text": "您提交提案的日期是多少?",
+          "status": "machine"
+        }
+      }
     },
     "n:03291819": {
       "definition": "平面(通常是长方形)容器,用于信,薄包等.",
@@ -36697,6 +38195,40 @@
         }
       }
     },
+    "n:05707269": {
+      "definition": "故意不作为",
+      "definitionStatus": "machine",
+      "examples": {
+        "with the exception of the children, everyone was told the news": {
+          "text": "除了孩子们之外,每个人都被告知了这个消息。",
+          "status": "machine"
+        }
+      }
+    },
+    "n:05821246": {
+      "definition": "不符合规则或概论的情况",
+      "definitionStatus": "machine",
+      "examples": {
+        "all her children were brilliant; the only exception was her last child": {
+          "text": "她所有的孩子都很聪明 唯一的例外是她最后一个孩子",
+          "status": "machine"
+        },
+        "an exception tests the rule": {
+          "text": "一个例外测试规则",
+          "status": "machine"
+        }
+      }
+    },
+    "n:07209533": {
+      "definition": "提出负面批评的理由",
+      "definitionStatus": "machine",
+      "examples": {
+        "his authority is beyond exception": {
+          "text": "他的权力是不可例外的",
+          "status": "machine"
+        }
+      }
+    },
     "v:00615774": {
       "definition": "防止被列入、考虑或接受《公约》",
       "definitionStatus": "machine",
@@ -37718,6 +39250,16 @@
         }
       }
     },
+    "a:00234872": {
+      "definition": "面部或面部,尤其是特定种类或数字;经常组合使用",
+      "definitionStatus": "machine",
+      "examples": {
+        "a neatly faced terrace": {
+          "text": "一个整洁的露台",
+          "status": "machine"
+        }
+      }
+    },
     "n:03315023": {
       "definition": "提供某项服务或用于某一特定行业的建筑物或场所;",
       "definitionStatus": "machine",
@@ -38695,6 +40237,50 @@
         },
         "Silence fell": {
           "text": "安静下来了",
+          "status": "machine"
+        }
+      }
+    },
+    "s:02493137": {
+      "definition": "被重力所击落",
+      "definitionStatus": "machine",
+      "examples": {
+        "fallen leaves covered the forest floor": {
+          "text": "落叶覆盖林地",
+          "status": "machine"
+        },
+        "sat on a fallen tree trunk": {
+          "text": "坐在倒下的树干上",
+          "status": "machine"
+        }
+      }
+    },
+    "s:00736196": {
+      "definition": "坠入或倒塌",
+      "definitionStatus": "machine",
+      "examples": {
+        "a fallen building": {
+          "text": "倒塌的建筑物",
+          "status": "machine"
+        }
+      }
+    },
+    "s:00362173": {
+      "definition": "失去贞操",
+      "definitionStatus": "machine",
+      "examples": {
+        "a fallen woman": {
+          "text": "堕落的女人",
+          "status": "machine"
+        }
+      }
+    },
+    "s:00097577": {
+      "definition": "死在战场上",
+      "definitionStatus": "machine",
+      "examples": {
+        "to honor fallen soldiers": {
+          "text": "为牺牲的士兵致敬",
           "status": "machine"
         }
       }
@@ -39988,6 +41574,84 @@
         }
       }
     },
+    "n:14759275": {
+      "definition": "穿着的动物皮肤(特别是大型动物)",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:03326475": {
+      "definition": "通过翻转或叠合和缝合海床材料以避免粗糙边缘而制成的缝合物",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:00222376": {
+      "definition": "坠落的东西的行为(如树),",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "v:01258302": {
+      "definition": "导致坠落或仿佛击落",
+      "definitionStatus": "machine",
+      "examples": {
+        "strike down a tree": {
+          "text": "砍倒一棵树",
+          "status": "machine"
+        },
+        "Lightning struck down the hikers": {
+          "text": "闪电击倒了徒步者",
+          "status": "machine"
+        }
+      }
+    },
+    "v:02073065": {
+      "definition": "飞快地离开",
+      "definitionStatus": "machine",
+      "examples": {
+        "Time flies like an arrow": {
+          "text": "时光飞逝如箭",
+          "status": "machine"
+        },
+        "Time fleeing beneath him": {
+          "text": "在他下面逃难的时间",
+          "status": "machine"
+        }
+      }
+    },
+    "v:01331237": {
+      "definition": "通过折叠边缘来缝合",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "s:01263013": {
+      "definition": "(个人或其行为)能够或愿意造成疼痛或痛苦的",
+      "definitionStatus": "machine",
+      "examples": {
+        "a barbarous crime": {
+          "text": "野蛮的罪行",
+          "status": "machine"
+        },
+        "brutal beatings": {
+          "text": "残酷的殴打",
+          "status": "machine"
+        },
+        "cruel tortures": {
+          "text": "残忍的酷刑",
+          "status": "machine"
+        },
+        "Stalin's roughshod treatment of the kulaks": {
+          "text": "斯大林的粗糙的治疗 乌拉克人",
+          "status": "machine"
+        },
+        "a savage slap": {
+          "text": "野蛮的一巴掌",
+          "status": "machine"
+        },
+        "vicious kicks": {
+          "text": "恶毒的脚踢",
+          "status": "machine"
+        }
+      }
+    },
     "n:03326795": {
       "definition": "用压缩的垫状动物纤维制成的织物",
       "definitionStatus": "machine",
@@ -40604,6 +42268,40 @@
           "status": "machine"
         }
       }
+    },
+    "n:13480541": {
+      "definition": "流入某物(作为容器)",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:07883031": {
+      "definition": "用于填充糕点或三明治等的食品混合物。",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:04598965": {
+      "definition": "编织在编织中横跨曲线的线条",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:03338287": {
+      "definition": "(凹痕)由各种物质(金属或塑料)组成的牙科器械,插入牙制腔内;",
+      "definitionStatus": "machine",
+      "examples": {
+        "when he yawned I could see the gold fillings in his teeth": {
+          "text": "当他打哈欠时,我可以看到他牙齿上的金块",
+          "status": "machine"
+        },
+        "an informal British term for `filling' is `stopping'": {
+          "text": "英国非正式的“填充”一词是“停止”",
+          "status": "machine"
+        }
+      }
+    },
+    "n:00402535": {
+      "definition": "填充东西的行为",
+      "definitionStatus": "machine",
+      "examples": {}
     },
     "n:03339643": {
       "definition": "设备可以清除任何经过它的东西",
@@ -43704,6 +45402,30 @@
         }
       }
     },
+    "n:15278281": {
+      "definition": "在特定时期内发生的次数",
+      "definitionStatus": "machine",
+      "examples": {
+        "the frequency of modulation was 40 cycles per second": {
+          "text": "调制频率为每秒40个周期",
+          "status": "machine"
+        },
+        "the frequency of his seizures increased as he grew older": {
+          "text": "随着年龄的增长,他的癫痫发作频率增加",
+          "status": "machine"
+        }
+      }
+    },
+    "n:13821570": {
+      "definition": "统计类别中观测数量与观测总量之比",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:13598237": {
+      "definition": "特定统计类别中的观测数量",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
     "a:01067694": {
       "definition": "最近生产、生产或收获的",
       "definitionStatus": "machine",
@@ -44215,20 +45937,6 @@
         },
         "a full voice": {
           "text": "一个完整的声音",
-          "status": "machine"
-        }
-      }
-    },
-    "s:01211531": {
-      "definition": "处于顶点或终点",
-      "definitionStatus": "machine",
-      "examples": {
-        "broad daylight": {
-          "text": "光天化日之下",
-          "status": "machine"
-        },
-        "full summer": {
-          "text": "整个夏天",
           "status": "machine"
         }
       }
@@ -46623,24 +48331,6 @@
         }
       }
     },
-    "n:05093890": {
-      "definition": "在强度或数量或质量尺度上的位置",
-      "definitionStatus": "machine",
-      "examples": {
-        "a moderate grade of intelligence": {
-          "text": "中等智力水平",
-          "status": "machine"
-        },
-        "a high level of care is required": {
-          "text": "需要高水平的护理;",
-          "status": "machine"
-        },
-        "it is all a matter of degree": {
-          "text": "这都是程度问题",
-          "status": "machine"
-        }
-      }
-    },
     "n:02406952": {
       "definition": "与优异品种交织而成的各种牛种.",
       "definitionStatus": "machine",
@@ -46962,20 +48652,136 @@
         }
       }
     },
+    "a:01395330": {
+      "definition": "规模或重要性或程度较大的",
+      "definitionStatus": "machine",
+      "examples": {
+        "for the greater good of the community": {
+          "text": "为了社会更大的利益",
+          "status": "machine"
+        },
+        "the greater Antilles": {
+          "text": "大安的列斯群岛",
+          "status": "machine"
+        }
+      }
+    },
+    "s:01386883": {
+      "definition": "体积或数量或范围相对较大;大于其他同类;",
+      "definitionStatus": "machine",
+      "examples": {
+        "a great juicy steak": {
+          "text": "丰满的牛排",
+          "status": "machine"
+        },
+        "a great multitude": {
+          "text": "众多的人,",
+          "status": "machine"
+        },
+        "the great auk": {
+          "text": "伟大的Auk",
+          "status": "machine"
+        },
+        "a great old oak": {
+          "text": "一个伟大的老橡树",
+          "status": "machine"
+        },
+        "a great ocean liner": {
+          "text": "伟大的远洋班轮",
+          "status": "machine"
+        },
+        "a great delay": {
+          "text": "严重拖延",
+          "status": "machine"
+        }
+      }
+    },
+    "s:01278818": {
+      "definition": "具有重大意义或重要性的",
+      "definitionStatus": "machine",
+      "examples": {
+        "a great work of art": {
+          "text": "伟大的艺术作品",
+          "status": "machine"
+        },
+        "Einstein was one of the outstanding figures of the 20th centurey": {
+          "text": "爱因斯坦是20世纪杰出人物之一",
+          "status": "machine"
+        }
+      }
+    },
+    "s:01677433": {
+      "definition": "在程度或程度或效果方面显著或超出一般水平",
+      "definitionStatus": "machine",
+      "examples": {
+        "a great crisis": {
+          "text": "一场大危机",
+          "status": "machine"
+        },
+        "had a great stake in the outcome": {
+          "text": "和结果息息相关",
+          "status": "machine"
+        }
+      }
+    },
+    "s:01123879": {
+      "definition": "不错",
+      "definitionStatus": "machine",
+      "examples": {
+        "he did a bully job": {
+          "text": "他做恶行",
+          "status": "machine"
+        },
+        "a neat sports car": {
+          "text": "一辆整洁的运动车",
+          "status": "machine"
+        },
+        "had a great time at the party": {
+          "text": "在派对上玩得很开心",
+          "status": "machine"
+        },
+        "you look simply smashing": {
+          "text": "你看上去简直是一塌糊涂",
+          "status": "machine"
+        }
+      }
+    },
+    "s:01467919": {
+      "definition": "大写",
+      "definitionStatus": "machine",
+      "examples": {
+        "capital A": {
+          "text": "首府A",
+          "status": "machine"
+        },
+        "great A": {
+          "text": "伟大的A",
+          "status": "machine"
+        },
+        "many medieval manuscripts are in majuscule script": {
+          "text": "许多中世纪的手稿都写在毛骨悚然的脚本里",
+          "status": "machine"
+        }
+      }
+    },
+    "s:00173391": {
+      "definition": "怀孕后阶段",
+      "definitionStatus": "machine",
+      "examples": {
+        "was big with child": {
+          "text": "和孩子一起长大的",
+          "status": "machine"
+        },
+        "was great with child": {
+          "text": "和孩子相处得很好",
+          "status": "machine"
+        }
+      }
+    },
     "n:04967191": {
       "definition": "绿色或色素; 类似生长草的颜色",
       "definitionStatus": "machine",
       "examples": {}
-    },
-    "n:08615374": {
-      "definition": "一块在城市地区供娱乐用途的空地",
-      "definitionStatus": "machine",
-      "examples": {
-        "they went for a walk in the park": {
-          "text": "他们去公园散步了",
-          "status": "machine"
-        }
-      }
     },
     "n:11013324": {
       "definition": "美国劳工领袖,1924年至1952年担任美国劳工联合会主席,并领导与工业组织大会的斗争(1873-1952).",
@@ -47083,6 +48889,36 @@
       "examples": {
         "at that early age she had been gullible and in love": {
           "text": "那时她还很幼稚 却在爱中被欺骗",
+          "status": "machine"
+        }
+      }
+    },
+    "v:00897241": {
+      "definition": "向某人致以问候",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "v:00897125": {
+      "definition": "向您问好",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "v:00718907": {
+      "definition": "以某种方式作出反应",
+      "definitionStatus": "machine",
+      "examples": {
+        "The President was greeted with catcalls": {
+          "text": "总统受到催促的欢迎",
+          "status": "machine"
+        }
+      }
+    },
+    "v:02197505": {
+      "definition": "被人们视为",
+      "definitionStatus": "machine",
+      "examples": {
+        "Loud music greeted him when he entered the apartment": {
+          "text": "当他进入公寓时,大声的音乐问候他",
           "status": "machine"
         }
       }
@@ -47731,6 +49567,74 @@
         }
       }
     },
+    "v:00890100": {
+      "definition": "给予担保或承担责任;",
+      "definitionStatus": "machine",
+      "examples": {
+        "I vouch for the quality of my products": {
+          "text": "我保证我的产品质量",
+          "status": "machine"
+        }
+      }
+    },
+    "v:00890590": {
+      "definition": "确定",
+      "definitionStatus": "machine",
+      "examples": {
+        "This nest egg will ensure a nice retirement for us": {
+          "text": "这个鸟蛋能保证我们退休",
+          "status": "machine"
+        },
+        "Preparation will guarantee success!": {
+          "text": "准备会保证成功!",
+          "status": "machine"
+        }
+      }
+    },
+    "v:00889555": {
+      "definition": "承诺做或完成",
+      "definitionStatus": "machine",
+      "examples": {
+        "guarantee to free the prisoners": {
+          "text": "保证释放囚犯;",
+          "status": "machine"
+        }
+      }
+    },
+    "v:00891936": {
+      "definition": "支持并保证质量、准确性或条件",
+      "definitionStatus": "machine",
+      "examples": {
+        "The dealer warrants all the cars he sells": {
+          "text": "庄家把卖的车都开出来",
+          "status": "machine"
+        },
+        "I warrant this information": {
+          "text": "我得到这个消息",
+          "status": "machine"
+        }
+      }
+    },
+    "n:06685456": {
+      "definition": "书面保证提供某些产品或服务或满足某些规格;",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:06686174": {
+      "definition": "无条件承诺 某事将会发生 或某事是真的",
+      "definitionStatus": "machine",
+      "examples": {
+        "there is no guarantee that they are not lying": {
+          "text": "他们不能保证不说谎,",
+          "status": "machine"
+        }
+      }
+    },
+    "n:13353004": {
+      "definition": "在发生另一人违约时偿还其债务的担保协议;",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
     "n:06782680": {
       "definition": "根据不完整证据发表意见的信息",
       "definitionStatus": "machine",
@@ -47881,6 +49785,64 @@
           "status": "machine"
         }
       }
+    },
+    "n:05669034": {
+      "definition": "既定的习惯",
+      "definitionStatus": "machine",
+      "examples": {
+        "it was their habit to dine at 7 every evening": {
+          "text": "他们习惯每晚七点吃饭",
+          "status": "machine"
+        }
+      }
+    },
+    "n:00414179": {
+      "definition": "(心理)一种针对特定情况的行为自动规律;可能通过频繁重复继承或获得.",
+      "definitionStatus": "machine",
+      "examples": {
+        "owls have nocturnal habits": {
+          "text": "猫头鹰有夜行习惯",
+          "status": "machine"
+        },
+        "she had a habit twirling the ends of her hair": {
+          "text": "她有一个习惯,在头发的尽头旋转",
+          "status": "machine"
+        },
+        "long use had hardened him to it": {
+          "text": "久久的用法使他硬了起来",
+          "status": "machine"
+        }
+      }
+    },
+    "n:03473966": {
+      "definition": "宗教教团成员穿戴的有特色的服装;",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:13490909": {
+      "definition": "一般生长形式或模式(特别是植物或晶体)",
+      "definitionStatus": "machine",
+      "examples": {
+        "a shrub of spreading habit": {
+          "text": "一种传播习惯的灌木",
+          "status": "machine"
+        }
+      }
+    },
+    "n:03474167": {
+      "definition": "通常由骑马者(尤其是女性的着装)佩戴的服装.",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:00947923": {
+      "definition": "滥用毒品",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "v:00049102": {
+      "definition": "穿上个习惯",
+      "definitionStatus": "machine",
+      "examples": {}
     },
     "v:02203362": {
       "definition": "在具体或抽象意义上拥有或拥有",
@@ -48382,24 +50344,6 @@
       "examples": {
         "a hand-held computer": {
           "text": "手持计算机",
-          "status": "machine"
-        }
-      }
-    },
-    "v:02436349": {
-      "definition": "负责、实施或处置",
-      "definitionStatus": "machine",
-      "examples": {
-        "I can deal with this crew of workers": {
-          "text": "我可以对付这帮工人",
-          "status": "machine"
-        },
-        "This blender can't handle nuts": {
-          "text": "这个搅拌机不能处理坚果",
-          "status": "machine"
-        },
-        "She managed her parents' affairs after they got too old": {
-          "text": "她父母太老了,她管理着自己的事",
           "status": "machine"
         }
       }
@@ -50031,20 +51975,6 @@
         }
       }
     },
-    "s:00173391": {
-      "definition": "怀孕后阶段",
-      "definitionStatus": "machine",
-      "examples": {
-        "was big with child": {
-          "text": "和孩子一起长大的",
-          "status": "machine"
-        },
-        "was great with child": {
-          "text": "和孩子相处得很好",
-          "status": "machine"
-        }
-      }
-    },
     "r:00355615": {
       "definition": "慢慢地,好像承受了很多重担",
       "definitionStatus": "machine",
@@ -50445,34 +52375,6 @@
         }
       }
     },
-    "v:02547586": {
-      "definition": "(b) 提供帮助或协助;",
-      "definitionStatus": "machine",
-      "examples": {
-        "Everyone helped out during the earthquake": {
-          "text": "大家都在地震中帮忙",
-          "status": "machine"
-        },
-        "Can you help me carry this table?": {
-          "text": "你能帮我搬这个桌子吗?",
-          "status": "machine"
-        },
-        "She never helps around the house": {
-          "text": "她从不帮家里的人",
-          "status": "machine"
-        }
-      }
-    },
-    "v:00082081": {
-      "definition": "改善儿童状况",
-      "definitionStatus": "machine",
-      "examples": {
-        "These pills will help the patient": {
-          "text": "这些药丸能帮助病人",
-          "status": "machine"
-        }
-      }
-    },
     "v:02735897": {
       "definition": "可用时间",
       "definitionStatus": "machine",
@@ -50636,11 +52538,6 @@
           "status": "machine"
         }
       }
-    },
-    "n:14759275": {
-      "definition": "穿着的动物皮肤(特别是大型动物)",
-      "definitionStatus": "machine",
-      "examples": {}
     },
     "n:01895735": {
       "definition": "尸体覆盖活的动物",
@@ -51230,6 +53127,71 @@
       "definitionStatus": "machine",
       "examples": {}
     },
+    "n:10187130": {
+      "definition": "(a)邀请来宾参加社交活动(如在自己家里的聚会)并在那里负责的人;",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:08182962": {
+      "definition": "众多的人",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:01385527": {
+      "definition": "(a) 滋养和支持寄生虫的动物或植物;",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:10299250": {
+      "definition": "在正式场合担任主持人的人(作介绍性发言并介绍其他发言者)",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:08183802": {
+      "definition": "军队陈旧的术语",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:08481184": {
+      "definition": "为某项职能或活动提供资源和便利的任何组织",
+      "definitionStatus": "machine",
+      "examples": {
+        "Atlanta was chosen to be host for the Olympic Games": {
+          "text": "亚特兰大被选为奥运会的东道主",
+          "status": "machine"
+        }
+      }
+    },
+    "n:10187356": {
+      "definition": "(医疗)接受捐赠者移植的组织或器官",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:10186774": {
+      "definition": "客栈的所有人或经理;",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:07683138": {
+      "definition": "用于弥撒或圣餐的面包的技术名称;",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:04175147": {
+      "definition": "(计算机科学) 向客户站提供查阅文件和打印机的计算机网络共享资源的计算机",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "v:01194418": {
+      "definition": "成为东道主或为",
+      "definitionStatus": "machine",
+      "examples": {
+        "We hosted 4 couples last night": {
+          "text": "我们昨晚招待了四对夫妇",
+          "status": "machine"
+        }
+      }
+    },
     "n:03541696": {
       "definition": "一家旅馆,为旅行者提供过夜住宿",
       "definitionStatus": "machine",
@@ -51579,6 +53541,139 @@
           "status": "machine"
         }
       }
+    },
+    "n:14285662": {
+      "definition": "由暴力、事故、骨折等造成的任何身体损伤。",
+      "definitionStatus": "project",
+      "examples": {}
+    },
+    "n:07496463": {
+      "definition": "心理痛苦",
+      "definitionStatus": "machine",
+      "examples": {
+        "the death of his wife caused him great distress": {
+          "text": "他妻子的死给他带来了极大的痛苦",
+          "status": "machine"
+        }
+      }
+    },
+    "n:07495327": {
+      "definition": "精神或身体痛苦的感觉",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:07420538": {
+      "definition": "损害或损失",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "v:02122164": {
+      "definition": "成为痛苦的根源",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "v:00064643": {
+      "definition": "给人麻烦或痛苦",
+      "definitionStatus": "machine",
+      "examples": {
+        "This exercise will hurt your back": {
+          "text": "这次锻炼会伤到你的背",
+          "status": "machine"
+        }
+      }
+    },
+    "v:01792567": {
+      "definition": "造成精神痛苦或痛苦",
+      "definitionStatus": "machine",
+      "examples": {
+        "It pains me to see my children not being taught well in school": {
+          "text": "看到孩子们在学校里教得不好,我感到很痛心",
+          "status": "machine"
+        }
+      }
+    },
+    "v:00260470": {
+      "definition": "造成损害或消极影响",
+      "definitionStatus": "machine",
+      "examples": {
+        "Our business was hurt by the new competition": {
+          "text": "我们的生意因为新的竞争而受了伤",
+          "status": "machine"
+        }
+      }
+    },
+    "v:01793177": {
+      "definition": "伤害的感情,",
+      "definitionStatus": "machine",
+      "examples": {
+        "She hurt me when she did not include me among her guests": {
+          "text": "她没有把我包括在她的客人中,就伤害了我",
+          "status": "machine"
+        },
+        "This remark really bruised my ego": {
+          "text": "这话真的伤了我的自尊心",
+          "status": "machine"
+        }
+      }
+    },
+    "v:02121511": {
+      "definition": "感觉身体疼痛",
+      "definitionStatus": "machine",
+      "examples": {
+        "Were you hurting after the accident?": {
+          "text": "事故后你受伤了吗?",
+          "status": "machine"
+        }
+      }
+    },
+    "v:00065070": {
+      "definition": "感觉痛苦或痛苦",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "s:01318741": {
+      "definition": "遭受身体伤害,特别是在战斗中遭受的伤害",
+      "definitionStatus": "machine",
+      "examples": {
+        "nursing his wounded arm": {
+          "text": "照顾他受伤的手臂",
+          "status": "machine"
+        },
+        "ambulances...for the hurt men and women": {
+          "text": "救护车...为受伤的男女提供",
+          "status": "machine"
+        }
+      }
+    },
+    "s:00680532": {
+      "definition": "损坏的无生命物体或其价值",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:14322699": {
+      "definition": "某种身体伤害或障碍的症状;",
+      "definitionStatus": "machine",
+      "examples": {
+        "the patient developed severe pain and distension": {
+          "text": "病人患了剧烈的疼痛和脱节",
+          "status": "machine"
+        }
+      }
+    },
+    "n:14495080": {
+      "definition": "促进卫生做法的状态。",
+      "definitionStatus": "project",
+      "examples": {
+        "personal hygiene": {
+          "text": "个人卫生。",
+          "status": "project"
+        }
+      }
+    },
+    "n:06051380": {
+      "definition": "与预防疾病和保持健康有关的科学",
+      "definitionStatus": "machine",
+      "examples": {}
     },
     "n:14641397": {
       "definition": "属于卤素的非金属元素; 特别是在医药、摄影和染料中使用; 自然只在少量(如在海水或岩石中)的组合中出现。",
@@ -52381,6 +54476,31 @@
         }
       }
     },
+    "v:00636574": {
+      "definition": "理由的扣减;通过扣减确定",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "v:01022420": {
+      "definition": "取自较普通案件的具体案例",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "v:00944924": {
+      "definition": "通过推理得出结论;在逻辑中",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "v:00593522": {
+      "definition": "相信是这样的",
+      "definitionStatus": "machine",
+      "examples": {
+        "I understand you have no previous experience?": {
+          "text": "我知道你没有以前的经验吗?",
+          "status": "machine"
+        }
+      }
+    },
     "v:00831651": {
       "definition": "将某些事实、状况或事务或事件的知识传授给",
       "definitionStatus": "machine",
@@ -52475,6 +54595,26 @@
           "status": "machine"
         }
       }
+    },
+    "n:07313636": {
+      "definition": "造成人身伤害或伤害的事故;",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:07340249": {
+      "definition": "a 军事人员因战斗造成的伤亡。",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:00744443": {
+      "definition": "造成某人或某物遭受身体损害的行为;",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:00744305": {
+      "definition": "侵犯他人权利、被不公正地施加的错误行为。",
+      "definitionStatus": "project",
+      "examples": {}
     },
     "n:08588294": {
       "definition": "属于某事物的区域",
@@ -52782,6 +54922,90 @@
       "definition": "收集敌方情报的行动",
       "definitionStatus": "machine",
       "examples": {}
+    },
+    "v:00708538": {
+      "definition": "以心为宗旨",
+      "definitionStatus": "machine",
+      "examples": {
+        "I mean no harm": {
+          "text": "我意思是不会伤害你",
+          "status": "machine"
+        },
+        "I only meant to help you": {
+          "text": "我只是想帮你",
+          "status": "machine"
+        },
+        "She didn't think to harm me": {
+          "text": "她没想过要伤害我",
+          "status": "machine"
+        },
+        "We thought to return early that night": {
+          "text": "那晚我们想早点回来",
+          "status": "machine"
+        }
+      }
+    },
+    "v:00709379": {
+      "definition": "设计或断层",
+      "definitionStatus": "machine",
+      "examples": {
+        "She was intended to become the director": {
+          "text": "她本来想当导演的",
+          "status": "machine"
+        }
+      }
+    },
+    "v:00955148": {
+      "definition": "意指或打算表示或传达",
+      "definitionStatus": "machine",
+      "examples": {
+        "You never understand what I mean!": {
+          "text": "你永远不明白我的意思!",
+          "status": "machine"
+        },
+        "what do his words intend?": {
+          "text": "他的话有什么用?",
+          "status": "machine"
+        }
+      }
+    },
+    "v:00931852": {
+      "definition": "表示或缩写",
+      "definitionStatus": "machine",
+      "examples": {
+        "`maison' means `house' in French": {
+          "text": "`maison'在法语中意为`house'",
+          "status": "machine"
+        },
+        "An example sentence would show what this word means": {
+          "text": "举例来说,这个词意味着什么",
+          "status": "machine"
+        }
+      }
+    },
+    "a:01337486": {
+      "definition": "个人意图造成的伤害",
+      "definitionStatus": "machine",
+      "examples": {
+        "your intended trip abroad": {
+          "text": "您的出国旅行计划",
+          "status": "machine"
+        },
+        "an intended insult": {
+          "text": "故意侮辱",
+          "status": "machine"
+        }
+      }
+    },
+    "s:00158238": {
+      "definition": "未来;订婚",
+      "definitionStatus": "machine",
+      "examples": {
+        "his intended bride": {
+          "text": "{\\fn黑体\\fs20\\shad2\\2aH82\\3aH20\\4aH33\\fscx95\\3cH592001\\be1}他的未婚妻{\\fn黑体\\fs20\\shad2\\2aH82\\3aH20\\4aH33\\fscx95\\3cH592001\\be1}他的未婚妻",
+          "status": "machine"
+        }
+      }
     },
     "s:02372697": {
       "definition": "(数学,逻辑)这样可以交换参数或角色.",
@@ -53140,6 +55364,46 @@
       "examples": {
         "The community warmly received the refugees": {
           "text": "社区热情接待难民",
+          "status": "machine"
+        }
+      }
+    },
+    "v:02677567": {
+      "definition": "以参与者身份参与",
+      "definitionStatus": "machine",
+      "examples": {
+        "Don't involve me in your family affairs!": {
+          "text": "别把我扯进你的家庭事务里!",
+          "status": "machine"
+        }
+      }
+    },
+    "v:02633218": {
+      "definition": "包含为部分",
+      "definitionStatus": "machine",
+      "examples": {
+        "Dinner at Joe's always involves at least six courses": {
+          "text": "在乔家吃晚饭总有六门课",
+          "status": "machine"
+        }
+      }
+    },
+    "v:00600724": {
+      "definition": "拥有或涉及",
+      "definitionStatus": "machine",
+      "examples": {
+        "His story completely involved me during the entire afternoon": {
+          "text": "他的故事完全涉及我整个下午",
+          "status": "machine"
+        }
+      }
+    },
+    "v:00401538": {
+      "definition": "制造复杂或复杂或复杂",
+      "definitionStatus": "machine",
+      "examples": {
+        "The situation was rather involved": {
+          "text": "情况相当复杂",
           "status": "machine"
         }
       }
@@ -54312,6 +56576,21 @@
     },
     "n:03619890": {
       "definition": "准备膳食的房间;",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:05573602": {
+      "definition": "人腿上的关节 连接着股骨和股骨 并在前部受到肉腺的保护",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:02464065": {
+      "definition": "股骨和头骨之间的关节在四角形;与人的膝盖相对应。",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:03622698": {
+      "definition": "用来遮盖膝盖的布料",
       "definitionStatus": "machine",
       "examples": {}
     },
@@ -56130,6 +58409,44 @@
         }
       }
     },
+    "n:05671526": {
+      "definition": "无关紧要的东西",
+      "definitionStatus": "machine",
+      "examples": {
+        "it is the least I can do": {
+          "text": "这是我唯一能做的",
+          "status": "machine"
+        },
+        "that is the least of my concerns": {
+          "text": "这是我最不关心的",
+          "status": "machine"
+        }
+      }
+    },
+    "a:01556061": {
+      "definition": "“小”的叠加词,可与质量名词一起使用,通常前加“the”; 限定词,指数量或程度或程度最小的",
+      "definitionStatus": "machine",
+      "examples": {
+        "didn't care the least bit": {
+          "text": "一点都不在乎",
+          "status": "machine"
+        },
+        "he has the least talent of anyone": {
+          "text": "他最没有天赋的人",
+          "status": "machine"
+        }
+      }
+    },
+    "r:00111758": {
+      "definition": "用于形成超线性",
+      "definitionStatus": "machine",
+      "examples": {
+        "The garter snake is the least dangerous snake": {
+          "text": "吊带蛇是最危险的蛇",
+          "status": "machine"
+        }
+      }
+    },
     "n:15139130": {
       "definition": "工作或工作期间;",
       "definitionStatus": "machine",
@@ -56428,6 +58745,11 @@
     },
     "n:03666362": {
       "definition": "二极管使p-n交汇点发射的光线与偏移电流成正比;颜色取决于所使用的材料",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:09337253": {
+      "definition": "投射山脊或水下沉没",
       "definitionStatus": "machine",
       "examples": {}
     },
@@ -56736,20 +59058,6 @@
       "examples": {
         "let it be": {
           "text": "随心所欲",
-          "status": "machine"
-        }
-      }
-    },
-    "n:13939892": {
-      "definition": "在连续体或系列中,特别是在一个过程中,特定可识别的位置;",
-      "definitionStatus": "machine",
-      "examples": {
-        "a remarkable degree of frankness": {
-          "text": "相当坦率",
-          "status": "machine"
-        },
-        "at what stage are the social sciences?": {
-          "text": "社会科学是哪个阶段的?",
           "status": "machine"
         }
       }
@@ -57900,20 +60208,6 @@
         }
       }
     },
-    "v:01824736": {
-      "definition": "喜欢或希望做一些事情",
-      "definitionStatus": "machine",
-      "examples": {
-        "Do you care to try this dish?": {
-          "text": "你想尝尝这菜吗?",
-          "status": "machine"
-        },
-        "Would you like to come along to the movies?": {
-          "text": "你想一起去看电影吗?",
-          "status": "machine"
-        }
-      }
-    },
     "v:01777210": {
       "definition": "发现快乐或同意",
       "definitionStatus": "machine",
@@ -58481,16 +60775,6 @@
       "examples": {
         "drop me a line when you get there": {
           "text": "等你们到了再给我划一条线",
-          "status": "machine"
-        }
-      }
-    },
-    "n:05748786": {
-      "definition": "概念上的分离或区分",
-      "definitionStatus": "machine",
-      "examples": {
-        "there is a narrow line between sanity and insanity": {
-          "text": "理智和精神错乱之间的界限很窄",
           "status": "machine"
         }
       }
@@ -59824,24 +62108,6 @@
         }
       }
     },
-    "v:02549581": {
-      "definition": "负责或处理",
-      "definitionStatus": "machine",
-      "examples": {
-        "Could you see about lunch?": {
-          "text": "你能看看午餐吗?",
-          "status": "machine"
-        },
-        "I must attend to this matter": {
-          "text": "我一定要处理这件事",
-          "status": "machine"
-        },
-        "She took care of this business": {
-          "text": "她处理好这个生意了",
-          "status": "machine"
-        }
-      }
-    },
     "v:00929362": {
       "definition": "以表达方式表达",
       "definitionStatus": "machine",
@@ -60089,16 +62355,6 @@
         }
       }
     },
-    "n:07946694": {
-      "definition": "命中注定要死的人",
-      "definitionStatus": "machine",
-      "examples": {
-        "the agony of the doomed was in his voice": {
-          "text": "末日的痛苦就在他的声音里",
-          "status": "machine"
-        }
-      }
-    },
     "v:02287789": {
       "definition": "未能保留或维持;在身体上或抽象意义上不再保留;",
       "definitionStatus": "machine",
@@ -60216,6 +62472,97 @@
       "examples": {
         "This author really suffers in translation": {
           "text": "这个作者在翻译上确实很痛苦",
+          "status": "machine"
+        }
+      }
+    },
+    "n:13327676": {
+      "definition": "失去的东西",
+      "definitionStatus": "machine",
+      "examples": {
+        "the car was a total loss": {
+          "text": "这辆车是全损的",
+          "status": "machine"
+        },
+        "loss of livestock left the rancher bankrupt": {
+          "text": "牲畜损失使牧场主破产",
+          "status": "machine"
+        }
+      }
+    },
+    "n:13509196": {
+      "definition": "数量或活动逐步减少",
+      "definitionStatus": "machine",
+      "examples": {
+        "weight loss": {
+          "text": "减重",
+          "status": "machine"
+        },
+        "a serious loss of business": {
+          "text": "商业严重损失",
+          "status": "machine"
+        }
+      }
+    },
+    "n:00067526": {
+      "definition": "失去一个人或东西的行为",
+      "definitionStatus": "machine",
+      "examples": {
+        "everyone expected him to win so his loss was a shock": {
+          "text": "大家都希望他能赢所以他的损失是震撼",
+          "status": "machine"
+        }
+      }
+    },
+    "n:05162985": {
+      "definition": "失去东西造成的不利条件",
+      "definitionStatus": "machine",
+      "examples": {
+        "his loss of credibility led to his resignation": {
+          "text": "失去信誉导致他辞职",
+          "status": "machine"
+        },
+        "losing him is no great deprivation": {
+          "text": "失去他并不是什么穷困",
+          "status": "machine"
+        }
+      }
+    },
+    "n:07287472": {
+      "definition": "失去爱人的经历",
+      "definitionStatus": "machine",
+      "examples": {
+        "he sympathized on the loss of their grandfather": {
+          "text": "他同情他们祖父的去世",
+          "status": "machine"
+        }
+      }
+    },
+    "n:13327231": {
+      "definition": "企业成本超过收入的金额;",
+      "definitionStatus": "machine",
+      "examples": {
+        "the company operated at a loss last year": {
+          "text": "公司去年亏损了",
+          "status": "machine"
+        },
+        "the company operated in the red last year": {
+          "text": "公司去年在红旗下运营",
+          "status": "machine"
+        }
+      }
+    },
+    "n:07340725": {
+      "definition": "因死亡或被俘而损失的军事人员",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:07946694": {
+      "definition": "命中注定要死的人",
+      "definitionStatus": "machine",
+      "examples": {
+        "the agony of the doomed was in his voice": {
+          "text": "末日的痛苦就在他的声音里",
           "status": "machine"
         }
       }
@@ -62388,56 +64735,6 @@
       "definitionStatus": "machine",
       "examples": {}
     },
-    "v:00955148": {
-      "definition": "意指或打算表示或传达",
-      "definitionStatus": "machine",
-      "examples": {
-        "You never understand what I mean!": {
-          "text": "你永远不明白我的意思!",
-          "status": "machine"
-        },
-        "what do his words intend?": {
-          "text": "他的话有什么用?",
-          "status": "machine"
-        }
-      }
-    },
-    "v:00931852": {
-      "definition": "表示或缩写",
-      "definitionStatus": "machine",
-      "examples": {
-        "`maison' means `house' in French": {
-          "text": "`maison'在法语中意为`house'",
-          "status": "machine"
-        },
-        "An example sentence would show what this word means": {
-          "text": "举例来说,这个词意味着什么",
-          "status": "machine"
-        }
-      }
-    },
-    "v:00708538": {
-      "definition": "以心为宗旨",
-      "definitionStatus": "machine",
-      "examples": {
-        "I mean no harm": {
-          "text": "我意思是不会伤害你",
-          "status": "machine"
-        },
-        "I only meant to help you": {
-          "text": "我只是想帮你",
-          "status": "machine"
-        },
-        "She didn't think to harm me": {
-          "text": "她没想过要伤害我",
-          "status": "machine"
-        },
-        "We thought to return early that night": {
-          "text": "那晚我们想早点回来",
-          "status": "machine"
-        }
-      }
-    },
     "v:02742482": {
       "definition": "具有一定的重要性;",
       "definitionStatus": "machine",
@@ -62712,6 +65009,92 @@
     },
     "n:03733644": {
       "definition": "某种标准容量的容器,用于获得某种物质的固定数量;",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:00142361": {
+      "definition": "彻底的体格检查;包括根据年龄、性别以及个人健康情况进行的各种检查;",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "a:02760116": {
+      "definition": "与医学研究或医疗实践有关的。",
+      "definitionStatus": "project",
+      "examples": {
+        "the medical profession": {
+          "text": "医疗行业。",
+          "status": "project"
+        },
+        "a medical student": {
+          "text": "一名医学生。",
+          "status": "project"
+        },
+        "medical school": {
+          "text": "医学院。",
+          "status": "project"
+        }
+      }
+    },
+    "a:01168988": {
+      "definition": "需要或需要接受医学治疗,特别是外科手术",
+      "definitionStatus": "machine",
+      "examples": {
+        "medical treatment": {
+          "text": "医疗",
+          "status": "machine"
+        },
+        "pneumonia is a medical disease": {
+          "text": "肺炎是一种医疗疾病",
+          "status": "machine"
+        }
+      }
+    },
+    "a:02607455": {
+      "definition": "或属于爱斯库拉皮乌斯 或治疗艺术",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:03740161": {
+      "definition": "(医学)治疗或预防或缓解疾病症状的东西",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:00664110": {
+      "definition": "使用药品或补救办法治疗的行为;",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:06043075": {
+      "definition": "与非手术技术有关的医学科学分支;",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:00612160": {
+      "definition": "通过医学院的研究生培训掌握的、致力于预防、减轻或治疗疾病和伤害的学习专业;",
+      "definitionStatus": "machine",
+      "examples": {
+        "he studied medicine at Harvard": {
+          "text": "他在哈佛大学学医",
+          "status": "machine"
+        }
+      }
+    },
+    "n:01162529": {
+      "definition": "惩罚一个人的行为",
+      "definitionStatus": "machine",
+      "examples": {
+        "you have to face the music": {
+          "text": "你必须面对音乐",
+          "status": "machine"
+        },
+        "take your medicine": {
+          "text": "吃药吧",
+          "status": "machine"
+        }
+      }
+    },
+    "v:00084230": {
+      "definition": "医学治疗,用药治疗",
       "definitionStatus": "machine",
       "examples": {}
     },
@@ -65031,11 +67414,6 @@
         }
       }
     },
-    "v:00645552": {
-      "definition": "通过诊断分析确定或区分问题或疾病的性质;",
-      "definitionStatus": "machine",
-      "examples": {}
-    },
     "n:06720784": {
       "definition": "辱骂;粗略地替代论据",
       "definitionStatus": "machine",
@@ -66891,6 +69269,59 @@
       "definitionStatus": "machine",
       "examples": {}
     },
+    "n:10366966": {
+      "definition": "熟练的幼儿或病人(通常在医生的监督下)",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:10345100": {
+      "definition": "妇女是子女的监护人;",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "v:00080705": {
+      "definition": "尝试通过特殊治疗、疾病或伤害治疗",
+      "definitionStatus": "machine",
+      "examples": {
+        "He nursed his cold with Chinese herbs": {
+          "text": "他用中草药喂他的寒冷",
+          "status": "machine"
+        }
+      }
+    },
+    "v:02550698": {
+      "definition": "担任护士;照顾病人或残疾人;",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "v:02515194": {
+      "definition": "小心点",
+      "definitionStatus": "machine",
+      "examples": {
+        "He nursed his injured back by lying in bed several hours every afternoon": {
+          "text": "他每天下午数小时躺在床上照顾伤员回来",
+          "status": "machine"
+        },
+        "He nursed the flowers in his garden and fertilized them regularly": {
+          "text": "他把花园里的花给养了 并定期施肥",
+          "status": "machine"
+        }
+      }
+    },
+    "v:01186428": {
+      "definition": "给吸到",
+      "definitionStatus": "machine",
+      "examples": {
+        "The wetnurse suckled the infant": {
+          "text": "湿婆把婴儿给吸了",
+          "status": "machine"
+        },
+        "You cannot nurse your baby in public in some places": {
+          "text": "有些地方不能在公共场合照顾孩子",
+          "status": "machine"
+        }
+      }
+    },
     "n:13523661": {
       "definition": "(生理)营养或被营养的有机过程;生物体吸收食物并利用食物生长和维护的过程.",
       "definitionStatus": "machine",
@@ -66922,16 +69353,6 @@
       "examples": {
         "it was full of rackets, balls and other objects": {
           "text": "它充满了喧嚣, 球和其他物体",
-          "status": "machine"
-        }
-      }
-    },
-    "n:05981230": {
-      "definition": "打算实现的目标(以及被认为可以实现的目标)",
-      "definitionStatus": "machine",
-      "examples": {
-        "the sole object of her trip was to see her children": {
-          "text": "她旅行的唯一目的就是见她的孩子",
           "status": "machine"
         }
       }
@@ -67111,6 +69532,58 @@
       "definition": "阻碍(必须消除或克服或规避)",
       "definitionStatus": "machine",
       "examples": {}
+    },
+    "s:01067415": {
+      "definition": "不时发生的",
+      "definitionStatus": "machine",
+      "examples": {
+        "took an occasional glass of wine": {
+          "text": "偶尔喝杯酒",
+          "status": "machine"
+        }
+      }
+    },
+    "s:01842468": {
+      "definition": "通常不定期发生或出现",
+      "definitionStatus": "machine",
+      "examples": {
+        "episodic in his affections": {
+          "text": "他的爱是癫痫的",
+          "status": "machine"
+        },
+        "occasional headaches": {
+          "text": "偶尔头痛",
+          "status": "machine"
+        }
+      }
+    },
+    "s:01961205": {
+      "definition": "不时发生的",
+      "definitionStatus": "machine",
+      "examples": {
+        "casual employment": {
+          "text": "临时雇用",
+          "status": "machine"
+        },
+        "a casual correspondence with a former teacher": {
+          "text": "与一位前教师的临时通信",
+          "status": "machine"
+        },
+        "an occasional worker": {
+          "text": "临时工;",
+          "status": "machine"
+        }
+      }
+    },
+    "s:00594004": {
+      "definition": "经常出现或不时出现",
+      "definitionStatus": "machine",
+      "examples": {
+        "periodic feelings of anxiety": {
+          "text": "周期性焦虑感",
+          "status": "machine"
+        }
+      }
     },
     "n:10523519": {
       "definition": "在某个地方长期居住或出生的人",
@@ -70355,6 +72828,41 @@
       "definitionStatus": "machine",
       "examples": {}
     },
+    "n:07494363": {
+      "definition": "情感痛苦;人们试图避免的一种基本感觉",
+      "definitionStatus": "machine",
+      "examples": {
+        "the pain of loneliness": {
+          "text": "孤独的痛苦",
+          "status": "machine"
+        }
+      }
+    },
+    "n:05724694": {
+      "definition": "强烈的不适感",
+      "definitionStatus": "machine",
+      "examples": {
+        "as the intensity increased the sensation changed from tickle to pain": {
+          "text": "随着强度的提高 感觉从痒变为疼痛",
+          "status": "machine"
+        }
+      }
+    },
+    "n:10391513": {
+      "definition": "一个烦人的人",
+      "definitionStatus": "machine",
+      "examples": {
+        "that kid is a terrible pain": {
+          "text": "那个孩子很痛苦",
+          "status": "machine"
+        }
+      }
+    },
+    "v:00070816": {
+      "definition": "给身体造成痛苦,并造成疾病或不适;",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
     "n:03929952": {
       "definition": "构成栅栏一部分的木条",
       "definitionStatus": "machine",
@@ -71487,12 +73995,12 @@
       "examples": {}
     },
     "n:10405694": {
-      "definition": "(a) 需要医疗服务的人;",
-      "definitionStatus": "machine",
+      "definition": "需要医疗照护的人。",
+      "definitionStatus": "project",
       "examples": {
         "the number of emergency patients has grown rapidly": {
-          "text": "急诊病人人数迅速增加;",
-          "status": "machine"
+          "text": "急诊病人的数量迅速增加。",
+          "status": "project"
         }
       }
     },
@@ -71502,23 +74010,114 @@
       "examples": {}
     },
     "a:01735736": {
-      "definition": "持续艰难的环境,甚至脾气恶劣或具有这种耐力的特征",
-      "definitionStatus": "machine",
+      "definition": "平和地忍受艰难处境的，或具有这种忍耐特征的。",
+      "definitionStatus": "project",
       "examples": {
         "a patient smile": {
-          "text": "一个病人的笑容",
-          "status": "machine"
+          "text": "一个耐心的微笑。",
+          "status": "project"
         },
         "was patient with the children": {
-          "text": "对孩子们有耐心",
-          "status": "machine"
+          "text": "对孩子们很有耐心。",
+          "status": "project"
         },
         "an exact and patient scientist": {
-          "text": "一个精确而耐心的科学家",
-          "status": "machine"
+          "text": "一位严谨而有耐心的科学家。",
+          "status": "project"
         },
         "please be patient": {
-          "text": "请耐心一点",
+          "text": "请耐心等候。",
+          "status": "project"
+        }
+      }
+    },
+    "n:00410247": {
+      "definition": "习惯操作方式或行为方式",
+      "definitionStatus": "machine",
+      "examples": {
+        "it is their practice to give annual raises": {
+          "text": "他们的惯例是每年加薪",
+          "status": "machine"
+        },
+        "they changed their dietary pattern": {
+          "text": "他们改变了饮食模式",
+          "status": "machine"
+        }
+      }
+    },
+    "n:05667613": {
+      "definition": "被视作规范的例子",
+      "definitionStatus": "machine",
+      "examples": {
+        "the convention of not naming the main character": {
+          "text": "不指定主角的公约",
+          "status": "machine"
+        },
+        "violence is the rule not the exception": {
+          "text": "暴力是常态,不是例外",
+          "status": "machine"
+        },
+        "his formula for impressing visitors": {
+          "text": "他给来访者留下深刻印象的公式",
+          "status": "machine"
+        }
+      }
+    },
+    "n:05938795": {
+      "definition": "一个值得模仿的模型",
+      "definitionStatus": "machine",
+      "examples": {
+        "the American constitution has provided a pattern for many republics": {
+          "text": "美国宪法为许多共和国提供了模式",
+          "status": "machine"
+        }
+      }
+    },
+    "n:08492747": {
+      "definition": "为准备降落在机场的飞机规定的道路",
+      "definitionStatus": "machine",
+      "examples": {
+        "the traffic patterns around O'Hare are very crowded": {
+          "text": "欧哈雷周围的交通模式非常拥挤",
+          "status": "machine"
+        },
+        "they stayed in the pattern until the fog lifted": {
+          "text": "他们一直呆在模式中,直到雾解除",
+          "status": "machine"
+        }
+      }
+    },
+    "n:07005270": {
+      "definition": "作为角度函数的天线辐射空间分布的图形化表示(以极或笛卡尔坐标表示)",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "v:02712243": {
+      "definition": "构成图案",
+      "definitionStatus": "machine",
+      "examples": {
+        "These sentences pattern like the ones we studied before": {
+          "text": "这些句子就像我们以前研究过的句子",
+          "status": "machine"
+        }
+      }
+    },
+    "n:15271008": {
+      "definition": "临时停止某事的时间间隔",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:01062817": {
+      "definition": "暂时不活动",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "v:02641035": {
+      "definition": "在继续前暂时中断某项活动",
+      "definitionStatus": "machine",
+      "examples": {
+        "The speaker paused": {
+          "text": "发言者暂停发言",
           "status": "machine"
         }
       }
@@ -71718,6 +74317,36 @@
           "status": "machine"
         }
       }
+    },
+    "n:13413016": {
+      "definition": "一笔微不足道的金额;一笔微小的金额;",
+      "definitionStatus": "machine",
+      "examples": {
+        "her salary is peanuts compared to his": {
+          "text": "她的工资是花生和花生",
+          "status": "machine"
+        }
+      }
+    },
+    "n:11748811": {
+      "definition": "花生藤的地下舱",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:11748501": {
+      "definition": "广泛栽培的美国植物在热带和温暖地区种植;花茎上露出黄色花朵,向土壤弯曲,使种子茎在地下成熟。",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:10410440": {
+      "definition": "年纪小的小孩",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:07737745": {
+      "definition": "花生藤的茎,通常含有2个坚果或种子;“花生”和“猴子坚果”是英国的术语。",
+      "definitionStatus": "machine",
+      "examples": {}
     },
     "n:03906997": {
       "definition": "以墨水流动为点的写执行",
@@ -72255,6 +74884,11 @@
           "status": "machine"
         }
       }
+    },
+    "n:10427764": {
+      "definition": "使用运动及其他物理治疗处理损伤或功能障碍的治疗师。",
+      "definitionStatus": "project",
+      "examples": {}
     },
     "n:15138691": {
       "definition": "一天用于户外社交聚会",
@@ -75913,20 +78547,6 @@
         }
       }
     },
-    "n:00410247": {
-      "definition": "习惯操作方式或行为方式",
-      "definitionStatus": "machine",
-      "examples": {
-        "it is their practice to give annual raises": {
-          "text": "他们的惯例是每年加薪",
-          "status": "machine"
-        },
-        "they changed their dietary pattern": {
-          "text": "他们改变了饮食模式",
-          "status": "machine"
-        }
-      }
-    },
     "n:00894552": {
       "definition": "通过多次重复进行有系统的培训",
       "definitionStatus": "machine",
@@ -77284,6 +79904,106 @@
         }
       }
     },
+    "n:10480253": {
+      "definition": "从事某一专业的人;",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:10480583": {
+      "definition": "竞技竞技,以获得报酬为目的",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "a:01868724": {
+      "definition": "从事职业或作为职业或谋生手段",
+      "definitionStatus": "machine",
+      "examples": {
+        "the professional man or woman possesses distinctive qualifications": {
+          "text": "职业男女具有独特的资格;",
+          "status": "machine"
+        },
+        "began her professional career after the Olympics": {
+          "text": "在奥运会后开始职业生涯",
+          "status": "machine"
+        },
+        "professional theater": {
+          "text": "专业剧场",
+          "status": "machine"
+        },
+        "professional football": {
+          "text": "职业足球",
+          "status": "machine"
+        },
+        "a professional cook": {
+          "text": "专业厨师",
+          "status": "machine"
+        },
+        "professional actors and athletes": {
+          "text": "职业演员和运动员",
+          "status": "machine"
+        }
+      }
+    },
+    "a:02839695": {
+      "definition": "或与某一职业有关或适合从事该职业",
+      "definitionStatus": "machine",
+      "examples": {
+        "professional organizations": {
+          "text": "专业组织",
+          "status": "machine"
+        },
+        "a professional field such as law": {
+          "text": "法律等专业领域;",
+          "status": "machine"
+        }
+      }
+    },
+    "a:01870100": {
+      "definition": "专业特征或适合某一专业或某一专业的特征",
+      "definitionStatus": "machine",
+      "examples": {
+        "professional conduct": {
+          "text": "职业操守",
+          "status": "machine"
+        },
+        "professional ethics": {
+          "text": "职业道德",
+          "status": "machine"
+        },
+        "a thoroughly professional performance": {
+          "text": "完全专业表现",
+          "status": "machine"
+        }
+      }
+    },
+    "a:02839505": {
+      "definition": "或与某一职业有关的行为",
+      "definitionStatus": "machine",
+      "examples": {
+        "we need professional advice": {
+          "text": "我们需要专业的咨询",
+          "status": "machine"
+        },
+        "professional training": {
+          "text": "专业培训",
+          "status": "machine"
+        },
+        "professional equipment for his new office": {
+          "text": "新的办公室的专业设备",
+          "status": "machine"
+        }
+      }
+    },
+    "s:02556402": {
+      "definition": "专业成员从事的职业",
+      "definitionStatus": "machine",
+      "examples": {
+        "professional occupations include medicine and the law and teaching": {
+          "text": "专业职业包括医学和法律以及教学",
+          "status": "machine"
+        }
+      }
+    },
     "n:10480730": {
       "definition": "学院或大学教职员",
       "definitionStatus": "machine",
@@ -77593,16 +80313,6 @@
       "examples": {
         "the senator proposed to abolish the sales tax": {
           "text": "参议员提议取消销售税",
-          "status": "machine"
-        }
-      }
-    },
-    "v:00708980": {
-      "definition": "提议或打算",
-      "definitionStatus": "machine",
-      "examples": {
-        "I aim to arrive at noon": {
-          "text": "我准备在中午到达",
           "status": "machine"
         }
       }
@@ -78285,6 +80995,64 @@
           "status": "machine"
         }
       }
+    },
+    "v:02679012": {
+      "definition": "证明有能力或适合;满足要求",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "v:00972191": {
+      "definition": "发音适中或有能力",
+      "definitionStatus": "machine",
+      "examples": {
+        "She was qualified to run the marathon": {
+          "text": "她有参加马拉松比赛的资格",
+          "status": "machine"
+        },
+        "They nurses were qualified to administer the injections": {
+          "text": "他们的护士有资格进行注射",
+          "status": "machine"
+        }
+      }
+    },
+    "v:00199309": {
+      "definition": "更具体",
+      "definitionStatus": "machine",
+      "examples": {
+        "qualify these remarks": {
+          "text": "保留这些评论",
+          "status": "machine"
+        }
+      }
+    },
+    "v:00300761": {
+      "definition": "适应或准备",
+      "definitionStatus": "machine",
+      "examples": {
+        "Your education qualifies you for this job": {
+          "text": "您的学历足以胜任这份工作",
+          "status": "machine"
+        }
+      }
+    },
+    "v:00956687": {
+      "definition": "描述或描绘",
+      "definitionStatus": "machine",
+      "examples": {
+        "You can characterize his behavior as that of an egotist": {
+          "text": "你可以把他的行为定性为自大主义者",
+          "status": "machine"
+        },
+        "This poem can be characterized as a lament for a dead lover": {
+          "text": "这首诗可以形容为对一个死去的情人的哀叹",
+          "status": "machine"
+        }
+      }
+    },
+    "v:00171127": {
+      "definition": "在组成物中添加一个修改符",
+      "definitionStatus": "machine",
+      "examples": {}
     },
     "a:01914521": {
       "definition": "根据性质、特征作区分的。",
@@ -79958,6 +82726,84 @@
         }
       }
     },
+    "n:13447361": {
+      "definition": "(化学)一种或多种物质被改变为其他物质的过程",
+      "definitionStatus": "machine",
+      "examples": {
+        "there was a chemical reaction of the lime with the ground water": {
+          "text": "石灰与地下水发生化学反应",
+          "status": "machine"
+        }
+      }
+    },
+    "n:05917328": {
+      "definition": "一个由一些经验引申的主意",
+      "definitionStatus": "machine",
+      "examples": {
+        "his reaction to the news was to start planning what to do": {
+          "text": "他对新闻的反应是 开始计划该怎么做",
+          "status": "machine"
+        }
+      }
+    },
+    "n:00859001": {
+      "definition": "由于某种先期刺激或剂的影响而发生的身体过程;",
+      "definitionStatus": "machine",
+      "examples": {
+        "a bad reaction to the medicine": {
+          "text": "药反应不好",
+          "status": "machine"
+        },
+        "his responses have slowed with age": {
+          "text": "他的反应随着年龄的增长而放慢",
+          "status": "machine"
+        }
+      }
+    },
+    "n:11498461": {
+      "definition": "(机械)对身体施加任何武力时产生的平等力量和相反力量",
+      "definitionStatus": "machine",
+      "examples": {
+        "every action has an equal and opposite reaction": {
+          "text": "每一个行动都有同样和相反的反应",
+          "status": "machine"
+        }
+      }
+    },
+    "n:11417129": {
+      "definition": "反映一个人的感受或态度的反应",
+      "definitionStatus": "machine",
+      "examples": {
+        "he was pleased by the audience's reaction to his performance": {
+          "text": "他很高兴观众对他的表演的反应",
+          "status": "machine"
+        },
+        "John feared his mother's reaction when she saw the broken lamp": {
+          "text": "John看到那盏破灯时 担心他妈妈的反应",
+          "status": "machine"
+        }
+      }
+    },
+    "n:06216634": {
+      "definition": "政治或社会事务中的极端保守主义",
+      "definitionStatus": "machine",
+      "examples": {
+        "the forces of reaction carried the election": {
+          "text": "反动力量发动了选举",
+          "status": "machine"
+        }
+      }
+    },
+    "n:00202816": {
+      "definition": "做一些与你不喜欢的 另一种方式相反的事",
+      "definitionStatus": "machine",
+      "examples": {
+        "his style of painting was a reaction against cubism": {
+          "text": "他的绘画风格是对立体主义的反应",
+          "status": "machine"
+        }
+      }
+    },
     "n:06590065": {
       "definition": "读到的东西",
       "definitionStatus": "machine",
@@ -81244,20 +84090,6 @@
       "definitionStatus": "machine",
       "examples": {}
     },
-    "n:13327231": {
-      "definition": "企业成本超过收入的金额;",
-      "definitionStatus": "machine",
-      "examples": {
-        "the company operated at a loss last year": {
-          "text": "公司去年亏损了",
-          "status": "machine"
-        },
-        "the company operated in the red last year": {
-          "text": "公司去年在红旗下运营",
-          "status": "machine"
-        }
-      }
-    },
     "s:00381097": {
       "definition": "颜色; 类似血液或樱桃或番茄或红宝石的颜色",
       "definitionStatus": "machine",
@@ -82099,28 +84931,6 @@
         }
       }
     },
-    "v:00688377": {
-      "definition": "有信心或有信心于",
-      "definitionStatus": "machine",
-      "examples": {
-        "We can trust in God": {
-          "text": "我们可以相信上帝",
-          "status": "machine"
-        },
-        "Rely on your friends": {
-          "text": "{\\fn黑体\\fs22\\bord1\\shad0\\3aHBE\\4aH00\\fscx67\\fscy66\\2cHFFFFFF\\3cH808080}跟你的朋友说",
-          "status": "machine"
-        },
-        "bank on your good education": {
-          "text": "银行在你的好教育",
-          "status": "machine"
-        },
-        "I swear by my grandmother's recipes": {
-          "text": "我以祖母的秘方发誓",
-          "status": "machine"
-        }
-      }
-    },
     "v:00117985": {
       "definition": "保持不变; 保持一定状态;",
       "definitionStatus": "machine",
@@ -82231,11 +85041,6 @@
     },
     "n:00259177": {
       "definition": "纠正错误、过失或邪恶的行为",
-      "definitionStatus": "machine",
-      "examples": {}
-    },
-    "n:04074482": {
-      "definition": "治疗疾病或缓解疼痛的药品或疗法",
       "definitionStatus": "machine",
       "examples": {}
     },
@@ -83300,6 +86105,11 @@
           "status": "machine"
         }
       }
+    },
+    "n:04081281": {
+      "definition": "一座人们去吃饭的建筑",
+      "definitionStatus": "machine",
+      "examples": {}
     },
     "a:02434605": {
       "definition": "不累,如睡觉或放松",
@@ -84747,6 +87557,11 @@
         }
       }
     },
+    "n:01026482": {
+      "definition": "一种未变异或惯常的方法或程序",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
     "n:08431437": {
       "definition": "将对象或人并排排列在一行中",
       "definitionStatus": "machine",
@@ -84825,24 +87640,6 @@
         },
         "short haircuts were the regulation": {
           "text": "短发是规定",
-          "status": "machine"
-        }
-      }
-    },
-    "n:05667613": {
-      "definition": "被视作规范的例子",
-      "definitionStatus": "machine",
-      "examples": {
-        "the convention of not naming the main character": {
-          "text": "不指定主角的公约",
-          "status": "machine"
-        },
-        "violence is the rule not the exception": {
-          "text": "暴力是常态,不是例外",
-          "status": "machine"
-        },
-        "his formula for impressing visitors": {
-          "text": "他给来访者留下深刻印象的公式",
           "status": "machine"
         }
       }
@@ -87140,6 +89937,21 @@
       "definitionStatus": "machine",
       "examples": {}
     },
+    "n:05710860": {
+      "definition": "透过眼睛的感知",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:05656537": {
+      "definition": "视觉系的正常使用",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "s:02158731": {
+      "definition": "有视力,不是盲目的,",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
     "v:02745882": {
       "definition": "似乎存在",
       "definitionStatus": "machine",
@@ -87599,6 +90411,21 @@
         }
       }
     },
+    "n:10763383": {
+      "definition": "工作在餐桌(如餐馆)的人",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:10582604": {
+      "definition": "(法庭游戏) 服务于开始点球的玩家",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:04175039": {
+      "definition": "用于供应食物或饮料的餐具",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
     "n:00577525": {
       "definition": "一个人或一个群体完成的有益于另一人的工作",
       "definitionStatus": "machine",
@@ -87748,6 +90575,20 @@
       "examples": {
         "male animals serve the females for breeding purposes": {
           "text": "雄性动物为雌性繁殖服务",
+          "status": "machine"
+        }
+      }
+    },
+    "n:00585174": {
+      "definition": "履行职责或提供对他人有帮助的空间和设备",
+      "definitionStatus": "machine",
+      "examples": {
+        "the mayor tried to maintain city services": {
+          "text": "市长试图维持城市服务",
+          "status": "machine"
+        },
+        "the medical services are excellent": {
+          "text": "医疗服务非常出色",
           "status": "machine"
         }
       }
@@ -88897,11 +91738,6 @@
     },
     "n:04190052": {
       "definition": "由水平表面构成的控件支持",
-      "definitionStatus": "machine",
-      "examples": {}
-    },
-    "n:09337253": {
-      "definition": "投射山脊或水下沉没",
       "definitionStatus": "machine",
       "examples": {}
     },
@@ -90669,6 +93505,109 @@
         }
       }
     },
+    "n:06299916": {
+      "definition": "用于表示单子的单词的形式",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "s:01678417": {
+      "definition": "非同寻常或引人注目",
+      "definitionStatus": "machine",
+      "examples": {
+        "a remarkable sight": {
+          "text": "令人惊叹的景象",
+          "status": "machine"
+        },
+        "such poise is singular in one so young": {
+          "text": "这么年轻的时候,这种乌龟是独一无二的",
+          "status": "machine"
+        }
+      }
+    },
+    "s:00968010": {
+      "definition": "超出或偏离通常或预期",
+      "definitionStatus": "machine",
+      "examples": {
+        "a curious hybrid accent": {
+          "text": "一个奇怪的混合口音",
+          "status": "machine"
+        },
+        "her speech has a funny twang": {
+          "text": "她的演讲有一个有趣的twang",
+          "status": "machine"
+        },
+        "they have some funny ideas about war": {
+          "text": "他们有些关于战争的滑稽想法",
+          "status": "machine"
+        },
+        "had an odd name": {
+          "text": "有个奇怪的名字",
+          "status": "machine"
+        },
+        "the peculiar aromatic odor of cloves": {
+          "text": "丁香的气味",
+          "status": "machine"
+        },
+        "something definitely queer about this town": {
+          "text": "这镇上肯定有些怪事",
+          "status": "machine"
+        },
+        "what a rum fellow": {
+          "text": "好一个朗姆酒的家伙",
+          "status": "machine"
+        },
+        "singular behavior": {
+          "text": "单数行为",
+          "status": "machine"
+        }
+      }
+    },
+    "s:00494622": {
+      "definition": "单独一个人或东西 威廉・詹姆斯",
+      "definitionStatus": "machine",
+      "examples": {
+        "can the singular person be understood apart from his culture?": {
+          "text": "独身的人除了文化之外还能被理解吗?",
+          "status": "machine"
+        },
+        "every fact in the world might be singular...unlike any other fact and sole of its kind": {
+          "text": "世界上的每一个事实 都可能是独一无二的... 不同于其他任何事实...",
+          "status": "machine"
+        }
+      }
+    },
+    "a:02183421": {
+      "definition": "由1名成员、固定成员或类型组成",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "a:02182862": {
+      "definition": "单项或单项的语法编号类别",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "s:02215087": {
+      "definition": "独一的同类",
+      "definitionStatus": "machine",
+      "examples": {
+        "a singular example": {
+          "text": "一个单一的例子",
+          "status": "machine"
+        },
+        "the unique existing example of Donne's handwriting": {
+          "text": "Donne的笔迹的独有实例",
+          "status": "machine"
+        },
+        "a unique copy of an ancient manuscript": {
+          "text": "古老手稿的独有副本",
+          "status": "machine"
+        },
+        "certain types of problems have unique solutions": {
+          "text": "某些类型的问题有独特的解决办法",
+          "status": "machine"
+        }
+      }
+    },
     "n:04223580": {
       "definition": "固定在墙壁或地板上并设有排水管的水盆组成的管道固定装置",
       "definitionStatus": "machine",
@@ -91282,6 +94221,36 @@
         },
         "the artificial hip joint luxated and had to be put back surgically": {
           "text": "人造臀部关节奢侈,必须手术后放回去",
+          "status": "machine"
+        }
+      }
+    },
+    "v:00439958": {
+      "definition": "失去速度; 移动较慢",
+      "definitionStatus": "machine",
+      "examples": {
+        "The car decelerated": {
+          "text": "车减速了",
+          "status": "machine"
+        }
+      }
+    },
+    "v:00440580": {
+      "definition": "变慢或变慢",
+      "definitionStatus": "machine",
+      "examples": {
+        "Production slowed": {
+          "text": "生产减速",
+          "status": "machine"
+        }
+      }
+    },
+    "v:00440786": {
+      "definition": "以更慢的速度进行",
+      "definitionStatus": "machine",
+      "examples": {
+        "The illness slowed him down": {
+          "text": "病情让他减速了",
           "status": "machine"
         }
       }
@@ -92094,6 +95063,24 @@
         }
       }
     },
+    "r:00021878": {
+      "definition": "在某些情况下或在某些情况下,但并不总是",
+      "definitionStatus": "machine",
+      "examples": {
+        "sometimes she wished she were back in England": {
+          "text": "有时她希望她回到英国",
+          "status": "machine"
+        },
+        "sometimes her photography is breathtaking": {
+          "text": "有时她的摄影很令人惊叹",
+          "status": "machine"
+        },
+        "sometimes they come for a month; at other times for six months": {
+          "text": "有时会来一个月,有时会来六个月",
+          "status": "machine"
+        }
+      }
+    },
     "n:08489765": {
       "definition": "无限期或未知地点",
       "definitionStatus": "machine",
@@ -92655,28 +95642,6 @@
       "examples": {
         "Space the interviews so that you have some time between the different candidates": {
           "text": "给面试安排时间 让你有时间在不同的候选人之间",
-          "status": "machine"
-        }
-      }
-    },
-    "s:01384212": {
-      "definition": "范围或范围非常大",
-      "definitionStatus": "machine",
-      "examples": {
-        "a broad lawn": {
-          "text": "宽的草坪",
-          "status": "machine"
-        },
-        "the wide plains": {
-          "text": "宽阔的平原",
-          "status": "machine"
-        },
-        "a spacious view": {
-          "text": "宽阔的视图",
-          "status": "machine"
-        },
-        "spacious skies": {
-          "text": "宽阔的天空",
           "status": "machine"
         }
       }
@@ -94013,28 +96978,6 @@
         }
       }
     },
-    "v:00668099": {
-      "definition": "忍受一些不愉快的事情或别人",
-      "definitionStatus": "machine",
-      "examples": {
-        "I cannot bear his constant criticism": {
-          "text": "我受不了他不断的批评",
-          "status": "machine"
-        },
-        "The new secretary had to endure a lot of unprofessional remarks": {
-          "text": "新任秘书不得不忍受很多不专业的言论",
-          "status": "machine"
-        },
-        "he learned to tolerate the heat": {
-          "text": "他学会了忍受热量",
-          "status": "machine"
-        },
-        "She stuck out two years in a miserable marriage": {
-          "text": "她活了两年的婚姻很悲惨",
-          "status": "machine"
-        }
-      }
-    },
     "v:00670991": {
       "definition": "在某一问题上拥有或保持立场或立场",
       "definitionStatus": "machine",
@@ -94216,6 +97159,98 @@
         },
         "a stock item": {
           "text": "a 库存项目",
+          "status": "machine"
+        }
+      }
+    },
+    "n:13948136": {
+      "definition": "社会或经济或专业地位或声誉",
+      "definitionStatus": "machine",
+      "examples": {
+        "of equal standing": {
+          "text": "具有平等地位",
+          "status": "machine"
+        },
+        "a member in good standing": {
+          "text": "行为良好的成员",
+          "status": "machine"
+        }
+      }
+    },
+    "n:06496116": {
+      "definition": "列出体育赛事中竞争者(个人或团队)的相对地位;",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:00349080": {
+      "definition": "假定或保持竖立的直立位置的行为;",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "s:01237433": {
+      "definition": "具有支撑基础",
+      "definitionStatus": "machine",
+      "examples": {
+        "a standing lamp": {
+          "text": "一个站立的灯",
+          "status": "machine"
+        }
+      }
+    },
+    "s:01755508": {
+      "definition": "不为特定场合创建",
+      "definitionStatus": "machine",
+      "examples": {
+        "a standing committee": {
+          "text": "常设委员会",
+          "status": "machine"
+        }
+      }
+    },
+    "a:01241065": {
+      "definition": "不动不动,不流不动,",
+      "definitionStatus": "machine",
+      "examples": {
+        "mosquitoes breed in standing water": {
+          "text": "蚊子在常水中繁殖",
+          "status": "machine"
+        }
+      }
+    },
+    "a:01240235": {
+      "definition": "执行或从常设位置启动",
+      "definitionStatus": "machine",
+      "examples": {
+        "race from a standing start": {
+          "text": "比赛从站立开始",
+          "status": "machine"
+        },
+        "a standing jump": {
+          "text": "竖立跳跃",
+          "status": "machine"
+        },
+        "a standing ovation": {
+          "text": "站立的呼声",
+          "status": "machine"
+        }
+      }
+    },
+    "a:01239862": {
+      "definition": "脚上有躯干,靠直腿支撑;",
+      "definitionStatus": "machine",
+      "examples": {
+        "standing room only": {
+          "text": "仅供常设会议室使用",
+          "status": "machine"
+        }
+      }
+    },
+    "s:01970963": {
+      "definition": "常设",
+      "definitionStatus": "machine",
+      "examples": {
+        "a standing army": {
+          "text": "一支常备部队",
           "status": "machine"
         }
       }
@@ -94524,6 +97559,60 @@
     },
     "s:00940870": {
       "definition": "被宣布为事实;",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:06722453": {
+      "definition": "已声明或宣布的电文; 载有细节或事实的来文(口头或书面)等",
+      "definitionStatus": "machine",
+      "examples": {
+        "according to his statement he was in London on that day": {
+          "text": "根据他的陈述他那天在伦敦",
+          "status": "machine"
+        }
+      }
+    },
+    "n:06648724": {
+      "definition": "事实或断言,作为某物属实的证据;",
+      "definitionStatus": "machine",
+      "examples": {
+        "it was a strong argument that his hypothesis was true": {
+          "text": "他的假设是真实的",
+          "status": "machine"
+        }
+      }
+    },
+    "n:07029819": {
+      "definition": "音乐主题的介绍",
+      "definitionStatus": "machine",
+      "examples": {
+        "the initial statement of the sonata": {
+          "text": "索纳塔的初始陈述",
+          "status": "machine"
+        }
+      }
+    },
+    "n:06723452": {
+      "definition": "非口头信息",
+      "definitionStatus": "machine",
+      "examples": {
+        "a Cadillac makes a statement about who you are": {
+          "text": "卡迪拉克会说出你是谁",
+          "status": "machine"
+        },
+        "his tantrums are a statement of his need for attention": {
+          "text": "他的脾气是需要注意的说法",
+          "status": "machine"
+        }
+      }
+    },
+    "n:07203126": {
+      "definition": "(a)确认、主张或陈述某事的行为",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:06516595": {
+      "definition": "显示贷项和借项的文件",
       "definitionStatus": "machine",
       "examples": {}
     },
@@ -96437,20 +99526,6 @@
         }
       }
     },
-    "n:07167578": {
-      "definition": "某物(手册或建筑图和模型或所有流派的估计或艺术品等)提交他人评断(如在比赛中)",
-      "definitionStatus": "machine",
-      "examples": {
-        "several of his submissions were rejected by publishers": {
-          "text": "他的几份呈文被出版商拒绝",
-          "status": "machine"
-        },
-        "what was the date of submission of your proposal?": {
-          "text": "您提交提案的日期是多少?",
-          "status": "machine"
-        }
-      }
-    },
     "n:01166926": {
       "definition": "提交行为; 通常将权力移交给他人;",
       "definitionStatus": "machine",
@@ -97440,6 +100515,31 @@
       "definitionStatus": "machine",
       "examples": {}
     },
+    "n:06806469": {
+      "definition": "具有常规意义的任意标志(书面或印刷)",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:05765415": {
+      "definition": "某件显而易见的,通过联合或公约 代表了别的东西是看不见的",
+      "definitionStatus": "machine",
+      "examples": {
+        "the eagle is a symbol of the United States": {
+          "text": "鹰是美国的象征",
+          "status": "machine"
+        }
+      }
+    },
+    "n:14299637": {
+      "definition": "医学上，病人经历的、与某种疾病有关的感觉或身体功能变化。",
+      "definitionStatus": "project",
+      "examples": {}
+    },
+    "n:06798187": {
+      "definition": "伴随某事物并被视为该事物存在迹象的任何事物。",
+      "definitionStatus": "project",
+      "examples": {}
+    },
     "n:04377057": {
       "definition": "将相互关联的相互作用文物结合起来的工具性,旨在作为一个协调一致的实体开展工作",
       "definitionStatus": "machine",
@@ -98214,6 +101314,16 @@
       "definitionStatus": "machine",
       "examples": {}
     },
+    "n:07396658": {
+      "definition": "轻击或敲击的声音",
+      "definitionStatus": "machine",
+      "examples": {
+        "he heard the tapping of the man's cane": {
+          "text": "他听到那人的手杖响声",
+          "status": "machine"
+        }
+      }
+    },
     "v:02392600": {
       "definition": "指派任务到",
       "definitionStatus": "machine",
@@ -98940,6 +102050,24 @@
         "science as it was then taught": {
           "text": "科学是当时教的",
           "status": "machine"
+        }
+      }
+    },
+    "n:00661091": {
+      "definition": "医学上，照护某人的行为，例如通过药物或矫正训练等方式。",
+      "definitionStatus": "project",
+      "examples": {
+        "the quarterback is undergoing treatment for a knee injury": {
+          "text": "这位四分卫正因膝盖损伤接受治疗。",
+          "status": "project"
+        },
+        "he tried every treatment the doctors suggested": {
+          "text": "他尝试了医生提出的每一种治疗。",
+          "status": "project"
+        },
+        "heat therapy gave the best relief": {
+          "text": "热疗带来的缓解最好。",
+          "status": "project"
         }
       }
     },
@@ -99680,6 +102808,35 @@
       "definitionStatus": "machine",
       "examples": {}
     },
+    "n:05547508": {
+      "definition": "进入胃和肺;在颈部前部下巴和锁骨上方",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:04428920": {
+      "definition": "一步一步的鞋的吸血鬼的开口",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:04428763": {
+      "definition": "类似喉咙形状或功能的通道",
+      "definitionStatus": "machine",
+      "examples": {
+        "the throat of the vase": {
+          "text": "花瓶的喉咙",
+          "status": "machine"
+        },
+        "the throat of a chimney": {
+          "text": "烟囱的喉咙",
+          "status": "machine"
+        }
+      }
+    },
+    "n:01514549": {
+      "definition": "动物身体中与人的喉咙相对应的部分",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
     "s:00762168": {
       "definition": "(路线或行程等)继续,不需停运或更改",
       "definitionStatus": "machine",
@@ -100200,6 +103357,11 @@
         }
       }
     },
+    "n:06504965": {
+      "definition": "按时间顺序排列的相关活动的顺序,并按线条显示(通常是左到右或上到下)",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
     "n:15120346": {
       "definition": "或多或少确定现在或以前存在的时间段",
       "definitionStatus": "machine",
@@ -100656,6 +103818,36 @@
       "definitionStatus": "machine",
       "examples": {}
     },
+    "n:05282746": {
+      "definition": "脊椎动物下颚硬骨状结构;用于咬和咀嚼或攻击和防御",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:04452848": {
+      "definition": "类似动物牙齿的东西",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:02155872": {
+      "definition": "口腔或食道或壳体中发现的无脊椎动物中的齿状结构",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:00179576": {
+      "definition": "一种强制执行手段",
+      "definitionStatus": "machine",
+      "examples": {
+        "the treaty had no teeth in it": {
+          "text": "条约里没有牙齿",
+          "status": "machine"
+        }
+      }
+    },
+    "n:04453037": {
+      "definition": "一种统一的齿轮预测",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
     "n:08663860": {
       "definition": "任何东西的上部",
       "definitionStatus": "machine",
@@ -100835,6 +104027,112 @@
           "status": "machine"
         }
       }
+    },
+    "v:01206218": {
+      "definition": "进行身体接触,接触",
+      "definitionStatus": "machine",
+      "examples": {
+        "Touch the stone for good luck": {
+          "text": "碰石头,祝你好运",
+          "status": "machine"
+        },
+        "She never touched her husband": {
+          "text": "她从没碰过她丈夫",
+          "status": "machine"
+        }
+      }
+    },
+    "v:02127358": {
+      "definition": "通过触觉感知",
+      "definitionStatus": "machine",
+      "examples": {
+        "Helen Keller felt the physical world by touching people and objects around her": {
+          "text": "海伦·凯勒通过触摸周围的人和物体来感受物理世界",
+          "status": "machine"
+        }
+      }
+    },
+    "v:01770802": {
+      "definition": "情感影响",
+      "definitionStatus": "machine",
+      "examples": {
+        "A stirring movie": {
+          "text": "一部令人惊叹的电影",
+          "status": "machine"
+        },
+        "I was touched by your kind letter of sympathy": {
+          "text": "你亲切的同情信让我感动",
+          "status": "machine"
+        }
+      }
+    },
+    "v:02599325": {
+      "definition": "处理; 通常用于一种否定形式",
+      "definitionStatus": "machine",
+      "examples": {
+        "I wouldn't touch her with a ten-foot pole": {
+          "text": "我不会用十英尺长的杆子碰她",
+          "status": "machine"
+        },
+        "The local Mafia won't touch gambling": {
+          "text": "当地黑手党不会碰赌博的",
+          "status": "machine"
+        }
+      }
+    },
+    "v:01206849": {
+      "definition": "原因 : 与",
+      "definitionStatus": "machine",
+      "examples": {
+        "He touched his toes to the horse's flanks": {
+          "text": "他摸脚趾到马的侧翼",
+          "status": "machine"
+        }
+      }
+    },
+    "v:00590642": {
+      "definition": "理解",
+      "definitionStatus": "machine",
+      "examples": {
+        "He could not touch the meaning of the poem": {
+          "text": "他无法触摸诗的意义",
+          "status": "machine"
+        }
+      }
+    },
+    "v:01172701": {
+      "definition": "消耗",
+      "definitionStatus": "machine",
+      "examples": {
+        "She didn't touch her food all night": {
+          "text": "她整晚都没碰食物",
+          "status": "machine"
+        }
+      }
+    },
+    "v:00286928": {
+      "definition": "颜色淡化",
+      "definitionStatus": "machine",
+      "examples": {
+        "her greying hair was tinged blond": {
+          "text": "她的白发是金发",
+          "status": "machine"
+        },
+        "the leaves were tinged red in November": {
+          "text": "11月叶子红了",
+          "status": "machine"
+        }
+      }
+    },
+    "a:02445093": {
+      "definition": "接触过的人",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "s:02075938": {
+      "definition": "有点疯狂",
+      "definitionStatus": "machine",
+      "examples": {}
     },
     "n:08665504": {
       "definition": "固定边界小于城市的城市地区",
@@ -101618,13 +104916,13 @@
       }
     },
     "n:00658082": {
-      "definition": "为改善情况(特别是旨在缓解疾病或伤害的医疗程序或申请)而提供的护理",
-      "definitionStatus": "machine",
+      "definition": "为改善状况而提供的照护，尤其是旨在缓解疾病或损伤的医疗程序或处理。",
+      "definitionStatus": "project",
       "examples": {}
     },
     "n:01134861": {
-      "definition": "管理一个人或什么的。",
-      "definitionStatus": "machine",
+      "definition": "对某人或某物的管理、处理。",
+      "definitionStatus": "project",
       "examples": {
         "the handling of prisoners": {
           "text": "囚犯的处理",
@@ -102875,16 +106173,6 @@
         }
       }
     },
-    "v:00593522": {
-      "definition": "相信是这样的",
-      "definitionStatus": "machine",
-      "examples": {
-        "I understand you have no previous experience?": {
-          "text": "我知道你没有以前的经验吗?",
-          "status": "machine"
-        }
-      }
-    },
     "v:00594058": {
       "definition": "理解",
       "definitionStatus": "machine",
@@ -102986,6 +106274,44 @@
         },
         "unfinished furniture": {
           "text": "未完成家具",
+          "status": "machine"
+        }
+      }
+    },
+    "v:00293760": {
+      "definition": "发展或进入一个充满希望的阶段",
+      "definitionStatus": "machine",
+      "examples": {
+        "Youth blossomed into maturity": {
+          "text": "青春蓬勃发展到成熟",
+          "status": "machine"
+        }
+      }
+    },
+    "v:02144101": {
+      "definition": "打开视图",
+      "definitionStatus": "machine",
+      "examples": {
+        "A walk through town will unfold many interesting buildings": {
+          "text": "穿过城镇会开很多有趣的建筑",
+          "status": "machine"
+        }
+      }
+    },
+    "v:02054989": {
+      "definition": "伸展或伸展到更长或整个长度",
+      "definitionStatus": "machine",
+      "examples": {
+        "Unfold the newspaper": {
+          "text": "解开报纸",
+          "status": "machine"
+        },
+        "stretch out that piece of cloth": {
+          "text": "伸开那块布",
+          "status": "machine"
+        },
+        "extend the TV antenna": {
+          "text": "延长电视天线",
           "status": "machine"
         }
       }
@@ -103602,24 +106928,6 @@
         }
       }
     },
-    "n:00414179": {
-      "definition": "(心理)一种针对特定情况的行为自动规律;可能通过频繁重复继承或获得.",
-      "definitionStatus": "machine",
-      "examples": {
-        "owls have nocturnal habits": {
-          "text": "猫头鹰有夜行习惯",
-          "status": "machine"
-        },
-        "she had a habit twirling the ends of her hair": {
-          "text": "她有一个习惯,在头发的尽头旋转",
-          "status": "machine"
-        },
-        "long use had hardened him to it": {
-          "text": "久久的用法使他硬了起来",
-          "status": "machine"
-        }
-      }
-    },
     "n:00158185": {
       "definition": "特别为了自己的利益而施加精明或狡猾的影响力",
       "definitionStatus": "machine",
@@ -103786,20 +107094,6 @@
         }
       }
     },
-    "s:00970610": {
-      "definition": "常见",
-      "definitionStatus": "machine",
-      "examples": {
-        "a common (or familiar) complaint": {
-          "text": "常见(或熟悉的)投诉",
-          "status": "machine"
-        },
-        "the usual greeting": {
-          "text": "寻常的问候",
-          "status": "machine"
-        }
-      }
-    },
     "n:08185758": {
       "definition": "履行公务的公司; 遵守政府条例;",
       "definitionStatus": "machine",
@@ -103889,6 +107183,21 @@
     },
     "n:01253665": {
       "definition": "做一些法律上无效的事",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:00823884": {
+      "definition": "为预防感染疾病而接受疫苗。",
+      "definitionStatus": "project",
+      "examples": {}
+    },
+    "n:14364306": {
+      "definition": "注射疫苗后留下的疤痕",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:04517535": {
+      "definition": "为刺激抗体生产而注射的衰弱或死亡的病原细胞的悬浮性免疫素",
       "definitionStatus": "machine",
       "examples": {}
     },
@@ -104229,6 +107538,58 @@
           "status": "machine"
         }
       }
+    },
+    "n:07173585": {
+      "definition": "从某一特定角度对某一事项的解释",
+      "definitionStatus": "machine",
+      "examples": {
+        "his version of the fight was different from mine": {
+          "text": "他的格斗版本跟我不一样",
+          "status": "machine"
+        }
+      }
+    },
+    "n:05840650": {
+      "definition": "和同类的有些不同",
+      "definitionStatus": "machine",
+      "examples": {
+        "an experimental version of the night fighter": {
+          "text": "实验版的夜间战斗机",
+          "status": "machine"
+        },
+        "a variant of the same word": {
+          "text": "同一词的变体",
+          "status": "machine"
+        },
+        "an emery wheel is the modern variation of a grindstone": {
+          "text": "灰尘轮是磨石的现代变体",
+          "status": "machine"
+        },
+        "the boy is a younger edition of his father": {
+          "text": "那个男孩是他父亲的年轻版",
+          "status": "machine"
+        }
+      }
+    },
+    "n:06408779": {
+      "definition": "以新形式重制的(作为小说)书面作品",
+      "definitionStatus": "machine",
+      "examples": {
+        "the play is an adaptation of a short novel": {
+          "text": "该剧是一部短篇小说改编的",
+          "status": "machine"
+        }
+      }
+    },
+    "n:06536389": {
+      "definition": "以第二种语文提出的书面来文,其含义与以第一种语文提出的书面来文相同;",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:01267901": {
+      "definition": "子宫内胎儿的手动转动(通常用于助产)",
+      "definitionStatus": "machine",
+      "examples": {}
     },
     "n:05933246": {
       "definition": "区域视觉感知",
@@ -106467,40 +109828,6 @@
       "definitionStatus": "machine",
       "examples": {}
     },
-    "a:02560548": {
-      "definition": "从一边到另一边都有相当的(或一定的)程度,",
-      "definitionStatus": "machine",
-      "examples": {
-        "wide roads": {
-          "text": "宽宽道路",
-          "status": "machine"
-        },
-        "a wide necktie": {
-          "text": "宽的领带",
-          "status": "machine"
-        },
-        "wide margins": {
-          "text": "宽边距",
-          "status": "machine"
-        },
-        "three feet wide": {
-          "text": "宽三尺",
-          "status": "machine"
-        },
-        "a river two miles broad": {
-          "text": "一条两英里宽的河",
-          "status": "machine"
-        },
-        "broad shoulders": {
-          "text": "宽肩",
-          "status": "machine"
-        },
-        "a broad river": {
-          "text": "一条宽阔的河流",
-          "status": "machine"
-        }
-      }
-    },
     "s:01654900": {
       "definition": "(使用眼睛) 完全打开或扩展",
       "definitionStatus": "machine",
@@ -107879,16 +111206,6 @@
         }
       }
     },
-    "v:01766748": {
-      "definition": "B. 关注",
-      "definitionStatus": "machine",
-      "examples": {
-        "I worry about my grades": {
-          "text": "我担心我的成绩",
-          "status": "machine"
-        }
-      }
-    },
     "v:01765908": {
       "definition": "扰乱心灵安宁;精神不安或痛苦",
       "definitionStatus": "machine",
@@ -107967,6 +111284,62 @@
         },
         "felt apprehensive about the consequences": {
           "text": "对后果感到担忧",
+          "status": "machine"
+        }
+      }
+    },
+    "n:05144453": {
+      "definition": "质量或条件或效果差的东西",
+      "definitionStatus": "machine",
+      "examples": {
+        "for better or for worse": {
+          "text": "无论好坏",
+          "status": "machine"
+        },
+        "accused of cheating and lying and worse": {
+          "text": "被控作弊 撒谎 更糟糕",
+          "status": "machine"
+        }
+      }
+    },
+    "a:00231252": {
+      "definition": "(与质量或状况或可取性低于另一质量或条件的“坏”作比较)",
+      "definitionStatus": "machine",
+      "examples": {
+        "this road is worse than the first one we took": {
+          "text": "这条路比我们走的第一条路还糟",
+          "status": "machine"
+        },
+        "the road is in worse shape than it was": {
+          "text": "路况比原来差",
+          "status": "machine"
+        },
+        "she was accused of worse things than cheating and lying": {
+          "text": "她被指控比作弊和说谎更糟糕",
+          "status": "machine"
+        }
+      }
+    },
+    "a:00232068": {
+      "definition": "在健康或健身方面变差",
+      "definitionStatus": "machine",
+      "examples": {
+        "I feel worse today": {
+          "text": "今天我感觉更糟",
+          "status": "machine"
+        },
+        "her cold is worse": {
+          "text": "她的感冒更严重",
+          "status": "machine"
+        }
+      }
+    },
+    "r:00017077": {
+      "definition": "(`ill'的比较),效果差或效果差或可取",
+      "definitionStatus": "machine",
+      "examples": {
+        "he did worse on the second exam": {
+          "text": "在第二次考试时他表现得更差",
           "status": "machine"
         }
       }

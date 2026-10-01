@@ -1,7 +1,7 @@
 {
   "sceneId": "WORLD",
   "title": "IELTS Semantic World",
-  "version": "pilot-12-0",
+  "version": "pilot-13-0",
   "dictionaryFile": "./data/wordnet-s01.json",
   "dictionaryContextFile": "./data/s01-dictionary-context.json",
   "dictionaryTranslationFile": "./data/wordnet-translations-s01.json",
@@ -24,6 +24,13 @@
     "./data/s04-w02.json",
     "./data/s15-w01.json",
     "./data/s15-w02.json",
+    "./data/s10-h01.json",
+    "./data/s10-h02.json",
+    "./data/s10-h03.json",
+    "./data/s10-h04.json",
+    "./data/s10-h05.json",
+    "./data/s10-h06.json",
+    "./data/s10-h07.json",
     "./data/s09-k01.json",
     "./data/s09-k02.json",
     "./data/s09-k03.json",
@@ -166,6 +173,48 @@
       "sceneIds": [
         "S15.W01",
         "S15.W02"
+      ]
+    },
+    {
+      "id": "clinic-notes",
+      "title": "诊所里的几张便签",
+      "subtitle": "The notes at the clinic",
+      "theme": "health",
+      "kind": "健康与就诊支线",
+      "description": "从报到卡到症状时间线，再走到牙科、宣传单和记录窗口。练习准确告知、询问服务、澄清用语和核对事实，最后把这些表达迁移到生活中的其他场合。",
+      "entry": "社区街口 → 诊所入口指示牌",
+      "returnLabel": "带着核对好的记录，回到社区街口",
+      "route": [
+        "入口指示牌",
+        "接待台的小屏幕",
+        "窗边候诊椅",
+        "桌旁人体图",
+        "桌面时间卡",
+        "事实描述文件夹",
+        "入口服务宣传单",
+        "走廊尽头牙齿标志",
+        "接待台预约登记册",
+        "蓝色宣传单架",
+        "门旁问题桌",
+        "桌右侧后续文件夹",
+        "包前袋中的过敏卡",
+        "电脑旁卡片托盘",
+        "核对后的信息屏幕",
+        "记录窗口的窄台面",
+        "窗口右侧的打印副本",
+        "收好材料的文件袋",
+        "洗手池旁的空表格桌",
+        "表格上的铅笔备注",
+        "门旁已填表格托盘"
+      ],
+      "sceneIds": [
+        "S10.H01",
+        "S10.H02",
+        "S10.H03",
+        "S10.H04",
+        "S10.H05",
+        "S10.H06",
+        "S10.H07"
       ]
     },
     {
@@ -384,7 +433,8 @@
     "./data/branch-v8-dictionary-context.json",
     "./data/branch-v10-dictionary-context.json",
     "./data/branch-v11-dictionary-context.json",
-    "./data/branch-v12-dictionary-context.json"
+    "./data/branch-v12-dictionary-context.json",
+    "./data/branch-v13-dictionary-context.json"
   ],
   "uiWordsFile": "./data/world-ui-words.json",
   "learningUnitsFile": "./data/learning-units.json",

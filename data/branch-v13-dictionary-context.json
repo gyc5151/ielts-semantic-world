@@ -1,0 +1,395 @@
+{
+  "S10.H01": {
+    "clinic": {
+      "zh": "提供门诊医疗服务的诊所",
+      "example": "Is this the right clinic for my appointment?",
+      "exampleZh": "我的预约是在这家诊所吗？",
+      "usageNote": "此处人物来门诊报到；不是某项技艺的示范研习会。",
+      "provenance": "External evidence · WordNet 3.0原义独立保留；Researcher inference · 项目选义与原创双语例句，非词典原例句。",
+      "senseId": "n:03043274",
+      "forms": [
+        "clinics"
+      ]
+    },
+    "patients": {
+      "zh": "接受诊疗的人（复数）",
+      "example": "The patients are waiting beside the reception desk.",
+      "exampleZh": "病人们在接待台旁等候。",
+      "usageNote": "来源复数形式保持；patient单数名词与耐心形容词分开。",
+      "provenance": "External evidence · WordNet 3.0原义独立保留；Researcher inference · 项目选义与原创双语例句，非词典原例句。",
+      "senseId": "n:10405694"
+    },
+    "patient": {
+      "zh": "接受诊疗的人",
+      "example": "The patient checked the appointment time.",
+      "exampleZh": "病人核对了预约时间。",
+      "usageNote": "此处为名词；英语同形patient还可表达耐心。",
+      "provenance": "External evidence · WordNet 3.0原义独立保留；Researcher inference · 项目选义与原创双语例句，非词典原例句。",
+      "senseId": "n:10405694",
+      "contrasts": [
+        {
+          "senseId": "a:01735736",
+          "zh": "有耐心的",
+          "example": "Please be patient while we check the time.",
+          "exampleZh": "核对时间时请耐心等候。",
+          "provenance": "Researcher inference · 项目原创多义对比例句；原词典独立列出。"
+        }
+      ]
+    },
+    "medical": {
+      "zh": "与医疗有关的",
+      "example": "Please check my medical details.",
+      "exampleZh": "请核对我的医疗信息。",
+      "usageNote": "这里medical details为诊疗相关资料；不把通用medical误限为与外科相对的内科。",
+      "provenance": "External evidence · WordNet 3.0原义独立保留；Researcher inference · 项目选义与原创双语例句，非词典原例句。",
+      "senseId": "a:02760116"
+    }
+  },
+  "S10.H02": {
+    "symptom": {
+      "zh": "本人经历的症状",
+      "example": "The nurse asked when the symptom started.",
+      "exampleZh": "护士问症状是什么时候开始的。",
+      "usageNote": "记录发生时间和变化，不因语言描述而确诊。",
+      "provenance": "External evidence · WordNet 3.0原义独立保留；Researcher inference · 项目选义与原创双语例句，非词典原例句。",
+      "senseId": "n:14299637",
+      "forms": [
+        "symptoms"
+      ],
+      "contrasts": [
+        {
+          "senseId": "n:06798187",
+          "zh": "某种问题存在的迹象",
+          "example": "The delay is a symptom of a wider planning problem.",
+          "exampleZh": "延误是更大规划问题的迹象。",
+          "provenance": "Researcher inference · 项目原创多义对比例句；原词典独立列出。"
+        }
+      ]
+    },
+    "injury": {
+      "zh": "身体受到的损伤",
+      "example": "I have a knee injury after a fall.",
+      "exampleZh": "我跌倒后膝盖受了伤。",
+      "usageNote": "本课跌倒后的身体损伤；病因与程度留给专业人员判断。",
+      "provenance": "External evidence · WordNet 3.0原义独立保留；Researcher inference · 项目选义与原创双语例句，非词典原例句。",
+      "senseId": "n:14285662",
+      "forms": [
+        "injuries"
+      ],
+      "contrasts": [
+        {
+          "senseId": "n:00744305",
+          "zh": "侵害他人权利造成的损害",
+          "example": "The lawyer discussed an injury to the tenant’s rights.",
+          "exampleZh": "律师讨论了承租人权利受到的侵害。",
+          "provenance": "Researcher inference · 项目原创多义对比例句；原词典独立列出。"
+        }
+      ]
+    },
+    "first": {
+      "zh": "first aid整体中的first；整块为急救",
+      "example": "Lin received first aid at the sports centre.",
+      "exampleZh": "林在运动中心接受了急救。",
+      "usageNote": "first aid是整体急救表达；不把序数词first单独当成整块释义。",
+      "provenance": "Researcher inference · 精确义项缺口或旧定义范围限制；源记录和原词典独立保留。",
+      "noMatch": true,
+      "note": "此处先看first aid整块。当前查词索引只检索单词词形，没有登记first aid的整体词典记录；不把first的序数词义当成整个急救表达。"
+    },
+    "aid": {
+      "zh": "first aid整体中的aid；整块为急救",
+      "example": "Lin received first aid at the sports centre.",
+      "exampleZh": "林在运动中心接受了急救。",
+      "usageNote": "first aid是整体急救表达；普通帮助义不足以说明急救的具体含义。",
+      "provenance": "Researcher inference · 精确义项缺口或旧定义范围限制；源记录和原词典独立保留。",
+      "noMatch": true,
+      "note": "aid的一般帮助义不能单独定义first aid。当前单词索引没有该完整表达的精确条目，整块源记录及项目解释保持独立。"
+    }
+  },
+  "S10.H03": {
+    "dentist": {
+      "zh": "牙医",
+      "example": "I need an appointment with the dentist.",
+      "exampleZh": "我需要预约见牙医。",
+      "usageNote": "本课核对牙科服务并预约专业人员。",
+      "provenance": "External evidence · WordNet 3.0原义独立保留；Researcher inference · 项目选义与原创双语例句，非词典原例句。",
+      "senseId": "n:10004282",
+      "forms": [
+        "dentists"
+      ]
+    },
+    "ailment": {
+      "zh": "身体不适或疾病",
+      "example": "The leaflet lists services for common ailments.",
+      "exampleZh": "宣传单列出了常见小病的服务。",
+      "usageNote": "原中文“小病”保留；英文词并不保证每个ailment都轻微，common ailments是当前服务宣传用语。",
+      "provenance": "External evidence · WordNet 3.0原义独立保留；Researcher inference · 项目选义与原创双语例句，非词典原例句。",
+      "senseId": "n:14055408",
+      "forms": [
+        "ailments"
+      ]
+    },
+    "treatment": {
+      "zh": "医疗治疗或照护",
+      "example": "Does this clinic provide medical treatment for dental problems?",
+      "exampleZh": "这家诊所为牙科问题提供医疗治疗吗？",
+      "usageNote": "medical treatment整块强调医疗服务；询问是否提供不等于推荐个体治疗。",
+      "provenance": "External evidence · WordNet 3.0原义独立保留；Researcher inference · 项目选义与原创双语例句，非词典原例句。",
+      "senseId": "n:00658082",
+      "forms": [
+        "treatments"
+      ],
+      "contrasts": [
+        {
+          "senseId": "n:01134861",
+          "zh": "对待；处理方式",
+          "example": "The two applicants received equal treatment.",
+          "exampleZh": "两位申请人受到同等对待。",
+          "provenance": "Researcher inference · 项目原创多义对比例句；原词典独立列出。"
+        }
+      ]
+    },
+    "medical": {
+      "zh": "与医疗服务有关的",
+      "example": "Does this clinic provide medical treatment for dental problems?",
+      "exampleZh": "这家诊所为牙科问题提供医疗治疗吗？",
+      "usageNote": "这里medical treatment为通用医疗服务，不限定为内科或药物治疗。",
+      "provenance": "External evidence · WordNet 3.0原义独立保留；Researcher inference · 项目选义与原创双语例句，非词典原例句。",
+      "senseId": "a:02760116"
+    },
+    "book": {
+      "zh": "实体登记册；书册",
+      "example": "The receptionist turned the book towards Sam.",
+      "exampleZh": "接待员把登记册转向萨姆。",
+      "usageNote": "故事中booking book和the book为实体书册；book an appointment时才是预订动词。",
+      "provenance": "External evidence · WordNet 3.0原义独立保留；Researcher inference · 项目选义与原创双语例句，非词典原例句。",
+      "senseId": "n:02870092",
+      "uses": [
+        {
+          "id": "book-appointment",
+          "pattern": "\\bbook\\s+an\\s+appointment\\b",
+          "senseId": "v:02498320",
+          "zh": "预订；预约（动词）",
+          "example": "Could I book an appointment with the dentist?",
+          "exampleZh": "我可以预约见牙医吗？",
+          "usageNote": "book + an appointment；with + 专业人员。",
+          "provenance": "External evidence · WordNet 3.0原义独立保留；Researcher inference · 项目选义与原创双语例句，非词典原例句。"
+        }
+      ],
+      "contrasts": [
+        {
+          "senseId": "v:02498320",
+          "zh": "预订；预约",
+          "example": "Sam wants to book an appointment with the dentist.",
+          "exampleZh": "萨姆想预约见牙医。",
+          "provenance": "Researcher inference · 项目原创多义对比例句；原词典独立列出。"
+        }
+      ]
+    }
+  },
+  "S10.H04": {
+    "physiotherapist": {
+      "zh": "理疗师；物理治疗师",
+      "example": "I have an appointment with the physiotherapist.",
+      "exampleZh": "我预约了见理疗师。",
+      "usageNote": "英式名称；美式常用physical therapist。本课只是理解已安排会面。",
+      "provenance": "External evidence · WordNet 3.0原义独立保留；Researcher inference · 项目选义与原创双语例句，非词典原例句。",
+      "senseId": "n:10427764",
+      "forms": [
+        "physiotherapists"
+      ]
+    },
+    "therapy": {
+      "zh": "照护或帮助恢复的治疗活动",
+      "example": "Could you explain what this therapy involves?",
+      "exampleZh": "您可以解释一下这种治疗包括什么吗？",
+      "usageNote": "不是专指心理治疗；本课在理疗服务中询问具体内容。",
+      "provenance": "External evidence · WordNet 3.0原义独立保留；Researcher inference · 项目选义与原创双语例句，非词典原例句。",
+      "senseId": "n:00661091",
+      "forms": [
+        "therapies"
+      ]
+    },
+    "alleviate": {
+      "zh": "减轻不适",
+      "example": "The leaflet says the aim is to alleviate discomfort.",
+      "exampleZh": "宣传单说，目标是减轻不适。",
+      "usageNote": "正式表达；宣传单说目标是减轻，而非保证治愈。",
+      "provenance": "External evidence · WordNet 3.0原义独立保留；Researcher inference · 项目选义与原创双语例句，非词典原例句。",
+      "senseId": "v:00064095",
+      "forms": [
+        "alleviates",
+        "alleviated",
+        "alleviating"
+      ]
+    }
+  },
+  "S10.H05": {
+    "allergic": {
+      "zh": "对某种物质过敏的",
+      "example": "I am allergic to this antibiotic.",
+      "exampleZh": "我对这种抗生素过敏。",
+      "usageNote": "be allergic to + 确切物质；这里报告已知过敏，不将一个药物泛化为所有药物。",
+      "provenance": "External evidence · WordNet 3.0原义独立保留；Researcher inference · 项目选义与原创双语例句，非词典原例句。",
+      "senseId": "s:02360944",
+      "contrasts": [
+        {
+          "senseId": "a:02612653",
+          "zh": "由过敏引起的",
+          "example": "The card describes an allergic reaction.",
+          "exampleZh": "卡片描述了一次过敏反应。",
+          "provenance": "Researcher inference · 项目原创多义对比例句；原词典独立列出。"
+        }
+      ]
+    },
+    "allergy": {
+      "zh": "过敏反应或过敏症",
+      "example": "My allergy is listed on this card.",
+      "exampleZh": "我的过敏信息列在这张卡上。",
+      "usageNote": "名词allergy前可有an，后用to说明物质；与形容词allergic分开。",
+      "provenance": "External evidence · WordNet 3.0原义独立保留；Researcher inference · 项目选义与原创双语例句，非词典原例句。",
+      "senseId": "n:14532816",
+      "forms": [
+        "allergies"
+      ]
+    },
+    "antibiotic": {
+      "zh": "抗生素（名词）",
+      "example": "The name of the antibiotic is on my card.",
+      "exampleZh": "抗生素的名称写在我的卡上。",
+      "usageNote": "本课用作药物类别名词，按卡片上的具体名称报告；下方说明词典匹配范围。",
+      "provenance": "Researcher inference · 精确义项缺口或旧定义范围限制；源记录和原词典独立保留。",
+      "noMatch": true,
+      "note": "WordNet 3.0旧定义限制了制剂来源，并含较强的cure表述；本课一般药物类别及记录语境不以该旧定义作精确完整解释。可到剑桥核对现代学习定义；不从词义推导用药决定。",
+      "forms": [
+        "antibiotics"
+      ]
+    },
+    "record": {
+      "zh": "记载已知事实的资料",
+      "example": "Could you check my allergy record before we start?",
+      "exampleZh": "您能在开始前核对我的过敏记录吗？",
+      "usageNote": "这里是已知过敏资料；不是声音录制动作。",
+      "provenance": "External evidence · WordNet 3.0原义独立保留；Researcher inference · 项目选义与原创双语例句，非词典原例句。",
+      "senseId": "n:06636524",
+      "forms": [
+        "records"
+      ]
+    }
+  },
+  "S10.H06": {
+    "vaccine": {
+      "zh": "疫苗制剂",
+      "example": "Which vaccine does this entry refer to?",
+      "exampleZh": "这条记录指的是哪种疫苗？",
+      "usageNote": "本课核对记录中的制剂名称；制剂vaccine与接种行为vaccination分开。",
+      "provenance": "Researcher inference · 精确义项缺口或旧定义范围限制；源记录和原词典独立保留。",
+      "noMatch": true,
+      "note": "WordNet 3.0旧条目仅描述弱化或死亡病原细胞悬液及注射，范围较窄；本课不知具体制剂类型，不能将一般疫苗记录强连为这种类型。保留旧原词典，可到剑桥核对一般疫苗义。",
+      "forms": [
+        "vaccines"
+      ]
+    },
+    "vaccination": {
+      "zh": "疫苗接种行为",
+      "example": "The date of the vaccination is recorded here.",
+      "exampleZh": "疫苗接种日期记在这里。",
+      "usageNote": "核对过去接种记录；不连到接种后疤痕义。",
+      "provenance": "External evidence · WordNet 3.0原义独立保留；Researcher inference · 项目选义与原创双语例句，非词典原例句。",
+      "senseId": "n:00823884",
+      "forms": [
+        "vaccinations"
+      ]
+    },
+    "record": {
+      "zh": "记载过去事件信息的文件",
+      "example": "Sam brought his vaccination record.",
+      "exampleZh": "萨姆带来了疫苗接种记录。",
+      "usageNote": "vaccination record指接种记录；同形动词recorded另选义。",
+      "provenance": "External evidence · WordNet 3.0原义独立保留；Researcher inference · 项目选义与原创双语例句，非词典原例句。",
+      "senseId": "n:06647206",
+      "forms": [
+        "records"
+      ],
+      "contrasts": [
+        {
+          "senseId": "v:01000214",
+          "zh": "记录下来（动词）",
+          "example": "The staff recorded the date on the sheet.",
+          "exampleZh": "工作人员把日期记到纸上。",
+          "provenance": "Researcher inference · 项目原创多义对比例句；原词典独立列出。"
+        }
+      ]
+    },
+    "recorded": {
+      "zh": "记录下来（record过去分词）",
+      "example": "The date of the vaccination is recorded here.",
+      "exampleZh": "疫苗接种日期记在这里。",
+      "usageNote": "日期被记下；不是录制声音。",
+      "provenance": "External evidence · WordNet 3.0原义独立保留；Researcher inference · 项目选义与原创双语例句，非词典原例句。",
+      "senseId": "v:01000214"
+    }
+  },
+  "S10.H07": {
+    "diet": {
+      "zh": "日常吃喝的食物",
+      "example": "My usual diet includes rice and vegetables.",
+      "exampleZh": "我的日常饮食包括米饭和蔬菜。",
+      "usageNote": "来源为日常饮食，本课不自动解释为节食；特殊饮食和限制饮食另列。",
+      "provenance": "External evidence · WordNet 3.0原义独立保留；Researcher inference · 项目选义与原创双语例句，非词典原例句。",
+      "senseId": "n:07560903",
+      "contrasts": [
+        {
+          "senseId": "n:07561112",
+          "zh": "按要求选择的饮食",
+          "example": "The prescribed diet is listed on the sheet.",
+          "exampleZh": "规定的饮食列在纸上。",
+          "provenance": "Researcher inference · 项目原创多义对比例句；原词典独立列出。"
+        },
+        {
+          "senseId": "v:01189224",
+          "zh": "为健康或减重而少吃（动词）",
+          "example": "Sam is not trying to diet for weight loss.",
+          "exampleZh": "萨姆没有打算通过少吃来减重。",
+          "provenance": "Researcher inference · 项目原创多义对比例句；原词典独立列出。"
+        }
+      ]
+    },
+    "digest": {
+      "zh": "消化食物（动词）",
+      "example": "I sometimes find it difficult to digest a large meal.",
+      "exampleZh": "我有时觉得难以消化一顿大餐。",
+      "usageNote": "本课描述人物感受到的困难；原上下文中的文摘名词也保留，不改源记录。",
+      "provenance": "External evidence · WordNet 3.0原义独立保留；Researcher inference · 项目选义与原创双语例句，非词典原例句。",
+      "senseId": "v:01197338",
+      "forms": [
+        "digests",
+        "digested",
+        "digesting"
+      ],
+      "contrasts": [
+        {
+          "senseId": "v:00590924",
+          "zh": "理解并吸收信息",
+          "example": "Lin needs time to digest the new information.",
+          "exampleZh": "林需要时间理解并吸收新信息。",
+          "provenance": "Researcher inference · 项目原创多义对比例句；原词典独立列出。"
+        },
+        {
+          "senseId": "n:06593542",
+          "zh": "汇集新闻的摘要刊物",
+          "example": "Sam reads a monthly news digest.",
+          "exampleZh": "萨姆读一份每月新闻摘要刊物。",
+          "provenance": "Researcher inference · 项目原创多义对比例句；原词典独立列出。"
+        }
+      ]
+    },
+    "hygiene": {
+      "zh": "卫生；保持清洁的状态或习惯",
+      "example": "The form asks about personal hygiene.",
+      "exampleZh": "表格询问个人卫生习惯。",
+      "usageNote": "来源中文“清洁”保留；personal hygiene为个人卫生，不是对人物品德的判断。",
+      "provenance": "External evidence · WordNet 3.0原义独立保留；Researcher inference · 项目选义与原创双语例句，非词典原例句。",
+      "senseId": "n:14495080"
+    }
+  }
+}

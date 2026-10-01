@@ -236,3 +236,16 @@ html[data-theme="commerce"] .memory-station { border-left: 4px solid #7894ae; }
 html[data-theme="kitchen"] .story-card { border-left: 5px solid #8ba66f; border-radius: 5px 18px 18px 5px; }
 html[data-theme="kitchen"] .object-route li { background: #fffaf0; border-bottom: 3px solid #d3b889; }
 html[data-theme="kitchen"] .memory-station { border-top: 3px solid #8ba66f; }
+
+/* Health: an arrival card, a records tray and calm blue-green paper. */
+[data-theme="health"] {
+  --canvas: #edf4f3; --paper: #fffefa; --paper-warm: #e1eeeb;
+  --ink: #25433e; --muted: #57736e; --line: #c8ddd7;
+  --teal: #33796d; --teal-deep: #24584f; --teal-pale: #e2f1eb;
+  --side-bg: #24483f; --side-mark: #49766a;
+  --hero-start: #fffbed; --hero-end: #e1eeeb; --theme-accent: #33796d;
+}
+.branch-card[data-theme="health"] .branch-art { background: #e1eeeb; color: #33796d; }
+html[data-theme="health"] .story-card { border-top: 4px solid #8fb9af; border-radius: 8px 8px 18px 18px; }
+html[data-theme="health"] .object-route li { background: #fffefa; border-left: 3px solid #8fb9af; }
+html[data-theme="health"] .memory-station { border-left: 4px solid #8fb9af; }

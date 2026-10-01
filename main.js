@@ -1,7 +1,7 @@
-import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-12-0";
-import { nextReview, reviewDue } from "./learning.mjs?v=pilot-12-0";
-import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-12-0";
-import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-12-0";
+import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-13-0";
+import { nextReview, reviewDue } from "./learning.mjs?v=pilot-13-0";
+import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-13-0";
+import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-13-0";
 const DATA_URL = "./data/world.json";
 const STORAGE_KEY = "ielts-semantic-world-s01-trial-v1";
 
@@ -213,7 +213,8 @@ function themeIllustration(theme) {
     commerce: '<path d="M29 41h94l9 65H20zM46 43V31a16 16 0 0 1 32 0v12M151 16h54v92l-9-7-9 7-9-7-9 7-9-7-9 7zM162 36h32m-32 14h25m-25 16h32m-32 20h18"/><circle cx="107" cy="33" r="13"/><path d="m100 33 5 5 9-11"/>',
     kitchen: '<path d="M26 55h91v38q0 14-14 14H40q-14 0-14-14zM16 56h110M60 47h25M72 47v-7M27 68H14m103 0h13M46 33q-8-8 0-17m22 17q-8-8 0-17m22 17q-8-8 0-17M151 17h52v91h-52zM162 34h29m-29 13h22m-22 14h29m-29 20h20"/>',
     campus: '<path d="M36 14h103l22 21v77H36zM139 14v21h22M52 48h86M52 64h70M52 82h39M52 94h77"/><path d="m181 92 24-59-9-4-24 59-1 16zM181 92l-9-4M67 21l13 5"/>',
-    nature: '<path d="M22 92q45-18 89 0t89 0M22 107q45-18 89 0t89 0M44 78V46m0 15L30 47m14 8 14-20M168 76V31m0 22 16-15m-16 21-16-18M79 36q9-12 18 0 9-12 18 0M111 57q9-12 18 0 9-12 18 0"/><circle cx="188" cy="20" r="9"/>'
+    nature: '<path d="M22 92q45-18 89 0t89 0M22 107q45-18 89 0t89 0M44 78V46m0 15L30 47m14 8 14-20M168 76V31m0 22 16-15m-16 21-16-18M79 36q9-12 18 0 9-12 18 0M111 57q9-12 18 0 9-12 18 0"/><circle cx="188" cy="20" r="9"/>',
+    health: '<rect x="29" y="24" width="99" height="85" rx="7"/><rect x="58" y="14" width="40" height="19" rx="4"/><path d="M44 49h31m-31 15h68m-68 15h54m-54 15h39M150 47h49v53h-49zM166 47V35h18v12M159 65h31m-31 13h21M139 110h72"/>'
   };
   return `<svg class="theme-illustration" viewBox="0 0 230 125" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${art[theme] || art.home}</svg>`;
 }
@@ -258,7 +259,7 @@ function renderHome() {
 }
 
 function filterRoutes() {
-  const groups = { home: 'life', community: 'public', urban: 'public', science: 'study', campus: 'study', nature: 'nature', travel: 'life', commerce: 'life', kitchen: 'life' };
+  const groups = { home: 'life', community: 'public', urban: 'public', science: 'study', campus: 'study', nature: 'nature', travel: 'life', commerce: 'life', kitchen: 'life', health: 'life' };
   const query = worldQuery.trim().toLocaleLowerCase();
   let visible = 0;
   for (const card of app.querySelectorAll('[data-branch-card]')) {
@@ -301,7 +302,7 @@ function renderBranch() {
     <div class="branch-hero-art">${themeIllustration(branch.theme)}</div></section>
     <section class="memory-map" aria-label="支线物件路线"><div class="eyebrow">ENTRY → OBJECTS → RETURN</div><h2>${escapeHtml(branch.entry)}</h2>${branchObjectMapHtml(branch, scenes, next)}<p class="route-return">↶ ${escapeHtml(branch.returnLabel)} · 合上正文后，借这些物件讲清发生了什么。</p></section>
     <section class="section-heading"><div><div class="eyebrow">SHORT READINGS / REAL DECISIONS</div><h2>沿着事件，一节一节走。</h2></div><p>英文先读，中文按需展开。用自己的说法也可以。</p></section>
-    <div class="split-grid">${scenes.map((scene, index) => `<article class="scene-card"><span class="badge">${String(index + 1).padStart(2, '0')} / ${escapeHtml(scene.id)}</span><h3>${annotatedEnglish(scene.title, scene)}</h3><p>${annotatedEnglish(scene.goal, scene)}</p><div class="meta">${promptsFor(scene).length - 1} 个召回任务 · 1 个新情境迁移</div><button class="secondary-btn" type="button" data-open-scene="${escapeHtml(scene.id)}">进入${escapeHtml(scene.navTitle)} ↗</button></article>`).join('')}</div>
+    <div class="split-grid">${scenes.map((scene, index) => `<article class="scene-card"><span class="badge">${String(index + 1).padStart(2, '0')} / ${escapeHtml(scene.id)}</span><h3>${annotatedEnglish(scene.title, scene)}</h3><p>${annotatedEnglish(scene.goal, scene)}</p><div class="meta">${promptsFor(scene).length - 1} 个情境练习 · 1 个新情境迁移</div><button class="secondary-btn" type="button" data-open-scene="${escapeHtml(scene.id)}">进入${escapeHtml(scene.navTitle)} ↗</button></article>`).join('')}</div>
     ${branch.entrySceneId ? `<section class="branch-return-panel"><strong>回到主线的同一个物件</strong><p>这条支线从费用与合同接入。看完房间细节与预算，回去继续核实费用。</p><button class="secondary-btn" id="returnMain" type="button">${escapeHtml(branch.returnLabel)} ↶</button></section>` : `<p class="meta">${branch.kind === '主线' ? '完成一站再走下一站，也可以从费用与合同进入蓝色账单支线。' : '本次已上线这条支线；所属站点的完整主线仍在文字资料中。'}</p>`}`;
   app.querySelector('#startBranch').addEventListener('click', () => navigate('scene', next.id));
   app.querySelector('#backWorld').addEventListener('click', () => navigate('home'));
@@ -324,7 +325,10 @@ function chunkMatches(value, scene) {
   const candidates = [];
   for (const entry of scene.glossary || []) {
     if (!["chunk", "construction"].includes(entry.type) || !entry.text) continue;
-    for (const text of new Set([entry.text, ...(entry.matchTexts || [])])) {
+    for (const rawText of new Set([entry.text, ...(entry.matchTexts || [])])) {
+      // A quoted statement can end with a comma where its standalone example
+      // ends with a full stop. Match the same words and keep punctuation outside.
+      const text = rawText.replace(/[.!?,;:]+$/g, "");
       const needle = text.toLowerCase();
       if (!needle) continue;
       let from = 0;

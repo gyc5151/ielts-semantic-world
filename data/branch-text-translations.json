@@ -393,6 +393,349 @@
         }
       }
     },
+    "S10.H01": {
+      "title": "接待台上的名字",
+      "goal": "为预约报到，纠正一项信息，并核对接待地点。",
+      "situation": "雨一路跟着林，预约卡上留下小小的深色水痕。进了社区诊所，她在入口内的指示牌旁停下。牌子指向左侧的接待处，以及走廊更里面的牙科接待台。几位病人在接待台旁坐着，外套叠在膝上。林十点预约了见护士，却不知道在哪里报到。她向接待员出示卡片并询问。接待员把小屏幕转向她，让她核对姓名和医疗信息。\n\n姓名正确，屏幕上的时间却是十一点，而不是十点。林把卡片放在屏幕旁。“我的预约是十点，不是十一点，”她说。接待员核对预约后更正了时间，递给她一份表格，并指向接待台对面的椅子。林把卡片收进包里，在窗边坐下。雨还在敲着玻璃，但屏幕上的信息终于和她手里的纸一致了。",
+      "paragraphs": [
+        {
+          "en": "Rain had followed Lin down the street, leaving small dark marks on her appointment card. At the community clinic, she paused by a sign inside the entrance. It pointed to reception on the left and a dental desk farther down the corridor. Several patients sat beside the reception desk, with coats folded on their knees. Lin had an appointment with the nurse at ten, but she did not know where to check in. She showed her card to the receptionist and asked. The receptionist turned a small screen towards her so she could check her name and medical details.",
+          "zh": "雨一路跟着林，预约卡上留下小小的深色水痕。进了社区诊所，她在入口内的指示牌旁停下。牌子指向左侧的接待处，以及走廊更里面的牙科接待台。几位病人在接待台旁坐着，外套叠在膝上。林十点预约了见护士，却不知道在哪里报到。她向接待员出示卡片并询问。接待员把小屏幕转向她，让她核对姓名和医疗信息。"
+        },
+        {
+          "en": "The name was right, but the screen showed eleven instead of ten. Lin placed the card beside it. “My appointment is at ten, not eleven,” she said. The receptionist checked the booking and corrected the time. Then she gave Lin a form and pointed to the chairs opposite the desk. Lin put the card in her bag and sat near the window. The rain was still tapping against the glass, but at least the details on the screen now matched the paper in her hand.",
+          "zh": "姓名正确，屏幕上的时间却是十一点，而不是十点。林把卡片放在屏幕旁。“我的预约是十点，不是十一点，”她说。接待员核对预约后更正了时间，递给她一份表格，并指向接待台对面的椅子。林把卡片收进包里，在窗边坐下。雨还在敲着玻璃，但屏幕上的信息终于和她手里的纸一致了。"
+        }
+      ],
+      "prompts": {
+        "S10.H01.P01": {
+          "function": "询问报到位置",
+          "cue": "你已经到了预约地点，询问应该在哪里登记报到。",
+          "acceptableAnswers": [
+            "我的预约应该在哪里报到？"
+          ],
+          "feedback": "询问报到位置；不要误说成重新预约。"
+        },
+        "S10.H01.P02": {
+          "function": "说明预约对象",
+          "cue": "你十点预约了见护士，向接待员说明对象和时间。",
+          "acceptableAnswers": [
+            "我十点预约了见护士。"
+          ],
+          "feedback": "说明预约对象；说明时间。"
+        },
+        "S10.H01.P03": {
+          "function": "给出正确时间",
+          "cue": "卡片写十点，屏幕写十一点。礼貌地指出正确时间。",
+          "acceptableAnswers": [
+            "我的预约是十点，不是十一点。"
+          ],
+          "feedback": "给出正确时间；指出需替换的错误时间。"
+        },
+        "S10.H01.T01": {
+          "function": "保留报到功能",
+          "cue": "换到维修店：你三点预约了见乔。询问在哪里报到，并说明预约。",
+          "acceptableAnswers": [
+            "我应该在哪里报到？我三点预约了见乔。"
+          ],
+          "feedback": "保留报到功能；替换人物和地点。"
+        }
+      }
+    },
+    "S10.H02": {
+      "title": "疼痛前发生了什么",
+      "goal": "说明部位、开始时间与观察到的变化，不凭空给出诊断。",
+      "situation": "护士叫到她的名字后，林从窗边椅子起身，跟着走进右侧房间。一张桌子正对房门，旁边挂着简明的人体示意图。护士问她为什么来就诊。林指了指膝盖。她前一天在运动中心跌倒，当时在那里接受了急救。现在她想请人检查这处损伤。“我的膝盖从昨天起一直疼，”她说。护士在一张小时间卡上记下跌倒时间，又问症状是什么时候开始的。\n\n林说明疼痛是在跌倒时开始的，站起来时会更严重，但她说不清膝盖内部究竟出了什么问题。护士记下她的描述，没有让她自己提供诊断。时间卡被放进桌上的文件夹前，林核对了时间和地点。来时她只能笼统地说“疼”。现在文件夹里有了一份更清楚的经过：哪里疼、何时开始、什么情况下更疼。",
+      "paragraphs": [
+        {
+          "en": "When the nurse called her name, Lin followed her from the window chair to a room on the right. A desk faced the door, and a simple body diagram hung beside it. The nurse asked what had brought her in. Lin touched her knee. She had fallen at the sports centre the day before and had received first aid there. Now she wanted the injury checked. “My knee has hurt since yesterday,” she said. On a small timeline card, the nurse wrote the time of the fall, then asked when the symptom had started.",
+          "zh": "护士叫到她的名字后，林从窗边椅子起身，跟着走进右侧房间。一张桌子正对房门，旁边挂着简明的人体示意图。护士问她为什么来就诊。林指了指膝盖。她前一天在运动中心跌倒，当时在那里接受了急救。现在她想请人检查这处损伤。“我的膝盖从昨天起一直疼，”她说。护士在一张小时间卡上记下跌倒时间，又问症状是什么时候开始的。"
+        },
+        {
+          "en": "Lin explained that the pain had begun when she fell. It was worse when she stood up, but she could not tell exactly what was wrong inside the knee. The nurse wrote down her description rather than a diagnosis supplied by Lin. Before the card went into the folder on the desk, Lin checked that both the time and the place were right. She had arrived with one broad word, pain. Now the folder held a clearer account: where it hurt, when it began and what made it worse.",
+          "zh": "林说明疼痛是在跌倒时开始的，站起来时会更严重，但她说不清膝盖内部究竟出了什么问题。护士记下她的描述，没有让她自己提供诊断。时间卡被放进桌上的文件夹前，林核对了时间和地点。来时她只能笼统地说“疼”。现在文件夹里有了一份更清楚的经过：哪里疼、何时开始、什么情况下更疼。"
+        }
+      ],
+      "prompts": {
+        "S10.H02.P01": {
+          "function": "说明持续到现在",
+          "cue": "你的膝盖昨天开始疼，现在仍疼。向护士说明部位与开始时间。",
+          "acceptableAnswers": [
+            "我的膝盖从昨天起一直疼。"
+          ],
+          "feedback": "说明持续到现在；补上开始时间。"
+        },
+        "S10.H02.P02": {
+          "function": "说明发生经过",
+          "cue": "疼痛是在昨天跌倒时开始的；说明经过，并提到运动中心此前给予的急救。",
+          "acceptableAnswers": [
+            "它是在我昨天跌倒的时候开始的。我在运动中心接受了急救。"
+          ],
+          "feedback": "说明发生经过；说明此前帮助，不添加诊断。"
+        },
+        "S10.H02.P03": {
+          "function": "说出疼痛变化",
+          "cue": "站起来时疼痛更严重。说明这一观察到的变化。",
+          "acceptableAnswers": [
+            "我站起来的时候疼痛会更严重。"
+          ],
+          "feedback": "说出疼痛变化；说明变化条件。"
+        },
+        "S10.H02.T01": {
+          "function": "替换部位和时间",
+          "cue": "另一次就诊：你的喉咙从周一起一直疼。说明部位和持续时间。",
+          "acceptableAnswers": [
+            "我的喉咙从周一起一直疼。"
+          ],
+          "feedback": "替换部位和时间；不要沿用跌倒经过。"
+        }
+      }
+    },
+    "S10.H03": {
+      "title": "走廊尽头的牙科接待台",
+      "goal": "先询问是否提供相关服务，再预约合适的专业人员。",
+      "situation": "第二天早晨，林的室友萨姆带着另一个问题来到同一家诊所。他的一颗牙一直疼，想找到牙科服务。入口旁墙上的宣传单列出了常见小病照护及几种其他服务，但没有写牙科问题应到哪个接待台。萨姆顺着指示走到走廊尽头。接待台上方有一个小牙齿标志，下方摊着预约登记册。他询问诊所是否为牙科问题提供医疗治疗。\n\n接待员确认，楼里的这个区域有牙医提供服务。“我可以预约见牙医吗？”萨姆问。她把登记册转向他。有两个时段可预约，但较早的一个和课程冲突。萨姆选择了较晚的时间，记到卡片上。离开前，他核对了卡片背面的接待台名称。宣传单帮他找到这栋楼；到接待台询问，才帮他确认实际服务，并找到能来就诊的时间。",
+      "paragraphs": [
+        {
+          "en": "The next morning, Lin’s flatmate Sam came to the same clinic with a different question. A tooth had been hurting, and he needed to find the dental service. On the wall by the entrance, a leaflet listed care for common ailments and several other services. It did not tell him which desk to use for dental problems. Sam followed the sign to the end of the corridor. A small tooth symbol stood above the desk there, and a booking book lay open below it. He asked whether the clinic provided medical treatment for dental problems.",
+          "zh": "第二天早晨，林的室友萨姆带着另一个问题来到同一家诊所。他的一颗牙一直疼，想找到牙科服务。入口旁墙上的宣传单列出了常见小病照护及几种其他服务，但没有写牙科问题应到哪个接待台。萨姆顺着指示走到走廊尽头。接待台上方有一个小牙齿标志，下方摊着预约登记册。他询问诊所是否为牙科问题提供医疗治疗。"
+        },
+        {
+          "en": "The receptionist confirmed that a dentist worked in that part of the building. “Could I book an appointment with the dentist?” Sam asked. She turned the book towards him. Two times were free, but the earlier one was during his class. Sam chose the later time and wrote it on a card. Before leaving, he checked the desk name on the back. The leaflet had helped him find the building; the question at the desk had helped him find the actual service and a time he could attend.",
+          "zh": "接待员确认，楼里的这个区域有牙医提供服务。“我可以预约见牙医吗？”萨姆问。她把登记册转向他。有两个时段可预约，但较早的一个和课程冲突。萨姆选择了较晚的时间，记到卡片上。离开前，他核对了卡片背面的接待台名称。宣传单帮他找到这栋楼；到接待台询问，才帮他确认实际服务，并找到能来就诊的时间。"
+        }
+      ],
+      "prompts": {
+        "S10.H03.P01": {
+          "function": "明确牙科问题",
+          "cue": "你牙疼，询问这家诊所是否提供牙科问题的治疗服务。",
+          "acceptableAnswers": [
+            "这家诊所为牙科问题提供医疗治疗吗？"
+          ],
+          "feedback": "明确牙科问题；核实服务范围。"
+        },
+        "S10.H03.P02": {
+          "function": "提出预约请求",
+          "cue": "你已确认这里有牙医。提出预约见牙医的请求。",
+          "acceptableAnswers": [
+            "我可以预约见牙医吗？"
+          ],
+          "feedback": "提出预约请求；with后说明牙医。"
+        },
+        "S10.H03.P03": {
+          "function": "先询问可预约时间",
+          "cue": "你还不知道哪些时段可预约。询问下一个可预约时间。",
+          "acceptableAnswers": [
+            "下一个可预约的时间是什么时候？"
+          ],
+          "feedback": "先询问可预约时间；不要把已订时间当空档。"
+        },
+        "S10.H03.T01": {
+          "function": "替换专业人员",
+          "cue": "换到夜校：请求预约见导师，再询问可预约时间。",
+          "acceptableAnswers": [
+            "我可以预约见导师吗？下一个可预约的时间是什么时候？"
+          ],
+          "feedback": "替换专业人员；保留预约和询问空档功能。"
+        }
+      }
+    },
+    "S10.H04": {
+      "title": "宣传单旁的问题",
+      "goal": "询问已安排会面的内容，区分目标与保证实现的结果。",
+      "situation": "一周后，林拿着理疗师的预约卡再次来到诊所。此前接诊的医护已为她安排这次会面，她想了解具体会做什么。这次她经过窗边候诊椅，走到蓝色宣传单架旁的门口。宣传单用了therapy这个词，并写着目标是减轻不适。林知道“不适”的意思，却被较长的动词绊住。她把宣传单放在门旁的小问题桌上，用手指指出那一行。\n\n理疗师向她问好时，林问：“您可以解释一下这种治疗包括什么吗？”她也询问了这次会面的目标。解释让她分清预期益处与已经发生的结果。她没有把宣传单说成保证治愈。会面结束时，一张便签被放进桌子右侧的文件夹。林请对方写下下次预约时间。她的卡片上现在既有日期，也有下次可以带来讨论的问题。",
+      "paragraphs": [
+        {
+          "en": "A week later, Lin returned with an appointment card for the physiotherapist. The clinician she had seen had arranged this visit, and Lin wanted to understand what would happen. This time she walked past the window chairs to a door beside a blue leaflet stand. The leaflet used the word therapy and said the aim was to alleviate discomfort. Lin understood discomfort, but the longer verb slowed her down. She placed the leaflet on the small question table beside the door and marked the line with her finger.",
+          "zh": "一周后，林拿着理疗师的预约卡再次来到诊所。此前接诊的医护已为她安排这次会面，她想了解具体会做什么。这次她经过窗边候诊椅，走到蓝色宣传单架旁的门口。宣传单用了therapy这个词，并写着目标是减轻不适。林知道“不适”的意思，却被较长的动词绊住。她把宣传单放在门旁的小问题桌上，用手指指出那一行。"
+        },
+        {
+          "en": "When the physiotherapist greeted her, Lin asked, “Could you explain what this therapy involves?” She also asked about the aim of the session. The explanation helped her distinguish an intended benefit from a result that had already happened. She did not leave saying the leaflet had promised a cure. At the end, a note was placed in the folder on the right of the table. Lin asked for the next appointment time to be written down. Her card now held both a date and a question she could bring to the next visit.",
+          "zh": "理疗师向她问好时，林问：“您可以解释一下这种治疗包括什么吗？”她也询问了这次会面的目标。解释让她分清预期益处与已经发生的结果。她没有把宣传单说成保证治愈。会面结束时，一张便签被放进桌子右侧的文件夹。林请对方写下下次预约时间。她的卡片上现在既有日期，也有下次可以带来讨论的问题。"
+        }
+      ],
+      "prompts": {
+        "S10.H04.P01": {
+          "function": "提出解释请求",
+          "cue": "你已有治疗会面安排，但不知道包括哪些内容。请求解释。",
+          "acceptableAnswers": [
+            "您可以解释一下这种治疗包括什么吗？"
+          ],
+          "feedback": "提出解释请求；what后用陈述语序。"
+        },
+        "S10.H04.P02": {
+          "function": "询问预期目标",
+          "cue": "你想先了解这次会面的目的，再讨论细节。询问目标。",
+          "acceptableAnswers": [
+            "这次会面的目标是什么？"
+          ],
+          "feedback": "询问预期目标；不声称结果已经实现。"
+        },
+        "S10.H04.P03": {
+          "function": "说明目标",
+          "cue": "草稿把宣传单中的目标写成保证治愈。改成“目标是减轻不适”。",
+          "acceptableAnswers": [
+            "宣传单说，目标是减轻不适。"
+          ],
+          "feedback": "说明目标；减轻不等于治愈。"
+        },
+        "S10.H04.T01": {
+          "function": "迁移解释请求",
+          "cue": "换到工作坊：询问活动包括什么，并请主持人写下下次见面时间。",
+          "acceptableAnswers": [
+            "您可以解释这次活动包括什么吗？您可以写下下次见面时间吗？"
+          ],
+          "feedback": "迁移解释请求；迁移留下书面信息的请求。"
+        }
+      }
+    },
+    "S10.H05": {
+      "title": "萨姆随身保留的卡片",
+      "goal": "告知已知过敏情况，指出记录中的物质，并请求核对。",
+      "situation": "牙科预约当天，萨姆报到后坐在牙科接待台对面。他把一张过敏卡放在包的前袋里，卡上记着对某一种抗生素的反应，包括确切名称。护士来核对信息时，他把卡片放到电脑旁的托盘上。“我对这种抗生素过敏，”他说着，指向名称。他是在报告已知过敏情况，没有说该类别里的所有药物都曾引起相同反应。\n\n萨姆请护士在预约会面开始前核对过敏记录。她读回药物名称，并与屏幕上的信息比对。萨姆认真听着：漏掉一个词就可能改变他报告的内容。卡片一直放在托盘上，直到细节确认完毕，他才把它收回包里。这句话的关键不在于复杂描述，而在于清楚连接本人、确切物质和工作人员需要查看的记录。",
+      "paragraphs": [
+        {
+          "en": "On the day of his dental appointment, Sam checked in and took a seat opposite the dental desk. He kept a small allergy card in the front pocket of his bag. It listed a reaction to one particular antibiotic, including the exact name. When the nurse came to check his details, Sam put the card on the tray beside her computer. “I am allergic to this antibiotic,” he said, pointing to the name. He was reporting a known allergy, not saying that every medicine in that category had caused the same reaction.",
+          "zh": "牙科预约当天，萨姆报到后坐在牙科接待台对面。他把一张过敏卡放在包的前袋里，卡上记着对某一种抗生素的反应，包括确切名称。护士来核对信息时，他把卡片放到电脑旁的托盘上。“我对这种抗生素过敏，”他说着，指向名称。他是在报告已知过敏情况，没有说该类别里的所有药物都曾引起相同反应。"
+        },
+        {
+          "en": "Sam asked the nurse to check the allergy record before the appointment began. She read the name back and checked it against the information on the screen. Sam listened carefully; one missing word would change what he was reporting. The card stayed on the tray until the details had been confirmed. Only then did he return it to his bag. The useful part of the sentence was not a complicated description. It was the clear connection between himself, the exact substance and the record the staff needed to see.",
+          "zh": "萨姆请护士在预约会面开始前核对过敏记录。她读回药物名称，并与屏幕上的信息比对。萨姆认真听着：漏掉一个词就可能改变他报告的内容。卡片一直放在托盘上，直到细节确认完毕，他才把它收回包里。这句话的关键不在于复杂描述，而在于清楚连接本人、确切物质和工作人员需要查看的记录。"
+        }
+      ],
+      "prompts": {
+        "S10.H05.P01": {
+          "function": "使用allergic to",
+          "cue": "卡上记录你对所指的具体药物过敏。告知这一已知情况。",
+          "acceptableAnswers": [
+            "我对这种抗生素过敏。"
+          ],
+          "feedback": "使用allergic to；指出确切物质。"
+        },
+        "S10.H05.P02": {
+          "function": "allergy前用an",
+          "cue": "换用名词结构表达同一已知过敏情况，指向卡上的药物。",
+          "acceptableAnswers": [
+            "我对这种抗生素有过敏反应。"
+          ],
+          "feedback": "allergy前用an；物质前用to。"
+        },
+        "S10.H05.P03": {
+          "function": "请求核对记录",
+          "cue": "会面即将开始，请护士先核对过敏记录。",
+          "acceptableAnswers": [
+            "您能在开始前核对我的过敏记录吗？"
+          ],
+          "feedback": "请求核对记录；说明应在开始前完成。"
+        },
+        "S10.H05.T01": {
+          "function": "替换物质与事件",
+          "cue": "换到餐厅：你已知对花生过敏。告知服务员，并请其在备餐前核对过敏备注。",
+          "acceptableAnswers": [
+            "我对花生过敏。您可以在备餐前核对我的过敏备注吗？"
+          ],
+          "feedback": "替换物质与事件；保留明确告知和核对请求。"
+        }
+      }
+    },
+    "S10.H06": {
+      "title": "有日期却看不清名称",
+      "goal": "核对不清楚的记录对象和日期，并请求副本。",
+      "situation": "那个月晚些时候，萨姆需要请人帮忙读一份从家里带来的疫苗接种记录。学校向他询问信息，但纸上有一条记录看不清。在诊所的记录窗口，他把纸摊在狭窄台面上。日期清楚，疫苗名称却不清楚。他指着那条记录，询问指的是哪种疫苗。工作人员核查原有信息，没有猜填空缺。萨姆的手指一直放在那行旁，确保两人说的是同一条。\n\n名称核实后，萨姆请对方确认接种日期。窗口右侧的机器打印出一份副本。他先与原纸比对，再把两份材料放进文件袋。新副本记录的是过去发生的事，没有告诉他下一次应该接受什么。如果学校还需要其他材料，他会询问缺哪项信息。现在文件袋里装着更清楚的记录，没有用猜测回答看不清的词。",
+      "paragraphs": [
+        {
+          "en": "Later that month, Sam needed help reading a vaccination record he had brought from home. His college had asked him for information, but one entry on the paper was difficult to read. At the clinic’s records window, he unfolded the sheet on a narrow ledge. The date was clear; the vaccine name was not. He pointed to that entry and asked which vaccine it referred to. The staff member checked the old information rather than filling the gap with a guess. Sam waited with his finger beside the line so they were discussing the same entry.",
+          "zh": "那个月晚些时候，萨姆需要请人帮忙读一份从家里带来的疫苗接种记录。学校向他询问信息，但纸上有一条记录看不清。在诊所的记录窗口，他把纸摊在狭窄台面上。日期清楚，疫苗名称却不清楚。他指着那条记录，询问指的是哪种疫苗。工作人员核查原有信息，没有猜填空缺。萨姆的手指一直放在那行旁，确保两人说的是同一条。"
+        },
+        {
+          "en": "Once the name had been checked, Sam asked for confirmation of the vaccination date. A printed copy came out of the machine to the right of the window. He compared it with his paper before putting both in the document envelope. The new copy recorded what had happened in the past. It did not tell him what he should receive next. If the college needed anything else, Sam would ask what information was missing. For now, the envelope held a clearer record rather than an answer invented from an unreadable word.",
+          "zh": "名称核实后，萨姆请对方确认接种日期。窗口右侧的机器打印出一份副本。他先与原纸比对，再把两份材料放进文件袋。新副本记录的是过去发生的事，没有告诉他下一次应该接受什么。如果学校还需要其他材料，他会询问缺哪项信息。现在文件袋里装着更清楚的记录，没有用猜测回答看不清的词。"
+        }
+      ],
+      "prompts": {
+        "S10.H06.P01": {
+          "function": "核对记录对象",
+          "cue": "日期清楚，但制剂名称看不清。询问记录指哪种疫苗。",
+          "acceptableAnswers": [
+            "这条记录指的是哪种疫苗？"
+          ],
+          "feedback": "核对记录对象；不询问新的治疗步骤。"
+        },
+        "S10.H06.P02": {
+          "function": "接种事件用vaccination",
+          "cue": "名称已核实。请工作人员确认过去这次接种的日期。",
+          "acceptableAnswers": [
+            "您能确认这次疫苗接种的日期吗？"
+          ],
+          "feedback": "接种事件用vaccination；核对已有日期。"
+        },
+        "S10.H06.P03": {
+          "function": "请求文件副本",
+          "cue": "你需要一份清楚的记录副本，与原件一起保存。请求副本。",
+          "acceptableAnswers": [
+            "我可以拿一份这份记录的副本吗？"
+          ],
+          "feedback": "请求文件副本；不是请求新的接种。"
+        },
+        "S10.H06.T01": {
+          "function": "保留核对记录功能",
+          "cue": "换到银行：一条不清楚的记录可能写着某笔付款。询问指哪笔付款，并请求副本。",
+          "acceptableAnswers": [
+            "这条记录指的是哪笔付款？我可以拿一份记录副本吗？"
+          ],
+          "feedback": "保留核对记录功能；替换对象和地点。"
+        }
+      }
+    },
+    "S10.H07": {
+      "title": "洗手池旁的表格",
+      "goal": "准确描述日常习惯、本人报告的困难和偶尔的例外。",
+      "situation": "后来的一次健康预约中，林拿到一份关于日常习惯的简短表格。她坐在洗手池旁的小桌边，桌上放着空表格和铅笔。第一个问题询问日常饮食。林写下自己常在家吃米饭和蔬菜，有时在学校吃午饭。另一个问题问进食是否带来困难。她写下自己有时觉得难以消化一顿大餐。这是她对经历的描述，没有解释原因。\n\n“个人卫生”这个标题让她停了一下。她询问问题需要哪类信息，然后描述平时的清洁习惯。门旁有一个已填表格托盘，她把纸放进去，铅笔横放在下边缘。递交前，她又读了一遍答案。“通常”和“有时”很重要：换掉其中一个，就会改变对日常生活的说明。护士之后可以继续询问。此刻，林给出了一份谨慎的习惯描述，没有把表格写成食谱计划或诊断。",
+      "paragraphs": [
+        {
+          "en": "At a later health appointment, Lin was given a short form about everyday habits. She sat at a small table beside the sink, where a blank form and a pencil were waiting. The first question asked about her usual diet. Lin wrote that she often ate rice and vegetables at home, but sometimes had lunch at college. Another question asked whether eating caused any difficulty. She wrote that she sometimes found a large meal difficult to digest. This was her description of an experience, not an explanation of its cause.",
+          "zh": "后来的一次健康预约中，林拿到一份关于日常习惯的简短表格。她坐在洗手池旁的小桌边，桌上放着空表格和铅笔。第一个问题询问日常饮食。林写下自己常在家吃米饭和蔬菜，有时在学校吃午饭。另一个问题问进食是否带来困难。她写下自己有时觉得难以消化一顿大餐。这是她对经历的描述，没有解释原因。"
+        },
+        {
+          "en": "The heading personal hygiene made her pause. She asked what information the question required, then described her ordinary cleaning routine. On the completed-form tray near the door, she placed the sheet with the pencil laid across its bottom edge. Before handing it over, she read the answers once more. Usually and sometimes mattered: changing either word would change the account of her day. The nurse could ask more questions later. For now, Lin had given a careful picture of her habits without turning the form into a diet plan or a diagnosis.",
+          "zh": "“个人卫生”这个标题让她停了一下。她询问问题需要哪类信息，然后描述平时的清洁习惯。门旁有一个已填表格托盘，她把纸放进去，铅笔横放在下边缘。递交前，她又读了一遍答案。“通常”和“有时”很重要：换掉其中一个，就会改变对日常生活的说明。护士之后可以继续询问。此刻，林给出了一份谨慎的习惯描述，没有把表格写成食谱计划或诊断。"
+        }
+      ],
+      "prompts": {
+        "S10.H07.P01": {
+          "function": "描述日常饮食",
+          "cue": "你常吃米饭和蔬菜。描述日常饮食，不要说成正在减肥。",
+          "acceptableAnswers": [
+            "我的日常饮食包括米饭和蔬菜。"
+          ],
+          "feedback": "描述日常饮食；不自动引入节食义。"
+        },
+        "S10.H07.P02": {
+          "function": "说明困难与频率",
+          "cue": "你有时觉得大餐难以消化。说明本人经历，不给出原因诊断。",
+          "acceptableAnswers": [
+            "我有时觉得难以消化一顿大餐。"
+          ],
+          "feedback": "说明困难与频率；不推断过敏。"
+        },
+        "S10.H07.P03": {
+          "function": "区分通常与有时",
+          "cue": "大部分时候在家吃饭，偶尔在学校吃。说明常态与例外。",
+          "acceptableAnswers": [
+            "我通常在家吃饭，但有时在学校吃。"
+          ],
+          "feedback": "区分通常与有时；说出不同地点。"
+        },
+        "S10.H07.T01": {
+          "function": "替换行动",
+          "cue": "换到通勤口语题：你通常步行上班，有时坐公交。说明常态与例外。",
+          "acceptableAnswers": [
+            "我通常步行上班，但有时坐公交。"
+          ],
+          "feedback": "替换行动；保留常态与例外。"
+        }
+      }
+    },
     "S09.K01": {
       "title": "菜单旁的一次选择",
       "goal": "询问餐点内容，请求小份食物，并说明一项用餐选择。",

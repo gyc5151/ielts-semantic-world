@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "pilot-12-0",
+  "version": "pilot-13-0",
   "scope": "Editorial learning units for listed sceneIds; not entire seed vocabulary or learner mastery",
   "units": [
     {
@@ -644,6 +644,1578 @@
       "evidenceLabel": "Researcher inference · productive construction from existing practice",
       "reviewStatus": "project-reviewed",
       "unitVersion": "pilot-9-0"
+    },
+    {
+      "id": "U.CLINIC.H01.CLINIC",
+      "form": "clinic",
+      "meaningZh": "诊所",
+      "sense": "名词，提供医疗服务的地点；此处是社区诊所，不是整座医院。",
+      "example": "Is this the right clinic for my appointment?",
+      "exampleZh": "我的预约是在这家诊所吗？",
+      "tier": "core",
+      "type": "word",
+      "sourceTerm": "clinic",
+      "sourceRecordIds": [
+        "R00428"
+      ],
+      "sceneIds": [
+        "S10.H01"
+      ],
+      "glossaryIds": [
+        "S10.H01.G01"
+      ],
+      "sourceRecords": [
+        {
+          "term": "clinic",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R00428; 大全直 PRO 听力预习词表; page 13; unit 6; Listening",
+          "canonicalTerm": "clinic",
+          "originalContext": "a place where medical treatment is given",
+          "sourceRecordId": "R00428",
+          "sourceRecord": {
+            "Record_ID": "R00428",
+            "Canonical_Term": "clinic",
+            "Source_Term": "clinic",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 13,
+            "Unit": 6,
+            "Section/Topic": "Listening",
+            "Source_No": 39,
+            "POS": "n.",
+            "Chinese_Meaning": "诊所",
+            "Source_Context": "a place where medical treatment is given",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        }
+      ],
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-13-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.CLINIC.H01.PATIENTS",
+      "form": "patients",
+      "meaningZh": "接受诊疗的人；病人（复数）",
+      "sense": "来源保留复数名词；单数为patient。本课是候诊的人，不连接耐心的形容词义。",
+      "example": "The patients are waiting beside the reception desk.",
+      "exampleZh": "病人们在接待台旁等候。",
+      "tier": "support",
+      "type": "word",
+      "sourceTerm": "patients",
+      "sourceRecordIds": [
+        "R00376"
+      ],
+      "sceneIds": [
+        "S10.H01"
+      ],
+      "glossaryIds": [
+        "S10.H01.G02"
+      ],
+      "sourceRecords": [
+        {
+          "term": "patients",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R00376; 大全直 PRO 听力预习词表; page 12; unit 5; Listening",
+          "canonicalTerm": "patients",
+          "originalContext": "people receiving medical treatment",
+          "sourceRecordId": "R00376",
+          "sourceRecord": {
+            "Record_ID": "R00376",
+            "Canonical_Term": "patients",
+            "Source_Term": "patients",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 12,
+            "Unit": 5,
+            "Section/Topic": "Listening",
+            "Source_No": 67,
+            "POS": "n.",
+            "Chinese_Meaning": "病人",
+            "Source_Context": "people receiving medical treatment",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        }
+      ],
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-13-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.CLINIC.H01.MEDICAL",
+      "form": "medical",
+      "meaningZh": "医疗的",
+      "sense": "形容词，与疾病、受伤及治疗有关；medical details在这里是就诊相关信息。",
+      "example": "Please check my medical details.",
+      "exampleZh": "请核对我的医疗信息。",
+      "tier": "support",
+      "type": "word",
+      "sourceTerm": "medical",
+      "sourceRecordIds": [
+        "R00141"
+      ],
+      "sceneIds": [
+        "S10.H01"
+      ],
+      "glossaryIds": [
+        "S10.H01.G03"
+      ],
+      "sourceRecords": [
+        {
+          "term": "medical",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R00141; 大全直 PRO 听力预习词表; page 5; unit 2; Listening",
+          "canonicalTerm": "medical",
+          "originalContext": "connected with illness and injury and their treatment",
+          "sourceRecordId": "R00141",
+          "sourceRecord": {
+            "Record_ID": "R00141",
+            "Canonical_Term": "medical",
+            "Source_Term": "medical",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 5,
+            "Unit": 2,
+            "Section/Topic": "Listening",
+            "Source_No": 62,
+            "POS": "adj.",
+            "Chinese_Meaning": "医疗的",
+            "Source_Context": "connected with illness and injury and their treatment",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        }
+      ],
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-13-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.CLINIC.H01.APPOINTMENT",
+      "form": "I have an appointment with …",
+      "meaningZh": "我预约了与……见面",
+      "sense": "用with说明预约对象；时间可补在at或on后。本句不是临时要求医护立即接诊。",
+      "example": "I have an appointment with the nurse at ten.",
+      "exampleZh": "我十点预约了见护士。",
+      "tier": "core",
+      "type": "construction",
+      "sceneIds": [
+        "S10.H01"
+      ],
+      "glossaryIds": [
+        "S10.H01.G04"
+      ],
+      "sourceRecords": [],
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-13-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.CLINIC.H01.CHECK_IN",
+      "form": "Where should I check in?",
+      "meaningZh": "我应该在哪里报到？",
+      "sense": "到达预约地点后询问登记位置；此处check in是报到，不是已经接受治疗。",
+      "example": "Where should I check in for my appointment?",
+      "exampleZh": "我的预约应该在哪里报到？",
+      "tier": "core",
+      "type": "construction",
+      "sceneIds": [
+        "S10.H01"
+      ],
+      "glossaryIds": [
+        "S10.H01.G05"
+      ],
+      "sourceRecords": [],
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-13-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.CLINIC.H01.CORRECT",
+      "form": "My … is …, not …",
+      "meaningZh": "我的……是……，不是……",
+      "sense": "纠正一项具体记录并提供正确内容；不把整份表格统称错误。",
+      "example": "My appointment is at ten, not eleven.",
+      "exampleZh": "我的预约是十点，不是十一点。",
+      "tier": "core",
+      "type": "construction",
+      "sceneIds": [
+        "S10.H01"
+      ],
+      "glossaryIds": [
+        "S10.H01.G06"
+      ],
+      "sourceRecords": [],
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-13-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.CLINIC.H02.SYMPTOM",
+      "form": "symptom",
+      "meaningZh": "症状",
+      "sense": "可向医护描述的身体或心理变化；说出症状不等于自己已确定病因。",
+      "example": "The nurse asked when the symptom started.",
+      "exampleZh": "护士问症状是什么时候开始的。",
+      "tier": "core",
+      "type": "word",
+      "sourceTerm": "symptom",
+      "sourceRecordIds": [
+        "R01568"
+      ],
+      "sceneIds": [
+        "S10.H02"
+      ],
+      "glossaryIds": [
+        "S10.H02.G01"
+      ],
+      "sourceRecords": [
+        {
+          "term": "symptom",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R01568; 雅思一万词汇班; page 16; unit None; Scientific processes 科学过程",
+          "canonicalTerm": "symptom",
+          "originalContext": "symptom n. 症状",
+          "sourceRecordId": "R01568",
+          "sourceRecord": {
+            "Record_ID": "R01568",
+            "Canonical_Term": "symptom",
+            "Source_Term": "symptom",
+            "Source": "雅思一万词汇班",
+            "Page": 16,
+            "Unit": null,
+            "Section/Topic": "Scientific processes 科学过程",
+            "Source_No": null,
+            "POS": "n.",
+            "Chinese_Meaning": null,
+            "Source_Context": "symptom n. 症状",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        }
+      ],
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-13-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.CLINIC.H02.INJURY",
+      "form": "injury",
+      "meaningZh": "身体损伤；受伤",
+      "sense": "本课指跌倒造成的身体损伤；疼痛是描述，不能由疼痛自行推断某种确诊结果。",
+      "example": "I have a knee injury after a fall.",
+      "exampleZh": "我跌倒后膝盖受了伤。",
+      "tier": "core",
+      "type": "word",
+      "sourceTerm": "injury",
+      "sourceRecordIds": [
+        "R00721"
+      ],
+      "sceneIds": [
+        "S10.H02"
+      ],
+      "glossaryIds": [
+        "S10.H02.G02"
+      ],
+      "sourceRecords": [
+        {
+          "term": "injury",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R00721; 大全直 PRO 听力预习词表; page 20; unit 11; Listening",
+          "canonicalTerm": "injury",
+          "originalContext": "physical harm or damage",
+          "sourceRecordId": "R00721",
+          "sourceRecord": {
+            "Record_ID": "R00721",
+            "Canonical_Term": "injury",
+            "Source_Term": "injury",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 20,
+            "Unit": 11,
+            "Section/Topic": "Listening",
+            "Source_No": 20,
+            "POS": "n.",
+            "Chinese_Meaning": "伤害",
+            "Source_Context": "physical harm or damage",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        }
+      ],
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-13-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.CLINIC.H02.FIRST_AID",
+      "form": "first aid",
+      "meaningZh": "急救",
+      "sense": "受伤或突发不适后给予的初步紧急帮助；本课报告此前获得的帮助，不教授操作。",
+      "example": "I received first aid at the sports centre.",
+      "exampleZh": "我在运动中心接受了急救。",
+      "tier": "support",
+      "type": "chunk",
+      "sourceTerm": "first aid",
+      "sourceRecordIds": [
+        "R00720"
+      ],
+      "sceneIds": [
+        "S10.H02"
+      ],
+      "glossaryIds": [
+        "S10.H02.G03"
+      ],
+      "sourceRecords": [
+        {
+          "term": "first aid",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R00720; 大全直 PRO 听力预习词表; page 20; unit 11; Listening",
+          "canonicalTerm": "first aid",
+          "originalContext": "emergency medical help given to a sick or injured person",
+          "sourceRecordId": "R00720",
+          "sourceRecord": {
+            "Record_ID": "R00720",
+            "Canonical_Term": "first aid",
+            "Source_Term": "first aid",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 20,
+            "Unit": 11,
+            "Section/Topic": "Listening",
+            "Source_No": 19,
+            "POS": "n.",
+            "Chinese_Meaning": "急救",
+            "Source_Context": "emergency medical help given to a sick or injured person",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        }
+      ],
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-13-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.CLINIC.H02.PAIN_SINCE",
+      "form": "My … has hurt since …",
+      "meaningZh": "我的……从……起一直疼",
+      "sense": "描述身体部位与开始时间；has hurt在这里说明持续到现在的情况。",
+      "example": "My knee has hurt since yesterday.",
+      "exampleZh": "我的膝盖从昨天起一直疼。",
+      "tier": "core",
+      "type": "construction",
+      "sceneIds": [
+        "S10.H02"
+      ],
+      "glossaryIds": [
+        "S10.H02.G04"
+      ],
+      "sourceRecords": [],
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-13-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.CLINIC.H02.WHEN_START",
+      "form": "It started when …",
+      "meaningZh": "它是在……的时候开始的",
+      "sense": "连接症状与发生经过；提供所知事实，不直接命名病因。",
+      "example": "It started when I fell yesterday.",
+      "exampleZh": "它是在我昨天跌倒的时候开始的。",
+      "tier": "core",
+      "type": "construction",
+      "sceneIds": [
+        "S10.H02"
+      ],
+      "glossaryIds": [
+        "S10.H02.G05"
+      ],
+      "sourceRecords": [],
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-13-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.CLINIC.H02.CHANGE",
+      "form": "The pain is worse when …",
+      "meaningZh": "……的时候疼痛会更严重",
+      "sense": "描述变化条件，让医护判断；worse是比较，不说明损伤类型。",
+      "example": "The pain is worse when I stand up.",
+      "exampleZh": "我站起来的时候疼痛会更严重。",
+      "tier": "core",
+      "type": "construction",
+      "sceneIds": [
+        "S10.H02"
+      ],
+      "glossaryIds": [
+        "S10.H02.G06"
+      ],
+      "sourceRecords": [],
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-13-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.CLINIC.H03.DENTIST",
+      "form": "dentist",
+      "meaningZh": "牙医",
+      "sense": "照顾牙齿和口腔健康的专业人员；当前角色不是护士或理疗师。",
+      "example": "I need an appointment with the dentist.",
+      "exampleZh": "我需要预约见牙医。",
+      "tier": "core",
+      "type": "word",
+      "sourceTerm": "dentist",
+      "sourceRecordIds": [
+        "R00010"
+      ],
+      "sceneIds": [
+        "S10.H03"
+      ],
+      "glossaryIds": [
+        "S10.H03.G01"
+      ],
+      "sourceRecords": [
+        {
+          "term": "dentist",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R00010; 大全直 PRO 听力预习词表; page 1; unit 1; Listening",
+          "canonicalTerm": "dentist",
+          "originalContext": "a person whose job is to take care of people's teeth",
+          "sourceRecordId": "R00010",
+          "sourceRecord": {
+            "Record_ID": "R00010",
+            "Canonical_Term": "dentist",
+            "Source_Term": "dentist",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 1,
+            "Unit": 1,
+            "Section/Topic": "Listening",
+            "Source_No": 10,
+            "POS": "n.",
+            "Chinese_Meaning": "牙科医生",
+            "Source_Context": "a person whose job is to take care of people's teeth",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        }
+      ],
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-13-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.CLINIC.H03.AILMENT",
+      "form": "ailment",
+      "meaningZh": "小病；不适",
+      "sense": "来源为小病；英文也可泛指疾病或健康问题。服务表上的common ailments不是具体诊断。",
+      "example": "The leaflet lists services for common ailments.",
+      "exampleZh": "宣传单列出了常见小病的服务。",
+      "tier": "recognition",
+      "type": "word",
+      "sourceTerm": "ailment",
+      "sourceRecordIds": [
+        "R01028"
+      ],
+      "sceneIds": [
+        "S10.H03"
+      ],
+      "glossaryIds": [
+        "S10.H03.G02"
+      ],
+      "sourceRecords": [
+        {
+          "term": "ailment",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R01028; 雅思 PRO 班级词汇表; page 8; unit 4; Reading",
+          "canonicalTerm": "ailment",
+          "originalContext": "The clinic treats a wide range of common ailments.",
+          "sourceRecordId": "R01028",
+          "sourceRecord": {
+            "Record_ID": "R01028",
+            "Canonical_Term": "ailment",
+            "Source_Term": "ailment",
+            "Source": "雅思 PRO 班级词汇表",
+            "Page": 8,
+            "Unit": 4,
+            "Section/Topic": "Reading",
+            "Source_No": 6,
+            "POS": "n.",
+            "Chinese_Meaning": "小病",
+            "Source_Context": "The clinic treats a wide range of common ailments.",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        }
+      ],
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-13-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.CLINIC.H03.MEDICAL_TREATMENT",
+      "form": "medical treatment",
+      "meaningZh": "医疗救治；医疗治疗",
+      "sense": "指专业诊疗或治疗服务；询问是否提供服务不表示已得到或适合某种治疗。",
+      "example": "Does this clinic provide medical treatment for dental problems?",
+      "exampleZh": "这家诊所为牙科问题提供医疗治疗吗？",
+      "tier": "support",
+      "type": "chunk",
+      "sourceTerm": "medical treatment",
+      "sourceRecordIds": [
+        "R01213"
+      ],
+      "sceneIds": [
+        "S10.H03"
+      ],
+      "glossaryIds": [
+        "S10.H03.G03"
+      ],
+      "sourceRecords": [
+        {
+          "term": "medical treatment",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R01213; 雅思 PRO 班级词汇表; page 16; unit 7; Writing",
+          "canonicalTerm": "medical treatment",
+          "originalContext": "He is receiving medical treatment for a heart condition.",
+          "sourceRecordId": "R01213",
+          "sourceRecord": {
+            "Record_ID": "R01213",
+            "Canonical_Term": "medical treatment",
+            "Source_Term": "medical treatment",
+            "Source": "雅思 PRO 班级词汇表",
+            "Page": 16,
+            "Unit": 7,
+            "Section/Topic": "Writing",
+            "Source_No": 3,
+            "POS": null,
+            "Chinese_Meaning": "医疗救治",
+            "Source_Context": "He is receiving medical treatment for a heart condition.",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        }
+      ],
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-13-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.CLINIC.H03.BOOK_WITH",
+      "form": "Could I book an appointment with …?",
+      "meaningZh": "我可以预约见……吗？",
+      "sense": "向服务台提出预约请求；with后说明要见的专业人员。",
+      "example": "Could I book an appointment with the dentist?",
+      "exampleZh": "我可以预约见牙医吗？",
+      "tier": "core",
+      "type": "construction",
+      "sceneIds": [
+        "S10.H03"
+      ],
+      "glossaryIds": [
+        "S10.H03.G04"
+      ],
+      "sourceRecords": [],
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-13-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.CLINIC.H03.NEXT_SLOT",
+      "form": "When is the next available appointment?",
+      "meaningZh": "下一个可预约的时间是什么时候？",
+      "sense": "询问仍可预订的时段；available不表示自己已经有预约。",
+      "example": "When is the next available appointment?",
+      "exampleZh": "下一个可预约的时间是什么时候？",
+      "tier": "core",
+      "type": "construction",
+      "sceneIds": [
+        "S10.H03"
+      ],
+      "glossaryIds": [
+        "S10.H03.G05"
+      ],
+      "sourceRecords": [],
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-13-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.CLINIC.H03.PROVIDE_FOR",
+      "form": "Does … provide … for …?",
+      "meaningZh": "……为……提供……吗？",
+      "sense": "核实机构是否提供相关服务；不凭一张宣传单猜出具体服务范围。",
+      "example": "Does this clinic provide medical treatment for dental problems?",
+      "exampleZh": "这家诊所为牙科问题提供医疗治疗吗？",
+      "tier": "core",
+      "type": "construction",
+      "sceneIds": [
+        "S10.H03"
+      ],
+      "glossaryIds": [
+        "S10.H03.G06"
+      ],
+      "sourceRecords": [],
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-13-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.CLINIC.H04.PHYSIOTHERAPIST",
+      "form": "physiotherapist",
+      "meaningZh": "理疗师；物理治疗师",
+      "sense": "英式专业人员名称；美式常用physical therapist。这里报告已有安排，不自行决定该治疗适合谁。",
+      "example": "I have an appointment with the physiotherapist.",
+      "exampleZh": "我预约了见理疗师。",
+      "tier": "core",
+      "type": "word",
+      "sourceTerm": "physiotherapist",
+      "sourceRecordIds": [
+        "R01755"
+      ],
+      "sceneIds": [
+        "S10.H04"
+      ],
+      "glossaryIds": [
+        "S10.H04.G01"
+      ],
+      "sourceRecords": [
+        {
+          "term": "physiotherapist",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R01755; 雅思一万词汇班; page 33; unit None; Health 健康",
+          "canonicalTerm": "physiotherapist",
+          "originalContext": "physiotherapist | BrE fɪzɪəʊˈθɛrəpɪst, AmE ˌfɪzioʊˈθɛrəpəst | n. 理理疗师",
+          "sourceRecordId": "R01755",
+          "sourceRecord": {
+            "Record_ID": "R01755",
+            "Canonical_Term": "physiotherapist",
+            "Source_Term": "physiotherapist",
+            "Source": "雅思一万词汇班",
+            "Page": 33,
+            "Unit": null,
+            "Section/Topic": "Health 健康",
+            "Source_No": null,
+            "POS": null,
+            "Chinese_Meaning": null,
+            "Source_Context": "physiotherapist | BrE fɪzɪəʊˈθɛrəpɪst, AmE ˌfɪzioʊˈθɛrəpəst | n. 理理疗师",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        }
+      ],
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-13-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.CLINIC.H04.THERAPY",
+      "form": "therapy",
+      "meaningZh": "治疗；疗法",
+      "sense": "广义治疗或帮助恢复的活动，不专指心理治疗；此处处于理疗服务语境。",
+      "example": "Could you explain what this therapy involves?",
+      "exampleZh": "您可以解释一下这种治疗包括什么吗？",
+      "tier": "support",
+      "type": "word",
+      "sourceTerm": "therapy",
+      "sourceRecordIds": [
+        "R01756",
+        "R01758"
+      ],
+      "sceneIds": [
+        "S10.H04"
+      ],
+      "glossaryIds": [
+        "S10.H04.G02"
+      ],
+      "sourceRecords": [
+        {
+          "term": "therapy",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R01756; 雅思一万词汇班; page 33; unit None; Health 健康",
+          "canonicalTerm": "therapy",
+          "originalContext": "therapy n. 治疗 therapist n. 治疗师",
+          "sourceRecordId": "R01756",
+          "sourceRecord": {
+            "Record_ID": "R01756",
+            "Canonical_Term": "therapy",
+            "Source_Term": "therapy",
+            "Source": "雅思一万词汇班",
+            "Page": 33,
+            "Unit": null,
+            "Section/Topic": "Health 健康",
+            "Source_No": null,
+            "POS": "n.",
+            "Chinese_Meaning": null,
+            "Source_Context": "therapy n. 治疗 therapist n. 治疗师",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        },
+        {
+          "term": "therapy",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R01758; 雅思一万词汇班; page 33; unit None; Health 健康",
+          "canonicalTerm": "therapy",
+          "originalContext": "therapy n. 治疗 therapist n. 治疗师",
+          "sourceRecordId": "R01758",
+          "sourceRecord": {
+            "Record_ID": "R01758",
+            "Canonical_Term": "therapy",
+            "Source_Term": "therapy",
+            "Source": "雅思一万词汇班",
+            "Page": 33,
+            "Unit": null,
+            "Section/Topic": "Health 健康",
+            "Source_No": null,
+            "POS": "n.",
+            "Chinese_Meaning": null,
+            "Source_Context": "therapy n. 治疗 therapist n. 治疗师",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        }
+      ],
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-13-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.CLINIC.H04.ALLEVIATE",
+      "form": "alleviate",
+      "meaningZh": "减轻；缓和",
+      "sense": "正式及物动词，接pain、discomfort或problems；减轻程度，不等于治愈或保证有效。",
+      "example": "The leaflet says the aim is to alleviate discomfort.",
+      "exampleZh": "宣传单说，目标是减轻不适。",
+      "tier": "recognition",
+      "type": "word",
+      "sourceTerm": "alleviate",
+      "sourceRecordIds": [
+        "R01265"
+      ],
+      "sceneIds": [
+        "S10.H04"
+      ],
+      "glossaryIds": [
+        "S10.H04.G03"
+      ],
+      "sourceRecords": [
+        {
+          "term": "alleviate",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R01265; 雅思 PRO 班级词汇表; page 18; unit 8; Reading",
+          "canonicalTerm": "alleviate",
+          "originalContext": "The medicine is designed to alleviate pain.",
+          "sourceRecordId": "R01265",
+          "sourceRecord": {
+            "Record_ID": "R01265",
+            "Canonical_Term": "alleviate",
+            "Source_Term": "alleviate",
+            "Source": "雅思 PRO 班级词汇表",
+            "Page": 18,
+            "Unit": 8,
+            "Section/Topic": "Reading",
+            "Source_No": 26,
+            "POS": "v.",
+            "Chinese_Meaning": "减轻；缓和",
+            "Source_Context": "The medicine is designed to alleviate pain.",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        }
+      ],
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-13-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.CLINIC.H04.INVOLVES",
+      "form": "Could you explain what … involves?",
+      "meaningZh": "您可以解释……包括什么吗？",
+      "sense": "请求用可理解语言说明活动内容；what引导的从句保持陈述语序。",
+      "example": "Could you explain what this therapy involves?",
+      "exampleZh": "您可以解释一下这种治疗包括什么吗？",
+      "tier": "core",
+      "type": "construction",
+      "sceneIds": [
+        "S10.H04"
+      ],
+      "glossaryIds": [
+        "S10.H04.G04"
+      ],
+      "sourceRecords": [],
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-13-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.CLINIC.H04.AIM",
+      "form": "What is the aim of …?",
+      "meaningZh": "……的目标是什么？",
+      "sense": "核实目标，不把宣传材料中的预期当成已达到的结果。",
+      "example": "What is the aim of this session?",
+      "exampleZh": "这次会面的目标是什么？",
+      "tier": "core",
+      "type": "construction",
+      "sceneIds": [
+        "S10.H04"
+      ],
+      "glossaryIds": [
+        "S10.H04.G05"
+      ],
+      "sourceRecords": [],
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-13-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.CLINIC.H04.NOTE",
+      "form": "Could you write … down?",
+      "meaningZh": "您可以把……写下来吗？",
+      "sense": "请求留下具体信息；名词放在write与down之间，此处可换next appointment time。",
+      "example": "Could you write the next appointment time down?",
+      "exampleZh": "您可以把下次预约时间写下来吗？",
+      "tier": "core",
+      "type": "construction",
+      "sceneIds": [
+        "S10.H04"
+      ],
+      "glossaryIds": [
+        "S10.H04.G06"
+      ],
+      "sourceRecords": [],
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-13-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.CLINIC.H05.ALLERGIC",
+      "form": "allergic",
+      "meaningZh": "过敏的；有过敏反应的",
+      "sense": "形容词，be allergic to + 具体物质；此处是已知医疗信息，不是幽默地表达厌恶。",
+      "example": "I am allergic to this antibiotic.",
+      "exampleZh": "我对这种抗生素过敏。",
+      "tier": "core",
+      "type": "word",
+      "sourceTerm": "allergic",
+      "sourceRecordIds": [
+        "R02343"
+      ],
+      "sceneIds": [
+        "S10.H05"
+      ],
+      "glossaryIds": [
+        "S10.H05.G01"
+      ],
+      "sourceRecords": [
+        {
+          "term": "allergic",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R02343; 雅思一万词汇班; page 33; unit None; Health 健康",
+          "canonicalTerm": "allergic",
+          "originalContext": "allergy ... allergic a. 过敏的",
+          "sourceRecordId": "R02343",
+          "sourceRecord": {
+            "Record_ID": "R02343",
+            "Canonical_Term": "allergic",
+            "Source_Term": "allergic",
+            "Source": "雅思一万词汇班",
+            "Page": 33,
+            "Unit": null,
+            "Section/Topic": "Health 健康",
+            "Source_No": null,
+            "POS": "a.",
+            "Chinese_Meaning": "过敏的",
+            "Source_Context": "allergy ... allergic a. 过敏的",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "V1.1补录",
+            "Notes": "V1.1：由原始行/页面复核补录"
+          }
+        }
+      ],
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-13-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.CLINIC.H05.ALLERGY",
+      "form": "allergy",
+      "meaningZh": "过敏；过敏症",
+      "sense": "名词；allergy to + 具体物质，与allergic形容词结构分开。源记录空字段保持，解释为项目辅助。",
+      "example": "My allergy is listed on this card.",
+      "exampleZh": "我的过敏信息列在这张卡上。",
+      "tier": "support",
+      "type": "word",
+      "sourceTerm": "allergy",
+      "sourceRecordIds": [
+        "R01768"
+      ],
+      "sceneIds": [
+        "S10.H05"
+      ],
+      "glossaryIds": [
+        "S10.H05.G02"
+      ],
+      "sourceRecords": [
+        {
+          "term": "allergy",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R01768; 雅思一万词汇班; page 33; unit None; Health 健康",
+          "canonicalTerm": "allergy",
+          "originalContext": "allergy | BrE ˈalədʒi, AmE ˈælərdʒi | n. 过敏敏 a’llergic a. 过敏敏的",
+          "sourceRecordId": "R01768",
+          "sourceRecord": {
+            "Record_ID": "R01768",
+            "Canonical_Term": "allergy",
+            "Source_Term": "allergy",
+            "Source": "雅思一万词汇班",
+            "Page": 33,
+            "Unit": null,
+            "Section/Topic": "Health 健康",
+            "Source_No": null,
+            "POS": null,
+            "Chinese_Meaning": null,
+            "Source_Context": "allergy | BrE ˈalədʒi, AmE ˈælərdʒi | n. 过敏敏 a’llergic a. 过敏敏的",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        }
+      ],
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-13-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.CLINIC.H05.ANTIBIOTIC",
+      "form": "antibiotic",
+      "meaningZh": "抗生素",
+      "sense": "本课为名词，识别已记录的药物类别；不由此判断是否应该使用或停止药物。",
+      "example": "The name of the antibiotic is on my card.",
+      "exampleZh": "抗生素的名称写在我的卡上。",
+      "tier": "recognition",
+      "type": "word",
+      "sourceTerm": "antibiotic",
+      "sourceRecordIds": [
+        "R01750"
+      ],
+      "sceneIds": [
+        "S10.H05"
+      ],
+      "glossaryIds": [
+        "S10.H05.G03"
+      ],
+      "sourceRecords": [
+        {
+          "term": "antibiotic",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R01750; 雅思一万词汇班; page 32; unit None; Health 健康",
+          "canonicalTerm": "antibiotic",
+          "originalContext": "antibiotic | BrE ˌantɪbʌɪˈɒtɪk, AmE ˌæn(t)ibaɪˈɑdɪk, | n. 抗⽣生素",
+          "sourceRecordId": "R01750",
+          "sourceRecord": {
+            "Record_ID": "R01750",
+            "Canonical_Term": "antibiotic",
+            "Source_Term": "antibiotic",
+            "Source": "雅思一万词汇班",
+            "Page": 32,
+            "Unit": null,
+            "Section/Topic": "Health 健康",
+            "Source_No": null,
+            "POS": null,
+            "Chinese_Meaning": null,
+            "Source_Context": "antibiotic | BrE ˌantɪbʌɪˈɒtɪk, AmE ˌæn(t)ibaɪˈɑdɪk, | n. 抗⽣生素",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        }
+      ],
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-13-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.CLINIC.H05.ALLERGIC_TO",
+      "form": "be allergic to …",
+      "meaningZh": "对……过敏",
+      "sense": "be随主语变化；to后接过敏原或具体药物名称，不用with替代to。",
+      "example": "I am allergic to this antibiotic.",
+      "exampleZh": "我对这种抗生素过敏。",
+      "tier": "core",
+      "type": "chunk",
+      "sceneIds": [
+        "S10.H05"
+      ],
+      "glossaryIds": [
+        "S10.H05.G04"
+      ],
+      "sourceRecords": [],
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-13-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.CLINIC.H05.ALLERGY_TO",
+      "form": "have an allergy to …",
+      "meaningZh": "对……有过敏反应",
+      "sense": "名词allergy前用an；have an allergy to与be allergic to表达同类信息，按需要选一种。",
+      "example": "I have an allergy to this antibiotic.",
+      "exampleZh": "我对这种抗生素有过敏反应。",
+      "tier": "support",
+      "type": "chunk",
+      "sceneIds": [
+        "S10.H05"
+      ],
+      "glossaryIds": [
+        "S10.H05.G05"
+      ],
+      "sourceRecords": [],
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-13-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.CLINIC.H05.RECORD_CHECK",
+      "form": "Could you check … before …?",
+      "meaningZh": "您能在……之前核对……吗？",
+      "sense": "先说需要核对的信息，再给出后续动作；before不是命令更换治疗。",
+      "example": "Could you check my allergy record before we start?",
+      "exampleZh": "您能在开始前核对我的过敏记录吗？",
+      "tier": "core",
+      "type": "construction",
+      "sceneIds": [
+        "S10.H05"
+      ],
+      "glossaryIds": [
+        "S10.H05.G06"
+      ],
+      "sourceRecords": [],
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-13-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.CLINIC.H06.VACCINE",
+      "form": "vaccine",
+      "meaningZh": "疫苗",
+      "sense": "本课名词，指记录所列的制剂；与接种行为vaccination分开，不推导个人接种建议。",
+      "example": "Which vaccine does this entry refer to?",
+      "exampleZh": "这条记录指的是哪种疫苗？",
+      "tier": "core",
+      "type": "word",
+      "sourceTerm": "vaccine",
+      "sourceRecordIds": [
+        "R01765"
+      ],
+      "sceneIds": [
+        "S10.H06"
+      ],
+      "glossaryIds": [
+        "S10.H06.G01"
+      ],
+      "sourceRecords": [
+        {
+          "term": "vaccine",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R01765; 雅思一万词汇班; page 33; unit None; Health 健康",
+          "canonicalTerm": "vaccine",
+          "originalContext": "vaccine | BrE ˈvaksiːn,ˈvaksɪn, AmE vækˈsin | n.疫苗",
+          "sourceRecordId": "R01765",
+          "sourceRecord": {
+            "Record_ID": "R01765",
+            "Canonical_Term": "vaccine",
+            "Source_Term": "vaccine",
+            "Source": "雅思一万词汇班",
+            "Page": 33,
+            "Unit": null,
+            "Section/Topic": "Health 健康",
+            "Source_No": null,
+            "POS": null,
+            "Chinese_Meaning": null,
+            "Source_Context": "vaccine | BrE ˈvaksiːn,ˈvaksɪn, AmE vækˈsin | n.疫苗",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        }
+      ],
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-13-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.CLINIC.H06.VACCINATION",
+      "form": "vaccination",
+      "meaningZh": "疫苗接种",
+      "sense": "名词，接种行为或过程；本课核对过去记录，不依据日期自行决定再接种。",
+      "example": "The date of the vaccination is recorded here.",
+      "exampleZh": "疫苗接种日期记在这里。",
+      "tier": "support",
+      "type": "word",
+      "sourceTerm": "vaccination",
+      "sourceRecordIds": [
+        "R01766"
+      ],
+      "sceneIds": [
+        "S10.H06"
+      ],
+      "glossaryIds": [
+        "S10.H06.G02"
+      ],
+      "sourceRecords": [
+        {
+          "term": "vaccination",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R01766; 雅思一万词汇班; page 33; unit None; Health 健康",
+          "canonicalTerm": "vaccination",
+          "originalContext": "’vaccinate vt./vi. （使）接种疫苗 vaccination n. 疫苗接种",
+          "sourceRecordId": "R01766",
+          "sourceRecord": {
+            "Record_ID": "R01766",
+            "Canonical_Term": "vaccination",
+            "Source_Term": "vaccination",
+            "Source": "雅思一万词汇班",
+            "Page": 33,
+            "Unit": null,
+            "Section/Topic": "Health 健康",
+            "Source_No": null,
+            "POS": "n.",
+            "Chinese_Meaning": null,
+            "Source_Context": "’vaccinate vt./vi. （使）接种疫苗 vaccination n. 疫苗接种",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        }
+      ],
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-13-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.CLINIC.H06.RECORD",
+      "form": "vaccination record",
+      "meaningZh": "疫苗接种记录",
+      "sense": "表示记载接种信息的记录；record在此是名词，不表示现在给人接种。",
+      "example": "I brought my vaccination record.",
+      "exampleZh": "我带来了疫苗接种记录。",
+      "tier": "core",
+      "type": "chunk",
+      "sceneIds": [
+        "S10.H06"
+      ],
+      "glossaryIds": [
+        "S10.H06.G03"
+      ],
+      "sourceRecords": [],
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-13-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.CLINIC.H06.REFER",
+      "form": "Which … does this entry refer to?",
+      "meaningZh": "这条记录指的是哪个……？",
+      "sense": "询问不明确的记录对象；does后主语为this entry，refer to后是所指对象。",
+      "example": "Which vaccine does this entry refer to?",
+      "exampleZh": "这条记录指的是哪种疫苗？",
+      "tier": "core",
+      "type": "construction",
+      "sceneIds": [
+        "S10.H06"
+      ],
+      "glossaryIds": [
+        "S10.H06.G04"
+      ],
+      "sourceRecords": [],
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-13-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.CLINIC.H06.DATE",
+      "form": "Could you confirm the date of …?",
+      "meaningZh": "您能确认……的日期吗？",
+      "sense": "请求核实已有事件日期；不等于询问下一次应该什么时候进行。",
+      "example": "Could you confirm the date of this vaccination?",
+      "exampleZh": "您能确认这次疫苗接种的日期吗？",
+      "tier": "core",
+      "type": "construction",
+      "sceneIds": [
+        "S10.H06"
+      ],
+      "glossaryIds": [
+        "S10.H06.G05"
+      ],
+      "sourceRecords": [],
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-13-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.CLINIC.H06.COPY",
+      "form": "Could I have a copy of …?",
+      "meaningZh": "我可以拿一份……的副本吗？",
+      "sense": "请求文件副本，可用于其他记录；具体服务是否提供由机构回答。",
+      "example": "Could I have a copy of this record?",
+      "exampleZh": "我可以拿一份这份记录的副本吗？",
+      "tier": "support",
+      "type": "construction",
+      "sceneIds": [
+        "S10.H06"
+      ],
+      "glossaryIds": [
+        "S10.H06.G06"
+      ],
+      "sourceRecords": [],
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-13-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.CLINIC.H07.DIET",
+      "form": "diet",
+      "meaningZh": "日常饮食",
+      "sense": "名词，平时吃喝的食物，不自动等同节食减肥；本课描述日常习惯。",
+      "example": "My usual diet includes rice and vegetables.",
+      "exampleZh": "我的日常饮食包括米饭和蔬菜。",
+      "tier": "core",
+      "type": "word",
+      "sourceTerm": "diet",
+      "sourceRecordIds": [
+        "R01086"
+      ],
+      "sceneIds": [
+        "S10.H07"
+      ],
+      "glossaryIds": [
+        "S10.H07.G01"
+      ],
+      "sourceRecords": [
+        {
+          "term": "diet",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R01086; 雅思 PRO 班级词汇表; page 10; unit 5; Reading",
+          "canonicalTerm": "diet",
+          "originalContext": "A healthy and balanced diet is important for your well-being.",
+          "sourceRecordId": "R01086",
+          "sourceRecord": {
+            "Record_ID": "R01086",
+            "Canonical_Term": "diet",
+            "Source_Term": "diet",
+            "Source": "雅思 PRO 班级词汇表",
+            "Page": 10,
+            "Unit": 5,
+            "Section/Topic": "Reading",
+            "Source_No": 14,
+            "POS": "n.",
+            "Chinese_Meaning": "日常饮食",
+            "Source_Context": "A healthy and balanced diet is important for your well-being.",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        }
+      ],
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-13-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.CLINIC.H07.DIGEST",
+      "form": "digest",
+      "meaningZh": "消化",
+      "sense": "本课动词，身体处理食物；文摘名词及理解信息动词另列，不从不适推断过敏。",
+      "example": "I sometimes find it difficult to digest a large meal.",
+      "exampleZh": "我有时觉得难以消化一顿大餐。",
+      "tier": "support",
+      "type": "word",
+      "sourceTerm": "digest",
+      "sourceRecordIds": [
+        "R01684"
+      ],
+      "sceneIds": [
+        "S10.H07"
+      ],
+      "glossaryIds": [
+        "S10.H07.G02"
+      ],
+      "sourceRecords": [
+        {
+          "term": "digest",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R01684; 雅思一万词汇班; page 27; unit None; nervous system 神经系统",
+          "canonicalTerm": "digest",
+          "originalContext": "digest vt. 消化 n. ⽂文摘 congested a. 堵塞的；充⾎血的 congestion",
+          "sourceRecordId": "R01684",
+          "sourceRecord": {
+            "Record_ID": "R01684",
+            "Canonical_Term": "digest",
+            "Source_Term": "digest",
+            "Source": "雅思一万词汇班",
+            "Page": 27,
+            "Unit": null,
+            "Section/Topic": "nervous system 神经系统",
+            "Source_No": null,
+            "POS": "vt.",
+            "Chinese_Meaning": null,
+            "Source_Context": "digest vt. 消化 n. ⽂文摘 congested a. 堵塞的；充⾎血的 congestion",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        }
+      ],
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-13-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.CLINIC.H07.HYGIENE",
+      "form": "hygiene",
+      "meaningZh": "卫生；保持清洁的习惯",
+      "sense": "名词，个人或环境清洁相关做法；来源中文清洁原样保留，本课补充实际用义。",
+      "example": "The form asks about personal hygiene.",
+      "exampleZh": "表格询问个人卫生习惯。",
+      "tier": "support",
+      "type": "word",
+      "sourceTerm": "hygiene",
+      "sourceRecordIds": [
+        "R00980"
+      ],
+      "sceneIds": [
+        "S10.H07"
+      ],
+      "glossaryIds": [
+        "S10.H07.G03"
+      ],
+      "sourceRecords": [
+        {
+          "term": "hygiene",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R00980; 雅思 PRO 班级词汇表; page 5; unit 3; Reading",
+          "canonicalTerm": "hygiene",
+          "originalContext": "Good personal hygiene is important for preventing the spread of diseases.",
+          "sourceRecordId": "R00980",
+          "sourceRecord": {
+            "Record_ID": "R00980",
+            "Canonical_Term": "hygiene",
+            "Source_Term": "hygiene",
+            "Source": "雅思 PRO 班级词汇表",
+            "Page": 5,
+            "Unit": 3,
+            "Section/Topic": "Reading",
+            "Source_No": 6,
+            "POS": "n.",
+            "Chinese_Meaning": "清洁",
+            "Source_Context": "Good personal hygiene is important for preventing the spread of diseases.",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        }
+      ],
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-13-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.CLINIC.H07.USUAL_DIET",
+      "form": "usual diet",
+      "meaningZh": "日常饮食",
+      "sense": "在就诊说明或调查中指平时饮食；usual说明常态，不是要求换成某种食谱。",
+      "example": "My usual diet includes rice and vegetables.",
+      "exampleZh": "我的日常饮食包括米饭和蔬菜。",
+      "tier": "core",
+      "type": "chunk",
+      "sceneIds": [
+        "S10.H07"
+      ],
+      "glossaryIds": [
+        "S10.H07.G04"
+      ],
+      "sourceRecords": [],
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-13-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.CLINIC.H07.TROUBLE",
+      "form": "find it difficult to …",
+      "meaningZh": "觉得做……有困难",
+      "sense": "it作形式宾语，真正动作由to后说明；本例是人物陈述，不建议限制某种食物。",
+      "example": "I sometimes find it difficult to digest a large meal.",
+      "exampleZh": "我有时觉得难以消化一顿大餐。",
+      "tier": "core",
+      "type": "construction",
+      "sceneIds": [
+        "S10.H07"
+      ],
+      "glossaryIds": [
+        "S10.H07.G05"
+      ],
+      "sourceRecords": [],
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-13-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.CLINIC.H07.PERSONAL_HYGIENE",
+      "form": "personal hygiene",
+      "meaningZh": "个人卫生",
+      "sense": "围绕自己的清洁习惯，不是对别人的道德评价；本课理解表格问题。",
+      "example": "The form asks about personal hygiene.",
+      "exampleZh": "表格询问个人卫生习惯。",
+      "tier": "support",
+      "type": "chunk",
+      "sceneIds": [
+        "S10.H07"
+      ],
+      "glossaryIds": [
+        "S10.H07.G06"
+      ],
+      "sourceRecords": [],
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-13-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.CLINIC.H07.ROUTINE",
+      "form": "I usually …, but sometimes …",
+      "meaningZh": "我通常……，但有时……",
+      "sense": "区分平时习惯与例外，便于准确描述日常生活；不是把例外泛化为总是发生。",
+      "example": "I usually eat at home, but sometimes I eat at college.",
+      "exampleZh": "我通常在家吃饭，但有时在学校吃。",
+      "tier": "core",
+      "type": "construction",
+      "sceneIds": [
+        "S10.H07"
+      ],
+      "glossaryIds": [
+        "S10.H07.G07"
+      ],
+      "sourceRecords": [],
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-13-0",
+      "generatedFrom": "branch-authoring"
     },
     {
       "id": "U.KITCHEN_TABLE.K01.MENU",

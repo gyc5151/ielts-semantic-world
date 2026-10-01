@@ -211,5 +211,63 @@
     "examples": {
       "she was continually adjusting the ventilation": "她一直在调整通风系统。"
     }
+  },
+  "n:10405694": {
+    "examples": {
+      "the number of emergency patients has grown rapidly": "急诊病人的数量迅速增加。"
+    }
+  },
+  "a:01735736": {
+    "examples": {
+      "a patient smile": "一个耐心的微笑。",
+      "was patient with the children": "对孩子们很有耐心。",
+      "an exact and patient scientist": "一位严谨而有耐心的科学家。",
+      "please be patient": "请耐心等候。"
+    }
+  },
+  "a:02760116": {
+    "examples": {
+      "the medical profession": "医疗行业。",
+      "a medical student": "一名医学生。",
+      "medical school": "医学院。"
+    }
+  },
+  "n:00661091": {
+    "examples": {
+      "the quarterback is undergoing treatment for a knee injury": "这位四分卫正因膝盖损伤接受治疗。",
+      "he tried every treatment the doctors suggested": "他尝试了医生提出的每一种治疗。",
+      "heat therapy gave the best relief": "热疗带来的缓解最好。"
+    }
+  },
+  "v:00064095": {
+    "examples": {
+      "This pill will relieve your headaches": "这种药片会缓解你的头痛。"
+    }
+  },
+  "s:02360944": {
+    "examples": {
+      "allergic children": "有过敏症的孩子。",
+      "hypersensitive to pollen": "对花粉高度敏感。"
+    }
+  },
+  "a:02612653": {
+    "examples": {
+      "an allergic reaction": "一次过敏反应。"
+    }
+  },
+  "n:14495080": {
+    "examples": {
+      "personal hygiene": "个人卫生。"
+    }
+  },
+  "v:01197338": {
+    "examples": {
+      "I cannot digest milk products": "我不能消化乳制品。"
+    }
+  },
+  "v:00590924": {
+    "examples": {
+      "I cannot digest all this information": "我无法理解并吸收所有这些信息。"
+    }
   }
 }
