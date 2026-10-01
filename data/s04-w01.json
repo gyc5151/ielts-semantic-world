@@ -9,19 +9,53 @@
       "object": "Red dot",
       "zh": "异常红点",
       "cue": "What information is missing?",
-      "cueZh": "缺失了哪项信息？"
+      "cueZh": "缺失了哪项信息？",
+      "id": "S04.W01.L01",
+      "location": "At the data table, beside the result without a location.",
+      "locationZh": "数据桌上，缺少地点的结果旁。",
+      "previous": null,
+      "next": "S04.W01.L02",
+      "anchorUnitIds": [
+        "U.LEGACY.S04.W01.PRECISE"
+      ]
     },
     {
       "object": "Two labels",
       "zh": "两张取样标签",
       "cue": "How are the samples kept distinct?",
-      "cueZh": "如何区分两份样本？"
+      "cueZh": "如何区分两份样本？",
+      "id": "S04.W01.L02",
+      "location": "Beside the two bottles collected on different sides of the drain.",
+      "locationZh": "排水口两侧取回的两瓶水样旁。",
+      "previous": "S04.W01.L01",
+      "next": "S04.W01.L03",
+      "anchorUnitIds": [
+        "U.LEGACY.S04.W01.FIELDWORK",
+        "U.LEGACY.S04.W01.GATHER",
+        "U.RESEARCH.SAMPLES.N",
+        "U.LEGACY.S04.W01.UPSTREAM",
+        "U.LEGACY.S04.W01.DOWNSTREAM",
+        "U.LEGACY.S04.W01.LABEL",
+        "U.HOUSING.M06.RECORD"
+      ]
     },
     {
       "object": "Check sheet",
       "zh": "仪器检查表",
       "cue": "What must happen before measurement?",
-      "cueZh": "测量前必须先做什么？"
+      "cueZh": "测量前必须先做什么？",
+      "id": "S04.W01.L03",
+      "location": "At the laboratory door, beside the instrument check sheet.",
+      "locationZh": "实验室门口，仪器检查表旁。",
+      "previous": "S04.W01.L02",
+      "next": null,
+      "anchorUnitIds": [
+        "U.LEGACY.S04.W01.LABORATORY",
+        "U.LEGACY.S04.W01.APPARATUS",
+        "U.LEGACY.S04.W01.EQUIPPED",
+        "U.LEGACY.S04.W01.PROCEDURES",
+        "U.HOUSING.M07.SEQUENCE"
+      ]
     }
   ],
   "situation": "A red dot stood apart from the other results on the data table. The first sample had a date but no location. Lin could see a difference; she could not tell where it came from. During fieldwork, the team returned to the drain and gathered two samples, one upstream and one downstream. They recorded the precise location and time on each bottle. The laboratory was equipped with apparatus for water testing. At the door, a check sheet showed that one instrument had not been calibrated. Lin stopped before using it. The team followed the procedures and checked the instrument first. A careful label could not repair a faulty measurement, and a good instrument could not recover a missing location.",
@@ -137,6 +171,108 @@
       "zh": "上游的；在上游",
       "note": "此处用于区别两瓶水样的取样位置。",
       "type": "word"
+    },
+    {
+      "id": "S04.W01.UG01",
+      "text": "fieldwork",
+      "zh": "实地研究；现场调查",
+      "note": "在研究对象所在现场开展研究，通常不可数。这里在河边取样，不是WordNet当前收录的临时军事工事。",
+      "type": "word",
+      "sourceTerm": "fieldwork"
+    },
+    {
+      "id": "S04.W01.UG02",
+      "text": "gather",
+      "zh": "收集；汇集",
+      "note": "及物动词，gather samples/data。收集动作不是自动证明样本可以代表整条河。",
+      "type": "word",
+      "sourceTerm": "gather"
+    },
+    {
+      "id": "S04.W01.UG03",
+      "text": "samples",
+      "zh": "样本；样品（复数）",
+      "note": "本课两份水样。sample可数，原词项保留复数；所取小部分用于检查，不声称两瓶必然代表全部水域。",
+      "type": "word",
+      "sourceTerm": "samples"
+    },
+    {
+      "id": "S04.W01.UG04",
+      "text": "precise",
+      "zh": "具体准确的；明确界定的",
+      "note": "本课要求准确取样位置和时间，而非河边附近等模糊描述。具体标签不能证明测量本身正确；技术术语precision与accuracy不同。",
+      "type": "word",
+      "sourceTerm": "precise"
+    },
+    {
+      "id": "S04.W01.UG05",
+      "text": "laboratory",
+      "zh": "实验室",
+      "note": "本课用于水样检查的研究场所；日常可简称lab，不把河流比作天然实验室的比喻义混入。",
+      "type": "word",
+      "sourceTerm": "laboratory"
+    },
+    {
+      "id": "S04.W01.UG06",
+      "text": "apparatus",
+      "zh": "为某项用途设计的设备；仪器装置",
+      "note": "本课水样检查设备，通常以集合意义使用apparatus。检查表指出某一instrument尚未校准，不据此声称所有设备都坏了。",
+      "type": "word",
+      "sourceTerm": "apparatus"
+    },
+    {
+      "id": "S04.W01.UG07",
+      "text": "equipped with",
+      "zh": "配备有",
+      "note": "常见形式be equipped with + 所配设备；有设备不等于设备已校准或结果可信。",
+      "type": "chunk",
+      "sourceTerm": "equipped with",
+      "matchTexts": [
+        "equipped with",
+        "equipped with apparatus"
+      ]
+    },
+    {
+      "id": "S04.W01.UG08",
+      "text": "procedures",
+      "zh": "为完成工作按顺序进行的程序",
+      "note": "本课操作流程名词复数，不是电脑程序。遵守既定流程并确认仪器状态，不凭学习例句推断具体实验步骤。",
+      "type": "word",
+      "sourceTerm": "procedures"
+    },
+    {
+      "id": "S04.W01.UG09",
+      "text": "downstream",
+      "zh": "向下游；在下游",
+      "note": "顺着水流、远离源头的方向；仅地点不同不能说明某个排水口已造成污染。",
+      "type": "word"
+    },
+    {
+      "id": "S04.W01.UG10",
+      "text": "label … with …",
+      "zh": "在标签上注明信息",
+      "note": "label each sample with its location and collection time；给每份样本可追溯信息，而不是只写一种材料名称。",
+      "type": "construction",
+      "matchTexts": [
+        "Label each sample with its location and collection time."
+      ]
+    },
+    {
+      "id": "S04.W01.UG11",
+      "text": "record",
+      "zh": "记录；写下",
+      "note": "本课及物动词，写下实际取样地点和时间。记录完整与测量可靠是两个必要条件。",
+      "type": "word"
+    },
+    {
+      "id": "S04.W01.UG12",
+      "text": "First, … Then …",
+      "zh": "说明先记录、再核验的步骤",
+      "note": "表达已知事件先后；标签和仪器状态都要核实，不给未说明的校准方法或实验配方。",
+      "type": "construction",
+      "matchTexts": [
+        "First, label the samples. Then check the instrument before measuring."
+      ]
     }
   ],
   "retrievalPrompts": [
@@ -151,7 +287,21 @@
       "targetTerms": [
         "precise",
         "samples"
-      ]
+      ],
+      "unitIds": [
+        "U.RESEARCH.SAMPLES.N",
+        "U.LEGACY.S04.W01.PRECISE",
+        "U.LEGACY.S04.W01.LABEL"
+      ],
+      "cueZh": "一份水样有日期却没有取样地点。解释为何需要回到现场补充可追溯记录。",
+      "checks": [
+        "指出缺失的是地点。",
+        "比较前需要明确每份样本出处。",
+        "不凭异常数字判断污染源。"
+      ],
+      "feedbackZh": "结果差异和取样出处是两件事；先补缺失信息。",
+      "taskMode": "recall",
+      "unitVersion": "pilot-16-0"
     },
     {
       "id": "S04.W01.P02",
@@ -165,7 +315,25 @@
         "fieldwork",
         "gather",
         "samples"
-      ]
+      ],
+      "unitIds": [
+        "U.LEGACY.S04.W01.FIELDWORK",
+        "U.LEGACY.S04.W01.GATHER",
+        "U.RESEARCH.SAMPLES.N",
+        "U.LEGACY.S04.W01.UPSTREAM",
+        "U.LEGACY.S04.W01.DOWNSTREAM",
+        "U.LEGACY.S04.W01.LABEL",
+        "U.HOUSING.M06.RECORD"
+      ],
+      "cueZh": "两瓶水来自排水口的上游和下游。说明收集动作，以及每瓶该记什么。",
+      "checks": [
+        "两瓶区分地点。",
+        "记录地点与取样时间。",
+        "不把地图上方当成上游。"
+      ],
+      "feedbackZh": "按水流方向区分；收集和记录连起来。",
+      "taskMode": "recall",
+      "unitVersion": "pilot-16-0"
     },
     {
       "id": "S04.W01.P03",
@@ -178,7 +346,21 @@
       "targetTerms": [
         "procedures",
         "apparatus"
-      ]
+      ],
+      "unitIds": [
+        "U.LEGACY.S04.W01.APPARATUS",
+        "U.LEGACY.S04.W01.PROCEDURES",
+        "U.HOUSING.M07.SEQUENCE"
+      ],
+      "cueZh": "检查表显示一台仪器还未校准。解释为何应先核实再测水。",
+      "checks": [
+        "先按流程检查仪器。",
+        "不把设备已经存在当成已经校准。",
+        "不虚构技术操作。"
+      ],
+      "feedbackZh": "英语任务只要求报告等待与检查理由。",
+      "taskMode": "recall",
+      "unitVersion": "pilot-16-0"
     }
   ],
   "transferPrompt": {
@@ -193,7 +375,38 @@
       "precise",
       "samples",
       "apparatus"
-    ]
+    ],
+    "unitIds": [
+      "U.RESEARCH.SAMPLES.N",
+      "U.LEGACY.S04.W01.PRECISE",
+      "U.LEGACY.S04.W01.LABEL",
+      "U.HOUSING.M07.SEQUENCE"
+    ],
+    "cueZh": "学生比较两个花园的土壤。比较前要留下什么信息、核实什么？",
+    "checks": [
+      "材料换成土壤。",
+      "每份标地点和取样时间。",
+      "检查所用仪器。"
+    ],
+    "feedbackZh": "迁移可追溯记录与检查流程，不照搬河边排水口。",
+    "taskMode": "transfer",
+    "unitVersion": "pilot-16-0"
   },
-  "learningUnitIds": []
+  "learningUnitIds": [
+    "U.LEGACY.S04.W01.FIELDWORK",
+    "U.LEGACY.S04.W01.GATHER",
+    "U.RESEARCH.SAMPLES.N",
+    "U.LEGACY.S04.W01.PRECISE",
+    "U.LEGACY.S04.W01.LABORATORY",
+    "U.LEGACY.S04.W01.APPARATUS",
+    "U.LEGACY.S04.W01.EQUIPPED",
+    "U.LEGACY.S04.W01.PROCEDURES",
+    "U.LEGACY.S04.W01.UPSTREAM",
+    "U.LEGACY.S04.W01.DOWNSTREAM",
+    "U.LEGACY.S04.W01.LABEL",
+    "U.HOUSING.M06.RECORD",
+    "U.HOUSING.M07.SEQUENCE"
+  ],
+  "easySummary": "One water result has no collection location. Lin cannot tell where it came from. The team collects water on both sides of a drain and puts the place and time on each bottle. In the laboratory, they check the instrument before making a measurement.",
+  "easySummaryZh": "一个水样结果没有取样地点，林无法知道它来自哪里。团队在排水口两侧取水，在每瓶上写地点和时间。回到实验室后，他们先检查仪器，再测量。"
 }

@@ -1,0 +1,459 @@
+{
+  "S04.W01": {
+    "fieldwork": {
+      "zh": "实地研究；现场调查",
+      "example": "The team gathered water samples during fieldwork.",
+      "exampleZh": "团队在实地研究期间收集了水样。",
+      "usageNote": "在研究对象所在现场开展研究，通常不可数。这里在河边取样，不是WordNet当前收录的临时军事工事。",
+      "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。",
+      "noMatch": true,
+      "note": "在研究对象所在现场开展研究，通常不可数。这里在河边取样，不是WordNet当前收录的临时军事工事。 当前WordNet没有本课精确义项；下方出版社参考独立支持。",
+      "externalReferences": [
+        {
+          "label": "Cambridge Dictionary · fieldwork (research)",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/fieldwork",
+          "accessedAt": "2026-10-02",
+          "evidenceType": "External evidence"
+        }
+      ]
+    },
+    "gather": {
+      "zh": "收集；汇集",
+      "example": "We gathered two samples from different locations.",
+      "exampleZh": "我们从不同地点收集了两份样本。",
+      "usageNote": "及物动词，gather samples/data。收集动作不是自动证明样本可以代表整条河。",
+      "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "v:01380638",
+      "forms": [
+        "gathered",
+        "gathering",
+        "gathers"
+      ]
+    },
+    "samples": {
+      "zh": "样本；样品（复数）",
+      "example": "Keep the two samples separate and label each bottle.",
+      "exampleZh": "把两份样本分开保存，并给每瓶贴标签。",
+      "usageNote": "本课两份水样。sample可数，原词项保留复数；所取小部分用于检查，不声称两瓶必然代表全部水域。",
+      "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:05821775",
+      "forms": [
+        "sample"
+      ]
+    },
+    "precise": {
+      "zh": "具体准确的；明确界定的",
+      "example": "We need the precise location and collection time of each sample.",
+      "exampleZh": "我们需要每份样本的准确地点和取样时间。",
+      "usageNote": "本课要求准确取样位置和时间，而非河边附近等模糊描述。具体标签不能证明测量本身正确；技术术语precision与accuracy不同。",
+      "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "a:01837744",
+      "externalReferences": [
+        {
+          "label": "JCGM VIM · measurement precision, distinct from accuracy",
+          "url": "https://jcgm.bipm.org/vim/en/2.15.html",
+          "accessedAt": "2026-10-02",
+          "evidenceType": "External evidence"
+        }
+      ]
+    },
+    "laboratory": {
+      "zh": "实验室",
+      "example": "The team took the samples to the laboratory.",
+      "exampleZh": "团队把样本带到实验室。",
+      "usageNote": "本课用于水样检查的研究场所；日常可简称lab，不把河流比作天然实验室的比喻义混入。",
+      "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:03629986"
+    },
+    "apparatus": {
+      "zh": "为某项用途设计的设备；仪器装置",
+      "example": "The apparatus must be checked before the measurements begin.",
+      "exampleZh": "测量开始前，必须检查仪器装置。",
+      "usageNote": "本课水样检查设备，通常以集合意义使用apparatus。检查表指出某一instrument尚未校准，不据此声称所有设备都坏了。",
+      "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:02727825"
+    },
+    "equipped": {
+      "zh": "配备有；提供所需设备",
+      "example": "The laboratory is equipped with apparatus for water testing.",
+      "exampleZh": "实验室配有用于检查水样的仪器装置。",
+      "usageNote": "常见形式be equipped with + 所配设备；有设备不等于设备已校准或结果可信。",
+      "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "v:02339413"
+    },
+    "procedures": {
+      "zh": "为完成工作按顺序进行的程序",
+      "example": "Follow the procedures and check the instrument before measuring the water.",
+      "exampleZh": "遵循流程，测水前先检查仪器。",
+      "usageNote": "本课操作流程名词复数，不是电脑程序。遵守既定流程并确认仪器状态，不凭学习例句推断具体实验步骤。",
+      "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:00577068",
+      "forms": [
+        "procedure"
+      ]
+    },
+    "upstream": {
+      "zh": "向上游；在上游",
+      "example": "One sample was collected upstream of the drain.",
+      "exampleZh": "一份样本取自排水口上游。",
+      "usageNote": "与水流相反、靠近源头的方向。本例副词修饰地点记录，与道路地图的上方不等同。",
+      "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "r:00097108"
+    },
+    "downstream": {
+      "zh": "向下游；在下游",
+      "example": "The other sample was collected downstream of the drain.",
+      "exampleZh": "另一份样本取自排水口下游。",
+      "usageNote": "顺着水流、远离源头的方向；仅地点不同不能说明某个排水口已造成污染。",
+      "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "r:00097231"
+    },
+    "record": {
+      "zh": "记录；写下",
+      "example": "Record the location and time on each bottle.",
+      "exampleZh": "在每瓶上记录地点和时间。",
+      "usageNote": "本课及物动词，写下实际取样地点和时间。记录完整与测量可靠是两个必要条件。",
+      "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "v:01000214",
+      "forms": [
+        "recorded",
+        "recording",
+        "records"
+      ]
+    }
+  },
+  "S04.W02": {
+    "flask": {
+      "zh": "烧瓶；窄颈容器",
+      "example": "A small amount of water sits in the flask.",
+      "exampleZh": "烧瓶里有少量水。",
+      "usageNote": "本课实验容器，是有窄颈的瓶。WordNet定义较宽，不把保温瓶或容量名词义当成本课容器。",
+      "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:03359566"
+    },
+    "fluid": {
+      "zh": "可流动的物质；本课指液体",
+      "example": "The test substance dissolves in the fluid inside the flask.",
+      "exampleZh": "测试物质溶解在烧瓶内的液体中。",
+      "usageNote": "本课水样名词。科学英语fluid也可以包含气体，原中文液体不能据此扩成“所有fluid都必然是液体”。",
+      "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:14939445"
+    },
+    "dissolve": {
+      "zh": "溶入液体形成溶液",
+      "example": "The test substance dissolves in the water.",
+      "exampleZh": "测试物质溶解在水中。",
+      "usageNote": "本课不及物动词dissolve in water。不是单纯融化，也不是组织解散；看起来消失不表示任何情况下都已证实溶解。",
+      "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "v:00446329",
+      "forms": [
+        "dissolves",
+        "dissolved",
+        "dissolving"
+      ],
+      "contrasts": [
+        {
+          "senseId": "v:00355955",
+          "zh": "解散；终止组织或关系",
+          "example": "They decided to dissolve the committee.",
+          "exampleZh": "他们决定解散委员会。",
+          "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。"
+        }
+      ]
+    },
+    "chemical": {
+      "zh": "化学的",
+      "example": "The visible change is part of the chemical analysis.",
+      "exampleZh": "可见变化是化学分析的一部分。",
+      "usageNote": "本课chemical修饰analysis，是形容词。R00592/R00766为形容词；R00985为化学物质名词，不混成同一个来源义。",
+      "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "a:02692624",
+      "contrasts": [
+        {
+          "senseId": "n:14806838",
+          "zh": "化学物质（名词）",
+          "example": "The researchers checked which chemicals were present in the water.",
+          "exampleZh": "研究者检查水中有哪些化学物质。",
+          "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。"
+        }
+      ]
+    },
+    "analysis": {
+      "zh": "对组成或结构的详细检查；分析",
+      "example": "The analysis shows a difference between the samples.",
+      "exampleZh": "分析显示样本之间有差异。",
+      "usageNote": "本课研究检查过程，不是直接证明因果或指认责任方。an analysis或chemical analysis都需结合目的。",
+      "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:00634276"
+    },
+    "qualitative": {
+      "zh": "基于特征的；定性的",
+      "example": "The colour notes are qualitative observations.",
+      "exampleZh": "颜色笔记是定性观察。",
+      "usageNote": "以特征作描述，例如颜色；不是“质量好”的同义词。记录描述和测量值分别承担本事件中的作用。",
+      "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "a:01914521"
+    },
+    "quantitative": {
+      "zh": "可用数量表达或测量的；定量的",
+      "example": "The numbers are quantitative measurements from the checked instrument.",
+      "exampleZh": "这些数字是用已检查仪器得到的定量测量值。",
+      "usageNote": "用数量、数值和单位表示的测量；有数字仍需核实条件和仪器，不等于已经找出原因。",
+      "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "a:01914930"
+    },
+    "collate": {
+      "zh": "汇集并整理以便对照",
+      "example": "We collated the records with their locations and dates.",
+      "exampleZh": "我们把带地点与日期的记录汇集整理起来。",
+      "usageNote": "较正式动词，本课汇集带标签记录供对照。原记录还含校勘与不完整搭配，原样保留；整理数据义由剑桥另支持。",
+      "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。",
+      "noMatch": true,
+      "note": "较正式动词，本课汇集带标签记录供对照。原记录还含校勘与不完整搭配，原样保留；整理数据义由剑桥另支持。 当前WordNet没有本课精确义项；下方出版社参考独立支持。",
+      "externalReferences": [
+        {
+          "label": "Cambridge Dictionary · collate data/information",
+          "url": "https://dictionary.cambridge.org/dictionary/english/collate",
+          "accessedAt": "2026-10-02",
+          "evidenceType": "External evidence"
+        }
+      ],
+      "forms": [
+        "collated",
+        "collating",
+        "collates"
+      ]
+    },
+    "database": {
+      "zh": "有组织的相关信息集合；数据库",
+      "example": "Every result in the database keeps its location and date.",
+      "exampleZh": "数据库中的每个结果都保留地点和日期。",
+      "usageNote": "这里把取样地点和日期留在记录中。存入数据库不使不完整记录自动变成可靠证据。",
+      "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:06637824"
+    },
+    "determine": {
+      "zh": "通过调查查明",
+      "example": "We need more evidence to determine the source of the difference.",
+      "exampleZh": "我们需要更多证据来查明差异来源。",
+      "usageNote": "本课查明差异来源，不是决定选什么。to determine its source表示仍要调查，不能由不同样本直接指认责任。",
+      "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "v:00918872",
+      "forms": [
+        "determined",
+        "determining",
+        "determines"
+      ],
+      "contrasts": [
+        {
+          "senseId": "v:00947077",
+          "zh": "确定；决定",
+          "example": "We need to determine the date of the next visit.",
+          "exampleZh": "我们需要确定下次到访日期。",
+          "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。"
+        }
+      ]
+    },
+    "evidence": {
+      "zh": "支持判断的事实或信息；证据",
+      "example": "A difference between two results is not enough evidence to identify its cause.",
+      "exampleZh": "两个结果之间有差异，不是足以确定原因的证据。",
+      "usageNote": "本课不可数名词，more evidence，不用an evidence。结果不同是信息，但还不足以确定来源。",
+      "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:05823932"
+    },
+    "record": {
+      "zh": "记录；写下",
+      "example": "Record what happened before explaining why it happened.",
+      "exampleZh": "先记录发生了什么，再解释为什么发生。",
+      "usageNote": "把实际看到的变化写下来，与之后查原因的解释分开；本课动词。",
+      "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "v:01000214",
+      "forms": [
+        "recorded",
+        "recording",
+        "records"
+      ]
+    }
+  },
+  "S15.W01": {
+    "tide": {
+      "zh": "潮汐；海面周期性升降",
+      "example": "The tide covered the feeding area today.",
+      "exampleZh": "今天潮水盖住了觅食区。",
+      "usageNote": "本课海水水位的周期变化，不是人群或情绪的比喻。一个潮位下看见鸟少，不足以推出鸟总数下降。",
+      "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:07402519"
+    },
+    "tidal": {
+      "zh": "与潮汐有关或由潮汐引起的",
+      "example": "A tidal change covered the feeding area.",
+      "exampleZh": "潮汐变化盖住了觅食区。",
+      "usageNote": "形容词修饰change等；本课水线变化影响可见范围，不证明动物离开整个湿地。",
+      "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "a:02815241"
+    },
+    "bay": {
+      "zh": "海湾",
+      "example": "The river meets the sea in a small bay.",
+      "exampleZh": "河流在一个小海湾与海相接。",
+      "usageNote": "本课海岸向内弯入的水域位置。不是月桂树、设备舱或栗色马义；用于定位河海相接处。",
+      "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:09215664"
+    },
+    "coast": {
+      "zh": "海岸；沿海地带",
+      "example": "Wind moves across the open coast.",
+      "exampleZh": "风掠过开阔的海岸地带。",
+      "usageNote": "沿海地带名词；不把它和shore当成在所有地方可互换的词。先识别地图上的较大沿海范围，不强迫三近义词同时主动输出。",
+      "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:09428293"
+    },
+    "shore": {
+      "zh": "水体边缘的岸",
+      "example": "Wet sand marks the shore beside the bay.",
+      "exampleZh": "海湾旁的岸边有湿沙。",
+      "usageNote": "可用于海、湖或河的岸边；本课沿海水边的湿沙。coast通常限海岸，两者有重叠而非完全互斥。",
+      "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:09433442"
+    },
+    "seaweed": {
+      "zh": "海藻；海中生长的藻类等",
+      "example": "There is seaweed on the tray beside the shell.",
+      "exampleZh": "壳旁的托盘上有海藻。",
+      "usageNote": "本课托盘上的海藻，日常常不可数。原中文海草保持；科学语境seagrass和seaweed不是同一个分类。",
+      "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:01397497",
+      "externalReferences": [
+        {
+          "label": "NOAA Ocean Service · What is seaweed?",
+          "url": "https://oceanservice.noaa.gov/facts/seaweed.html",
+          "accessedAt": "2026-10-02",
+          "evidenceType": "External evidence"
+        }
+      ]
+    },
+    "invertebrate": {
+      "zh": "无脊椎动物",
+      "example": "A small invertebrate moves inside the shell.",
+      "exampleZh": "壳内有一只小的无脊椎动物在移动。",
+      "usageNote": "本课名词，小动物角色；原资料还列形容词。先理解壳内是动物，而非凭壳形判断具体物种。",
+      "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:01905661"
+    },
+    "organism": {
+      "zh": "生物体",
+      "example": "Lin records a living organism rather than an empty shell.",
+      "exampleZh": "林记录一个活的生物体，而不是空壳。",
+      "usageNote": "本课活的个体，不是空壳或社会机构的比喻。移动纠正了“壳是空的”初步判断。",
+      "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:00004475"
+    },
+    "comparable": {
+      "zh": "适合进行比较的",
+      "example": "Are the two counts comparable if the water levels are different?",
+      "exampleZh": "水位不同，这两次计数适合直接比较吗？",
+      "usageNote": "能比较不要求所有条件完全相同，但与研究问题有关的潮位、时间、天气等差别必须考虑。",
+      "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "a:00503982"
+    },
+    "low": {
+      "zh": "low tide整块中的低水位",
+      "noMatch": true,
+      "note": "这里请先读at low tide整块，表示低潮时；不把普通low的多个义项冒充整个潮汐表达。",
+      "usageNote": "at low tide表示在低潮时。原R00117定义疑似截断，另记原页待复核。",
+      "example": "The first count was made at low tide.",
+      "exampleZh": "第一次计数是在低潮时进行的。",
+      "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。"
+    }
+  },
+  "S15.W02": {
+    "breeding": {
+      "zh": "动物交配并产生后代的繁殖活动",
+      "example": "The sign describes breeding behaviour seen in spring.",
+      "exampleZh": "告示描述了春天观察到的繁殖行为。",
+      "usageNote": "本课繁殖行为名词；原中文养育过宽，不能当成人类教养义。看见两只鸟靠近巢不独自证实所有繁殖阶段。",
+      "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:00849523"
+    },
+    "reproduction": {
+      "zh": "产生后代的生物繁殖过程",
+      "example": "One visit is not enough to establish the outcome of reproduction.",
+      "exampleZh": "一次到访不足以确定繁殖结果。",
+      "usageNote": "生物过程名词，不是复制图片或文本。原课说幼鸟存活仍未知；本课观察者还不能判定这次繁殖结果。",
+      "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:13550318",
+      "contrasts": [
+        {
+          "senseId": "n:04076533",
+          "zh": "复制品",
+          "example": "The picture is a reproduction of the original painting.",
+          "exampleZh": "这幅图是原画的复制品。",
+          "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。"
+        }
+      ]
+    },
+    "seasonal": {
+      "zh": "季节性的；与某季节有关的",
+      "example": "This is a seasonal observation, so we need visits at other times of the year.",
+      "exampleZh": "这是一项季节性观察，因此还需在一年中的其他时候到访。",
+      "usageNote": "本课记录只来自春季，需其他时段观察。seasonal不表示已经有多年记录。",
+      "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "a:01494273"
+    },
+    "migration": {
+      "zh": "动物周期性迁徙",
+      "example": "The map shows a long migration route.",
+      "exampleZh": "地图显示一条漫长的迁徙路线。",
+      "usageNote": "本课地图上的鸟类迁徙，不是人口移居或分子内部迁移。一次看见鸟不确定它完整走过的路线。",
+      "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:07312616"
+    },
+    "perch": {
+      "zh": "停栖在枝条等支撑物上",
+      "example": "A bird perched on the island marker.",
+      "exampleZh": "一只鸟停栖在小岛标杆上。",
+      "usageNote": "本课鸟类动词，常用perch on；故事perched是过去式。不是鲈鱼、栖木名词或旧长度单位。",
+      "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "v:01543731",
+      "externalReferences": [
+        {
+          "label": "Cambridge Dictionary · perch, verb",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/perch",
+          "accessedAt": "2026-10-02",
+          "evidenceType": "External evidence"
+        }
+      ],
+      "forms": [
+        "perched",
+        "perching",
+        "perches"
+      ],
+      "contrasts": [
+        {
+          "senseId": "n:03914919",
+          "zh": "鸟停歇的枝条或栖木",
+          "example": "The bird returned to its perch.",
+          "exampleZh": "鸟回到了它的栖木上。",
+          "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。"
+        }
+      ]
+    },
+    "island": {
+      "zh": "四周被水包围的陆地；岛",
+      "example": "The bird rests on a marker near the island.",
+      "exampleZh": "鸟停在小岛附近的标杆上。",
+      "usageNote": "本课地图和标杆所指的小岛。不是道路中间的安全岛等比喻用法。",
+      "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:09316454"
+    },
+    "route": {
+      "zh": "从一处到另一处的路线",
+      "example": "The map traces a migration route beyond the island.",
+      "exampleZh": "地图描出一条经过小岛之外的迁徙路线。",
+      "usageNote": "本课migration route为地图上的迁徙路线；图示不代表本次观察已经追踪完整旅程。",
+      "provenance": "External evidence · WordNet英语原义保留；Researcher inference · 本项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:08616311"
+    }
+  }
+}

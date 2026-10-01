@@ -5,10 +5,10 @@
     "modelLicense": "CC-BY 4.0",
     "modelSource": "https://github.com/argosopentech/argospm-index",
     "generatedAt": "2026-10-02",
-    "uniqueSenses": 10241,
-    "examplePlacements": 13395,
-    "projectDefinitionCount": 151,
-    "projectOriginalExampleCount": 80
+    "uniqueSenses": 10257,
+    "examplePlacements": 13403,
+    "projectDefinitionCount": 174,
+    "projectOriginalExampleCount": 92
   },
   "senses": {
     "n:13658027": {
@@ -4431,8 +4431,8 @@
       "examples": {}
     },
     "n:00634276": {
-      "definition": "调查整体的组成部分及其在构成整体方面的关系;",
-      "definitionStatus": "machine",
+      "definition": "研究整体的组成部分及它们构成整体的关系",
+      "definitionStatus": "project",
       "examples": {}
     },
     "n:05772667": {
@@ -4938,7 +4938,7 @@
       "examples": {}
     },
     "n:02727825": {
-      "definition": "为特定功能设计的设备。",
+      "definition": "为特定用途设计的设备",
       "definitionStatus": "project",
       "examples": {}
     },
@@ -8781,7 +8781,7 @@
       "examples": {}
     },
     "n:09215664": {
-      "definition": "海岸线的一处凹入，规模大于小海湾而小于大海湾。",
+      "definition": "海岸线向内凹入的水域，比小海湾大、比大海湾小",
       "definitionStatus": "project",
       "examples": {}
     },
@@ -9565,7 +9565,7 @@
       }
     },
     "n:00004475": {
-      "definition": "具有维持生命能力或行为能力的生物实体。",
+      "definition": "具有或可发展出独立活动、发挥功能能力的生物",
       "definitionStatus": "project",
       "examples": {}
     },
@@ -12930,7 +12930,7 @@
       "examples": {}
     },
     "n:00849523": {
-      "definition": "孕育和产生后代的生殖活动。",
+      "definition": "受孕和产生后代的生殖活动",
       "definitionStatus": "project",
       "examples": {}
     },
@@ -19281,8 +19281,8 @@
       "examples": {}
     },
     "v:00920336": {
-      "definition": "了解、学习或确定,通常是通过调查或其他努力",
-      "definitionStatus": "machine",
+      "definition": "查明；通常经过询问或其他努力得知或确定",
+      "definitionStatus": "project",
       "examples": {
         "I want to see whether she speaks French": {
           "text": "我想看看她会不会说法语",
@@ -19347,13 +19347,13 @@
       "examples": {}
     },
     "n:14806838": {
-      "definition": "由原子或分子变化反应产生或使用的材料",
-      "definitionStatus": "machine",
+      "definition": "在涉及原子或分子变化的反应中产生或使用的物质",
+      "definitionStatus": "project",
       "examples": {}
     },
     "a:02692624": {
-      "definition": "与化学有关或用于化学",
-      "definitionStatus": "machine",
+      "definition": "与化学有关或用于化学的",
+      "definitionStatus": "project",
       "examples": {
         "chemical engineer": {
           "text": "化学工程师",
@@ -21999,8 +21999,8 @@
       "examples": {}
     },
     "n:09428293": {
-      "definition": "海洋的岸边",
-      "definitionStatus": "machine",
+      "definition": "海或洋的岸",
+      "definitionStatus": "project",
       "examples": {}
     },
     "n:09248153": {
@@ -22433,12 +22433,12 @@
       }
     },
     "v:01380638": {
-      "definition": "组装或聚在一起",
-      "definitionStatus": "machine",
+      "definition": "收集起来；汇集起来",
+      "definitionStatus": "project",
       "examples": {
         "gather some stones": {
-          "text": "找些石头来",
-          "status": "machine"
+          "text": "收集一些石头",
+          "status": "project"
         },
         "pull your thoughts together": {
           "text": "振作你的思绪",
@@ -23635,8 +23635,8 @@
       "examples": {}
     },
     "a:00503982": {
-      "definition": "能够比较或值得比较",
-      "definitionStatus": "machine",
+      "definition": "能够比较或值得比较的",
+      "definitionStatus": "project",
       "examples": {}
     },
     "s:02063554": {
@@ -29606,7 +29606,7 @@
       "examples": {}
     },
     "n:06637824": {
-      "definition": "有组织的相关信息集合。",
+      "definition": "有组织的相关信息集合",
       "definitionStatus": "project",
       "examples": {}
     },
@@ -30993,12 +30993,12 @@
       }
     },
     "v:00918872": {
-      "definition": "在计算、调查、试验、调查或研究之后确定",
-      "definitionStatus": "machine",
+      "definition": "经过计算、调查、实验或研究后确定",
+      "definitionStatus": "project",
       "examples": {
         "find the product of two numbers": {
-          "text": "找到两个数字的产物",
-          "status": "machine"
+          "text": "求两个数的乘积",
+          "status": "project"
         },
         "The physicist who found the elusive particle won the Nobel Prize": {
           "text": "发现难捉摸的粒子的物理学家获得了诺贝尔奖",
@@ -31031,8 +31031,8 @@
       }
     },
     "v:00947077": {
-      "definition": "确定或确定",
-      "definitionStatus": "machine",
+      "definition": "作出决定或明确确定",
+      "definitionStatus": "project",
       "examples": {
         "fix the variables": {
           "text": "修补变量",
@@ -32867,12 +32867,12 @@
       }
     },
     "v:00446329": {
-      "definition": "进入溶液中；溶解。",
+      "definition": "进入溶液；溶解",
       "definitionStatus": "project",
       "examples": {
         "The sugar quickly dissolved in the coffee": {
-          "text": "糖很快就溶解在咖啡里了",
-          "status": "machine"
+          "text": "糖很快溶解在咖啡中。",
+          "status": "project"
         }
       }
     },
@@ -32907,8 +32907,8 @@
       }
     },
     "v:00355955": {
-      "definition": "结束这种联系或使这种联系解体",
-      "definitionStatus": "machine",
+      "definition": "结束联合关系；使解散或分离",
+      "definitionStatus": "project",
       "examples": {
         "The decree officially dissolved the marriage": {
           "text": "法令正式解除了婚姻",
@@ -34143,8 +34143,8 @@
       "examples": {}
     },
     "r:00097231": {
-      "definition": "远离源头或与当前",
-      "definitionStatus": "machine",
+      "definition": "远离源头或顺流方向",
+      "definitionStatus": "project",
       "examples": {}
     },
     "n:08539072": {
@@ -37436,8 +37436,8 @@
       "examples": {}
     },
     "v:02339413": {
-      "definition": "通常为特定目的提供(某种)",
-      "definitionStatus": "machine",
+      "definition": "通常为了特定用途提供所需物品或设备",
+      "definitionStatus": "project",
       "examples": {
         "The expedition was equipped with proper clothing, food, and other necessities": {
           "text": "探险队配备了合适的衣服、食物和其他必需品",
@@ -38298,8 +38298,8 @@
       }
     },
     "n:05823932": {
-      "definition": "信仰或不信的基础;信仰的知识;",
-      "definitionStatus": "machine",
+      "definition": "相信或不相信某事的依据；据以判断的知识",
+      "definitionStatus": "project",
       "examples": {
         "the evidence that smoking causes lung cancer is very compelling": {
           "text": "吸烟导致肺癌的证据非常有力",
@@ -41433,44 +41433,20 @@
         }
       }
     },
-    "n:13320168": {
-      "definition": "特权或专业服务的固定费用",
+    "n:10373525": {
+      "definition": "任何联邦执法人员",
       "definitionStatus": "machine",
       "examples": {}
     },
-    "n:13288529": {
-      "definition": "对能够继承的土地的权益;",
-      "definitionStatus": "machine",
-      "examples": {}
-    },
-    "v:02202133": {
-      "definition": "支付小费或酬金以换取服务,超出商定的补偿范围;",
+    "n:08350470": {
+      "definition": "- 包括12家美联储分行和所有国家银行、国家特许商业银行和一些信托公司;",
       "definitionStatus": "machine",
       "examples": {
-        "Remember to tip the waiter": {
-          "text": "记得给服务员小费",
-          "status": "machine"
-        },
-        "fee the steward": {
-          "text": "服务员付费",
+        "the Fed seeks to control the United States economy by raising and lowering short-term interest rates and the money supply": {
+          "text": "美联储试图通过提高和降低短期利率和货币供应来控制美国经济",
           "status": "machine"
         }
       }
-    },
-    "n:13479380": {
-      "definition": "将系统部分产出恢复到其投入的过程,以规范其进一步产出",
-      "definitionStatus": "machine",
-      "examples": {}
-    },
-    "n:06746471": {
-      "definition": "对调查或实验的答复",
-      "definitionStatus": "machine",
-      "examples": {}
-    },
-    "n:01057759": {
-      "definition": "提供食物和营养的行为;",
-      "definitionStatus": "machine",
-      "examples": {}
     },
     "v:01182021": {
       "definition": "作为食物提供",
@@ -41565,6 +41541,45 @@
           "status": "machine"
         }
       }
+    },
+    "n:13320168": {
+      "definition": "特权或专业服务的固定费用",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:13288529": {
+      "definition": "对能够继承的土地的权益;",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "v:02202133": {
+      "definition": "支付小费或酬金以换取服务,超出商定的补偿范围;",
+      "definitionStatus": "machine",
+      "examples": {
+        "Remember to tip the waiter": {
+          "text": "记得给服务员小费",
+          "status": "machine"
+        },
+        "fee the steward": {
+          "text": "服务员付费",
+          "status": "machine"
+        }
+      }
+    },
+    "n:13479380": {
+      "definition": "将系统部分产出恢复到其投入的过程,以规范其进一步产出",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:06746471": {
+      "definition": "对调查或实验的答复",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:01057759": {
+      "definition": "提供食物和营养的行为;",
+      "definitionStatus": "machine",
+      "examples": {}
     },
     "n:05677340": {
       "definition": "直觉意识或\"当你感受到它时很容易\"",
@@ -43823,7 +43838,7 @@
       "examples": {}
     },
     "n:03359566": {
-      "definition": "窄颈瓶。",
+      "definition": "有窄颈的瓶",
       "definitionStatus": "project",
       "examples": {}
     },
@@ -44222,7 +44237,7 @@
       "examples": {}
     },
     "n:14939445": {
-      "definition": "连续、无定形、倾向于流动并呈现容器形状的物质；液体或气体。",
+      "definition": "趋于流动并适应容器形状的连续无定形物质：液体或气体",
       "definitionStatus": "project",
       "examples": {}
     },
@@ -55539,8 +55554,8 @@
       }
     },
     "n:01905661": {
-      "definition": "任何缺乏骨干或脊椎动物;该术语不用作科学分类",
-      "definitionStatus": "machine",
+      "definition": "没有脊骨或脊索的动物；该术语不作为科学分类单元",
+      "definitionStatus": "project",
       "examples": {}
     },
     "a:02510273": {
@@ -55707,8 +55722,8 @@
       }
     },
     "n:09316454": {
-      "definition": "被水包围的陆地(比大陆小)",
-      "definitionStatus": "machine",
+      "definition": "被水包围、面积小于大陆的陆地",
+      "definitionStatus": "project",
       "examples": {}
     },
     "n:03587318": {
@@ -57115,8 +57130,8 @@
       "examples": {}
     },
     "n:03629986": {
-      "definition": "从事科学研究的工作场所;",
-      "definitionStatus": "machine",
+      "definition": "开展科学研究的工作场所",
+      "definitionStatus": "project",
       "examples": {}
     },
     "n:08662570": {
@@ -65896,7 +65911,7 @@
       "examples": {}
     },
     "n:07312616": {
-      "definition": "动物群体，尤其鸟类或鱼类，为觅食或繁殖周期性地从一个地区到另一个地区的移动。",
+      "definition": "动物群（尤其鸟或鱼）为觅食或繁殖周期性地从一区域移往另一区域",
       "definitionStatus": "project",
       "examples": {}
     },
@@ -74801,13 +74816,48 @@
         }
       }
     },
+    "n:03914919": {
+      "definition": "供鸟等停歇的枝条或杆状支撑物",
+      "definitionStatus": "project",
+      "examples": {}
+    },
+    "n:13650921": {
+      "definition": "直线度量为16.5英尺",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:13614679": {
+      "definition": "一块方块土地",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:08626758": {
+      "definition": "升起的位置,作为席位;",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:07780173": {
+      "definition": "美国和欧洲的众多鱼类中的任何一种",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:02556846": {
+      "definition": "螺旋鳍淡水食物和游戏鱼",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:02555863": {
+      "definition": "任何种类的脊鳍鱼 不同种类的鱼",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
     "v:01543731": {
-      "definition": "停坐在某处，如树枝上。",
+      "definition": "停坐在某处，例如枝条上",
       "definitionStatus": "project",
       "examples": {
         "The birds perched high in the tree": {
-          "text": "鸟儿们爬在树上",
-          "status": "machine"
+          "text": "鸟停栖在树的高处。",
+          "status": "project"
         }
       }
     },
@@ -78933,7 +78983,7 @@
       "examples": {}
     },
     "a:01837744": {
-      "definition": "十分确切、准确或界限明确的。",
+      "definition": "非常具体、准确或界定清楚的",
       "definitionStatus": "project",
       "examples": {
         "a precise mind": {
@@ -78941,12 +78991,12 @@
           "status": "machine"
         },
         "specified a precise amount": {
-          "text": "指定精确的金额",
-          "status": "machine"
+          "text": "明确指定了一个准确数量",
+          "status": "project"
         },
         "arrived at the precise moment": {
-          "text": "到了准确的时刻",
-          "status": "machine"
+          "text": "在恰好那个时刻到达",
+          "status": "project"
         }
       }
     },
@@ -79977,8 +80027,8 @@
       }
     },
     "n:00577068": {
-      "definition": "涉及特定形式工作的一种过程或一系列行为,特别是实际或机械性质的行为;",
-      "definitionStatus": "machine",
+      "definition": "某种工作所涉及的过程或一系列动作，尤其是实际或机械性工作",
+      "definitionStatus": "project",
       "examples": {
         "the operations in building a house": {
           "text": "建造房屋的操作",
@@ -81353,20 +81403,20 @@
       "examples": {}
     },
     "a:01914521": {
-      "definition": "根据性质、特征作区分的。",
+      "definition": "涉及按性质或特征进行区分的",
       "definitionStatus": "project",
       "examples": {
         "qualitative change": {
-          "text": "质量变化",
-          "status": "machine"
+          "text": "定性变化",
+          "status": "project"
         },
         "qualitative data": {
-          "text": "质量数据",
-          "status": "machine"
+          "text": "定性数据",
+          "status": "project"
         },
         "qualitative analysis determines the chemical constituents of a substance or mixture": {
-          "text": "定性分析确定一种物质或混合物的化学成分",
-          "status": "machine"
+          "text": "定性分析确定一种物质或混合物的化学成分。",
+          "status": "project"
         }
       }
     },
@@ -81376,16 +81426,16 @@
       "examples": {}
     },
     "a:01914930": {
-      "definition": "可表示为数量,或与计量有关或易于计量",
-      "definitionStatus": "machine",
+      "definition": "可表示为数量，或与测量有关、能够测量的",
+      "definitionStatus": "project",
       "examples": {
         "export wheat without quantitative limitations": {
           "text": "无数量限制的出口小麦",
           "status": "machine"
         },
         "quantitative analysis determines the amounts and proportions of the chemical constituents of a substance or mixture": {
-          "text": "定量分析确定一种物质或混合物的化学成分的数量和比例",
-          "status": "machine"
+          "text": "定量分析确定一种物质或混合物中化学成分的数量和比例。",
+          "status": "project"
         }
       }
     },
@@ -81976,6 +82026,20 @@
       "examples": {
         "If it rains much more, we can expect some flooding": {
           "text": "如果下雨多一点,我们就能预料到一些洪水",
+          "status": "machine"
+        }
+      }
+    },
+    "s:02550333": {
+      "definition": "(天气)因降雨而湿",
+      "definitionStatus": "machine",
+      "examples": {
+        "showery weather": {
+          "text": "淋浴天气",
+          "status": "machine"
+        },
+        "rainy days": {
+          "text": "雨季",
           "status": "machine"
         }
       }
@@ -85917,7 +85981,7 @@
       }
     },
     "n:13550318": {
-      "definition": "产生后代的过程。",
+      "definition": "产生后代的过程",
       "definitionStatus": "project",
       "examples": {}
     },
@@ -85927,8 +85991,8 @@
       "examples": {}
     },
     "n:04076533": {
-      "definition": "复制不是原件; 已经复制的东西",
-      "definitionStatus": "machine",
+      "definition": "并非原件的复制品；被复制的物品",
+      "definitionStatus": "project",
       "examples": {}
     },
     "n:01019901": {
@@ -88899,7 +88963,7 @@
       }
     },
     "n:05821775": {
-      "definition": "旨在代表整体的一小部分。",
+      "definition": "旨在代表整体的一小部分",
       "definitionStatus": "project",
       "examples": {}
     },
@@ -89988,16 +90052,16 @@
       "examples": {}
     },
     "a:01494273": {
-      "definition": "发生于或依赖特定季节的。",
+      "definition": "发生于某个季节或依赖某个季节的",
       "definitionStatus": "project",
       "examples": {
         "seasonal labor": {
-          "text": "季节性劳动力",
-          "status": "machine"
+          "text": "季节性劳动",
+          "status": "project"
         },
         "a seasonal rise in unemployment": {
-          "text": "失业率的季节性上升",
-          "status": "machine"
+          "text": "失业人数的季节性上升",
+          "status": "project"
         }
       }
     },
@@ -90132,8 +90196,8 @@
       "examples": {}
     },
     "n:01397497": {
-      "definition": "生长在海洋中的植物,特别是海洋藻类",
-      "definitionStatus": "machine",
+      "definition": "在海中生长的植物，尤其是海洋藻类",
+      "definitionStatus": "project",
       "examples": {}
     },
     "n:00723783": {
@@ -92495,7 +92559,7 @@
       }
     },
     "n:09433442": {
-      "definition": "沿水体边缘的陆地。",
+      "definition": "沿水体边缘的陆地",
       "definitionStatus": "project",
       "examples": {}
     },
@@ -103459,8 +103523,8 @@
       }
     },
     "a:02815241": {
-      "definition": "或与潮汐有关或由潮汐引起的影响",
-      "definitionStatus": "machine",
+      "definition": "与潮汐有关或由潮汐引起的",
+      "definitionStatus": "project",
       "examples": {
         "tidal wave": {
           "text": "潮汐",
@@ -103469,7 +103533,7 @@
       }
     },
     "n:07402519": {
-      "definition": "海平面在月球引力作用下周期性上升与下降。",
+      "definition": "在月球引力作用下，海面水位周期性升降",
       "definitionStatus": "project",
       "examples": {}
     },
@@ -104570,6 +104634,59 @@
           "status": "machine"
         }
       }
+    },
+    "n:13773361": {
+      "definition": "仅可检测到的数量",
+      "definitionStatus": "machine",
+      "examples": {
+        "he speaks French with a trace of an accent": {
+          "text": "他用口音的痕迹说法语",
+          "status": "machine"
+        }
+      }
+    },
+    "n:06646628": {
+      "definition": "表明存在某种东西",
+      "definitionStatus": "machine",
+      "examples": {
+        "there wasn't a trace of evidence for the claim": {
+          "text": "索赔没有证据",
+          "status": "machine"
+        },
+        "a tincture of condescension": {
+          "text": "圆形的装饰",
+          "status": "machine"
+        }
+      }
+    },
+    "n:07164163": {
+      "definition": "某种质量的建议",
+      "definitionStatus": "machine",
+      "examples": {
+        "there was a touch of sarcasm in his tone": {
+          "text": "他的语气有点讽刺",
+          "status": "machine"
+        },
+        "he detected a ghost of a smile on her face": {
+          "text": "他发现一个幽灵 微笑在她的脸上",
+          "status": "machine"
+        }
+      }
+    },
+    "n:04463273": {
+      "definition": "通过在原始图像上叠加半透明的纸张表并复制原始图像的线条而创建的图纸",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:04462407": {
+      "definition": "双线连接着马车或其他车辆 或风味树",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:06647036": {
+      "definition": "人或动物或车辆通过时留下的可见标记(作为足迹)",
+      "definitionStatus": "machine",
+      "examples": {}
     },
     "n:01091905": {
       "definition": "商品和劳务的商业交换(在国内或国际市场买卖)",
@@ -107161,8 +107278,8 @@
       "examples": {}
     },
     "r:00097108": {
-      "definition": "对源或对流",
-      "definitionStatus": "machine",
+      "definition": "向源头方向或逆流方向",
+      "definitionStatus": "project",
       "examples": {}
     },
     "n:09044862": {

@@ -346,5 +346,49 @@
     "examples": {
       "came earlier than I expected": "比我预期更早到来"
     }
+  },
+  "a:01837744": {
+    "examples": {
+      "specified a precise amount": "明确指定了一个准确数量",
+      "arrived at the precise moment": "在恰好那个时刻到达"
+    }
+  },
+  "v:00446329": {
+    "examples": {
+      "The sugar quickly dissolved in the coffee": "糖很快溶解在咖啡中。"
+    }
+  },
+  "a:01914521": {
+    "examples": {
+      "qualitative change": "定性变化",
+      "qualitative data": "定性数据",
+      "qualitative analysis determines the chemical constituents of a substance or mixture": "定性分析确定一种物质或混合物的化学成分。"
+    }
+  },
+  "a:01914930": {
+    "examples": {
+      "quantitative analysis determines the amounts and proportions of the chemical constituents of a substance or mixture": "定量分析确定一种物质或混合物中化学成分的数量和比例。"
+    }
+  },
+  "a:01494273": {
+    "examples": {
+      "seasonal labor": "季节性劳动",
+      "a seasonal rise in unemployment": "失业人数的季节性上升"
+    }
+  },
+  "v:01543731": {
+    "examples": {
+      "The birds perched high in the tree": "鸟停栖在树的高处。"
+    }
+  },
+  "v:01380638": {
+    "examples": {
+      "gather some stones": "收集一些石头"
+    }
+  },
+  "v:00918872": {
+    "examples": {
+      "find the product of two numbers": "求两个数的乘积"
+    }
   }
 }
