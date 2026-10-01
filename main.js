@@ -612,7 +612,7 @@ function renderFeedback(scene, prompt, attempt) {
       <p class="feedback-note">${annotatedEnglish(prompt.feedback || "比较你的说法是否完成了情境中的交流目的。合理改述也可以正确。", scene)}</p>
       ${textTranslation(prompt.feedbackZh || translated?.feedback, "用法反馈中文")}
       ${prompt.checks?.length ? `<div class="specific-checks"><strong>先核对这几件事</strong><ul>${prompt.checks.map((c) => `<li>${escapeHtml(c)}</li>`).join("")}</ul></div>` : ""}
-      ${unitAssessmentHtml(prompt, attempt)}
+      ${unitAssessmentHtml(scene, prompt, attempt)}
       ${prompt.unitIds?.length ? `<section class="revision-panel"><label for="revisionInput">参考之后，重新写一版</label><textarea id="revisionInput" rows="3" class="answer-input" placeholder="保留原答，写出你的改进版本…"></textarea><button type="button" class="secondary-btn" id="saveRevision">保存修订</button><p role="status" id="revisionStatus"></p>${attempt?.revisions?.length ? `<details><summary>已保存 ${attempt.revisions.length} 次修订</summary>${attempt.revisions.map((r) => `<p>${escapeHtml(r.response)}</p>`).join("")}</details>` : ""}<small>修订记录为参考后练习，不推进独立间隔。</small></section>` : ""}
       ${textTranslation(translated?.function, "本题语言目标中文")}
       ${terms.length ? `<details class="source-details"><summary>查看本题相关表达与来源</summary><div class="term-list">${terms.map((term) => `<div class="term-item"><span class="source-pill ${String(term.kind || "").toLowerCase()}">${escapeHtml(term.kind === "BRG" ? "SRC · BRG" : (term.kind || "候选"))}</span><strong>${escapeHtml(term.term)}</strong><span>${escapeHtml(term.sourceLabel || "")}</span>${term.sourceUrl ? `<a href="${escapeHtml(term.sourceUrl)}" target="_blank" rel="noopener noreferrer">来源 ↗</a>` : ""}${term.sourceRef ? `<small>${escapeHtml(term.sourceRef)}</small>` : ""}</div>`).join("")}</div></details>` : ""}
@@ -957,6 +957,8 @@ function unitsForScene(scene) {
     tier: u.sceneTiers?.[scene.id] || u.tier,
     example: u.sceneExamples?.[scene.id] || u.example,
     exampleZh: u.sceneExampleZhs?.[scene.id] || u.exampleZh,
+    sense: u.sceneSenses?.[scene.id] || u.sense,
+    meaningZh: u.sceneMeaningZhs?.[scene.id] || u.meaningZh,
   }));
 }
 function promptCue(scene, prompt) {
@@ -983,10 +985,11 @@ function unitLearningHtml(scene) {
   const names = { core: "本节主动练", support: "需要时借用", recognition: "先读懂即可" };
   return `<section class="unit-learning"><h2>先选少量表达，完成一件事</h2>${Object.entries(names).map(([tier, label]) => `<details ${tier === "core" ? "open" : ""}><summary>${label} · ${units.filter((u) => u.tier === tier).length}</summary><div class="unit-cards">${units.filter((u) => u.tier === tier).map((u) => `<article><strong lang="en">${annotatedEnglish(u.form, scene, u.type === "word" ? u.example : null)}</strong><p>${escapeHtml(u.meaningZh)}</p><p class="meta">${escapeHtml(u.sense)}</p><p lang="en">${annotatedEnglish(u.example, scene)}</p>${textTranslation(u.exampleZh, "例句中文")}${unitMemoryHtml(u, scene)}<small>项目编写的例句</small><details><summary>组成词依据</summary>${unitSourceHtml(u)}<small>表达组合与例句为项目编写；原词条不修改。</small></details></article>`).join("")}</div></details>`).join("")}<small>分层是本批编辑建议；读过、点击过均不计为掌握。</small></section>`;
 }
-function unitAssessmentHtml(prompt, attempt) {
-  const units = (prompt.unitIds || []).map((id) => learningUnits.find((u) => u.id === id)).filter(Boolean);
+function unitAssessmentHtml(scene, prompt, attempt) {
+  const sceneUnits = new Map(unitsForScene(scene).map((unit) => [unit.id, unit]));
+  const units = (prompt.unitIds || []).map((id) => sceneUnits.get(id)).filter(Boolean);
   if (!units.length) return "";
-  return `<section class="unit-assessment"><h3>回看原答：哪些表达实际用出来了？</h3><p>只核对提交前的回答或录音。合理改述能完成任务；未用到某项就留“未观察”。这些记录都是你的自评，不是自动语言判分。</p>${units.map((u) => `<label><span>${annotatedEnglish(u.form, getScene(u.sceneIds[0]), u.type === "word" ? u.example : null)} · ${escapeHtml(u.meaningZh)}</span><select data-unit-assessment="${escapeHtml(u.id)}" ${attempt?.selfRating ? "disabled" : ""}>${Object.entries(EVIDENCE_LABELS).map(([status, label]) => `<option value="${status}" ${attempt?.unitAssessments?.[u.id] === status ? "selected" : ""} ${status === "independent" && (!attempt?.response || attempt?.support !== "none") ? "disabled" : ""}>${label}</option>`).join("")}</select></label>`).join("")}<small>选择下方任务自评时一并保存；看参考后才会的表达放进修订。</small></section>`;
+  return `<section class="unit-assessment"><h3>回看原答：哪些表达实际用出来了？</h3><p>只核对提交前的回答或录音。合理改述能完成任务；未用到某项就留“未观察”。这些记录都是你的自评，不是自动语言判分。</p>${units.map((u) => `<label><span>${annotatedEnglish(u.form, scene, u.type === "word" ? u.example : null)} · ${escapeHtml(u.meaningZh)}</span><select data-unit-assessment="${escapeHtml(u.id)}" ${attempt?.selfRating ? "disabled" : ""}>${Object.entries(EVIDENCE_LABELS).map(([status, label]) => `<option value="${status}" ${attempt?.unitAssessments?.[u.id] === status ? "selected" : ""} ${status === "independent" && (!attempt?.response || attempt?.support !== "none") ? "disabled" : ""}>${label}</option>`).join("")}</select></label>`).join("")}<small>选择下方任务自评时一并保存；看参考后才会的表达放进修订。</small></section>`;
 }
 function bindFeedback(scene, prompt, attempt) {
   app.querySelector("#saveRevision")?.addEventListener("click", () => {
