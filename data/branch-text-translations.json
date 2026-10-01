@@ -591,6 +591,372 @@
         }
       }
     },
+    "S07.J01": {
+      "title": "出发前的一张便签",
+      "goal": "核对出发时间，询问旅程耗时，并说明备用方案。",
+      "situation": "假期的第一个早晨，玛雅把地图摊在厨房桌上。护照放在桌面左侧的蓝色文件夹里，但这段旅程仍显得不够清楚。她提前保存了旅社地址，现在需要核对出发时间。“长途汽车九点出发，”哥哥指着车票说。玛雅把写有时间的黄色便签放到文件夹右侧。“这段旅程需要多久？”她问。“路上顺畅的话，大约两小时。”\n\n手机电量快没了。玛雅不想每件事都依赖手机，于是把地址抄到便签背面。哥哥提出开车送她去站点，不过她也可以步行。他们商量好预留额外时间。在门口，她检查了包旁的文件夹。这张便签没有保证旅程十全十美；它给了她一个在屏幕熄灭时仍能执行的下一步。",
+      "paragraphs": [
+        {
+          "en": "On the first morning of her vacation, Maya spread a map across the kitchen table. Her passport was in a blue folder on the left, but the journey still felt vague. She had saved the hostel address in advance. Now she needed the departure time. “The coach leaves at nine,” her brother said, pointing to the ticket. Maya put a yellow time note to the right of the folder. “How long does the journey take?” she asked. “Approximately two hours, if the roads are clear.”",
+          "zh": "假期的第一个早晨，玛雅把地图摊在厨房桌上。护照放在桌面左侧的蓝色文件夹里，但这段旅程仍显得不够清楚。她提前保存了旅社地址，现在需要核对出发时间。“长途汽车九点出发，”哥哥指着车票说。玛雅把写有时间的黄色便签放到文件夹右侧。“这段旅程需要多久？”她问。“路上顺畅的话，大约两小时。”"
+        },
+        {
+          "en": "Her phone battery was nearly empty. Maya did not want to rely on it for every detail, so she copied the address onto the back of the note. Her brother offered to drive her to the stop, but she could also walk. They agreed to allow extra time. At the door, she checked the folder beside her bag. The note did not promise a perfect journey; it gave her a next step if the screen went dark.",
+          "zh": "手机电量快没了。玛雅不想每件事都依赖手机，于是把地址抄到便签背面。哥哥提出开车送她去站点，不过她也可以步行。他们商量好预留额外时间。在门口，她检查了包旁的文件夹。这张便签没有保证旅程十全十美；它给了她一个在屏幕熄灭时仍能执行的下一步。"
+        }
+      ],
+      "prompts": {
+        "S07.J01.P01": {
+          "function": "情境请求 · 主动召回",
+          "cue": "你明天出门。请哥哥帮你核对所乘车辆的出发时间。",
+          "acceptableAnswers": [
+            "可以帮我核对长途汽车的出发时间吗？",
+            "请帮我核对长途汽车几点出发。"
+          ],
+          "feedback": "询问自己所乘车辆何时离开；出发时刻和旅程时长是两项信息。"
+        },
+        "S07.J01.P02": {
+          "function": "情境请求 · 主动召回",
+          "cue": "你知道几点出发，但不知道整段旅程耗时。询问这个缺失信息。",
+          "acceptableAnswers": [
+            "这段旅程需要多久？",
+            "这次行程大概要多久？"
+          ],
+          "feedback": "问的是一段时长；只报几点钟无法回答这个问题。"
+        },
+        "S07.J01.P03": {
+          "function": "说明情况 · 主动召回",
+          "cue": "手机可能没电。说明你已提前准备什么，以及手机不能用时可以用什么。",
+          "acceptableAnswers": [
+            "我提前保存了地址。如果手机不能用了，我可以看纸上的地址。",
+            "我提前抄好了地址，所以手机不能用时可以看便签。"
+          ],
+          "feedback": "同时说出预先准备和备用行动，允许用自己的话表达相同方案。"
+        },
+        "S07.J01.T01": {
+          "function": "说明情况 · 换角色",
+          "cue": "来访朋友要坐火车到你所在的小镇，手机不能用了。告诉对方出发前要核对什么，并说明如何保留目的地地址。",
+          "acceptableAnswers": [
+            "核对出发时间，并提前把地址写在纸上。到达后可以看便签。",
+            "离开前先核对火车几点出发，提前抄下地址，这样就不需要手机。"
+          ],
+          "feedback": "现在是帮助另一位坐火车的旅客；换人物和交通服务，仍给出实际可用的备用方案。"
+        }
+      }
+    },
+    "S07.J02": {
+      "title": "车站外面的那条路",
+      "goal": "核对车辆目的地，澄清转向，并说明如何到达地点。",
+      "situation": "长途汽车停到车站旁时，玛雅走进十月细雨中。候车棚下，一块牌子写着有班车往返河畔旅社和学院。她用便签核对名称，再问：“这趟车去那家旅社吗？”司机点点头，接着指向时钟：下一班车三十分钟后出发。玛雅可以等待，也可以步行。她问车站工作人员怎样步行到旅社。\n\n工作人员在她的纸上画出路线。“沿着河边这条蜿蜒的路走，在有面包店的路口左转。蓝色门就在弯道之后。”玛雅用一根手指沿着线划过去。“我再确认一下：在面包店左转，再找蓝色门，对吗？”“没错。”趁雨还小，她决定走过去。她沿路拿着地图。转过弯后，蓝色门出现了，正好在纸上标出的地方。",
+      "paragraphs": [
+        {
+          "en": "When the coach stopped beside the station, Maya stepped into a thin October rain. Under the shelter, a sign offered a shuttle service to River Hostel and the college. She checked the name against her note before asking, “Does this service go to the hostel?” The driver nodded, then pointed at a clock: the next bus would leave in thirty minutes. Maya could wait or walk. She asked a station worker how to reach the hostel on foot.",
+          "zh": "长途汽车停到车站旁时，玛雅走进十月细雨中。候车棚下，一块牌子写着有班车往返河畔旅社和学院。她用便签核对名称，再问：“这趟车去那家旅社吗？”司机点点头，接着指向时钟：下一班车三十分钟后出发。玛雅可以等待，也可以步行。她问车站工作人员怎样步行到旅社。"
+        },
+        {
+          "en": "The worker drew a route on her paper. “Follow this winding road beside the river. Turn left at the junction by the bakery. The blue door is just after the bend.” Maya traced the line with one finger. “Just to check, do I turn left at the bakery, then look for the blue door?” “Exactly.” She decided to walk while the rain was light. She carried the map along the road. After the bend, the blue door appeared just where the paper had promised.",
+          "zh": "工作人员在她的纸上画出路线。“沿着河边这条蜿蜒的路走，在有面包店的路口左转。蓝色门就在弯道之后。”玛雅用一根手指沿着线划过去。“我再确认一下：在面包店左转，再找蓝色门，对吗？”“没错。”趁雨还小，她决定走过去。她沿路拿着地图。转过弯后，蓝色门出现了，正好在纸上标出的地方。"
+        }
+      ],
+      "prompts": {
+        "S07.J02.P01": {
+          "function": "情境请求 · 主动召回",
+          "cue": "你站在班车牌旁。询问这趟车是否去你要住的旅社。",
+          "acceptableAnswers": [
+            "这趟班车去旅社吗？",
+            "这趟车去河畔旅社吗？"
+          ],
+          "feedback": "说出目的地；只问什么时候出发，无法确认它去哪里。"
+        },
+        "S07.J02.P02": {
+          "function": "说明情况 · 主动召回",
+          "cue": "朋友在看你的地图。说明到了面包店路口该怎么转，再说明蓝色门在哪里。",
+          "acceptableAnswers": [
+            "在有面包店的路口左转，蓝色门就在弯道之后。",
+            "到了面包店路口左转，转过弯后找蓝色门。"
+          ],
+          "feedback": "按顺序给出转向和地标；仅说地名不等于交代路线。"
+        },
+        "S07.J02.P03": {
+          "function": "情境请求 · 主动召回",
+          "cue": "你不确定在面包店该往哪边转。向工作人员复述自己的理解，请对方确认。",
+          "acceptableAnswers": [
+            "我再确认一下，是在面包店左转吗？",
+            "可以确认一下，在有面包店的路口左转，对吗？"
+          ],
+          "feedback": "复述会改变路线的关键细节，留下对方能够直接回答的问题。"
+        },
+        "S07.J02.T01": {
+          "function": "说明情况 · 换角色",
+          "cue": "你在另一座车站工作。游客要去博物馆：在有咖啡馆的路口右转，入口在弯道之后。说明路线，并请对方确认自己记住了哪边转。",
+          "acceptableAnswers": [
+            "在有咖啡馆的路口右转。博物馆入口就在弯道之后。可以告诉我你准备往哪边转吗？",
+            "可以步行到博物馆。在咖啡馆路口右转，再到弯道后找入口。到了咖啡馆，你会往哪边转？"
+          ],
+          "feedback": "这次方向改成右转，你的身份是提供帮助的人；需要根据新路线调整表达。"
+        }
+      }
+    },
+    "S07.J03": {
+      "title": "蓝色门后面的房间",
+      "goal": "找到接待处，核对房间安排，并询问价格包含什么。",
+      "situation": "走进河畔旅社，暖空气慢慢带走玛雅外套上的雨意。接待处就在蓝色门右边。“我有一份以玛雅·陈姓名登记的预订，”她说。她和哥哥选了双人间。她请接待人员确认床铺安排：这间房是一张双人床。柜台中央的卡片还介绍了一种有独立起居室的套间，不过他们不需要多出的空间。\n\n接待人员给她看右侧的设施单：公共厨房、行李寄存和早餐。“房价包含早餐吗？”玛雅问。早餐另收费，厨房使用不收费。旅社紧邻车站，不过两栋建筑之间的围栏没有门，住客必须绕到蓝色门进入。玛雅核对地图，折好便签，明天还能找到车站。拿钥匙前，她问厨房在哪里，接待人员指向走廊里。",
+      "paragraphs": [
+        {
+          "en": "Inside River Hostel, warm air lifted the rain from Maya’s coat. Reception was to the right of the blue door. “I have a booking under Maya Chen,” she said. She and her brother had chosen a double room. She asked the assistant to confirm the bed arrangement: this room had one double bed. A card at the desk’s centre advertised a suite with a separate sitting room, but they did not need the extra space.",
+          "zh": "走进河畔旅社，暖空气慢慢带走玛雅外套上的雨意。接待处就在蓝色门右边。“我有一份以玛雅·陈姓名登记的预订，”她说。她和哥哥选了双人间。她请接待人员确认床铺安排：这间房是一张双人床。柜台中央的卡片还介绍了一种有独立起居室的套间，不过他们不需要多出的空间。"
+        },
+        {
+          "en": "The assistant showed her a list on the right: amenities included a shared kitchen, luggage storage and breakfast. “Is breakfast included in the price?” Maya asked. It cost extra; using the kitchen did not. The hostel was adjacent to the station, but the fence between them had no gate. Guests had to walk round to the blue door. Maya checked her map and folded the note. She could find the station again tomorrow. Before taking the key, she asked where the kitchen was, and the assistant pointed down the corridor.",
+          "zh": "接待人员给她看右侧的设施单：公共厨房、行李寄存和早餐。“房价包含早餐吗？”玛雅问。早餐另收费，厨房使用不收费。旅社紧邻车站，不过两栋建筑之间的围栏没有门，住客必须绕到蓝色门进入。玛雅核对地图，折好便签，明天还能找到车站。拿钥匙前，她问厨房在哪里，接待人员指向走廊里。"
+        }
+      ],
+      "prompts": {
+        "S07.J03.P01": {
+          "function": "说明预订姓名 · 主动召回",
+          "cue": "你到达前台。告诉接待人员，你有一份以自己姓名登记的预订。",
+          "acceptableAnswers": [
+            "我有一份以玛雅·陈姓名登记的预订。",
+            "我的预订登记姓名是玛雅·陈。"
+          ],
+          "feedback": "清楚给出预订姓名。自己练习时可换成预订记录上的真实姓名。"
+        },
+        "S07.J03.P02": {
+          "function": "情境请求 · 主动召回",
+          "cue": "你预订了两人住的房间，并且希望是一张双人床。请接待人员确认房型和床铺。",
+          "acceptableAnswers": [
+            "我们预订了双人间。可以确认是一张双人床吗？",
+            "可以核对一下我们的双人间预订，以及是否是一张双人床吗？"
+          ],
+          "feedback": "既核对房型名称，也核对实际床铺；不能假设所有两人房间的床铺相同。"
+        },
+        "S07.J03.P03": {
+          "function": "情境请求 · 主动召回",
+          "cue": "设施单上有早餐。询问它是否已经包含在房价中，还是需要另付费。",
+          "acceptableAnswers": [
+            "房价包含早餐吗？",
+            "房价包含早餐，还是需要另外付费？"
+          ],
+          "feedback": "设施单列出某项目，不代表已经包含费用；要同时问清项目与价格。"
+        },
+        "S07.J03.T01": {
+          "function": "情境请求 · 换角色",
+          "cue": "你是另一家旅社的接待人员。客人已订两人房间，现在说需要两张分开的床。请进一步核对床铺需求，并说明早餐另外收费。",
+          "acceptableAnswers": [
+            "可以确认一下，您需要两张分开的床，对吗？早餐不包含在房价中，需要另外付费。",
+            "您需要两张分开的床，对吗？房价不包含早餐。"
+          ],
+          "feedback": "先澄清新床铺需求，再决定如何安排；题目尚未说明这种房间是否有空，不要直接承诺。"
+        }
+      }
+    },
+    "S06.A01": {
+      "title": "为一次交谈找房间",
+      "goal": "预订房间并确认时间，再通知参加的人。",
+      "situation": "林夹着一本蓝色笔记本来到校园服务中心。小组需要一间安静的房间，与导师商讨问题。她翻开桌子左侧的预订册，问：“我们能预订周五上午的房间吗？”接待员查看记录。当天上午一个会议要使用大房间，但玻璃门后的小房间在午饭后有空。林能看到六把椅子围着桌子。\n\n她请接待员预订两点使用这间房，然后打电话给导师确定时间。导师两点半才能来，林便把预订时间也改成两点半。于是安排改变了：大家先吃午饭，再到小房间会面。林把最终时间写在电话旁的便条上。发消息之前，她把安排读给接待员核对。预订册上有房间还不够，参加的人也得能同时到场。",
+      "paragraphs": [
+        {
+          "en": "Lin arrived at the campus service centre with a blue notebook under her arm. Her group needed a quiet room for a consultation with their tutor. She opened the booking register on the left of the desk and asked, \"Could we book a room for Friday morning?\" The receptionist checked the page. A conference would fill the large room that morning, but a smaller room behind the glass door was free after lunch. Lin could see six chairs waiting around its table.",
+          "zh": "林夹着一本蓝色笔记本来到校园服务中心。小组需要一间安静的房间，与导师商讨问题。她翻开桌子左侧的预订册，问：“我们能预订周五上午的房间吗？”接待员查看记录。当天上午一个会议要使用大房间，但玻璃门后的小房间在午饭后有空。林能看到六把椅子围着桌子。"
+        },
+        {
+          "en": "She asked the receptionist to reserve it for two o'clock, then called the tutor to fix a time. The tutor could come at half past two. Lin changed the booking to match. This changed the arrangement: everyone would have lunch first and meet at the small room afterwards. Lin wrote the final time on a note beside the telephone. Before sending a message, she read it back to the receptionist. A room on the page was useful only if the people could arrive together.",
+          "zh": "她请接待员预订两点使用这间房，然后打电话给导师确定时间。导师两点半才能来，林便把预订时间也改成两点半。于是安排改变了：大家先吃午饭，再到小房间会面。林把最终时间写在电话旁的便条上。发消息之前，她把安排读给接待员核对。预订册上有房间还不够，参加的人也得能同时到场。"
+        }
+      ],
+      "prompts": {
+        "S06.A01.P01": {
+          "function": "提出请求",
+          "cue": "六个人需要在周五下午使用房间。向前台礼貌提出预订请求。",
+          "acceptableAnswers": [
+            "我们能预订周五下午的房间吗？",
+            "我们想预订一间周五下午供六个人使用的房间。"
+          ],
+          "feedback": "说清请求和日期或时段；其他礼貌表达也可接受。",
+          "checks": [
+            "提出预订请求",
+            "交代日期或时段"
+          ]
+        },
+        "S06.A01.P02": {
+          "function": "说明安排",
+          "cue": "前台问你为什么需要房间。说明要与导师商讨问题。",
+          "acceptableAnswers": [
+            "我们需要房间来与导师商讨。",
+            "我们将在房间里与导师商讨。"
+          ],
+          "feedback": "说明这是获得建议或商讨问题的会面，不把它说成全班上课。",
+          "checks": [
+            "交代会面目的",
+            "交代会面对象"
+          ]
+        },
+        "S06.A01.P03": {
+          "function": "说明安排",
+          "cue": "房间午饭后有空，导师两点半才能来。通知小组前，你需要先确定什么？",
+          "acceptableAnswers": [
+            "我们需要确定时间，核对安排后再通知小组。",
+            "先与导师确定时间，再与前台确认安排。"
+          ],
+          "feedback": "用表示确定时间的动词；安排要同时照顾房间和参加的人。",
+          "checks": [
+            "先确定时间",
+            "核对整体安排"
+          ]
+        },
+        "S06.A01.T01": {
+          "function": "提出请求",
+          "cue": "换到社区中心：邻居们周六晚上要讨论共同花园。请求一间小房间并说明用途。",
+          "acceptableAnswers": [
+            "我们能预订周六晚的小房间吗？我们需要讨论共同花园的事情。",
+            "我们想预订周六晚的房间，用来讨论共同花园的事情。"
+          ],
+          "feedback": "请求要符合新地点，并说明用途；讨论花园的其他自然表达也可接受。",
+          "checks": [
+            "交代新时间与地点需要",
+            "说明用途"
+          ]
+        }
+      }
+    },
+    "S06.A02": {
+      "title": "无人认领的信封",
+      "goal": "说清谁会完成任务，并留下明确的交接安排。",
+      "situation": "周一，林开始在同一个服务中心工作。门旁的员工板列着两个轮班时段，上午与下午各写着不同名字。两位同事向她招手。桌子正中放着一个棕色信封，里面是周五房间预订的表格。上午的接待员已核对日期，却还没有打电话通知小组。每个人都以为别人会做。林看看信封，又看看轮班表，明白一个小任务如何会落在两段工作时间的空隙里。\n\n今天，联系来访者属于她的职责。她说：“我会负责打电话通知小组。”一位同事把她的名字写在信封右侧的卡片上。林补写了已经完成的事项和待办事项。随后，她在午饭前打完电话，并标记为已完成。信封留在原位供下午的团队查看，但现在它有了明确的负责人和下一步。",
+      "paragraphs": [
+        {
+          "en": "On Monday, Lin began work at the same service centre. The staff board beside the doorway showed two shifts, with different names under morning and afternoon. Two colleagues waved her over. A brown envelope lay in the middle of the desk, holding forms for Friday's room booking. The morning receptionist had checked the date but had not called the group. Everyone thought someone else would do it. Lin looked from the envelope to the board and saw how a small task could fall between two working periods.",
+          "zh": "周一，林开始在同一个服务中心工作。门旁的员工板列着两个轮班时段，上午与下午各写着不同名字。两位同事向她招手。桌子正中放着一个棕色信封，里面是周五房间预订的表格。上午的接待员已核对日期，却还没有打电话通知小组。每个人都以为别人会做。林看看信封，又看看轮班表，明白一个小任务如何会落在两段工作时间的空隙里。"
+        },
+        {
+          "en": "Her duty today was to call visitors. She said, \"I will take responsibility for calling the group.\" One colleague wrote her name on a card to the right of the envelope. Lin added what was finished and what still needed doing. Then she made the call before lunch and marked it complete. The envelope stayed in the same place for the afternoon team, but now it carried a name and a clear next step.",
+          "zh": "今天，联系来访者属于她的职责。她说：“我会负责打电话通知小组。”一位同事把她的名字写在信封右侧的卡片上。林补写了已经完成的事项和待办事项。随后，她在午饭前打完电话，并标记为已完成。信封留在原位供下午的团队查看，但现在它有了明确的负责人和下一步。"
+        }
+      ],
+      "prompts": {
+        "S06.A02.P01": {
+          "function": "说明安排",
+          "cue": "来访者问你今天为何负责打电话。说明这是你今天工作职责的一部分。",
+          "acceptableAnswers": [
+            "今天我的职责是联系来访者。",
+            "我今天的职责是联系来访者。"
+          ],
+          "feedback": "把具体任务与工作职责联系起来。",
+          "checks": [
+            "说清任务",
+            "说明它属于职责"
+          ]
+        },
+        "S06.A02.P02": {
+          "function": "说明安排",
+          "cue": "来电的人要找前台接待来访者的人核对预订。告诉他应找谁。",
+          "acceptableAnswers": [
+            "接待员可以帮你核对房间预订。",
+            "请向接待员询问预订情况。"
+          ],
+          "feedback": "用前台接待人员的职位名称。",
+          "checks": [
+            "指出正确职位",
+            "说明可提供的帮助"
+          ]
+        },
+        "S06.A02.P03": {
+          "function": "说明安排",
+          "cue": "同事们不确定谁会打电话通知小组。告诉他们这件事由你负责。",
+          "acceptableAnswers": [
+            "我会负责打电话通知小组。",
+            "我会负责打电话通知小组。请告诉其他同事。"
+          ],
+          "feedback": "说清负责人和任务；for 后用 calling 表示动作。",
+          "checks": [
+            "说清自己负责",
+            "把任务交代给同事"
+          ]
+        },
+        "S06.A02.T01": {
+          "function": "说明安排",
+          "cue": "换到志愿活动：还没人收好椅子。告诉团队，你会在来访者到达前负责这件事。",
+          "acceptableAnswers": [
+            "我会负责收好椅子，并在来访者到达前完成。",
+            "我可以负责收好椅子。我会在来访者到达前完成。"
+          ],
+          "feedback": "说清新任务与完成时间；这个结构也可以用于志愿活动。",
+          "checks": [
+            "说明负责的新任务",
+            "交代完成时间"
+          ]
+        }
+      }
+    },
+    "S05.D01": {
+      "title": "同一个周五的两个约定",
+      "goal": "说明时间冲突并请求新的日期，不把请求当成已经获准。",
+      "situation": "周二晚，林把作业放在书桌左侧的日期卡旁。到期日是周五，正好也是房间会面的日子。导师要求她就小组计划写一篇短文，但她还需要与两个人交谈才能完成。她又答应过要在服务中心帮忙。她在卡片上画了两条线，意识到若每个约定都保持不变，时间就不够了。\n\n作业是她的优先事项，所以她在截止期限前写信给导师。她说明时间冲突，问：“能让我到周一再完成吗？”她可以改变自己的工作计划，但只有导师能批准延后提交。回复出现在右侧屏幕上：小组会面可以推迟到周二，短文仍须周五交。林移动了会面的卡片，并通知服务中心更新房间预订。她感谢导师，又回到尚未完成的稿纸前。",
+      "paragraphs": [
+        {
+          "en": "On Tuesday evening, Lin laid her assignment beside a date card on the left of her desk. The due date was Friday, the same day as the room meeting. Her tutor had asked for some writing about the group's plan. Lin needed to speak to two people before she could finish it. She had promised to help at the service centre. She drew two lines on the card and realised that keeping every promise unchanged would leave too little time.",
+          "zh": "周二晚，林把作业放在书桌左侧的日期卡旁。到期日是周五，正好也是房间会面的日子。导师要求她就小组计划写一篇短文，但她还需要与两个人交谈才能完成。她又答应过要在服务中心帮忙。她在卡片上画了两条线，意识到若每个约定都保持不变，时间就不够了。"
+        },
+        {
+          "en": "The assignment was her priority, so she wrote to her tutor before the deadline. She explained the clash and asked, \"Could I have until Monday to finish?\" She could alter her work plan, but only the tutor could approve a later submission. The reply arrived on the screen to her right: they could postpone the group meeting until Tuesday, while the writing was still due on Friday. Lin moved the meeting card and updated the room booking. She thanked the tutor and returned to her unfinished page.",
+          "zh": "作业是她的优先事项，所以她在截止期限前写信给导师。她说明时间冲突，问：“能让我到周一再完成吗？”她可以改变自己的工作计划，但只有导师能批准延后提交。回复出现在右侧屏幕上：小组会面可以推迟到周二，短文仍须周五交。林移动了会面的卡片，并通知服务中心更新房间预订。她感谢导师，又回到尚未完成的稿纸前。"
+        }
+      ],
+      "prompts": {
+        "S05.D01.P01": {
+          "function": "说明安排",
+          "cue": "你周五前要完成写作任务。说明还要完成什么，以及什么应优先处理。",
+          "acceptableAnswers": [
+            "完成作业是我的优先事项。",
+            "作业是我的优先事项，我需要在周五前完成。"
+          ],
+          "feedback": "指出任务，并说明你会优先做什么。",
+          "checks": [
+            "指出待完成任务",
+            "说明优先顺序"
+          ]
+        },
+        "S05.D01.P02": {
+          "function": "提出请求",
+          "cue": "你无法在周五前写完。向教师请求是否可以到周一再完成。",
+          "acceptableAnswers": [
+            "能让我到周一再完成作业吗？",
+            "请问能让我到周一再完成写作吗？"
+          ],
+          "feedback": "提出请求并给出明确新日期；对方同意前，不能算已获准。",
+          "checks": [
+            "礼貌提出请求",
+            "给出希望的新日期"
+          ]
+        },
+        "S05.D01.P03": {
+          "function": "说明安排",
+          "cue": "教师要求写作仍在周五交，但会面可以移到周二。说明什么可以推迟，什么期限不变。",
+          "acceptableAnswers": [
+            "我们可以把会面推迟到周二，但作业截止期限仍是周五。",
+            "作业截止期限还是周五。我们会把会面推迟到周二。"
+          ],
+          "feedback": "分清两个日期；回复改变的是会面，不是交作业的日期。",
+          "checks": [
+            "交代会面的新时间",
+            "保留作业原期限"
+          ]
+        },
+        "S05.D01.T01": {
+          "function": "提出请求",
+          "cue": "换到社区简报：原定周日交稿，但你还差一次采访。向编辑请求是否可以到周二再完成。",
+          "acceptableAnswers": [
+            "能让我到周二再完成简报吗？我还需要一次采访。",
+            "请问能让我到周二再完成吗？我还差一次采访。"
+          ],
+          "feedback": "在新角色中提出请求并说明理由；编辑可能拒绝或提出其他安排。",
+          "checks": [
+            "提出新期限",
+            "说明未完成的原因"
+          ]
+        }
+      }
+    },
     "S05.C01": {
       "title": "比房间更大的承诺",
       "goal": "区分工作坊的宣传承诺与可观察的动作，并改写一项承诺。",

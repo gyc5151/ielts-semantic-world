@@ -1,7 +1,7 @@
 {
   "sceneId": "WORLD",
   "title": "IELTS Semantic World",
-  "version": "pilot-9-0",
+  "version": "pilot-10-0",
   "dictionaryFile": "./data/wordnet-s01.json",
   "dictionaryContextFile": "./data/s01-dictionary-context.json",
   "dictionaryTranslationFile": "./data/wordnet-translations-s01.json",
@@ -28,6 +28,12 @@
     "./data/s11-a02.json",
     "./data/s03-g01.json",
     "./data/s03-g02.json",
+    "./data/s07-j01.json",
+    "./data/s07-j02.json",
+    "./data/s07-j03.json",
+    "./data/s06-a01.json",
+    "./data/s06-a02.json",
+    "./data/s05-d01.json",
     "./data/s05-c01.json",
     "./data/s05-c02.json"
   ],
@@ -191,6 +197,58 @@
       ]
     },
     {
+      "id": "station-stay",
+      "title": "车站后的房间",
+      "subtitle": "A room after the journey",
+      "theme": "travel",
+      "kind": "出行与住宿支线",
+      "description": "从出发前的一张时间便签到站外路线，再到接待台核对房间。每次只解决一个旅行中的真实问题。",
+      "entry": "租房街口 → 出发准备桌 → 抵达车站后的出口",
+      "returnLabel": "带上核对好的房间与路线，回到租房街口",
+      "route": [
+        "出发准备桌的护照夹",
+        "桌边的时刻便签",
+        "门口的行李袋",
+        "车站出口的班车牌",
+        "路口的手绘地图",
+        "弯道尽头的旅社门牌",
+        "接待台的预订记录",
+        "房型说明卡",
+        "厨房门旁的设施单"
+      ],
+      "sceneIds": [
+        "S07.J01",
+        "S07.J02",
+        "S07.J03"
+      ]
+    },
+    {
+      "id": "work-study",
+      "title": "改动的约定",
+      "subtitle": "Before the deadline",
+      "theme": "campus",
+      "kind": "工作与学习支线",
+      "description": "沿前台预订册、交接信封和书桌上的日期卡，练习约时间、说清职责，以及在冲突发生时提出可执行的新安排。",
+      "entry": "校园服务中心前台左侧 · 蓝色预订册",
+      "returnLabel": "回到前台左侧的蓝色预订册",
+      "route": [
+        "蓝色预订册",
+        "玻璃后的会议室",
+        "写好时间的便条",
+        "轮班表",
+        "待办交接信封",
+        "签名责任卡",
+        "作业说明页",
+        "标了日期的卡片",
+        "导师回复"
+      ],
+      "sceneIds": [
+        "S06.A01",
+        "S06.A02",
+        "S05.D01"
+      ]
+    },
+    {
       "id": "workshop-leaflet",
       "title": "传单背后的工作坊",
       "subtitle": "What a short workshop can offer",
@@ -220,7 +278,8 @@
   "dictionaryContextFiles": [
     "./data/s01-dictionary-context.json",
     "./data/branch-dictionary-context.json",
-    "./data/branch-v8-dictionary-context.json"
+    "./data/branch-v8-dictionary-context.json",
+    "./data/branch-v10-dictionary-context.json"
   ],
   "uiWordsFile": "./data/world-ui-words.json",
   "learningUnitsFile": "./data/learning-units.json",

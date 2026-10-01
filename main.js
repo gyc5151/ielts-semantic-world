@@ -1,7 +1,7 @@
-import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-9-0";
-import { nextReview, reviewDue } from "./learning.mjs?v=pilot-9-0";
-import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-9-0";
-import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-9-0";
+import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-10-0";
+import { nextReview, reviewDue } from "./learning.mjs?v=pilot-10-0";
+import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-10-0";
+import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-10-0";
 const DATA_URL = "./data/world.json";
 const STORAGE_KEY = "ielts-semantic-world-s01-trial-v1";
 
@@ -14,6 +14,8 @@ let content;
 let contentReady = false;
 let worldQuery = "";
 let worldCategory = "all";
+let unitQuery = "";
+let unitScope = "all";
 let activeBranchId = "housing";
 let wordnet = null;
 let dictionaryContext = {};
@@ -207,6 +209,7 @@ function themeIllustration(theme) {
     community: '<rect x="25" y="18" width="116" height="90" rx="4"/><path d="M42 37h62M42 50h82M42 72h38m-38 13h48m3-17 20 12-20 12"/><circle cx="181" cy="56" r="29"/><path d="M181 38v20l16 9M162 100h39"/>',
     science: '<path d="M47 17h36m-28 0v34l-29 47q-4 10 7 10h64q11 0 7-10L75 51V17M41 81h47M145 33h49m-41 0v55q16 38 33 0V33M153 69h33M124 108h91"/><path d="m119 19 14 11 18-15"/>',
     urban: '<path d="M25 22h180v82H25zM25 48h180M25 78h180M66 22v82M147 22v82"/><path d="M85 58h43v11H85M104 84v19M52 29v10m113 22v12"/><circle cx="177" cy="35" r="7"/>',
+    travel: '<rect x="27" y="19" width="99" height="79" rx="12"/><path d="M40 38h73v28H40zM45 98l-9 14m73-14 9 14M49 111h54M62 19v-7h30v7"/><circle cx="46" cy="81" r="4"/><circle cx="107" cy="81" r="4"/><rect x="154" y="54" width="50" height="53" rx="5"/><path d="M169 54V42h20v12M168 66v29m22-29v29M153 26h50m-9-7 9 7-9 7"/>',
     campus: '<path d="M36 14h103l22 21v77H36zM139 14v21h22M52 48h86M52 64h70M52 82h39M52 94h77"/><path d="m181 92 24-59-9-4-24 59-1 16zM181 92l-9-4M67 21l13 5"/>',
     nature: '<path d="M22 92q45-18 89 0t89 0M22 107q45-18 89 0t89 0M44 78V46m0 15L30 47m14 8 14-20M168 76V31m0 22 16-15m-16 21-16-18M79 36q9-12 18 0 9-12 18 0M111 57q9-12 18 0 9-12 18 0"/><circle cx="188" cy="20" r="9"/>'
   };
@@ -217,7 +220,7 @@ function renderHome() {
   app.innerHTML = `
     <section class="hero world-hero"><div class="eyebrow">IELTS SEMANTIC WORLD / SITUATION → LANGUAGE</div>
       <h1>每扇侧门，<br/><em>都有一件想说的事。</em></h1>
-      <p>从找房主线出发，也可以走进公告板、实验室或湿地。沿着物件经历一件事，再合上故事，用自己的英语说出来。</p>
+      <p>从找房、改约和出行的决定出发，也可以走进公告板、实验室或湿地。沿着物件经历一件事，再合上故事，用自己的英语说出来。</p>
       <div class="hero-actions"><button class="primary-btn" type="button" id="startFirst">继续找房主线</button><button class="secondary-btn" type="button" id="openReview">查看到期复习</button><button class="secondary-btn" type="button" id="openUnits">查看表达记录</button></div>
       <div class="world-stats"><span>${content.branches.length} 条路线</span><span>${content.microScenes.length} 个短场景</span><span>${allPrompts().length} 个表达任务</span></div>
     </section>
@@ -253,7 +256,7 @@ function renderHome() {
 }
 
 function filterRoutes() {
-  const groups = { home: 'life', community: 'public', urban: 'public', science: 'study', campus: 'study', nature: 'nature' };
+  const groups = { home: 'life', community: 'public', urban: 'public', science: 'study', campus: 'study', nature: 'nature', travel: 'life' };
   const query = worldQuery.trim().toLocaleLowerCase();
   let visible = 0;
   for (const card of app.querySelectorAll('[data-branch-card]')) {
@@ -951,12 +954,20 @@ function bindFeedback(scene, prompt, attempt) {
 }
 function renderUnits() {
   const summaries = learningUnits.map((u) => ({ unit: u, summary: unitSummary(practice, u.id) }));
+  const registeredScenes = new Set(learningUnits.flatMap((u) => u.sceneIds));
+  const registeredBranches = content.branches.filter((b) => b.sceneIds.some((id) => registeredScenes.has(id)));
   const observed = summaries.filter(({ summary }) => summary.observations.some((o) => o.status !== "unobserved")).length;
-  app.innerHTML = `<section class="simple-page"><div class="eyebrow">SITUATION → EXPRESSION</div><h1>表达记录</h1><p class="lead">首批 ${learningUnits.length} 个具体词义、搭配和构式，覆盖住房需求与联系房源。${observed} 项有自评观察；旧题目成绩不转换为词汇掌握。其他课程仍使用任务记录。</p><p>“未观察”表示没有对应证据。听辨自评、文字召回、口头召回和换境表现分别查看；出现次数不能直接证明熟练程度。</p><div class="unit-progress-list">${summaries.map(({ unit: u, summary: v }) => {
+  app.innerHTML = `<section class="simple-page"><div class="eyebrow">SITUATION → EXPRESSION</div><h1>表达记录</h1><p class="lead">当前登记 ${learningUnits.length} 个具体词义、搭配和构式，覆盖 ${registeredScenes.size} 节课程。${observed} 项有自评观察；旧题目成绩不转换为词汇掌握。尚未登记单位的课程保留任务记录。</p><p>“未观察”表示没有对应证据。听辨自评、文字召回、口头召回和换境表现分别查看；出现次数不能直接证明熟练程度。</p><section class="unit-tools" aria-label="筛选表达记录"><label for="unitSearch">找一个表达或意图</label><input id="unitSearch" type="search" placeholder="例如：延期、预约、passport…" autocomplete="off"/><label for="unitRoute">学习路线</label><select id="unitRoute"><option value="all">所有已登记路线</option>${registeredBranches.map((b) => `<option value="${escapeHtml(b.id)}">${escapeHtml(b.title)}</option>`).join("")}</select><p id="unitResultCount" role="status"></p></section><div class="unit-progress-list">${summaries.map(({ unit: u, summary: v }) => {
     const recalled = v.observations.filter((o) => o.dimension === "recall" && o.status === "independent" && o.support === "none");
     const transferred = v.observations.filter((o) => o.dimension === "transfer" && o.status === "independent" && o.support === "none");
-    return `<article><h2>${annotatedEnglish(u.form, getScene(u.sceneIds[0]))}</h2><p>${escapeHtml(u.meaningZh)}</p><dl><div><dt>文字独立调用</dt><dd>${recalled.filter((o) => o.modality === "written").length || "未观察"}</dd></div><div><dt>口头独立调用</dt><dd>${recalled.filter((o) => o.modality === "spoken").length || "未观察"}</dd></div><div><dt>独立换境</dt><dd>${transferred.length || "未观察"}</dd></div><div><dt>句中听辨自评</dt><dd>${v.listening ? escapeHtml({ independent: "自评：原先听懂", assisted: "自评：对照后理解", partial: "自评：还需练习" }[v.listening.status]) : "未观察"}</dd></div></dl><small>${v.latest ? `最近记录：${escapeHtml(EVIDENCE_LABELS[v.latest.status])} · ${dateLabel(v.latest.at)}` : "尚无调用记录"}</small><button class="text-btn" type="button" data-unit-scene="${escapeHtml(u.sceneIds[0])}">回到学习场景 ↗</button></article>`;
+    return `<article data-unit-card="${escapeHtml(u.id)}"><h2>${annotatedEnglish(u.form, getScene(u.sceneIds[0]))}</h2><p>${escapeHtml(u.meaningZh)}</p><dl><div><dt>文字独立调用</dt><dd>${recalled.filter((o) => o.modality === "written").length || "未观察"}</dd></div><div><dt>口头独立调用</dt><dd>${recalled.filter((o) => o.modality === "spoken").length || "未观察"}</dd></div><div><dt>独立换境</dt><dd>${transferred.length || "未观察"}</dd></div><div><dt>句中听辨自评</dt><dd>${v.listening ? escapeHtml({ independent: "自评：原先听懂", assisted: "自评：对照后理解", partial: "自评：还需练习" }[v.listening.status]) : "未观察"}</dd></div></dl><small>${v.latest ? `最近记录：${escapeHtml(EVIDENCE_LABELS[v.latest.status])} · ${dateLabel(v.latest.at)}` : "尚无调用记录"}</small><button class="text-btn" type="button" data-unit-scene="${escapeHtml(u.sceneIds[0])}">回到学习场景 ↗</button></article>`;
   }).join("")}</div></section>`;
+  if (!registeredBranches.some((b) => b.id === unitScope)) unitScope = "all";
+  app.querySelector("#unitSearch").value = unitQuery;
+  app.querySelector("#unitRoute").value = unitScope;
+  app.querySelector("#unitSearch").addEventListener("input", (event) => { unitQuery = event.target.value; filterUnitRecords(); });
+  app.querySelector("#unitRoute").addEventListener("change", (event) => { unitScope = event.target.value; filterUnitRecords(); });
+  filterUnitRecords();
   app.querySelectorAll("[data-unit-scene]").forEach((b) => b.addEventListener("click", () => navigate("scene", b.dataset.unitScene)));
 }
 function mountListening(scene) {
@@ -1023,4 +1034,17 @@ function clearSessionRecordings() {
   app.querySelectorAll("audio").forEach((audio) => audio.pause());
   for (const url of sessionRecordings.values()) URL.revokeObjectURL(url);
   sessionRecordings.clear();
+}
+
+function filterUnitRecords() {
+  const query = unitQuery.trim().toLocaleLowerCase();
+  let visible = 0;
+  for (const card of app.querySelectorAll('[data-unit-card]')) {
+    const unit = learningUnits.find((u) => u.id === card.dataset.unitCard);
+    const inRoute = unitScope === 'all' || unit.sceneIds.some((id) => branchForScene(getScene(id))?.id === unitScope);
+    const match = inRoute && (!query || [unit.form, unit.meaningZh, unit.sense].join(' ').toLocaleLowerCase().includes(query));
+    card.hidden = !match;
+    if (match) visible += 1;
+  }
+  app.querySelector('#unitResultCount').textContent = `显示 ${visible} / ${learningUnits.length} 个登记单位${visible ? '' : '；可清空搜索或切换到所有路线。'}`;
 }

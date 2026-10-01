@@ -1953,3 +1953,8 @@ ul.review-list {
   .topbar-actions { flex-wrap: wrap; }
 }
 .feedback-recording { width: 100%; margin: .8rem 0; }
+.unit-tools { display: grid; grid-template-columns: auto minmax(150px, 1fr); gap: .75rem 1rem; padding: 1.2rem; margin: 1.5rem 0; border: 1px solid var(--line); border-radius: 14px; background: var(--paper); align-items: center; }
+.unit-tools input, .unit-tools select { width: 100%; min-width: 0; padding: .7rem; font: inherit; border: 1px solid var(--line); border-radius: 8px; background: var(--canvas); color: var(--ink); }
+.unit-tools p { grid-column: 1 / -1; margin: 0; font-size: .85rem; color: var(--muted); }
+.unit-progress-list article[hidden] { display: none; }
+@media (max-width: 640px) { .unit-tools { grid-template-columns: 1fr; } }

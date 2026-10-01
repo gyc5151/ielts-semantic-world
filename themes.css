@@ -186,3 +186,19 @@ html[data-theme="nature"] .memory-station { border-bottom: 3px solid #b6c7a4; }
 .recognition-note { margin: 1.25rem 0; padding: 1rem 1.2rem; border-left: 3px solid var(--theme-accent); background: var(--theme-soft); }
 .recognition-note p { margin: .6rem 0; }
 .recognition-note small { line-height: 1.7; }
+
+/* Travel lessons use station signage, a ticket edge and route arrows. */
+[data-theme="travel"] {
+  --canvas: #eef3f4; --paper: #fffefa; --paper-warm: #e3eceb;
+  --ink: #223e47; --muted: #587079; --line: #cbd9dc;
+  --teal: #226477; --teal-deep: #164b5c; --teal-pale: #e0edf1;
+  --side-bg: #243f49; --side-mark: #3d6471;
+  --hero-start: #fff9e9; --hero-end: #e0ecef; --theme-accent: #226477;
+}
+.branch-card[data-theme="travel"] .branch-art { background: #e3eceb; color: #226477; }
+[data-theme="travel"] .story-card { border-top: 5px solid #d59a40; }
+[data-theme="travel"] .object-route li { border-style: dashed; background: #fffdf5; }
+[data-theme="travel"] .memory-station { border-left: 4px solid #d59a40; }
+[data-branch="work-study"] .story-card { border-top: 5px solid #746899; }
+[data-branch="work-study"] .object-route li { border-radius: 5px; box-shadow: 0 3px 0 rgba(70, 53, 105, .08); }
+[data-branch="work-study"] .memory-station { border-left: 4px solid #746899; }

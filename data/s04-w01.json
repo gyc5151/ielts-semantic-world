@@ -30,7 +30,7 @@
   "provenance": {
     "type": "Researcher inference",
     "adaptedFrom": "IELTS_记忆宫殿_S04水质实验支线施工稿_V1.md",
-    "note": "从项目既有支线改编为短课；人物、情节、题目与译解为原创。不是官方IELTS材料。"
+    "note": "依据项目场景规划编写短课；人物、情节、题目与译解为原创。不是官方IELTS材料。"
   },
   "terms": [
     {
@@ -194,5 +194,6 @@
       "samples",
       "apparatus"
     ]
-  }
+  },
+  "learningUnitIds": []
 }

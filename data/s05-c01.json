@@ -30,7 +30,7 @@
   "provenance": {
     "type": "Researcher inference",
     "adaptedFrom": "IELTS_记忆宫殿_S01-S03与S05_基础词英文支线_V1.md · S05-C",
-    "note": "从项目既有支线改编为短课；人物、情节、题目与译解为原创。不是官方IELTS材料。"
+    "note": "依据项目场景规划编写短课；人物、情节、题目与译解为原创。不是官方IELTS材料。"
   },
   "terms": [
     {
@@ -154,5 +154,6 @@
       "motor skills",
       "if guidance is available"
     ]
-  }
+  },
+  "learningUnitIds": []
 }

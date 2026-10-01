@@ -37,7 +37,7 @@
   "provenance": {
     "type": "Researcher inference",
     "adaptedFrom": "IELTS_记忆宫殿_S09-S11_英文支线_V1.md · S11-A",
-    "note": "从项目既有支线改编为短课；人物、情节、题目与译解为原创。不是官方IELTS材料。"
+    "note": "依据项目场景规划编写短课；人物、情节、题目与译解为原创。不是官方IELTS材料。"
   },
   "terms": [
     {
@@ -202,5 +202,6 @@
     "feedback": "Change the purpose and location of use. Leave the person a real choice.",
     "activity": "request",
     "targetTerms": []
-  }
+  },
+  "learningUnitIds": []
 }

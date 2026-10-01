@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "version": "pilot-9-0",
-  "scope": "S01.M01–M02 editorial pilot; not total seed coverage or learner mastery",
+  "version": "pilot-10-0",
+  "scope": "Editorial learning units for listed sceneIds; not entire seed vocabulary or learner mastery",
   "units": [
     {
       "id": "U.HOUSING.RUSH_HOUR",
@@ -644,6 +644,1468 @@
       "evidenceLabel": "Researcher inference · productive construction from existing practice",
       "reviewStatus": "project-reviewed",
       "unitVersion": "pilot-9-0"
+    },
+    {
+      "id": "U.STATION_STAY.J01.DEPARTURE",
+      "form": "departure",
+      "type": "word",
+      "meaningZh": "出发；离开",
+      "sense": "名词，指交通服务离开的时间或行为。",
+      "tier": "core",
+      "example": "I checked the departure time before leaving home.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "sourceTerm": "departure",
+      "reviewStatus": "project-reviewed",
+      "sceneIds": [
+        "S07.J01"
+      ],
+      "glossaryIds": [
+        "S07.J01.G01"
+      ],
+      "sourceRecords": [
+        {
+          "term": "departure",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 541; 雅思 PRO 班级词汇表 p.9 U4 [Reading]",
+          "canonicalTerm": "departure",
+          "originalContext": "雅思 PRO 班级词汇表 | Reading | n. | 离开，离去 | Please check the departure time of your flight carefully."
+        }
+      ],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.STATION_STAY.J01.IN_ADVANCE",
+      "form": "in advance",
+      "type": "chunk",
+      "meaningZh": "提前",
+      "sense": "在某件事发生之前；本课指预先保存旅行信息。",
+      "tier": "core",
+      "example": "I saved the address in advance.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "sourceTerm": "in advance",
+      "reviewStatus": "project-reviewed",
+      "sceneIds": [
+        "S07.J01"
+      ],
+      "glossaryIds": [
+        "S07.J01.G02"
+      ],
+      "sourceRecords": [
+        {
+          "term": "in advance",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 979; 雅思 PRO 班级词汇表 p.2 U1 [Reading]",
+          "canonicalTerm": "in advance",
+          "originalContext": "雅思 PRO 班级词汇表 | Reading | 提前 | It's advisable to book accommodation well in advance, especially during peak season."
+        }
+      ],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.STATION_STAY.J01.APPROXIMATELY",
+      "form": "approximately",
+      "type": "word",
+      "meaningZh": "大约",
+      "sense": "副词，说明数值接近估计值，不承诺精确到达。",
+      "tier": "support",
+      "example": "The journey takes approximately two hours.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "sourceTerm": "approximately",
+      "reviewStatus": "project-reviewed",
+      "sceneIds": [
+        "S07.J01"
+      ],
+      "glossaryIds": [
+        "S07.J01.G03"
+      ],
+      "sourceRecords": [
+        {
+          "term": "approximately",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 138; 大全直 PRO 听力预习词表 p.11 U5 [Listening] | 雅思 PRO 班级词汇表 p.5 U2 [Writing]",
+          "canonicalTerm": "approximately",
+          "originalContext": "大全直 PRO 听力预习词表 | Listening | adv. | 大约 | used to show that something is almost, but not completely, accurate || 雅思 PRO 班级词汇表 | Writing | adv. | 大约 | The journey from London to Manchester will take approximately two and a half hours."
+        }
+      ],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.STATION_STAY.J01.PASSPORT",
+      "form": "passport",
+      "type": "word",
+      "meaningZh": "护照",
+      "sense": "旅行身份证件；课文人物把它放好，不暗示所有国内旅程均需护照。",
+      "tier": "support",
+      "example": "Her passport was in the blue folder.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "sourceTerm": "passport",
+      "reviewStatus": "project-reviewed",
+      "sceneIds": [
+        "S07.J01"
+      ],
+      "glossaryIds": [
+        "S07.J01.G04"
+      ],
+      "sourceRecords": [
+        {
+          "term": "passport",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 1372; 大全直 PRO 听力预习词表 p.4 U2 [Listening]",
+          "canonicalTerm": "passport",
+          "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 护照"
+        }
+      ],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.STATION_STAY.J01.RELY_ON",
+      "form": "rely on",
+      "type": "chunk",
+      "meaningZh": "依赖；依靠",
+      "sense": "依靠某人或事物完成事情；这里指依赖手机获得信息。",
+      "tier": "support",
+      "example": "I do not want to rely on my phone for every detail.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "sourceTerm": "rely on",
+      "reviewStatus": "project-reviewed",
+      "sceneIds": [
+        "S07.J01"
+      ],
+      "glossaryIds": [
+        "S07.J01.G05"
+      ],
+      "sourceRecords": [
+        {
+          "term": "rely on",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 1610; 雅思 PRO 班级词汇表 p.20 U8 [Writing]",
+          "canonicalTerm": "rely on",
+          "originalContext": "雅思 PRO 班级词汇表 | Writing | 依赖 | Many people rely on public transport to get to work."
+        }
+      ],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.STATION_STAY.J01.VACATION",
+      "form": "vacation",
+      "type": "word",
+      "meaningZh": "假期",
+      "sense": "休假或度假时段；本课是人物在假期中的短途行程，不加入 vocation 的职业义。",
+      "tier": "recognition",
+      "example": "Maya planned a short trip during her vacation.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "sourceTerm": "vacation",
+      "reviewStatus": "project-reviewed",
+      "sceneIds": [
+        "S07.J01"
+      ],
+      "glossaryIds": [
+        "S07.J01.G06"
+      ],
+      "sourceRecords": [
+        {
+          "term": "vacation",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 2019; 雅思一万词汇班 p.12 [Scientific research 科研类]",
+          "canonicalTerm": "vacation",
+          "originalContext": "雅思一万词汇班 | Scientific research 科研类 | n. | vacation n. 假期 vocation n. 职业；天职 vocational a. 职业的"
+        }
+      ],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.STATION_STAY.J01.CHECK_TIME",
+      "form": "check the departure time",
+      "type": "chunk",
+      "meaningZh": "核对出发时间",
+      "sense": "查清所乘服务何时离开；不是仅查看预计到达时间。",
+      "tier": "core",
+      "example": "Could you check the departure time for me?",
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sceneIds": [
+        "S07.J01"
+      ],
+      "glossaryIds": [
+        "S07.J01.G07"
+      ],
+      "sourceRecords": [],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.STATION_STAY.J01.HOW_LONG",
+      "form": "How long does the journey take?",
+      "type": "construction",
+      "meaningZh": "这段旅程需要多久？",
+      "sense": "用 how long 问时长；回答可用 takes + 时长。",
+      "tier": "core",
+      "example": "How long does the journey take?",
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sceneIds": [
+        "S07.J01"
+      ],
+      "glossaryIds": [
+        "S07.J01.G08"
+      ],
+      "sourceRecords": [],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.STATION_STAY.J01.ALLOW_EXTRA",
+      "form": "allow extra time",
+      "type": "chunk",
+      "meaningZh": "预留额外时间",
+      "sense": "为步行、排队或变化留出时间；所需时长随真实行程而变。",
+      "tier": "support",
+      "example": "We should allow extra time to find the stop.",
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sceneIds": [
+        "S07.J01"
+      ],
+      "glossaryIds": [
+        "S07.J01.G09"
+      ],
+      "sourceRecords": [],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.STATION_STAY.J01.IF_OFFLINE",
+      "form": "If my phone stops working, I can …",
+      "type": "construction",
+      "meaningZh": "如果手机不能用了，我可以……",
+      "sense": "提出备用行动；省略号部分需要换成实际可执行的方法。",
+      "tier": "core",
+      "example": "If my phone stops working, I can use the address on paper.",
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sceneIds": [
+        "S07.J01"
+      ],
+      "glossaryIds": [
+        "S07.J01.G10"
+      ],
+      "sourceRecords": [],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.STATION_STAY.J02.COACH",
+      "form": "coach",
+      "type": "word",
+      "meaningZh": "长途汽车",
+      "sense": "此处是长距离载客汽车，不加入教练义。",
+      "tier": "recognition",
+      "example": "The coach stopped outside the station.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "sourceTerm": "coach",
+      "reviewStatus": "project-reviewed",
+      "sceneIds": [
+        "S07.J02"
+      ],
+      "glossaryIds": [
+        "S07.J02.G01"
+      ],
+      "sourceRecords": [
+        {
+          "term": "coach",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 350; 大全直 PRO 听力预习词表 p.13 U7 [Listening]",
+          "canonicalTerm": "coach",
+          "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 长途汽车 | a bus used for long-distance travel"
+        }
+      ],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.STATION_STAY.J02.BEND",
+      "form": "bend",
+      "type": "word",
+      "meaningZh": "弯道",
+      "sense": "名词，道路弯曲的一段；不是把物体弯折的动作。",
+      "tier": "support",
+      "example": "The hostel is just after the bend.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "sourceTerm": "bend",
+      "reviewStatus": "project-reviewed",
+      "sceneIds": [
+        "S07.J02"
+      ],
+      "glossaryIds": [
+        "S07.J02.G02"
+      ],
+      "sourceRecords": [
+        {
+          "term": "bend",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 219; 大全直 PRO 听力预习词表 p.12 U6 [Listening]",
+          "canonicalTerm": "bend",
+          "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 弯道 | a curved part of a road or path"
+        }
+      ],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.STATION_STAY.J02.JUNCTION",
+      "form": "junction",
+      "type": "word",
+      "meaningZh": "交叉路口；交汇点",
+      "sense": "道路相交的位置；用地标确认转向。",
+      "tier": "core",
+      "example": "Turn left at the junction.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "sourceTerm": "junction",
+      "reviewStatus": "project-reviewed",
+      "sceneIds": [
+        "S07.J02"
+      ],
+      "glossaryIds": [
+        "S07.J02.G03"
+      ],
+      "sourceRecords": [
+        {
+          "term": "junction",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 1098; 大全直 PRO 听力预习词表 p.12 U6 [Listening]",
+          "canonicalTerm": "junction",
+          "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 交叉点 | a point where two or more things meet"
+        }
+      ],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.STATION_STAY.J02.REACH",
+      "form": "reach",
+      "type": "word",
+      "meaningZh": "到达",
+      "sense": "及物动词，后接目的地，不在目的地前加 to。",
+      "tier": "support",
+      "example": "You can reach the hostel on foot.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "sourceTerm": "reach",
+      "reviewStatus": "project-reviewed",
+      "sceneIds": [
+        "S07.J02"
+      ],
+      "glossaryIds": [
+        "S07.J02.G04"
+      ],
+      "sourceRecords": [
+        {
+          "term": "reach",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 1554; 大全直 PRO 听力预习词表 p.12 U6 [Listening]",
+          "canonicalTerm": "reach",
+          "originalContext": "大全直 PRO 听力预习词表 | Listening | v. | 到达 | to arrive at a place"
+        }
+      ],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.STATION_STAY.J02.SHUTTLE",
+      "form": "shuttle service",
+      "type": "chunk",
+      "meaningZh": "往返班车服务",
+      "sense": "在两个地点之间定期往返的交通服务；本课为站点与旅社间的班车。",
+      "tier": "core",
+      "example": "Does the shuttle service go to the hostel?",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "sourceTerm": "shuttle service",
+      "reviewStatus": "project-reviewed",
+      "sceneIds": [
+        "S07.J02"
+      ],
+      "glossaryIds": [
+        "S07.J02.G05"
+      ],
+      "sourceRecords": [
+        {
+          "term": "shuttle service",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 1749; 大全直 PRO 听力预习词表 p.1 U1 [Listening]",
+          "canonicalTerm": "shuttle service",
+          "originalContext": "大全直 PRO 听力预习词表 | Listening | phrase | 班车 | a plane, bus or train that travels regularly between two places"
+        }
+      ],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.STATION_STAY.J02.WINDING",
+      "form": "winding",
+      "type": "word",
+      "meaningZh": "蜿蜒的",
+      "sense": "形容词，道路多弯、曲折，不是正在给东西上发条。",
+      "tier": "recognition",
+      "example": "The map shows a winding road beside the river.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "sourceTerm": "winding",
+      "reviewStatus": "project-reviewed",
+      "sceneIds": [
+        "S07.J02"
+      ],
+      "glossaryIds": [
+        "S07.J02.G06"
+      ],
+      "sourceRecords": [
+        {
+          "term": "winding",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 2088; 大全直 PRO 听力预习词表 p.12 U6 [Listening]",
+          "canonicalTerm": "winding",
+          "originalContext": "大全直 PRO 听力预习词表 | Listening | adj. | 蜿蜒的 | having a twisting and turning course"
+        }
+      ],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.STATION_STAY.J02.GO_TO",
+      "form": "Does this service go to …?",
+      "type": "construction",
+      "meaningZh": "这趟车去……吗？",
+      "sense": "先核对服务的目的地，再决定是否乘坐。",
+      "tier": "core",
+      "example": "Does this service go to the hostel?",
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sceneIds": [
+        "S07.J02"
+      ],
+      "glossaryIds": [
+        "S07.J02.G07"
+      ],
+      "sourceRecords": [],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.STATION_STAY.J02.TURN_LEFT",
+      "form": "turn left at the junction",
+      "type": "chunk",
+      "meaningZh": "在路口左转",
+      "sense": "turn left/right at + 明确路口或地标；方向必须与路线一致。",
+      "tier": "core",
+      "example": "Turn left at the junction by the bakery.",
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sceneIds": [
+        "S07.J02"
+      ],
+      "glossaryIds": [
+        "S07.J02.G08"
+      ],
+      "sourceRecords": [],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.STATION_STAY.J02.JUST_AFTER",
+      "form": "just after the bend",
+      "type": "chunk",
+      "meaningZh": "就在弯道之后",
+      "sense": "沿前进方向越过弯道后的位置；不能只凭地图纸面左右判断。",
+      "tier": "support",
+      "example": "The blue door is just after the bend.",
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sceneIds": [
+        "S07.J02"
+      ],
+      "glossaryIds": [
+        "S07.J02.G09"
+      ],
+      "sourceRecords": [],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.STATION_STAY.J02.CHECK_ROUTE",
+      "form": "Just to check, do I …?",
+      "type": "construction",
+      "meaningZh": "我再确认一下，是不是要……？",
+      "sense": "复述关键动作以澄清路线，等待对方确认。",
+      "tier": "core",
+      "example": "Just to check, do I turn left at the bakery?",
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sceneIds": [
+        "S07.J02"
+      ],
+      "glossaryIds": [
+        "S07.J02.G10"
+      ],
+      "sourceRecords": [],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.STATION_STAY.J03.RECEPTION",
+      "form": "reception",
+      "type": "word",
+      "meaningZh": "接待处；前台",
+      "sense": "名词，接待到访者的区域，不使用信号接收或欢迎态度义。",
+      "tier": "core",
+      "example": "Maya went to reception to check her booking.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "sourceTerm": "reception",
+      "reviewStatus": "project-reviewed",
+      "sceneIds": [
+        "S07.J03"
+      ],
+      "glossaryIds": [
+        "S07.J03.G01"
+      ],
+      "sourceRecords": [
+        {
+          "term": "reception",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 1560; 大全直 PRO 听力预习词表 p.13 U6 [Listening]",
+          "canonicalTerm": "reception",
+          "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 接待处 | the area where visitors are received"
+        }
+      ],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.STATION_STAY.J03.DOUBLE_ROOM",
+      "form": "double room",
+      "type": "chunk",
+      "meaningZh": "双人间",
+      "sense": "原资料为供两人住宿的房间。本情节中的一张双人床是前台核对的信息，不作为原词项统一定义，也不与其他床型名称作一般同义替换。",
+      "tier": "core",
+      "example": "We reserved a double room; could you confirm the bed arrangement?",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "sourceTerm": "double room",
+      "reviewStatus": "project-reviewed",
+      "sceneIds": [
+        "S07.J03"
+      ],
+      "glossaryIds": [
+        "S07.J03.G02"
+      ],
+      "sourceRecords": [
+        {
+          "term": "double room",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 629; 大全直 PRO 听力预习词表 p.2 U1 [Listening]",
+          "canonicalTerm": "double room",
+          "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 双人间 | a bedroom for two people"
+        }
+      ],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.STATION_STAY.J03.HOSTEL",
+      "form": "hostel",
+      "type": "word",
+      "meaningZh": "旅社；青年旅社",
+      "sense": "住宿场所，本课既有私人房间也有公共区域；不默认所有房间均为多人宿舍。",
+      "tier": "support",
+      "example": "The hostel has a shared kitchen.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "sourceTerm": "hostel",
+      "reviewStatus": "project-reviewed",
+      "sceneIds": [
+        "S07.J03"
+      ],
+      "glossaryIds": [
+        "S07.J03.G03"
+      ],
+      "sourceRecords": [
+        {
+          "term": "hostel",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 934; 大全直 PRO 听力预习词表 p.3 U2 [Listening]",
+          "canonicalTerm": "hostel",
+          "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | （青年）旅社"
+        }
+      ],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.STATION_STAY.J03.AMENITY",
+      "form": "amenity",
+      "type": "word",
+      "meaningZh": "便利设施",
+      "sense": "可供住客使用、增加便利的设施；课文用复数 amenities，列表上的设施仍需核对是否可用。",
+      "tier": "recognition",
+      "example": "We asked which amenities guests could use.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "sourceTerm": "amenity",
+      "reviewStatus": "project-reviewed",
+      "sceneIds": [
+        "S07.J03"
+      ],
+      "glossaryIds": [
+        "S07.J03.G04"
+      ],
+      "sourceRecords": [
+        {
+          "term": "amenity",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 98; 雅思 PRO 班级词汇表 p.15 U7 [Reading] | 雅思一万词汇班 p.51 [Actions & processes 动作和处理过程]",
+          "canonicalTerm": "amenity",
+          "originalContext": "雅思 PRO 班级词汇表 | Reading | n. | 便利设施 | The hotel has a range of amenities, including a swimming pool and a gym. || 雅思一万词汇班 | Actions & processes 动作和处理过程 | n. | Page 51 image-only slide (manual transcription)"
+        }
+      ],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.STATION_STAY.J03.ADJACENT",
+      "form": "be adjacent to",
+      "type": "construction",
+      "meaningZh": "紧邻……",
+      "sense": "描述两处地点紧挨；实际句子需按主语使用 is/are，不把一般靠近都称作相邻。",
+      "tier": "support",
+      "example": "The hostel is adjacent to the station.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "sourceTerm": "be adjacent to",
+      "reviewStatus": "project-reviewed",
+      "sceneIds": [
+        "S07.J03"
+      ],
+      "glossaryIds": [
+        "S07.J03.G05"
+      ],
+      "sourceRecords": [
+        {
+          "term": "be adjacent to",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 205; 雅思 PRO 班级词汇表 p.11 U5 [Writing]",
+          "canonicalTerm": "be adjacent to",
+          "originalContext": "雅思 PRO 班级词汇表 | Writing | 靠近，紧挨 | The hotel is adjacent to the main railway station."
+        }
+      ],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.STATION_STAY.J03.SUITE",
+      "form": "suite",
+      "type": "word",
+      "meaningZh": "套间",
+      "sense": "一组相连的房间；本课用来辨认不同房型，不要求主动升级。",
+      "tier": "recognition",
+      "example": "The suite has a separate sitting room.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "sourceTerm": "suite",
+      "reviewStatus": "project-reviewed",
+      "sceneIds": [
+        "S07.J03"
+      ],
+      "glossaryIds": [
+        "S07.J03.G06"
+      ],
+      "sourceRecords": [
+        {
+          "term": "suite",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 1850; 大全直 PRO 听力预习词表 p.15 U8 [Listening]",
+          "canonicalTerm": "suite",
+          "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 套间 | a set of rooms"
+        }
+      ],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.STATION_STAY.J03.UNDER_NAME",
+      "form": "I have a booking under …",
+      "type": "construction",
+      "meaningZh": "我有一份以……姓名登记的预订",
+      "sense": "到店报出预订登记姓名；省略号换成真实登记姓名。",
+      "tier": "core",
+      "example": "I have a booking under Maya Chen.",
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sceneIds": [
+        "S07.J03"
+      ],
+      "glossaryIds": [
+        "S07.J03.G07"
+      ],
+      "sourceRecords": [],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.STATION_STAY.J03.CONFIRM_ROOM",
+      "form": "Could you confirm …?",
+      "type": "construction",
+      "meaningZh": "可以确认一下……吗？",
+      "sense": "礼貌核对房型、床铺或日期；后接明确待确认信息。",
+      "tier": "core",
+      "example": "Could you confirm that the room has one double bed?",
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sceneIds": [
+        "S07.J03"
+      ],
+      "glossaryIds": [
+        "S07.J03.G08"
+      ],
+      "sourceRecords": [],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.STATION_STAY.J03.INCLUDED",
+      "form": "Is … included in the price?",
+      "type": "construction",
+      "meaningZh": "价格包含……吗？",
+      "sense": "询问明确项目是否已经计入费用，不能假设列出即免费。",
+      "tier": "core",
+      "example": "Is breakfast included in the price?",
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sceneIds": [
+        "S07.J03"
+      ],
+      "glossaryIds": [
+        "S07.J03.G09"
+      ],
+      "sourceRecords": [],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.STATION_STAY.J03.USE_KITCHEN",
+      "form": "use the shared kitchen",
+      "type": "chunk",
+      "meaningZh": "使用公共厨房",
+      "sense": "确认哪些公共设施可用；开放时间或费用需另问。",
+      "tier": "support",
+      "example": "Can guests use the shared kitchen tonight?",
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sceneIds": [
+        "S07.J03"
+      ],
+      "glossaryIds": [
+        "S07.J03.G10"
+      ],
+      "sourceRecords": [],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.BOOK.V",
+      "form": "book",
+      "type": "word",
+      "meaningZh": "预订",
+      "sense": "动词：提前安排使用房间或服务；不是名词“书”。",
+      "tier": "core",
+      "example": "We need to book a room for Friday.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sourceTerm": "book",
+      "sceneIds": [
+        "S06.A01"
+      ],
+      "glossaryIds": [
+        "S06.A01.G01"
+      ],
+      "sourceRecords": [
+        {
+          "term": "book",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 237; 大全直 PRO 听力预习词表 p.2 U1 [Listening]",
+          "canonicalTerm": "book",
+          "originalContext": "大全直 PRO 听力预习词表 | Listening | v. | 预定"
+        }
+      ],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.RESERVE.V",
+      "form": "reserve",
+      "type": "word",
+      "meaningZh": "预订；预留",
+      "sense": "为以后使用而把房间或座位留好；本课先识别，不需刻意与 book 对举。",
+      "tier": "support",
+      "example": "Please reserve the small room for our group.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sourceTerm": "reserve",
+      "sceneIds": [
+        "S06.A01"
+      ],
+      "glossaryIds": [
+        "S06.A01.G02"
+      ],
+      "sourceRecords": [
+        {
+          "term": "reserve",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 1636; 大全直 PRO 听力预习词表 p.1 U1 [Listening]",
+          "canonicalTerm": "reserve",
+          "originalContext": "大全直 PRO 听力预习词表 | Listening | v. | 预定 | to ask for a seat, table, room, etc. to be available for you or sb else at a future time"
+        }
+      ],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.CONSULTATION.N",
+      "form": "consultation",
+      "type": "word",
+      "meaningZh": "商讨；咨询",
+      "sense": "为讨论问题或获得建议而进行的会面；此处是与导师商讨。",
+      "tier": "core",
+      "example": "We have a consultation with our tutor.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sourceTerm": "consultation",
+      "sceneIds": [
+        "S06.A01"
+      ],
+      "glossaryIds": [
+        "S06.A01.G03"
+      ],
+      "sourceRecords": [
+        {
+          "term": "consultation",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 429; 大全直 PRO 听力预习词表 p.19 U10 [Listening]",
+          "canonicalTerm": "consultation",
+          "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 商讨，咨询 | a meeting to discuss or get advice"
+        }
+      ],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.ARRANGEMENT.N",
+      "form": "arrangement",
+      "type": "word",
+      "meaningZh": "安排",
+      "sense": "让事情能够发生的计划或准备；此处指共同会面安排。",
+      "tier": "core",
+      "example": "The new arrangement gives everyone time for lunch.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sourceTerm": "arrangement",
+      "sceneIds": [
+        "S06.A01"
+      ],
+      "glossaryIds": [
+        "S06.A01.G04"
+      ],
+      "sourceRecords": [
+        {
+          "term": "arrangement",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 144; 大全直 PRO 听力预习词表 p.2 U1 [Listening]",
+          "canonicalTerm": "arrangement",
+          "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 安排 | a plan or preparation that you make so that sth can happen"
+        }
+      ],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.FIX.TIME.V",
+      "form": "fix",
+      "type": "word",
+      "meaningZh": "确定",
+      "sense": "动词：决定或安排时间；此处不是修理。",
+      "tier": "core",
+      "example": "Let us fix a time before we send the message.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sourceTerm": "fix",
+      "sceneIds": [
+        "S06.A01"
+      ],
+      "glossaryIds": [
+        "S06.A01.G05"
+      ],
+      "sourceRecords": [
+        {
+          "term": "fix",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 819; 大全直 PRO 听力预习词表 p.23 U12 [Listening]",
+          "canonicalTerm": "fix",
+          "originalContext": "大全直 PRO 听力预习词表 | Listening | v. | 确定 | to decide or arrange something"
+        }
+      ],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.CONFERENCE.N",
+      "form": "conference",
+      "type": "word",
+      "meaningZh": "会议",
+      "sense": "本课指占用大房间的一次会议；不要求初学者推断会议规模。",
+      "tier": "support",
+      "example": "A conference will use the large room.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sourceTerm": "conference",
+      "sceneIds": [
+        "S06.A01"
+      ],
+      "glossaryIds": [
+        "S06.A01.G06"
+      ],
+      "sourceRecords": [
+        {
+          "term": "conference",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 403; 大全直 PRO 听力预习词表 p.1 U1 [Listening]",
+          "canonicalTerm": "conference",
+          "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 会议"
+        }
+      ],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.COULD_WE_BOOK",
+      "form": "Could we book a room for ...?",
+      "type": "construction",
+      "meaningZh": "我们能预订……时间的房间吗？",
+      "sense": "礼貌提出预订请求；for 后接日期或时段，省略号为可替换位置。",
+      "tier": "core",
+      "example": "Could we book a room for Friday afternoon?",
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sceneIds": [
+        "S06.A01"
+      ],
+      "glossaryIds": [
+        "S06.A01.G07"
+      ],
+      "sourceRecords": [],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.COLLEAGUES.N",
+      "form": "colleagues",
+      "type": "word",
+      "meaningZh": "同事",
+      "sense": "一起工作的人；保留种子词原复数，不把它改写为新的原资料词项。",
+      "tier": "support",
+      "example": "My colleagues helped me check the forms.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sourceTerm": "colleagues",
+      "sceneIds": [
+        "S06.A02"
+      ],
+      "glossaryIds": [
+        "S06.A02.G01"
+      ],
+      "sourceRecords": [
+        {
+          "term": "colleagues",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 362; 大全直 PRO 听力预习词表 p.16 U8 [Listening]",
+          "canonicalTerm": "colleagues",
+          "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 同事 | people you work with"
+        }
+      ],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.DUTY.N",
+      "form": "duty",
+      "type": "word",
+      "meaningZh": "职责",
+      "sense": "属于本人工作的任务；本课不使用关税义。",
+      "tier": "core",
+      "example": "It is my duty to call the visitors today.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sourceTerm": "duty",
+      "sceneIds": [
+        "S06.A02"
+      ],
+      "glossaryIds": [
+        "S06.A02.G02"
+      ],
+      "sourceRecords": [
+        {
+          "term": "duty",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 649; 大全直 PRO 听力预习词表 p.5 U2 [Listening]",
+          "canonicalTerm": "duty",
+          "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 职责 | tasks that are part of your job"
+        }
+      ],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.RECEPTIONIST.N",
+      "form": "receptionist",
+      "type": "word",
+      "meaningZh": "接待员",
+      "sense": "本课在前台接待来访者并处理预订的人；原记录没有英文上下文。",
+      "tier": "core",
+      "example": "The receptionist checked the room booking.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sourceTerm": "receptionist",
+      "sceneIds": [
+        "S06.A02"
+      ],
+      "glossaryIds": [
+        "S06.A02.G03"
+      ],
+      "sourceRecords": [
+        {
+          "term": "receptionist",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 1561; 大全直 PRO 听力预习词表 p.5 U2 [Listening]",
+          "canonicalTerm": "receptionist",
+          "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 接待员"
+        }
+      ],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.RESPONSIBILITY.N",
+      "form": "responsibility",
+      "type": "word",
+      "meaningZh": "责任",
+      "sense": "处理某事的责任；本课用 take responsibility for 说明谁负责。",
+      "tier": "core",
+      "example": "I will take responsibility for calling the group.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sourceTerm": "responsibility",
+      "sceneIds": [
+        "S06.A02"
+      ],
+      "glossaryIds": [
+        "S06.A02.G04"
+      ],
+      "sourceRecords": [
+        {
+          "term": "responsibility",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 1648; 大全直 PRO 听力预习词表 p.6 U3 [Listening] | 大全直 PRO 听力预习词表 p.15 U8 [Listening]",
+          "canonicalTerm": "responsibility",
+          "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 责任 || 大全直 PRO 听力预习词表 | Listening | n. | 责任 | a duty to deal with something"
+        }
+      ],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.SHIFTS.N",
+      "form": "shifts",
+      "type": "word",
+      "meaningZh": "轮班；工作时段",
+      "sense": "原资料复数名词，表示不同的工作时间段；不是动词移动。",
+      "tier": "support",
+      "example": "The morning and afternoon shifts use the same desk.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sourceTerm": "shifts",
+      "sceneIds": [
+        "S06.A02"
+      ],
+      "glossaryIds": [
+        "S06.A02.G05"
+      ],
+      "sourceRecords": [
+        {
+          "term": "shifts",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 1743; 大全直 PRO 听力预习词表 p.16 U8 [Listening]",
+          "canonicalTerm": "shifts",
+          "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 轮班 | periods of work time"
+        }
+      ],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.STAFF.N",
+      "form": "staff",
+      "type": "word",
+      "meaningZh": "员工；全体工作人员",
+      "sense": "组织中工作的人，集合名词；本课不当成一个人的职位。",
+      "tier": "support",
+      "example": "The staff board shows who works today.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sourceTerm": "staff",
+      "sceneIds": [
+        "S06.A02"
+      ],
+      "glossaryIds": [
+        "S06.A02.G06"
+      ],
+      "sourceRecords": [
+        {
+          "term": "staff",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 1800; 大全直 PRO 听力预习词表 p.15 U8 [Listening]",
+          "canonicalTerm": "staff",
+          "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 员工 | the people who work for an organization"
+        }
+      ],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.TAKE_RESPONSIBILITY_FOR",
+      "form": "take responsibility for ...",
+      "type": "construction",
+      "meaningZh": "负责……",
+      "sense": "for 后可接名词或动词 ing 形式；声明负责后仍需完成实际任务。",
+      "tier": "core",
+      "example": "I will take responsibility for calling the visitors.",
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sceneIds": [
+        "S06.A02"
+      ],
+      "glossaryIds": [
+        "S06.A02.G07"
+      ],
+      "sourceRecords": [],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.ASSIGNMENT.N",
+      "form": "assignment",
+      "type": "word",
+      "meaningZh": "作业；任务",
+      "sense": "本课指学习中被要求完成的一项写作任务。",
+      "tier": "core",
+      "example": "I need to finish my assignment by Friday.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sourceTerm": "assignment",
+      "sceneIds": [
+        "S05.D01"
+      ],
+      "glossaryIds": [
+        "S05.D01.G01"
+      ],
+      "sourceRecords": [
+        {
+          "term": "assignment",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 156; 大全直 PRO 听力预习词表 p.7 U3 [Listening] | 大全直 PRO 听力预习词表 p.16 U9 [Listening] | 大全直 PRO 听力预习词表 p.23 U12 [Listening]",
+          "canonicalTerm": "assignment",
+          "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 任务 | a task or piece of work that sb is given to do, usually as part of their job or studies || 大全直 PRO 听力预习词表 | Listening | n. | 任务，功课 | a task or piece of work given to someone as part of their studies"
+        }
+      ],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.DUE_DATE.N",
+      "form": "due date",
+      "type": "chunk",
+      "meaningZh": "到期日；提交日期",
+      "sense": "本课指作业必须提交的具体日期；不是预产期。",
+      "tier": "support",
+      "example": "The due date for the writing is Friday.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sourceTerm": "due date",
+      "sceneIds": [
+        "S05.D01"
+      ],
+      "glossaryIds": [
+        "S05.D01.G02"
+      ],
+      "sourceRecords": [
+        {
+          "term": "due date",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 644; 大全直 PRO 听力预习词表 p.17 U9 [Listening]",
+          "canonicalTerm": "due date",
+          "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 到期日 | the date by which something must be completed or submitted"
+        }
+      ],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.DEADLINE.N",
+      "form": "deadline",
+      "type": "word",
+      "meaningZh": "截止期限",
+      "sense": "必须完成的最晚时间或日期；本课与具体 due date 联系，但不要求两个词同时主动背熟。",
+      "tier": "core",
+      "example": "I wrote to my tutor before the deadline.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sourceTerm": "deadline",
+      "sceneIds": [
+        "S05.D01"
+      ],
+      "glossaryIds": [
+        "S05.D01.G03"
+      ],
+      "sourceRecords": [
+        {
+          "term": "deadline",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 506; 大全直 PRO 听力预习词表 p.16 U9 [Listening]",
+          "canonicalTerm": "deadline",
+          "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 截止日期 | the latest time or date by which something should be completed"
+        }
+      ],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.POSTPONE.V",
+      "form": "postpone",
+      "type": "word",
+      "meaningZh": "推迟；延迟",
+      "sense": "把事情安排到更晚的时间；延期后需要说明新时间。",
+      "tier": "core",
+      "example": "We can postpone the group meeting until Tuesday.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sourceTerm": "postpone",
+      "sceneIds": [
+        "S05.D01"
+      ],
+      "glossaryIds": [
+        "S05.D01.G04"
+      ],
+      "sourceRecords": [
+        {
+          "term": "postpone",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 1450; 大全直 PRO 听力预习词表 p.18 U10 [Listening]",
+          "canonicalTerm": "postpone",
+          "originalContext": "大全直 PRO 听力预习词表 | Listening | v. | 推迟，延迟 | to arrange for something to happen at a later time"
+        }
+      ],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.PRIORITY.N",
+      "form": "priority",
+      "type": "word",
+      "meaningZh": "优先事项",
+      "sense": "此处指比其他安排更应优先处理的事情；不是优先通行权。",
+      "tier": "core",
+      "example": "Finishing the assignment is my priority.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sourceTerm": "priority",
+      "sceneIds": [
+        "S05.D01"
+      ],
+      "glossaryIds": [
+        "S05.D01.G05"
+      ],
+      "sourceRecords": [
+        {
+          "term": "priority",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 1486; 大全直 PRO 听力预习词表 p.7 U3 [Listening] | 大全直 PRO 听力预习词表 p.11 U5 [Listening] | 大全直 PRO 听力预习词表 p.16 U8 [Listening] | 大全直 PRO 听力预习词表 p.20 U11 [Listening]",
+          "canonicalTerm": "priority",
+          "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 优先事项 || 大全直 PRO 听力预习词表 | Listening | n. | 优先考虑的事 | something treated as more important than others"
+        }
+      ],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.TUTOR.N",
+      "form": "tutor",
+      "type": "word",
+      "meaningZh": "导师；辅导教师",
+      "sense": "本课指指导一个学生或小组的教师；不使用全班讲座老师的意思。",
+      "tier": "support",
+      "example": "My tutor helped our small group plan the writing.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sourceTerm": "tutor",
+      "sceneIds": [
+        "S05.D01"
+      ],
+      "glossaryIds": [
+        "S05.D01.G06"
+      ],
+      "sourceRecords": [
+        {
+          "term": "tutor",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 1987; 大全直 PRO 听力预习词表 p.16 U9 [Listening]",
+          "canonicalTerm": "tutor",
+          "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 私人教师；导师 | a private teacher who teaches one student or a small group"
+        }
+      ],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.ALTER.V",
+      "form": "alter",
+      "type": "word",
+      "meaningZh": "改变",
+      "sense": "动词：改变已有计划或安排；本课不暗示自己能够修改学校规则。",
+      "tier": "support",
+      "example": "I can alter my work plan.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sourceTerm": "alter",
+      "sceneIds": [
+        "S05.D01"
+      ],
+      "glossaryIds": [
+        "S05.D01.G07"
+      ],
+      "sourceRecords": [
+        {
+          "term": "alter",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 90; 雅思 PRO 班级词汇表 p.21 U9 [Reading]",
+          "canonicalTerm": "alter",
+          "originalContext": "雅思 PRO 班级词汇表 | Reading | v. | 改变 | We've had to alter our plans because of the train strike."
+        }
+      ],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.COULD_I_HAVE_UNTIL",
+      "form": "Could I have until ... to ...?",
+      "type": "construction",
+      "meaningZh": "能让我到……再完成……吗？",
+      "sense": "礼貌请求更多完成时间；until 后接新期限，to 后接动作原形。是否允许取决于对方回复。",
+      "tier": "core",
+      "example": "Could I have until Monday to finish the writing?",
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sceneIds": [
+        "S05.D01"
+      ],
+      "glossaryIds": [
+        "S05.D01.G08"
+      ],
+      "sourceRecords": [],
+      "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
     }
   ]
 }
