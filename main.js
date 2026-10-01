@@ -1,8 +1,14 @@
-import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-14-0";
-import { nextReview, reviewDue } from "./learning.mjs?v=pilot-14-0";
-import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-14-0";
-import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-14-0";
+import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-14-0-r3";
+import { nextReview, reviewDue } from "./learning.mjs?v=pilot-14-0-r3";
+import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-14-0-r3";
+import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-14-0-r3";
 const DATA_URL = "./data/world.json";
+const ASSET_VERSION = "pilot-14-0-r3";
+function fetchData(path) {
+  const url = new URL(path, window.location.href);
+  url.searchParams.set("v", ASSET_VERSION);
+  return fetch(url, { cache: "no-store" });
+}
 const STORAGE_KEY = "ielts-semantic-world-s01-trial-v1";
 
 
@@ -860,32 +866,32 @@ glossaryDialog.addEventListener("close", () => {
 });
 
 try {
-  const response = await fetch(DATA_URL, { cache: "no-store" });
+  const response = await fetchData(DATA_URL);
   if (!response.ok) throw new Error(`HTTP ${response.status}`);
   content = await response.json();
   if (Array.isArray(content.sceneFiles)) {
     content.microScenes = [];
     for (const path of content.sceneFiles) {
-      const sceneResponse = await fetch(path, { cache: "no-store" });
+      const sceneResponse = await fetchData(path);
       if (!sceneResponse.ok) throw new Error(`${path} 场景内容未载入（HTTP ${sceneResponse.status}）`);
       content.microScenes.push(await sceneResponse.json());
     }
   }
   if (!Array.isArray(content.microScenes) || !content.microScenes.length) throw new Error("缺少微场景内容");
   if (content.learningUnitsFile) {
-    const response = await fetch(content.learningUnitsFile, { cache: "no-store" });
+    const response = await fetchData(content.learningUnitsFile);
     if (!response.ok) throw new Error("学习单位未载入");
     learningUnits = (await response.json()).units || [];
   }
   if (content.memoryRouteFile) {
-    const response = await fetch(content.memoryRouteFile, { cache: "no-store" });
+    const response = await fetchData(content.memoryRouteFile);
     if (!response.ok) throw new Error("空间路线未载入");
     const route = await response.json();
     content.microScenes.forEach((scene) => { if (route.scenes?.[scene.id]) scene.memoryNodes = route.scenes[scene.id].memoryNodes; });
   }
   const lookups = [];
   for (const scene of content.microScenes) {
-    const wordResponse = await fetch(scene.wordFile, { cache: "no-store" });
+    const wordResponse = await fetchData(scene.wordFile);
     if (!wordResponse.ok) throw new Error(`${scene.id} 词义数据未载入（HTTP ${wordResponse.status}）`);
     const lookup = await wordResponse.json();
     if (lookup.sceneId !== scene.id || !lookup.words) throw new Error(`${scene.id} 词义数据不匹配`);
@@ -896,14 +902,14 @@ try {
     assertWordCoverage(scene);
   });
   if (content.uiWordsFile) {
-    const response = await fetch(content.uiWordsFile, { cache: "no-store" });
+    const response = await fetchData(content.uiWordsFile);
     if (!response.ok) throw new Error("路线标题词义未载入");
     const labels = (await response.json()).words;
     content.microScenes.forEach((scene) => { scene.wordLookup = { ...labels, ...scene.wordLookup }; });
   }
   for (const path of content.dictionaryContextFiles || [content.dictionaryContextFile || "./data/s01-dictionary-context.json"]) {
     try {
-      const contextResponse = await fetch(path, { cache: "no-store" });
+      const contextResponse = await fetchData(path);
       if (contextResponse.ok) {
         const scopes = await contextResponse.json();
         for (const [scope, entries] of Object.entries(scopes)) {
@@ -914,7 +920,7 @@ try {
   }
   for (const path of content.textTranslationFiles || [content.textTranslationFile || "./data/s01-text-translations.json"]) {
     try {
-      const response = await fetch(path, { cache: "no-store" });
+      const response = await fetchData(path);
       if (response.ok) Object.assign(textTranslations, (await response.json()).scenes || {});
     } catch (_) { /* English reading remains available without its Chinese layer. */ }
   }
@@ -929,19 +935,19 @@ let dictionaryFinished = false;
 async function ensureDictionary() {
   if (!dictionaryLoading) dictionaryLoading = (async () => {
   try {
-    const dictionaryResponse = await fetch(content.dictionaryFile || "./data/wordnet-s01.json", { cache: "no-store" });
+    const dictionaryResponse = await fetchData(content.dictionaryFile || "./data/wordnet-s01.json");
     if (dictionaryResponse.ok) wordnet = await dictionaryResponse.json();
   } catch (_) {
     // Dictionary data is supplementary; the authored scene still works offline.
   }
   try {
-    const translationResponse = await fetch(content.dictionaryTranslationFile || "./data/wordnet-translations-s01.json", { cache: "no-store" });
+    const translationResponse = await fetchData(content.dictionaryTranslationFile || "./data/wordnet-translations-s01.json");
     if (translationResponse.ok) dictionaryTranslations = await translationResponse.json();
   } catch (_) {
     // Original examples remain readable without project translations.
   }
   try {
-    const response = await fetch(content.dictionaryChineseFile || "./data/wordnet-zh-s01.json", { cache: "no-store" });
+    const response = await fetchData(content.dictionaryChineseFile || "./data/wordnet-zh-s01.json");
     if (response.ok) dictionaryChinese = (await response.json()).senses || {};
   } catch (_) { /* Original dictionary data remains available. */ }
 
