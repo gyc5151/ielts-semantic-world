@@ -77,6 +77,14 @@
 .object-route li span { color: var(--teal); font-size: .75rem; font-variant-numeric: tabular-nums; }
 .object-route li strong { font-size: .85rem; }
 .route-return { margin: 20px 0 0; font-size: .85rem; color: var(--teal-deep); }
+.route-segments { display: grid; gap: 10px; }
+.route-segment { border: 1px solid var(--line); border-radius: 8px; }
+.route-segment > summary { display: flex; align-items: center; gap: 12px; padding: 14px; cursor: pointer; }
+.route-segment > summary span { color: var(--teal); font-variant-numeric: tabular-nums; }
+.route-segment > summary strong { flex: 1; }
+.route-segment > summary small { color: var(--muted); white-space: nowrap; }
+.route-segment .object-route { padding: 0 14px 12px; }
+.route-segment > button { margin: 0 14px 14px; }
 .memory-stations { margin: 26px 0; }
 .memory-station-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; align-items: start; }
 .memory-station { border: 1px solid var(--line); background: var(--paper); border-radius: var(--radius-sm); }

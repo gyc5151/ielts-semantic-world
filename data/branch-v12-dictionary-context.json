@@ -1,0 +1,387 @@
+{
+  "S06.A03": {
+    "certificate": {
+      "zh": "证明所载事实的证书",
+      "example": "I have the certificate from my previous course.",
+      "exampleZh": "我带着先前课程的证书。",
+      "usageNote": "本故事文件证明先前课程已完成；材料要求属于该具体课程。",
+      "provenance": "External evidence · WordNet 3.0原义独立保留；Researcher inference · 项目选义、中文辅助与原创例句，非词典原例句。",
+      "senseId": "n:06471345",
+      "forms": [
+        "certificates"
+      ]
+    },
+    "enrolment": {
+      "zh": "正式加入课程的注册办理",
+      "example": "Is my enrolment complete now?",
+      "exampleZh": "我的注册现在完成了吗？",
+      "usageNote": "本课连接注册行为；原资料也包含注册人数义，本句没有使用人数义。",
+      "provenance": "External evidence · WordNet 3.0原义独立保留；Researcher inference · 项目选义、中文辅助与原创例句，非词典原例句。",
+      "senseId": "n:00050037"
+    },
+    "module": {
+      "zh": "可单独学习的课程单元",
+      "example": "The first module is about planning a community project.",
+      "exampleZh": "第一个课程单元讲的是如何规划社区项目。",
+      "usageNote": "当前WordNet列认知能力、太空舱、硬件与通用组合部件，未提供精确的教育课程单元义；保留源记录及项目解释，不套软件或设备义。",
+      "provenance": "Researcher inference · 本句未连接精确WordNet义项；项目解释、源记录及原词典独立保留。",
+      "noMatch": true,
+      "note": "当前WordNet列认知能力、太空舱、硬件与通用组合部件，未提供精确的教育课程单元义；保留源记录及项目解释，不套软件或设备义。",
+      "forms": [
+        "modules"
+      ]
+    }
+  },
+  "S06.A04": {
+    "handout": {
+      "zh": "发给学生的课程讲义",
+      "example": "My handout is missing a page.",
+      "exampleZh": "我的讲义少了一页。",
+      "usageNote": "当前WordNet只有新闻补充材料和资助义，缺本句课堂讲义的精确义；原资料与官方学习词典支持此用法，原词典保留独立层。",
+      "provenance": "Researcher inference · 本句未连接精确WordNet义项；项目解释、源记录及原词典独立保留。",
+      "noMatch": true,
+      "note": "当前WordNet只有新闻补充材料和资助义，缺本句课堂讲义的精确义；原资料与官方学习词典支持此用法，原词典保留独立层。",
+      "forms": [
+        "handouts"
+      ]
+    },
+    "lecture": {
+      "zh": "向课堂听众正式讲授",
+      "example": "The lecture introduces community project planning.",
+      "exampleZh": "讲座介绍社区项目规划。",
+      "usageNote": "本课是名词课堂讲授；公开演讲和训斥另有义。",
+      "provenance": "External evidence · WordNet 3.0原义独立保留；Researcher inference · 项目选义、中文辅助与原创例句，非词典原例句。",
+      "senseId": "n:00892861",
+      "forms": [
+        "lectures"
+      ],
+      "contrasts": [
+        {
+          "senseId": "n:06713930",
+          "zh": "长篇训斥",
+          "example": "The child received a lecture about being late.",
+          "exampleZh": "孩子因为迟到挨了一通训斥。",
+          "provenance": "Researcher inference · 项目原创多义对比例句；WordNet原定义另列。"
+        }
+      ]
+    },
+    "seminar": {
+      "zh": "小组交流想法的研讨课",
+      "example": "We discuss the garden plan in the seminar.",
+      "exampleZh": "我们在研讨课里讨论花园计划。",
+      "usageNote": "连接交流想法的会议宽义；本课小组讨论的具体课程配置为项目情节，不要求当前学习者符合另一义的advanced students条件。",
+      "provenance": "External evidence · WordNet 3.0原义独立保留；Researcher inference · 项目选义、中文辅助与原创例句，非词典原例句。",
+      "senseId": "n:08327816",
+      "forms": [
+        "seminars"
+      ]
+    }
+  },
+  "S06.A05": {
+    "central": {
+      "zh": "主要的（central library这个组合中）",
+      "example": "Lin studies in the central library.",
+      "exampleZh": "林在中央图书馆学习。",
+      "usageNote": "原来源central library是机构主要图书馆；WordNet的地理中心或必要部件义不能精确证明机构主图书馆用义，不将主要误教为地理中心。",
+      "provenance": "Researcher inference · 本句未连接精确WordNet义项；项目解释、源记录及原词典独立保留。",
+      "noMatch": true,
+      "note": "原来源central library是机构主要图书馆；WordNet的地理中心或必要部件义不能精确证明机构主图书馆用义，不将主要误教为地理中心。"
+    },
+    "library": {
+      "zh": "用于藏书与学习的图书馆建筑",
+      "example": "Lin entered the library through the main doors.",
+      "exampleZh": "林从正门进入图书馆。",
+      "usageNote": "本句进入实体建筑，central library整块指机构主要图书馆。",
+      "provenance": "External evidence · WordNet 3.0原义独立保留；Researcher inference · 项目选义、中文辅助与原创例句，非词典原例句。",
+      "senseId": "n:03661043",
+      "forms": [
+        "libraries"
+      ],
+      "contrasts": [
+        {
+          "senseId": "n:07977592",
+          "zh": "程序或子程序的集合；程序库",
+          "example": "The program uses a library of standard routines.",
+          "exampleZh": "程序使用一个标准子程序库。",
+          "provenance": "Researcher inference · 项目原创多义对比例句；WordNet原定义另列。"
+        }
+      ]
+    },
+    "revision": {
+      "zh": "考前复习已学知识",
+      "example": "My revision starts with explaining the main ideas.",
+      "exampleZh": "我的复习从解释主要观点开始。",
+      "usageNote": "当前WordNet三义均涉及修改或重写，缺本来源的英式考前复习义。先看项目解释，可到剑桥核对；不能把考前复习强连到重写文稿。",
+      "provenance": "Researcher inference · 本句未连接精确WordNet义项；项目解释、源记录及原词典独立保留。",
+      "noMatch": true,
+      "note": "当前WordNet三义均涉及修改或重写，缺本来源的英式考前复习义。先看项目解释，可到剑桥核对；不能把考前复习强连到重写文稿。",
+      "contrasts": [
+        {
+          "senseId": "n:00399393",
+          "zh": "重新考虑后修改",
+          "example": "The plan needs revision after the meeting.",
+          "exampleZh": "会议后这个计划需要修改。",
+          "provenance": "Researcher inference · 项目原创多义对比例句；WordNet原定义另列。"
+        }
+      ]
+    },
+    "textbook": {
+      "zh": "学校或学院的课本",
+      "example": "I brought the textbook to the tutorial.",
+      "exampleZh": "我把教科书带到了辅导课。",
+      "usageNote": "名词课程书籍；不是形容词典型的用法。",
+      "provenance": "External evidence · WordNet 3.0原义独立保留；Researcher inference · 项目选义、中文辅助与原创例句，非词典原例句。",
+      "senseId": "n:06414372",
+      "forms": [
+        "textbooks"
+      ]
+    },
+    "tutorial": {
+      "zh": "导师对个人或小组的辅导时段",
+      "example": "The tutorial helps three students work through an example.",
+      "exampleZh": "这节辅导课帮助三名学生一起弄懂一个例子。",
+      "usageNote": "本课三名学生带具体疑问求助；lecture/seminar/tutorial按实际课堂活动区分。",
+      "provenance": "External evidence · WordNet 3.0原义独立保留；Researcher inference · 项目选义、中文辅助与原创例句，非词典原例句。",
+      "senseId": "n:07148022",
+      "forms": [
+        "tutorials"
+      ]
+    }
+  },
+  "S06.A06": {
+    "essay": {
+      "zh": "围绕主题的分析或解释性短文",
+      "example": "My essay explains the garden project.",
+      "exampleZh": "我的短文解释花园项目。",
+      "usageNote": "本课为课程短文；essay作尝试动词另有义。",
+      "provenance": "External evidence · WordNet 3.0原义独立保留；Researcher inference · 项目选义、中文辅助与原创例句，非词典原例句。",
+      "senseId": "n:06409562",
+      "forms": [
+        "essays"
+      ]
+    },
+    "grade": {
+      "zh": "学习表现的分数或等级",
+      "example": "Could you explain my grade?",
+      "exampleZh": "能解释一下我的成绩吗？",
+      "usageNote": "这里是名词成绩；评分动词、年级和道路坡度不套入本句。",
+      "provenance": "External evidence · WordNet 3.0原义独立保留；Researcher inference · 项目选义、中文辅助与原创例句，非词典原例句。",
+      "senseId": "n:05737153",
+      "forms": [
+        "grades"
+      ],
+      "contrasts": [
+        {
+          "senseId": "n:05068716",
+          "zh": "道路或地面的坡度",
+          "example": "The road has a steep grade.",
+          "exampleZh": "这条路坡度很陡。",
+          "provenance": "Researcher inference · 项目原创多义对比例句；WordNet原定义另列。"
+        }
+      ]
+    },
+    "presentation": {
+      "zh": "向听众提供信息的正式报告",
+      "example": "My presentation starts with a concrete example.",
+      "exampleZh": "我的报告从一个具体例子开始。",
+      "usageNote": "当前WordNet包含奖品颁授、视觉展示等宽义，未提供本课正式信息讲话的精确义；课程源记录与官方学习词典支持本句，保留独立原词典。",
+      "provenance": "Researcher inference · 本句未连接精确WordNet义项；项目解释、源记录及原词典独立保留。",
+      "noMatch": true,
+      "note": "当前WordNet包含奖品颁授、视觉展示等宽义，未提供本课正式信息讲话的精确义；课程源记录与官方学习词典支持本句，保留独立原词典。",
+      "forms": [
+        "presentations"
+      ]
+    },
+    "present": {
+      "zh": "向听众展示发现",
+      "example": "I will present our findings to the class.",
+      "exampleZh": "我会向全班展示我们的发现。",
+      "usageNote": "present findings to + 听众；本课为展示动词，不是礼物、目前或出席。",
+      "provenance": "External evidence · WordNet 3.0原义独立保留；Researcher inference · 项目选义、中文辅助与原创例句，非词典原例句。",
+      "senseId": "v:02148788",
+      "forms": [
+        "presented",
+        "presenting"
+      ],
+      "contrasts": [
+        {
+          "senseId": "n:13268842",
+          "zh": "礼物",
+          "example": "Lin bought a present for her friend.",
+          "exampleZh": "林给朋友买了一份礼物。",
+          "provenance": "Researcher inference · 项目原创多义对比例句；WordNet原定义另列。"
+        }
+      ]
+    }
+  },
+  "S06.A07": {
+    "canteen": {
+      "zh": "校园供餐食堂",
+      "example": "Where is the canteen?",
+      "exampleZh": "食堂在哪里？",
+      "usageNote": "当前WordNet的食堂候选有工厂餐厅、机构商店等范围，未给本句校园供餐场所精确对应；保留教材与官方词典支持的项目解释，不借水壶义。",
+      "provenance": "Researcher inference · 本句未连接精确WordNet义项；项目解释、源记录及原词典独立保留。",
+      "noMatch": true,
+      "note": "当前WordNet的食堂候选有工厂餐厅、机构商店等范围，未给本句校园供餐场所精确对应；保留教材与官方词典支持的项目解释，不借水壶义。",
+      "forms": [
+        "canteens"
+      ],
+      "contrasts": [
+        {
+          "senseId": "n:02952374",
+          "zh": "随身水壶",
+          "example": "The traveller filled a canteen with water.",
+          "exampleZh": "旅行者往随身水壶里装了水。",
+          "provenance": "Researcher inference · 项目原创多义对比例句；WordNet原定义另列。"
+        }
+      ]
+    },
+    "employment": {
+      "zh": "有报酬的工作",
+      "example": "I am looking for part-time employment.",
+      "exampleZh": "我在寻找兼职工作。",
+      "usageNote": "looking for part-time employment表达寻找兼职；受雇状态另有义，不等于已经获得这个职位。",
+      "provenance": "External evidence · WordNet 3.0原义独立保留；Researcher inference · 项目选义、中文辅助与原创例句，非词典原例句。",
+      "senseId": "n:00584367"
+    },
+    "vacancy": {
+      "zh": "可申请的职位空缺",
+      "example": "Is the vacancy in the canteen still available?",
+      "exampleZh": "食堂这个职位现在仍空缺吗？",
+      "usageNote": "当前WordNet只列未被占用状态和空区域，缺本来源可申请职位的精确义；不把职位套为空房/空座，项目解释与源记录保留。",
+      "provenance": "Researcher inference · 本句未连接精确WordNet义项；项目解释、源记录及原词典独立保留。",
+      "noMatch": true,
+      "note": "当前WordNet只列未被占用状态和空区域，缺本来源可申请职位的精确义；不把职位套为空房/空座，项目解释与源记录保留。",
+      "forms": [
+        "vacancies"
+      ]
+    }
+  },
+  "S07.J04": {
+    "tram": {
+      "zh": "沿轨道行驶的电动车辆",
+      "example": "Which tram goes to the museum?",
+      "exampleZh": "哪趟电车去博物馆？",
+      "usageNote": "本课是沿城市街道轨道运行的电车；WordNet另收索道和矿车义，均不是当前路线。",
+      "provenance": "External evidence · WordNet 3.0原义独立保留；Researcher inference · 项目选义、中文辅助与原创例句，非词典原例句。",
+      "senseId": "n:04335435",
+      "forms": [
+        "trams"
+      ]
+    },
+    "underground": {
+      "zh": "城市地下铁路系统",
+      "example": "The underground gets me close to the museum.",
+      "exampleZh": "地铁能把我送到博物馆附近。",
+      "usageNote": "the underground在本课是名词地铁系统；不连接秘密组织或地下位置。",
+      "provenance": "External evidence · WordNet 3.0原义独立保留；Researcher inference · 项目选义、中文辅助与原创例句，非词典原例句。",
+      "senseId": "n:03757138",
+      "contrasts": [
+        {
+          "senseId": "r:00486917",
+          "zh": "在地下（副词）",
+          "example": "The cables run underground.",
+          "exampleZh": "电缆在地下铺设。",
+          "provenance": "Researcher inference · 项目原创多义对比例句；WordNet原定义另列。"
+        }
+      ]
+    }
+  },
+  "S07.J05": {
+    "guides": {
+      "zh": "带人游览、指引道路的人",
+      "example": "The guides were waiting beside the museum wall.",
+      "exampleZh": "向导们在博物馆墙旁等候。",
+      "usageNote": "本课复数指实际带领游览的人，未假定其报酬；不是指南书或指导动词。",
+      "provenance": "External evidence · WordNet 3.0原义独立保留；Researcher inference · 项目选义、中文辅助与原创例句，非词典原例句。",
+      "senseId": "n:10151570"
+    },
+    "guide": {
+      "zh": "带领参观的人",
+      "example": "A guide named Nora handed Maya a map.",
+      "exampleZh": "一位名叫诺拉的向导递给玛雅一张地图。",
+      "usageNote": "本课Nora是带路的人；guide作指南书或指导动词另有用法。",
+      "provenance": "External evidence · WordNet 3.0原义独立保留；Researcher inference · 项目选义、中文辅助与原创例句，非词典原例句。",
+      "senseId": "n:10151570",
+      "contrasts": [
+        {
+          "senseId": "n:06422740",
+          "zh": "提供基本说明的指南",
+          "example": "Lin read a guide to the course requirements.",
+          "exampleZh": "林读了一份课程要求指南。",
+          "provenance": "Researcher inference · 项目原创多义对比例句；WordNet原定义另列。"
+        }
+      ]
+    },
+    "guided": {
+      "zh": "由人带领的（guided walk中）",
+      "example": "Maya joined the guided walk.",
+      "exampleZh": "玛雅参加了步行导览。",
+      "usageNote": "孤立guided不套WordNet的发射后控制义；只有guided walk句型才连接带某人去某地的guide动词，用作过去分词修饰。",
+      "provenance": "Researcher inference · 本句未连接精确WordNet义项；项目解释、源记录及原词典独立保留。",
+      "noMatch": true,
+      "note": "孤立guided不套WordNet的发射后控制义；只有guided walk句型才连接带某人去某地的guide动词，用作过去分词修饰。",
+      "uses": [
+        {
+          "id": "guided-walk-participle",
+          "pattern": "\\bguided\\s+walk\\b",
+          "senseId": "v:01999798",
+          "zh": "由向导带领的（过去分词修饰）",
+          "noMatch": false,
+          "note": "此形态源自guide带领动词；不是把原phrase来源改标为动词。",
+          "usageNote": "guided walk是一整块游览活动；guided在这里来自带人去某地的guide动词，作过去分词修饰。",
+          "example": "Maya joined the guided walk.",
+          "exampleZh": "玛雅参加了步行导览。",
+          "provenance": "External evidence · WordNet 3.0原义独立保留；Researcher inference · 项目选义、中文辅助与原创例句，非词典原例句。"
+        }
+      ]
+    },
+    "walk": {
+      "zh": "步行；一次步行活动",
+      "example": "Maya joined a walk led by Nora.",
+      "exampleZh": "玛雅参加了诺拉带领的步行活动。",
+      "usageNote": "在guided walk中是名词活动；walk作步行动词可从完整词典查看。",
+      "provenance": "External evidence · WordNet 3.0原义独立保留；Researcher inference · 项目选义、中文辅助与原创例句，非词典原例句。",
+      "senseId": "n:00284798",
+      "forms": [
+        "walks"
+      ]
+    },
+    "van": {
+      "zh": "封闭载货空间的厢式车辆",
+      "example": "The van carried the guides’ equipment.",
+      "exampleZh": "厢型车运送了向导们的装备。",
+      "usageNote": "本故事车辆装地图和装备；原来源可含载人/运货宽义，不把当前选义当成所有van的完整范围。",
+      "provenance": "External evidence · WordNet 3.0原义独立保留；Researcher inference · 项目选义、中文辅助与原创例句，非词典原例句。",
+      "senseId": "n:04520170",
+      "forms": [
+        "vans"
+      ]
+    },
+    "site": {
+      "zh": "事物所在的地点",
+      "example": "The site beside the river is shown on the map.",
+      "exampleZh": "地图标出了河边的地点。",
+      "usageNote": "在on-site experience组合中指亲自到访的地点；整个组合的现场体验义仍由原phrase与项目说明支持。",
+      "provenance": "External evidence · WordNet 3.0原义独立保留；Researcher inference · 项目选义、中文辅助与原创例句，非词典原例句。",
+      "senseId": "n:08651247"
+    },
+    "experience": {
+      "zh": "亲身观察或参与形成的体验内容",
+      "example": "",
+      "exampleZh": "",
+      "usageNote": "本句on-site experience指现场观察；不是求职履历中的工作经验。",
+      "provenance": "External evidence · WordNet 3.0原义独立保留；Researcher inference · 项目选义、中文辅助与原创例句，非词典原例句。",
+      "senseId": "n:05984584",
+      "contrasts": [
+        {
+          "senseId": "n:05758059",
+          "zh": "参与活动积累的知识或技能",
+          "example": "She has experience in organising events.",
+          "exampleZh": "她有组织活动的经验。",
+          "provenance": "Researcher inference · 项目原创多义对比例句；WordNet原定义另列。"
+        }
+      ]
+    }
+  }
+}

@@ -1239,6 +1239,112 @@
         }
       }
     },
+    "S07.J04": {
+      "title": "步行导览前的一站",
+      "goal": "核对交通线路和下车站，再根据最后一段步行说明选择。",
+      "situation": "早午餐后，玛雅的哥哥回车站赶下午的火车。玛雅这一天剩下的时间没有安排。乔告诉她，河边博物馆外有一场步行导览，于是她拿着集合地址回到车站广场。主入口旁立着线路板。一条线表示沿街道前往博物馆的有轨电车；另一条表示先坐地铁，再走十分钟。玛雅问工作人员哪趟电车去博物馆，接着核对该在哪里下车。\n\n电车行程更长，但站点就在博物馆外；地铁行程更短，下车后却离集合点更远。玛雅选择电车，因为她想找一个容易确认的地方。在车站入口左侧的站点，她把线路板上的号码与到站车辆上方的号码核对。后来，车门在博物馆低墙旁打开。墙上的海报标出集合点。玛雅下车，折好路线便签，寻找导览队伍。",
+      "paragraphs": [
+        {
+          "en": "After brunch, Maya’s brother headed back to the station for his afternoon train. Maya had the rest of the day free. Jo had told her about a guided walk starting outside the river museum, so she carried the meeting address back to the station square. A route board stood beside the main entrance. One line showed a tram running along the street to the museum. Another showed the underground, followed by a ten-minute walk. Maya asked the worker which tram went to the museum, then checked where to get off.",
+          "zh": "早午餐后，玛雅的哥哥回车站赶下午的火车。玛雅这一天剩下的时间没有安排。乔告诉她，河边博物馆外有一场步行导览，于是她拿着集合地址回到车站广场。主入口旁立着线路板。一条线表示沿街道前往博物馆的有轨电车；另一条表示先坐地铁，再走十分钟。玛雅问工作人员哪趟电车去博物馆，接着核对该在哪里下车。"
+        },
+        {
+          "en": "The tram journey was longer, but its stop was outside the museum. The underground journey was shorter, but it would leave her farther from the meeting point. She chose the tram because she wanted an easy place to find. At the stop to the left of the station entrance, she matched the number on the board with the number above the arriving vehicle. Later, the doors opened beside a low museum wall. A poster there showed the meeting point. Maya stepped down, folded her route note and looked for the group.",
+          "zh": "电车行程更长，但站点就在博物馆外；地铁行程更短，下车后却离集合点更远。玛雅选择电车，因为她想找一个容易确认的地方。在车站入口左侧的站点，她把线路板上的号码与到站车辆上方的号码核对。后来，车门在博物馆低墙旁打开。墙上的海报标出集合点。玛雅下车，折好路线便签，寻找导览队伍。"
+        }
+      ],
+      "prompts": {
+        "S07.J04.P01": {
+          "function": "请求与核对",
+          "cue": "你在车站，需要去河边博物馆。询问应该乘哪趟沿街轨道行驶的车。",
+          "acceptableAnswers": [
+            "哪趟电车去博物馆？",
+            "可以告诉我去博物馆应该乘哪趟电车吗？"
+          ],
+          "feedback": "说出目的地，并询问适合的线路。"
+        },
+        "S07.J04.P02": {
+          "function": "请求与核对",
+          "cue": "你已经知道该乘哪趟车，但不确定在哪里下车。询问去博物馆应该在哪一站下。",
+          "acceptableAnswers": [
+            "去博物馆应该在哪一站下车？",
+            "可以告诉我应该在哪里下车吗？"
+          ],
+          "feedback": "询问下车位置；有多个站点时，把目的地说清楚。"
+        },
+        "S07.J04.P03": {
+          "function": "比较选择",
+          "cue": "一种交通方式行程更长，但停在博物馆外；另一种更快，下车后还要走十分钟。说明你会选哪种，以及原因。",
+          "acceptableAnswers": [
+            "我会坐电车，因为站点就在博物馆外。",
+            "我会坐地铁，因为行程更短，而且我不介意步行。"
+          ],
+          "feedback": "两种选择都可以；理由要与给定行程和自身需要相符。"
+        },
+        "S07.J04.T01": {
+          "function": "换角色与条件",
+          "cue": "你在另一座车站帮助游客。今天公交车停在美术馆外，铁路站点却更远。一位游客希望最后少走路。建议对方乘公交车，并提醒核对下车站。",
+          "acceptableAnswers": [
+            "我会坐公交车，因为它停在美术馆外。可以问：“应该在哪一站下车？”",
+            "我会坐公交车，因为最后一段路更短。可以询问去美术馆应该在哪一站下车。"
+          ],
+          "feedback": "根据新的目的地和交通选项调整，给出理由，并提供可用的下车站问题。"
+        }
+      }
+    },
+    "S07.J05": {
+      "title": "桥下的几道线",
+      "goal": "询问参加导览，请人指出细节，并描述自己在现场注意到的事物。",
+      "situation": "博物馆墙上的海报旁，两位向导正与一小群人等候。右侧服务门旁停着一辆白色厢型车；一位向导从车里取出一箱地图。玛雅问能否参加步行导览。还有名额，于是名叫诺拉的向导递给她一张地图。地图上印着一座低桥的图片。他们沿河走到那里。图片里的灰墙看起来很平滑；到了现场，玛雅能听到桥下水声，也看见墙底附近几道浅色的线。\n\n“可以指给我看那几道线吗？”玛雅问。诺拉站在步道上指给她看，那些是水在不同时期留下的痕迹。玛雅写下自己能看到的细节，把痕迹年代的问题留给诺拉回答。走到桥后的长椅，她给乔发了一条简短消息，描述这次现场体验：墙上的线和河水的声音。回旅社前，她核对了返回博物馆的路线。这次，便签里除了路线，还有她亲眼看过的一个细节。",
+      "paragraphs": [
+        {
+          "en": "At the poster beside the museum wall, two guides were waiting with a small group. A white van stood by the service door to the right; one guide took a box of maps from it. Maya asked whether she could join the guided walk. There was room, so a guide named Nora handed her a map. The map included a picture of a low bridge. They followed the river to it. In the picture, its grey wall looked smooth. Here, Maya could hear water moving under the bridge and see pale lines near the bottom.",
+          "zh": "博物馆墙上的海报旁，两位向导正与一小群人等候。右侧服务门旁停着一辆白色厢型车；一位向导从车里取出一箱地图。玛雅问能否参加步行导览。还有名额，于是名叫诺拉的向导递给她一张地图。地图上印着一座低桥的图片。他们沿河走到那里。图片里的灰墙看起来很平滑；到了现场，玛雅能听到桥下水声，也看见墙底附近几道浅色的线。"
+        },
+        {
+          "en": "“Could you show me those lines?” Maya asked. Nora pointed from the path. They were marks left by the water at different times. Maya wrote down what she could see and kept her question about their age for Nora. At the bench beyond the bridge, she sent Jo a short message about the on-site experience. She described the lines and the sound of the river. Before returning to the hostel, she checked the path back to the museum. This time, her note held a detail she had seen herself as well as a route.",
+          "zh": "“可以指给我看那几道线吗？”玛雅问。诺拉站在步道上指给她看，那些是水在不同时期留下的痕迹。玛雅写下自己能看到的细节，把痕迹年代的问题留给诺拉回答。走到桥后的长椅，她给乔发了一条简短消息，描述这次现场体验：墙上的线和河水的声音。回旅社前，她核对了返回博物馆的路线。这次，便签里除了路线，还有她亲眼看过的一个细节。"
+        }
+      ],
+      "prompts": {
+        "S07.J05.P01": {
+          "function": "请求与核对",
+          "cue": "一群人准备跟向导开始步行观光。询问你能否加入。",
+          "acceptableAnswers": [
+            "我可以参加步行导览吗？",
+            "请问我能参加这次向导带领的步行观光吗？"
+          ],
+          "feedback": "明确询问能否参加，让向导确认安排。"
+        },
+        "S07.J05.P02": {
+          "function": "请求与核对",
+          "cue": "你看到桥墙底部有浅浅的线，请诺拉指出她说的是哪几道。",
+          "acceptableAnswers": [
+            "可以指给我看墙上那几道线吗？",
+            "可以指给我看墙底附近的水痕吗？"
+          ],
+          "feedback": "说出具体细节或所在位置，让对方知道你问哪一处。"
+        },
+        "S07.J05.P03": {
+          "function": "说明情况",
+          "cue": "乔问你这次参观注意到了什么。说出一个可见细节，并说明是在现场看到的。",
+          "acceptableAnswers": [
+            "我在现场时注意到墙上几道浅色的线。",
+            "我在现场时注意到桥墙底部附近的水痕。"
+          ],
+          "feedback": "给出一个具体观察；还想核实的问题可以另行提出。"
+        },
+        "S07.J05.T01": {
+          "function": "换角色与条件",
+          "cue": "你跟志愿者参观社区花园。请对方指给你看植物旁的小标签；之后告诉朋友，你在现场注意到标签使用了几种语言。",
+          "acceptableAnswers": [
+            "可以指给我看植物旁的标签吗？我在现场时注意到标签用了几种语言。",
+            "可以给我看看那些植物标签吗？我在现场时注意到标签使用了几种语言。"
+          ],
+          "feedback": "把请求与观察都迁移到花园，描述新细节。"
+        }
+      }
+    },
     "S06.A01": {
       "title": "为一次交谈找房间",
       "goal": "预订房间并确认时间，再通知参加的人。",
@@ -1442,6 +1548,352 @@
           "checks": [
             "提出新期限",
             "说明未完成的原因"
+          ]
+        }
+      }
+    },
+    "S06.A03": {
+      "title": "新课程的一席位置",
+      "goal": "核对加入课程所需材料，并确认注册是否完成。",
+      "situation": "完成此前的项目后，林想加入一门短期夜间课程。课程办公室的桌子左侧放着一张表，旁边列着需要的文件。她问：“我需要带哪些文件？”工作人员指着清单：身份证明，以及她先前课程的结业证书。林的文件夹里有证书，却把身份证件留在了家中。她现在可以填表，但注册尚未完成。\n\n她把证书放在桌子正中，核对课程内容。第一个模块是规划一个小型社区项目，可以与后续部分分开学习。工作人员把第一堂课的时间写在文件夹右侧的卡上。当天下午，林带着身份证件回来，询问注册是否完成。这一次，工作人员确认已经完成。林把上课卡夹进笔记本，准备去找教室，不再只是希望自己已经报上名。",
+      "paragraphs": [
+        {
+          "en": "After finishing the earlier project, Lin wanted to join a short evening course. At the course office, a form lay on the left of the desk, with a list of documents beside it. She asked, \"Which documents do I need to bring?\" The assistant pointed to the list: proof of identity and a certificate from her previous course. Lin had the certificate in a folder, but she had left her identity card at home. She could fill in the form now, yet her enrolment was not complete.",
+          "zh": "完成此前的项目后，林想加入一门短期夜间课程。课程办公室的桌子左侧放着一张表，旁边列着需要的文件。她问：“我需要带哪些文件？”工作人员指着清单：身份证明，以及她先前课程的结业证书。林的文件夹里有证书，却把身份证件留在了家中。她现在可以填表，但注册尚未完成。"
+        },
+        {
+          "en": "She placed the certificate in the middle of the desk and checked the course details. The first module was about planning a small community project. It could be studied separately from the later parts. The assistant wrote the first class time on a card to the right of the folder. Lin returned with her identity card that afternoon and asked whether her enrolment was complete. This time the assistant confirmed it. Lin put the class card in her notebook, ready to find the room rather than simply hoping she had a place.",
+          "zh": "她把证书放在桌子正中，核对课程内容。第一个模块是规划一个小型社区项目，可以与后续部分分开学习。工作人员把第一堂课的时间写在文件夹右侧的卡上。当天下午，林带着身份证件回来，询问注册是否完成。这一次，工作人员确认已经完成。林把上课卡夹进笔记本，准备去找教室，不再只是希望自己已经报上名。"
+        }
+      ],
+      "prompts": {
+        "S06.A03.P01": {
+          "function": "核对所需材料",
+          "cue": "你想加入课程，但不知道去办公室要带什么材料。询问所需文件。",
+          "acceptableAnswers": [
+            "我需要带哪些文件？",
+            "这门课程需要我带哪些文件？"
+          ],
+          "feedback": "先询问，不自行假定办公室的要求。",
+          "checks": [
+            "询问所需材料",
+            "保持请求清楚"
+          ]
+        },
+        "S06.A03.P02": {
+          "function": "说明现有材料与行动",
+          "cue": "你带来了证明先前课程已完成的文件。说明你带了什么，以及现在可以怎样处理空白表格。",
+          "acceptableAnswers": [
+            "我带了证书，现在可以填表。",
+            "我可以填表。我带了先前课程的证书。"
+          ],
+          "feedback": "说出证明文件和行动；有一份文件不等于全部手续办完。",
+          "checks": [
+            "指出带来的证明文件",
+            "说明可以填表"
+          ]
+        },
+        "S06.A03.P03": {
+          "function": "确认办理状态",
+          "cue": "你带着遗漏的身份证件回来了。询问加入课程的注册手续现在是否完成。",
+          "acceptableAnswers": [
+            "我的注册现在完成了吗？",
+            "可以确认我的注册是否完成了吗？"
+          ],
+          "feedback": "请求确认，不把提交表格直接当成被录取。",
+          "checks": [
+            "询问手续完成状态",
+            "等待对方确认"
+          ]
+        },
+        "S06.A03.T01": {
+          "function": "迁移：另一处报名",
+          "cue": "换到体育中心的游泳课程。第一次去之前，询问应带哪些文件，以及能否在那里填表。",
+          "acceptableAnswers": [
+            "我需要带哪些文件？可以在中心填表吗？",
+            "游泳课程需要带哪些文件？我想在那里填表。"
+          ],
+          "feedback": "复用问题，不把大学课程的材料清单搬到新地点。",
+          "checks": [
+            "询问新课程所需材料",
+            "询问填表安排"
+          ]
+        }
+      }
+    },
+    "S06.A04": {
+      "title": "留给小教室的问题",
+      "goal": "索取遗漏的讲义，并用它准备小组课堂的问题。",
+      "situation": "第一次上课时，林发现门左侧的桌子上放着一摞纸。她拿了一份讲义，坐下面对前方的讲者。讲座介绍了规划社区项目的方法，以当地花园为例。林在印出的图旁记笔记。讲到一半，她发现自己的讲义少了一页。讲者提到一个清单，但她看不到。她没有猜，而是在页边记下一个问题。\n\n讲座结束后，她回到放纸的桌旁，问：“能给我一份缺失那页的副本吗？”有了完整讲义，她就能跟上这个例子。随后，研讨课在大厅右侧的小教室进行。六名学生围着一张桌子，讨论这个计划在自己社区里如何实现。林提出了那个问题：假期期间由谁给花园浇水？另一名学生建议轮流承担。讲义帮助她参与讨论，而不是给出了所有答案。",
+      "paragraphs": [
+        {
+          "en": "At the first class, Lin found a pile of papers on a table to the left of the door. She took a handout and sat facing the speaker at the front. The lecture introduced ways to plan a community project, using a local garden as an example. Lin made notes beside the printed diagram. Halfway through, she noticed that her copy was missing a page. The speaker referred to a list she could not see. Rather than guessing, she marked a question in the margin.",
+          "zh": "第一次上课时，林发现门左侧的桌子上放着一摞纸。她拿了一份讲义，坐下面对前方的讲者。讲座介绍了规划社区项目的方法，以当地花园为例。林在印出的图旁记笔记。讲到一半，她发现自己的讲义少了一页。讲者提到一个清单，但她看不到。她没有猜，而是在页边记下一个问题。"
+        },
+        {
+          "en": "After the talk, she returned to the paper table and asked, \"Could I have a copy of the missing page?\" With the full handout, she could follow the example. Later, a seminar met in the smaller room on the right of the hall. Six students sat around one table and discussed how the plan might work in their own neighbourhood. Lin asked her question about who would water the garden during holidays. Another student suggested sharing the task. The printed page had helped her enter the discussion, not given her every answer.",
+          "zh": "讲座结束后，她回到放纸的桌旁，问：“能给我一份缺失那页的副本吗？”有了完整讲义，她就能跟上这个例子。随后，研讨课在大厅右侧的小教室进行。六名学生围着一张桌子，讨论这个计划在自己社区里如何实现。林提出了那个问题：假期期间由谁给花园浇水？另一名学生建议轮流承担。讲义帮助她参与讨论，而不是给出了所有答案。"
+        }
+      ],
+      "prompts": {
+        "S06.A04.P01": {
+          "function": "索取缺失材料",
+          "cue": "发给你的材料少了一页。向工作人员说明问题并索取那页。",
+          "acceptableAnswers": [
+            "我的讲义少了一页。能给我一份缺失那页的副本吗？",
+            "能给我缺失那页的副本吗？我的讲义少了那页。"
+          ],
+          "feedback": "说出材料及具体缺少的部分。",
+          "checks": [
+            "说明缺页",
+            "提出具体请求"
+          ]
+        },
+        "S06.A04.P02": {
+          "function": "说明先后课堂活动",
+          "cue": "朋友问你先后做了什么。说明先听正式讲授，再参加小组讨论。",
+          "acceptableAnswers": [
+            "我先听了讲座，随后参加研讨课。",
+            "讲座后，我参加了讨论花园计划的研讨课。"
+          ],
+          "feedback": "按顺序描述实际活动；这里两类课堂的名称不能互换。",
+          "checks": [
+            "说明先讲授后讨论",
+            "使用相应课堂名称"
+          ]
+        },
+        "S06.A04.P03": {
+          "function": "提出自己的问题",
+          "cue": "小组正在讨论花园。你不确定假期由谁浇水。说明你想问什么。",
+          "acceptableAnswers": [
+            "我想问一个问题：假期由谁给花园浇水？",
+            "我能问一个有关假期浇水的问题吗？"
+          ],
+          "feedback": "说明问题主题，不只是请求发言。",
+          "checks": [
+            "提出问题",
+            "指出假期浇水主题"
+          ]
+        },
+        "S06.A04.T01": {
+          "function": "迁移：其他讲座材料",
+          "cue": "换到公共健康讲座：印出的安全指南少了一页。请求另一份，并说明你对其中一条说明有问题。",
+          "acceptableAnswers": [
+            "能给我完整指南的副本吗？我想问其中一条说明。",
+            "能给我缺失那页的副本吗？我能问一个有关说明的问题吗？"
+          ],
+          "feedback": "复用材料请求，并指出新问题主题。",
+          "checks": [
+            "请求完整材料",
+            "说明问题主题"
+          ]
+        }
+      }
+    },
+    "S06.A05": {
+      "title": "自己看不懂的一页",
+      "goal": "为考试复习，指出困难并寻求有指导的帮助。",
+      "situation": "两周后，林要参加第一课程单元的结课考试。她从正门进入中央图书馆，找到窗边的一张安静书桌。教科书放在桌子正中，旁边是之前的课堂笔记。她先遮住笔记，尝试解释主要观点，以此开始考前复习。有一页关于分摊项目费用的内容仍让她困惑。再读一遍，她依旧不知道两个数字为什么不同。她把数字写在书右侧的蓝色问题卡上。\n\n她给导师发了一条短消息，请求帮助理解这个例子。导师回复说，第二天上午可以为三名学生开一节辅导课。林把时间写在问题卡上，带着卡和教科书去上课。小教室里，导师请她说明卡在哪里。他们一起梳理了哪些费用共同分摊，哪些属于某一个人。回到图书馆后，林不看笔记，尝试了一个新例子。现在，她能说清这些数字的含义了。",
+      "paragraphs": [
+        {
+          "en": "Two weeks later, Lin had an exam at the end of the first course unit. She entered the central library through the main doors and found a quiet desk near the window. A textbook lay in the middle of the desk beside her old class notes. She began her revision by covering the notes and trying to explain the main ideas. One page about sharing project costs still confused her. Reading it again did not tell her why two figures were different. She wrote the figures on a blue question card to the right of the book.",
+          "zh": "两周后，林要参加第一课程单元的结课考试。她从正门进入中央图书馆，找到窗边的一张安静书桌。教科书放在桌子正中，旁边是之前的课堂笔记。她先遮住笔记，尝试解释主要观点，以此开始考前复习。有一页关于分摊项目费用的内容仍让她困惑。再读一遍，她依旧不知道两个数字为什么不同。她把数字写在书右侧的蓝色问题卡上。"
+        },
+        {
+          "en": "She sent a short message to her tutor asking for help with that example. The reply offered a tutorial for three students the next morning. Lin added the time to the question card and brought both the card and the textbook. In the small room, the tutor asked her to explain where she got stuck. Together they traced which costs were shared and which belonged to one person. Back at the library, Lin tried a new example without the notes. She could now say what the figures meant.",
+          "zh": "她给导师发了一条短消息，请求帮助理解这个例子。导师回复说，第二天上午可以为三名学生开一节辅导课。林把时间写在问题卡上，带着卡和教科书去上课。小教室里，导师请她说明卡在哪里。他们一起梳理了哪些费用共同分摊，哪些属于某一个人。回到图书馆后，林不看笔记，尝试了一个新例子。现在，她能说清这些数字的含义了。"
+        }
+      ],
+      "prompts": {
+        "S06.A05.P01": {
+          "function": "说明复习计划",
+          "cue": "朋友问你为什么又在看课程材料。说明你正在复习，以及要准备什么。",
+          "acceptableAnswers": [
+            "我正在复习，为考试做准备。",
+            "我的复习是为了准备考试。"
+          ],
+          "feedback": "交代考试目的；这里的名词是重新学习，不是修改文稿。",
+          "checks": [
+            "说明复习行为",
+            "交代考试目的"
+          ]
+        },
+        "S06.A05.P02": {
+          "function": "说明地点与材料",
+          "cue": "告诉同学，你在校园哪个主要图书馆学习，以及使用什么标准课程书。",
+          "acceptableAnswers": [
+            "我在中央图书馆学习，并使用教科书。",
+            "我带着教科书去中央图书馆学习。"
+          ],
+          "feedback": "说清地点和学习材料。",
+          "checks": [
+            "指出主要图书馆",
+            "说明使用课本"
+          ]
+        },
+        "S06.A05.P03": {
+          "function": "指出不理解的地方",
+          "cue": "例子里有两个不同的费用数字。告诉教师你还无法解释什么。",
+          "acceptableAnswers": [
+            "我仍不明白这些数字为什么不同。",
+            "我仍不明白这两个数字的区别。"
+          ],
+          "feedback": "指出具体困难，让教师可以有针对性地帮助。",
+          "checks": [
+            "指出尚不理解的内容",
+            "保持问题具体"
+          ]
+        },
+        "S06.A05.T01": {
+          "function": "迁移：培训中的难题",
+          "cue": "换到工作安全培训：两条说明似乎有冲突。告诉培训者你还不明白什么。",
+          "acceptableAnswers": [
+            "我仍不明白这两条说明为什么不同。",
+            "我仍不明白应遵循哪一条说明。"
+          ],
+          "feedback": "把同一求助表达用于新信息，不照搬数字问题。",
+          "checks": [
+            "指出新培训中的困难",
+            "请求针对性解释"
+          ]
+        }
+      }
+    },
+    "S06.A06": {
+      "title": "值得说清的结果",
+      "goal": "询问评分反馈，并向听众说明一项发现。",
+      "situation": "下一周，林收到了此前提交的花园项目短文。上面写着成绩，旁边的批注要求给出更清楚的例子。她把稿纸放在教室桌子左侧。成绩让她失望，但批注给了她可以采取行动的方向。她请教师解释成绩。教师指出，林在一个段落里提到了问题，却没有展示它如何影响园艺参与者。林把一个实际情境写在桌子正中的卡上。\n\n她的报告安排在下一次课。她在右侧屏幕上准备了一张幻灯片，展示假期里干旱的花园。她将展示小组的发现，再解释共同浇水安排为何重要。报告那天，她先给例子，再列出较长的观点清单。一名同学问，小组如何公平分配任务。林借助卡片解释了拟议计划。她仍想下次取得更好的成绩，但现在知道工作中哪部分需要说得更清楚。",
+      "paragraphs": [
+        {
+          "en": "The next week, Lin received the essay she had submitted about the garden project. A grade was written at the top, with a comment asking for a clearer example. She laid the paper on the left of a classroom desk. The result disappointed her, but the comment gave her something she could act on. She asked the teacher to explain the grade. The teacher pointed to a paragraph where Lin had named a problem without showing how it affected the gardeners. Lin wrote one real situation on a card in the middle of the desk.",
+          "zh": "下一周，林收到了此前提交的花园项目短文。上面写着成绩，旁边的批注要求给出更清楚的例子。她把稿纸放在教室桌子左侧。成绩让她失望，但批注给了她可以采取行动的方向。她请教师解释成绩。教师指出，林在一个段落里提到了问题，却没有展示它如何影响园艺参与者。林把一个实际情境写在桌子正中的卡上。"
+        },
+        {
+          "en": "Her presentation was scheduled for the following class. On the screen to the right, she prepared one slide showing a dry garden during a holiday. She would present the group's findings, then explain why a shared watering plan mattered. When the day came, she put the example before the long list of ideas. A classmate asked how the group would share the task fairly. Lin used the card to explain their proposed plan. She still wanted a better result next time, but now she knew which part of the work needed to become clearer.",
+          "zh": "她的报告安排在下一次课。她在右侧屏幕上准备了一张幻灯片，展示假期里干旱的花园。她将展示小组的发现，再解释共同浇水安排为何重要。报告那天，她先给例子，再列出较长的观点清单。一名同学问，小组如何公平分配任务。林借助卡片解释了拟议计划。她仍想下次取得更好的成绩，但现在知道工作中哪部分需要说得更清楚。"
+        }
+      ],
+      "prompts": {
+        "S06.A06.P01": {
+          "function": "询问成绩反馈",
+          "cue": "教师退回作文，写了成绩与一条批注。请求解释这个成绩。",
+          "acceptableAnswers": [
+            "能解释一下我的成绩吗？",
+            "请问能解释我的成绩和这条批注吗？"
+          ],
+          "feedback": "请求理解和改进，不无理由地要求提高分数。",
+          "checks": [
+            "询问成绩含义",
+            "保持请求礼貌"
+          ]
+        },
+        "S06.A06.P02": {
+          "function": "说明写作内容",
+          "cue": "同学问你的短篇写作讲什么。告诉他主题。",
+          "acceptableAnswers": [
+            "我的短文讨论花园项目。",
+            "我写了一篇关于规划社区花园的短文。"
+          ],
+          "feedback": "说出写作类型及具体主题。",
+          "checks": [
+            "说明写作类型",
+            "给出主题"
+          ]
+        },
+        "S06.A06.P03": {
+          "function": "说明报告计划",
+          "cue": "下次你要向全班报告。说明将展示什么，以及报告如何开始。",
+          "acceptableAnswers": [
+            "在报告中，我会展示我们的发现，并从具体例子开始。",
+            "在报告中，我会先给一个例子，再向全班展示我们的发现。"
+          ],
+          "feedback": "报告是名词，展示发现是动作；例子应帮助听众理解。",
+          "checks": [
+            "说明报告活动",
+            "使用展示动作",
+            "交代开头方式"
+          ]
+        },
+        "S06.A06.T01": {
+          "function": "迁移：向团队展示",
+          "cue": "换到志愿团队：你们查看了访客如何使用公园。告诉团队，你将展示发现并给一个例子。",
+          "acceptableAnswers": [
+            "我会向团队展示我们的发现，并给一个具体例子。",
+            "我们会用公园中的具体例子展示我们的发现。"
+          ],
+          "feedback": "更换听众，并把展示动作与实际发现联系起来。",
+          "checks": [
+            "展示新项目发现",
+            "给出具体例子"
+          ]
+        }
+      }
+    },
+    "S06.A07": {
+      "title": "午饭途中多出的一个问题",
+      "goal": "找到校园地点，核对职位空缺与工作时间。",
+      "situation": "报告后，林想先吃午饭，再回图书馆。她在路旁校园地图前问一名学生，食堂在哪里。他指向院子对面的一幢楼。门旁的地图标着取餐柜台和座位区。林买了汤，坐在右侧告示板附近。她在服务中心的临时工作时段很快就要结束，所以桌子上方的一张小告示引起了她注意：食堂正在招聘一名帮手。\n\n她正在寻找能配合上课时间的兼职工作。告示给了办公室号码，却没有说帮手要在哪几天工作。林把号码写在碗左侧的便条上。午饭后，她向办公室询问职位是否仍空缺，以及如何申请。工作人员解释了工作时段，并给她一份申请表。林拿去仔细阅读。找到可能的工作是有帮助的，但是否接受，还取决于能不能兼顾学习约定。",
+      "paragraphs": [
+        {
+          "en": "After the presentation, Lin wanted lunch before returning to the library. At the campus map beside the path, she asked a student where the canteen was. He pointed to a building across the courtyard. A map by its door showed the food counter and the seating area. Lin bought soup and sat near the noticeboard on the right. Her temporary hours at the service centre were ending soon, so a small notice above the tables caught her eye. It advertised a vacancy for a helper in the canteen.",
+          "zh": "报告后，林想先吃午饭，再回图书馆。她在路旁校园地图前问一名学生，食堂在哪里。他指向院子对面的一幢楼。门旁的地图标着取餐柜台和座位区。林买了汤，坐在右侧告示板附近。她在服务中心的临时工作时段很快就要结束，所以桌子上方的一张小告示引起了她注意：食堂正在招聘一名帮手。"
+        },
+        {
+          "en": "She was looking for part-time employment that could fit around her classes. The notice gave an office number but did not say which days the helper would work. Lin wrote the number on a note to the left of her bowl. After lunch, she asked the office whether the vacancy was still available and how she could apply for the job. The assistant explained the hours and offered an application form. Lin took it to read carefully. Finding a possible job was useful; accepting it would depend on whether she could keep her study commitments.",
+          "zh": "她正在寻找能配合上课时间的兼职工作。告示给了办公室号码，却没有说帮手要在哪几天工作。林把号码写在碗左侧的便条上。午饭后，她向办公室询问职位是否仍空缺，以及如何申请。工作人员解释了工作时段，并给她一份申请表。林拿去仔细阅读。找到可能的工作是有帮助的，但是否接受，还取决于能不能兼顾学习约定。"
+        }
+      ],
+      "prompts": {
+        "S06.A07.P01": {
+          "function": "寻找午餐地点",
+          "cue": "你在校园里，想找学生可以买午饭的地方。向另一名学生问路。",
+          "acceptableAnswers": [
+            "食堂在哪里？",
+            "可以告诉我食堂在哪里吗？"
+          ],
+          "feedback": "询问具体地点，不泛泛描述校园。",
+          "checks": [
+            "询问食堂位置",
+            "表达清楚"
+          ]
+        },
+        "S06.A07.P02": {
+          "function": "确认岗位是否空缺",
+          "cue": "告示说餐饮服务需要一名帮手，但可能是旧告示。询问这个职位现在是否仍空缺。",
+          "acceptableAnswers": [
+            "食堂这个职位现在仍空缺吗？",
+            "可以告诉我这个职位现在是否仍空缺吗？"
+          ],
+          "feedback": "采用职位义，并核对当前状态。",
+          "checks": [
+            "询问职位空缺",
+            "核对当前状态"
+          ]
+        },
+        "S06.A07.P03": {
+          "function": "询问申请下一步",
+          "cue": "办公室说职位仍空缺。询问如何申请，以及将在哪些时段工作。",
+          "acceptableAnswers": [
+            "怎样申请这个职位？能告诉我工作时段吗？",
+            "我想申请这个职位。工作时段是什么？"
+          ],
+          "feedback": "先核对流程与时间，再决定是否适合。",
+          "checks": [
+            "询问申请方式",
+            "核对工作时间"
+          ]
+        },
+        "S06.A07.T01": {
+          "function": "迁移：其他职位",
+          "cue": "换到书店：店里需要周末帮手。询问职位是否仍空缺，以及如何申请。",
+          "acceptableAnswers": [
+            "职位还空缺吗？我该怎样申请？",
+            "可以告诉我职位是否仍空缺吗？我想申请这份工作。"
+          ],
+          "feedback": "更换工作地点，保留状态和申请的问题。",
+          "checks": [
+            "核对新职位状态",
+            "询问申请下一步"
           ]
         }
       }

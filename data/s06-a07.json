@@ -1,0 +1,280 @@
+{
+  "id": "S06.A07",
+  "branchId": "work-study",
+  "navTitle": "食堂地图与招聘告示",
+  "title": "A lunch stop with another question",
+  "goal": "Find a campus place and check a job opening and its working hours.",
+  "memoryNodes": [
+    {
+      "id": "S06.A07.L01",
+      "locationZh": "校园路径旁：午餐路线地图",
+      "zh": "校园路径旁：午餐路线地图",
+      "locationRelationZh": "报告后沿校园路径问路，再到院子对面的食堂门；地图引导找到用餐地点。",
+      "object": "Campus map beside the path",
+      "cue": "Where can Lin buy lunch?",
+      "cueZh": "林在哪里可以买午饭？",
+      "questionZh": "林在哪里可以买午饭？",
+      "anchorTerms": [
+        "canteen",
+        "Where is the canteen?"
+      ],
+      "previousNodeId": "S06.A06.L03",
+      "nextNodeId": "S06.A07.L02",
+      "evidenceType": "Researcher inference"
+    },
+    {
+      "id": "S06.A07.L02",
+      "locationZh": "食堂餐桌右侧：帮手招聘告示",
+      "zh": "食堂餐桌右侧：帮手招聘告示",
+      "locationRelationZh": "用餐时转向右侧告示板，因临时工作即将结束而查看新机会。",
+      "object": "Job notice on the right",
+      "cue": "Which position might be available?",
+      "cueZh": "哪个职位可能空缺？",
+      "questionZh": "哪个职位可能空缺？",
+      "anchorTerms": [
+        "vacancy",
+        "employment"
+      ],
+      "previousNodeId": "S06.A07.L01",
+      "nextNodeId": "S06.A07.L03",
+      "evidenceType": "Researcher inference"
+    },
+    {
+      "id": "S06.A07.L03",
+      "locationZh": "餐碗左侧：办公室号码与申请便条",
+      "zh": "餐碗左侧：办公室号码与申请便条",
+      "locationRelationZh": "从右侧告示抄下信息到左侧便条，再联系办公室核对；不代表已经获聘。",
+      "object": "Office number note to the left of the bowl",
+      "cue": "What must she ask before deciding?",
+      "cueZh": "决定前她必须问什么？",
+      "questionZh": "决定前她必须问什么？",
+      "anchorTerms": [
+        "apply for the job",
+        "working hours"
+      ],
+      "previousNodeId": "S06.A07.L02",
+      "nextNodeId": null,
+      "evidenceType": "Researcher inference"
+    }
+  ],
+  "situation": "After the presentation, Lin wanted lunch before returning to the library. At the campus map beside the path, she asked a student where the canteen was. He pointed to a building across the courtyard. A map by its door showed the food counter and the seating area. Lin bought soup and sat near the noticeboard on the right. Her temporary hours at the service centre were ending soon, so a small notice above the tables caught her eye. It advertised a vacancy for a helper in the canteen. She was looking for part-time employment that could fit around her classes. The notice gave an office number but did not say which days the helper would work. Lin wrote the number on a note to the left of her bowl. After lunch, she asked the office whether the vacancy was still available and how she could apply for the job. The assistant explained the hours and offered an application form. Lin took it to read carefully. Finding a possible job was useful; accepting it would depend on whether she could keep her study commitments.",
+  "zhSupport": "canteen 是校园食堂；employment 选有报酬的工作状态，较 job 正式，可先辅助识别。vacancy 是可申请的职位，不是空房或空座。林此前的临时工作将结束，才寻找新机会。",
+  "easySummary": "Lin finds the canteen and sees a job notice. She asks if the job is open and checks the hours before applying.",
+  "easySummaryZh": "林找到食堂并看到招聘告示。她先询问职位是否空缺，核对工作时段，再考虑申请。",
+  "wordFile": "./data/s06-a07-words.json",
+  "provenance": {
+    "type": "Researcher inference",
+    "adaptedFrom": "tmp/v12-selected-candidates.json · 工作学习17候选；承接现有 work-study，情节、空间与例句原创",
+    "note": "依据项目场景规划编写短课；人物、情节、题目与译解为原创。不是官方IELTS材料。"
+  },
+  "terms": [
+    {
+      "term": "canteen",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 279; 大全直 PRO 听力预习词表 p.13 U6 [Listening]",
+      "canonicalTerm": "canteen",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 食堂 | a place in a factory or school where meals are served"
+    },
+    {
+      "term": "employment",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 683; 大全直 PRO 听力预习词表 p.5 U2 [Listening]",
+      "canonicalTerm": "employment",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 工作 | work, especially when it is done to earn money; the state of being employed"
+    },
+    {
+      "term": "vacancy",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 2017; 大全直 PRO 听力预习词表 p.5 U2 [Listening] | 雅思一万词汇班 p.12 [Scientific research 科研类]",
+      "canonicalTerm": "vacancy",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 空缺 | a job that is available for sb to do || 雅思一万词汇班 | Scientific research 科研类 | n. | vacant a. 空的，⽆无⼈人的，空缺的 vacancy n. 空缺；职位；"
+    }
+  ],
+  "glossary": [
+    {
+      "id": "S06.A07.G01",
+      "text": "canteen",
+      "zh": "食堂",
+      "note": "学校或工厂提供餐食的地方；本课为校园食堂。",
+      "type": "word",
+      "sourceTerm": "canteen",
+      "example": "Where is the canteen?",
+      "exampleZh": "食堂在哪里？"
+    },
+    {
+      "id": "S06.A07.G02",
+      "text": "employment",
+      "zh": "工作；受雇状态",
+      "note": "选择有报酬的工作或被雇用状态；不是“雇用某人”的动词。较 job 正式。",
+      "type": "word",
+      "sourceTerm": "employment",
+      "example": "I am looking for part-time employment.",
+      "exampleZh": "我在寻找兼职工作。"
+    },
+    {
+      "id": "S06.A07.G03",
+      "text": "vacancy",
+      "zh": "职位空缺",
+      "note": "可申请去做的工作职位；源记录明确职位义，不使用空房义。",
+      "type": "word",
+      "sourceTerm": "vacancy",
+      "example": "Is the vacancy in the canteen still available?",
+      "exampleZh": "食堂这个职位现在仍空缺吗？"
+    },
+    {
+      "id": "S06.A07.G04",
+      "text": "Where is the canteen?",
+      "zh": "食堂在哪里？",
+      "note": "询问校园日常地点；可将地点名称换为其他需要找的设施。",
+      "type": "construction",
+      "example": "Could you tell me where the canteen is?",
+      "exampleZh": "可以告诉我食堂在哪里吗？",
+      "matchTexts": [
+        "Could you tell me where the canteen is?"
+      ]
+    },
+    {
+      "id": "S06.A07.G05",
+      "text": "apply for the job",
+      "zh": "申请这个职位",
+      "note": "for 后是所申请的职位；拿申请表或提出询问不代表获聘。",
+      "type": "chunk",
+      "example": "How can I apply for the job?",
+      "exampleZh": "我该怎样申请这个职位？",
+      "matchTexts": [
+        "How can I apply for the job?"
+      ]
+    },
+    {
+      "id": "S06.A07.G06",
+      "text": "working hours",
+      "zh": "工作时段；工作时间",
+      "note": "核对工作的日期或时段是否与上课冲突。",
+      "type": "chunk",
+      "example": "Could you tell me the working hours?",
+      "exampleZh": "可以告诉我工作时段吗？",
+      "matchTexts": [
+        "Could you tell me the working hours?"
+      ]
+    }
+  ],
+  "retrievalPrompts": [
+    {
+      "id": "S06.A07.P01",
+      "function": "Find somewhere for lunch",
+      "cue": "You are on campus and need the place where students can buy a meal. Ask another student where it is.",
+      "cueZh": "你在校园里，想找学生可以买午饭的地方。向另一名学生问路。",
+      "acceptableAnswers": [
+        "Where is the canteen?",
+        "Could you tell me where the canteen is?"
+      ],
+      "feedback": "Ask for the place rather than a general description of the campus.",
+      "feedbackZh": "询问具体地点，不泛泛描述校园。",
+      "activity": "request",
+      "taskMode": "recall",
+      "unitIds": [
+        "U.WORK_STUDY.CANTEEN.N",
+        "U.WORK_STUDY.WHERE_CANTEEN"
+      ],
+      "checks": [
+        "询问食堂位置",
+        "表达清楚"
+      ],
+      "targetTerms": [
+        "canteen",
+        "Where is the canteen?"
+      ],
+      "unitVersion": "pilot-12-0"
+    },
+    {
+      "id": "S06.A07.P02",
+      "function": "Check the opening",
+      "cue": "A notice says the food service needs a helper, but it may be old. Ask whether the position is still open.",
+      "cueZh": "告示说餐饮服务需要一名帮手，但可能是旧告示。询问这个职位现在是否仍空缺。",
+      "acceptableAnswers": [
+        "Is the vacancy in the canteen still available?",
+        "Could you tell me whether this vacancy is still available?"
+      ],
+      "feedback": "Use the job sense and ask about current status.",
+      "feedbackZh": "采用职位义，并核对当前状态。",
+      "activity": "request",
+      "taskMode": "recall",
+      "unitIds": [
+        "U.WORK_STUDY.VACANCY.N"
+      ],
+      "checks": [
+        "询问职位空缺",
+        "核对当前状态"
+      ],
+      "targetTerms": [
+        "vacancy"
+      ],
+      "unitVersion": "pilot-12-0"
+    },
+    {
+      "id": "S06.A07.P03",
+      "function": "Ask how to take the next step",
+      "cue": "The office says the position is still open. Ask how to submit an application and when you would work.",
+      "cueZh": "办公室说职位仍空缺。询问如何申请，以及将在哪些时段工作。",
+      "acceptableAnswers": [
+        "How can I apply for the job? Could you tell me the working hours?",
+        "I would like to apply for the job. What are the working hours?"
+      ],
+      "feedback": "Ask about the process and hours before deciding whether the job fits.",
+      "feedbackZh": "先核对流程与时间，再决定是否适合。",
+      "activity": "request",
+      "taskMode": "recall",
+      "unitIds": [
+        "U.WORK_STUDY.APPLY_JOB",
+        "U.WORK_STUDY.WORKING_HOURS"
+      ],
+      "checks": [
+        "询问申请方式",
+        "核对工作时间"
+      ],
+      "targetTerms": [
+        "apply for the job",
+        "working hours"
+      ],
+      "unitVersion": "pilot-12-0"
+    }
+  ],
+  "transferPrompt": {
+    "id": "S06.A07.T01",
+    "function": "Ask about a different position",
+    "cue": "A bookshop needs a weekend helper. Ask whether the position is still open and how to apply.",
+    "cueZh": "换到书店：店里需要周末帮手。询问职位是否仍空缺，以及如何申请。",
+    "acceptableAnswers": [
+      "Is the vacancy still available? How can I apply for the job?",
+      "Could you tell me whether the vacancy is still available? I would like to apply for the job."
+    ],
+    "feedback": "Change the workplace and keep the questions about status and application.",
+    "feedbackZh": "更换工作地点，保留状态和申请的问题。",
+    "activity": "request",
+    "taskMode": "transfer",
+    "unitIds": [
+      "U.WORK_STUDY.VACANCY.N",
+      "U.WORK_STUDY.APPLY_JOB"
+    ],
+    "checks": [
+      "核对新职位状态",
+      "询问申请下一步"
+    ],
+    "targetTerms": [
+      "vacancy",
+      "apply for the job"
+    ],
+    "unitVersion": "pilot-12-0"
+  },
+  "learningUnitIds": [
+    "U.WORK_STUDY.CANTEEN.N",
+    "U.WORK_STUDY.EMPLOYMENT.N",
+    "U.WORK_STUDY.VACANCY.N",
+    "U.WORK_STUDY.WHERE_CANTEEN",
+    "U.WORK_STUDY.APPLY_JOB",
+    "U.WORK_STUDY.WORKING_HOURS"
+  ]
+}

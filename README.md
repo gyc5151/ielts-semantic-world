@@ -4,9 +4,9 @@ Situation → Language: learn English through decisions, objects and events.
 
 **[Open the learning website](https://gyc5151.github.io/ielts-semantic-world/)**
 
-## Current version: pilot-11-0
+## Current version: pilot-12-0
 
-12 routes, 37 short bilingual scenes, 157 retrieval/transfer tasks:
+12 routes, 44 short bilingual scenes, 185 retrieval/transfer tasks:
 
 | Route | Contents | UI setting |
 |---|---|---|
@@ -18,12 +18,12 @@ Situation → Language: learn English through decisions, objects and events.
 | Square and entrance | Two town-square side scenes | Site plan and observation |
 | Workshop leaflet | Two university side scenes | Leaflet and margin notes |
 | Photograph and consent | Two community side scenes | Poster and planning book |
-| Before the deadline | Three work/study scenes about reservations, handover and an extension | Campus calendar |
-| A room after the journey | Three travel scenes about departure, a connection and checking in | Station board and ticket |
+| Before the deadline | 8 work/study scenes from arrangements to campus learning and a job enquiry | Campus calendar |
+| A room after the journey | 5 travel scenes from departure to checking in, transport and a guided walk | Station board and ticket |
 | The question behind the receipt | Four shopping scenes about choosing, paying, delivery and a service enquiry | Receipt and parcel |
 | A recipe on the kitchen table | Four food scenes about a menu, preparation, equipment and the table | Recipe paper and kitchen counter |
 
-Every route uses clickable English words and expression blocks, optional Chinese support, contextual usage, multiple WordNet senses and original examples, independent recall and spaced review. S01 main lessons and branch scenes have expandable object cues. 16 lessons have 141 editorial word-sense/chunk/construction units with self-checked observations, sentence listening and session-only recording. Each of these lessons has at most five Core targets; Support and Recognition expressions remain available for understanding. Search and route filters are available in expression records. Using cues before answering is recorded as assisted practice.
+Every route uses clickable English words and expression blocks, optional Chinese support, contextual usage, multiple WordNet senses and original examples, independent recall and spaced review. S01 main lessons and branch scenes have expandable object cues. 23 lessons have 185 editorial word-sense/chunk/construction units with self-checked observations, sentence listening and session-only recording. Each of these lessons has at most five Core targets; Support and Recognition expressions remain available for understanding. Search and route filters are available in expression records. Using cues before answering is recorded as assisted practice.
 
 Direct links:
 

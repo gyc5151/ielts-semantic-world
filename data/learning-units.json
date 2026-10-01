@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "pilot-11-0",
+  "version": "pilot-12-0",
   "scope": "Editorial learning units for listed sceneIds; not entire seed vocabulary or learner mastery",
   "units": [
     {
@@ -3305,6 +3305,498 @@
       "generatedFrom": "branch-authoring"
     },
     {
+      "id": "U.STATION_STAY.J04.TRAM",
+      "form": "tram",
+      "type": "word",
+      "meaningZh": "有轨电车",
+      "sense": "名词，沿街道轨道行驶的电动车辆；本课核对去博物馆的电车线路。",
+      "tier": "core",
+      "example": "Which tram goes to the museum?",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sourceTerm": "tram",
+      "sourceRecordIds": [
+        "R00436"
+      ],
+      "exampleZh": "哪趟电车去博物馆？",
+      "sceneIds": [
+        "S07.J04"
+      ],
+      "glossaryIds": [
+        "S07.J04.G01"
+      ],
+      "sourceRecords": [
+        {
+          "term": "tram",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R00436; 大全直 PRO 听力预习词表; page 13; unit 7; Listening",
+          "canonicalTerm": "tram",
+          "originalContext": "an electric vehicle that runs on tracks in the street",
+          "sourceRecordId": "R00436",
+          "sourceRecord": {
+            "Record_ID": "R00436",
+            "Canonical_Term": "tram",
+            "Source_Term": "tram",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 13,
+            "Unit": 7,
+            "Section/Topic": "Listening",
+            "Source_No": 1,
+            "POS": "n.",
+            "Chinese_Meaning": "有轨电车",
+            "Source_Context": "an electric vehicle that runs on tracks in the street",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        }
+      ],
+      "unitVersion": "pilot-12-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.STATION_STAY.J04.UNDERGROUND",
+      "form": "underground",
+      "type": "word",
+      "meaningZh": "地铁；城市地下铁路系统",
+      "sense": "名词，指城市中的地下铁路系统；the underground 在这里不表示某个物体位于地下。",
+      "tier": "support",
+      "example": "The underground gets me close to the museum.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sourceTerm": "underground",
+      "sourceRecordIds": [
+        "R00020"
+      ],
+      "exampleZh": "地铁能把我送到博物馆附近。",
+      "sceneIds": [
+        "S07.J04"
+      ],
+      "glossaryIds": [
+        "S07.J04.G02"
+      ],
+      "sourceRecords": [
+        {
+          "term": "underground",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R00020; 大全直 PRO 听力预习词表; page 1; unit 1; Listening",
+          "canonicalTerm": "underground",
+          "originalContext": "an underground railway/railroad system in a city",
+          "sourceRecordId": "R00020",
+          "sourceRecord": {
+            "Record_ID": "R00020",
+            "Canonical_Term": "underground",
+            "Source_Term": "underground",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 1,
+            "Unit": 1,
+            "Section/Topic": "Listening",
+            "Source_No": 20,
+            "POS": "n.",
+            "Chinese_Meaning": "地铁",
+            "Source_Context": "an underground railway/railroad system in a city",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        }
+      ],
+      "unitVersion": "pilot-12-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.STATION_STAY.J04.WHICH_TRAM",
+      "form": "Which tram goes to …?",
+      "type": "construction",
+      "meaningZh": "哪趟电车去……？",
+      "sense": "询问适合目标目的地的线路；地点可换成实际要去的地方。",
+      "tier": "core",
+      "example": "Which tram goes to the museum?",
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "exampleZh": "哪趟电车去博物馆？",
+      "sceneIds": [
+        "S07.J04"
+      ],
+      "glossaryIds": [
+        "S07.J04.G03"
+      ],
+      "sourceRecords": [],
+      "unitVersion": "pilot-12-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.STATION_STAY.J04.GET_OFF",
+      "form": "Where should I get off?",
+      "type": "construction",
+      "meaningZh": "我应该在哪一站下车？",
+      "sense": "明确下车站点；不能只凭车辆目的地方向推断。",
+      "tier": "core",
+      "example": "Where should I get off for the museum?",
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "exampleZh": "去博物馆应该在哪一站下车？",
+      "sceneIds": [
+        "S07.J04"
+      ],
+      "glossaryIds": [
+        "S07.J04.G04"
+      ],
+      "sourceRecords": [],
+      "unitVersion": "pilot-12-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.STATION_STAY.J04.CHOOSE_BECAUSE",
+      "form": "I would take … because …",
+      "type": "construction",
+      "meaningZh": "我会乘……，因为……",
+      "sense": "根据给定行程条件选择交通方式，并说明与自身需要相关的理由。",
+      "tier": "core",
+      "example": "I would take the tram because it stops outside the museum.",
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "exampleZh": "我会乘电车，因为它停在博物馆外。",
+      "sceneIds": [
+        "S07.J04"
+      ],
+      "glossaryIds": [
+        "S07.J04.G05"
+      ],
+      "sourceRecords": [],
+      "unitVersion": "pilot-12-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.STATION_STAY.J04.WALK_FROM",
+      "form": "How long is the walk from …?",
+      "type": "construction",
+      "meaningZh": "从……步行要多久？",
+      "sense": "核对车站与最终目的地之间的一段步行时间，来源词中的交通服务与步行分别考虑。",
+      "tier": "support",
+      "example": "How long is the walk from the underground station?",
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "exampleZh": "从地铁站步行要多久？",
+      "sceneIds": [
+        "S07.J04"
+      ],
+      "glossaryIds": [
+        "S07.J04.G06"
+      ],
+      "sourceRecords": [],
+      "unitVersion": "pilot-12-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.STATION_STAY.J05.GUIDED_WALK",
+      "form": "guided walk",
+      "type": "chunk",
+      "meaningZh": "由向导带领的步行观光；步行导览",
+      "sense": "保留原来源中由向导带领游览的意义，不把自己散步等同此活动。",
+      "tier": "core",
+      "example": "Could I join the guided walk?",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sourceTerm": "guided walk",
+      "sourceRecordIds": [
+        "R00116"
+      ],
+      "exampleZh": "我可以参加步行导览吗？",
+      "sceneIds": [
+        "S07.J05"
+      ],
+      "glossaryIds": [
+        "S07.J05.G01"
+      ],
+      "sourceRecords": [
+        {
+          "term": "guided walk",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R00116; 大全直 PRO 听力预习词表; page 4; unit 2; Listening",
+          "canonicalTerm": "guided walk",
+          "originalContext": "a sightseeing walk led by sb who works as a guide",
+          "sourceRecordId": "R00116",
+          "sourceRecord": {
+            "Record_ID": "R00116",
+            "Canonical_Term": "guided walk",
+            "Source_Term": "guided walk",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 4,
+            "Unit": 2,
+            "Section/Topic": "Listening",
+            "Source_No": 37,
+            "POS": "phrase",
+            "Chinese_Meaning": "步行观光",
+            "Source_Context": "a sightseeing walk led by sb who works as a guide",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        }
+      ],
+      "unitVersion": "pilot-12-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.STATION_STAY.J05.GUIDES",
+      "form": "guides",
+      "type": "word",
+      "meaningZh": "向导（复数）",
+      "sense": "指带领他人参观地点的人，保持来源复数名词；不并入指南书或指导动词。",
+      "tier": "support",
+      "example": "The guides were waiting beside the museum wall.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sourceTerm": "guides",
+      "sourceRecordIds": [
+        "R00467"
+      ],
+      "exampleZh": "向导们在博物馆墙旁等候。",
+      "sceneIds": [
+        "S07.J05"
+      ],
+      "glossaryIds": [
+        "S07.J05.G02"
+      ],
+      "sourceRecords": [
+        {
+          "term": "guides",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R00467; 大全直 PRO 听力预习词表; page 14; unit 7; Listening",
+          "canonicalTerm": "guides",
+          "originalContext": "people who show others around a place",
+          "sourceRecordId": "R00467",
+          "sourceRecord": {
+            "Record_ID": "R00467",
+            "Canonical_Term": "guides",
+            "Source_Term": "guides",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 14,
+            "Unit": 7,
+            "Section/Topic": "Listening",
+            "Source_No": 32,
+            "POS": "n.",
+            "Chinese_Meaning": "向导",
+            "Source_Context": "people who show others around a place",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        }
+      ],
+      "unitVersion": "pilot-12-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.STATION_STAY.J05.VAN",
+      "form": "van",
+      "type": "word",
+      "meaningZh": "厢型车；厢式货车（本事件用途）",
+      "sense": "原记录包含运货或运人的车辆；这里停在服务门旁，用于运送向导装备，不安排游客乘坐。",
+      "tier": "recognition",
+      "example": "The van carried the guides’ equipment.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sourceTerm": "van",
+      "sourceRecordIds": [
+        "R00050",
+        "R00439"
+      ],
+      "exampleZh": "厢型车运送了向导们的装备。",
+      "sceneIds": [
+        "S07.J05"
+      ],
+      "glossaryIds": [
+        "S07.J05.G03"
+      ],
+      "sourceRecords": [
+        {
+          "term": "van",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R00050; 大全直 PRO 听力预习词表; page 2; unit 1; Listening",
+          "canonicalTerm": "van",
+          "originalContext": "",
+          "sourceRecordId": "R00050",
+          "sourceRecord": {
+            "Record_ID": "R00050",
+            "Canonical_Term": "van",
+            "Source_Term": "van",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 2,
+            "Unit": 1,
+            "Section/Topic": "Listening",
+            "Source_No": 50,
+            "POS": "n.",
+            "Chinese_Meaning": "厢式货车",
+            "Source_Context": null,
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        },
+        {
+          "term": "van",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R00439; 大全直 PRO 听力预习词表; page 13; unit 7; Listening",
+          "canonicalTerm": "van",
+          "originalContext": "a vehicle used for transporting goods or people",
+          "sourceRecordId": "R00439",
+          "sourceRecord": {
+            "Record_ID": "R00439",
+            "Canonical_Term": "van",
+            "Source_Term": "van",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 13,
+            "Unit": 7,
+            "Section/Topic": "Listening",
+            "Source_No": 4,
+            "POS": "n.",
+            "Chinese_Meaning": "厢型货车",
+            "Source_Context": "a vehicle used for transporting goods or people",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        }
+      ],
+      "unitVersion": "pilot-12-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.STATION_STAY.J05.ON_SITE",
+      "form": "on-site experience",
+      "type": "chunk",
+      "meaningZh": "现场体验；亲历体验",
+      "sense": "实地到访产生的体验。原来源以看金字塔为例；本项目另用河边导览事件，不把原句当新地点事实，也不是工作经验。",
+      "tier": "support",
+      "example": "The on-site experience helped Maya notice the marks on the wall.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sourceTerm": "on-site experience",
+      "sourceRecordIds": [
+        "R01167"
+      ],
+      "exampleZh": "现场体验让玛雅注意到了墙上的痕迹。",
+      "sceneIds": [
+        "S07.J05"
+      ],
+      "glossaryIds": [
+        "S07.J05.G04"
+      ],
+      "sourceRecords": [
+        {
+          "term": "on-site experience",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R01167; 雅思 PRO 班级词汇表; page 14; unit 6; Writing",
+          "canonicalTerm": "on-site experience",
+          "originalContext": "The on-site experience of seeing the pyramids is unforgettable.",
+          "sourceRecordId": "R01167",
+          "sourceRecord": {
+            "Record_ID": "R01167",
+            "Canonical_Term": "on-site experience",
+            "Source_Term": "on-site experience",
+            "Source": "雅思 PRO 班级词汇表",
+            "Page": 14,
+            "Unit": 6,
+            "Section/Topic": "Writing",
+            "Source_No": 17,
+            "POS": null,
+            "Chinese_Meaning": "现场体验",
+            "Source_Context": "The on-site experience of seeing the pyramids is unforgettable.",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        }
+      ],
+      "unitVersion": "pilot-12-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.STATION_STAY.J05.JOIN",
+      "form": "Could I join …?",
+      "type": "construction",
+      "meaningZh": "我可以参加……吗？",
+      "sense": "在活动开始前询问能否加入；需等待对方确认安排。",
+      "tier": "core",
+      "example": "Could I join the guided walk?",
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "exampleZh": "我可以参加步行导览吗？",
+      "sceneIds": [
+        "S07.J05"
+      ],
+      "glossaryIds": [
+        "S07.J05.G05"
+      ],
+      "sourceRecords": [],
+      "unitVersion": "pilot-12-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.STATION_STAY.J05.SHOW_DETAIL",
+      "form": "Could you show me …?",
+      "type": "construction",
+      "meaningZh": "可以指给我看……吗？",
+      "sense": "请求对方指出具体位置或可观察细节。",
+      "tier": "core",
+      "example": "Could you show me the water marks on the wall?",
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "exampleZh": "可以指给我看墙上的水痕吗？",
+      "sceneIds": [
+        "S07.J05"
+      ],
+      "glossaryIds": [
+        "S07.J05.G06"
+      ],
+      "sourceRecords": [],
+      "unitVersion": "pilot-12-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.STATION_STAY.J05.NOTICED",
+      "form": "I noticed … when I was there.",
+      "type": "construction",
+      "meaningZh": "我在现场时注意到……",
+      "sense": "用可观察细节报告亲历体验，不默认对事实原因已有解释。",
+      "tier": "core",
+      "example": "I noticed pale lines on the wall when I was there.",
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "exampleZh": "我在现场时注意到墙上几道浅色的线。",
+      "sceneIds": [
+        "S07.J05"
+      ],
+      "glossaryIds": [
+        "S07.J05.G07"
+      ],
+      "sourceRecords": [],
+      "unitVersion": "pilot-12-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
       "id": "U.WORK_STUDY.BOOK.V",
       "form": "book",
       "type": "word",
@@ -3954,6 +4446,1588 @@
       ],
       "sourceRecords": [],
       "unitVersion": "pilot-10-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.CERTIFICATE.N",
+      "form": "certificate",
+      "type": "word",
+      "meaningZh": "证书",
+      "sense": "证明某些事实的正式文件；此处证明先前课程已完成，未扩展为所有学校均需此材料。",
+      "tier": "core",
+      "example": "I have the certificate from my previous course.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sourceTerm": "certificate",
+      "sourceRecordIds": [
+        "R00128"
+      ],
+      "originalSourceRecords": [
+        {
+          "Record_ID": "R00128",
+          "Canonical_Term": "certificate",
+          "Source_Term": "certificate",
+          "Source": "大全直 PRO 听力预习词表",
+          "Page": 4,
+          "Unit": 2,
+          "Section/Topic": "Listening",
+          "Source_No": 49,
+          "POS": "n.",
+          "Chinese_Meaning": "证书",
+          "Source_Context": "an official document that may be used to prove that the facts it states are true",
+          "Parse_Confidence": "high",
+          "Audit_Status_V1.1": "原V1记录",
+          "Notes": null
+        }
+      ],
+      "exampleZh": "我带着先前课程的证书。",
+      "sceneIds": [
+        "S06.A03"
+      ],
+      "glossaryIds": [
+        "S06.A03.G01"
+      ],
+      "sourceRecords": [
+        {
+          "term": "certificate",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R00128; 大全直 PRO 听力预习词表; page 4; unit 2; Listening",
+          "canonicalTerm": "certificate",
+          "originalContext": "an official document that may be used to prove that the facts it states are true",
+          "sourceRecordId": "R00128",
+          "sourceRecord": {
+            "Record_ID": "R00128",
+            "Canonical_Term": "certificate",
+            "Source_Term": "certificate",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 4,
+            "Unit": 2,
+            "Section/Topic": "Listening",
+            "Source_No": 49,
+            "POS": "n.",
+            "Chinese_Meaning": "证书",
+            "Source_Context": "an official document that may be used to prove that the facts it states are true",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        }
+      ],
+      "unitVersion": "pilot-12-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.ENROLMENT.N",
+      "form": "enrolment",
+      "type": "word",
+      "meaningZh": "注册",
+      "sense": "正式加入课程的行为或办理过程；原记录也含人数义，本课不使用人数义。",
+      "tier": "core",
+      "example": "Is my enrolment complete now?",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sourceTerm": "enrolment",
+      "sourceRecordIds": [
+        "R00136"
+      ],
+      "originalSourceRecords": [
+        {
+          "Record_ID": "R00136",
+          "Canonical_Term": "enrolment",
+          "Source_Term": "enrolment",
+          "Source": "大全直 PRO 听力预习词表",
+          "Page": 5,
+          "Unit": 2,
+          "Section/Topic": "Listening",
+          "Source_No": 57,
+          "POS": "n.",
+          "Chinese_Meaning": "注册",
+          "Source_Context": "the act of officially joining a course, school, etc.; the number of people who do this",
+          "Parse_Confidence": "high",
+          "Audit_Status_V1.1": "原V1记录",
+          "Notes": null
+        }
+      ],
+      "exampleZh": "我的注册现在完成了吗？",
+      "sceneIds": [
+        "S06.A03"
+      ],
+      "glossaryIds": [
+        "S06.A03.G02"
+      ],
+      "sourceRecords": [
+        {
+          "term": "enrolment",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R00136; 大全直 PRO 听力预习词表; page 5; unit 2; Listening",
+          "canonicalTerm": "enrolment",
+          "originalContext": "the act of officially joining a course, school, etc.; the number of people who do this",
+          "sourceRecordId": "R00136",
+          "sourceRecord": {
+            "Record_ID": "R00136",
+            "Canonical_Term": "enrolment",
+            "Source_Term": "enrolment",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 5,
+            "Unit": 2,
+            "Section/Topic": "Listening",
+            "Source_No": 57,
+            "POS": "n.",
+            "Chinese_Meaning": "注册",
+            "Source_Context": "the act of officially joining a course, school, etc.; the number of people who do this",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        }
+      ],
+      "unitVersion": "pilot-12-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.MODULE.N",
+      "form": "module",
+      "type": "word",
+      "meaningZh": "课程模块；单元",
+      "sense": "可以单独学习的课程或学科单元；不是电脑组件。",
+      "tier": "support",
+      "example": "The first module is about planning a community project.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sourceTerm": "module",
+      "sourceRecordIds": [
+        "R00582"
+      ],
+      "originalSourceRecords": [
+        {
+          "Record_ID": "R00582",
+          "Canonical_Term": "module",
+          "Source_Term": "module",
+          "Source": "大全直 PRO 听力预习词表",
+          "Page": 17,
+          "Unit": 9,
+          "Section/Topic": "Listening",
+          "Source_No": 18,
+          "POS": "n.",
+          "Chinese_Meaning": "模块",
+          "Source_Context": "a unit of a course or subject that can be studied separately",
+          "Parse_Confidence": "high",
+          "Audit_Status_V1.1": "原V1记录",
+          "Notes": null
+        }
+      ],
+      "exampleZh": "第一个课程单元讲的是如何规划社区项目。",
+      "sceneIds": [
+        "S06.A03"
+      ],
+      "glossaryIds": [
+        "S06.A03.G03"
+      ],
+      "sourceRecords": [
+        {
+          "term": "module",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R00582; 大全直 PRO 听力预习词表; page 17; unit 9; Listening",
+          "canonicalTerm": "module",
+          "originalContext": "a unit of a course or subject that can be studied separately",
+          "sourceRecordId": "R00582",
+          "sourceRecord": {
+            "Record_ID": "R00582",
+            "Canonical_Term": "module",
+            "Source_Term": "module",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 17,
+            "Unit": 9,
+            "Section/Topic": "Listening",
+            "Source_No": 18,
+            "POS": "n.",
+            "Chinese_Meaning": "模块",
+            "Source_Context": "a unit of a course or subject that can be studied separately",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        }
+      ],
+      "unitVersion": "pilot-12-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.FILL_IN_FORM",
+      "form": "fill in the form",
+      "type": "chunk",
+      "meaningZh": "填写表格",
+      "sense": "填入所需信息；填完表不自动意味着注册已完成。",
+      "tier": "core",
+      "example": "I can fill in the form now.",
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "exampleZh": "我现在可以填表。",
+      "sceneIds": [
+        "S06.A03"
+      ],
+      "glossaryIds": [
+        "S06.A03.G04"
+      ],
+      "sourceRecords": [],
+      "unitVersion": "pilot-12-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.WHICH_DOCUMENTS",
+      "form": "Which documents do I need to bring?",
+      "type": "construction",
+      "meaningZh": "我需要带哪些文件？",
+      "sense": "在办理事情前询问所需材料；按现场实际说明行动。",
+      "tier": "core",
+      "example": "Which documents do I need to bring for the course?",
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "exampleZh": "这门课程需要我带哪些文件？",
+      "sceneIds": [
+        "S06.A03"
+      ],
+      "glossaryIds": [
+        "S06.A03.G05"
+      ],
+      "sourceRecords": [],
+      "unitVersion": "pilot-12-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.ENROLMENT_COMPLETE",
+      "form": "Is my enrolment complete?",
+      "type": "construction",
+      "meaningZh": "我的注册完成了吗？",
+      "sense": "请求确认办理状态；complete 是完成的状态，不是“我已完成”的自述。",
+      "tier": "support",
+      "example": "Is my enrolment complete now that I have brought the card?",
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "exampleZh": "我已经带来了身份证件，注册完成了吗？",
+      "sceneIds": [
+        "S06.A03"
+      ],
+      "glossaryIds": [
+        "S06.A03.G06"
+      ],
+      "sourceRecords": [],
+      "unitVersion": "pilot-12-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.HANDOUT.N",
+      "form": "handout",
+      "type": "word",
+      "meaningZh": "讲义",
+      "sense": "发给学生、包含课程信息的纸面材料；不是资助或施舍义。",
+      "tier": "core",
+      "example": "My handout is missing a page.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sourceTerm": "handout",
+      "sourceRecordIds": [
+        "R00575"
+      ],
+      "originalSourceRecords": [
+        {
+          "Record_ID": "R00575",
+          "Canonical_Term": "handout",
+          "Source_Term": "handout",
+          "Source": "大全直 PRO 听力预习词表",
+          "Page": 17,
+          "Unit": 9,
+          "Section/Topic": "Listening",
+          "Source_No": 11,
+          "POS": "n.",
+          "Chinese_Meaning": "讲义",
+          "Source_Context": "a document given to students containing information about a lesson",
+          "Parse_Confidence": "high",
+          "Audit_Status_V1.1": "原V1记录",
+          "Notes": null
+        }
+      ],
+      "exampleZh": "我的讲义少了一页。",
+      "sceneIds": [
+        "S06.A04"
+      ],
+      "glossaryIds": [
+        "S06.A04.G01"
+      ],
+      "sourceRecords": [
+        {
+          "term": "handout",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R00575; 大全直 PRO 听力预习词表; page 17; unit 9; Listening",
+          "canonicalTerm": "handout",
+          "originalContext": "a document given to students containing information about a lesson",
+          "sourceRecordId": "R00575",
+          "sourceRecord": {
+            "Record_ID": "R00575",
+            "Canonical_Term": "handout",
+            "Source_Term": "handout",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 17,
+            "Unit": 9,
+            "Section/Topic": "Listening",
+            "Source_No": 11,
+            "POS": "n.",
+            "Chinese_Meaning": "讲义",
+            "Source_Context": "a document given to students containing information about a lesson",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        }
+      ],
+      "unitVersion": "pilot-12-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.LECTURE.N",
+      "form": "lecture",
+      "type": "word",
+      "meaningZh": "讲座；讲授课",
+      "sense": "向一组听众正式介绍较严肃主题的讲话；本课为教师讲授项目规划。",
+      "tier": "core",
+      "example": "The lecture introduces community project planning.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sourceTerm": "lecture",
+      "sourceRecordIds": [
+        "R00568"
+      ],
+      "originalSourceRecords": [
+        {
+          "Record_ID": "R00568",
+          "Canonical_Term": "lecture",
+          "Source_Term": "lecture",
+          "Source": "大全直 PRO 听力预习词表",
+          "Page": 16,
+          "Unit": 9,
+          "Section/Topic": "Listening",
+          "Source_No": 4,
+          "POS": "n.",
+          "Chinese_Meaning": "讲座",
+          "Source_Context": "a formal talk on a serious subject given to a group of people",
+          "Parse_Confidence": "high",
+          "Audit_Status_V1.1": "原V1记录",
+          "Notes": null
+        }
+      ],
+      "exampleZh": "讲座介绍社区项目规划。",
+      "sceneIds": [
+        "S06.A04"
+      ],
+      "glossaryIds": [
+        "S06.A04.G02"
+      ],
+      "sourceRecords": [
+        {
+          "term": "lecture",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R00568; 大全直 PRO 听力预习词表; page 16; unit 9; Listening",
+          "canonicalTerm": "lecture",
+          "originalContext": "a formal talk on a serious subject given to a group of people",
+          "sourceRecordId": "R00568",
+          "sourceRecord": {
+            "Record_ID": "R00568",
+            "Canonical_Term": "lecture",
+            "Source_Term": "lecture",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 16,
+            "Unit": 9,
+            "Section/Topic": "Listening",
+            "Source_No": 4,
+            "POS": "n.",
+            "Chinese_Meaning": "讲座",
+            "Source_Context": "a formal talk on a serious subject given to a group of people",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        }
+      ],
+      "unitVersion": "pilot-12-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.SEMINAR.N",
+      "form": "seminar",
+      "type": "word",
+      "meaningZh": "研讨课；研讨会",
+      "sense": "大学小组学生讨论主题的课程；本课在小房间讨论具体案例。",
+      "tier": "core",
+      "example": "We discuss the garden plan in the seminar.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sourceTerm": "seminar",
+      "sourceRecordIds": [
+        "R00571"
+      ],
+      "originalSourceRecords": [
+        {
+          "Record_ID": "R00571",
+          "Canonical_Term": "seminar",
+          "Source_Term": "seminar",
+          "Source": "大全直 PRO 听力预习词表",
+          "Page": 16,
+          "Unit": 9,
+          "Section/Topic": "Listening",
+          "Source_No": 7,
+          "POS": "n.",
+          "Chinese_Meaning": "研讨会",
+          "Source_Context": "a class at a university in which a small group of students discuss a topic",
+          "Parse_Confidence": "high",
+          "Audit_Status_V1.1": "原V1记录",
+          "Notes": null
+        }
+      ],
+      "exampleZh": "我们在研讨课里讨论花园计划。",
+      "sceneIds": [
+        "S06.A04"
+      ],
+      "glossaryIds": [
+        "S06.A04.G03"
+      ],
+      "sourceRecords": [
+        {
+          "term": "seminar",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R00571; 大全直 PRO 听力预习词表; page 16; unit 9; Listening",
+          "canonicalTerm": "seminar",
+          "originalContext": "a class at a university in which a small group of students discuss a topic",
+          "sourceRecordId": "R00571",
+          "sourceRecord": {
+            "Record_ID": "R00571",
+            "Canonical_Term": "seminar",
+            "Source_Term": "seminar",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 16,
+            "Unit": 9,
+            "Section/Topic": "Listening",
+            "Source_No": 7,
+            "POS": "n.",
+            "Chinese_Meaning": "研讨会",
+            "Source_Context": "a class at a university in which a small group of students discuss a topic",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        }
+      ],
+      "unitVersion": "pilot-12-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.COULD_HAVE_COPY",
+      "form": "Could I have a copy of ...?",
+      "type": "construction",
+      "meaningZh": "能给我一份……的副本吗？",
+      "sense": "请求缺少的材料；of 后填具体文件或页面。",
+      "tier": "core",
+      "example": "Could I have a copy of the missing page?",
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "exampleZh": "能给我一份缺失那页的副本吗？",
+      "sceneIds": [
+        "S06.A04"
+      ],
+      "glossaryIds": [
+        "S06.A04.G04"
+      ],
+      "sourceRecords": [],
+      "unitVersion": "pilot-12-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.ASK_QUESTION",
+      "form": "ask a question about ...",
+      "type": "chunk",
+      "meaningZh": "提出有关……的问题",
+      "sense": "把尚不清楚的具体信息变成问题；about 后是问题主题。",
+      "tier": "core",
+      "example": "I want to ask a question about watering the garden.",
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "exampleZh": "我想问一个关于给花园浇水的问题。",
+      "sceneIds": [
+        "S06.A04"
+      ],
+      "glossaryIds": [
+        "S06.A04.G05"
+      ],
+      "sourceRecords": [],
+      "unitVersion": "pilot-12-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.MAKE_NOTES",
+      "form": "make notes",
+      "type": "chunk",
+      "meaningZh": "做笔记",
+      "sense": "记录信息与问题；此处不表示写完整讲稿。",
+      "tier": "support",
+      "example": "I make notes during the talk.",
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "exampleZh": "我在听讲时做笔记。",
+      "sceneIds": [
+        "S06.A04"
+      ],
+      "glossaryIds": [
+        "S06.A04.G06"
+      ],
+      "sourceRecords": [],
+      "unitVersion": "pilot-12-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.CENTRAL_LIBRARY.N",
+      "form": "central library",
+      "type": "chunk",
+      "meaningZh": "中央图书馆",
+      "sense": "一个城市或机构的主要图书馆；此处是校园主要图书馆，不说明其空间必须在几何中心。",
+      "tier": "core",
+      "example": "I study in the central library.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sourceTerm": "central library",
+      "sourceRecordIds": [
+        "R00447"
+      ],
+      "originalSourceRecords": [
+        {
+          "Record_ID": "R00447",
+          "Canonical_Term": "central library",
+          "Source_Term": "central library",
+          "Source": "大全直 PRO 听力预习词表",
+          "Page": 13,
+          "Unit": 7,
+          "Section/Topic": "Listening",
+          "Source_No": 12,
+          "POS": "n.",
+          "Chinese_Meaning": "中央图书馆",
+          "Source_Context": "the main library in a city or institution",
+          "Parse_Confidence": "high",
+          "Audit_Status_V1.1": "原V1记录",
+          "Notes": null
+        }
+      ],
+      "exampleZh": "我在中央图书馆学习。",
+      "sceneIds": [
+        "S06.A05"
+      ],
+      "glossaryIds": [
+        "S06.A05.G01"
+      ],
+      "sourceRecords": [
+        {
+          "term": "central library",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R00447; 大全直 PRO 听力预习词表; page 13; unit 7; Listening",
+          "canonicalTerm": "central library",
+          "originalContext": "the main library in a city or institution",
+          "sourceRecordId": "R00447",
+          "sourceRecord": {
+            "Record_ID": "R00447",
+            "Canonical_Term": "central library",
+            "Source_Term": "central library",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 13,
+            "Unit": 7,
+            "Section/Topic": "Listening",
+            "Source_No": 12,
+            "POS": "n.",
+            "Chinese_Meaning": "中央图书馆",
+            "Source_Context": "the main library in a city or institution",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        }
+      ],
+      "unitVersion": "pilot-12-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.REVISION.EXAM.N",
+      "form": "revision",
+      "type": "word",
+      "meaningZh": "考前复习",
+      "sense": "为考试重新学习已学材料的过程；保留原义，不使用修改稿义。",
+      "tier": "core",
+      "example": "My revision starts with explaining the main ideas.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sourceTerm": "revision",
+      "sourceRecordIds": [
+        "R00207"
+      ],
+      "originalSourceRecords": [
+        {
+          "Record_ID": "R00207",
+          "Canonical_Term": "revision",
+          "Source_Term": "revision",
+          "Source": "大全直 PRO 听力预习词表",
+          "Page": 7,
+          "Unit": 3,
+          "Section/Topic": "Listening",
+          "Source_No": 48,
+          "POS": "n.",
+          "Chinese_Meaning": "复习",
+          "Source_Context": "the process of learning work for an exam",
+          "Parse_Confidence": "high",
+          "Audit_Status_V1.1": "原V1记录",
+          "Notes": null
+        }
+      ],
+      "exampleZh": "我的复习从解释主要观点开始。",
+      "sceneIds": [
+        "S06.A05"
+      ],
+      "glossaryIds": [
+        "S06.A05.G02"
+      ],
+      "sourceRecords": [
+        {
+          "term": "revision",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R00207; 大全直 PRO 听力预习词表; page 7; unit 3; Listening",
+          "canonicalTerm": "revision",
+          "originalContext": "the process of learning work for an exam",
+          "sourceRecordId": "R00207",
+          "sourceRecord": {
+            "Record_ID": "R00207",
+            "Canonical_Term": "revision",
+            "Source_Term": "revision",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 7,
+            "Unit": 3,
+            "Section/Topic": "Listening",
+            "Source_No": 48,
+            "POS": "n.",
+            "Chinese_Meaning": "复习",
+            "Source_Context": "the process of learning work for an exam",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        }
+      ],
+      "unitVersion": "pilot-12-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.TEXTBOOK.N",
+      "form": "textbook",
+      "type": "word",
+      "meaningZh": "教科书；课本",
+      "sense": "某一科目的标准学习资料；本课与个人课堂笔记区分。",
+      "tier": "core",
+      "example": "I brought the textbook to the tutorial.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sourceTerm": "textbook",
+      "sourceRecordIds": [
+        "R00579",
+        "R00864"
+      ],
+      "originalSourceRecords": [
+        {
+          "Record_ID": "R00579",
+          "Canonical_Term": "textbook",
+          "Source_Term": "textbook",
+          "Source": "大全直 PRO 听力预习词表",
+          "Page": 17,
+          "Unit": 9,
+          "Section/Topic": "Listening",
+          "Source_No": 15,
+          "POS": "n.",
+          "Chinese_Meaning": "教科书",
+          "Source_Context": "a book used as a standard source of information for a particular subject",
+          "Parse_Confidence": "high",
+          "Audit_Status_V1.1": "原V1记录",
+          "Notes": null
+        },
+        {
+          "Record_ID": "R00864",
+          "Canonical_Term": "textbook",
+          "Source_Term": "textbook",
+          "Source": "大全直 PRO 听力预习词表",
+          "Page": 23,
+          "Unit": 12,
+          "Section/Topic": "Listening",
+          "Source_No": 72,
+          "POS": "n.",
+          "Chinese_Meaning": "课本，教科书",
+          "Source_Context": "a book used as a standard source for a subject",
+          "Parse_Confidence": "high",
+          "Audit_Status_V1.1": "原V1记录",
+          "Notes": null
+        }
+      ],
+      "exampleZh": "我把教科书带到了辅导课。",
+      "sceneIds": [
+        "S06.A05"
+      ],
+      "glossaryIds": [
+        "S06.A05.G03"
+      ],
+      "sourceRecords": [
+        {
+          "term": "textbook",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R00579; 大全直 PRO 听力预习词表; page 17; unit 9; Listening",
+          "canonicalTerm": "textbook",
+          "originalContext": "a book used as a standard source of information for a particular subject",
+          "sourceRecordId": "R00579",
+          "sourceRecord": {
+            "Record_ID": "R00579",
+            "Canonical_Term": "textbook",
+            "Source_Term": "textbook",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 17,
+            "Unit": 9,
+            "Section/Topic": "Listening",
+            "Source_No": 15,
+            "POS": "n.",
+            "Chinese_Meaning": "教科书",
+            "Source_Context": "a book used as a standard source of information for a particular subject",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        },
+        {
+          "term": "textbook",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R00864; 大全直 PRO 听力预习词表; page 23; unit 12; Listening",
+          "canonicalTerm": "textbook",
+          "originalContext": "a book used as a standard source for a subject",
+          "sourceRecordId": "R00864",
+          "sourceRecord": {
+            "Record_ID": "R00864",
+            "Canonical_Term": "textbook",
+            "Source_Term": "textbook",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 23,
+            "Unit": 12,
+            "Section/Topic": "Listening",
+            "Source_No": 72,
+            "POS": "n.",
+            "Chinese_Meaning": "课本，教科书",
+            "Source_Context": "a book used as a standard source for a subject",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        }
+      ],
+      "unitVersion": "pilot-12-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.TUTORIAL.N",
+      "form": "tutorial",
+      "type": "word",
+      "meaningZh": "导师辅导课",
+      "sense": "导师对小组进行教学的时段；本故事用于解释学生已指出的难题。",
+      "tier": "support",
+      "example": "The tutorial helps three students work through an example.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sourceTerm": "tutorial",
+      "sourceRecordIds": [
+        "R00567"
+      ],
+      "originalSourceRecords": [
+        {
+          "Record_ID": "R00567",
+          "Canonical_Term": "tutorial",
+          "Source_Term": "tutorial",
+          "Source": "大全直 PRO 听力预习词表",
+          "Page": 16,
+          "Unit": 9,
+          "Section/Topic": "Listening",
+          "Source_No": 3,
+          "POS": "n.",
+          "Chinese_Meaning": "导师辅导课",
+          "Source_Context": "a period of teaching in a small group with a tutor",
+          "Parse_Confidence": "high",
+          "Audit_Status_V1.1": "原V1记录",
+          "Notes": null
+        }
+      ],
+      "exampleZh": "这节辅导课帮助三名学生一起弄懂一个例子。",
+      "sceneIds": [
+        "S06.A05"
+      ],
+      "glossaryIds": [
+        "S06.A05.G04"
+      ],
+      "sourceRecords": [
+        {
+          "term": "tutorial",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R00567; 大全直 PRO 听力预习词表; page 16; unit 9; Listening",
+          "canonicalTerm": "tutorial",
+          "originalContext": "a period of teaching in a small group with a tutor",
+          "sourceRecordId": "R00567",
+          "sourceRecord": {
+            "Record_ID": "R00567",
+            "Canonical_Term": "tutorial",
+            "Source_Term": "tutorial",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 16,
+            "Unit": 9,
+            "Section/Topic": "Listening",
+            "Source_No": 3,
+            "POS": "n.",
+            "Chinese_Meaning": "导师辅导课",
+            "Source_Context": "a period of teaching in a small group with a tutor",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        }
+      ],
+      "unitVersion": "pilot-12-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.PREPARE_EXAM",
+      "form": "prepare for an exam",
+      "type": "chunk",
+      "meaningZh": "准备考试",
+      "sense": "for 后说明要准备的考试；本课通过复习与解释例子落实。",
+      "tier": "core",
+      "example": "I am using the textbook to prepare for an exam.",
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "exampleZh": "我正在用教科书准备考试。",
+      "sceneIds": [
+        "S06.A05"
+      ],
+      "glossaryIds": [
+        "S06.A05.G05"
+      ],
+      "sourceRecords": [],
+      "unitVersion": "pilot-12-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.DONT_UNDERSTAND",
+      "form": "I still do not understand ...",
+      "type": "construction",
+      "meaningZh": "我仍然不明白……",
+      "sense": "指出尚未理解的具体内容；后面补主题，而不只说一切都不会。",
+      "tier": "core",
+      "example": "I still do not understand why these figures are different.",
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "exampleZh": "我仍然不明白这些数字为什么不同。",
+      "sceneIds": [
+        "S06.A05"
+      ],
+      "glossaryIds": [
+        "S06.A05.G06"
+      ],
+      "sourceRecords": [],
+      "unitVersion": "pilot-12-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.ESSAY.N",
+      "form": "essay",
+      "type": "word",
+      "meaningZh": "短文；论文",
+      "sense": "围绕特定主题的短篇写作；此处是课程写作任务，不等同任何雅思官方题目。",
+      "tier": "core",
+      "example": "My essay explains the garden project.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sourceTerm": "essay",
+      "sourceRecordIds": [
+        "R00581"
+      ],
+      "originalSourceRecords": [
+        {
+          "Record_ID": "R00581",
+          "Canonical_Term": "essay",
+          "Source_Term": "essay",
+          "Source": "大全直 PRO 听力预习词表",
+          "Page": 17,
+          "Unit": 9,
+          "Section/Topic": "Listening",
+          "Source_No": 17,
+          "POS": "n.",
+          "Chinese_Meaning": "短文，论文",
+          "Source_Context": "a short piece of writing on a particular subject",
+          "Parse_Confidence": "high",
+          "Audit_Status_V1.1": "原V1记录",
+          "Notes": null
+        }
+      ],
+      "exampleZh": "我的短文解释花园项目。",
+      "sceneIds": [
+        "S06.A06"
+      ],
+      "glossaryIds": [
+        "S06.A06.G01"
+      ],
+      "sourceRecords": [
+        {
+          "term": "essay",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R00581; 大全直 PRO 听力预习词表; page 17; unit 9; Listening",
+          "canonicalTerm": "essay",
+          "originalContext": "a short piece of writing on a particular subject",
+          "sourceRecordId": "R00581",
+          "sourceRecord": {
+            "Record_ID": "R00581",
+            "Canonical_Term": "essay",
+            "Source_Term": "essay",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 17,
+            "Unit": 9,
+            "Section/Topic": "Listening",
+            "Source_No": 17,
+            "POS": "n.",
+            "Chinese_Meaning": "短文，论文",
+            "Source_Context": "a short piece of writing on a particular subject",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        }
+      ],
+      "unitVersion": "pilot-12-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.GRADE.N",
+      "form": "grade",
+      "type": "word",
+      "meaningZh": "成绩",
+      "sense": "给学习作业的评分或等级；本课为名词，不引入评分动词义。",
+      "tier": "core",
+      "example": "Could you explain my grade?",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sourceTerm": "grade",
+      "sourceRecordIds": [
+        "R00580"
+      ],
+      "originalSourceRecords": [
+        {
+          "Record_ID": "R00580",
+          "Canonical_Term": "grade",
+          "Source_Term": "grade",
+          "Source": "大全直 PRO 听力预习词表",
+          "Page": 17,
+          "Unit": 9,
+          "Section/Topic": "Listening",
+          "Source_No": 16,
+          "POS": "n.",
+          "Chinese_Meaning": "成绩",
+          "Source_Context": "a score or mark given for academic work",
+          "Parse_Confidence": "high",
+          "Audit_Status_V1.1": "原V1记录",
+          "Notes": null
+        }
+      ],
+      "exampleZh": "能解释一下我的成绩吗？",
+      "sceneIds": [
+        "S06.A06"
+      ],
+      "glossaryIds": [
+        "S06.A06.G02"
+      ],
+      "sourceRecords": [
+        {
+          "term": "grade",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R00580; 大全直 PRO 听力预习词表; page 17; unit 9; Listening",
+          "canonicalTerm": "grade",
+          "originalContext": "a score or mark given for academic work",
+          "sourceRecordId": "R00580",
+          "sourceRecord": {
+            "Record_ID": "R00580",
+            "Canonical_Term": "grade",
+            "Source_Term": "grade",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 17,
+            "Unit": 9,
+            "Section/Topic": "Listening",
+            "Source_No": 16,
+            "POS": "n.",
+            "Chinese_Meaning": "成绩",
+            "Source_Context": "a score or mark given for academic work",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        }
+      ],
+      "unitVersion": "pilot-12-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.PRESENTATION.N",
+      "form": "presentation",
+      "type": "word",
+      "meaningZh": "报告；演讲",
+      "sense": "正式向听众提供信息或展示事物如何运作的讲话；不是呈现状态名词。",
+      "tier": "core",
+      "example": "My presentation starts with a concrete example.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sourceTerm": "presentation",
+      "sourceRecordIds": [
+        "R00565"
+      ],
+      "originalSourceRecords": [
+        {
+          "Record_ID": "R00565",
+          "Canonical_Term": "presentation",
+          "Source_Term": "presentation",
+          "Source": "大全直 PRO 听力预习词表",
+          "Page": 16,
+          "Unit": 9,
+          "Section/Topic": "Listening",
+          "Source_No": 1,
+          "POS": "n.",
+          "Chinese_Meaning": "报告，演讲",
+          "Source_Context": "a formal talk giving information or showing how something works",
+          "Parse_Confidence": "high",
+          "Audit_Status_V1.1": "原V1记录",
+          "Notes": null
+        }
+      ],
+      "exampleZh": "我的报告从一个具体例子开始。",
+      "sceneIds": [
+        "S06.A06"
+      ],
+      "glossaryIds": [
+        "S06.A06.G03"
+      ],
+      "sourceRecords": [
+        {
+          "term": "presentation",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R00565; 大全直 PRO 听力预习词表; page 16; unit 9; Listening",
+          "canonicalTerm": "presentation",
+          "originalContext": "a formal talk giving information or showing how something works",
+          "sourceRecordId": "R00565",
+          "sourceRecord": {
+            "Record_ID": "R00565",
+            "Canonical_Term": "presentation",
+            "Source_Term": "presentation",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 16,
+            "Unit": 9,
+            "Section/Topic": "Listening",
+            "Source_No": 1,
+            "POS": "n.",
+            "Chinese_Meaning": "报告，演讲",
+            "Source_Context": "a formal talk giving information or showing how something works",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        }
+      ],
+      "unitVersion": "pilot-12-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.PRESENT.V",
+      "form": "present",
+      "type": "word",
+      "meaningZh": "展示",
+      "sense": "向听众展示发现；来源为动词，不使用礼物名词或现在的形容词义。",
+      "tier": "core",
+      "example": "I will present our findings to the class.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sourceTerm": "present",
+      "sourceRecordIds": [
+        "R01013"
+      ],
+      "originalSourceRecords": [
+        {
+          "Record_ID": "R01013",
+          "Canonical_Term": "present",
+          "Source_Term": "present",
+          "Source": "雅思 PRO 班级词汇表",
+          "Page": 7,
+          "Unit": 3,
+          "Section/Topic": "Writing",
+          "Source_No": 1,
+          "POS": "v.",
+          "Chinese_Meaning": "展示",
+          "Source_Context": "Each student will have to present their findings to the class.",
+          "Parse_Confidence": "high",
+          "Audit_Status_V1.1": "原V1记录",
+          "Notes": null
+        }
+      ],
+      "exampleZh": "我会向全班展示我们的发现。",
+      "sceneIds": [
+        "S06.A06"
+      ],
+      "glossaryIds": [
+        "S06.A06.G04"
+      ],
+      "sourceRecords": [
+        {
+          "term": "present",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R01013; 雅思 PRO 班级词汇表; page 7; unit 3; Writing",
+          "canonicalTerm": "present",
+          "originalContext": "Each student will have to present their findings to the class.",
+          "sourceRecordId": "R01013",
+          "sourceRecord": {
+            "Record_ID": "R01013",
+            "Canonical_Term": "present",
+            "Source_Term": "present",
+            "Source": "雅思 PRO 班级词汇表",
+            "Page": 7,
+            "Unit": 3,
+            "Section/Topic": "Writing",
+            "Source_No": 1,
+            "POS": "v.",
+            "Chinese_Meaning": "展示",
+            "Source_Context": "Each student will have to present their findings to the class.",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        }
+      ],
+      "unitVersion": "pilot-12-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.EXPLAIN_GRADE",
+      "form": "Could you explain my grade?",
+      "type": "construction",
+      "meaningZh": "能解释一下我的成绩吗？",
+      "sense": "请求理解评分与改进处，不等于要求教师提高成绩。",
+      "tier": "core",
+      "example": "Could you explain my grade and the comment?",
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "exampleZh": "能解释一下我的成绩和这条批注吗？",
+      "sceneIds": [
+        "S06.A06"
+      ],
+      "glossaryIds": [
+        "S06.A06.G05"
+      ],
+      "sourceRecords": [],
+      "unitVersion": "pilot-12-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.PRESENT_FINDINGS",
+      "form": "present our findings",
+      "type": "chunk",
+      "meaningZh": "展示我们的发现",
+      "sense": "把所观察或分析到的结果展示给听众；不把示范故事当成已做真实研究。",
+      "tier": "support",
+      "example": "We will present our findings with an example.",
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "exampleZh": "我们会用一个例子展示我们的发现。",
+      "sceneIds": [
+        "S06.A06"
+      ],
+      "glossaryIds": [
+        "S06.A06.G06"
+      ],
+      "sourceRecords": [],
+      "unitVersion": "pilot-12-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.GIVE_EXAMPLE",
+      "form": "give a concrete example",
+      "type": "chunk",
+      "meaningZh": "给出具体例子",
+      "sense": "以可理解情境说明观点；不是泛泛说“例如”后仍不提供内容。",
+      "tier": "support",
+      "example": "I will give a concrete example before the list.",
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "exampleZh": "我会先给一个具体例子，再列出清单。",
+      "sceneIds": [
+        "S06.A06"
+      ],
+      "glossaryIds": [
+        "S06.A06.G07"
+      ],
+      "sourceRecords": [],
+      "unitVersion": "pilot-12-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.CANTEEN.N",
+      "form": "canteen",
+      "type": "word",
+      "meaningZh": "食堂",
+      "sense": "学校或工厂提供餐食的地方；本课为校园食堂。",
+      "tier": "core",
+      "example": "Where is the canteen?",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sourceTerm": "canteen",
+      "sourceRecordIds": [
+        "R00421"
+      ],
+      "originalSourceRecords": [
+        {
+          "Record_ID": "R00421",
+          "Canonical_Term": "canteen",
+          "Source_Term": "canteen",
+          "Source": "大全直 PRO 听力预习词表",
+          "Page": 13,
+          "Unit": 6,
+          "Section/Topic": "Listening",
+          "Source_No": 32,
+          "POS": "n.",
+          "Chinese_Meaning": "食堂",
+          "Source_Context": "a place in a factory or school where meals are served",
+          "Parse_Confidence": "high",
+          "Audit_Status_V1.1": "原V1记录",
+          "Notes": null
+        }
+      ],
+      "exampleZh": "食堂在哪里？",
+      "sceneIds": [
+        "S06.A07"
+      ],
+      "glossaryIds": [
+        "S06.A07.G01"
+      ],
+      "sourceRecords": [
+        {
+          "term": "canteen",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R00421; 大全直 PRO 听力预习词表; page 13; unit 6; Listening",
+          "canonicalTerm": "canteen",
+          "originalContext": "a place in a factory or school where meals are served",
+          "sourceRecordId": "R00421",
+          "sourceRecord": {
+            "Record_ID": "R00421",
+            "Canonical_Term": "canteen",
+            "Source_Term": "canteen",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 13,
+            "Unit": 6,
+            "Section/Topic": "Listening",
+            "Source_No": 32,
+            "POS": "n.",
+            "Chinese_Meaning": "食堂",
+            "Source_Context": "a place in a factory or school where meals are served",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        }
+      ],
+      "unitVersion": "pilot-12-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.EMPLOYMENT.N",
+      "form": "employment",
+      "type": "word",
+      "meaningZh": "工作；受雇状态",
+      "sense": "选择有报酬的工作或被雇用状态；不是“雇用某人”的动词。较 job 正式。",
+      "tier": "support",
+      "example": "I am looking for part-time employment.",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sourceTerm": "employment",
+      "sourceRecordIds": [
+        "R00140"
+      ],
+      "originalSourceRecords": [
+        {
+          "Record_ID": "R00140",
+          "Canonical_Term": "employment",
+          "Source_Term": "employment",
+          "Source": "大全直 PRO 听力预习词表",
+          "Page": 5,
+          "Unit": 2,
+          "Section/Topic": "Listening",
+          "Source_No": 61,
+          "POS": "n.",
+          "Chinese_Meaning": "工作",
+          "Source_Context": "work, especially when it is done to earn money; the state of being employed",
+          "Parse_Confidence": "high",
+          "Audit_Status_V1.1": "原V1记录",
+          "Notes": null
+        }
+      ],
+      "exampleZh": "我在寻找兼职工作。",
+      "sceneIds": [
+        "S06.A07"
+      ],
+      "glossaryIds": [
+        "S06.A07.G02"
+      ],
+      "sourceRecords": [
+        {
+          "term": "employment",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R00140; 大全直 PRO 听力预习词表; page 5; unit 2; Listening",
+          "canonicalTerm": "employment",
+          "originalContext": "work, especially when it is done to earn money; the state of being employed",
+          "sourceRecordId": "R00140",
+          "sourceRecord": {
+            "Record_ID": "R00140",
+            "Canonical_Term": "employment",
+            "Source_Term": "employment",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 5,
+            "Unit": 2,
+            "Section/Topic": "Listening",
+            "Source_No": 61,
+            "POS": "n.",
+            "Chinese_Meaning": "工作",
+            "Source_Context": "work, especially when it is done to earn money; the state of being employed",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        }
+      ],
+      "unitVersion": "pilot-12-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.VACANCY.N",
+      "form": "vacancy",
+      "type": "word",
+      "meaningZh": "职位空缺",
+      "sense": "可申请去做的工作职位；源记录明确职位义，不使用空房义。",
+      "tier": "core",
+      "example": "Is the vacancy in the canteen still available?",
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "sourceTerm": "vacancy",
+      "sourceRecordIds": [
+        "R00139",
+        "R01538"
+      ],
+      "originalSourceRecords": [
+        {
+          "Record_ID": "R00139",
+          "Canonical_Term": "vacancy",
+          "Source_Term": "vacancy",
+          "Source": "大全直 PRO 听力预习词表",
+          "Page": 5,
+          "Unit": 2,
+          "Section/Topic": "Listening",
+          "Source_No": 60,
+          "POS": "n.",
+          "Chinese_Meaning": "空缺",
+          "Source_Context": "a job that is available for sb to do",
+          "Parse_Confidence": "high",
+          "Audit_Status_V1.1": "原V1记录",
+          "Notes": null
+        },
+        {
+          "Record_ID": "R01538",
+          "Canonical_Term": "vacancy",
+          "Source_Term": "vacancy",
+          "Source": "雅思一万词汇班",
+          "Page": 12,
+          "Unit": null,
+          "Section/Topic": "Scientific research 科研类",
+          "Source_No": null,
+          "POS": "n.",
+          "Chinese_Meaning": null,
+          "Source_Context": "vacant a. 空的，⽆无⼈人的，空缺的 vacancy n. 空缺；职位；",
+          "Parse_Confidence": "high",
+          "Audit_Status_V1.1": "原V1记录",
+          "Notes": null
+        }
+      ],
+      "exampleZh": "食堂这个职位现在仍空缺吗？",
+      "sceneIds": [
+        "S06.A07"
+      ],
+      "glossaryIds": [
+        "S06.A07.G03"
+      ],
+      "sourceRecords": [
+        {
+          "term": "vacancy",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R00139; 大全直 PRO 听力预习词表; page 5; unit 2; Listening",
+          "canonicalTerm": "vacancy",
+          "originalContext": "a job that is available for sb to do",
+          "sourceRecordId": "R00139",
+          "sourceRecord": {
+            "Record_ID": "R00139",
+            "Canonical_Term": "vacancy",
+            "Source_Term": "vacancy",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 5,
+            "Unit": 2,
+            "Section/Topic": "Listening",
+            "Source_No": 60,
+            "POS": "n.",
+            "Chinese_Meaning": "空缺",
+            "Source_Context": "a job that is available for sb to do",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        },
+        {
+          "term": "vacancy",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "R01538; 雅思一万词汇班; page 12; unit None; Scientific research 科研类",
+          "canonicalTerm": "vacancy",
+          "originalContext": "vacant a. 空的，⽆无⼈人的，空缺的 vacancy n. 空缺；职位；",
+          "sourceRecordId": "R01538",
+          "sourceRecord": {
+            "Record_ID": "R01538",
+            "Canonical_Term": "vacancy",
+            "Source_Term": "vacancy",
+            "Source": "雅思一万词汇班",
+            "Page": 12,
+            "Unit": null,
+            "Section/Topic": "Scientific research 科研类",
+            "Source_No": null,
+            "POS": "n.",
+            "Chinese_Meaning": null,
+            "Source_Context": "vacant a. 空的，⽆无⼈人的，空缺的 vacancy n. 空缺；职位；",
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Notes": null
+          }
+        }
+      ],
+      "unitVersion": "pilot-12-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.WHERE_CANTEEN",
+      "form": "Where is the canteen?",
+      "type": "construction",
+      "meaningZh": "食堂在哪里？",
+      "sense": "询问校园日常地点；可将地点名称换为其他需要找的设施。",
+      "tier": "core",
+      "example": "Could you tell me where the canteen is?",
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "exampleZh": "可以告诉我食堂在哪里吗？",
+      "sceneIds": [
+        "S06.A07"
+      ],
+      "glossaryIds": [
+        "S06.A07.G04"
+      ],
+      "sourceRecords": [],
+      "unitVersion": "pilot-12-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.APPLY_JOB",
+      "form": "apply for the job",
+      "type": "chunk",
+      "meaningZh": "申请这个职位",
+      "sense": "for 后是所申请的职位；拿申请表或提出询问不代表获聘。",
+      "tier": "core",
+      "example": "How can I apply for the job?",
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "exampleZh": "我该怎样申请这个职位？",
+      "sceneIds": [
+        "S06.A07"
+      ],
+      "glossaryIds": [
+        "S06.A07.G05"
+      ],
+      "sourceRecords": [],
+      "unitVersion": "pilot-12-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.WORK_STUDY.WORKING_HOURS",
+      "form": "working hours",
+      "type": "chunk",
+      "meaningZh": "工作时段；工作时间",
+      "sense": "核对工作的日期或时段是否与上课冲突。",
+      "tier": "support",
+      "example": "Could you tell me the working hours?",
+      "sourceKind": "COMPOSITION",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "exampleZh": "可以告诉我工作时段吗？",
+      "sceneIds": [
+        "S06.A07"
+      ],
+      "glossaryIds": [
+        "S06.A07.G06"
+      ],
+      "sourceRecords": [],
+      "unitVersion": "pilot-12-0",
       "generatedFrom": "branch-authoring"
     }
   ]

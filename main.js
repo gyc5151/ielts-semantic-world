@@ -1,7 +1,7 @@
-import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-11-0";
-import { nextReview, reviewDue } from "./learning.mjs?v=pilot-11-0";
-import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-11-0";
-import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-11-0";
+import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-12-0";
+import { nextReview, reviewDue } from "./learning.mjs?v=pilot-12-0";
+import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-12-0";
+import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-12-0";
 const DATA_URL = "./data/world.json";
 const STORAGE_KEY = "ielts-semantic-world-s01-trial-v1";
 
@@ -280,6 +280,13 @@ const ACTIVITY_META = {
   opinion: { label: '观点与条件', title: '说出观点，也留好条件。', hint: '写两三句：你的观点 → 一个具体理由或例子 → 必要条件。', placeholder: 'Give a view, a reason and a condition…', goal: '提出可解释的看法，并说明它在哪些条件下适用。' }
 };
 
+function branchObjectMapHtml(branch, scenes, next) {
+  if (branch.route.length <= 15) {
+    return `<ol class="object-route">${branch.route.map((object, index) => `<li><span>${String(index + 1).padStart(2, '0')}</span><strong>${escapeHtml(object)}</strong></li>`).join('')}</ol>`;
+  }
+  return `<p class="meta">先选一节，再沿它的三个物件回想；地点的转换见各课正文。</p><div class="route-segments">${scenes.map((scene, index) => `<details class="route-segment" ${scene.id === next.id ? 'open' : ''}><summary><span>${String(index + 1).padStart(2, '0')}</span><strong>${escapeHtml(scene.navTitle)}</strong><small>${scene.memoryNodes?.length || 0} 个物件</small></summary><ol class="object-route">${(scene.memoryNodes || []).map((node, n) => `<li><span>${String(n + 1).padStart(2, '0')}</span><strong>${escapeHtml(node.zh)}</strong></li>`).join('')}</ol><button class="text-btn" type="button" data-open-scene="${escapeHtml(scene.id)}">进入这一节 ↗</button></details>`).join('')}</div>`;
+}
+
 function renderBranch() {
   const branch = getBranch(activeBranchId);
   if (!branch) return navigate('home');
@@ -292,7 +299,7 @@ function renderBranch() {
     <h1>${escapeHtml(branch.title)}</h1><p class="branch-subtitle" lang="en">${annotatedEnglish(branch.subtitle, scenes[0])}</p><p>${escapeHtml(branch.description)}</p>
     <div class="hero-actions"><button class="primary-btn" type="button" id="startBranch">${done ? '继续这条路线' : '从第一个场景开始'}</button><button class="secondary-btn" type="button" id="backWorld">世界入口</button></div></div>
     <div class="branch-hero-art">${themeIllustration(branch.theme)}</div></section>
-    <section class="memory-map" aria-label="支线物件路线"><div class="eyebrow">ENTRY → OBJECTS → RETURN</div><h2>${escapeHtml(branch.entry)}</h2><ol class="object-route">${branch.route.map((object, index) => `<li><span>${String(index + 1).padStart(2, '0')}</span><strong>${escapeHtml(object)}</strong></li>`).join('')}</ol><p class="route-return">↶ ${escapeHtml(branch.returnLabel)} · 合上正文后，借这些物件讲清发生了什么。</p></section>
+    <section class="memory-map" aria-label="支线物件路线"><div class="eyebrow">ENTRY → OBJECTS → RETURN</div><h2>${escapeHtml(branch.entry)}</h2>${branchObjectMapHtml(branch, scenes, next)}<p class="route-return">↶ ${escapeHtml(branch.returnLabel)} · 合上正文后，借这些物件讲清发生了什么。</p></section>
     <section class="section-heading"><div><div class="eyebrow">SHORT READINGS / REAL DECISIONS</div><h2>沿着事件，一节一节走。</h2></div><p>英文先读，中文按需展开。用自己的说法也可以。</p></section>
     <div class="split-grid">${scenes.map((scene, index) => `<article class="scene-card"><span class="badge">${String(index + 1).padStart(2, '0')} / ${escapeHtml(scene.id)}</span><h3>${annotatedEnglish(scene.title, scene)}</h3><p>${annotatedEnglish(scene.goal, scene)}</p><div class="meta">${promptsFor(scene).length - 1} 个召回任务 · 1 个新情境迁移</div><button class="secondary-btn" type="button" data-open-scene="${escapeHtml(scene.id)}">进入${escapeHtml(scene.navTitle)} ↗</button></article>`).join('')}</div>
     ${branch.entrySceneId ? `<section class="branch-return-panel"><strong>回到主线的同一个物件</strong><p>这条支线从费用与合同接入。看完房间细节与预算，回去继续核实费用。</p><button class="secondary-btn" id="returnMain" type="button">${escapeHtml(branch.returnLabel)} ↶</button></section>` : `<p class="meta">${branch.kind === '主线' ? '完成一站再走下一站，也可以从费用与合同进入蓝色账单支线。' : '本次已上线这条支线；所属站点的完整主线仍在文字资料中。'}</p>`}`;
@@ -304,7 +311,11 @@ function renderBranch() {
 
 function memoryRouteHtml(scene) {
   if (!scene.memoryNodes?.length) return '';
-  return `<section class="memory-stations" aria-label="本节物件线索"><div class="eyebrow">FOLLOW THE OBJECTS</div><p class="meta">点开物件，回想它改变了哪个决定。</p><div class="memory-station-grid">${scene.memoryNodes.map((node, index) => `<details class="memory-station"><summary><span class="station-number">${String(index + 1).padStart(2, '0')}</span><strong>${escapeHtml(node.zh)}</strong></summary><div><p lang="en">${annotatedEnglish(node.object, scene)}</p><p lang="en">${annotatedEnglish(node.cue, scene)}</p>${textTranslation(node.cueZh, '线索中文')}${node.locationRelationZh ? `<p class="meta">${escapeHtml(node.locationRelationZh)}</p>` : ""}${node.id ? `<small>${escapeHtml(node.id)} · ${node.nextNodeId ? `下一位置 ${escapeHtml(node.nextNodeId)}` : "本路线终点"}</small>` : ""}</div></details>`).join('')}</div></section>`;
+  const nodes = content.microScenes.flatMap((s) => s.memoryNodes || []);
+  return `<section class="memory-stations" aria-label="本节物件线索"><div class="eyebrow">FOLLOW THE OBJECTS</div><p class="meta">点开物件，回想它改变了哪个决定。</p><div class="memory-station-grid">${scene.memoryNodes.map((node, index) => {
+    const next = nodes.find((n) => n.id === node.nextNodeId);
+    return `<details class="memory-station"><summary><span class="station-number">${String(index + 1).padStart(2, '0')}</span><strong>${escapeHtml(node.zh)}</strong></summary><div><p lang="en">${annotatedEnglish(node.object, scene)}</p><p lang="en">${annotatedEnglish(node.cue, scene)}</p>${textTranslation(node.cueZh, '线索中文')}${node.locationRelationZh ? `<p class="meta">${escapeHtml(node.locationRelationZh)}</p>` : ""}${node.id ? `<small>${next ? `下一物件：${escapeHtml(next.zh)}` : node.nextNodeId ? '下一位置见路线页' : '本段终点'}</small>` : ""}</div></details>`;
+  }).join('')}</div></section>`;
 }
 
 function chunkMatches(value, scene) {
@@ -312,17 +323,22 @@ function chunkMatches(value, scene) {
   const lower = source.toLowerCase();
   const candidates = [];
   for (const entry of scene.glossary || []) {
-    if (entry.type !== "chunk" || !entry.text) continue;
-    const needle = entry.text.toLowerCase();
-    let from = 0;
-    while (from < lower.length) {
-      const start = lower.indexOf(needle, from);
-      if (start < 0) break;
-      const end = start + needle.length;
-      if (!/[A-Za-z]/.test(source[start - 1] || "") && !/[A-Za-z]/.test(source[end] || "")) {
-        candidates.push({ start, end, entry });
+    if (!["chunk", "construction"].includes(entry.type) || !entry.text) continue;
+    for (const text of new Set([entry.text, ...(entry.matchTexts || [])])) {
+      const needle = text.toLowerCase();
+      if (!needle) continue;
+      let from = 0;
+      while (from < lower.length) {
+        const start = lower.indexOf(needle, from);
+        if (start < 0) break;
+        const fullEnd = start + needle.length;
+        if (!/[A-Za-z]/.test(source[start - 1] || "") && !/[A-Za-z]/.test(source[fullEnd] || "")) {
+          // Put the expression button after the final word, before punctuation.
+          const finalWord = [...text.matchAll(/[A-Za-z]+(?:'[A-Za-z]+)?/g)].at(-1);
+          if (finalWord) candidates.push({ start, end: start + finalWord.index + finalWord[0].length, entry });
+        }
+        from = fullEnd;
       }
-      from = end;
     }
   }
   const selected = [];
@@ -397,18 +413,20 @@ function showEntryModal(scene, entry, trigger, relatedChunkId = null) {
   });
   if (!glossaryDialog.open) glossaryReturnFocus = trigger;
   const source = (scene.terms || []).find((term) => String(term.term).toLowerCase() === String(entry.sourceTerm || "").toLowerCase());
-  const relatedChunk = (scene.glossary || []).find((item) => item.id === relatedChunkId && item.type === "chunk");
+  const relatedChunk = (scene.glossary || []).find((item) => item.id === relatedChunkId && item.type !== "word");
+  const contextExample = dictionaryContextFor(dictionaryContext, scene.id, entry.text.toLowerCase(), entry.dictionaryUsage)?.example;
+  const showProjectExample = entry.example && (!wordnet || entry.example !== contextExample);
   glossaryDialog.innerHTML = `<div class="glossary-modal">
     <div class="glossary-modal-top"><span class="glossary-type">${entry.type === "word" ? "WORD / 单词" : "CHUNK / 表达块"}</span><button class="glossary-close" type="button" aria-label="关闭释义窗口">×</button></div>
     <h2 class="glossary-headword" id="glossaryHeadword">${escapeHtml(entry.text)}</h2>
     ${entry.contextSentence ? `<details class="glossary-context"><summary>查看对应的情境句</summary><p lang="en">${escapeHtml(entry.contextSentence)}</p></details>` : ""}
     <div class="glossary-zh"><span>本项目编写 · 在本情境中</span><strong>${escapeHtml(entry.zh || "释义待补")}</strong></div>
     ${entry.note ? `<div class="glossary-note"><span>${entry.type === "word" ? "用法要点" : "搭配与调用"}</span><p>${escapeHtml(entry.note)}</p></div>` : ""}
-    ${entry.type === "chunk" ? `<div class="glossary-components"><span>点组成单词，进一步查词</span><div>${chunkWordButtons(scene, entry)}</div></div>` : ""}
+    ${entry.type !== "word" ? `<div class="glossary-components"><span>点组成单词，进一步查词</span><div>${chunkWordButtons(scene, entry)}</div></div>` : ""}
     ${relatedChunk ? `<button class="glossary-related" type="button" data-related-chunk-open="${escapeHtml(relatedChunk.id)}" data-related-scene="${escapeHtml(scene.id)}">查看整块表达：${escapeHtml(relatedChunk.text)} ↗</button>` : ""}
-    ${entry.example ? `<div class="glossary-example"><span>项目情境例句</span><p>${escapeHtml(entry.example)}</p></div>` : ""}
+    ${showProjectExample ? `<div class="glossary-example"><span>项目情境例句</span><p>${escapeHtml(entry.example)}</p>${textTranslation(entry.exampleZh, "例句中文")}</div>` : ""}
     ${wordnet ? dictionaryHtml(entry, scene.id, wordnet, dictionaryContext, dictionaryTranslations, dictionaryChinese, showDictionaryChinese) : `<p role="status" class="meta">${entry.dictionaryLoadChecked ? "词典暂不可用。可关闭窗口后重开重试，本情境释义仍可阅读。" : "正在载入词典；本情境释义可先阅读。"}</p>`}
-    <details class="glossary-source"><summary>${entry.type === "chunk" ? "查看组成词的来源" : "查看词汇纳入依据"}</summary>${source ? `<p><strong>${escapeHtml(source.kind === "BRG" ? "SRC · BRG" : source.kind || "")}</strong> · ${escapeHtml(source.sourceLabel || "")}</p>${source.sourceRef ? `<small>${escapeHtml(source.sourceRef)}</small>` : ""}${source.sourceUrl ? `<a href="${escapeHtml(source.sourceUrl)}" target="_blank" rel="noopener noreferrer">查看外部词典 ↗</a>` : ""}` : `<p>Researcher inference · 根据本场景编写的辅助释义；未改动原始词表。</p>`}</details>
+    <details class="glossary-source"><summary>${entry.type !== "word" ? "查看组成词的来源" : "查看词汇纳入依据"}</summary>${source ? `<p><strong>${escapeHtml(source.kind === "BRG" ? "SRC · BRG" : source.kind || "")}</strong> · ${escapeHtml(source.sourceLabel || "")}</p>${source.sourceRef ? `<small>${escapeHtml(source.sourceRef)}</small>` : ""}${source.sourceUrl ? `<a href="${escapeHtml(source.sourceUrl)}" target="_blank" rel="noopener noreferrer">查看外部词典 ↗</a>` : ""}` : `<p>Researcher inference · 根据本场景编写的辅助释义；未改动原始词表。</p>`}</details>
   </div>`;
   if (glossaryDialog.open) glossaryDialog.querySelector(".glossary-close").focus();
   else glossaryDialog.showModal();
@@ -942,7 +960,7 @@ function unitLearningHtml(scene) {
   const units = unitsForScene(scene);
   if (!units.length) return "";
   const names = { core: "本节主动练", support: "需要时借用", recognition: "先读懂即可" };
-  return `<section class="unit-learning"><h2>先选少量表达，完成一件事</h2>${Object.entries(names).map(([tier, label]) => `<details ${tier === "core" ? "open" : ""}><summary>${label} · ${units.filter((u) => u.tier === tier).length}</summary><div class="unit-cards">${units.filter((u) => u.tier === tier).map((u) => `<article><strong lang="en">${annotatedEnglish(u.form, scene, u.type === "word" ? u.example : null)}</strong><p>${escapeHtml(u.meaningZh)}</p><p class="meta">${escapeHtml(u.sense)}</p><p lang="en">${annotatedEnglish(u.example, scene)}</p><small>项目编写的例句</small><details><summary>组成词依据</summary>${unitSourceHtml(u)}<small>表达组合与例句为项目编写；原词条不修改。</small></details></article>`).join("")}</div></details>`).join("")}<small>分层是本批编辑建议；读过、点击过均不计为掌握。</small></section>`;
+  return `<section class="unit-learning"><h2>先选少量表达，完成一件事</h2>${Object.entries(names).map(([tier, label]) => `<details ${tier === "core" ? "open" : ""}><summary>${label} · ${units.filter((u) => u.tier === tier).length}</summary><div class="unit-cards">${units.filter((u) => u.tier === tier).map((u) => `<article><strong lang="en">${annotatedEnglish(u.form, scene, u.type === "word" ? u.example : null)}</strong><p>${escapeHtml(u.meaningZh)}</p><p class="meta">${escapeHtml(u.sense)}</p><p lang="en">${annotatedEnglish(u.example, scene)}</p>${textTranslation(u.exampleZh, "例句中文")}<small>项目编写的例句</small><details><summary>组成词依据</summary>${unitSourceHtml(u)}<small>表达组合与例句为项目编写；原词条不修改。</small></details></article>`).join("")}</div></details>`).join("")}<small>分层是本批编辑建议；读过、点击过均不计为掌握。</small></section>`;
 }
 function unitAssessmentHtml(prompt, attempt) {
   const units = (prompt.unitIds || []).map((id) => learningUnits.find((u) => u.id === id)).filter(Boolean);

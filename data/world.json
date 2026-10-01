@@ -1,7 +1,7 @@
 {
   "sceneId": "WORLD",
   "title": "IELTS Semantic World",
-  "version": "pilot-11-0",
+  "version": "pilot-12-0",
   "dictionaryFile": "./data/wordnet-s01.json",
   "dictionaryContextFile": "./data/s01-dictionary-context.json",
   "dictionaryTranslationFile": "./data/wordnet-translations-s01.json",
@@ -39,9 +39,16 @@
     "./data/s07-j01.json",
     "./data/s07-j02.json",
     "./data/s07-j03.json",
+    "./data/s07-j04.json",
+    "./data/s07-j05.json",
     "./data/s06-a01.json",
     "./data/s06-a02.json",
     "./data/s05-d01.json",
+    "./data/s06-a03.json",
+    "./data/s06-a04.json",
+    "./data/s06-a05.json",
+    "./data/s06-a06.json",
+    "./data/s06-a07.json",
     "./data/s05-c01.json",
     "./data/s05-c02.json"
   ],
@@ -270,7 +277,7 @@
       "subtitle": "A room after the journey",
       "theme": "travel",
       "kind": "出行与住宿支线",
-      "description": "从出发前的一张时间便签到站外路线，再到接待台核对房间。每次只解决一个旅行中的真实问题。",
+      "description": "从出发前的一张时间便签到站外路线，再到接待台核对房间。每次只解决一个旅行中的真实问题。 入住后的外出继续从车站走向导览集合点，练习交通选择与现场观察。",
       "entry": "租房街口 → 出发准备桌 → 抵达车站后的出口",
       "returnLabel": "带上核对好的房间与路线，回到租房街口",
       "route": [
@@ -282,12 +289,20 @@
         "弯道尽头的旅社门牌",
         "接待台的预订记录",
         "房型说明卡",
-        "厨房门旁的设施单"
+        "厨房门旁的设施单",
+        "车站线路板",
+        "编号电车站牌",
+        "博物馆集合海报",
+        "装备车旁地图箱",
+        "桥旁水痕",
+        "桥后长椅"
       ],
       "sceneIds": [
         "S07.J01",
         "S07.J02",
-        "S07.J03"
+        "S07.J03",
+        "S07.J04",
+        "S07.J05"
       ]
     },
     {
@@ -296,7 +311,7 @@
       "subtitle": "Before the deadline",
       "theme": "campus",
       "kind": "工作与学习支线",
-      "description": "沿前台预订册、交接信封和书桌上的日期卡，练习约时间、说清职责，以及在冲突发生时提出可执行的新安排。",
+      "description": "沿前台预订册、交接信封和书桌上的日期卡，练习约时间、说清职责，以及在冲突发生时提出可执行的新安排。 接着沿注册表、课堂讲义、图书馆问题卡和展示屏走进一门新课，再到食堂核对兼职空缺。",
       "entry": "校园服务中心前台左侧 · 蓝色预订册",
       "returnLabel": "回到前台左侧的蓝色预订册",
       "route": [
@@ -308,12 +323,32 @@
         "签名责任卡",
         "作业说明页",
         "标了日期的卡片",
-        "导师回复"
+        "导师回复",
+        "课程注册表",
+        "先前课程证书",
+        "新课时间卡",
+        "左侧讲义桌",
+        "正前方讲台",
+        "右侧小组桌",
+        "中央图书馆入口",
+        "教科书与复习页",
+        "书旁问题卡",
+        "批回的短文",
+        "中间的例子卡",
+        "右侧展示屏",
+        "校园路径地图",
+        "食堂招聘告示",
+        "工作申请便条"
       ],
       "sceneIds": [
         "S06.A01",
         "S06.A02",
-        "S05.D01"
+        "S05.D01",
+        "S06.A03",
+        "S06.A04",
+        "S06.A05",
+        "S06.A06",
+        "S06.A07"
       ]
     },
     {
@@ -348,7 +383,8 @@
     "./data/branch-dictionary-context.json",
     "./data/branch-v8-dictionary-context.json",
     "./data/branch-v10-dictionary-context.json",
-    "./data/branch-v11-dictionary-context.json"
+    "./data/branch-v11-dictionary-context.json",
+    "./data/branch-v12-dictionary-context.json"
   ],
   "uiWordsFile": "./data/world-ui-words.json",
   "learningUnitsFile": "./data/learning-units.json",
