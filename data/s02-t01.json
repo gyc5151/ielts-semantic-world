@@ -9,19 +9,48 @@
       "object": "Curled notice",
       "zh": "卷边公告",
       "cue": "Which detail is out of date?",
-      "cueZh": "哪条信息已经过时？"
+      "cueZh": "哪条信息已经过时？",
+      "id": "S02.T01.L01",
+      "location": "At the notice board, beside the old room number.",
+      "locationZh": "公告板上，旧房号旁。",
+      "previous": null,
+      "next": "S02.T01.L02",
+      "anchorUnitIds": [
+        "U.LEGACY.S02.T01.OVERDUE",
+        "U.LEGACY.S02.T01.TEMPORARILY",
+        "U.LEGACY.S02.T01.CLOSURE"
+      ]
     },
     {
       "object": "Tuesday squares",
       "zh": "周二日历格",
       "cue": "What remains regular?",
-      "cueZh": "哪部分安排仍然固定？"
+      "cueZh": "哪部分安排仍然固定？",
+      "id": "S02.T01.L02",
+      "location": "At the timetable, beside the Tuesday squares.",
+      "locationZh": "时间表上，连续的周二日历格旁。",
+      "previous": "S02.T01.L01",
+      "next": "S02.T01.L03",
+      "anchorUnitIds": [
+        "U.COMMUNITY.SESSION.ACTIVITY",
+        "U.LEGACY.S02.T01.REGULARITY",
+        "U.HOUSING.M03.CONTRAST"
+      ]
     },
     {
       "object": "Room key",
       "zh": "借来的房间钥匙",
       "cue": "When does the temporary change begin?",
-      "cueZh": "临时改动何时开始？"
+      "cueZh": "临时改动何时开始？",
+      "id": "S02.T01.L03",
+      "location": "At the new room number and the borrowed key.",
+      "locationZh": "新房号与借来的钥匙旁，核对开始与更新。",
+      "previous": "S02.T01.L02",
+      "next": null,
+      "anchorUnitIds": [
+        "U.LEGACY.S02.T01.ONWARDS",
+        "U.NOTICE.DATED_UPDATE"
+      ]
     }
   ],
   "situation": "At the community centre, a curled notice still sent visitors to Room A. Its correction was overdue. Lin looked at the timetable: a row of Tuesday squares marked the regular session. People came after work, and the regularity helped them plan their evenings. Changing the room mattered even if the weekly time stayed the same. A ceiling panel needed repair, so Room A would close temporarily. The volunteer offered Room B. Lin wrote a new notice: Use Room B from Tuesday onwards until a dated update appears here. She put the date above the new room number. A temporary plan needed a clear beginning and a clear place to check for its end.",
@@ -113,6 +142,62 @@
       "note": "这里说公告更正已拖延，不是课程日期已经过去。",
       "type": "word",
       "sourceTerm": "overdue"
+    },
+    {
+      "id": "S02.T01.UG01",
+      "text": "session",
+      "zh": "一场活动；一段进行活动的时间",
+      "note": "本课指周二的一场社区活动，不是整个学期、软件会话或招魂活动。",
+      "type": "word",
+      "sourceTerm": "session"
+    },
+    {
+      "id": "S02.T01.UG02",
+      "text": "regularity",
+      "zh": "按固定规律重复的特性",
+      "note": "每周同一时间的规律性让人便于安排晚间；识别这个名词，不强迫在通知中用抽象名词替代清楚时间。",
+      "type": "word",
+      "sourceTerm": "regularity"
+    },
+    {
+      "id": "S02.T01.UG03",
+      "text": "temporarily",
+      "zh": "暂时地",
+      "note": "for a limited time，不表示永久；本课A室因维修暂时关闭，确切结束日期没有公布。",
+      "type": "word",
+      "sourceTerm": "temporarily"
+    },
+    {
+      "id": "S02.T01.UG04",
+      "text": "from … onwards",
+      "zh": "从某个时间起并继续",
+      "note": "from后给起始时间，onwards表示之后持续；不是只在该日使用一次。原例句已有时间义，原中文方向释义未改。",
+      "type": "construction",
+      "sourceTerm": "onwards",
+      "matchTexts": [
+        "from Tuesday onwards",
+        "from Monday onwards"
+      ]
+    },
+    {
+      "id": "S02.T01.UG05",
+      "text": "… is closed …, so … will …",
+      "zh": "说明关闭状态和可用替代安排",
+      "note": "先说关闭原因或状态，再给下一步可用安排；修理完成前用暂时计划，不虚构结束时间。",
+      "type": "construction",
+      "matchTexts": [
+        "Room A is closed temporarily, so the session will take place in Room B."
+      ]
+    },
+    {
+      "id": "S02.T01.UG06",
+      "text": "… is …, but …",
+      "zh": "区分不变时间与改变地点",
+      "note": "相反或不同方面并列；时间没变不能推断房间也没变。",
+      "type": "construction",
+      "matchTexts": [
+        "The weekly time is unchanged, but the room is different."
+      ]
     }
   ],
   "retrievalPrompts": [
@@ -127,7 +212,21 @@
       "targetTerms": [
         "temporarily",
         "session"
-      ]
+      ],
+      "unitIds": [
+        "U.LEGACY.S02.T01.TEMPORARILY",
+        "U.COMMUNITY.SESSION.ACTIVITY",
+        "U.LEGACY.S02.T01.CLOSURE"
+      ],
+      "cueZh": "A室要修天花板，活动转到B室。告诉来访者发生了什么变化。",
+      "checks": [
+        "暂时关闭原房间。",
+        "给出B室这个替代地点。",
+        "不说活动取消。"
+      ],
+      "feedbackZh": "状态与替代安排连起来。",
+      "taskMode": "recall",
+      "unitVersion": "pilot-15-0"
     },
     {
       "id": "S02.T01.P02",
@@ -139,7 +238,20 @@
       "feedback": "Onwards gives a starting point, not a single visit.",
       "targetTerms": [
         "onwards"
-      ]
+      ],
+      "unitIds": [
+        "U.LEGACY.S02.T01.ONWARDS",
+        "U.NOTICE.DATED_UPDATE"
+      ],
+      "cueZh": "从下周二开始使用新房间，结束时将另发更新。写主要通知。",
+      "checks": [
+        "明确B室。",
+        "给起始时间。",
+        "说明到哪里查更新，结束日期未知。"
+      ],
+      "feedbackZh": "from … onwards表达从起点持续，不能只当一次访问。",
+      "taskMode": "recall",
+      "unitVersion": "pilot-15-0"
     },
     {
       "id": "S02.T01.P03",
@@ -152,7 +264,20 @@
       "targetTerms": [
         "overdue",
         "regularity"
-      ]
+      ],
+      "unitIds": [
+        "U.LEGACY.S02.T01.OVERDUE",
+        "U.HOUSING.M03.CONTRAST"
+      ],
+      "cueZh": "每周时间没变，但大家可能仍去旧房间。解释公告为何需要尽快更正。",
+      "checks": [
+        "更正已迟。",
+        "指出错误房号的实际后果。",
+        "不把未改公告当成旧房间可用。"
+      ],
+      "feedbackZh": "允许使用简单的late表达同一意图；识别层不强迫主动使用。",
+      "taskMode": "recall",
+      "unitVersion": "pilot-15-0"
     }
   ],
   "transferPrompt": {
@@ -167,7 +292,32 @@
       "session",
       "onwards",
       "temporarily"
-    ]
+    ],
+    "unitIds": [
+      "U.COMMUNITY.SESSION.ACTIVITY",
+      "U.LEGACY.S02.T01.ONWARDS",
+      "U.LEGACY.S02.T01.TEMPORARILY"
+    ],
+    "cueZh": "图书馆学习小组周一起搬到一楼，原房间正维修。通知成员。",
+    "checks": [
+      "地点换成一楼。",
+      "起始日换成周一。",
+      "说明是维修期间的安排。"
+    ],
+    "feedbackZh": "迁移时间、地点和临时原因，不照搬A/B室。",
+    "taskMode": "transfer",
+    "unitVersion": "pilot-15-0"
   },
-  "learningUnitIds": []
+  "learningUnitIds": [
+    "U.LEGACY.S02.T01.OVERDUE",
+    "U.COMMUNITY.SESSION.ACTIVITY",
+    "U.LEGACY.S02.T01.REGULARITY",
+    "U.LEGACY.S02.T01.TEMPORARILY",
+    "U.LEGACY.S02.T01.ONWARDS",
+    "U.NOTICE.DATED_UPDATE",
+    "U.LEGACY.S02.T01.CLOSURE",
+    "U.HOUSING.M03.CONTRAST"
+  ],
+  "easySummary": "The old notice sends people to Room A, but that room needs repair. The weekly session keeps its usual time. From Tuesday, people will use Room B until a new dated notice appears. The location changes for a limited time.",
+  "easySummaryZh": "旧公告把人引向A室，但A室需要维修。每周活动仍在原来的时间举行。从周二起，大家使用B室，直到出现一份新日期的通知。地点只是暂时改变。"
 }

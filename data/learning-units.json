@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "pilot-14-0",
+  "version": "pilot-15-0",
   "scope": "Editorial learning units for listed sceneIds; not entire seed vocabulary or learner mastery",
   "units": [
     {
@@ -218,11 +218,13 @@
       "tier": "support",
       "sceneIds": [
         "S01.M01",
-        "S01.M09"
+        "S01.M09",
+        "S01.H02"
       ],
       "glossaryIds": [
         "S01.M01.G05",
-        "S01.M09.G07"
+        "S01.M09.G07",
+        "S01.H02.UG05"
       ],
       "example": "The train fare is rising.",
       "evidenceLabel": "Researcher inference · editorial unit and example",
@@ -271,27 +273,36 @@
       "reviewStatus": "project-reviewed",
       "unitVersion": "pilot-9-0",
       "sceneTiers": {
-        "S01.M09": "support"
+        "S01.M09": "support",
+        "S01.H02": "support"
       },
       "sceneExamples": {
-        "S01.M09": "Walking costs nothing, but the bus has a fare."
+        "S01.M09": "Walking costs nothing, but the bus has a fare.",
+        "S01.H02": "The train fare is higher for the cheaper flat."
       },
       "sceneExampleZhs": {
-        "S01.M09": "步行不花钱，但坐公交要付车费。"
+        "S01.M09": "步行不花钱，但坐公交要付车费。",
+        "S01.H02": "较便宜公寓对应的火车费用更高。"
       },
       "sceneMemoryNodeIds": {
         "S01.M09": [
           "S01.M09.L02"
+        ],
+        "S01.H02": [
+          "S01.H02.L01"
         ]
       },
       "sceneSenses": {
-        "S01.M09": "乘坐公交、火车等交通工具的费用；不是房租。"
+        "S01.M09": "乘坐公交、火车等交通工具的费用；不是房租。",
+        "S01.H02": "本课火车费用，是住房之外的实际通勤支出。房租更低不代表交通费用也低。"
       },
       "sceneMeaningZhs": {
-        "S01.M09": "乘交通工具支付的费用"
+        "S01.M09": "乘交通工具支付的费用",
+        "S01.H02": "交通票价"
       },
       "overlaySceneIds": [
-        "S01.M09"
+        "S01.M09",
+        "S01.H02"
       ]
     },
     {
@@ -2190,17 +2201,42 @@
       "tier": "core",
       "type": "construction",
       "sceneIds": [
-        "S10.H05"
+        "S10.H05",
+        "S01.H01"
       ],
       "glossaryIds": [
-        "S10.H05.G06"
+        "S10.H05.G06",
+        "S01.H01.UG09"
       ],
       "sourceRecords": [],
       "sourceKind": "COMPOSITION",
       "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
       "reviewStatus": "project-reviewed",
       "unitVersion": "pilot-13-0",
-      "generatedFrom": "branch-authoring"
+      "generatedFrom": "branch-authoring",
+      "overlaySceneIds": [
+        "S01.H01"
+      ],
+      "sceneTiers": {
+        "S01.H01": "support"
+      },
+      "sceneExamples": {
+        "S01.H01": "Could you check the noise at night before we agree to rent the flat?"
+      },
+      "sceneExampleZhs": {
+        "S01.H01": "可以在我们同意租房前核实夜间噪音吗？"
+      },
+      "sceneSenses": {
+        "S01.H01": "请求核实明确条件。此处确认夜间声音，与椅子的身体舒适感是两个问题。"
+      },
+      "sceneMeaningZhs": {
+        "S01.H01": "在决定前请求核实条件"
+      },
+      "sceneMemoryNodeIds": {
+        "S01.H01": [
+          "S01.H01.L03"
+        ]
+      }
     },
     {
       "id": "U.CLINIC.H06.VACCINE",
@@ -8606,10 +8642,14 @@
         "reviewedAt": "2026-10-01"
       },
       "sceneIds": [
-        "S01.M03"
+        "S01.M03",
+        "S02.T01",
+        "S02.T02"
       ],
       "glossaryIds": [
-        "S01.M03.UG01"
+        "S01.M03.UG01",
+        "S02.T01.UG06",
+        "S02.T02.UG07"
       ],
       "sourceRecords": [],
       "generatedFrom": "scene-unit-overlay",
@@ -8617,23 +8657,45 @@
       "unitVersion": "pilot-14-0",
       "evidenceLabel": "Researcher inference · reviewed learning sense and original project example",
       "overlaySceneIds": [
-        "S01.M03"
+        "S01.M03",
+        "S02.T01",
+        "S02.T02"
       ],
       "sceneTiers": {
-        "S01.M03": "core"
+        "S01.M03": "core",
+        "S02.T01": "support",
+        "S02.T02": "core"
       },
       "sceneExamples": {
-        "S01.M03": "The flat is furnished, but the kitchen window does not open."
+        "S01.M03": "The flat is furnished, but the kitchen window does not open.",
+        "S02.T01": "The weekly time is unchanged, but the room is different.",
+        "S02.T02": "The repair is finished, but changing the message again could confuse visitors."
       },
       "sceneExampleZhs": {
-        "S01.M03": "公寓有家具，但厨房窗户打不开。"
+        "S01.M03": "公寓有家具，但厨房窗户打不开。",
+        "S02.T01": "每周时间不变，但房间不同了。",
+        "S02.T02": "维修已完成，但再改一次通知可能使来访者混淆。"
       },
       "sceneMemoryNodeIds": {
         "S01.M03": [
           "S01.M03.L02"
+        ],
+        "S02.T01": [
+          "S02.T01.L02"
+        ],
+        "S02.T02": [
+          "S02.T02.L03"
         ]
       },
-      "sourceKind": "COMPOSITION"
+      "sourceKind": "COMPOSITION",
+      "sceneSenses": {
+        "S02.T01": "相反或不同方面并列；时间没变不能推断房间也没变。",
+        "S02.T02": "维修完成更早是事实；再改通知可能令人混淆是潜在后果。but后保留could，避免把混淆说成已发生。"
+      },
+      "sceneMeaningZhs": {
+        "S02.T01": "区分不变时间与改变地点",
+        "S02.T02": "解释已完成维修与保持安排的不同考虑"
+      }
     },
     {
       "id": "U.HOUSING.M04.SPACIOUS",
@@ -8736,11 +8798,13 @@
       },
       "sceneIds": [
         "S01.M04",
-        "S01.M05"
+        "S01.M05",
+        "S01.H02"
       ],
       "glossaryIds": [
         "S01.M04.G02",
-        "S01.M05.G01"
+        "S01.M05.G01",
+        "S01.H02.UG06"
       ],
       "sourceRecords": [
         {
@@ -8766,19 +8830,23 @@
       "evidenceLabel": "Researcher inference · reviewed learning sense and original project example",
       "overlaySceneIds": [
         "S01.M04",
-        "S01.M05"
+        "S01.M05",
+        "S01.H02"
       ],
       "sceneTiers": {
         "S01.M04": "support",
-        "S01.M05": "support"
+        "S01.M05": "support",
+        "S01.H02": "support"
       },
       "sceneExamples": {
         "S01.M04": "The monthly rent is lower, but the journey is longer.",
-        "S01.M05": "Does the monthly rent include the utility bills?"
+        "S01.M05": "Does the monthly rent include the utility bills?",
+        "S01.H02": "The monthly rent does not include every household cost."
       },
       "sceneExampleZhs": {
         "S01.M04": "月租金更低，但路程更长。",
-        "S01.M05": "月租金包括水电等账单吗？"
+        "S01.M05": "月租金包括水电等账单吗？",
+        "S01.H02": "月租金不包括家庭的所有支出。"
       },
       "sceneMemoryNodeIds": {
         "S01.M04": [
@@ -8786,14 +8854,19 @@
         ],
         "S01.M05": [
           "S01.M05.L01"
+        ],
+        "S01.H02": [
+          "S01.H02.L01"
         ]
       },
       "sourceKind": "COL",
       "sceneSenses": {
-        "S01.M05": "rent在这里是租金名词；广告金额不自动包含水电等账单。"
+        "S01.M05": "rent在这里是租金名词；广告金额不自动包含水电等账单。",
+        "S01.H02": "与交通和供暖费用分别比较；这里是rent名词，原来源rent动词义不静默扩宽。"
       },
       "sceneMeaningZhs": {
-        "S01.M05": "月租金"
+        "S01.M05": "月租金",
+        "S01.H02": "月租金"
       }
     },
     {
@@ -9613,10 +9686,12 @@
         "reviewedAt": "2026-10-01"
       },
       "sceneIds": [
-        "S01.M05"
+        "S01.M05",
+        "S01.H02"
       ],
       "glossaryIds": [
-        "S01.M05.UG03"
+        "S01.M05.UG03",
+        "S01.H02.UG04"
       ],
       "sourceRecords": [],
       "generatedFrom": "scene-unit-overlay",
@@ -9624,23 +9699,36 @@
       "unitVersion": "pilot-14-0",
       "evidenceLabel": "Researcher inference · reviewed learning sense and original project example",
       "overlaySceneIds": [
-        "S01.M05"
+        "S01.M05",
+        "S01.H02"
       ],
       "sceneTiers": {
-        "S01.M05": "core"
+        "S01.M05": "core",
+        "S01.H02": "core"
       },
       "sceneExamples": {
-        "S01.M05": "Could you put the repair plan in writing before I sign?"
+        "S01.M05": "Could you put the repair plan in writing before I sign?",
+        "S01.H02": "Could you put the total cost in writing before I sign?"
       },
       "sceneExampleZhs": {
-        "S01.M05": "可以在我签字前把维修计划写下来吗？"
+        "S01.M05": "可以在我签字前把维修计划写下来吗？",
+        "S01.H02": "可以在我签字前把总费用写下来吗？"
       },
       "sceneMemoryNodeIds": {
         "S01.M05": [
           "S01.M05.L03"
+        ],
+        "S01.H02": [
+          "S01.H02.L03"
         ]
       },
-      "sourceKind": "COMPOSITION"
+      "sourceKind": "COMPOSITION",
+      "sceneSenses": {
+        "S01.H02": "将待确认的总费用写下来；具体请求与保留记录相连，不能把提出请求说成费用已经确认。"
+      },
+      "sceneMeaningZhs": {
+        "S01.H02": "行动前索要书面信息"
+      }
     },
     {
       "id": "U.HOUSING.M06.DATE",
@@ -10016,10 +10104,12 @@
         "reviewedAt": "2026-10-01"
       },
       "sceneIds": [
-        "S01.M06"
+        "S01.M06",
+        "S01.H01"
       ],
       "glossaryIds": [
-        "S01.M06.UG03"
+        "S01.M06.UG03",
+        "S01.H01.UG08"
       ],
       "sourceRecords": [],
       "generatedFrom": "scene-unit-overlay",
@@ -10027,23 +10117,36 @@
       "unitVersion": "pilot-14-0",
       "evidenceLabel": "Researcher inference · reviewed learning sense and original project example",
       "overlaySceneIds": [
-        "S01.M06"
+        "S01.M06",
+        "S01.H01"
       ],
       "sceneTiers": {
-        "S01.M06": "core"
+        "S01.M06": "core",
+        "S01.H01": "core"
       },
       "sceneExamples": {
-        "S01.M06": "The note says the window opens, but it is still stuck."
+        "S01.M06": "The note says the window opens, but it is still stuck.",
+        "S01.H01": "The advertisement says the room is immaculate, but the window frame is worn."
       },
       "sceneExampleZhs": {
-        "S01.M06": "备注说窗户能打开，但它仍卡住了。"
+        "S01.M06": "备注说窗户能打开，但它仍卡住了。",
+        "S01.H01": "广告说房间非常整洁，但窗框已磨损。"
       },
       "sceneMemoryNodeIds": {
         "S01.M06": [
           "S01.M06.L02"
+        ],
+        "S01.H01": [
+          "S01.H01.L01"
         ]
       },
-      "sourceKind": "COMPOSITION"
+      "sourceKind": "COMPOSITION",
+      "sceneSenses": {
+        "S01.H01": "先归属广告说法，再说现场看到的具体事实；不要把磨损窗框自动等同于肮脏房间。"
+      },
+      "sceneMeaningZhs": {
+        "S01.H01": "区分宣传与实际观察"
+      }
     },
     {
       "id": "U.HOUSING.M07.STACK",
@@ -10503,10 +10606,12 @@
         "reviewedAt": "2026-10-01"
       },
       "sceneIds": [
-        "S01.M07"
+        "S01.M07",
+        "S02.T02"
       ],
       "glossaryIds": [
-        "S01.M07.UG02"
+        "S01.M07.UG02",
+        "S02.T02.UG08"
       ],
       "sourceRecords": [],
       "generatedFrom": "scene-unit-overlay",
@@ -10514,23 +10619,36 @@
       "unitVersion": "pilot-14-0",
       "evidenceLabel": "Researcher inference · reviewed learning sense and original project example",
       "overlaySceneIds": [
-        "S01.M07"
+        "S01.M07",
+        "S02.T02"
       ],
       "sceneTiers": {
-        "S01.M07": "core"
+        "S01.M07": "core",
+        "S02.T02": "core"
       },
       "sceneExamples": {
-        "S01.M07": "First, clear the doorway. Then sort out the books."
+        "S01.M07": "First, clear the doorway. Then sort out the books.",
+        "S02.T02": "First, take the side corridor. Then follow the arrow to Room B."
       },
       "sceneExampleZhs": {
-        "S01.M07": "先清出门口，再整理书。"
+        "S01.M07": "先清出门口，再整理书。",
+        "S02.T02": "先走侧面过道，再沿箭头去B室。"
       },
       "sceneMemoryNodeIds": {
         "S01.M07": [
           "S01.M07.L01"
+        ],
+        "S02.T02": [
+          "S02.T02.L02"
         ]
       },
-      "sourceKind": "COMPOSITION"
+      "sourceKind": "COMPOSITION",
+      "sceneSenses": {
+        "S02.T02": "先找正确过道再走到房间；按实际可用通道说明，不沿用锁住楼梯。"
+      },
+      "sceneMeaningZhs": {
+        "S02.T02": "说明可执行路线的先后动作"
+      }
     },
     {
       "id": "U.HOUSING.M07.MISSING",
@@ -11045,10 +11163,12 @@
         "reviewedAt": "2026-10-01"
       },
       "sceneIds": [
-        "S01.M09"
+        "S01.M09",
+        "S02.T02"
       ],
       "glossaryIds": [
-        "S01.M09.UG01"
+        "S01.M09.UG01",
+        "S02.T02.UG05"
       ],
       "sourceRecords": [
         {
@@ -11090,23 +11210,36 @@
       "unitVersion": "pilot-14-0",
       "evidenceLabel": "Researcher inference · reviewed learning sense and original project example",
       "overlaySceneIds": [
-        "S01.M09"
+        "S01.M09",
+        "S02.T02"
       ],
       "sceneTiers": {
-        "S01.M09": "core"
+        "S01.M09": "core",
+        "S02.T02": "support"
       },
       "sceneExamples": {
-        "S01.M09": "Is there another route to the office?"
+        "S01.M09": "Is there another route to the office?",
+        "S02.T02": "We checked the route from the front door to Room B."
       },
       "sceneExampleZhs": {
-        "S01.M09": "到办公室还有另一条路线吗？"
+        "S01.M09": "到办公室还有另一条路线吗？",
+        "S02.T02": "我们核对了从入口到B室的路线。"
       },
       "sceneMemoryNodeIds": {
         "S01.M09": [
           "S01.M09.L01"
+        ],
+        "S02.T02": [
+          "S02.T02.L01"
         ]
       },
-      "sourceKind": "BRG"
+      "sourceKind": "BRG",
+      "sceneSenses": {
+        "S02.T02": "从一处到另一处的路径。本课用实际试走发现阻挡，不从画上有箭头就认定走得通。"
+      },
+      "sceneMeaningZhs": {
+        "S02.T02": "从入口到房间的走法"
+      }
     },
     {
       "id": "U.HOUSING.M09.DIRECTION",
@@ -11608,6 +11741,2037 @@
         ]
       },
       "sourceKind": "EXP"
+    },
+    {
+      "id": "U.LEGACY.S01.H01.ACCOMMODATION",
+      "form": "accommodation",
+      "meaningZh": "住处；住宿场所",
+      "sense": "本课住处义；英式英语中通常不可数，用some accommodation或the accommodation，不把一个房间说成an accommodation。",
+      "example": "We need accommodation near work.",
+      "exampleZh": "我们需要公司附近的住处。",
+      "tier": "core",
+      "type": "word",
+      "sourceTerm": "accommodation",
+      "sourceRecordIds": [
+        "R00027"
+      ],
+      "admission": {
+        "basis": "retained-course event and communicative necessity",
+        "necessityZh": "本课住处义；英式英语中通常不可数，用some accommodation或the accommodation，不把一个房间说成an accommodation。",
+        "evidenceScope": "Source record or separately attributed dictionary sense; project example and design judgment, not measured frequency.",
+        "reviewedAt": "2026-10-02"
+      },
+      "sceneIds": [
+        "S01.H01"
+      ],
+      "glossaryIds": [
+        "S01.H01.UG01"
+      ],
+      "sourceRecords": [
+        {
+          "term": "accommodation",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 28; 大全直 PRO 听力预习词表 p.1 U1 [Listening]",
+          "canonicalTerm": "accommodation",
+          "originalContext": "somewhere to live or stay, often also providing food or other services",
+          "sceneOverlayId": "S01.H01",
+          "sourceRecordId": "R00027",
+          "sourceRecord": {
+            "Record_ID": "R00027",
+            "Canonical_Term": "accommodation",
+            "Source_Term": "accommodation",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 1,
+            "Unit": 1,
+            "Section/Topic": "Listening",
+            "Source_No": 27,
+            "Phonetic": "/əˌkɒməˈdeɪʃn/",
+            "POS": "n.",
+            "Chinese_Meaning": "住宿",
+            "Source_Context": "somewhere to live or stay, often also providing food or other services",
+            "Entry_Type": "table headword",
+            "Lexicon_Class": "Lexical item",
+            "Count_As_Vocabulary": true,
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Scene_Status": "映射完成-已审校",
+            "Primary_Scene": "S01",
+            "Bridge_Scenes": "S07",
+            "Audit_Note": null,
+            "Notes": null
+          }
+        }
+      ],
+      "generatedFrom": "scene-unit-overlay",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-15-0",
+      "evidenceLabel": "Researcher inference · reviewed learning sense and original project example",
+      "overlaySceneIds": [
+        "S01.H01"
+      ],
+      "sceneTiers": {
+        "S01.H01": "core"
+      },
+      "sceneExamples": {
+        "S01.H01": "We need accommodation near work."
+      },
+      "sceneExampleZhs": {
+        "S01.H01": "我们需要公司附近的住处。"
+      },
+      "sceneMemoryNodeIds": {
+        "S01.H01": [
+          "S01.H01.L01"
+        ]
+      },
+      "sourceKind": "SRC"
+    },
+    {
+      "id": "U.LEGACY.S01.H01.IMMACULATE",
+      "form": "immaculate",
+      "meaningZh": "非常整洁干净的",
+      "sense": "广告声称房间一尘不染；人物现场看到磨损窗框。磨损不直接证明脏，广告宣称也不直接证明实物完全符合。识别即可。",
+      "example": "The advertisement describes the room as immaculate.",
+      "exampleZh": "广告把房间描述为非常整洁干净。",
+      "tier": "recognition",
+      "type": "word",
+      "sourceTerm": "immaculate",
+      "sourceRecordIds": [
+        "R02225"
+      ],
+      "sourceAuditNote": "R02225保留OCR重复字符和空POS/中文字段。清洁义依据独立词典；磨损和清洁是不同观察维度，不把worn直接解释成dirty。",
+      "admission": {
+        "basis": "retained-course event and communicative necessity",
+        "necessityZh": "广告声称房间一尘不染；人物现场看到磨损窗框。磨损不直接证明脏，广告宣称也不直接证明实物完全符合。识别即可。",
+        "evidenceScope": "Source record or separately attributed dictionary sense; project example and design judgment, not measured frequency.",
+        "reviewedAt": "2026-10-02"
+      },
+      "sceneIds": [
+        "S01.H01"
+      ],
+      "glossaryIds": [
+        "S01.H01.G05"
+      ],
+      "sourceRecords": [
+        {
+          "term": "immaculate",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 961; 雅思一万词汇班 p.72 [The most difficult words in IELTS]",
+          "canonicalTerm": "immaculate",
+          "originalContext": "immaculate | ɪˈmakjʊlət | a. ⽆无⽐比⼲干净的；完美⽆无瑕的；",
+          "sceneOverlayId": "S01.H01",
+          "sourceRecordId": "R02225",
+          "sourceRecord": {
+            "Record_ID": "R02225",
+            "Canonical_Term": "immaculate",
+            "Source_Term": "immaculate",
+            "Source": "雅思一万词汇班",
+            "Page": 72,
+            "Unit": null,
+            "Section/Topic": "The most difficult words in IELTS",
+            "Source_No": null,
+            "Phonetic": null,
+            "POS": null,
+            "Chinese_Meaning": null,
+            "Source_Context": "immaculate | ɪˈmakjʊlət | a. ⽆无⽐比⼲干净的；完美⽆无瑕的；",
+            "Entry_Type": "headword",
+            "Lexicon_Class": "Lexical item",
+            "Count_As_Vocabulary": true,
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Scene_Status": "映射完成-已审校",
+            "Primary_Scene": "S01",
+            "Bridge_Scenes": null,
+            "Audit_Note": null,
+            "Notes": null
+          },
+          "auditNote": "R02225保留OCR重复字符和空POS/中文字段。清洁义依据独立词典；磨损和清洁是不同观察维度，不把worn直接解释成dirty。"
+        }
+      ],
+      "generatedFrom": "scene-unit-overlay",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-15-0",
+      "evidenceLabel": "Researcher inference · reviewed learning sense and original project example",
+      "overlaySceneIds": [
+        "S01.H01"
+      ],
+      "sceneTiers": {
+        "S01.H01": "recognition"
+      },
+      "sceneExamples": {
+        "S01.H01": "The advertisement describes the room as immaculate."
+      },
+      "sceneExampleZhs": {
+        "S01.H01": "广告把房间描述为非常整洁干净。"
+      },
+      "sceneMemoryNodeIds": {
+        "S01.H01": [
+          "S01.H01.L01"
+        ]
+      },
+      "sourceKind": "SRC"
+    },
+    {
+      "id": "U.LEGACY.S01.H01.ADJOINING",
+      "form": "adjoining",
+      "meaningZh": "相邻的；毗连的",
+      "sense": "本课用形容词描述房间之间的空间关系。WordNet表面词adjoining当前只索引到adjoin动词，不能冒充本形容词精确匹配。",
+      "example": "There is an adjoining kitchen beside the room.",
+      "exampleZh": "房间旁有相邻的厨房。",
+      "tier": "core",
+      "type": "word",
+      "sourceTerm": "adjoining",
+      "sourceRecordIds": [
+        "R00435"
+      ],
+      "admission": {
+        "basis": "retained-course event and communicative necessity",
+        "necessityZh": "本课用形容词描述房间之间的空间关系。WordNet表面词adjoining当前只索引到adjoin动词，不能冒充本形容词精确匹配。",
+        "evidenceScope": "Source record or separately attributed dictionary sense; project example and design judgment, not measured frequency.",
+        "reviewedAt": "2026-10-02"
+      },
+      "sceneIds": [
+        "S01.H01"
+      ],
+      "glossaryIds": [
+        "S01.H01.UG02"
+      ],
+      "sourceRecords": [
+        {
+          "term": "adjoining",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 51; 大全直 PRO 听力预习词表 p.13 U6 [Listening]",
+          "canonicalTerm": "adjoining",
+          "originalContext": "next to or joined with something",
+          "sceneOverlayId": "S01.H01",
+          "sourceRecordId": "R00435",
+          "sourceRecord": {
+            "Record_ID": "R00435",
+            "Canonical_Term": "adjoining",
+            "Source_Term": "adjoining",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 13,
+            "Unit": 6,
+            "Section/Topic": "Listening",
+            "Source_No": 46,
+            "Phonetic": "/əˈdʒɔɪnɪŋ/",
+            "POS": "adj.",
+            "Chinese_Meaning": "相邻的",
+            "Source_Context": "next to or joined with something",
+            "Entry_Type": "table headword",
+            "Lexicon_Class": "Lexical item",
+            "Count_As_Vocabulary": true,
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Scene_Status": "映射完成-已审校",
+            "Primary_Scene": "S01",
+            "Bridge_Scenes": "S03",
+            "Audit_Note": null,
+            "Notes": null
+          }
+        }
+      ],
+      "generatedFrom": "scene-unit-overlay",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-15-0",
+      "evidenceLabel": "Researcher inference · reviewed learning sense and original project example",
+      "overlaySceneIds": [
+        "S01.H01"
+      ],
+      "sceneTiers": {
+        "S01.H01": "core"
+      },
+      "sceneExamples": {
+        "S01.H01": "There is an adjoining kitchen beside the room."
+      },
+      "sceneExampleZhs": {
+        "S01.H01": "房间旁有相邻的厨房。"
+      },
+      "sceneMemoryNodeIds": {
+        "S01.H01": [
+          "S01.H01.L02"
+        ]
+      },
+      "sourceKind": "SRC"
+    },
+    {
+      "id": "U.LEGACY.S01.H01.BLANKET",
+      "form": "blanket",
+      "meaningZh": "保暖的毯子",
+      "sense": "物件名词；本课折好的毯子在椅子旁。原资料限定woolen cloth，项目不据此声称所有毯子都必须是羊毛。",
+      "example": "There is a folded blanket beside the chair.",
+      "exampleZh": "椅子旁有一条折好的毯子。",
+      "tier": "support",
+      "type": "word",
+      "sourceTerm": "blanket",
+      "sourceRecordIds": [
+        "R00733"
+      ],
+      "admission": {
+        "basis": "retained-course event and communicative necessity",
+        "necessityZh": "物件名词；本课折好的毯子在椅子旁。原资料限定woolen cloth，项目不据此声称所有毯子都必须是羊毛。",
+        "evidenceScope": "Source record or separately attributed dictionary sense; project example and design judgment, not measured frequency.",
+        "reviewedAt": "2026-10-02"
+      },
+      "sceneIds": [
+        "S01.H01"
+      ],
+      "glossaryIds": [
+        "S01.H01.UG03"
+      ],
+      "sourceRecords": [
+        {
+          "term": "blanket",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 229; 大全直 PRO 听力预习词表 p.20 U11 [Listening]",
+          "canonicalTerm": "blanket",
+          "originalContext": "a large piece of woolen cloth used for warmth",
+          "sceneOverlayId": "S01.H01",
+          "sourceRecordId": "R00733",
+          "sourceRecord": {
+            "Record_ID": "R00733",
+            "Canonical_Term": "blanket",
+            "Source_Term": "blanket",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 20,
+            "Unit": 11,
+            "Section/Topic": "Listening",
+            "Source_No": 32,
+            "Phonetic": "/ˈblæŋkɪt/",
+            "POS": "n.",
+            "Chinese_Meaning": "毯子",
+            "Source_Context": "a large piece of woolen cloth used for warmth",
+            "Entry_Type": "table headword",
+            "Lexicon_Class": "Lexical item",
+            "Count_As_Vocabulary": true,
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Scene_Status": "映射完成-已审校",
+            "Primary_Scene": "S01",
+            "Bridge_Scenes": null,
+            "Audit_Note": null,
+            "Notes": null
+          }
+        }
+      ],
+      "generatedFrom": "scene-unit-overlay",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-15-0",
+      "evidenceLabel": "Researcher inference · reviewed learning sense and original project example",
+      "overlaySceneIds": [
+        "S01.H01"
+      ],
+      "sceneTiers": {
+        "S01.H01": "support"
+      },
+      "sceneExamples": {
+        "S01.H01": "There is a folded blanket beside the chair."
+      },
+      "sceneExampleZhs": {
+        "S01.H01": "椅子旁有一条折好的毯子。"
+      },
+      "sceneMemoryNodeIds": {
+        "S01.H01": [
+          "S01.H01.L03"
+        ]
+      },
+      "sourceKind": "SRC"
+    },
+    {
+      "id": "U.LEGACY.S01.H01.PLANT",
+      "form": "potted plant",
+      "meaningZh": "盆栽植物",
+      "sense": "整块指种在盆里的植物；与工厂义的plant分开。本课用于描述椅子旁的具体物件。",
+      "example": "A potted plant stands beside the shelf.",
+      "exampleZh": "搁架旁摆着一盆植物。",
+      "tier": "support",
+      "type": "chunk",
+      "sourceTerm": "potted plant",
+      "sourceRecordIds": [
+        "R00074"
+      ],
+      "admission": {
+        "basis": "retained-course event and communicative necessity",
+        "necessityZh": "整块指种在盆里的植物；与工厂义的plant分开。本课用于描述椅子旁的具体物件。",
+        "evidenceScope": "Source record or separately attributed dictionary sense; project example and design judgment, not measured frequency.",
+        "reviewedAt": "2026-10-02"
+      },
+      "sceneIds": [
+        "S01.H01"
+      ],
+      "glossaryIds": [
+        "S01.H01.UG04"
+      ],
+      "sourceRecords": [
+        {
+          "term": "potted plant",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 1454; 大全直 PRO 听力预习词表 p.3 U1 [Listening]",
+          "canonicalTerm": "potted plant",
+          "originalContext": "a plant that is grown in a pot",
+          "sceneOverlayId": "S01.H01",
+          "sourceRecordId": "R00074",
+          "sourceRecord": {
+            "Record_ID": "R00074",
+            "Canonical_Term": "potted plant",
+            "Source_Term": "potted plant",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 3,
+            "Unit": 1,
+            "Section/Topic": "Listening",
+            "Source_No": 74,
+            "Phonetic": "/ˌpɒtɪd ˈplɑːnt/",
+            "POS": "phrase",
+            "Chinese_Meaning": "盆栽植物",
+            "Source_Context": "a plant that is grown in a pot",
+            "Entry_Type": "table headword",
+            "Lexicon_Class": "Lexical item",
+            "Count_As_Vocabulary": true,
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Scene_Status": "映射完成-已审校",
+            "Primary_Scene": "S01",
+            "Bridge_Scenes": "S17",
+            "Audit_Note": null,
+            "Notes": null
+          }
+        }
+      ],
+      "generatedFrom": "scene-unit-overlay",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-15-0",
+      "evidenceLabel": "Researcher inference · reviewed learning sense and original project example",
+      "overlaySceneIds": [
+        "S01.H01"
+      ],
+      "sceneTiers": {
+        "S01.H01": "support"
+      },
+      "sceneExamples": {
+        "S01.H01": "A potted plant stands beside the shelf."
+      },
+      "sceneExampleZhs": {
+        "S01.H01": "搁架旁摆着一盆植物。"
+      },
+      "sceneMemoryNodeIds": {
+        "S01.H01": [
+          "S01.H01.L03"
+        ]
+      },
+      "sourceKind": "SRC"
+    },
+    {
+      "id": "U.LEGACY.S01.H01.DECORATION",
+      "form": "decoration",
+      "meaningZh": "装饰物",
+      "sense": "本课可数物件，是搁架上方的纸装饰；不是装修动作或勋章义。原定义的special occasions限定原样保留，故事没有声称是节日。",
+      "example": "A paper decoration hangs above the shelf.",
+      "exampleZh": "搁架上方挂着一个纸装饰物。",
+      "tier": "support",
+      "type": "word",
+      "sourceTerm": "decoration",
+      "sourceRecordIds": [
+        "R00055"
+      ],
+      "admission": {
+        "basis": "retained-course event and communicative necessity",
+        "necessityZh": "本课可数物件，是搁架上方的纸装饰；不是装修动作或勋章义。原定义的special occasions限定原样保留，故事没有声称是节日。",
+        "evidenceScope": "Source record or separately attributed dictionary sense; project example and design judgment, not measured frequency.",
+        "reviewedAt": "2026-10-02"
+      },
+      "sceneIds": [
+        "S01.H01"
+      ],
+      "glossaryIds": [
+        "S01.H01.UG05"
+      ],
+      "sourceRecords": [
+        {
+          "term": "decoration",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 515; 大全直 PRO 听力预习词表 p.2 U1 [Listening]",
+          "canonicalTerm": "decoration",
+          "originalContext": "a thing that makes sth look more attractive on special occasions",
+          "sceneOverlayId": "S01.H01",
+          "sourceRecordId": "R00055",
+          "sourceRecord": {
+            "Record_ID": "R00055",
+            "Canonical_Term": "decoration",
+            "Source_Term": "decoration",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 2,
+            "Unit": 1,
+            "Section/Topic": "Listening",
+            "Source_No": 55,
+            "Phonetic": "/ˌdekəˈreɪʃn/",
+            "POS": "n.",
+            "Chinese_Meaning": "装饰，装饰物",
+            "Source_Context": "a thing that makes sth look more attractive on special occasions",
+            "Entry_Type": "table headword",
+            "Lexicon_Class": "Lexical item",
+            "Count_As_Vocabulary": true,
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Scene_Status": "映射完成-已审校",
+            "Primary_Scene": "S01",
+            "Bridge_Scenes": "S18",
+            "Audit_Note": null,
+            "Notes": null
+          }
+        }
+      ],
+      "generatedFrom": "scene-unit-overlay",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-15-0",
+      "evidenceLabel": "Researcher inference · reviewed learning sense and original project example",
+      "overlaySceneIds": [
+        "S01.H01"
+      ],
+      "sceneTiers": {
+        "S01.H01": "support"
+      },
+      "sceneExamples": {
+        "S01.H01": "A paper decoration hangs above the shelf."
+      },
+      "sceneExampleZhs": {
+        "S01.H01": "搁架上方挂着一个纸装饰物。"
+      },
+      "sceneMemoryNodeIds": {
+        "S01.H01": [
+          "S01.H01.L03"
+        ]
+      },
+      "sourceKind": "SRC"
+    },
+    {
+      "id": "U.COMFORT.COMFORTABLE.PHYSICAL",
+      "form": "comfortable",
+      "meaningZh": "使身体感到舒适的",
+      "sense": "本课描述椅子坐着舒服。它不能证明夜间安静，也不是comfortable financially的经济宽裕义。",
+      "example": "The chair is comfortable, but I still need to check the noise at night.",
+      "exampleZh": "椅子很舒服，但我仍需核实夜间噪音。",
+      "tier": "core",
+      "type": "word",
+      "sourceTerm": "comfortable",
+      "sourceRecordIds": [
+        "R00382"
+      ],
+      "admission": {
+        "basis": "retained-course event and communicative necessity",
+        "necessityZh": "本课描述椅子坐着舒服。它不能证明夜间安静，也不是comfortable financially的经济宽裕义。",
+        "evidenceScope": "Source record or separately attributed dictionary sense; project example and design judgment, not measured frequency.",
+        "reviewedAt": "2026-10-02"
+      },
+      "sceneIds": [
+        "S01.H01",
+        "S01.H02"
+      ],
+      "glossaryIds": [
+        "S01.H01.UG06",
+        "S01.H02.UG09"
+      ],
+      "sourceRecords": [
+        {
+          "term": "comfortable",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 371; 大全直 PRO 听力预习词表 p.12 U5 [Listening]",
+          "canonicalTerm": "comfortable",
+          "originalContext": "providing physical ease and relaxation",
+          "sceneOverlayId": "S01.H01",
+          "sourceRecordId": "R00382",
+          "sourceRecord": {
+            "Record_ID": "R00382",
+            "Canonical_Term": "comfortable",
+            "Source_Term": "comfortable",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 12,
+            "Unit": 5,
+            "Section/Topic": "Listening",
+            "Source_No": 73,
+            "Phonetic": "/ˈkʌmftəbl/",
+            "POS": "adj.",
+            "Chinese_Meaning": "舒服的",
+            "Source_Context": "providing physical ease and relaxation",
+            "Entry_Type": "table headword",
+            "Lexicon_Class": "Lexical item",
+            "Count_As_Vocabulary": true,
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Scene_Status": "映射完成-已审校",
+            "Primary_Scene": "S01",
+            "Bridge_Scenes": "S07",
+            "Audit_Note": null,
+            "Notes": null
+          }
+        },
+        {
+          "term": "comfortable",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 371; 大全直 PRO 听力预习词表 p.12 U5 [Listening]",
+          "canonicalTerm": "comfortable",
+          "originalContext": "providing physical ease and relaxation",
+          "sceneOverlayId": "S01.H02",
+          "sourceRecordId": "R00382",
+          "sourceRecord": {
+            "Record_ID": "R00382",
+            "Canonical_Term": "comfortable",
+            "Source_Term": "comfortable",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 12,
+            "Unit": 5,
+            "Section/Topic": "Listening",
+            "Source_No": 73,
+            "Phonetic": "/ˈkʌmftəbl/",
+            "POS": "adj.",
+            "Chinese_Meaning": "舒服的",
+            "Source_Context": "providing physical ease and relaxation",
+            "Entry_Type": "table headword",
+            "Lexicon_Class": "Lexical item",
+            "Count_As_Vocabulary": true,
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Scene_Status": "映射完成-已审校",
+            "Primary_Scene": "S01",
+            "Bridge_Scenes": "S07",
+            "Audit_Note": null,
+            "Notes": null
+          },
+          "auditNote": "旧课terms列comfortable但原正文/任务未使用。本批在项目简明摘要和此例句补学习入口，原正文保持原样。"
+        }
+      ],
+      "generatedFrom": "scene-unit-overlay",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-15-0",
+      "evidenceLabel": "Researcher inference · reviewed learning sense and original project example",
+      "overlaySceneIds": [
+        "S01.H01",
+        "S01.H02"
+      ],
+      "sceneTiers": {
+        "S01.H01": "core",
+        "S01.H02": "recognition"
+      },
+      "sceneExamples": {
+        "S01.H01": "The chair is comfortable, but I still need to check the noise at night.",
+        "S01.H02": "A comfortable chair does not make the total cost affordable."
+      },
+      "sceneExampleZhs": {
+        "S01.H01": "椅子很舒服，但我仍需核实夜间噪音。",
+        "S01.H02": "椅子坐着舒服不意味着总费用能负担得起。"
+      },
+      "sceneMemoryNodeIds": {
+        "S01.H01": [
+          "S01.H01.L03"
+        ],
+        "S01.H02": [
+          "S01.H02.L03"
+        ]
+      },
+      "sourceKind": "SRC",
+      "sceneSenses": {
+        "S01.H02": "承接前课椅子的身体舒适感，用于辨认舒适与负担能力的差别。旧正文未出现comfortable；新增简明摘要和例句提供明确入口，不伪称原正文已有。"
+      },
+      "sceneMeaningZhs": {
+        "S01.H02": "使身体感到舒适的"
+      }
+    },
+    {
+      "id": "U.LEGACY.S01.H01.IMPRESSION",
+      "form": "first impression",
+      "meaningZh": "第一印象",
+      "sense": "初见形成的评价；第一印象可以触发进一步核实，不替代实地条件、夜间情况或费用。",
+      "example": "My first impression is positive, but I have not stayed overnight.",
+      "exampleZh": "我的第一印象不错，但我还没在这里过夜。",
+      "tier": "support",
+      "type": "chunk",
+      "admission": {
+        "basis": "retained-course event and communicative necessity",
+        "necessityZh": "初见形成的评价；第一印象可以触发进一步核实，不替代实地条件、夜间情况或费用。",
+        "evidenceScope": "Source record or separately attributed dictionary sense; project example and design judgment, not measured frequency.",
+        "reviewedAt": "2026-10-02"
+      },
+      "sceneIds": [
+        "S01.H01"
+      ],
+      "glossaryIds": [
+        "S01.H01.UG07"
+      ],
+      "sourceRecords": [],
+      "generatedFrom": "scene-unit-overlay",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-15-0",
+      "evidenceLabel": "Researcher inference · reviewed learning sense and original project example",
+      "overlaySceneIds": [
+        "S01.H01"
+      ],
+      "sceneTiers": {
+        "S01.H01": "support"
+      },
+      "sceneExamples": {
+        "S01.H01": "My first impression is positive, but I have not stayed overnight."
+      },
+      "sceneExampleZhs": {
+        "S01.H01": "我的第一印象不错，但我还没在这里过夜。"
+      },
+      "sceneMemoryNodeIds": {
+        "S01.H01": [
+          "S01.H01.L03"
+        ]
+      },
+      "sourceKind": "COMPOSITION"
+    },
+    {
+      "id": "U.LEGACY.S01.H02.HOUSEHOLD",
+      "form": "household",
+      "meaningZh": "共同生活的一组人；家庭",
+      "sense": "本课名词，是一起生活并承担费用的人，不是建筑物，也不是household appliances里的定语用法。",
+      "example": "Our household needs a home we can afford all year.",
+      "exampleZh": "我们的家庭需要一年都能负担得起的住处。",
+      "tier": "core",
+      "type": "word",
+      "sourceTerm": "household",
+      "sourceRecordIds": [
+        "R00633"
+      ],
+      "sourceAuditNote": "原POS为n.，中文“家用的，家庭”混有修饰用法。本课名词义另写，不更改原记录。",
+      "admission": {
+        "basis": "retained-course event and communicative necessity",
+        "necessityZh": "本课名词，是一起生活并承担费用的人，不是建筑物，也不是household appliances里的定语用法。",
+        "evidenceScope": "Source record or separately attributed dictionary sense; project example and design judgment, not measured frequency.",
+        "reviewedAt": "2026-10-02"
+      },
+      "sceneIds": [
+        "S01.H02"
+      ],
+      "glossaryIds": [
+        "S01.H02.UG01"
+      ],
+      "sourceRecords": [
+        {
+          "term": "household",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 935; 大全直 PRO 听力预习词表 p.18 U9 [Listening]",
+          "canonicalTerm": "household",
+          "originalContext": "a house and its occupants considered as a unit",
+          "sceneOverlayId": "S01.H02",
+          "sourceRecordId": "R00633",
+          "sourceRecord": {
+            "Record_ID": "R00633",
+            "Canonical_Term": "household",
+            "Source_Term": "household",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 18,
+            "Unit": 9,
+            "Section/Topic": "Listening",
+            "Source_No": 69,
+            "Phonetic": "/ˈhaʊshəʊld/",
+            "POS": "n.",
+            "Chinese_Meaning": "家用的，家庭",
+            "Source_Context": "a house and its occupants considered as a unit",
+            "Entry_Type": "table headword",
+            "Lexicon_Class": "Lexical item",
+            "Count_As_Vocabulary": true,
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Scene_Status": "映射完成-已审校",
+            "Primary_Scene": "S01",
+            "Bridge_Scenes": "S12",
+            "Audit_Note": null,
+            "Notes": null
+          },
+          "auditNote": "原POS为n.，中文“家用的，家庭”混有修饰用法。本课名词义另写，不更改原记录。"
+        }
+      ],
+      "generatedFrom": "scene-unit-overlay",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-15-0",
+      "evidenceLabel": "Researcher inference · reviewed learning sense and original project example",
+      "overlaySceneIds": [
+        "S01.H02"
+      ],
+      "sceneTiers": {
+        "S01.H02": "core"
+      },
+      "sceneExamples": {
+        "S01.H02": "Our household needs a home we can afford all year."
+      },
+      "sceneExampleZhs": {
+        "S01.H02": "我们的家庭需要一年都能负担得起的住处。"
+      },
+      "sceneMemoryNodeIds": {
+        "S01.H02": [
+          "S01.H02.L01"
+        ]
+      },
+      "sourceKind": "SRC"
+    },
+    {
+      "id": "U.LEGACY.S01.H02.RENTAL",
+      "form": "rental",
+      "meaningZh": "租赁行为或安排",
+      "sense": "来源R00071是名词租赁安排。rental agreement整块里rental修饰agreement，另有搭配依据；不把两种语法位置都说成来源给出的独立形容词。",
+      "example": "We need the full cost before deciding on the rental.",
+      "exampleZh": "决定租赁安排前，我们需要完整费用。",
+      "tier": "recognition",
+      "type": "word",
+      "sourceTerm": "rental",
+      "sourceRecordIds": [
+        "R00071"
+      ],
+      "admission": {
+        "basis": "retained-course event and communicative necessity",
+        "necessityZh": "来源R00071是名词租赁安排。rental agreement整块里rental修饰agreement，另有搭配依据；不把两种语法位置都说成来源给出的独立形容词。",
+        "evidenceScope": "Source record or separately attributed dictionary sense; project example and design judgment, not measured frequency.",
+        "reviewedAt": "2026-10-02"
+      },
+      "sceneIds": [
+        "S01.H02"
+      ],
+      "glossaryIds": [
+        "S01.H02.UG02"
+      ],
+      "sourceRecords": [
+        {
+          "term": "rental",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 1617; 大全直 PRO 听力预习词表 p.3 U1 [Listening]",
+          "canonicalTerm": "rental",
+          "originalContext": "the act of renting sth or an arrangement to rent sth",
+          "sceneOverlayId": "S01.H02",
+          "sourceRecordId": "R00071",
+          "sourceRecord": {
+            "Record_ID": "R00071",
+            "Canonical_Term": "rental",
+            "Source_Term": "rental",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 3,
+            "Unit": 1,
+            "Section/Topic": "Listening",
+            "Source_No": 71,
+            "Phonetic": "/ˈrentl/",
+            "POS": "n.",
+            "Chinese_Meaning": "租赁",
+            "Source_Context": "the act of renting sth or an arrangement to rent sth",
+            "Entry_Type": "table headword",
+            "Lexicon_Class": "Lexical item",
+            "Count_As_Vocabulary": true,
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Scene_Status": "映射完成-已审校",
+            "Primary_Scene": "S01",
+            "Bridge_Scenes": "S07",
+            "Audit_Note": null,
+            "Notes": null
+          }
+        }
+      ],
+      "generatedFrom": "scene-unit-overlay",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-15-0",
+      "evidenceLabel": "Researcher inference · reviewed learning sense and original project example",
+      "overlaySceneIds": [
+        "S01.H02"
+      ],
+      "sceneTiers": {
+        "S01.H02": "recognition"
+      },
+      "sceneExamples": {
+        "S01.H02": "We need the full cost before deciding on the rental."
+      },
+      "sceneExampleZhs": {
+        "S01.H02": "决定租赁安排前，我们需要完整费用。"
+      },
+      "sceneMemoryNodeIds": {
+        "S01.H02": [
+          "S01.H02.L02"
+        ]
+      },
+      "sourceKind": "SRC"
+    },
+    {
+      "id": "U.LEGACY.S01.H02.ESTIMATE",
+      "form": "estimate",
+      "meaningZh": "预估费用；估算",
+      "sense": "本课费用预估名词。an estimate of heating costs不是已确认账单；最终数额尚待核实。",
+      "example": "The heating cost is only an estimate.",
+      "exampleZh": "供暖费用只是估算。",
+      "tier": "core",
+      "type": "word",
+      "admission": {
+        "basis": "retained-course event and communicative necessity",
+        "necessityZh": "本课费用预估名词。an estimate of heating costs不是已确认账单；最终数额尚待核实。",
+        "evidenceScope": "Source record or separately attributed dictionary sense; project example and design judgment, not measured frequency.",
+        "reviewedAt": "2026-10-02"
+      },
+      "sceneIds": [
+        "S01.H02"
+      ],
+      "glossaryIds": [
+        "S01.H02.UG03"
+      ],
+      "sourceRecords": [],
+      "generatedFrom": "scene-unit-overlay",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-15-0",
+      "evidenceLabel": "Researcher inference · reviewed learning sense and original project example",
+      "overlaySceneIds": [
+        "S01.H02"
+      ],
+      "sceneTiers": {
+        "S01.H02": "core"
+      },
+      "sceneExamples": {
+        "S01.H02": "The heating cost is only an estimate."
+      },
+      "sceneExampleZhs": {
+        "S01.H02": "供暖费用只是估算。"
+      },
+      "sceneMemoryNodeIds": {
+        "S01.H02": [
+          "S01.H02.L02"
+        ]
+      },
+      "sourceKind": "COMPOSITION"
+    },
+    {
+      "id": "U.LEGACY.S01.H02.AGREEMENT",
+      "form": "a rental agreement",
+      "meaningZh": "一份租赁协议",
+      "sense": "将租赁安排写成协议的整块表达。来源名词记录与修饰位置分开显示；本课程不判断协议法律效力。",
+      "example": "Could you confirm the total cost before I sign the rental agreement?",
+      "exampleZh": "可以在我签租赁协议前确认总费用吗？",
+      "tier": "core",
+      "type": "chunk",
+      "sourceTerm": "rental",
+      "sourceRecordIds": [
+        "R00071"
+      ],
+      "sourceAuditNote": "R00071为租赁行为/安排名词，协议搭配是项目桥接，剑桥搭配页提供独立外部证据。",
+      "admission": {
+        "basis": "retained-course event and communicative necessity",
+        "necessityZh": "将租赁安排写成协议的整块表达。来源名词记录与修饰位置分开显示；本课程不判断协议法律效力。",
+        "evidenceScope": "Source record or separately attributed dictionary sense; project example and design judgment, not measured frequency.",
+        "reviewedAt": "2026-10-02"
+      },
+      "sceneIds": [
+        "S01.H02"
+      ],
+      "glossaryIds": [
+        "S01.H02.G02"
+      ],
+      "sourceRecords": [
+        {
+          "term": "rental",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 1617; 大全直 PRO 听力预习词表 p.3 U1 [Listening]",
+          "canonicalTerm": "rental",
+          "originalContext": "the act of renting sth or an arrangement to rent sth",
+          "sceneOverlayId": "S01.H02",
+          "sourceRecordId": "R00071",
+          "sourceRecord": {
+            "Record_ID": "R00071",
+            "Canonical_Term": "rental",
+            "Source_Term": "rental",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 3,
+            "Unit": 1,
+            "Section/Topic": "Listening",
+            "Source_No": 71,
+            "Phonetic": "/ˈrentl/",
+            "POS": "n.",
+            "Chinese_Meaning": "租赁",
+            "Source_Context": "the act of renting sth or an arrangement to rent sth",
+            "Entry_Type": "table headword",
+            "Lexicon_Class": "Lexical item",
+            "Count_As_Vocabulary": true,
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Scene_Status": "映射完成-已审校",
+            "Primary_Scene": "S01",
+            "Bridge_Scenes": "S07",
+            "Audit_Note": null,
+            "Notes": null
+          },
+          "auditNote": "R00071为租赁行为/安排名词，协议搭配是项目桥接，剑桥搭配页提供独立外部证据。"
+        }
+      ],
+      "generatedFrom": "scene-unit-overlay",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-15-0",
+      "evidenceLabel": "Researcher inference · reviewed learning sense and original project example",
+      "overlaySceneIds": [
+        "S01.H02"
+      ],
+      "sceneTiers": {
+        "S01.H02": "core"
+      },
+      "sceneExamples": {
+        "S01.H02": "Could you confirm the total cost before I sign the rental agreement?"
+      },
+      "sceneExampleZhs": {
+        "S01.H02": "可以在我签租赁协议前确认总费用吗？"
+      },
+      "sceneMemoryNodeIds": {
+        "S01.H02": [
+          "S01.H02.L02"
+        ]
+      },
+      "sourceKind": "COMPOSITION"
+    },
+    {
+      "id": "U.LEGACY.S01.H02.HEATING",
+      "form": "heating costs",
+      "meaningZh": "供暖费用",
+      "sense": "复数costs描述为供暖花的钱；桌上目前只有估算，需要和租金、交通一起考虑。",
+      "example": "We still need to confirm the heating costs.",
+      "exampleZh": "我们仍需确认供暖费用。",
+      "tier": "support",
+      "type": "chunk",
+      "admission": {
+        "basis": "retained-course event and communicative necessity",
+        "necessityZh": "复数costs描述为供暖花的钱；桌上目前只有估算，需要和租金、交通一起考虑。",
+        "evidenceScope": "Source record or separately attributed dictionary sense; project example and design judgment, not measured frequency.",
+        "reviewedAt": "2026-10-02"
+      },
+      "sceneIds": [
+        "S01.H02"
+      ],
+      "glossaryIds": [
+        "S01.H02.UG07"
+      ],
+      "sourceRecords": [],
+      "generatedFrom": "scene-unit-overlay",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-15-0",
+      "evidenceLabel": "Researcher inference · reviewed learning sense and original project example",
+      "overlaySceneIds": [
+        "S01.H02"
+      ],
+      "sceneTiers": {
+        "S01.H02": "support"
+      },
+      "sceneExamples": {
+        "S01.H02": "We still need to confirm the heating costs."
+      },
+      "sceneExampleZhs": {
+        "S01.H02": "我们仍需确认供暖费用。"
+      },
+      "sceneMemoryNodeIds": {
+        "S01.H02": [
+          "S01.H02.L01"
+        ]
+      },
+      "sourceKind": "COMPOSITION"
+    },
+    {
+      "id": "U.LEGACY.S01.H02.TOTAL",
+      "form": "Compare …, not … alone.",
+      "meaningZh": "比较完整因素而非只看一项",
+      "sense": "compare后列出相关因素，not … alone指出单项不足；本课不能因为租金低就决定总成本低。",
+      "example": "Compare rent, travel and heating costs, not rent alone.",
+      "exampleZh": "比较租金、交通和供暖费用，而非只看租金。",
+      "tier": "core",
+      "type": "construction",
+      "admission": {
+        "basis": "retained-course event and communicative necessity",
+        "necessityZh": "compare后列出相关因素，not … alone指出单项不足；本课不能因为租金低就决定总成本低。",
+        "evidenceScope": "Source record or separately attributed dictionary sense; project example and design judgment, not measured frequency.",
+        "reviewedAt": "2026-10-02"
+      },
+      "sceneIds": [
+        "S01.H02"
+      ],
+      "glossaryIds": [
+        "S01.H02.UG08"
+      ],
+      "sourceRecords": [],
+      "generatedFrom": "scene-unit-overlay",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-15-0",
+      "evidenceLabel": "Researcher inference · reviewed learning sense and original project example",
+      "overlaySceneIds": [
+        "S01.H02"
+      ],
+      "sceneTiers": {
+        "S01.H02": "core"
+      },
+      "sceneExamples": {
+        "S01.H02": "Compare rent, travel and heating costs, not rent alone."
+      },
+      "sceneExampleZhs": {
+        "S01.H02": "比较租金、交通和供暖费用，而非只看租金。"
+      },
+      "sceneMemoryNodeIds": {
+        "S01.H02": [
+          "S01.H02.L01"
+        ]
+      },
+      "sourceKind": "COMPOSITION"
+    },
+    {
+      "id": "U.LEGACY.S02.T01.OVERDUE",
+      "form": "overdue",
+      "meaningZh": "早该完成却尚未完成的",
+      "sense": "公告更正已经迟了，不是公告纸本身过了有效期。当前WordNet仅给未按时付款义，缺少本课精确义，单列外部依据。",
+      "example": "The correction to the notice is overdue.",
+      "exampleZh": "公告更正早该完成了。",
+      "tier": "recognition",
+      "type": "word",
+      "sourceTerm": "overdue",
+      "sourceRecordIds": [
+        "R00573"
+      ],
+      "sourceAuditNote": "原中文“过期的”容易误读为expired；原英文是未在预期时间完成。本课遵循原英文与剑桥释义，原中文仍保留。",
+      "admission": {
+        "basis": "retained-course event and communicative necessity",
+        "necessityZh": "公告更正已经迟了，不是公告纸本身过了有效期。当前WordNet仅给未按时付款义，缺少本课精确义，单列外部依据。",
+        "evidenceScope": "Source record or separately attributed dictionary sense; project example and design judgment, not measured frequency.",
+        "reviewedAt": "2026-10-02"
+      },
+      "sceneIds": [
+        "S02.T01"
+      ],
+      "glossaryIds": [
+        "S02.T01.G05"
+      ],
+      "sourceRecords": [
+        {
+          "term": "overdue",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 1332; 大全直 PRO 听力预习词表 p.16 U9 [Listening]",
+          "canonicalTerm": "overdue",
+          "originalContext": "not done or happening by the expected time",
+          "sceneOverlayId": "S02.T01",
+          "sourceRecordId": "R00573",
+          "sourceRecord": {
+            "Record_ID": "R00573",
+            "Canonical_Term": "overdue",
+            "Source_Term": "overdue",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 16,
+            "Unit": 9,
+            "Section/Topic": "Listening",
+            "Source_No": 9,
+            "Phonetic": "/ˌəʊvəˈdjuː/",
+            "POS": "adj.",
+            "Chinese_Meaning": "过期的",
+            "Source_Context": "not done or happening by the expected time",
+            "Entry_Type": "table headword",
+            "Lexicon_Class": "Lexical item",
+            "Count_As_Vocabulary": true,
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Scene_Status": "映射完成-已审校",
+            "Primary_Scene": "S02",
+            "Bridge_Scenes": "S08",
+            "Audit_Note": null,
+            "Notes": null
+          },
+          "auditNote": "原中文“过期的”容易误读为expired；原英文是未在预期时间完成。本课遵循原英文与剑桥释义，原中文仍保留。"
+        }
+      ],
+      "generatedFrom": "scene-unit-overlay",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-15-0",
+      "evidenceLabel": "Researcher inference · reviewed learning sense and original project example",
+      "overlaySceneIds": [
+        "S02.T01"
+      ],
+      "sceneTiers": {
+        "S02.T01": "recognition"
+      },
+      "sceneExamples": {
+        "S02.T01": "The correction to the notice is overdue."
+      },
+      "sceneExampleZhs": {
+        "S02.T01": "公告更正早该完成了。"
+      },
+      "sceneMemoryNodeIds": {
+        "S02.T01": [
+          "S02.T01.L01"
+        ]
+      },
+      "sourceKind": "SRC"
+    },
+    {
+      "id": "U.COMMUNITY.SESSION.ACTIVITY",
+      "form": "session",
+      "meaningZh": "一场活动；一段进行活动的时间",
+      "sense": "本课指周二的一场社区活动，不是整个学期、软件会话或招魂活动。",
+      "example": "The Tuesday session will take place in Room B.",
+      "exampleZh": "周二的活动将在B室举行。",
+      "tier": "core",
+      "type": "word",
+      "sourceTerm": "session",
+      "sourceRecordIds": [
+        "R00119"
+      ],
+      "sourceAuditNote": "R00119英文定义语句不顺，保留原样；项目可读解释与WordNet活动义另列，不声称已经复核PDF原页。",
+      "admission": {
+        "basis": "retained-course event and communicative necessity",
+        "necessityZh": "本课指周二的一场社区活动，不是整个学期、软件会话或招魂活动。",
+        "evidenceScope": "Source record or separately attributed dictionary sense; project example and design judgment, not measured frequency.",
+        "reviewedAt": "2026-10-02"
+      },
+      "sceneIds": [
+        "S02.T01"
+      ],
+      "glossaryIds": [
+        "S02.T01.UG01"
+      ],
+      "sourceRecords": [
+        {
+          "term": "session",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 1733; 大全直 PRO 听力预习词表 p.4 U2 [Listening]",
+          "canonicalTerm": "session",
+          "originalContext": "a particular activity is a period of that activity",
+          "sceneOverlayId": "S02.T01",
+          "sourceRecordId": "R00119",
+          "sourceRecord": {
+            "Record_ID": "R00119",
+            "Canonical_Term": "session",
+            "Source_Term": "session",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 4,
+            "Unit": 2,
+            "Section/Topic": "Listening",
+            "Source_No": 40,
+            "Phonetic": "/ˈseʃn/",
+            "POS": "n.",
+            "Chinese_Meaning": "一场（活动）",
+            "Source_Context": "a particular activity is a period of that activity",
+            "Entry_Type": "table headword",
+            "Lexicon_Class": "Lexical item",
+            "Count_As_Vocabulary": true,
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Scene_Status": "映射完成-已审校",
+            "Primary_Scene": "S02",
+            "Bridge_Scenes": "S05",
+            "Audit_Note": null,
+            "Notes": null
+          },
+          "auditNote": "R00119英文定义语句不顺，保留原样；项目可读解释与WordNet活动义另列，不声称已经复核PDF原页。"
+        }
+      ],
+      "generatedFrom": "scene-unit-overlay",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-15-0",
+      "evidenceLabel": "Researcher inference · reviewed learning sense and original project example",
+      "overlaySceneIds": [
+        "S02.T01"
+      ],
+      "sceneTiers": {
+        "S02.T01": "core"
+      },
+      "sceneExamples": {
+        "S02.T01": "The Tuesday session will take place in Room B."
+      },
+      "sceneExampleZhs": {
+        "S02.T01": "周二的活动将在B室举行。"
+      },
+      "sceneMemoryNodeIds": {
+        "S02.T01": [
+          "S02.T01.L02"
+        ]
+      },
+      "sourceKind": "SRC"
+    },
+    {
+      "id": "U.LEGACY.S02.T01.REGULARITY",
+      "form": "regularity",
+      "meaningZh": "按固定规律重复的特性",
+      "sense": "每周同一时间的规律性让人便于安排晚间；识别这个名词，不强迫在通知中用抽象名词替代清楚时间。",
+      "example": "The regularity of the weekly session helps people plan their evenings.",
+      "exampleZh": "每周活动的规律性帮助大家安排晚间时间。",
+      "tier": "recognition",
+      "type": "word",
+      "sourceTerm": "regularity",
+      "sourceRecordIds": [
+        "R00855"
+      ],
+      "admission": {
+        "basis": "retained-course event and communicative necessity",
+        "necessityZh": "每周同一时间的规律性让人便于安排晚间；识别这个名词，不强迫在通知中用抽象名词替代清楚时间。",
+        "evidenceScope": "Source record or separately attributed dictionary sense; project example and design judgment, not measured frequency.",
+        "reviewedAt": "2026-10-02"
+      },
+      "sceneIds": [
+        "S02.T01"
+      ],
+      "glossaryIds": [
+        "S02.T01.UG02"
+      ],
+      "sourceRecords": [
+        {
+          "term": "regularity",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 1593; 大全直 PRO 听力预习词表 p.23 U12 [Listening]",
+          "canonicalTerm": "regularity",
+          "originalContext": "the quality of being regular or repeated",
+          "sceneOverlayId": "S02.T01",
+          "sourceRecordId": "R00855",
+          "sourceRecord": {
+            "Record_ID": "R00855",
+            "Canonical_Term": "regularity",
+            "Source_Term": "regularity",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 23,
+            "Unit": 12,
+            "Section/Topic": "Listening",
+            "Source_No": 63,
+            "Phonetic": "/ˌreɡjuˈlærəti/",
+            "POS": "n.",
+            "Chinese_Meaning": "规律",
+            "Source_Context": "the quality of being regular or repeated",
+            "Entry_Type": "table headword",
+            "Lexicon_Class": "Lexical item",
+            "Count_As_Vocabulary": true,
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Scene_Status": "映射完成-已审校",
+            "Primary_Scene": "S02",
+            "Bridge_Scenes": null,
+            "Audit_Note": null,
+            "Notes": null
+          }
+        }
+      ],
+      "generatedFrom": "scene-unit-overlay",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-15-0",
+      "evidenceLabel": "Researcher inference · reviewed learning sense and original project example",
+      "overlaySceneIds": [
+        "S02.T01"
+      ],
+      "sceneTiers": {
+        "S02.T01": "recognition"
+      },
+      "sceneExamples": {
+        "S02.T01": "The regularity of the weekly session helps people plan their evenings."
+      },
+      "sceneExampleZhs": {
+        "S02.T01": "每周活动的规律性帮助大家安排晚间时间。"
+      },
+      "sceneMemoryNodeIds": {
+        "S02.T01": [
+          "S02.T01.L02"
+        ]
+      },
+      "sourceKind": "SRC"
+    },
+    {
+      "id": "U.LEGACY.S02.T01.TEMPORARILY",
+      "form": "temporarily",
+      "meaningZh": "暂时地",
+      "sense": "for a limited time，不表示永久；本课A室因维修暂时关闭，确切结束日期没有公布。",
+      "example": "Room A is closed temporarily while the ceiling is repaired.",
+      "exampleZh": "维修天花板期间，A室暂时关闭。",
+      "tier": "core",
+      "type": "word",
+      "sourceTerm": "temporarily",
+      "sourceRecordIds": [
+        "R00453"
+      ],
+      "admission": {
+        "basis": "retained-course event and communicative necessity",
+        "necessityZh": "for a limited time，不表示永久；本课A室因维修暂时关闭，确切结束日期没有公布。",
+        "evidenceScope": "Source record or separately attributed dictionary sense; project example and design judgment, not measured frequency.",
+        "reviewedAt": "2026-10-02"
+      },
+      "sceneIds": [
+        "S02.T01"
+      ],
+      "glossaryIds": [
+        "S02.T01.UG03"
+      ],
+      "sourceRecords": [
+        {
+          "term": "temporarily",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 1907; 大全直 PRO 听力预习词表 p.14 U7 [Listening]",
+          "canonicalTerm": "temporarily",
+          "originalContext": "for a limited time only",
+          "sceneOverlayId": "S02.T01",
+          "sourceRecordId": "R00453",
+          "sourceRecord": {
+            "Record_ID": "R00453",
+            "Canonical_Term": "temporarily",
+            "Source_Term": "temporarily",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 14,
+            "Unit": 7,
+            "Section/Topic": "Listening",
+            "Source_No": 18,
+            "Phonetic": "/ˈtemprərəli/",
+            "POS": "adv.",
+            "Chinese_Meaning": "短暂地",
+            "Source_Context": "for a limited time only",
+            "Entry_Type": "table headword",
+            "Lexicon_Class": "Lexical item",
+            "Count_As_Vocabulary": true,
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Scene_Status": "映射完成-已审校",
+            "Primary_Scene": "S02",
+            "Bridge_Scenes": null,
+            "Audit_Note": null,
+            "Notes": null
+          }
+        }
+      ],
+      "generatedFrom": "scene-unit-overlay",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-15-0",
+      "evidenceLabel": "Researcher inference · reviewed learning sense and original project example",
+      "overlaySceneIds": [
+        "S02.T01"
+      ],
+      "sceneTiers": {
+        "S02.T01": "core"
+      },
+      "sceneExamples": {
+        "S02.T01": "Room A is closed temporarily while the ceiling is repaired."
+      },
+      "sceneExampleZhs": {
+        "S02.T01": "维修天花板期间，A室暂时关闭。"
+      },
+      "sceneMemoryNodeIds": {
+        "S02.T01": [
+          "S02.T01.L01"
+        ]
+      },
+      "sourceKind": "SRC"
+    },
+    {
+      "id": "U.LEGACY.S02.T01.ONWARDS",
+      "form": "from … onwards",
+      "meaningZh": "从某个时间起并继续",
+      "sense": "from后给起始时间，onwards表示之后持续；不是只在该日使用一次。原例句已有时间义，原中文方向释义未改。",
+      "example": "Use Room B from Tuesday onwards until a dated update appears here.",
+      "exampleZh": "从周二起使用B室，直到此处出现一份带日期的更新通知。",
+      "tier": "core",
+      "type": "construction",
+      "sourceTerm": "onwards",
+      "sourceRecordIds": [
+        "R01036"
+      ],
+      "sourceAuditNote": "原R01036中文为向前/在前面，但原政策例句支持时间义。WordNet当前只有空间方向义，本时间义缺口及剑桥参考另列。",
+      "admission": {
+        "basis": "retained-course event and communicative necessity",
+        "necessityZh": "from后给起始时间，onwards表示之后持续；不是只在该日使用一次。原例句已有时间义，原中文方向释义未改。",
+        "evidenceScope": "Source record or separately attributed dictionary sense; project example and design judgment, not measured frequency.",
+        "reviewedAt": "2026-10-02"
+      },
+      "sceneIds": [
+        "S02.T01"
+      ],
+      "glossaryIds": [
+        "S02.T01.UG04"
+      ],
+      "sourceRecords": [
+        {
+          "term": "onwards",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 1308; 雅思 PRO 班级词汇表 p.8 U4 [Reading]",
+          "canonicalTerm": "onwards",
+          "originalContext": "The new policy will be effective from the 1st of May onwards.",
+          "sceneOverlayId": "S02.T01",
+          "sourceRecordId": "R01036",
+          "sourceRecord": {
+            "Record_ID": "R01036",
+            "Canonical_Term": "onwards",
+            "Source_Term": "onwards",
+            "Source": "雅思 PRO 班级词汇表",
+            "Page": 8,
+            "Unit": 4,
+            "Section/Topic": "Reading",
+            "Source_No": 14,
+            "Phonetic": "/ˈɒnwərdz/",
+            "POS": "adv.",
+            "Chinese_Meaning": "向前；在前面",
+            "Source_Context": "The new policy will be effective from the 1st of May onwards.",
+            "Entry_Type": "table headword",
+            "Lexicon_Class": "Lexical item",
+            "Count_As_Vocabulary": true,
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Scene_Status": "映射完成-已审校",
+            "Primary_Scene": "S02",
+            "Bridge_Scenes": null,
+            "Audit_Note": null,
+            "Notes": null
+          },
+          "auditNote": "原R01036中文为向前/在前面，但原政策例句支持时间义。WordNet当前只有空间方向义，本时间义缺口及剑桥参考另列。"
+        }
+      ],
+      "generatedFrom": "scene-unit-overlay",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-15-0",
+      "evidenceLabel": "Researcher inference · reviewed learning sense and original project example",
+      "overlaySceneIds": [
+        "S02.T01"
+      ],
+      "sceneTiers": {
+        "S02.T01": "core"
+      },
+      "sceneExamples": {
+        "S02.T01": "Use Room B from Tuesday onwards until a dated update appears here."
+      },
+      "sceneExampleZhs": {
+        "S02.T01": "从周二起使用B室，直到此处出现一份带日期的更新通知。"
+      },
+      "sceneMemoryNodeIds": {
+        "S02.T01": [
+          "S02.T01.L03"
+        ]
+      },
+      "sourceKind": "COMPOSITION"
+    },
+    {
+      "id": "U.NOTICE.DATED_UPDATE",
+      "form": "a dated update",
+      "meaningZh": "一份注明日期的更新通知",
+      "sense": "dated此处是注明日期，不是过时的。更新在哪里出现要说清楚，当前文字没有给出确定结束日。",
+      "example": "Check this board for a dated update.",
+      "exampleZh": "查看这个公告板上的带日期更新通知。",
+      "tier": "core",
+      "type": "chunk",
+      "admission": {
+        "basis": "retained-course event and communicative necessity",
+        "necessityZh": "dated此处是注明日期，不是过时的。更新在哪里出现要说清楚，当前文字没有给出确定结束日。",
+        "evidenceScope": "Source record or separately attributed dictionary sense; project example and design judgment, not measured frequency.",
+        "reviewedAt": "2026-10-02"
+      },
+      "sceneIds": [
+        "S02.T01",
+        "S02.T02"
+      ],
+      "glossaryIds": [
+        "S02.T01.G04",
+        "S02.T02.UG06"
+      ],
+      "sourceRecords": [],
+      "generatedFrom": "scene-unit-overlay",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-15-0",
+      "evidenceLabel": "Researcher inference · reviewed learning sense and original project example",
+      "overlaySceneIds": [
+        "S02.T01",
+        "S02.T02"
+      ],
+      "sceneTiers": {
+        "S02.T01": "core",
+        "S02.T02": "support"
+      },
+      "sceneExamples": {
+        "S02.T01": "Check this board for a dated update.",
+        "S02.T02": "We will prepare a dated update for the next session."
+      },
+      "sceneExampleZhs": {
+        "S02.T01": "查看这个公告板上的带日期更新通知。",
+        "S02.T02": "我们会为下一次活动准备一份带日期的更新通知。"
+      },
+      "sceneMemoryNodeIds": {
+        "S02.T01": [
+          "S02.T01.L03"
+        ],
+        "S02.T02": [
+          "S02.T02.L03"
+        ]
+      },
+      "sourceKind": "COMPOSITION",
+      "sceneSenses": {
+        "S02.T02": "本次沿用当前房间，下次另出注明日期的通知；两次活动安排分开，注明日期不等于永远有效。"
+      },
+      "sceneMeaningZhs": {
+        "S02.T02": "一份注明日期的更新通知"
+      }
+    },
+    {
+      "id": "U.LEGACY.S02.T01.CLOSURE",
+      "form": "… is closed …, so … will …",
+      "meaningZh": "说明关闭状态和可用替代安排",
+      "sense": "先说关闭原因或状态，再给下一步可用安排；修理完成前用暂时计划，不虚构结束时间。",
+      "example": "Room A is closed temporarily, so the session will take place in Room B.",
+      "exampleZh": "A室暂时关闭，因此活动将在B室举行。",
+      "tier": "core",
+      "type": "construction",
+      "admission": {
+        "basis": "retained-course event and communicative necessity",
+        "necessityZh": "先说关闭原因或状态，再给下一步可用安排；修理完成前用暂时计划，不虚构结束时间。",
+        "evidenceScope": "Source record or separately attributed dictionary sense; project example and design judgment, not measured frequency.",
+        "reviewedAt": "2026-10-02"
+      },
+      "sceneIds": [
+        "S02.T01"
+      ],
+      "glossaryIds": [
+        "S02.T01.UG05"
+      ],
+      "sourceRecords": [],
+      "generatedFrom": "scene-unit-overlay",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-15-0",
+      "evidenceLabel": "Researcher inference · reviewed learning sense and original project example",
+      "overlaySceneIds": [
+        "S02.T01"
+      ],
+      "sceneTiers": {
+        "S02.T01": "core"
+      },
+      "sceneExamples": {
+        "S02.T01": "Room A is closed temporarily, so the session will take place in Room B."
+      },
+      "sceneExampleZhs": {
+        "S02.T01": "A室暂时关闭，因此活动将在B室举行。"
+      },
+      "sceneMemoryNodeIds": {
+        "S02.T01": [
+          "S02.T01.L01"
+        ]
+      },
+      "sourceKind": "COMPOSITION"
+    },
+    {
+      "id": "U.LEGACY.S02.T02.RUN",
+      "form": "run through",
+      "meaningZh": "快速复核或演练一遍",
+      "sense": "整块动词表达。这里一起试走、核对路线，是项目把动作演练用于路线；run不要求跑步，through不是孤立翻译就能得到整块意思。",
+      "example": "Could we run through the route together before visitors arrive?",
+      "exampleZh": "可以在来访者到达前一起演练核对这条路线吗？",
+      "tier": "core",
+      "type": "chunk",
+      "sourceTerm": "run through",
+      "sourceRecordIds": [
+        "R00777"
+      ],
+      "admission": {
+        "basis": "retained-course event and communicative necessity",
+        "necessityZh": "整块动词表达。这里一起试走、核对路线，是项目把动作演练用于路线；run不要求跑步，through不是孤立翻译就能得到整块意思。",
+        "evidenceScope": "Source record or separately attributed dictionary sense; project example and design judgment, not measured frequency.",
+        "reviewedAt": "2026-10-02"
+      },
+      "sceneIds": [
+        "S02.T02"
+      ],
+      "glossaryIds": [
+        "S02.T02.UG01"
+      ],
+      "sourceRecords": [
+        {
+          "term": "run through",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 1675; 大全直 PRO 听力预习词表 p.21 U11 [Listening]",
+          "canonicalTerm": "run through",
+          "originalContext": "to review or rehearse quickly",
+          "sceneOverlayId": "S02.T02",
+          "sourceRecordId": "R00777",
+          "sourceRecord": {
+            "Record_ID": "R00777",
+            "Canonical_Term": "run through",
+            "Source_Term": "run through",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 21,
+            "Unit": 11,
+            "Section/Topic": "Listening",
+            "Source_No": 76,
+            "Phonetic": "/rʌn θruː/",
+            "POS": "v.",
+            "Chinese_Meaning": "浏览，过一遍",
+            "Source_Context": "to review or rehearse quickly",
+            "Entry_Type": "table headword",
+            "Lexicon_Class": "Lexical item",
+            "Count_As_Vocabulary": true,
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Scene_Status": "映射完成-已审校",
+            "Primary_Scene": "S02",
+            "Bridge_Scenes": "S05",
+            "Audit_Note": null,
+            "Notes": null
+          }
+        }
+      ],
+      "generatedFrom": "scene-unit-overlay",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-15-0",
+      "evidenceLabel": "Researcher inference · reviewed learning sense and original project example",
+      "overlaySceneIds": [
+        "S02.T02"
+      ],
+      "sceneTiers": {
+        "S02.T02": "core"
+      },
+      "sceneExamples": {
+        "S02.T02": "Could we run through the route together before visitors arrive?"
+      },
+      "sceneExampleZhs": {
+        "S02.T02": "可以在来访者到达前一起演练核对这条路线吗？"
+      },
+      "sceneMemoryNodeIds": {
+        "S02.T02": [
+          "S02.T02.L01"
+        ]
+      },
+      "sourceKind": "SRC"
+    },
+    {
+      "id": "U.LEGACY.S02.T02.INSTRUCTION",
+      "form": "instruction",
+      "meaningZh": "告诉别人如何做的指示",
+      "sense": "本课是让人走到房间的路线指示，不是教学活动或计算机指令。清楚易读与路线实际可用是两个条件。",
+      "example": "The instruction should direct visitors along the side corridor.",
+      "exampleZh": "指示应引导来访者沿侧面过道走。",
+      "tier": "core",
+      "type": "word",
+      "sourceTerm": "instruction",
+      "sourceRecordIds": [
+        "R00716"
+      ],
+      "admission": {
+        "basis": "retained-course event and communicative necessity",
+        "necessityZh": "本课是让人走到房间的路线指示，不是教学活动或计算机指令。清楚易读与路线实际可用是两个条件。",
+        "evidenceScope": "Source record or separately attributed dictionary sense; project example and design judgment, not measured frequency.",
+        "reviewedAt": "2026-10-02"
+      },
+      "sceneIds": [
+        "S02.T02"
+      ],
+      "glossaryIds": [
+        "S02.T02.UG02"
+      ],
+      "sourceRecords": [
+        {
+          "term": "instruction",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 1040; 大全直 PRO 听力预习词表 p.20 U11 [Listening]",
+          "canonicalTerm": "instruction",
+          "originalContext": "a direction or order",
+          "sceneOverlayId": "S02.T02",
+          "sourceRecordId": "R00716",
+          "sourceRecord": {
+            "Record_ID": "R00716",
+            "Canonical_Term": "instruction",
+            "Source_Term": "instruction",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 20,
+            "Unit": 11,
+            "Section/Topic": "Listening",
+            "Source_No": 15,
+            "Phonetic": "/ɪnˈstrʌkʃn/",
+            "POS": "n.",
+            "Chinese_Meaning": "指示",
+            "Source_Context": "a direction or order",
+            "Entry_Type": "table headword",
+            "Lexicon_Class": "Lexical item",
+            "Count_As_Vocabulary": true,
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Scene_Status": "映射完成-已审校",
+            "Primary_Scene": "S02",
+            "Bridge_Scenes": "S05",
+            "Audit_Note": null,
+            "Notes": null
+          }
+        }
+      ],
+      "generatedFrom": "scene-unit-overlay",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-15-0",
+      "evidenceLabel": "Researcher inference · reviewed learning sense and original project example",
+      "overlaySceneIds": [
+        "S02.T02"
+      ],
+      "sceneTiers": {
+        "S02.T02": "core"
+      },
+      "sceneExamples": {
+        "S02.T02": "The instruction should direct visitors along the side corridor."
+      },
+      "sceneExampleZhs": {
+        "S02.T02": "指示应引导来访者沿侧面过道走。"
+      },
+      "sceneMemoryNodeIds": {
+        "S02.T02": [
+          "S02.T02.L02"
+        ]
+      },
+      "sourceKind": "SRC"
+    },
+    {
+      "id": "U.LEGACY.S02.T02.SOONER",
+      "form": "sooner than expected",
+      "meaningZh": "比预期更早",
+      "sense": "sooner比较发生时间，than expected给出原预期参照；本课说明维修提前完成，不指步行速度更快。",
+      "example": "The repair finished sooner than expected.",
+      "exampleZh": "维修比预期更早完成。",
+      "tier": "core",
+      "type": "chunk",
+      "sourceTerm": "sooner",
+      "sourceRecordIds": [
+        "R00840"
+      ],
+      "sourceAuditNote": "原中文“更快”应结合英文earlier than expected理解为更早；不静默改原译。",
+      "admission": {
+        "basis": "retained-course event and communicative necessity",
+        "necessityZh": "sooner比较发生时间，than expected给出原预期参照；本课说明维修提前完成，不指步行速度更快。",
+        "evidenceScope": "Source record or separately attributed dictionary sense; project example and design judgment, not measured frequency.",
+        "reviewedAt": "2026-10-02"
+      },
+      "sceneIds": [
+        "S02.T02"
+      ],
+      "glossaryIds": [
+        "S02.T02.G02"
+      ],
+      "sourceRecords": [
+        {
+          "term": "sooner",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 1774; 大全直 PRO 听力预习词表 p.23 U12 [Listening]",
+          "canonicalTerm": "sooner",
+          "originalContext": "earlier than expected",
+          "sceneOverlayId": "S02.T02",
+          "sourceRecordId": "R00840",
+          "sourceRecord": {
+            "Record_ID": "R00840",
+            "Canonical_Term": "sooner",
+            "Source_Term": "sooner",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 23,
+            "Unit": 12,
+            "Section/Topic": "Listening",
+            "Source_No": 48,
+            "Phonetic": "/ˈsuːnər/",
+            "POS": "adv.",
+            "Chinese_Meaning": "更快地",
+            "Source_Context": "earlier than expected",
+            "Entry_Type": "table headword",
+            "Lexicon_Class": "Lexical item",
+            "Count_As_Vocabulary": true,
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Scene_Status": "映射完成-已审校",
+            "Primary_Scene": "S02",
+            "Bridge_Scenes": null,
+            "Audit_Note": null,
+            "Notes": null
+          },
+          "auditNote": "原中文“更快”应结合英文earlier than expected理解为更早；不静默改原译。"
+        }
+      ],
+      "generatedFrom": "scene-unit-overlay",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-15-0",
+      "evidenceLabel": "Researcher inference · reviewed learning sense and original project example",
+      "overlaySceneIds": [
+        "S02.T02"
+      ],
+      "sceneTiers": {
+        "S02.T02": "core"
+      },
+      "sceneExamples": {
+        "S02.T02": "The repair finished sooner than expected."
+      },
+      "sceneExampleZhs": {
+        "S02.T02": "维修比预期更早完成。"
+      },
+      "sceneMemoryNodeIds": {
+        "S02.T02": [
+          "S02.T02.L03"
+        ]
+      },
+      "sourceKind": "COMPOSITION"
+    },
+    {
+      "id": "U.LEGACY.S02.T02.UNDERWAY",
+      "form": "underway",
+      "meaningZh": "已经开始并正在进行的",
+      "sense": "本课正文before the session was underway强调在开始之前，不断言活动当时已开始。识别整句的时间连接与状态。",
+      "example": "Another volunteer wanted to change the notice before the session was underway.",
+      "exampleZh": "另一位志愿者想在活动开始前再次改公告。",
+      "tier": "recognition",
+      "type": "word",
+      "sourceTerm": "underway",
+      "sourceRecordIds": [
+        "R00305"
+      ],
+      "sourceAuditNote": "旧glossary单独摘the session was underway是肯定片段，但正文含before。项目用义和例句保留完整before范围，原词条未改。",
+      "admission": {
+        "basis": "retained-course event and communicative necessity",
+        "necessityZh": "本课正文before the session was underway强调在开始之前，不断言活动当时已开始。识别整句的时间连接与状态。",
+        "evidenceScope": "Source record or separately attributed dictionary sense; project example and design judgment, not measured frequency.",
+        "reviewedAt": "2026-10-02"
+      },
+      "sceneIds": [
+        "S02.T02"
+      ],
+      "glossaryIds": [
+        "S02.T02.UG03"
+      ],
+      "sourceRecords": [
+        {
+          "term": "underway",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 1996; 大全直 PRO 听力预习词表 p.10 U4 [Listening]",
+          "canonicalTerm": "underway",
+          "originalContext": "having started",
+          "sceneOverlayId": "S02.T02",
+          "sourceRecordId": "R00305",
+          "sourceRecord": {
+            "Record_ID": "R00305",
+            "Canonical_Term": "underway",
+            "Source_Term": "underway",
+            "Source": "大全直 PRO 听力预习词表",
+            "Page": 10,
+            "Unit": 4,
+            "Section/Topic": "Listening",
+            "Source_No": 76,
+            "Phonetic": "/ˌʌndəˈweɪ/",
+            "POS": "adj.",
+            "Chinese_Meaning": "在进行中的",
+            "Source_Context": "having started",
+            "Entry_Type": "table headword",
+            "Lexicon_Class": "Lexical item",
+            "Count_As_Vocabulary": true,
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Scene_Status": "映射完成-已审校",
+            "Primary_Scene": "S02",
+            "Bridge_Scenes": null,
+            "Audit_Note": null,
+            "Notes": null
+          },
+          "auditNote": "旧glossary单独摘the session was underway是肯定片段，但正文含before。项目用义和例句保留完整before范围，原词条未改。"
+        }
+      ],
+      "generatedFrom": "scene-unit-overlay",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-15-0",
+      "evidenceLabel": "Researcher inference · reviewed learning sense and original project example",
+      "overlaySceneIds": [
+        "S02.T02"
+      ],
+      "sceneTiers": {
+        "S02.T02": "recognition"
+      },
+      "sceneExamples": {
+        "S02.T02": "Another volunteer wanted to change the notice before the session was underway."
+      },
+      "sceneExampleZhs": {
+        "S02.T02": "另一位志愿者想在活动开始前再次改公告。"
+      },
+      "sceneMemoryNodeIds": {
+        "S02.T02": [
+          "S02.T02.L03"
+        ]
+      },
+      "sourceKind": "SRC"
+    },
+    {
+      "id": "U.LEGACY.S02.T02.TIMING",
+      "form": "timing",
+      "meaningZh": "事情发生或信息发出的时机",
+      "sense": "本课比较何时更新通知；不是走路线用了多长时间。人物保留本次安排是本情节选择，不是所有通知都必须等到下次。",
+      "example": "The timing of the message matters when visitors are already on their way.",
+      "exampleZh": "来访者已在路上时，通知发出的时机很重要。",
+      "tier": "support",
+      "type": "word",
+      "sourceTerm": "timing",
+      "sourceRecordIds": [
+        "R01407"
+      ],
+      "admission": {
+        "basis": "retained-course event and communicative necessity",
+        "necessityZh": "本课比较何时更新通知；不是走路线用了多长时间。人物保留本次安排是本情节选择，不是所有通知都必须等到下次。",
+        "evidenceScope": "Source record or separately attributed dictionary sense; project example and design judgment, not measured frequency.",
+        "reviewedAt": "2026-10-02"
+      },
+      "sceneIds": [
+        "S02.T02"
+      ],
+      "glossaryIds": [
+        "S02.T02.UG04"
+      ],
+      "sourceRecords": [
+        {
+          "term": "timing",
+          "kind": "SRC",
+          "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+          "sourceRef": "场景映射审校记录 V1 row 1945; 雅思 PRO 班级词汇表 p.25 U11 [Reading]",
+          "canonicalTerm": "timing",
+          "originalContext": "The timing of his announcement was perfect.",
+          "sceneOverlayId": "S02.T02",
+          "sourceRecordId": "R01407",
+          "sourceRecord": {
+            "Record_ID": "R01407",
+            "Canonical_Term": "timing",
+            "Source_Term": "timing",
+            "Source": "雅思 PRO 班级词汇表",
+            "Page": 25,
+            "Unit": 11,
+            "Section/Topic": "Reading",
+            "Source_No": 14,
+            "Phonetic": "/ˈtaɪmɪŋ/",
+            "POS": "n.",
+            "Chinese_Meaning": "时机",
+            "Source_Context": "The timing of his announcement was perfect.",
+            "Entry_Type": "table headword",
+            "Lexicon_Class": "Lexical item",
+            "Count_As_Vocabulary": true,
+            "Parse_Confidence": "high",
+            "Audit_Status_V1.1": "原V1记录",
+            "Scene_Status": "映射完成-已审校",
+            "Primary_Scene": "S02",
+            "Bridge_Scenes": null,
+            "Audit_Note": null,
+            "Notes": null
+          }
+        }
+      ],
+      "generatedFrom": "scene-unit-overlay",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-15-0",
+      "evidenceLabel": "Researcher inference · reviewed learning sense and original project example",
+      "overlaySceneIds": [
+        "S02.T02"
+      ],
+      "sceneTiers": {
+        "S02.T02": "support"
+      },
+      "sceneExamples": {
+        "S02.T02": "The timing of the message matters when visitors are already on their way."
+      },
+      "sceneExampleZhs": {
+        "S02.T02": "来访者已在路上时，通知发出的时机很重要。"
+      },
+      "sceneMemoryNodeIds": {
+        "S02.T02": [
+          "S02.T02.L03"
+        ]
+      },
+      "sourceKind": "SRC"
     }
   ]
 }

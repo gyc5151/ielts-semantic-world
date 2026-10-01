@@ -1,0 +1,301 @@
+{
+  "S01.H01": {
+    "accommodation": {
+      "zh": "住处；住宿场所",
+      "example": "We need accommodation near work.",
+      "exampleZh": "我们需要公司附近的住处。",
+      "usageNote": "本课住处义；BrE通常不可数。不要套用调节、协议或视觉焦距义。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:02672371"
+    },
+    "immaculate": {
+      "zh": "非常整洁干净的",
+      "example": "The advertisement describes the room as immaculate.",
+      "exampleZh": "广告把房间描述为非常整洁干净。",
+      "usageNote": "这是广告说法，不是人物已经证实的事实；窗框磨损不自动证明房间脏。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "s:00418364"
+    },
+    "adjoining": {
+      "zh": "相邻的；毗连的",
+      "example": "There is an adjoining kitchen beside the room.",
+      "exampleZh": "房间旁有相邻的厨房。",
+      "usageNote": "此处形容词。当前WordNet查到adjoin动词，没有本形容词精确条目，不作精确匹配。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "noMatch": true,
+      "note": "此处形容词。当前WordNet查到adjoin动词，没有本形容词精确条目，不作精确匹配。",
+      "externalReferences": [
+        {
+          "label": "Cambridge Learner’s Dictionary · adjoining",
+          "url": "https://dictionary.cambridge.org/us/dictionary/learner-english/adjoining",
+          "accessedAt": "2026-10-02",
+          "evidenceType": "External evidence"
+        }
+      ]
+    },
+    "blanket": {
+      "zh": "保暖的毯子",
+      "example": "There is a folded blanket beside the chair.",
+      "exampleZh": "椅子旁有一条折好的毯子。",
+      "usageNote": "实物保暖用品，与覆盖一切的形容词义或核反应堆覆盖层义分开。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:02849154"
+    },
+    "potted": {
+      "zh": "种在盆里的",
+      "example": "A potted plant stands beside the shelf.",
+      "exampleZh": "搁架旁摆着一盆植物。",
+      "usageNote": "本课potted修饰plant。不是罐装食品，也不是缩略文本。整块potted plant源自资料。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "a:01834121"
+    },
+    "plant": {
+      "zh": "植物",
+      "example": "A potted plant stands beside the shelf.",
+      "exampleZh": "搁架旁摆着一盆植物。",
+      "usageNote": "物件植物名词，不是工厂，也不是动词种植。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:00017222"
+    },
+    "decoration": {
+      "zh": "装饰物",
+      "example": "A paper decoration hangs above the shelf.",
+      "exampleZh": "搁架上方挂着一个纸装饰物。",
+      "usageNote": "本课可数物件；原定义提special occasions，项目没有据此虚构节日。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:03169390"
+    },
+    "comfortable": {
+      "zh": "身体感到舒服的",
+      "example": "A comfortable chair does not make the total cost affordable.",
+      "exampleZh": "椅子坐着舒服不意味着总费用能负担得起。",
+      "usageNote": "身体舒适与家庭预算是不同条件；经济宽裕的多义另列。H02旧正文无此词，新简明摘要提供项目桥接入口。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "a:00476819",
+      "contrasts": [
+        {
+          "senseId": "s:02022556",
+          "zh": "经济上较宽裕的",
+          "example": "The family is comfortable financially.",
+          "exampleZh": "这个家庭经济上较宽裕。",
+          "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。"
+        }
+      ]
+    }
+  },
+  "S01.H02": {
+    "comfortable": {
+      "zh": "身体感到舒服的",
+      "example": "A comfortable chair does not make the total cost affordable.",
+      "exampleZh": "椅子坐着舒服不意味着总费用能负担得起。",
+      "usageNote": "身体舒适与家庭预算是不同条件；经济宽裕的多义另列。H02旧正文无此词，新简明摘要提供项目桥接入口。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "a:00476819",
+      "contrasts": [
+        {
+          "senseId": "s:02022556",
+          "zh": "经济上较宽裕的",
+          "example": "The family is comfortable financially.",
+          "exampleZh": "这个家庭经济上较宽裕。",
+          "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。"
+        }
+      ]
+    },
+    "household": {
+      "zh": "共同生活的一组人；家庭",
+      "example": "Our household needs a home we can afford all year.",
+      "exampleZh": "我们的家庭需要一年都能负担得起的住处。",
+      "usageNote": "本课名词是一起生活的人，不是建筑物。原中文混有家用的，原POS n.仍保留。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:08078020"
+    },
+    "rental": {
+      "zh": "租赁行为或安排",
+      "example": "We need the full cost before deciding on the rental.",
+      "exampleZh": "决定租赁安排前，我们需要完整费用。",
+      "usageNote": "此例句为来源租赁名词义；rental agreement里是修饰位置，按当前句子另外选义。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:01111375",
+      "uses": [
+        {
+          "id": "agreement-modifier",
+          "pattern": "\\brental (?:agreement|charges)\\b",
+          "senseId": "a:02892033",
+          "zh": "与租赁有关的；租赁的",
+          "example": "Could you confirm the total cost before I sign the rental agreement?",
+          "exampleZh": "可以在我签租赁协议前确认总费用吗？",
+          "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+          "usageNote": "WordNet将此修饰用法登记为形容词；Master R00071只给名词。剑桥另列rental agreement搭配，不把项目用法改写进来源。"
+        }
+      ],
+      "externalReferences": [
+        {
+          "label": "Cambridge Dictionary · rental agreement collocation",
+          "url": "https://dictionary.cambridge.org/us/example/english/rental-agreement",
+          "accessedAt": "2026-10-02",
+          "evidenceType": "External evidence"
+        }
+      ]
+    },
+    "estimate": {
+      "zh": "预估；近似计算",
+      "example": "The heating cost is only an estimate.",
+      "exampleZh": "供暖费用只是估算。",
+      "usageNote": "费用数字预估名词，不等于已确认账单；estimate动词需另按句子判断。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:05803379"
+    }
+  },
+  "S02.T01": {
+    "overdue": {
+      "zh": "早该完成却尚未完成的",
+      "example": "The correction to the notice is overdue.",
+      "exampleZh": "公告更正早该完成了。",
+      "usageNote": "当前WordNet只给未按时付款义，本课公告更正迟了的用义没有精确条目；原英文和剑桥另支持。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "noMatch": true,
+      "note": "当前WordNet只给未按时付款义，本课公告更正迟了的用义没有精确条目；原英文和剑桥另支持。",
+      "externalReferences": [
+        {
+          "label": "Cambridge Dictionary · overdue",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/overdue",
+          "accessedAt": "2026-10-02",
+          "evidenceType": "External evidence"
+        }
+      ]
+    },
+    "session": {
+      "zh": "一场活动",
+      "example": "The session will take place in Room B.",
+      "exampleZh": "活动将在B室举行。",
+      "usageNote": "本课社区活动的一场，不是整学期或软件会话。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:01232091"
+    },
+    "dated": {
+      "zh": "注明日期的",
+      "example": "Check this board for a dated update.",
+      "exampleZh": "查看这个公告板上的带日期更新通知。",
+      "usageNote": "dated在dated update里是注明日期的分词修饰语，对应date标注日期动词，不是过时的形容词。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "v:00734927"
+    },
+    "regularity": {
+      "zh": "按固定规律重复的特性",
+      "example": "The regularity of the weekly session helps people plan their evenings.",
+      "exampleZh": "每周活动的规律性帮助大家安排晚间时间。",
+      "usageNote": "不是多边形边角相等义；识别层，不强迫通知堆抽象名词。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:04767347"
+    },
+    "temporarily": {
+      "zh": "暂时地",
+      "example": "Room A is closed temporarily while the ceiling is repaired.",
+      "exampleZh": "维修天花板期间，A室暂时关闭。",
+      "usageNote": "不是永久关闭；这里没有给出结束日。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "r:00088303"
+    },
+    "onwards": {
+      "zh": "从起始时间之后持续",
+      "example": "Use Room B from Tuesday onwards until a dated update appears here.",
+      "exampleZh": "从周二起使用B室，直到此处出现一份带日期的更新通知。",
+      "usageNote": "当前WordNet只有空间方向义，不能把它作为公告时间义的精确匹配。原政策例句与剑桥时间义另支持；from … onwards整块可点击。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "noMatch": true,
+      "note": "当前WordNet只有空间方向义，不能把它作为公告时间义的精确匹配。原政策例句与剑桥时间义另支持；from … onwards整块可点击。",
+      "externalReferences": [
+        {
+          "label": "Cambridge Dictionary · onwards, TIME",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/onwards",
+          "accessedAt": "2026-10-02",
+          "evidenceType": "External evidence"
+        }
+      ]
+    }
+  },
+  "S02.T02": {
+    "session": {
+      "zh": "一场活动",
+      "example": "The session will take place in Room B.",
+      "exampleZh": "活动将在B室举行。",
+      "usageNote": "本课社区活动的一场，不是整学期或软件会话。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:01232091"
+    },
+    "dated": {
+      "zh": "注明日期的",
+      "example": "Check this board for a dated update.",
+      "exampleZh": "查看这个公告板上的带日期更新通知。",
+      "usageNote": "dated在dated update里是注明日期的分词修饰语，对应date标注日期动词，不是过时的形容词。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "v:00734927"
+    },
+    "run": {
+      "zh": "run through整块：快速复核或演练",
+      "example": "Could we run through the route together before visitors arrive?",
+      "exampleZh": "可以在来访者到达前一起演练核对这条路线吗？",
+      "usageNote": "当前单词索引没有整块run through的复核/演练义。请打开整块，不用跑步或单独穿过义来代替。本课把演练用于路线检查是项目应用。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "noMatch": true,
+      "note": "当前单词索引没有整块run through的复核/演练义。请打开整块，不用跑步或单独穿过义来代替。本课把演练用于路线检查是项目应用。",
+      "externalReferences": [
+        {
+          "label": "Oxford Advanced Learner’s Dictionary · run through",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/run-through_1",
+          "accessedAt": "2026-10-02",
+          "evidenceType": "External evidence"
+        }
+      ]
+    },
+    "through": {
+      "zh": "run through整块：快速复核或演练",
+      "example": "Could we run through the route together before visitors arrive?",
+      "exampleZh": "可以在来访者到达前一起演练核对这条路线吗？",
+      "usageNote": "当前单词索引没有整块run through的复核/演练义。请打开整块，不用跑步或单独穿过义来代替。本课把演练用于路线检查是项目应用。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "noMatch": true,
+      "note": "当前单词索引没有整块run through的复核/演练义。请打开整块，不用跑步或单独穿过义来代替。本课把演练用于路线检查是项目应用。",
+      "externalReferences": [
+        {
+          "label": "Oxford Advanced Learner’s Dictionary · run through",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/run-through_1",
+          "accessedAt": "2026-10-02",
+          "evidenceType": "External evidence"
+        }
+      ]
+    },
+    "instruction": {
+      "zh": "说明如何做的指示",
+      "example": "The instruction should direct visitors along the side corridor.",
+      "exampleZh": "指示应引导来访者沿侧面过道走。",
+      "usageNote": "指路线走法，不是教学活动或计算机指令。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:06786629"
+    },
+    "sooner": {
+      "zh": "更早",
+      "example": "The repair finished sooner than expected.",
+      "exampleZh": "维修比预期更早完成。",
+      "usageNote": "比较事件发生时间，不比较移动速度。不是美国Oklahoma居民名词。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "r:00259096"
+    },
+    "underway": {
+      "zh": "已经开始并正在进行的",
+      "example": "Another volunteer wanted to change the notice before the session was underway.",
+      "exampleZh": "另一位志愿者想在活动开始前再次改公告。",
+      "usageNote": "原正文有before：时间连接词管辖整个活动状态，不能从摘录片段推断故事此时活动已开始。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "s:00666784"
+    },
+    "timing": {
+      "zh": "事情发生的时机",
+      "example": "The timing of the message matters when visitors are already on their way.",
+      "exampleZh": "来访者已在路上时，通知发出的时机很重要。",
+      "usageNote": "名词时机，不是动词测量时长。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:05046009"
+    }
+  }
+}

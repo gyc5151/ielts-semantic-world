@@ -91,6 +91,10 @@ export function dictionaryHtml(entry, sceneId, wordnet, contexts, translations, 
   const currentHtml = matching
     ? senseHtml(matching, { ...context, zh: entry.zh }, entry, record, translations, chinese, showChinese)
     : `<p class="dictionary-guidance">${context?.noMatch ? html(context.note) : "这句话的词典义项尚未人工匹配。先看上方情境释义，也可以打开完整词典核对。"}</p>${context?.example ? `<div class="dictionary-project-example"><span>本项目情境例句</span><p lang="en">${html(context.example)}</p>${translationHtml(context.exampleZh, "project", showChinese)}</div>` : ""}`;
+  const references = (context?.externalReferences || []).filter((reference) => /^https?:\/\//i.test(reference.url || ""));
+  const referenceHtml = references.length
+    ? `<div class="dictionary-links">${references.map((reference) => `<a href="${html(reference.url)}" target="_blank" rel="noopener noreferrer">${html(reference.label)} ↗</a>`).join("")}</div><small>外部参考仅提供链接；本项目选义与例句另行标记。</small>`
+    : "";
   const contrastHtml = contrasts.length
     ? `<p class="dictionary-guidance">同一个词在不同情境中的用法。先读英语，需要时展开中文译解。</p><div class="dictionary-senses">${contrasts.map(({ sense, editorial }) => senseHtml(sense, editorial, entry, record, translations, chinese, showChinese)).join("")}</div>`
     : `<p class="dictionary-guidance">这个词暂未编写多义对比。完整词典中仍可查看收录的其他义项。</p>`;
@@ -105,7 +109,7 @@ export function dictionaryHtml(entry, sceneId, wordnet, contexts, translations, 
     <div class="dictionary-tabs" role="tablist" aria-label="选择词典内容">
       ${[["current", "本句用法"], ["contrasts", "一词多义"], ["full", "完整词典"]].map(([id, label]) => `<button type="button" role="tab" id="dictionary-tab-${id}" aria-controls="dictionary-panel-${id}" aria-selected="${id === "current"}" tabindex="${id === "current" ? "0" : "-1"}" data-dictionary-tab="${id}">${label}</button>`).join("")}
     </div>
-    <div role="tabpanel" id="dictionary-panel-current" aria-labelledby="dictionary-tab-current">${currentHtml}</div>
+    <div role="tabpanel" id="dictionary-panel-current" aria-labelledby="dictionary-tab-current">${currentHtml}${referenceHtml}</div>
     <div role="tabpanel" id="dictionary-panel-contrasts" aria-labelledby="dictionary-tab-contrasts" hidden>${contrastHtml}</div>
     <div role="tabpanel" id="dictionary-panel-full" aria-labelledby="dictionary-tab-full" hidden>${fullHtml}</div>
     <div class="dictionary-links"><a href="https://dictionary.cambridge.org/dictionary/english/${html(encodeURIComponent(surface))}" target="_blank" rel="noopener noreferrer">剑桥学习者词典 ↗</a><a href="https://wordnet.princeton.edu/" target="_blank" rel="noopener noreferrer">WordNet 来源 ↗</a></div>

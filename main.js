@@ -1,9 +1,9 @@
-import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-14-0-r3";
-import { nextReview, reviewDue } from "./learning.mjs?v=pilot-14-0-r3";
-import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-14-0-r3";
-import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-14-0-r3";
+import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-15-0";
+import { nextReview, reviewDue } from "./learning.mjs?v=pilot-15-0";
+import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-15-0";
+import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-15-0";
 const DATA_URL = "./data/world.json";
-const ASSET_VERSION = "pilot-14-0-r3";
+const ASSET_VERSION = "pilot-15-0";
 function fetchData(path) {
   const url = new URL(path, window.location.href);
   url.searchParams.set("v", ASSET_VERSION);
@@ -320,8 +320,10 @@ function memoryRouteHtml(scene) {
   if (!scene.memoryNodes?.length) return '';
   const nodes = content.microScenes.flatMap((s) => s.memoryNodes || []);
   return `<section class="memory-stations" aria-label="本节物件线索"><div class="eyebrow">FOLLOW THE OBJECTS</div><p class="meta">点开物件，回想它改变了哪个决定。</p><div class="memory-station-grid">${scene.memoryNodes.map((node, index) => {
-    const next = nodes.find((n) => n.id === node.nextNodeId);
-    return `<details class="memory-station"><summary><span class="station-number">${String(index + 1).padStart(2, '0')}</span><strong>${escapeHtml(node.zh)}</strong></summary><div><p lang="en">${annotatedEnglish(node.object, scene)}</p><p lang="en">${annotatedEnglish(node.cue, scene)}</p>${textTranslation(node.cueZh, '线索中文')}${node.locationRelationZh ? `<p class="meta">${escapeHtml(node.locationRelationZh)}</p>` : ""}${node.id ? `<small>${next ? `下一物件：${escapeHtml(next.zh)}` : node.nextNodeId ? '下一位置见路线页' : '本段终点'}</small>` : ""}</div></details>`;
+    const nextId = node.nextNodeId || node.next;
+    const next = nodes.find((n) => n.id === nextId);
+    const location = node.locationRelationZh || node.locationZh;
+    return `<details class="memory-station"><summary><span class="station-number">${String(index + 1).padStart(2, '0')}</span><strong>${escapeHtml(node.zh)}</strong></summary><div><p lang="en">${annotatedEnglish(node.object, scene)}</p><p lang="en">${annotatedEnglish(node.cue, scene)}</p>${textTranslation(node.cueZh, '线索中文')}${location ? `<p class="meta">${escapeHtml(location)}</p>` : ""}${node.id ? `<small>${next ? `下一物件：${escapeHtml(next.zh)}` : nextId ? '下一位置见路线页' : '本段终点'}</small>` : ""}</div></details>`;
   }).join('')}</div></section>`;
 }
 

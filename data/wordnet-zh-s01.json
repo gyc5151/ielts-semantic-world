@@ -5,10 +5,10 @@
     "modelLicense": "CC-BY 4.0",
     "modelSource": "https://github.com/argosopentech/argospm-index",
     "generatedAt": "2026-10-02",
-    "uniqueSenses": 10218,
-    "examplePlacements": 13351,
-    "projectDefinitionCount": 144,
-    "projectOriginalExampleCount": 66
+    "uniqueSenses": 10241,
+    "examplePlacements": 13395,
+    "projectDefinitionCount": 151,
+    "projectOriginalExampleCount": 80
   },
   "senses": {
     "n:13658027": {
@@ -776,12 +776,12 @@
       "examples": {}
     },
     "n:02672371": {
-      "definition": "供公众使用的居住场所。",
+      "definition": "为公众提供的住宿场所",
       "definitionStatus": "project",
       "examples": {
         "overnight accommodations are available": {
-          "text": "提供过夜住宿",
-          "status": "machine"
+          "text": "有过夜住宿可供使用。",
+          "status": "project"
         }
       }
     },
@@ -3417,6 +3417,80 @@
       "definition": "教堂的一部分 由柱子或柱子平面划分",
       "definitionStatus": "machine",
       "examples": {}
+    },
+    "a:02269286": {
+      "definition": "修饰符; 使用质量或计数名词来表示一个类的整数或数或每类的数或数",
+      "definitionStatus": "machine",
+      "examples": {
+        "we sat up all night": {
+          "text": "我们整晚都坐着",
+          "status": "machine"
+        },
+        "ate all the food": {
+          "text": "吃光了 吃光了 吃光了 吃光了",
+          "status": "machine"
+        },
+        "all men are mortal": {
+          "text": "男人都是凡人 人都是凡人 人都是凡人",
+          "status": "machine"
+        },
+        "all parties are welcome": {
+          "text": "欢迎各方参加",
+          "status": "machine"
+        }
+      }
+    },
+    "s:00521584": {
+      "definition": "完全交给或吸收",
+      "definitionStatus": "machine",
+      "examples": {
+        "became all attention": {
+          "text": "成为大家的注意力",
+          "status": "machine"
+        }
+      }
+    },
+    "r:00008007": {
+      "definition": "完全或全部或全部使用(`整体'经常被非正式地用于`完全')",
+      "definitionStatus": "machine",
+      "examples": {
+        "he was wholly convinced": {
+          "text": "他绝对相信",
+          "status": "machine"
+        },
+        "entirely satisfied with the meal": {
+          "text": "这顿饭完全满意了",
+          "status": "machine"
+        },
+        "it was completely different from what we expected": {
+          "text": "这和我们预期的完全不同",
+          "status": "machine"
+        },
+        "was completely at fault": {
+          "text": "完全有错",
+          "status": "machine"
+        },
+        "a totally new situation": {
+          "text": "一个全新的局面",
+          "status": "machine"
+        },
+        "the directions were all wrong": {
+          "text": "方向都错了",
+          "status": "machine"
+        },
+        "it was not altogether her fault": {
+          "text": "不是她的错",
+          "status": "machine"
+        },
+        "an altogether new approach": {
+          "text": "一种全新的方法",
+          "status": "machine"
+        },
+        "a whole new idea": {
+          "text": "一个全新的想法",
+          "status": "machine"
+        }
+      }
     },
     "a:02612653": {
       "definition": "具有过敏特征或由过敏引起的。",
@@ -11051,12 +11125,12 @@
       }
     },
     "n:02849154": {
-      "definition": "床上保暖的寝具",
-      "definitionStatus": "machine",
+      "definition": "使人在床上保持温暖的寝具",
+      "definitionStatus": "project",
       "examples": {
         "he pulled the covers over his head and went to sleep": {
-          "text": "他把盖子拉到头上然后睡觉了",
-          "status": "machine"
+          "text": "他把被子拉过头顶，睡着了。",
+          "status": "project"
         }
       }
     },
@@ -20060,15 +20134,10 @@
       "definitionStatus": "machine",
       "examples": {}
     },
-    "n:00251013": {
-      "definition": "做干净的东西的行为",
+    "n:00626838": {
+      "definition": "举重,将杠子抬到肩高,然后在高处打飞机",
       "definitionStatus": "machine",
-      "examples": {
-        "he gave his shoes a good cleaning": {
-          "text": "他给他的鞋子打扫得很好",
-          "status": "machine"
-        }
-      }
+      "examples": {}
     },
     "v:01532589": {
       "definition": "通过从中清除污垢、污秽或有害物质,实现清洁",
@@ -20173,6 +20242,280 @@
       "examples": {
         "clean grain before milling it": {
           "text": "磨熟之前是干净的谷物",
+          "status": "machine"
+        }
+      }
+    },
+    "a:00417413": {
+      "definition": "远离污垢或杂质;或有清洁的习惯;",
+      "definitionStatus": "machine",
+      "examples": {
+        "children with clean shining faces": {
+          "text": "脸色清净的孩子们",
+          "status": "machine"
+        },
+        "clean white shirts": {
+          "text": "干净的白色衬衫",
+          "status": "machine"
+        },
+        "clean dishes": {
+          "text": "干净的盘子",
+          "status": "machine"
+        },
+        "a spotlessly clean house": {
+          "text": "一个干净的屋子",
+          "status": "machine"
+        },
+        "cats are clean animals": {
+          "text": "猫是干净的动物",
+          "status": "machine"
+        }
+      }
+    },
+    "s:01914108": {
+      "definition": "不受限制或资格限制",
+      "definitionStatus": "machine",
+      "examples": {
+        "a clean bill of health": {
+          "text": "一份干净的保健法案",
+          "status": "machine"
+        },
+        "a clear winner": {
+          "text": "一个明确的赢家",
+          "status": "machine"
+        }
+      }
+    },
+    "s:01906464": {
+      "definition": "远离一切沉闷或暗淡的事物",
+      "definitionStatus": "machine",
+      "examples": {
+        "efforts to obtain a clean bass in orchestral recordings": {
+          "text": "努力在管弦乐录音中获得干净的低音",
+          "status": "machine"
+        },
+        "clear laughter like a waterfall": {
+          "text": "笑得像瀑布一样清澈",
+          "status": "machine"
+        },
+        "clear reds and blues": {
+          "text": "红色和蓝色",
+          "status": "machine"
+        },
+        "a light lilting voice like a silver bell": {
+          "text": "像银铃一样轻轻的微声",
+          "status": "machine"
+        }
+      }
+    },
+    "s:01906320": {
+      "definition": "不含杂质",
+      "definitionStatus": "machine",
+      "examples": {
+        "clean water": {
+          "text": "净水",
+          "status": "machine"
+        },
+        "fresh air": {
+          "text": "新鲜空气",
+          "status": "machine"
+        }
+      }
+    },
+    "s:01749915": {
+      "definition": "没有失信或犯罪痕迹",
+      "definitionStatus": "machine",
+      "examples": {
+        "a clean voting record": {
+          "text": "一份干净的投票记录",
+          "status": "machine"
+        },
+        "a clean driver's license": {
+          "text": "一张干净的驾照",
+          "status": "machine"
+        }
+      }
+    },
+    "a:00427331": {
+      "definition": "仪式上的清洁或纯净",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "a:00426347": {
+      "definition": "不传播污染或污染;特别是放射性污染",
+      "definitionStatus": "machine",
+      "examples": {
+        "a clean fuel": {
+          "text": "清洁燃料",
+          "status": "machine"
+        },
+        "cleaner and more efficient engines": {
+          "text": "更清洁、更有效率的发动机",
+          "status": "machine"
+        },
+        "the tactical bomb is reasonably clean": {
+          "text": "战术炸弹相当干净",
+          "status": "machine"
+        }
+      }
+    },
+    "a:00424008": {
+      "definition": "(行为或特别语言)没有可反对的因素;适合所有观察员",
+      "definitionStatus": "machine",
+      "examples": {
+        "good clean fun": {
+          "text": "好干净的乐趣",
+          "status": "machine"
+        },
+        "a clean joke": {
+          "text": "一个干净的笑话",
+          "status": "machine"
+        }
+      }
+    },
+    "s:02116473": {
+      "definition": "免于败血症或感染",
+      "definitionStatus": "machine",
+      "examples": {
+        "a clean (or uninfected) wound": {
+          "text": "干净(或未感染)的伤口",
+          "status": "machine"
+        }
+      }
+    },
+    "s:01548808": {
+      "definition": "道德纯洁",
+      "definitionStatus": "machine",
+      "examples": {
+        "led a clean life": {
+          "text": "过着干净的生活",
+          "status": "machine"
+        }
+      }
+    },
+    "s:01404898": {
+      "definition": "(手稿)很少修改或更正",
+      "definitionStatus": "machine",
+      "examples": {
+        "fair copy": {
+          "text": "公平副本",
+          "status": "machine"
+        },
+        "a clean manuscript": {
+          "text": "一个干净的手稿",
+          "status": "machine"
+        }
+      }
+    },
+    "s:00956733": {
+      "definition": "展示或号召体育或公平游戏",
+      "definitionStatus": "machine",
+      "examples": {
+        "a clean fight": {
+          "text": "一场干净的战斗",
+          "status": "machine"
+        },
+        "a sporting solution of the disagreement": {
+          "text": "解决分歧的体育办法",
+          "status": "machine"
+        },
+        "sportsmanlike conduct": {
+          "text": "运动操守",
+          "status": "machine"
+        }
+      }
+    },
+    "s:00749947": {
+      "definition": "无困难或问题",
+      "definitionStatus": "machine",
+      "examples": {
+        "a clean test flight": {
+          "text": "一次干净的试飞",
+          "status": "machine"
+        }
+      }
+    },
+    "s:00522101": {
+      "definition": "彻底和无限定条件",
+      "definitionStatus": "machine",
+      "examples": {
+        "a clean getaway": {
+          "text": "一个干净的离开",
+          "status": "machine"
+        },
+        "a clean sweep": {
+          "text": "清扫",
+          "status": "machine"
+        },
+        "a clean break": {
+          "text": "一个干净的休息",
+          "status": "machine"
+        }
+      }
+    },
+    "s:00143294": {
+      "definition": "没有携带隐藏武器",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "s:00061664": {
+      "definition": "不存在笨拙; 精确或巧妙地执行",
+      "definitionStatus": "machine",
+      "examples": {
+        "he landed a clean left on his opponent's cheek": {
+          "text": "左手打中对手的脸颊",
+          "status": "machine"
+        },
+        "a clean throw": {
+          "text": "干净的掷球",
+          "status": "machine"
+        },
+        "the neat exactness of the surgeon's knife": {
+          "text": "手术刀的精确度",
+          "status": "machine"
+        }
+      }
+    },
+    "s:00047653": {
+      "definition": "无毒品",
+      "definitionStatus": "machine",
+      "examples": {
+        "after a long dependency on heroin she has been clean for 4 years": {
+          "text": "在长期依赖海洛因之后她已经戒了4年",
+          "status": "machine"
+        }
+      }
+    },
+    "r:00009373": {
+      "definition": "完全; 用作加固器",
+      "definitionStatus": "machine",
+      "examples": {
+        "clean forgot the appointment": {
+          "text": "干净忘了预约",
+          "status": "machine"
+        },
+        "I'm plumb (or plum) tuckered out": {
+          "text": "我浑身都是羽毛",
+          "status": "machine"
+        }
+      }
+    },
+    "r:00285092": {
+      "definition": "遵守规则或法律,不欺诈或欺骗",
+      "definitionStatus": "machine",
+      "examples": {
+        "they played fairly": {
+          "text": "他们玩的很公平",
+          "status": "machine"
+        }
+      }
+    },
+    "n:00251013": {
+      "definition": "做干净的东西的行为",
+      "definitionStatus": "machine",
+      "examples": {
+        "he gave his shoes a good cleaning": {
+          "text": "他给他的鞋子打扫得很好",
           "status": "machine"
         }
       }
@@ -20577,28 +20920,6 @@
         }
       }
     },
-    "s:01906464": {
-      "definition": "远离一切沉闷或暗淡的事物",
-      "definitionStatus": "machine",
-      "examples": {
-        "efforts to obtain a clean bass in orchestral recordings": {
-          "text": "努力在管弦乐录音中获得干净的低音",
-          "status": "machine"
-        },
-        "clear laughter like a waterfall": {
-          "text": "笑得像瀑布一样清澈",
-          "status": "machine"
-        },
-        "clear reds and blues": {
-          "text": "红色和蓝色",
-          "status": "machine"
-        },
-        "a light lilting voice like a silver bell": {
-          "text": "像银铃一样轻轻的微声",
-          "status": "machine"
-        }
-      }
-    },
     "s:00869253": {
       "definition": "(特别是所有权)不受任何提出事实或法律问题的拘束或限制",
       "definitionStatus": "machine",
@@ -20651,20 +20972,6 @@
       "examples": {
         "on a clear day": {
           "text": "在一个晴朗的日子里,",
-          "status": "machine"
-        }
-      }
-    },
-    "s:01914108": {
-      "definition": "不受限制或资格限制",
-      "definitionStatus": "machine",
-      "examples": {
-        "a clean bill of health": {
-          "text": "一份干净的保健法案",
-          "status": "machine"
-        },
-        "a clear winner": {
-          "text": "一个明确的赢家",
           "status": "machine"
         }
       }
@@ -22612,7 +22919,7 @@
       }
     },
     "a:00476819": {
-      "definition": "带来或感到身体舒适、放松的。",
+      "definition": "使身体舒适，或感到身体舒适、缓解的（comfy为非正式说法）",
       "definitionStatus": "project",
       "examples": {
         "comfortable clothes": {
@@ -22624,8 +22931,8 @@
           "status": "machine"
         },
         "made himself comfortable in an armchair": {
-          "text": "坐在扶手椅上自得其乐",
-          "status": "machine"
+          "text": "他在扶手椅里舒舒服服地坐好。",
+          "status": "project"
         },
         "the antihistamine made her feel more comfortable": {
           "text": "抗己胺药让她感觉更舒服",
@@ -22688,8 +22995,8 @@
       }
     },
     "s:02022556": {
-      "definition": "在经济幸运的情况下; 中度富裕",
-      "definitionStatus": "machine",
+      "definition": "经济状况较好；比较富裕的",
+      "definitionStatus": "project",
       "examples": {
         "they were comfortable or even wealthy by some standards": {
           "text": "他们很自在,甚至有些富裕",
@@ -29417,12 +29724,12 @@
       }
     },
     "v:00734927": {
-      "definition": "加上日期说明；注明日期。",
+      "definition": "提供日期标记；标注日期",
       "definitionStatus": "project",
       "examples": {
         "She wrote the letter on Monday but she dated it Saturday so as not to reveal that she procrastinated": {
-          "text": "她在周一写了这封信但她在周六约会 以免透露她拖延时间",
-          "status": "machine"
+          "text": "她周一写信，却署了周六的日期，以免显出自己拖延了。",
+          "status": "project"
         }
       }
     },
@@ -29789,8 +30096,8 @@
       }
     },
     "n:03169390": {
-      "definition": "用来美化的东西",
-      "definitionStatus": "machine",
+      "definition": "用于美化的物品",
+      "definitionStatus": "project",
       "examples": {}
     },
     "n:06706676": {
@@ -32032,7 +32339,7 @@
       }
     },
     "n:06786629": {
-      "definition": "描述某事应如何完成的一条信息。",
+      "definition": "说明某事应该如何做的信息",
       "definitionStatus": "project",
       "examples": {
         "he gave directions faster than she could follow them": {
@@ -35764,16 +36071,16 @@
       }
     },
     "r:00259096": {
-      "definition": "比较“sun”或“early”",
-      "definitionStatus": "machine",
+      "definition": "soon或early的比较级",
+      "definitionStatus": "project",
       "examples": {
         "Come a little sooner, if you can": {
           "text": "来早一点,如果你可以的话",
           "status": "machine"
         },
         "came earlier than I expected": {
-          "text": "来得比我想象的早",
-          "status": "machine"
+          "text": "比我预期更早到来",
+          "status": "project"
         }
       }
     },
@@ -37617,12 +37924,12 @@
       "examples": {}
     },
     "n:05803379": {
-      "definition": "数量或程度或价值的大致计算",
-      "definitionStatus": "machine",
+      "definition": "对数量、程度或价值的近似计算",
+      "definitionStatus": "project",
       "examples": {
         "an estimate of what it would cost": {
-          "text": "估计其成本",
-          "status": "machine"
+          "text": "对所需费用的估算",
+          "status": "project"
         },
         "a rough idea how long it would take": {
           "text": "不知道要花多长时间",
@@ -39668,16 +39975,6 @@
         }
       }
     },
-    "r:00285092": {
-      "definition": "遵守规则或法律,不欺诈或欺骗",
-      "definitionStatus": "machine",
-      "examples": {
-        "they played fairly": {
-          "text": "他们玩的很公平",
-          "status": "machine"
-        }
-      }
-    },
     "n:15236859": {
       "definition": "当树叶从树上落下的时候,",
       "definitionStatus": "machine",
@@ -40286,7 +40583,7 @@
       }
     },
     "n:08078020": {
-      "definition": "共同生活的一个社会单位。",
+      "definition": "共同生活的社会单位",
       "definitionStatus": "project",
       "examples": {
         "he moved his family to Virginia": {
@@ -40294,8 +40591,8 @@
           "status": "machine"
         },
         "It was a good Christian household": {
-          "text": "这是一个很好的基督教家庭",
-          "status": "machine"
+          "text": "那是一个良好的基督徒家庭。",
+          "status": "project"
         },
         "I waited until the whole house was asleep": {
           "text": "我等到整个房子都睡着",
@@ -45523,20 +45820,6 @@
         }
       }
     },
-    "s:01906320": {
-      "definition": "不含杂质",
-      "definitionStatus": "machine",
-      "examples": {
-        "clean water": {
-          "text": "净水",
-          "status": "machine"
-        },
-        "fresh air": {
-          "text": "新鲜空气",
-          "status": "machine"
-        }
-      }
-    },
     "s:00418198": {
       "definition": "尚未使用或未土壤化",
       "definitionStatus": "machine",
@@ -50420,6 +50703,154 @@
         }
       }
     },
+    "n:04931837": {
+      "definition": "衣服挂起来的方式",
+      "definitionStatus": "machine",
+      "examples": {
+        "he adjusted the hang of his coat": {
+          "text": "他调整了他的衣架",
+          "status": "machine"
+        }
+      }
+    },
+    "n:00436339": {
+      "definition": "当体操运动员的体重由手臂支撑时,在环或横向栏杆或平行栏杆上进行体操锻炼。",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "v:01482075": {
+      "definition": "将被中止或悬挂",
+      "definitionStatus": "machine",
+      "examples": {
+        "The flag hung on the wall": {
+          "text": "旗帜挂在墙上",
+          "status": "machine"
+        }
+      }
+    },
+    "v:01481360": {
+      "definition": "被挂起或中止的原因",
+      "definitionStatus": "machine",
+      "examples": {
+        "Hang that picture on the wall": {
+          "text": "把照片挂在墙上",
+          "status": "machine"
+        }
+      }
+    },
+    "v:02485451": {
+      "definition": "绞刑",
+      "definitionStatus": "machine",
+      "examples": {
+        "The murderer was hanged on Friday": {
+          "text": "凶手星期五被绞死",
+          "status": "machine"
+        }
+      }
+    },
+    "v:01977962": {
+      "definition": "打开或打开",
+      "definitionStatus": "machine",
+      "examples": {
+        "Hang one's head in shame": {
+          "text": "在羞愧中吊死一个人的头",
+          "status": "machine"
+        }
+      }
+    },
+    "v:02734952": {
+      "definition": "充满敌意、负担或压迫性",
+      "definitionStatus": "machine",
+      "examples": {
+        "This worry hangs on my mind": {
+          "text": "这让我心烦意乱",
+          "status": "machine"
+        },
+        "The cloud of suspicion hangs over her": {
+          "text": "怀疑的云笼罩着她",
+          "status": "machine"
+        }
+      }
+    },
+    "v:01481957": {
+      "definition": "暂停或准备",
+      "definitionStatus": "machine",
+      "examples": {
+        "Heavy fog hung over the valley": {
+          "text": "大雾笼罩着山谷",
+          "status": "machine"
+        }
+      }
+    },
+    "v:01216331": {
+      "definition": "紧紧地或顽强地抱住",
+      "definitionStatus": "machine",
+      "examples": {
+        "hang on to your father's hands": {
+          "text": "挂在你父亲的手上",
+          "status": "machine"
+        },
+        "The child clung to his mother's apron": {
+          "text": "小孩紧紧抱在母亲的围裙上",
+          "status": "machine"
+        }
+      }
+    },
+    "v:02741003": {
+      "definition": "显示",
+      "definitionStatus": "machine",
+      "examples": {
+        "Picasso hangs in this new wing of the museum": {
+          "text": "毕加索挂在博物馆的新楼里",
+          "status": "machine"
+        }
+      }
+    },
+    "v:02557790": {
+      "definition": "妨碍陪审团作出裁决",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "v:01677716": {
+      "definition": "装饰或提供悬浮的东西",
+      "definitionStatus": "machine",
+      "examples": {
+        "Hang wallpaper": {
+          "text": "挂墙纸",
+          "status": "machine"
+        }
+      }
+    },
+    "v:01481819": {
+      "definition": "以链条排列位置",
+      "definitionStatus": "machine",
+      "examples": {
+        "This cabinet door doesn't hang right!": {
+          "text": "这柜子的门不挂对!",
+          "status": "machine"
+        }
+      }
+    },
+    "v:01481647": {
+      "definition": "定位为轴线,以便可以向一个方向自由移动;",
+      "definitionStatus": "machine",
+      "examples": {
+        "hang a door": {
+          "text": "挂个门",
+          "status": "machine"
+        }
+      }
+    },
+    "v:00210110": {
+      "definition": "暂停( 肉) 以获得游戏味",
+      "definitionStatus": "machine",
+      "examples": {
+        "hang the venison for a few days": {
+          "text": "吊死这只野兽几天",
+          "status": "machine"
+        }
+      }
+    },
     "v:00339934": {
       "definition": "过世了",
       "definitionStatus": "machine",
@@ -53381,139 +53812,6 @@
         }
       }
     },
-    "v:01482075": {
-      "definition": "将被中止或悬挂",
-      "definitionStatus": "machine",
-      "examples": {
-        "The flag hung on the wall": {
-          "text": "旗帜挂在墙上",
-          "status": "machine"
-        }
-      }
-    },
-    "v:01481360": {
-      "definition": "被挂起或中止的原因",
-      "definitionStatus": "machine",
-      "examples": {
-        "Hang that picture on the wall": {
-          "text": "把照片挂在墙上",
-          "status": "machine"
-        }
-      }
-    },
-    "v:02485451": {
-      "definition": "绞刑",
-      "definitionStatus": "machine",
-      "examples": {
-        "The murderer was hanged on Friday": {
-          "text": "凶手星期五被绞死",
-          "status": "machine"
-        }
-      }
-    },
-    "v:01977962": {
-      "definition": "打开或打开",
-      "definitionStatus": "machine",
-      "examples": {
-        "Hang one's head in shame": {
-          "text": "在羞愧中吊死一个人的头",
-          "status": "machine"
-        }
-      }
-    },
-    "v:02734952": {
-      "definition": "充满敌意、负担或压迫性",
-      "definitionStatus": "machine",
-      "examples": {
-        "This worry hangs on my mind": {
-          "text": "这让我心烦意乱",
-          "status": "machine"
-        },
-        "The cloud of suspicion hangs over her": {
-          "text": "怀疑的云笼罩着她",
-          "status": "machine"
-        }
-      }
-    },
-    "v:01481957": {
-      "definition": "暂停或准备",
-      "definitionStatus": "machine",
-      "examples": {
-        "Heavy fog hung over the valley": {
-          "text": "大雾笼罩着山谷",
-          "status": "machine"
-        }
-      }
-    },
-    "v:01216331": {
-      "definition": "紧紧地或顽强地抱住",
-      "definitionStatus": "machine",
-      "examples": {
-        "hang on to your father's hands": {
-          "text": "挂在你父亲的手上",
-          "status": "machine"
-        },
-        "The child clung to his mother's apron": {
-          "text": "小孩紧紧抱在母亲的围裙上",
-          "status": "machine"
-        }
-      }
-    },
-    "v:02741003": {
-      "definition": "显示",
-      "definitionStatus": "machine",
-      "examples": {
-        "Picasso hangs in this new wing of the museum": {
-          "text": "毕加索挂在博物馆的新楼里",
-          "status": "machine"
-        }
-      }
-    },
-    "v:02557790": {
-      "definition": "妨碍陪审团作出裁决",
-      "definitionStatus": "machine",
-      "examples": {}
-    },
-    "v:01677716": {
-      "definition": "装饰或提供悬浮的东西",
-      "definitionStatus": "machine",
-      "examples": {
-        "Hang wallpaper": {
-          "text": "挂墙纸",
-          "status": "machine"
-        }
-      }
-    },
-    "v:01481819": {
-      "definition": "以链条排列位置",
-      "definitionStatus": "machine",
-      "examples": {
-        "This cabinet door doesn't hang right!": {
-          "text": "这柜子的门不挂对!",
-          "status": "machine"
-        }
-      }
-    },
-    "v:01481647": {
-      "definition": "定位为轴线,以便可以向一个方向自由移动;",
-      "definitionStatus": "machine",
-      "examples": {
-        "hang a door": {
-          "text": "挂个门",
-          "status": "machine"
-        }
-      }
-    },
-    "v:00210110": {
-      "definition": "暂停( 肉) 以获得游戏味",
-      "definitionStatus": "machine",
-      "examples": {
-        "hang the venison for a few days": {
-          "text": "吊死这只野兽几天",
-          "status": "machine"
-        }
-      }
-    },
     "a:01269073": {
       "definition": "感到饥饿;感到需要或渴望吃食物",
       "definitionStatus": "machine",
@@ -53985,12 +54283,12 @@
       }
     },
     "s:00418364": {
-      "definition": "完全整洁、干净的。",
+      "definition": "完全整洁干净的",
       "definitionStatus": "project",
       "examples": {
         "the apartment was immaculate": {
-          "text": "公寓是整齐的",
-          "status": "machine"
+          "text": "公寓非常整洁干净。",
+          "status": "project"
         },
         "in her immaculate white uniform": {
           "text": "穿着她纯洁的白色制服",
@@ -76037,7 +76335,7 @@
       }
     },
     "n:00017222": {
-      "definition": "（植物学）不能自行移动的生物。",
+      "definition": "植物学：缺乏自行移动能力的生物体",
       "definitionStatus": "project",
       "examples": {}
     },
@@ -78265,12 +78563,12 @@
       }
     },
     "a:01834121": {
-      "definition": "（植物）种植或生长在盆中的。",
+      "definition": "指植物：种植或生长在盆里的",
       "definitionStatus": "project",
       "examples": {
         "potted geraniums": {
-          "text": "陶化的遗传物质",
-          "status": "machine"
+          "text": "盆栽天竺葵",
+          "status": "project"
         }
       }
     },
@@ -84798,12 +85096,12 @@
       "examples": {}
     },
     "n:04767347": {
-      "definition": "遵循固定原则或频率的性质。",
+      "definition": "具有固定规律或速率的特性",
       "definitionStatus": "project",
       "examples": {
         "he was famous for the regularity of his habits": {
-          "text": "他因为习惯的规律而出名",
-          "status": "machine"
+          "text": "他的生活习惯有规律，这一点很有名。",
+          "status": "project"
         }
       }
     },
@@ -85204,8 +85502,8 @@
       }
     },
     "n:01111375": {
-      "definition": "(作为公寓或房屋或汽车)",
-      "definitionStatus": "machine",
+      "definition": "为使用某物（如公寓、房屋或汽车）而付费的行为",
+      "definitionStatus": "project",
       "examples": {}
     },
     "a:02892164": {
@@ -85219,12 +85517,12 @@
       }
     },
     "a:02892033": {
-      "definition": "租金或与租金有关的款项",
-      "definitionStatus": "machine",
+      "definition": "属于租赁或与租赁有关的",
+      "definitionStatus": "project",
       "examples": {
         "rental agreement": {
           "text": "租赁协议",
-          "status": "machine"
+          "status": "project"
         },
         "rental charges": {
           "text": "租金",
@@ -90614,12 +90912,12 @@
       }
     },
     "n:01232091": {
-      "definition": "为某项特定活动安排的聚会或会议。",
+      "definition": "为某项活动举行的一次聚会",
       "definitionStatus": "project",
       "examples": {
         "a filming session": {
-          "text": "拍摄会",
-          "status": "machine"
+          "text": "一场拍摄",
+          "status": "project"
         },
         "a gossip session": {
           "text": "闲话会",
@@ -96849,6 +97147,21 @@
       "definitionStatus": "machine",
       "examples": {}
     },
+    "n:04298171": {
+      "definition": "楼梯飞行或楼梯飞行",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:04314914": {
+      "definition": "由升降楼梯时的休息地点构成的支助",
+      "definitionStatus": "machine",
+      "examples": {
+        "he paused on the bottom step": {
+          "text": "他停在最下面的台阶上",
+          "status": "machine"
+        }
+      }
+    },
     "n:08653706": {
       "definition": "某物或某人的地位",
       "definitionStatus": "machine",
@@ -97912,16 +98225,6 @@
         }
       }
     },
-    "n:04314914": {
-      "definition": "由升降楼梯时的休息地点构成的支助",
-      "definitionStatus": "machine",
-      "examples": {
-        "he paused on the bottom step": {
-          "text": "他停在最下面的台阶上",
-          "status": "machine"
-        }
-      }
-    },
     "n:14429608": {
       "definition": "职等序列中的相对位置",
       "definitionStatus": "machine",
@@ -98091,11 +98394,6 @@
           "status": "machine"
         }
       }
-    },
-    "n:04298171": {
-      "definition": "楼梯飞行或楼梯飞行",
-      "definitionStatus": "machine",
-      "examples": {}
     },
     "n:09445566": {
       "definition": "一个人走过或正在走进的路程",
@@ -101644,12 +101942,12 @@
       }
     },
     "r:00088303": {
-      "definition": "仅持续有限时间地；不是永久地。",
+      "definition": "只在有限时间内；并非永久地",
       "definitionStatus": "project",
       "examples": {
         "he will work here temporarily": {
-          "text": "他在这里临时工作",
-          "status": "machine"
+          "text": "他会暂时在这里工作。",
+          "status": "project"
         },
         "he was brought out of retirement temporarily": {
           "text": "他被暂时从退休中带出来",
@@ -103397,7 +103695,7 @@
       "examples": {}
     },
     "n:05046009": {
-      "definition": "某事发生的时间。",
+      "definition": "某事发生的时间",
       "definitionStatus": "project",
       "examples": {}
     },
@@ -106228,7 +106526,7 @@
       }
     },
     "s:00666784": {
-      "definition": "目前正在进行的。",
+      "definition": "目前正在进行的",
       "definitionStatus": "project",
       "examples": {
         "there is mischief afoot": {
@@ -106240,8 +106538,8 @@
           "status": "machine"
         },
         "preparations for the trial are underway": {
-          "text": "审判准备工作正在进行中",
-          "status": "machine"
+          "text": "审判的准备工作正在进行。",
+          "status": "project"
         }
       }
     },
@@ -107590,6 +107888,60 @@
       "definition": "子宫内胎儿的手动转动(通常用于助产)",
       "definitionStatus": "machine",
       "examples": {}
+    },
+    "s:01839317": {
+      "definition": "完全如前所说",
+      "definitionStatus": "machine",
+      "examples": {
+        "the very center of town": {
+          "text": "镇中心",
+          "status": "machine"
+        }
+      }
+    },
+    "s:02068946": {
+      "definition": "是完全相同的;而不是其他任何一种:",
+      "definitionStatus": "machine",
+      "examples": {
+        "this is the identical room we stayed in before": {
+          "text": "这是我们以前住过的同一间房",
+          "status": "machine"
+        },
+        "the themes of his stories are one and the same": {
+          "text": "他的故事主题都是一样的",
+          "status": "machine"
+        },
+        "saw the selfsame quotation in two newspapers": {
+          "text": "在两家报纸上看到同样的引文",
+          "status": "machine"
+        },
+        "on this very spot": {
+          "text": "此时此刻",
+          "status": "machine"
+        },
+        "the very thing he said yesterday": {
+          "text": "他昨天说的话",
+          "status": "machine"
+        },
+        "the very man I want to see": {
+          "text": "我想见的那个人",
+          "status": "machine"
+        }
+      }
+    },
+    "r:00510749": {
+      "definition": "就是这样",
+      "definitionStatus": "machine",
+      "examples": {
+        "on the very next page": {
+          "text": "在下一页",
+          "status": "machine"
+        },
+        "he expected the very opposite": {
+          "text": "他预料到的是相反的情况",
+          "status": "machine"
+        }
+      }
     },
     "n:05933246": {
       "definition": "区域视觉感知",
@@ -109777,48 +110129,6 @@
       "examples": {
         "a solid voting bloc": {
           "text": "一个坚实的投票集团",
-          "status": "machine"
-        }
-      }
-    },
-    "r:00008007": {
-      "definition": "完全或全部或全部使用(`整体'经常被非正式地用于`完全')",
-      "definitionStatus": "machine",
-      "examples": {
-        "he was wholly convinced": {
-          "text": "他绝对相信",
-          "status": "machine"
-        },
-        "entirely satisfied with the meal": {
-          "text": "这顿饭完全满意了",
-          "status": "machine"
-        },
-        "it was completely different from what we expected": {
-          "text": "这和我们预期的完全不同",
-          "status": "machine"
-        },
-        "was completely at fault": {
-          "text": "完全有错",
-          "status": "machine"
-        },
-        "a totally new situation": {
-          "text": "一个全新的局面",
-          "status": "machine"
-        },
-        "the directions were all wrong": {
-          "text": "方向都错了",
-          "status": "machine"
-        },
-        "it was not altogether her fault": {
-          "text": "不是她的错",
-          "status": "machine"
-        },
-        "an altogether new approach": {
-          "text": "一种全新的方法",
-          "status": "machine"
-        },
-        "a whole new idea": {
-          "text": "一个全新的想法",
           "status": "machine"
         }
       }
