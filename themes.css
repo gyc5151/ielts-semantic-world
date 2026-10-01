@@ -202,3 +202,29 @@ html[data-theme="nature"] .memory-station { border-bottom: 3px solid #b6c7a4; }
 [data-branch="work-study"] .story-card { border-top: 5px solid #746899; }
 [data-branch="work-study"] .object-route li { border-radius: 5px; box-shadow: 0 3px 0 rgba(70, 53, 105, .08); }
 [data-branch="work-study"] .memory-station { border-left: 4px solid #746899; }
+
+
+/* Shopping: receipt columns, a parcel edge and a service-counter blue. */
+[data-theme="commerce"] {
+  --canvas: #eef2f5; --paper: #fffefd; --paper-warm: #e7edf3;
+  --ink: #273c54; --muted: #607187; --line: #cdd7e1;
+  --teal: #345d85; --teal-deep: #254666; --teal-pale: #e3edf5;
+  --side-bg: #263f59; --side-mark: #466788;
+  --hero-start: #fff9ee; --hero-end: #e6edf3; --theme-accent: #345d85;
+}
+.branch-card[data-theme="commerce"] .branch-art { background: #e7edf3; color: #345d85; }
+html[data-theme="commerce"] .story-card { border-top: 4px dashed #b5c3d1; }
+html[data-theme="commerce"] .object-route li { border-radius: 3px; border-bottom: 3px solid #c89b61; }
+html[data-theme="commerce"] .memory-station { border-left: 4px solid #7894ae; }
+/* Kitchen: recipe paper, a herb-green margin and a warm preparation counter. */
+[data-theme="kitchen"] {
+  --canvas: #f5f3e9; --paper: #fffef7; --paper-warm: #edeedc;
+  --ink: #344838; --muted: #67765e; --line: #d7ddc9;
+  --teal: #4e714f; --teal-deep: #345235; --teal-pale: #e6eddc;
+  --side-bg: #354d3c; --side-mark: #5d7b55;
+  --hero-start: #fff7e2; --hero-end: #e8eeda; --theme-accent: #4e714f;
+}
+.branch-card[data-theme="kitchen"] .branch-art { background: #edeedc; color: #4e714f; }
+html[data-theme="kitchen"] .story-card { border-left: 5px solid #8ba66f; border-radius: 5px 18px 18px 5px; }
+html[data-theme="kitchen"] .object-route li { background: #fffaf0; border-bottom: 3px solid #d3b889; }
+html[data-theme="kitchen"] .memory-station { border-top: 3px solid #8ba66f; }

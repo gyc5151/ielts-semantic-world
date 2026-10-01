@@ -1,7 +1,7 @@
 {
   "sceneId": "WORLD",
   "title": "IELTS Semantic World",
-  "version": "pilot-10-0",
+  "version": "pilot-11-0",
   "dictionaryFile": "./data/wordnet-s01.json",
   "dictionaryContextFile": "./data/s01-dictionary-context.json",
   "dictionaryTranslationFile": "./data/wordnet-translations-s01.json",
@@ -24,8 +24,16 @@
     "./data/s04-w02.json",
     "./data/s15-w01.json",
     "./data/s15-w02.json",
+    "./data/s09-k01.json",
+    "./data/s09-k02.json",
+    "./data/s09-k03.json",
+    "./data/s09-k04.json",
     "./data/s11-a01.json",
     "./data/s11-a02.json",
+    "./data/s08-c01.json",
+    "./data/s08-c02.json",
+    "./data/s08-c03.json",
+    "./data/s08-c04.json",
     "./data/s03-g01.json",
     "./data/s03-g02.json",
     "./data/s07-j01.json",
@@ -154,6 +162,36 @@
       ]
     },
     {
+      "id": "kitchen-table",
+      "title": "厨房里的一张食谱",
+      "subtitle": "A recipe on the kitchen table",
+      "theme": "kitchen",
+      "kind": "饮食与烹饪支线",
+      "description": "从一份菜单走进备料台，再回到餐桌。沿着菜单、食谱与餐桌，练习选择、请求、核对和描述。",
+      "entry": "旅社蓝色门 → 社区咖啡馆门口的菜单板",
+      "returnLabel": "带上写好的食谱便签，回到旅社的公共厨房",
+      "route": [
+        "入口的菜单板",
+        "窗边的试吃小碗",
+        "厨房门旁的厨师名牌",
+        "备料台左侧的食谱夹",
+        "台面中央的面粉袋",
+        "备料台右侧的切配板",
+        "后墙的炉具说明卡",
+        "冷藏柜旁的便签",
+        "清理区的空包装篮",
+        "回到餐桌的空盘",
+        "面粉包装保留的标签",
+        "靠窗的谷物作物小展签"
+      ],
+      "sceneIds": [
+        "S09.K01",
+        "S09.K02",
+        "S09.K03",
+        "S09.K04"
+      ]
+    },
+    {
       "id": "photo-consent",
       "title": "未征同意的照片",
       "subtitle": "The photograph nobody asked for",
@@ -172,6 +210,36 @@
       "sceneIds": [
         "S11.A01",
         "S11.A02"
+      ]
+    },
+    {
+      "id": "shop-service",
+      "title": "收据背后的问题",
+      "subtitle": "The question behind the receipt",
+      "theme": "commerce",
+      "kind": "消费与售后支线",
+      "entry": "虚构社区商店入口左侧 · 食品杂货架",
+      "returnLabel": "回到入口左侧的食品杂货架",
+      "description": "从货架走到收银台，再沿家中的包裹和回店的车票，练习比较、核账、询问交货问题，以及核实额外支出的偿付。店铺承诺均为虚构情节。",
+      "route": [
+        "食品杂货架",
+        "首饰柜旁的购物袋",
+        "价格标签",
+        "收银屏幕",
+        "配送收费说明",
+        "付款托盘与收据",
+        "门内包裹",
+        "桌上的坏把手",
+        "电话旁问题便条",
+        "车票与收据",
+        "售后柜台",
+        "写明金额的回复"
+      ],
+      "sceneIds": [
+        "S08.C01",
+        "S08.C02",
+        "S08.C03",
+        "S08.C04"
       ]
     },
     {
@@ -279,7 +347,8 @@
     "./data/s01-dictionary-context.json",
     "./data/branch-dictionary-context.json",
     "./data/branch-v8-dictionary-context.json",
-    "./data/branch-v10-dictionary-context.json"
+    "./data/branch-v10-dictionary-context.json",
+    "./data/branch-v11-dictionary-context.json"
   ],
   "uiWordsFile": "./data/world-ui-words.json",
   "learningUnitsFile": "./data/learning-units.json",

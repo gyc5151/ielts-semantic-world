@@ -1,7 +1,7 @@
-import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-10-0";
-import { nextReview, reviewDue } from "./learning.mjs?v=pilot-10-0";
-import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-10-0";
-import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-10-0";
+import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-11-0";
+import { nextReview, reviewDue } from "./learning.mjs?v=pilot-11-0";
+import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-11-0";
+import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-11-0";
 const DATA_URL = "./data/world.json";
 const STORAGE_KEY = "ielts-semantic-world-s01-trial-v1";
 
@@ -210,6 +210,8 @@ function themeIllustration(theme) {
     science: '<path d="M47 17h36m-28 0v34l-29 47q-4 10 7 10h64q11 0 7-10L75 51V17M41 81h47M145 33h49m-41 0v55q16 38 33 0V33M153 69h33M124 108h91"/><path d="m119 19 14 11 18-15"/>',
     urban: '<path d="M25 22h180v82H25zM25 48h180M25 78h180M66 22v82M147 22v82"/><path d="M85 58h43v11H85M104 84v19M52 29v10m113 22v12"/><circle cx="177" cy="35" r="7"/>',
     travel: '<rect x="27" y="19" width="99" height="79" rx="12"/><path d="M40 38h73v28H40zM45 98l-9 14m73-14 9 14M49 111h54M62 19v-7h30v7"/><circle cx="46" cy="81" r="4"/><circle cx="107" cy="81" r="4"/><rect x="154" y="54" width="50" height="53" rx="5"/><path d="M169 54V42h20v12M168 66v29m22-29v29M153 26h50m-9-7 9 7-9 7"/>',
+    commerce: '<path d="M29 41h94l9 65H20zM46 43V31a16 16 0 0 1 32 0v12M151 16h54v92l-9-7-9 7-9-7-9 7-9-7-9 7zM162 36h32m-32 14h25m-25 16h32m-32 20h18"/><circle cx="107" cy="33" r="13"/><path d="m100 33 5 5 9-11"/>',
+    kitchen: '<path d="M26 55h91v38q0 14-14 14H40q-14 0-14-14zM16 56h110M60 47h25M72 47v-7M27 68H14m103 0h13M46 33q-8-8 0-17m22 17q-8-8 0-17m22 17q-8-8 0-17M151 17h52v91h-52zM162 34h29m-29 13h22m-22 14h29m-29 20h20"/>',
     campus: '<path d="M36 14h103l22 21v77H36zM139 14v21h22M52 48h86M52 64h70M52 82h39M52 94h77"/><path d="m181 92 24-59-9-4-24 59-1 16zM181 92l-9-4M67 21l13 5"/>',
     nature: '<path d="M22 92q45-18 89 0t89 0M22 107q45-18 89 0t89 0M44 78V46m0 15L30 47m14 8 14-20M168 76V31m0 22 16-15m-16 21-16-18M79 36q9-12 18 0 9-12 18 0M111 57q9-12 18 0 9-12 18 0"/><circle cx="188" cy="20" r="9"/>'
   };
@@ -256,7 +258,7 @@ function renderHome() {
 }
 
 function filterRoutes() {
-  const groups = { home: 'life', community: 'public', urban: 'public', science: 'study', campus: 'study', nature: 'nature', travel: 'life' };
+  const groups = { home: 'life', community: 'public', urban: 'public', science: 'study', campus: 'study', nature: 'nature', travel: 'life', commerce: 'life', kitchen: 'life' };
   const query = worldQuery.trim().toLocaleLowerCase();
   let visible = 0;
   for (const card of app.querySelectorAll('[data-branch-card]')) {
@@ -330,7 +332,7 @@ function chunkMatches(value, scene) {
   return selected.sort((a, b) => a.start - b.start);
 }
 
-function annotatedEnglish(value, scene) {
+function annotatedEnglish(value, scene, contextExample = null) {
   const source = String(value || "");
   const chunks = chunkMatches(source, scene);
   const words = /[A-Za-z]+(?:'[A-Za-z]+)?/g;
@@ -341,8 +343,10 @@ function annotatedEnglish(value, scene) {
     const end = start + match[0].length;
     html += escapeHtml(source.slice(previousEnd, start));
     const chunk = chunks.find((item) => start >= item.start && end <= item.end);
-    const sentence = sentenceAt(source, start);
-    const usage = usageForOccurrence(dictionaryContext, scene.id, match[0].toLowerCase(), sentence.text, start - sentence.start);
+    const contextualOccurrence = contextExample ? [...String(contextExample).matchAll(words)].find((item) => item[0].toLowerCase() === match[0].toLowerCase()) : null;
+    const contextOffset = contextualOccurrence ? contextualOccurrence.index : start;
+    const sentence = sentenceAt(contextualOccurrence ? String(contextExample) : source, contextOffset);
+    const usage = usageForOccurrence(dictionaryContext, scene.id, match[0].toLowerCase(), sentence.text, contextOffset - sentence.start);
     html += `<button class="glossary-word${chunk ? " glossary-word--chunk" : ""}" type="button" data-word="${escapeHtml(match[0].toLowerCase())}" data-word-scene="${escapeHtml(scene.id)}" data-word-sentence="${escapeHtml(sentence.text)}" ${usage ? `data-word-usage="${escapeHtml(usage)}"` : ""} ${chunk ? `data-related-chunk="${escapeHtml(chunk.entry.id)}"` : ""} aria-label="查看单词 ${escapeHtml(match[0])} 的意思">${escapeHtml(match[0])}</button>`;
     if (chunk && end === chunk.end) {
       html += `<button class="glossary-chunk-marker" type="button" data-glossary-id="${escapeHtml(chunk.entry.id)}" data-glossary-scene="${escapeHtml(scene.id)}" aria-label="查看整个表达 ${escapeHtml(chunk.entry.text)} 的搭配" title="查看整个表达 ${escapeHtml(chunk.entry.text)}">↗</button>`;
@@ -397,7 +401,7 @@ function showEntryModal(scene, entry, trigger, relatedChunkId = null) {
   glossaryDialog.innerHTML = `<div class="glossary-modal">
     <div class="glossary-modal-top"><span class="glossary-type">${entry.type === "word" ? "WORD / 单词" : "CHUNK / 表达块"}</span><button class="glossary-close" type="button" aria-label="关闭释义窗口">×</button></div>
     <h2 class="glossary-headword" id="glossaryHeadword">${escapeHtml(entry.text)}</h2>
-    ${entry.contextSentence ? `<details class="glossary-context"><summary>查看你点到的这句话</summary><p lang="en">${escapeHtml(entry.contextSentence)}</p></details>` : ""}
+    ${entry.contextSentence ? `<details class="glossary-context"><summary>查看对应的情境句</summary><p lang="en">${escapeHtml(entry.contextSentence)}</p></details>` : ""}
     <div class="glossary-zh"><span>本项目编写 · 在本情境中</span><strong>${escapeHtml(entry.zh || "释义待补")}</strong></div>
     ${entry.note ? `<div class="glossary-note"><span>${entry.type === "word" ? "用法要点" : "搭配与调用"}</span><p>${escapeHtml(entry.note)}</p></div>` : ""}
     ${entry.type === "chunk" ? `<div class="glossary-components"><span>点组成单词，进一步查词</span><div>${chunkWordButtons(scene, entry)}</div></div>` : ""}
@@ -930,16 +934,20 @@ function promptCue(scene, prompt) {
   const zh = prompt.cueZh || (hasTarget(prompt.cue) && translated && !hasTarget(translated) ? translated : null);
   return { zh, englishTargetInput: !zh && hasTarget(prompt.cue) };
 }
+function unitSourceHtml(unit) {
+  if (!unit.sourceRecords.length) return "<p>项目依据本课沟通行为整理的构式。</p>";
+  return unit.sourceRecords.map((r) => `<p>${escapeHtml(r.kind)} · ${escapeHtml(r.sourceRef)}</p>${r.sourceRecord ? `<p class="meta">原记录词性：${escapeHtml(r.sourceRecord.POS || "未提供")} · 原中文：${escapeHtml(r.sourceRecord.Chinese_Meaning || "未提供")}</p>` : ""}`).join("");
+}
 function unitLearningHtml(scene) {
   const units = unitsForScene(scene);
   if (!units.length) return "";
   const names = { core: "本节主动练", support: "需要时借用", recognition: "先读懂即可" };
-  return `<section class="unit-learning"><h2>先选少量表达，完成一件事</h2>${Object.entries(names).map(([tier, label]) => `<details ${tier === "core" ? "open" : ""}><summary>${label} · ${units.filter((u) => u.tier === tier).length}</summary><div class="unit-cards">${units.filter((u) => u.tier === tier).map((u) => `<article><strong lang="en">${annotatedEnglish(u.form, scene)}</strong><p>${escapeHtml(u.meaningZh)}</p><p class="meta">${escapeHtml(u.sense)}</p><p lang="en">${annotatedEnglish(u.example, scene)}</p><small>项目编写的例句</small><details><summary>组成词依据</summary>${u.sourceRecords.length ? u.sourceRecords.map((r) => `<p>${escapeHtml(r.kind)} · ${escapeHtml(r.sourceRef)}</p>`).join("") : "<p>项目依据本课沟通行为整理的构式。</p>"}<small>表达组合与例句为项目编写；原词条不修改。</small></details></article>`).join("")}</div></details>`).join("")}<small>分层是本批编辑建议；读过、点击过均不计为掌握。</small></section>`;
+  return `<section class="unit-learning"><h2>先选少量表达，完成一件事</h2>${Object.entries(names).map(([tier, label]) => `<details ${tier === "core" ? "open" : ""}><summary>${label} · ${units.filter((u) => u.tier === tier).length}</summary><div class="unit-cards">${units.filter((u) => u.tier === tier).map((u) => `<article><strong lang="en">${annotatedEnglish(u.form, scene, u.type === "word" ? u.example : null)}</strong><p>${escapeHtml(u.meaningZh)}</p><p class="meta">${escapeHtml(u.sense)}</p><p lang="en">${annotatedEnglish(u.example, scene)}</p><small>项目编写的例句</small><details><summary>组成词依据</summary>${unitSourceHtml(u)}<small>表达组合与例句为项目编写；原词条不修改。</small></details></article>`).join("")}</div></details>`).join("")}<small>分层是本批编辑建议；读过、点击过均不计为掌握。</small></section>`;
 }
 function unitAssessmentHtml(prompt, attempt) {
   const units = (prompt.unitIds || []).map((id) => learningUnits.find((u) => u.id === id)).filter(Boolean);
   if (!units.length) return "";
-  return `<section class="unit-assessment"><h3>回看原答：哪些表达实际用出来了？</h3><p>只核对提交前的回答或录音。合理改述能完成任务；未用到某项就留“未观察”。这些记录都是你的自评，不是自动语言判分。</p>${units.map((u) => `<label><span>${annotatedEnglish(u.form, getScene(u.sceneIds[0]))} · ${escapeHtml(u.meaningZh)}</span><select data-unit-assessment="${escapeHtml(u.id)}" ${attempt?.selfRating ? "disabled" : ""}>${Object.entries(EVIDENCE_LABELS).map(([status, label]) => `<option value="${status}" ${attempt?.unitAssessments?.[u.id] === status ? "selected" : ""} ${status === "independent" && (!attempt?.response || attempt?.support !== "none") ? "disabled" : ""}>${label}</option>`).join("")}</select></label>`).join("")}<small>选择下方任务自评时一并保存；看参考后才会的表达放进修订。</small></section>`;
+  return `<section class="unit-assessment"><h3>回看原答：哪些表达实际用出来了？</h3><p>只核对提交前的回答或录音。合理改述能完成任务；未用到某项就留“未观察”。这些记录都是你的自评，不是自动语言判分。</p>${units.map((u) => `<label><span>${annotatedEnglish(u.form, getScene(u.sceneIds[0]), u.type === "word" ? u.example : null)} · ${escapeHtml(u.meaningZh)}</span><select data-unit-assessment="${escapeHtml(u.id)}" ${attempt?.selfRating ? "disabled" : ""}>${Object.entries(EVIDENCE_LABELS).map(([status, label]) => `<option value="${status}" ${attempt?.unitAssessments?.[u.id] === status ? "selected" : ""} ${status === "independent" && (!attempt?.response || attempt?.support !== "none") ? "disabled" : ""}>${label}</option>`).join("")}</select></label>`).join("")}<small>选择下方任务自评时一并保存；看参考后才会的表达放进修订。</small></section>`;
 }
 function bindFeedback(scene, prompt, attempt) {
   app.querySelector("#saveRevision")?.addEventListener("click", () => {
@@ -960,7 +968,7 @@ function renderUnits() {
   app.innerHTML = `<section class="simple-page"><div class="eyebrow">SITUATION → EXPRESSION</div><h1>表达记录</h1><p class="lead">当前登记 ${learningUnits.length} 个具体词义、搭配和构式，覆盖 ${registeredScenes.size} 节课程。${observed} 项有自评观察；旧题目成绩不转换为词汇掌握。尚未登记单位的课程保留任务记录。</p><p>“未观察”表示没有对应证据。听辨自评、文字召回、口头召回和换境表现分别查看；出现次数不能直接证明熟练程度。</p><section class="unit-tools" aria-label="筛选表达记录"><label for="unitSearch">找一个表达或意图</label><input id="unitSearch" type="search" placeholder="例如：延期、预约、passport…" autocomplete="off"/><label for="unitRoute">学习路线</label><select id="unitRoute"><option value="all">所有已登记路线</option>${registeredBranches.map((b) => `<option value="${escapeHtml(b.id)}">${escapeHtml(b.title)}</option>`).join("")}</select><p id="unitResultCount" role="status"></p></section><div class="unit-progress-list">${summaries.map(({ unit: u, summary: v }) => {
     const recalled = v.observations.filter((o) => o.dimension === "recall" && o.status === "independent" && o.support === "none");
     const transferred = v.observations.filter((o) => o.dimension === "transfer" && o.status === "independent" && o.support === "none");
-    return `<article data-unit-card="${escapeHtml(u.id)}"><h2>${annotatedEnglish(u.form, getScene(u.sceneIds[0]))}</h2><p>${escapeHtml(u.meaningZh)}</p><dl><div><dt>文字独立调用</dt><dd>${recalled.filter((o) => o.modality === "written").length || "未观察"}</dd></div><div><dt>口头独立调用</dt><dd>${recalled.filter((o) => o.modality === "spoken").length || "未观察"}</dd></div><div><dt>独立换境</dt><dd>${transferred.length || "未观察"}</dd></div><div><dt>句中听辨自评</dt><dd>${v.listening ? escapeHtml({ independent: "自评：原先听懂", assisted: "自评：对照后理解", partial: "自评：还需练习" }[v.listening.status]) : "未观察"}</dd></div></dl><small>${v.latest ? `最近记录：${escapeHtml(EVIDENCE_LABELS[v.latest.status])} · ${dateLabel(v.latest.at)}` : "尚无调用记录"}</small><button class="text-btn" type="button" data-unit-scene="${escapeHtml(u.sceneIds[0])}">回到学习场景 ↗</button></article>`;
+    return `<article data-unit-card="${escapeHtml(u.id)}"><h2>${annotatedEnglish(u.form, getScene(u.sceneIds[0]), u.type === "word" ? u.example : null)}</h2><p>${escapeHtml(u.meaningZh)}</p><dl><div><dt>文字独立调用</dt><dd>${recalled.filter((o) => o.modality === "written").length || "未观察"}</dd></div><div><dt>口头独立调用</dt><dd>${recalled.filter((o) => o.modality === "spoken").length || "未观察"}</dd></div><div><dt>独立换境</dt><dd>${transferred.length || "未观察"}</dd></div><div><dt>句中听辨自评</dt><dd>${v.listening ? escapeHtml({ independent: "自评：原先听懂", assisted: "自评：对照后理解", partial: "自评：还需练习" }[v.listening.status]) : "未观察"}</dd></div></dl><small>${v.latest ? `最近记录：${escapeHtml(EVIDENCE_LABELS[v.latest.status])} · ${dateLabel(v.latest.at)}` : "尚无调用记录"}</small><button class="text-btn" type="button" data-unit-scene="${escapeHtml(u.sceneIds[0])}">回到学习场景 ↗</button></article>`;
   }).join("")}</div></section>`;
   if (!registeredBranches.some((b) => b.id === unitScope)) unitScope = "all";
   app.querySelector("#unitSearch").value = unitQuery;

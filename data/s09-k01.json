@@ -1,0 +1,278 @@
+{
+  "id": "S09.K01",
+  "branchId": "kitchen-table",
+  "navTitle": "菜单旁先问清楚",
+  "title": "A choice beside the menu",
+  "goal": "Ask what is available, request a small portion and explain a meal choice.",
+  "memoryNodes": [
+    {
+      "id": "S09.K01.L01",
+      "object": "Menu board",
+      "zh": "菜单板",
+      "cue": "What can you ask before choosing a meal?",
+      "cueZh": "决定吃哪一餐前可以问什么？",
+      "locationRelationZh": "入口内侧，窗边小碗在它左前方",
+      "anchorTerms": [
+        "menu",
+        "brunch",
+        "buffet lunch"
+      ],
+      "prev": null,
+      "next": "S09.K01.L02"
+    },
+    {
+      "id": "S09.K01.L02",
+      "object": "Small bowl by the window",
+      "zh": "窗边试吃小碗",
+      "cue": "How can you ask for a smaller amount?",
+      "cueZh": "怎样礼貌请求一小份？",
+      "locationRelationZh": "入口左前方窗边餐桌，厨房门在桌后方",
+      "anchorTerms": [
+        "appetizer"
+      ],
+      "prev": "S09.K01.L01",
+      "next": "S09.K01.L03"
+    },
+    {
+      "id": "S09.K01.L03",
+      "object": "Chef badge at the door",
+      "zh": "厨房门厨师名牌",
+      "cue": "What meal will you choose, and why?",
+      "cueZh": "你会选哪一餐，理由是什么？",
+      "locationRelationZh": "窗边餐桌后方的厨房门，下一处为门内备料台",
+      "anchorTerms": [
+        "head chef"
+      ],
+      "prev": "S09.K01.L02",
+      "next": "S09.K02.L01"
+    }
+  ],
+  "situation": "The next morning, Maya and her brother stopped at the community cafe near their hostel. A menu board stood just inside the entrance. It offered brunch at eleven and a buffet lunch later. They wanted to join a short cooking session before eating, so Maya asked what was on the menu. A volunteer pointed to bread and vegetable soup. At the window table to its left, a small bowl arrived as an appetizer. Maya asked for a small portion; she wanted to taste the soup before choosing her meal. Ben, the head chef, came to the kitchen doorway behind their table with a clipboard. His name badge hung on the door, beside the session list. “We will look at two recipes, then have brunch together,” he said. Maya chose the earlier meal because her brother had an afternoon train. She wrote their choice on the clipboard. Their plan left time for a meal together and the walk back to the station. Ben opened the door, and they followed him to the preparation table.",
+  "zhSupport": "菜单板 → 窗边小碗 → 厨房门的厨师名牌。先问有什么，再提出份量请求，最后说出选择的理由。",
+  "easySummary": "Maya asks about the food and chooses the earlier meal. Her brother needs to leave in the afternoon.",
+  "easySummaryZh": "玛雅询问餐点，选择较早的一餐，因为哥哥下午要离开。",
+  "recognitionTerms": [
+    "buffet lunch",
+    "head chef"
+  ],
+  "wordFile": "./data/s09-k01-words.json",
+  "provenance": {
+    "type": "Researcher inference",
+    "adaptedFrom": "第二批课程施工队列 V1 · Q18；人物、事件和全部英文例句为项目原创",
+    "note": "依据项目场景规划编写短课；人物、情节、题目与译解为原创。不是官方IELTS材料。"
+  },
+  "terms": [
+    {
+      "term": "appetizer",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 127; 雅思一万词汇班 p.32 [Health 健康]",
+      "canonicalTerm": "appetizer",
+      "originalContext": "雅思一万词汇班 | Health 健康 | n. | appetizer n. 开胃菜"
+    },
+    {
+      "term": "brunch",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 260; 大全直 PRO 听力预习词表 p.2 U1 [Listening]",
+      "canonicalTerm": "brunch",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 早午餐 | a meal that you eat in the late morning as a combination of breakfast and lunch"
+    },
+    {
+      "term": "buffet lunch",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 263; 大全直 PRO 听力预习词表 p.1 U1 [Listening]",
+      "canonicalTerm": "buffet lunch",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 自助午餐"
+    },
+    {
+      "term": "menu",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 1198; 大全直 PRO 听力预习词表 p.1 U1 [Listening]",
+      "canonicalTerm": "menu",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 餐单 | a list of the food that is available at a restaurant or to be served at a meal"
+    },
+    {
+      "term": "head chef",
+      "kind": "SRC",
+      "sourceLabel": "Source-derived · 原始词项；本课语境为项目改编",
+      "sourceRef": "场景映射审校记录 V1 row 918; 大全直 PRO 听力预习词表 p.15 U8 [Listening]",
+      "canonicalTerm": "head chef",
+      "originalContext": "大全直 PRO 听力预习词表 | Listening | n. | 主厨 | the chief cook in a restaurant"
+    }
+  ],
+  "glossary": [
+    {
+      "id": "S09.K01.G01",
+      "text": "menu",
+      "zh": "菜单；餐单",
+      "note": "列出可供应菜品的清单；需要分别询问内容与供应时间。",
+      "type": "word",
+      "sourceTerm": "menu"
+    },
+    {
+      "id": "S09.K01.G02",
+      "text": "brunch",
+      "zh": "早午餐",
+      "note": "上午较晚时段结合早餐和午餐的一餐；不是所有餐厅都按同一时间供应。",
+      "type": "word",
+      "sourceTerm": "brunch"
+    },
+    {
+      "id": "S09.K01.G03",
+      "text": "buffet lunch",
+      "zh": "自助午餐",
+      "note": "以自助形式提供的午餐；本故事时间与餐厅安排是剧情信息。",
+      "type": "chunk",
+      "sourceTerm": "buffet lunch"
+    },
+    {
+      "id": "S09.K01.G04",
+      "text": "appetizer",
+      "zh": "开胃菜；餐前小食",
+      "note": "在正餐前提供的小份食物；本故事是一小碗汤。",
+      "type": "word",
+      "sourceTerm": "appetizer"
+    },
+    {
+      "id": "S09.K01.G05",
+      "text": "head chef",
+      "zh": "主厨",
+      "note": "餐厅中负责带领烹饪工作的厨师，不泛指所有做饭的人。",
+      "type": "chunk",
+      "sourceTerm": "head chef"
+    },
+    {
+      "id": "S09.K01.G06",
+      "text": "What is on the menu?",
+      "zh": "菜单上有什么？",
+      "note": "询问餐点内容；on the menu 不是在菜单旁边的位置。",
+      "type": "chunk"
+    },
+    {
+      "id": "S09.K01.G07",
+      "text": "Could I have a small portion?",
+      "zh": "可以给我一小份吗？",
+      "note": "提出份量请求；换对象时可说 a small portion of + 食物。",
+      "type": "chunk"
+    },
+    {
+      "id": "S09.K01.G08",
+      "text": "I would choose … because …",
+      "zh": "我会选……，因为……",
+      "note": "选择并给出与自身时间或需求相关的理由。",
+      "type": "chunk"
+    }
+  ],
+  "retrievalPrompts": [
+    {
+      "id": "S09.K01.P01",
+      "function": "Ask what is available",
+      "cue": "You are looking at a meal board, but you do not know which dishes are available. Ask the volunteer.",
+      "cueZh": "你在看用餐安排板，但不知道这一餐有哪些菜。向志愿者询问。",
+      "acceptableAnswers": [
+        "What is on the menu for brunch?",
+        "Could you tell me what is on the menu?"
+      ],
+      "feedback": "Ask about the dishes. A time question alone will not tell you what you can eat.",
+      "feedbackZh": "询问具体餐点；只问时间，无法知道有哪些食物。",
+      "checks": [
+        "询问供应内容",
+        "说清是在询问这一餐"
+      ],
+      "activity": "request",
+      "taskMode": "recall",
+      "unitIds": [
+        "U.KITCHEN_TABLE.K01.MENU",
+        "U.KITCHEN_TABLE.K01.ON_MENU"
+      ],
+      "targetTerms": [
+        "menu"
+      ],
+      "unitVersion": "pilot-11-0"
+    },
+    {
+      "id": "S09.K01.P02",
+      "function": "Request a smaller amount",
+      "cue": "You would like to taste the soup before ordering a meal. Ask for a small amount politely.",
+      "cueZh": "你想在决定正餐前先尝尝汤，礼貌地请求少量汤。",
+      "acceptableAnswers": [
+        "Could I have a small portion of soup?",
+        "Could I try a small portion, please?"
+      ],
+      "feedback": "Say how much you want. You can make the request without using a rare food word.",
+      "feedbackZh": "说清想要的份量；不用生僻食物名也能完成请求。",
+      "checks": [
+        "礼貌提出请求",
+        "说明想要一小份"
+      ],
+      "activity": "request",
+      "taskMode": "recall",
+      "unitIds": [
+        "U.KITCHEN_TABLE.K01.SMALL_PORTION"
+      ],
+      "targetTerms": [],
+      "unitVersion": "pilot-11-0"
+    },
+    {
+      "id": "S09.K01.P03",
+      "function": "Choose a meal with a reason",
+      "cue": "Your brother needs to catch an afternoon train. Explain why you choose the earlier meal.",
+      "cueZh": "哥哥下午要赶火车。说明为什么选择较早的一餐。",
+      "acceptableAnswers": [
+        "I would choose brunch because my brother needs to catch a train in the afternoon.",
+        "We would choose the earlier meal because my brother has an afternoon train."
+      ],
+      "feedback": "Give the choice and the reason together. You do not need to compare every dish.",
+      "feedbackZh": "同时说出选择和原因，不必比较每一道菜。",
+      "checks": [
+        "给出较早的一餐",
+        "理由与下午行程有关"
+      ],
+      "activity": "explain",
+      "taskMode": "recall",
+      "unitIds": [
+        "U.KITCHEN_TABLE.K01.CHOOSE_BECAUSE"
+      ],
+      "targetTerms": [
+        "brunch"
+      ],
+      "unitVersion": "pilot-11-0"
+    }
+  ],
+  "transferPrompt": {
+    "id": "S09.K01.T01",
+    "function": "Help a new guest choose",
+    "cue": "You are a cafe volunteer. A visitor arrives after the earlier meal and asks what they can eat now. The later meal is available. Explain the option, then ask whether they want a small portion first.",
+    "cueZh": "你是咖啡馆志愿者。来客错过了较早的一餐，问现在能吃什么；晚些时候那一餐仍在供应。说明选择，再问对方是否想先尝一小份。",
+    "acceptableAnswers": [
+      "The buffet lunch is available now. Would you like a small portion of soup first?",
+      "You can have the later meal. Would you like to try a small portion before choosing?"
+    ],
+    "feedback": "You now offer information to a visitor. Use the changed arrival time and leave them a choice.",
+    "feedbackZh": "你现在为来客提供信息；根据新的到达时间调整建议，让对方选择。",
+    "checks": [
+      "说明现在可用的选择",
+      "询问是否先尝少量"
+    ],
+    "activity": "explain",
+    "taskMode": "transfer",
+    "unitIds": [
+      "U.KITCHEN_TABLE.K01.SMALL_PORTION"
+    ],
+    "targetTerms": [],
+    "unitVersion": "pilot-11-0"
+  },
+  "learningUnitIds": [
+    "U.KITCHEN_TABLE.K01.MENU",
+    "U.KITCHEN_TABLE.K01.BRUNCH",
+    "U.KITCHEN_TABLE.K01.BUFFET",
+    "U.KITCHEN_TABLE.K01.APPETIZER",
+    "U.KITCHEN_TABLE.K01.HEAD_CHEF",
+    "U.KITCHEN_TABLE.K01.ON_MENU",
+    "U.KITCHEN_TABLE.K01.SMALL_PORTION",
+    "U.KITCHEN_TABLE.K01.CHOOSE_BECAUSE"
+  ]
+}

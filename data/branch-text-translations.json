@@ -393,6 +393,218 @@
         }
       }
     },
+    "S09.K01": {
+      "title": "菜单旁的一次选择",
+      "goal": "询问餐点内容，请求小份食物，并说明一项用餐选择。",
+      "situation": "第二天早晨，玛雅和哥哥来到旅社附近的社区咖啡馆。菜单板立在入口内侧，写着十一点供应早午餐，晚些时候供应自助午餐。他们想先参加一次短暂的烹饪体验再吃饭，于是玛雅询问菜单内容。志愿者指着面包和蔬菜汤。菜单板左前方的窗边桌送来一小碗汤，作为餐前小食。玛雅请求一小份，想先尝尝汤再选择正餐。\n\n主厨本拿着夹板来到他们餐桌后面的厨房门口。他的姓名牌挂在门上，旁边是体验活动名单。“我们会看两份食谱，然后一起吃早午餐，”他说。玛雅选择了较早的一餐，因为哥哥下午要坐火车。她把选择写到夹板上。这样安排，既能一起吃饭，也能留出走回车站的时间。本打开门，他们跟着走向备料台。",
+      "paragraphs": [
+        {
+          "en": "The next morning, Maya and her brother stopped at the community cafe near their hostel. A menu board stood just inside the entrance. It offered brunch at eleven and a buffet lunch later. They wanted to join a short cooking session before eating, so Maya asked what was on the menu. A volunteer pointed to bread and vegetable soup. At the window table to its left, a small bowl arrived as an appetizer. Maya asked for a small portion; she wanted to taste the soup before choosing her meal.",
+          "zh": "第二天早晨，玛雅和哥哥来到旅社附近的社区咖啡馆。菜单板立在入口内侧，写着十一点供应早午餐，晚些时候供应自助午餐。他们想先参加一次短暂的烹饪体验再吃饭，于是玛雅询问菜单内容。志愿者指着面包和蔬菜汤。菜单板左前方的窗边桌送来一小碗汤，作为餐前小食。玛雅请求一小份，想先尝尝汤再选择正餐。"
+        },
+        {
+          "en": "Ben, the head chef, came to the kitchen doorway behind their table with a clipboard. His name badge hung on the door, beside the session list. “We will look at two recipes, then have brunch together,” he said. Maya chose the earlier meal because her brother had an afternoon train. She wrote their choice on the clipboard. Their plan left time for a meal together and the walk back to the station. Ben opened the door, and they followed him to the preparation table.",
+          "zh": "主厨本拿着夹板来到他们餐桌后面的厨房门口。他的姓名牌挂在门上，旁边是体验活动名单。“我们会看两份食谱，然后一起吃早午餐，”他说。玛雅选择了较早的一餐，因为哥哥下午要坐火车。她把选择写到夹板上。这样安排，既能一起吃饭，也能留出走回车站的时间。本打开门，他们跟着走向备料台。"
+        }
+      ],
+      "prompts": {
+        "S09.K01.P01": {
+          "function": "请求与核对",
+          "cue": "你在看用餐安排板，但不知道这一餐有哪些菜。向志愿者询问。",
+          "acceptableAnswers": [
+            "早午餐的菜单上有什么？",
+            "可以告诉我菜单上有哪些餐点吗？"
+          ],
+          "feedback": "询问具体餐点；只问时间，无法知道有哪些食物。"
+        },
+        "S09.K01.P02": {
+          "function": "请求与核对",
+          "cue": "你想在决定正餐前先尝尝汤，礼貌地请求少量汤。",
+          "acceptableAnswers": [
+            "可以给我一小份汤吗？",
+            "可以让我尝一小份吗？"
+          ],
+          "feedback": "说清想要的份量；不用生僻食物名也能完成请求。"
+        },
+        "S09.K01.P03": {
+          "function": "说明情况",
+          "cue": "哥哥下午要赶火车。说明为什么选择较早的一餐。",
+          "acceptableAnswers": [
+            "我会选早午餐，因为哥哥下午要赶火车。",
+            "我们会选较早的一餐，因为哥哥下午有一班火车。"
+          ],
+          "feedback": "同时说出选择和原因，不必比较每一道菜。"
+        },
+        "S09.K01.T01": {
+          "function": "换角色与条件",
+          "cue": "你是咖啡馆志愿者。来客错过了较早的一餐，问现在能吃什么；晚些时候那一餐仍在供应。说明选择，再问对方是否想先尝一小份。",
+          "acceptableAnswers": [
+            "现在可以吃自助午餐。您想先尝一小份汤吗？",
+            "您可以吃晚些时候这一餐。决定前想先尝一小份吗？"
+          ],
+          "feedback": "你现在为来客提供信息；根据新的到达时间调整建议，让对方选择。"
+        }
+      }
+    },
+    "S09.K02": {
+      "title": "备料台上的两份食谱",
+      "goal": "核对食谱，请别人完成备料任务，并区分一片食物与切片动作。",
+      "situation": "备料台左侧放着文件夹，中央是面粉袋，右侧是切配板。玛雅打开文件夹，看到面包和汤的食谱。“我们按哪份食谱做？”她问。本指向汤的那一页。面粉属于旁边台面的面包任务，并不是她需要再加的一种材料。后面的架子上放着搅拌机，留给工作人员使用。玛雅先抄下汤的标题，再提出帮忙。\n\n哥哥问：“可以帮忙把汤里用的蔬菜切碎吗？”玛雅确认自己听懂了任务。旁边，本举起一片面包，又请另一位志愿者乔把整条面包剩余的部分切片，分给大家。玛雅把盘子推到乔近旁。哥哥把面包拿到窗边餐桌，汤的食谱那一页仍摊在玛雅旁边。面粉袋用完后，乔保留了印有文字的标签，供他们做笔记。每件物品有了用途，每个请求也有了回应。",
+      "paragraphs": [
+        {
+          "en": "At the preparation table, a folder lay on the left, a bag of flour in the centre and a board on the right. Maya opened the folder and found recipes for bread and soup. “Which recipe are we following?” she asked. Ben pointed to the soup page. The flour belonged to the bread task at the next table; it was not another ingredient she needed to add. A mixer stood on the back shelf, ready for the staff. Maya copied the soup title before offering to help.",
+          "zh": "备料台左侧放着文件夹，中央是面粉袋，右侧是切配板。玛雅打开文件夹，看到面包和汤的食谱。“我们按哪份食谱做？”她问。本指向汤的那一页。面粉属于旁边台面的面包任务，并不是她需要再加的一种材料。后面的架子上放着搅拌机，留给工作人员使用。玛雅先抄下汤的标题，再提出帮忙。"
+        },
+        {
+          "en": "Her brother asked, “Could you chop up the vegetables for the soup?” Maya checked that she had understood the task. Nearby, Ben held up a slice of bread, then asked Jo, another volunteer, to slice the rest of the loaf for the group. Maya slid the plates closer to Jo. Her brother took the bread to the window table, leaving the soup page open beside her. When the flour bag was empty, Jo saved its printed label for their notes. Each object had a job, and each request had an answer.",
+          "zh": "哥哥问：“可以帮忙把汤里用的蔬菜切碎吗？”玛雅确认自己听懂了任务。旁边，本举起一片面包，又请另一位志愿者乔把整条面包剩余的部分切片，分给大家。玛雅把盘子推到乔近旁。哥哥把面包拿到窗边餐桌，汤的食谱那一页仍摊在玛雅旁边。面粉袋用完后，乔保留了印有文字的标签，供他们做笔记。每件物品有了用途，每个请求也有了回应。"
+        }
+      ],
+      "prompts": {
+        "S09.K02.P01": {
+          "function": "请求与核对",
+          "cue": "你看到两份烹饪说明，不知道这组要按哪份做。准备之前先问清楚。",
+          "acceptableAnswers": [
+            "我们按哪份食谱做？",
+            "可以告诉我今天使用哪份食谱吗？"
+          ],
+          "feedback": "核对哪份说明适用于当前任务；不能假定桌上所有材料都需要加入。"
+        },
+        "S09.K02.P02": {
+          "function": "请求与核对",
+          "cue": "你和哥哥正在为汤备料。请他把蔬菜切成小块。",
+          "acceptableAnswers": [
+            "可以帮忙把汤里用的蔬菜切碎吗？",
+            "可以帮我把这些蔬菜切碎吗？"
+          ],
+          "feedback": "说清动作和食物；你是在提出请求，不能把它说成已经完成。"
+        },
+        "S09.K02.P03": {
+          "function": "请求与核对",
+          "cue": "朋友拿着整条面包。请对方切成薄片，再说明你想要其中一片。",
+          "acceptableAnswers": [
+            "可以把面包切片吗？请给我一片。",
+            "请帮我们把面包切片。可以给我一片吗？"
+          ],
+          "feedback": "请求中用切片动作，份量中用一片食物；自然的其他表达也可以。"
+        },
+        "S09.K02.T01": {
+          "function": "换角色与条件",
+          "cue": "你在帮忙准备野餐。朋友有水果沙拉和三明治两份食谱。先确认你要准备哪份，再请对方把沙拉里的苹果切成薄片。",
+          "acceptableAnswers": [
+            "我们按哪份食谱做？如果要做水果沙拉，可以帮忙把苹果切片吗？",
+            "我们是按水果沙拉食谱做吗？可以把其中的苹果切片吗？"
+          ],
+          "feedback": "根据新食物和用途调整；先确定任务，再提出适用的动作请求。"
+        }
+      }
+    },
+    "S09.K03": {
+      "title": "给每个问题一个位置",
+      "goal": "辨认厨房设备，询问存放位置，并核对空包装应丢在哪里。",
+      "situation": "穿过备料台，本带他们看后墙。炉具上方有一张设备说明卡。在芝加哥长大的乔把同一台设备称作 stove（炉灶）。玛雅把两个英文名字写在一起，没有去找第二台机器。通道另一侧，切片机放在工作人员区域，没有人让她使用。她带着写好的问题，看工作人员工作。她把设备名记到食谱便签边缘。\n\n冷藏柜旁有一张制冷与冷藏安排便签，列着这间厨房的存放安排。玛雅拿着一个容器问：“我该用哪层架子？”本指向留给他们这组的空间。她向他确认后才放过去。清理角里，空纸包装放在篮子旁，印有文字的标签已经留下做笔记。“这个应该丢在哪里？”她问乔。答案很简单，但提问让她少猜了一次。她回到餐桌，手里拿的东西少了，可以说清楚的事情多了。",
+      "paragraphs": [
+        {
+          "en": "Beyond the preparation table, Ben showed them the back wall. A cooker stood below a small equipment card. Jo, who had grown up in Chicago, called the same appliance a stove. Maya wrote the two names together rather than looking for a second machine. Across the aisle, a slicer stood in the staff area. Nobody asked her to use it. She carried her written questions and watched the staff at work. She added the equipment names to the edge of her recipe note.",
+          "zh": "穿过备料台，本带他们看后墙。炉具上方有一张设备说明卡。在芝加哥长大的乔把同一台设备称作 stove（炉灶）。玛雅把两个英文名字写在一起，没有去找第二台机器。通道另一侧，切片机放在工作人员区域，没有人让她使用。她带着写好的问题，看工作人员工作。她把设备名记到食谱便签边缘。"
+        },
+        {
+          "en": "By the fridge, a note about refrigeration listed the kitchen’s storage arrangements. Maya held a container and asked, “Which shelf should I use?” Ben pointed to the space for their group. She checked with him before moving it there. At the cleaning corner, an empty paper wrapper lay beside a basket. Its printed label had already been saved for their notes. “Where should I discard this?” she asked Jo. The answer was simple, but asking had prevented another guess. Maya returned to the table with less to carry and more to say.",
+          "zh": "冷藏柜旁有一张制冷与冷藏安排便签，列着这间厨房的存放安排。玛雅拿着一个容器问：“我该用哪层架子？”本指向留给他们这组的空间。她向他确认后才放过去。清理角里，空纸包装放在篮子旁，印有文字的标签已经留下做笔记。“这个应该丢在哪里？”她问乔。答案很简单，但提问让她少猜了一次。她回到餐桌，手里拿的东西少了，可以说清楚的事情多了。"
+        }
+      ],
+      "prompts": {
+        "S09.K03.P01": {
+          "function": "请求与核对",
+          "cue": "你在公共厨房拿着一个容器。询问你们这组可以用哪层架子存放。",
+          "acceptableAnswers": [
+            "这个容器应该放哪层架子？",
+            "可以告诉我我们这组能用哪层架子吗？"
+          ],
+          "feedback": "说出要放的容器，向这处空间的负责人核对位置。"
+        },
+        "S09.K03.P02": {
+          "function": "说明情况",
+          "cue": "你不知道这个位置是不是留给你们组的。说明自己会先问负责人，再移动容器。",
+          "acceptableAnswers": [
+            "我会先向本确认，再移动容器。",
+            "我会先问负责人，再把容器放到那里。"
+          ],
+          "feedback": "说出先向谁确认，以及确认后的下一步。"
+        },
+        "S09.K03.P03": {
+          "function": "请求与核对",
+          "cue": "印有文字的标签已经保存，剩下一个空包装。询问应把它丢在哪里。",
+          "acceptableAnswers": [
+            "这个空包装应该丢在哪里？",
+            "可以告诉我这个空纸包装应该丢在哪里吗？"
+          ],
+          "feedback": "说清对象是空包装，并询问应放在哪里。"
+        },
+        "S09.K03.T01": {
+          "function": "换角色与条件",
+          "cue": "你在美术工作坊，不在厨房。手里有一盒材料和一个空包装。向组织者询问盒子应放哪里，以及空包装应丢在哪里。",
+          "acceptableAnswers": [
+            "这盒材料应该放哪层架子？空包装应该丢在哪里？",
+            "可以告诉我材料应放哪里，以及包装应丢在哪里吗？"
+          ],
+          "feedback": "把表达迁移到新空间；核对组织者的安排，不照搬原厨房位置。"
+        }
+      }
+    },
+    "S09.K04": {
+      "title": "餐桌能告诉我们什么",
+      "goal": "描述当下胃口，找到标签信息，并报告实际用餐情况。",
+      "situation": "回到窗边餐桌，玛雅看到面包盘已经空了，碗里还剩一些汤。哥哥问她是否还想添。“我现在胃口不太大，”她说。乔带来一张简短的活动表，表格问这组吃了多少食物。玛雅描述实际发生的事，没有把菜单上每道菜都抄进去。她用几句简单的话记下这顿饭，并为大家的问题留下空白。\n\n保留下来的面粉标签放在便签旁。玛雅询问哪里能找到营养信息，随后注意到蛋白质那一栏。乔帮助她找到其余信息。窗边的小展签展示为获得籽粒而种植的谷类作物，并画着小麦植物。图中的小麦让面粉有了厨房以外的一个出处：田野。玛雅在便签上加了一个问题，留下空白，等以后核对答案。",
+      "paragraphs": [
+        {
+          "en": "Back at the window table, Maya saw an empty bread plate and a bowl with some soup left. Her brother asked if she wanted more. “I do not have much of an appetite now,” she said. Jo brought a short event form. It asked how much food the group had consumed. Maya described what had actually happened instead of copying every dish from the menu. She recorded their meal in a few plain sentences and left room for their questions.",
+          "zh": "回到窗边餐桌，玛雅看到面包盘已经空了，碗里还剩一些汤。哥哥问她是否还想添。“我现在胃口不太大，”她说。乔带来一张简短的活动表，表格问这组吃了多少食物。玛雅描述实际发生的事，没有把菜单上每道菜都抄进去。她用几句简单的话记下这顿饭，并为大家的问题留下空白。"
+        },
+        {
+          "en": "The saved flour label lay beside her note. Maya asked where to find the nutrition information, then noticed a line for protein. Jo helped her find the rest of the information. Near the window, a small display card showed cereals grown for their grains, with a drawing of a wheat plant. The wheat in the picture gave the flour a place beyond the kitchen, out in a field. Maya added one question to her note and left space for an answer she could check later.",
+          "zh": "保留下来的面粉标签放在便签旁。玛雅询问哪里能找到营养信息，随后注意到蛋白质那一栏。乔帮助她找到其余信息。窗边的小展签展示为获得籽粒而种植的谷类作物，并画着小麦植物。图中的小麦让面粉有了厨房以外的一个出处：田野。玛雅在便签上加了一个问题，留下空白，等以后核对答案。"
+        }
+      ],
+      "prompts": {
+        "S09.K04.P01": {
+          "function": "说明情况",
+          "cue": "朋友问你是否还要添食物，但你现在不太想多吃。礼貌说明当下感受。",
+          "acceptableAnswers": [
+            "我现在胃口不太大，所以想要一小份。",
+            "谢谢，不过我现在胃口不太大。"
+          ],
+          "feedback": "描述当下感受，并按需要说明想要的份量。"
+        },
+        "S09.K04.P02": {
+          "function": "请求与核对",
+          "cue": "你拿着食品包装，却没看到营养相关内容。问志愿者应该在哪里找。",
+          "acceptableAnswers": [
+            "哪里可以找到营养信息？",
+            "可以指给我看这个包装上的营养信息在哪儿吗？"
+          ],
+          "feedback": "询问信息印在哪里，请志愿者指出位置。"
+        },
+        "S09.K04.P03": {
+          "function": "说明情况",
+          "cue": "面包盘已经空了，还剩一些汤。报告你们吃了什么，以及剩下了什么。",
+          "acceptableAnswers": [
+            "我们吃了面包，但剩下一些汤。",
+            "我们吃完了面包，不过还剩一些汤。"
+          ],
+          "feedback": "按给出的事实记录，不添不存在的菜品或数量。"
+        },
+        "S09.K04.T01": {
+          "function": "换角色与条件",
+          "cue": "你在记录一次会议用餐。大家吃完了三明治，还剩一些水果。一位客人不想再添。先报告用餐情况，再给客人一句礼貌描述当前胃口的话。",
+          "acceptableAnswers": [
+            "我们吃完了三明治，但剩下一些水果。客人可以说：“我现在胃口不太大。”",
+            "我们吃完了三明治，不过还剩一些水果。客人可以说明现在胃口不太大。"
+          ],
+          "feedback": "换成新的食物，并区分两项信息：群体用餐记录与一位客人的感受。"
+        }
+      }
+    },
     "S11.A01": {
       "title": "贴出照片之前",
       "goal": "询问是否允许使用照片，接受拒绝并提出替代方案。",
@@ -490,6 +702,283 @@
             "个人故事可以帮助社区为阅览室筹款。例如，一位志愿者可以解释它如何帮助家庭。不过，团队应在发布故事前征求许可，并说明资金会如何使用。"
           ],
           "feedback": "这是原创雅思式段落练习。提出新例子和明确条件，不要把课文当成真实证据。"
+        }
+      }
+    },
+    "S08.C01": {
+      "title": "柜子旁的购物袋",
+      "goal": "用价格、用途和预期耐用程度比较两个商品。",
+      "situation": "林走进一家社区小店，想买个袋子用于每周采购。左侧货架摆着食品杂货：米、面包和汤罐头。过道对面，一只上锁的柜子陈列着出售的首饰。柜子旁放着两个购物袋。柔软的红袋子便宜，但细把手让她担心。蓝袋子的把手更粗，底部也结实。林提起两个袋子，想象自己平时买回家的食物有多重。\n\n她问：“有没有比蓝袋子便宜的其他选择？”店员给她看了一个小些的款式。标签显示，价格从十五英镑到三十英镑不等。蓝袋子看起来更耐用，但林仍担心把手。若要装重物，它似乎比小款式更合适。林选了蓝袋子，却得知展示品不出售，可以把一个新的送到她家。在同意之前，她想知道全部费用。",
+      "paragraphs": [
+        {
+          "en": "Lin entered a small community shop to buy a bag for her weekly shopping. Groceries filled the shelves on the left: rice, bread and tins of soup. Across the aisle, a locked cabinet held jewellery for sale. Beside the cabinet stood two shopping bags. The soft red one was cheap, but its thin handles worried her. A blue one had thicker handles and a strong base. Lin lifted both bags, imagining the weight of the food she usually carried home.",
+          "zh": "林走进一家社区小店，想买个袋子用于每周采购。左侧货架摆着食品杂货：米、面包和汤罐头。过道对面，一只上锁的柜子陈列着出售的首饰。柜子旁放着两个购物袋。柔软的红袋子便宜，但细把手让她担心。蓝袋子的把手更粗，底部也结实。林提起两个袋子，想象自己平时买回家的食物有多重。"
+        },
+        {
+          "en": "She asked, \"Is there a cheaper alternative to the blue bag?\" The assistant showed her a smaller model. Prices range from fifteen to thirty pounds, the labels said. The blue bag looked more durable, but Lin still worried about the handles. For heavy shopping, it seemed preferable to the smaller model. Lin chose the blue one, then learnt that the display bag was not for sale. A new one could be sent to her home. Before agreeing, she wanted to know the full cost.",
+          "zh": "她问：“有没有比蓝袋子便宜的其他选择？”店员给她看了一个小些的款式。标签显示，价格从十五英镑到三十英镑不等。蓝袋子看起来更耐用，但林仍担心把手。若要装重物，它似乎比小款式更合适。林选了蓝袋子，却得知展示品不出售，可以把一个新的送到她家。在同意之前，她想知道全部费用。"
+        }
+      ],
+      "prompts": {
+        "S08.C01.P01": {
+          "function": "询问其他选择",
+          "cue": "蓝袋子超过了你计划的花费。问店员是否有便宜些的其他选择。",
+          "acceptableAnswers": [
+            "有没有比蓝袋子便宜的其他选择？",
+            "有没有比这个袋子便宜的其他选择？"
+          ],
+          "feedback": "请求另一种选择，同时仍需核对它是否适合。",
+          "checks": [
+            "询问另一种选择",
+            "交代价格考虑"
+          ]
+        },
+        "S08.C01.P02": {
+          "function": "说明选择的理由",
+          "cue": "你要把较重的食物带回家。比较结实的蓝袋子和小款式，并给一个理由。",
+          "acceptableAnswers": [
+            "购买重物时，蓝袋子比小款式更合适，因为它看起来更耐用。",
+            "蓝袋子看起来更耐用，所以装重物时似乎比小款式更合适。"
+          ],
+          "feedback": "给出理由；没有测试商品时，保留“看起来”或“似乎”的限定。",
+          "checks": [
+            "比较两个选择",
+            "给出耐用方面的理由",
+            "保留观察的限制"
+          ]
+        },
+        "S08.C01.P03": {
+          "function": "描述价格范围",
+          "cue": "最低标价是十五英镑，最高是三十英镑。向朋友说明价格范围。",
+          "acceptableAnswers": [
+            "价格从十五英镑到三十英镑不等。",
+            "这些价格的范围是十五至三十英镑。"
+          ],
+          "feedback": "给出两个端点和货币；复数主语 prices 与 range 搭配。",
+          "checks": [
+            "说明低端和高端",
+            "交代货币"
+          ]
+        },
+        "S08.C01.T01": {
+          "function": "迁移：比较新商品",
+          "cue": "换到服装店：一件日常穿的外套要六十英镑，但你打算花少一些。询问其他选择，并说明你重视什么。",
+          "acceptableAnswers": [
+            "有没有比这件外套便宜的其他选择？我需要适合日常使用、耐穿的衣服。",
+            "有没有便宜些的其他选择？日常穿的外套需要耐用。"
+          ],
+          "feedback": "把请求用在新商品上，并给出实际使用条件。",
+          "checks": [
+            "询问新商品的选择",
+            "交代使用条件"
+          ]
+        }
+      }
+    },
+    "S08.C02": {
+      "title": "价格下面那一行",
+      "goal": "付款前核对总价和付款方式。",
+      "situation": "收银台屏幕显示，蓝袋子的价格是三十英镑。下面还有一行：送到林家需要五英镑。她指着总额，请店员提供列明各项费用的账单。店员解释了这家店的收费政策。屏幕左侧的一张小告示写着，展示价格不包含配送。她差点漏看了这笔额外费用。她把告示放在屏幕旁，再次核对数字。\n\n右侧付款托盘里的一张卡说明会员可以享受折扣。林可以用积分兑换购物袋减价五英镑，因此包括配送费在内的最终账单是三十英镑。她问：“可以用信用卡付款吗？”店员点头。另一张卡写明，这笔订单不接受支票。林付了款，把收据夹进笔记本。总额下面写着约定的到货日期。现在，她知道自己付了多少钱，也知道应该收到什么。",
+      "paragraphs": [
+        {
+          "en": "At the counter, the blue bag appeared on a screen with a price of thirty pounds. Below it was another line: five pounds for sending the bag to Lin's home. She pointed to the total and asked for a bill showing each item. The assistant explained the shop's charging policy. The displayed prices exclude delivery, a small note to the left of the screen said. She had almost missed the extra cost. She placed the note beside the screen and checked the figures again.",
+          "zh": "收银台屏幕显示，蓝袋子的价格是三十英镑。下面还有一行：送到林家需要五英镑。她指着总额，请店员提供列明各项费用的账单。店员解释了这家店的收费政策。屏幕左侧的一张小告示写着，展示价格不包含配送。她差点漏看了这笔额外费用。她把告示放在屏幕旁，再次核对数字。"
+        },
+        {
+          "en": "A card in the payment tray on the right offered a discount for members. Lin could redeem her points for five pounds off the bag, so the final bill came to thirty pounds including the delivery fee. She asked, \"Can I pay by credit card?\" The assistant nodded. Another card said the shop did not accept a cheque for this order. Lin paid and kept the receipt in her notebook. The promised arrival day was written below the total. Now she knew both what she had paid and what was supposed to arrive.",
+          "zh": "右侧付款托盘里的一张卡说明会员可以享受折扣。林可以用积分兑换购物袋减价五英镑，因此包括配送费在内的最终账单是三十英镑。她问：“可以用信用卡付款吗？”店员点头。另一张卡写明，这笔订单不接受支票。林付了款，把收据夹进笔记本。总额下面写着约定的到货日期。现在，她知道自己付了多少钱，也知道应该收到什么。"
+        }
+      ],
+      "prompts": {
+        "S08.C02.P01": {
+          "function": "请求核对账单",
+          "cue": "付款前，你想看列明应付费用的单据。向店员提出请求。",
+          "acceptableAnswers": [
+            "付款前能让我看一下账单吗？",
+            "请给我看列明各项费用的账单。"
+          ],
+          "feedback": "请求查看应付金额；付款后的收据则是付款证明。",
+          "checks": [
+            "请求查看费用单据",
+            "说明是在付款前"
+          ]
+        },
+        "S08.C02.P02": {
+          "function": "解释未包含的费用与减价",
+          "cue": "朋友以为三十英镑标价已经含送货。说明额外五英镑费用，以及会员减价。",
+          "acceptableAnswers": [
+            "展示价格不含配送，但会员优惠让购物袋减价五英镑。",
+            "价格不含五英镑配送费。五英镑折扣降低了购物袋价格。"
+          ],
+          "feedback": "分清未包含的费用和商品减价，两者不是同一项。",
+          "checks": [
+            "说明不含的费用",
+            "说明减价的对象"
+          ]
+        },
+        "S08.C02.P03": {
+          "function": "询问付款方式",
+          "cue": "你想使用信用卡付款。向店员询问是否接受这种方式。",
+          "acceptableAnswers": [
+            "我可以用信用卡付款吗？",
+            "这笔订单能用信用卡付款吗？"
+          ],
+          "feedback": "询问这笔订单是否接受，不假定所有商店都接受。",
+          "checks": [
+            "询问支付方式",
+            "保持礼貌"
+          ]
+        },
+        "S08.C02.T01": {
+          "function": "迁移：核对演出票费用",
+          "cue": "换到购买演出票：屏幕列着票价和另外的预订费。付款前询问总额，再询问信用卡支付。",
+          "acceptableAnswers": [
+            "能给我看包括预订费的账单吗？可以用信用卡付款吗？",
+            "付款前请让我看全部账单。可以用信用卡付款吗？"
+          ],
+          "feedback": "在新商品中核对额外费用与支付方式，不臆造店铺政策。",
+          "checks": [
+            "核对总额",
+            "询问支付方式"
+          ]
+        }
+      }
+    },
+    "S08.C03": {
+      "title": "箱子里松脱的把手",
+      "goal": "说明交货问题，并询问具体下一步。",
+      "situation": "包裹在约定的上午送到了。林先把箱子放在入户门内，再搬到桌上。蓝袋子就在里面，但一个把手已经松脱。箱底还有一个小金属件。她先拍了照片，再把零件放回箱子里。这不是她期待的结实袋子。她把收据放在坏把手旁，在电话边的便条上写下订单号。\n\n她打电话给店里的顾客服务台，询问能否换袋子。录音消息给出了另一个处理投诉的号码。她保留了那个号码，但继续留在原线路上，准备询问换货。店员接听后，她描述了损坏，寻求帮助。店员请她把袋子和收据带回店里，他们可以现场检查故障，讨论换货。出发前，林问额外的公交车费该如何处理。店员答应询问经理，没有自行猜测。",
+      "paragraphs": [
+        {
+          "en": "The delivery arrived on the promised morning. Lin set the box just inside her front door, then carried it to the table. The blue bag was inside, but one handle had come loose. A small metal piece lay at the bottom of the box. She took a photograph before putting the parts back in the box. This was not the strong bag she had expected. She placed the receipt beside the loose handle and wrote the order number on a note near her phone.",
+          "zh": "包裹在约定的上午送到了。林先把箱子放在入户门内，再搬到桌上。蓝袋子就在里面，但一个把手已经松脱。箱底还有一个小金属件。她先拍了照片，再把零件放回箱子里。这不是她期待的结实袋子。她把收据放在坏把手旁，在电话边的便条上写下订单号。"
+        },
+        {
+          "en": "She called the shop's customer service desk to make an enquiry about replacing the bag. A recorded message gave a separate number for complaints. She kept that number but stayed on the line to ask about a replacement. When an assistant answered, she described the damage and asked for assistance. The assistant asked her to bring the bag and receipt to the shop. They could check the fault there and discuss a replacement. Before travelling, Lin asked what would happen to the extra bus fare. The assistant promised to ask the manager, rather than guessing.",
+          "zh": "她打电话给店里的顾客服务台，询问能否换袋子。录音消息给出了另一个处理投诉的号码。她保留了那个号码，但继续留在原线路上，准备询问换货。店员接听后，她描述了损坏，寻求帮助。店员请她把袋子和收据带回店里，他们可以现场检查故障，讨论换货。出发前，林问额外的公交车费该如何处理。店员答应询问经理，没有自行猜测。"
+        }
+      ],
+      "prompts": {
+        "S08.C03.P01": {
+          "function": "描述交货问题",
+          "cue": "包裹今天上午到了，袋子的一个把手松脱。向店员说明发生了什么。",
+          "acceptableAnswers": [
+            "今天上午交货了，但袋子的一个把手松脱了。",
+            "包裹送到后，我发现一个把手已经松脱。"
+          ],
+          "feedback": "说清到货和可见问题，不猜测损坏原因。",
+          "checks": [
+            "说明到货",
+            "描述具体问题"
+          ]
+        },
+        "S08.C03.P02": {
+          "function": "向服务台询问信息",
+          "cue": "你正在与帮助顾客的服务台通话。说明你想询问如何替换损坏的袋子。",
+          "acceptableAnswers": [
+            "我想询问如何替换损坏的袋子。这里是顾客服务台吗？",
+            "这里是顾客服务台吗？我想询问损坏袋子的替换事宜。"
+          ],
+          "feedback": "核对服务台，并说明要询问什么信息。",
+          "checks": [
+            "核对服务对象",
+            "说明询问事项"
+          ]
+        },
+        "S08.C03.P03": {
+          "function": "请求具体下一步",
+          "cue": "你已说明把手松脱，但不知道如何处理。询问下一步该做什么。",
+          "acceptableAnswers": [
+            "一个把手松脱了。接下来我该怎么做？",
+            "这个袋子接下来该怎样处理？一个把手已经松脱。"
+          ],
+          "feedback": "询问行动步骤，不把尚未作出的决定当成已经获准。",
+          "checks": [
+            "说明问题",
+            "请求下一步"
+          ]
+        },
+        "S08.C03.T01": {
+          "function": "迁移：处理缺少物品",
+          "cue": "换成收到书籍包裹：里面少了一本书。致电商店，描述问题并问下一步。",
+          "acceptableAnswers": [
+            "包裹送到了，但少了一本书。接下来我该怎么做？",
+            "送来的物品里少了一本书。我接下来该怎么处理？"
+          ],
+          "feedback": "同时更换商品和问题类型；缺书不是把手松脱。",
+          "checks": [
+            "描述新问题",
+            "请求下一步"
+          ]
+        }
+      }
+    },
+    "S08.C04": {
+      "title": "回店这趟的费用",
+      "goal": "询问额外支出是否会偿付，并核对具体金额。",
+      "situation": "离家前，林把购物收据夹进笔记本。在公交站，她花四英镑买了往返票，把车票也夹进笔记本里。回店后，经理检查了坏把手，给她换了一个新袋子。林接受换货，再把车票放在购物收据旁。这两张纸记录的是不同费用。她对新袋子很满意。额外公交车费则是另外一笔开支。她想讨论的是故障所导致的额外一趟出行。\n\n经理说，核对车票后，商店可以偿付她这次公交车费。林复述金额，确保双方理解一致：是四英镑出行费用，不是三十英镑订单金额。她问：“你们什么时候会把这笔公交车费偿付给我？”经理把金额和计划支付日期写在右侧的一张小卡上。林把卡与两张票据放在一起。现在，她知道预计什么时候会收到这笔偿付款项了。她带着新袋子和清楚的约定记录离开了。",
+      "paragraphs": [
+        {
+          "en": "Before leaving home, Lin put the bag receipt in her notebook. At the bus stop she paid four pounds for a return ticket and tucked that slip inside her notebook. Back at the shop, the manager checked the broken handle and offered a new bag. Lin accepted the replacement, then laid the bus ticket beside the purchase receipt. They showed different costs. She was happy with the new bag. The extra bus fare was a separate expense. She wanted to discuss the extra journey the fault had required.",
+          "zh": "离家前，林把购物收据夹进笔记本。在公交站，她花四英镑买了往返票，把车票也夹进笔记本里。回店后，经理检查了坏把手，给她换了一个新袋子。林接受换货，再把车票放在购物收据旁。这两张纸记录的是不同费用。她对新袋子很满意。额外公交车费则是另外一笔开支。她想讨论的是故障所导致的额外一趟出行。"
+        },
+        {
+          "en": "The manager said the shop could reimburse her for this bus fare after checking the ticket. Lin repeated the amount to make sure they agreed: four pounds for travel, not thirty pounds for the order. She asked, \"When will you reimburse me for the bus fare?\" The manager wrote the amount and the planned payment date on a small card to the right. Lin kept it beside both slips. Now she knew when to expect the payment. She left with the new bag and a clear record of what had been agreed.",
+          "zh": "经理说，核对车票后，商店可以偿付她这次公交车费。林复述金额，确保双方理解一致：是四英镑出行费用，不是三十英镑订单金额。她问：“你们什么时候会把这笔公交车费偿付给我？”经理把金额和计划支付日期写在右侧的一张小卡上。林把卡与两张票据放在一起。现在，她知道预计什么时候会收到这笔偿付款项了。她带着新袋子和清楚的约定记录离开了。"
+        }
+      ],
+      "prompts": {
+        "S08.C04.P01": {
+          "function": "询问额外费用的偿付",
+          "cue": "商店已经换了袋子。你为回店花了四英镑。询问是否会偿付这笔出行费用。",
+          "acceptableAnswers": [
+            "你们会偿付我这笔公交车费吗？",
+            "能把这次额外公交车费偿付给我吗？"
+          ],
+          "feedback": "动词后说偿付给谁，for 后说明哪项费用；这是针对本次情况的请求。",
+          "checks": [
+            "说清偿付对象",
+            "说清额外开支"
+          ]
+        },
+        "S08.C04.P02": {
+          "function": "核对金额与凭据",
+          "cue": "订单三十英镑，回店车程四英镑。请经理确认出行偿付金额，并说明保留了票据。",
+          "acceptableAnswers": [
+            "请确认金额可以吗？车费是四英镑，我保留了收据。",
+            "我保留了这趟四英镑出行的票据。能确认将偿付的金额吗？"
+          ],
+          "feedback": "明确额外费用和它的证明，不把它混为商品总价。",
+          "checks": [
+            "确认四英镑金额",
+            "说明保留的凭据"
+          ]
+        },
+        "S08.C04.P03": {
+          "function": "询问约定的支付日期",
+          "cue": "经理已同意偿付公交费用，但还没说时间。询问计划支付日期。",
+          "acceptableAnswers": [
+            "你们什么时候会偿付我这笔公交车费？",
+            "能告诉我什么时候会把这笔公交车费偿付给我吗？"
+          ],
+          "feedback": "在对方同意后询问时间，并继续说清费用对象。",
+          "checks": [
+            "询问计划时间",
+            "保留具体开支对象"
+          ]
+        },
+        "S08.C04.T01": {
+          "function": "迁移：询问活动印刷费偿付",
+          "cue": "换到团队活动：团队请你印传单，你花了八英镑并保留收据。向组织者询问是否可以偿付这笔费用。",
+          "acceptableAnswers": [
+            "能偿付我这笔印刷费用吗？我保留了八英镑的收据。",
+            "你会偿付我这笔印刷费用吗？我已经保留收据。"
+          ],
+          "feedback": "换人物与开支类型；组织者同意之前仍是请求。",
+          "checks": [
+            "说清新的开支",
+            "说明付款凭据"
+          ]
         }
       }
     },
