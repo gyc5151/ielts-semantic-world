@@ -143,7 +143,7 @@
       "text": "I would choose … because …",
       "type": "construction",
       "zh": "选择一种做法并说明原因",
-      "note": "沿用餐厅选择构式，选择对象从菜品换成路线；相同选择与理由功能不另登记一次。",
+      "note": "根据给定条件选择一种做法，并说明与实际需求相关的理由；这里比较通勤可靠性。",
       "matchTexts": [
         "I would choose the walking route because the arrival time is more reliable."
       ]

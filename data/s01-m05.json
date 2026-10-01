@@ -114,7 +114,7 @@
       "text": "Is … included in the price?",
       "type": "construction",
       "zh": "询问某项目是否已计入价格",
-      "note": "沿用旅社价格询问构式，把宾语换成水电账单；原旅社记录与房屋账单来源分开保留。",
+      "note": "询问某项目是否已计入价格；主语单数用Is，复数用Are，不默认报价已含账单。",
       "matchTexts": [
         "Are utility bills included in the price?"
       ]
