@@ -9,19 +9,50 @@
       "object": "Three dated drawings",
       "zh": "三张标了日期的画",
       "cue": "What changed, and what is still unknown?",
-      "cueZh": "什么发生了变化，还有什么不知道？"
+      "cueZh": "什么发生了变化，还有什么不知道？",
+      "id": "S05.C02.L01",
+      "location": "Beside the three drawings and their dates.",
+      "locationZh": "三张画及各自日期旁。",
+      "previous": null,
+      "next": "S05.C02.L02",
+      "anchorUnitIds": [
+        "U.LEGACY.S05.C02.OVER_TIME",
+        "U.LEGACY.S05.C02.OBSERVATION",
+        "U.HOUSING.M03.CONTRAST",
+        "U.RESEARCH.EVIDENCE.N",
+        "U.LEGACY.S05.C02.CAUSE"
+      ]
     },
     {
       "object": "Note in the margin",
       "zh": "页边批注",
       "cue": "Why is a drawing not evidence of a course causing development?",
-      "cueZh": "为什么一张画不能证明课程引起了发展？"
+      "cueZh": "为什么一张画不能证明课程引起了发展？",
+      "id": "S05.C02.L02",
+      "location": "At the note in the margin, beside the books.",
+      "locationZh": "书旁，页边批注的位置。",
+      "previous": "S05.C02.L01",
+      "next": "S05.C02.L03",
+      "anchorUnitIds": [
+        "U.LEGACY.S05.C02.COGNITIVE",
+        "U.LEGACY.S05.C02.ERUDITE"
+      ]
     },
     {
       "object": "Corrected invitation",
       "zh": "改好的邀请函",
       "cue": "Which specific activities can families try?",
-      "cueZh": "家庭可以尝试哪些具体活动？"
+      "cueZh": "家庭可以尝试哪些具体活动？",
+      "id": "S05.C02.L03",
+      "location": "At the corrected invitation over the orange leaflet.",
+      "locationZh": "橙色传单上方，改好的邀请函处。",
+      "previous": "S05.C02.L02",
+      "next": null,
+      "anchorUnitIds": [
+        "U.LEGACY.S05.C02.PATIENT",
+        "U.LEGACY.S05.C01.GUIDANCE",
+        "U.LEGACY.S05.C02.NEXT_STEP"
+      ]
     }
   ],
   "situation": "Professor Wu placed three drawings beside the orange leaflet. Each carried a date from a different week of an earlier course. The last bridge had straighter lines, but Lin did not know what the child had practised at home. The professor was erudite; her shelves were full of books. Yet her note in the margin was plain: \"Describe the work before you describe the child's future.\" One observation could start a question, not settle it. They discussed cognitive development: changes in how children think and understand over time. A short workshop might offer a chance to ask questions, especially with patient guidance. The drawings alone did not show that this course caused those changes. Lin made the invitation smaller and clearer: draw a bridge, try a tool and talk about a next step. A parent could watch the activity and decide whether to return. Lin clipped the corrected invitation over the same orange leaflet beside the screen. Now there was something specific to offer, and room to ask what happened later.",
@@ -94,6 +125,53 @@
       "note": "Source-derived 识别词。日常说话可用 knowledgeable；不必为了显得高级而主动使用 erudite。",
       "type": "word",
       "sourceTerm": "erudite"
+    },
+    {
+      "id": "S05.C02.UG01",
+      "text": "… is …, but …",
+      "zh": "对照观察到的变化与尚未知的信息",
+      "note": "复用原有but对照结构。本课前半句给出画线更直的观察，后半句指出家庭练习情况未知；结构不自动证明或否定课程作用。",
+      "type": "construction",
+      "matchTexts": [
+        "The line in the last drawing is straighter, but practice at home is unknown.",
+        "The later drawing has straighter lines, but one observation does not show that the course caused the change."
+      ]
+    },
+    {
+      "id": "S05.C02.UG02",
+      "text": "evidence",
+      "zh": "支持判断的事实或信息；证据",
+      "note": "复用研究课不可数名词义。本课三张画提供观察信息，但家庭练习未知，因此不足以证明变化由本课程引起；证据的范围要与声称的结论相称。",
+      "type": "word"
+    },
+    {
+      "id": "S05.C02.UG03",
+      "text": "cause",
+      "zh": "导致；引起",
+      "note": "本课及物动词，cause a change或cause + 名词。故事caused是过去式；否定句表示目前画作没有证明因果，不表示课程被证明完全没有作用。",
+      "type": "word",
+      "matchTexts": [
+        "caused",
+        "cause"
+      ]
+    },
+    {
+      "id": "S05.C02.UG04",
+      "text": "patient",
+      "zh": "耐心的",
+      "note": "形容词修饰guidance，描述指导者耐心帮助的方式。与诊所已有patients病人名词义分开；耐心指导是条件，不能直接当成效果已被证实。",
+      "type": "word"
+    },
+    {
+      "id": "S05.C02.UG05",
+      "text": "with guidance",
+      "zh": "在指导下",
+      "note": "复用上一课活动伴随帮助的同一整块意义。这里patient补充耐心的方式；活动可尝试，帮助条件本身不保证儿童认知发展。",
+      "type": "chunk",
+      "matchTexts": [
+        "with patient guidance",
+        "with guidance"
+      ]
     }
   ],
   "retrievalPrompts": [
@@ -108,7 +186,22 @@
       "activity": "compare",
       "targetTerms": [
         "one observation"
-      ]
+      ],
+      "unitIds": [
+        "U.LEGACY.S05.C02.OBSERVATION",
+        "U.HOUSING.M03.CONTRAST",
+        "U.LEGACY.S05.C02.CAUSE",
+        "U.RESEARCH.EVIDENCE.N"
+      ],
+      "cueZh": "较晚的画线更直，但不知道孩子在家练过什么。请先描述变化，再说出一个限制。",
+      "checks": [
+        "先说线条更直这一观察。",
+        "指出家庭练习或变化原因未知。",
+        "不把作品差异直接归因给课程。"
+      ],
+      "feedbackZh": "让观察与原因判断各有位置；不知道家庭练习情况会限制能下的结论。",
+      "taskMode": "recall",
+      "unitVersion": "pilot-17-0"
     },
     {
       "id": "S05.C02.P02",
@@ -122,7 +215,23 @@
       "targetTerms": [
         "cognitive development",
         "over time"
-      ]
+      ],
+      "unitIds": [
+        "U.LEGACY.S05.C02.COGNITIVE",
+        "U.LEGACY.S05.C02.OVER_TIME",
+        "U.LEGACY.S05.C02.CAUSE",
+        "U.RESEARCH.EVIDENCE.N"
+      ],
+      "cueZh": "请说明有指导的活动可能与儿童思考理解的发展有什么关系，同时承认这些画作尚未证明本课程的效果。",
+      "checks": [
+        "把思考理解的发展作为可能讨论的主题。",
+        "说明发展涉及长期范围。",
+        "保留效果未被画作证明的限制。",
+        "不把画线能力直接等同于认知发展。"
+      ],
+      "feedbackZh": "可能性与长期范围帮助限定观点；它们不能补足缺失的因果证据。",
+      "taskMode": "application",
+      "unitVersion": "pilot-17-0"
     },
     {
       "id": "S05.C02.P03",
@@ -137,7 +246,22 @@
       "targetTerms": [
         "with patient guidance",
         "talk about a next step"
-      ]
+      ],
+      "unitIds": [
+        "U.LEGACY.S05.C01.GUIDANCE",
+        "U.LEGACY.S05.C02.PATIENT",
+        "U.LEGACY.S05.C02.NEXT_STEP"
+      ],
+      "cueZh": "邀请函只写宏大承诺。请给家长改写成两项具体活动，再加一个可以讨论的后续行动。",
+      "checks": [
+        "写两项活动，如画桥和尝试工具。",
+        "说明耐心指导的条件。",
+        "加上讨论后续行动。",
+        "不保证一小时带来长期发展或熟练掌握。"
+      ],
+      "feedbackZh": "让家庭知道现场能做什么、有什么帮助，以及下一步可以讨论什么。",
+      "taskMode": "application",
+      "unitVersion": "pilot-17-0"
     }
   ],
   "transferPrompt": {
@@ -152,7 +276,37 @@
     "targetTerms": [
       "with patient guidance",
       "cognitive development"
-    ]
+    ],
+    "unitIds": [
+      "U.LEGACY.S05.C01.GUIDANCE",
+      "U.LEGACY.S05.C02.PATIENT",
+      "U.LEGACY.S05.C02.COGNITIVE",
+      "U.LEGACY.S05.C02.OBSERVATION",
+      "U.RESEARCH.EVIDENCE.N"
+    ],
+    "cueZh": "博物馆让孩子分类物品并解释自己的选择。请给一个有限看法与具体理由，再说明一次到访能支持的结论范围。",
+    "checks": [
+      "使用博物馆分类和解释选择的活动。",
+      "给适度看法与可见的理由。",
+      "说明指导条件。",
+      "不把一次到访当作长期发展已被证明。"
+    ],
+    "feedbackZh": "观察孩子做了什么，再限定结论；无需把绘画情节搬进博物馆。",
+    "taskMode": "transfer",
+    "unitVersion": "pilot-17-0"
   },
-  "learningUnitIds": []
+  "learningUnitIds": [
+    "U.LEGACY.S05.C02.COGNITIVE",
+    "U.LEGACY.S05.C02.ERUDITE",
+    "U.LEGACY.S05.C02.OVER_TIME",
+    "U.LEGACY.S05.C02.OBSERVATION",
+    "U.HOUSING.M03.CONTRAST",
+    "U.RESEARCH.EVIDENCE.N",
+    "U.LEGACY.S05.C02.CAUSE",
+    "U.LEGACY.S05.C02.PATIENT",
+    "U.LEGACY.S05.C01.GUIDANCE",
+    "U.LEGACY.S05.C02.NEXT_STEP"
+  ],
+  "easySummary": "The three drawings come from different weeks. The last bridge has straighter lines, but practice at home is unknown. Professor Wu asks Lin to describe what she can see. Lin names the activities and leaves the cause of the change open.",
+  "easySummaryZh": "三张画来自不同的星期。最后一座桥的线更直，但家里的练习情况还不知道。吴教授让林描述能看见的内容。林写明具体活动，把变化原因留作待查问题。"
 }

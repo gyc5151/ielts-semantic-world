@@ -5,10 +5,10 @@
     "modelLicense": "CC-BY 4.0",
     "modelSource": "https://github.com/argosopentech/argospm-index",
     "generatedAt": "2026-10-02",
-    "uniqueSenses": 10257,
-    "examplePlacements": 13403,
-    "projectDefinitionCount": 174,
-    "projectOriginalExampleCount": 92
+    "uniqueSenses": 10281,
+    "examplePlacements": 13428,
+    "projectDefinitionCount": 231,
+    "projectOriginalExampleCount": 110
   },
   "senses": {
     "n:13658027": {
@@ -2005,8 +2005,8 @@
       }
     },
     "v:00296178": {
-      "definition": "修改或规范以达到准确性或符合标准",
-      "definitionStatus": "machine",
+      "definition": "改变或调节，以达到准确状态或符合某项标准",
+      "definitionStatus": "project",
       "examples": {
         "Adjust the clock, please": {
           "text": "调整时钟,请",
@@ -3606,12 +3606,12 @@
       }
     },
     "v:02721438": {
-      "definition": "可能或提供机会;可实现的许可或留下的理由;",
-      "definitionStatus": "machine",
+      "definition": "使某事成为可能或保留实现的机会；使其可达到或继续存在",
+      "definitionStatus": "project",
       "examples": {
         "This leaves no room for improvement": {
-          "text": "这没有改进的余地",
-          "status": "machine"
+          "text": "这没有留下改进的余地。",
+          "status": "project"
         },
         "The evidence allows only one conclusion": {
           "text": "证据只能得出一个结论",
@@ -3780,8 +3780,8 @@
       }
     },
     "r:00008600": {
-      "definition": "不包括或涉及任何其他方面",
-      "definitionStatus": "machine",
+      "definition": "不包括或涉及任何其他人或事物；仅仅",
+      "definitionStatus": "project",
       "examples": {
         "was entirely to blame": {
           "text": "完全应该怪罪",
@@ -4725,6 +4725,20 @@
       "examples": {
         "The steering of my new car answers to the slightest touch": {
           "text": "我的新车的转向架能满足一点点的触觉",
+          "status": "machine"
+        }
+      }
+    },
+    "s:01999608": {
+      "definition": "回复",
+      "definitionStatus": "machine",
+      "examples": {
+        "an answering glance": {
+          "text": "答题浏览",
+          "status": "machine"
+        },
+        "an answering smile": {
+          "text": "一个回答的笑容",
           "status": "machine"
         }
       }
@@ -16021,8 +16035,8 @@
       }
     },
     "n:04871720": {
-      "definition": "诚实和直截了当的态度和言论的质量;",
-      "definitionStatus": "machine",
+      "definition": "态度和言语中诚实、直率的品质",
+      "definitionStatus": "project",
       "examples": {}
     },
     "n:06203030": {
@@ -17700,8 +17714,8 @@
       "examples": {}
     },
     "v:01645601": {
-      "definition": "引起;原因或发生,并不总是故意的;",
-      "definitionStatus": "machine",
+      "definition": "使某事发生或出现，并非总是有意为之",
+      "definitionStatus": "project",
       "examples": {
         "cause a commotion": {
           "text": "引起骚动",
@@ -19762,8 +19776,8 @@
       }
     },
     "a:02040652": {
-      "definition": "圆形",
-      "definitionStatus": "machine",
+      "definition": "具有圆形形状的",
+      "definitionStatus": "project",
       "examples": {}
     },
     "s:00676271": {
@@ -20871,8 +20885,8 @@
       }
     },
     "a:00431447": {
-      "definition": "允许光线通过",
-      "definitionStatus": "machine",
+      "definition": "允许光透过的",
+      "definitionStatus": "project",
       "examples": {
         "clear water": {
           "text": "净水",
@@ -22088,8 +22102,8 @@
       }
     },
     "a:02898584": {
-      "definition": "或与认知有关或涉及认知",
-      "definitionStatus": "machine",
+      "definition": "与认知有关或涉及认知的",
+      "definitionStatus": "project",
       "examples": {
         "cognitive psychology": {
           "text": "认知心理学",
@@ -22949,8 +22963,8 @@
       }
     },
     "a:00479330": {
-      "definition": "免于压力或有利于精神缓和; 享有或享有安宁;",
-      "definitionStatus": "machine",
+      "definition": "没有压力或有助于心理自在；拥有或带来安心的",
+      "definitionStatus": "project",
       "examples": {
         "was settled in a comfortable job, one for which he was well prepared": {
           "text": "被安顿在一个舒适的工作,一个他有充分的准备",
@@ -22969,8 +22983,8 @@
           "status": "machine"
         },
         "she felt comfortable with her fiance's parents": {
-          "text": "她和未婚夫的父母在一起感觉很舒服",
-          "status": "machine"
+          "text": "她与未婚夫的父母相处时感到自在。",
+          "status": "project"
         }
       }
     },
@@ -24412,8 +24426,8 @@
       "examples": {}
     },
     "n:09954639": {
-      "definition": "私人事务被泄露的人",
-      "definitionStatus": "machine",
+      "definition": "可向其倾诉私事的人",
+      "definitionStatus": "project",
       "examples": {}
     },
     "v:00665886": {
@@ -25945,8 +25959,8 @@
       }
     },
     "a:00598679": {
-      "definition": "限制、管理或控制在一定范围内",
-      "definitionStatus": "machine",
+      "definition": "受到限制、管理或保持在一定范围内的",
+      "definitionStatus": "project",
       "examples": {
         "controlled emotions": {
           "text": "控制着的情绪",
@@ -29655,8 +29669,8 @@
       }
     },
     "n:15160579": {
-      "definition": "事件发生的特定日期、月份或年份(通常根据Gregorian日历)",
-      "definitionStatus": "machine",
+      "definition": "某事件发生的具体日、月或年，通常按公历",
+      "definitionStatus": "project",
       "examples": {
         "he tried to memorizes all the dates for his history class": {
           "text": "他试图记住他的历史课上的所有日期",
@@ -30279,8 +30293,8 @@
       "examples": {}
     },
     "s:01805730": {
-      "definition": "非常高兴",
-      "definitionStatus": "machine",
+      "definition": "非常高兴的",
+      "definitionStatus": "project",
       "examples": {}
     },
     "s:00865620": {
@@ -31207,8 +31221,8 @@
       }
     },
     "v:00252019": {
-      "definition": "通过进化、自然增长、差异化或有利的环境,实现增长、进步、发展或演变;",
-      "definitionStatus": "machine",
+      "definition": "通过演变、自然生长、分化或有利环境逐渐生长、进展或发展",
+      "definitionStatus": "project",
       "examples": {
         "A flower developed on the branch": {
           "text": "树枝上开的花",
@@ -31223,8 +31237,8 @@
           "status": "machine"
         },
         "This situation has developed over a long time": {
-          "text": "这种状况已经发展了很长时间",
-          "status": "machine"
+          "text": "这种局面是经过很长时间逐渐形成的。",
+          "status": "project"
         }
       }
     },
@@ -31354,12 +31368,12 @@
       }
     },
     "n:13464820": {
-      "definition": "某一过程,某物通过学位传递到不同的阶段(特别是更高级或更成熟的阶段)",
-      "definitionStatus": "machine",
+      "definition": "逐渐转变到不同阶段的过程，尤其转向更先进或更成熟阶段",
+      "definitionStatus": "project",
       "examples": {
         "the development of his ideas took many years": {
-          "text": "他思想的发展花了很多年",
-          "status": "machine"
+          "text": "他的想法经过多年才逐渐发展起来。",
+          "status": "project"
         },
         "the evolution of Greek civilization": {
           "text": "希腊文明的演变",
@@ -32278,7 +32292,7 @@
       }
     },
     "n:08679972": {
-      "definition": "通向某地点或某点的线路。",
+      "definition": "通向某处或某一点的路线",
       "definitionStatus": "project",
       "examples": {
         "he looked the other direction": {
@@ -32320,8 +32334,8 @@
       }
     },
     "n:06650701": {
-      "definition": "就决定或行动方针提供指导或建议的东西;",
-      "definitionStatus": "machine",
+      "definition": "为决定或行动提供方向或建议的事物",
+      "definitionStatus": "project",
       "examples": {}
     },
     "n:01133281": {
@@ -34158,8 +34172,8 @@
       }
     },
     "a:02494716": {
-      "definition": "位于城镇下层或商业中心",
-      "definitionStatus": "machine",
+      "definition": "位于城镇较低区域或商业中心的",
+      "definitionStatus": "project",
       "examples": {
         "downtown Manhattan": {
           "text": "曼哈顿市中心",
@@ -37323,12 +37337,12 @@
       }
     },
     "n:03290771": {
-      "definition": "提供访问( 进入或退出)",
-      "definitionStatus": "machine",
+      "definition": "提供进出通道的物件或位置",
+      "definitionStatus": "project",
       "examples": {
         "they waited at the entrance to the garden": {
-          "text": "他们在花园的入口等待着",
-          "status": "machine"
+          "text": "他们在花园入口等候。",
+          "status": "project"
         },
         "beggars waited just outside the entryway to the cathedral": {
           "text": "乞丐们在大教堂入口外等着",
@@ -37499,16 +37513,16 @@
       "examples": {}
     },
     "s:02084358": {
-      "definition": "具有或表现出深刻知识",
-      "definitionStatus": "machine",
+      "definition": "具有或显示深厚学识的",
+      "definitionStatus": "project",
       "examples": {
         "a learned jurist": {
           "text": "一个有学识的法学家",
           "status": "machine"
         },
         "an erudite professor": {
-          "text": "博士生导师",
-          "status": "machine"
+          "text": "一位博学的教授",
+          "status": "project"
         }
       }
     },
@@ -37909,8 +37923,8 @@
       "examples": {}
     },
     "n:13246662": {
-      "definition": "业主为自用而保留的广泛土地财产(特别是在该国)",
-      "definitionStatus": "machine",
+      "definition": "所有者保留自用的大片地产，尤其位于乡间",
+      "definitionStatus": "project",
       "examples": {
         "the family owned a large estate on Long Island": {
           "text": "家族在长岛拥有一个大庄园",
@@ -37928,7 +37942,7 @@
       "definitionStatus": "project",
       "examples": {
         "an estimate of what it would cost": {
-          "text": "对所需费用的估算",
+          "text": "对所需费用的估计",
           "status": "project"
         },
         "a rough idea how long it would take": {
@@ -39101,12 +39115,12 @@
       }
     },
     "n:04679738": {
-      "definition": "一个人脸上表达的感情",
-      "definitionStatus": "machine",
+      "definition": "一个人脸上表达出的感受",
+      "definitionStatus": "project",
       "examples": {
         "a sad expression": {
-          "text": "一个悲哀的表情",
-          "status": "machine"
+          "text": "悲伤的表情",
+          "status": "project"
         },
         "a look of triumph": {
           "text": "一副胜利的模样",
@@ -39151,8 +39165,8 @@
       }
     },
     "n:07151380": {
-      "definition": "特定人群在特定情况下使用的词语或短语;",
-      "definitionStatus": "machine",
+      "definition": "特定人群在特定情境中使用的词语或短语",
+      "definitionStatus": "project",
       "examples": {
         "pardon the expression": {
           "text": "赦免表达式",
@@ -46158,12 +46172,12 @@
       }
     },
     "a:01083157": {
-      "definition": "包含尽可能多的或尽可能多的可能或正常的",
-      "definitionStatus": "machine",
+      "definition": "装有所能容纳或正常容纳的最多数量的",
+      "definitionStatus": "project",
       "examples": {
         "a full glass": {
-          "text": "整个杯子",
-          "status": "machine"
+          "text": "装满的杯子",
+          "status": "project"
         },
         "a sky full of stars": {
           "text": "充满星星的天空",
@@ -46846,8 +46860,8 @@
       "examples": {}
     },
     "n:03427296": {
-      "definition": "栅栏或墙上的可移动屏障",
-      "definitionStatus": "machine",
+      "definition": "栅栏或墙中的可移动屏障",
+      "definitionStatus": "project",
       "examples": {}
     },
     "n:03427656": {
@@ -49339,8 +49353,8 @@
       }
     },
     "n:00812526": {
-      "definition": "获取行为",
-      "definitionStatus": "machine",
+      "definition": "抓住或握住的动作",
+      "definitionStatus": "project",
       "examples": {
         "he released his clasp on my arm": {
           "text": "他把口罩放在我的手臂上",
@@ -49351,8 +49365,8 @@
           "status": "machine"
         },
         "she kept a firm hold on the railing": {
-          "text": "她一直坚守在栏杆上",
-          "status": "machine"
+          "text": "她牢牢握着栏杆。",
+          "status": "project"
         }
       }
     },
@@ -53162,11 +53176,6 @@
       "definitionStatus": "machine",
       "examples": {}
     },
-    "n:00810598": {
-      "definition": "保留某物的行为",
-      "definitionStatus": "machine",
-      "examples": {}
-    },
     "n:05806623": {
       "definition": "了解某事物的性质或意义或质量或规模",
       "definitionStatus": "machine",
@@ -53217,6 +53226,11 @@
     },
     "n:02964634": {
       "definition": "在船舶或飞机上储存货物的空间",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:00810598": {
+      "definition": "保留某物的行为",
       "definitionStatus": "machine",
       "examples": {}
     },
@@ -53808,8 +53822,8 @@
       }
     },
     "n:04889527": {
-      "definition": "谦卑的意向; 缺乏虚假的自豪感;",
-      "definitionStatus": "machine",
+      "definition": "谦逊、不自大的性情",
+      "definitionStatus": "project",
       "examples": {
         "not everyone regards humility as a virtue": {
           "text": "不是每个人都认为谦卑是一种美德",
@@ -54716,8 +54730,8 @@
       "examples": {}
     },
     "s:01034153": {
-      "definition": "通常在出生时存在",
-      "definitionStatus": "machine",
+      "definition": "通常在出生时就存在的",
+      "definitionStatus": "project",
       "examples": {
         "mankind's connatural sense of the good": {
           "text": "人类对善的自然感",
@@ -57100,8 +57114,8 @@
       }
     },
     "v:01588493": {
-      "definition": "附加标签或标签到",
-      "definitionStatus": "machine",
+      "definition": "给……附上标签",
+      "definitionStatus": "project",
       "examples": {
         "label these bottles": {
           "text": "标签这些瓶子",
@@ -57241,6 +57255,165 @@
       "definition": "一台家具,一个或一个以上的电灯泡",
       "definitionStatus": "machine",
       "examples": {}
+    },
+    "n:13250048": {
+      "definition": "不动产所在的土地;",
+      "definitionStatus": "machine",
+      "examples": {
+        "he built the house on land leased from the city": {
+          "text": "他把房子建在从城里租来的土地上",
+          "status": "machine"
+        }
+      }
+    },
+    "n:08544813": {
+      "definition": "被一国占领的领土",
+      "definitionStatus": "machine",
+      "examples": {
+        "he returned to the land of his birth": {
+          "text": "他回到他出生的国度",
+          "status": "machine"
+        },
+        "he visited several European countries": {
+          "text": "他访问了几个欧洲国家。",
+          "status": "machine"
+        }
+      }
+    },
+    "n:14514805": {
+      "definition": "某物占主导地位的域",
+      "definitionStatus": "machine",
+      "examples": {
+        "the untroubled kingdom of reason": {
+          "text": "无忧无虑的理性王国",
+          "status": "machine"
+        },
+        "a land of make-believe": {
+          "text": "一个充满幻想的土地",
+          "status": "machine"
+        },
+        "the rise of the realm of cotton in the south": {
+          "text": "南方棉花的兴起",
+          "status": "machine"
+        }
+      }
+    },
+    "n:08166552": {
+      "definition": "生活在一个国家或国家的人民",
+      "definitionStatus": "machine",
+      "examples": {
+        "a statement that sums up the nation's mood": {
+          "text": "一份总结国家情绪的声明",
+          "status": "machine"
+        },
+        "the news was announced to the nation": {
+          "text": "新闻已经向全国公布",
+          "status": "machine"
+        },
+        "the whole country worshipped him": {
+          "text": "整个国家都崇拜他",
+          "status": "machine"
+        }
+      }
+    },
+    "n:08168978": {
+      "definition": "在单一政府之下由政治组成的人民机构",
+      "definitionStatus": "machine",
+      "examples": {
+        "the state has elected a new president": {
+          "text": "国家选举了一位新总统",
+          "status": "machine"
+        },
+        "African nations": {
+          "text": "非洲国家",
+          "status": "machine"
+        },
+        "students who had come to the nation's capitol": {
+          "text": "来参加全国大赛的学生",
+          "status": "machine"
+        },
+        "the country's largest manufacturer": {
+          "text": "国内最大的制造商",
+          "status": "machine"
+        },
+        "an industrialized land": {
+          "text": "工业用地",
+          "status": "machine"
+        }
+      }
+    },
+    "n:11115558": {
+      "definition": "美国发明家将Polaroid胶片融入镜头并发明了一步摄影工艺(1909-1991).",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:00453731": {
+      "definition": "农业被视为一种职业或生活方式",
+      "definitionStatus": "machine",
+      "examples": {
+        "farming is a strenuous life": {
+          "text": "农耕是艰难的生活",
+          "status": "machine"
+        },
+        "there's no work on the land any more": {
+          "text": "这片土地上已经没有工作了",
+          "status": "machine"
+        }
+      }
+    },
+    "v:01979901": {
+      "definition": "到达或开始休息",
+      "definitionStatus": "machine",
+      "examples": {
+        "The bird landed on the highest branch": {
+          "text": "鸟儿降落在最高的树枝上",
+          "status": "machine"
+        },
+        "The plane landed in Istanbul": {
+          "text": "飞机降落在伊斯坦布尔",
+          "status": "machine"
+        }
+      }
+    },
+    "v:01981036": {
+      "definition": "使你来到地上",
+      "definitionStatus": "machine",
+      "examples": {
+        "the pilot managed to land the airplane safely": {
+          "text": "飞行员成功安全降落了飞机",
+          "status": "machine"
+        }
+      }
+    },
+    "v:02087156": {
+      "definition": "上岸",
+      "definitionStatus": "machine",
+      "examples": {
+        "The drug smugglers landed the heroin on the beach of the island": {
+          "text": "毒贩们把海洛因落在了岛上的海滩上",
+          "status": "machine"
+        }
+      }
+    },
+    "v:02358527": {
+      "definition": "交付(一击)",
+      "definitionStatus": "machine",
+      "examples": {
+        "He landed several blows on his opponent's head": {
+          "text": "他把对手的头撞了几下",
+          "status": "machine"
+        }
+      }
+    },
+    "v:01981436": {
+      "definition": "抵达岸上",
+      "definitionStatus": "machine",
+      "examples": {
+        "The ship landed in Pearl Harbor": {
+          "text": "飞船在珍珠港登陆",
+          "status": "machine"
+        }
+      }
     },
     "n:10245236": {
       "definition": "把土地或房产出租给别人的业主。",
@@ -58357,6 +58530,54 @@
         }
       }
     },
+    "n:13152742": {
+      "definition": "高等植物进行光合作用和蒸腾作用的主要器官",
+      "definitionStatus": "project",
+      "examples": {}
+    },
+    "n:06256229": {
+      "definition": "任何书面或印刷材料(特别是手稿或书中的材料)",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "n:03652226": {
+      "definition": "系链或可拆卸的平面部分(如桌子或门)",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "v:02153023": {
+      "definition": "翻看一本书或其他书面材料",
+      "definitionStatus": "machine",
+      "examples": {
+        "He thumbed through the report": {
+          "text": "他用拇指划过报告",
+          "status": "machine"
+        },
+        "She leafed through the volume": {
+          "text": "她从音量中走出来",
+          "status": "machine"
+        }
+      }
+    },
+    "v:02089837": {
+      "definition": "翻转页面",
+      "definitionStatus": "machine",
+      "examples": {
+        "leaf through a book": {
+          "text": "叶子通过书",
+          "status": "machine"
+        },
+        "leaf a manuscript": {
+          "text": "留下一个手稿",
+          "status": "machine"
+        }
+      }
+    },
+    "v:00095747": {
+      "definition": "生产叶子,植物",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
     "n:05389625": {
       "definition": "心脏瓣膜的细三角襟翼",
       "definitionStatus": "machine",
@@ -58979,21 +59200,6 @@
           "status": "machine"
         }
       }
-    },
-    "n:13152742": {
-      "definition": "光合作用和在高等植物中传播的主要器官",
-      "definitionStatus": "machine",
-      "examples": {}
-    },
-    "n:06256229": {
-      "definition": "任何书面或印刷材料(特别是手稿或书中的材料)",
-      "definitionStatus": "machine",
-      "examples": {}
-    },
-    "n:03652226": {
-      "definition": "系链或可拆卸的平面部分(如桌子或门)",
-      "definitionStatus": "machine",
-      "examples": {}
     },
     "n:07240549": {
       "definition": "向公众开放的演讲;",
@@ -60871,12 +61077,12 @@
       }
     },
     "n:06799897": {
-      "definition": "相对于宽度长的标记",
-      "definitionStatus": "machine",
+      "definition": "相对于宽度而言很长的标记；线条",
+      "definitionStatus": "project",
       "examples": {
         "He drew a line on the chart": {
-          "text": "他在图上画了一条线",
-          "status": "machine"
+          "text": "他在图表上画了一条线。",
+          "status": "project"
         }
       }
     },
@@ -64529,12 +64735,12 @@
       "examples": {}
     },
     "v:00597634": {
-      "definition": "或完全熟练或熟练",
-      "definitionStatus": "machine",
+      "definition": "完全精通或熟练掌握",
+      "definitionStatus": "project",
       "examples": {
         "She mastered Japanese in less than two years": {
-          "text": "不到两年就学会了日语",
-          "status": "machine"
+          "text": "她用了不到两年就熟练掌握了日语。",
+          "status": "project"
         }
       }
     },
@@ -66704,8 +66910,8 @@
       }
     },
     "n:04900947": {
-      "definition": "免于虚荣或自负",
-      "definitionStatus": "machine",
+      "definition": "不虚荣、不自负的状态",
+      "definitionStatus": "project",
       "examples": {}
     },
     "n:04900121": {
@@ -66758,12 +66964,12 @@
       "examples": {}
     },
     "r:00092814": {
-      "definition": "瞬间或瞬间",
-      "definitionStatus": "machine",
+      "definition": "持续一瞬间或片刻",
+      "definitionStatus": "project",
       "examples": {
         "we paused momentarily before proceeding": {
-          "text": "我们暂停了一会儿才开始",
-          "status": "machine"
+          "text": "我们暂停了片刻，然后继续。",
+          "status": "project"
         },
         "a cardinal perched momently on the dogwood branch": {
           "text": "一个红衣主教一瞬间挂在狗林树枝上",
@@ -66772,8 +66978,8 @@
       }
     },
     "r:00034403": {
-      "definition": "随时都可以",
-      "definitionStatus": "machine",
+      "definition": "在任何一刻；马上",
+      "definitionStatus": "project",
       "examples": {
         "she will be with you momently": {
           "text": "她会马上和你在一起的",
@@ -69103,8 +69309,8 @@
       }
     },
     "n:06763273": {
-      "definition": "评论或指示(通常是添加的)",
-      "definitionStatus": "machine",
+      "definition": "评论或指示，通常是后来加上的",
+      "definitionStatus": "project",
       "examples": {
         "his notes were appended at the end of the article": {
           "text": "他的笔记附在文章末尾",
@@ -69763,7 +69969,7 @@
     },
     "n:05818741": {
       "definition": "通过观察了解到的事实",
-      "definitionStatus": "machine",
+      "definitionStatus": "project",
       "examples": {
         "he reported his observations to the mayor": {
           "text": "他向市长汇报了他的观察",
@@ -74323,7 +74529,7 @@
       "examples": {}
     },
     "a:01735736": {
-      "definition": "平和地忍受艰难处境的，或具有这种忍耐特征的。",
+      "definition": "能够平和地承受困难处境，或具有这种耐性的",
       "definitionStatus": "project",
       "examples": {
         "a patient smile": {
@@ -74339,7 +74545,7 @@
           "status": "project"
         },
         "please be patient": {
-          "text": "请耐心等候。",
+          "text": "请耐心等待。",
           "status": "project"
         }
       }
@@ -75025,12 +75231,12 @@
       }
     },
     "n:06689297": {
-      "definition": "批准做点什么",
-      "definitionStatus": "machine",
+      "definition": "对做某事的认可；许可",
+      "definitionStatus": "project",
       "examples": {
         "he asked permission to leave": {
-          "text": "他请求允许他离开",
-          "status": "machine"
+          "text": "他请求获准离开。",
+          "status": "project"
         }
       }
     },
@@ -75766,6 +75972,36 @@
         }
       }
     },
+    "n:07553964": {
+      "definition": "对他人的不幸感到同情和悲伤",
+      "definitionStatus": "machine",
+      "examples": {
+        "the blind are too often objects of pity": {
+          "text": "盲人常常是怜悯的对象",
+          "status": "machine"
+        }
+      }
+    },
+    "n:07305098": {
+      "definition": "不幸的事态",
+      "definitionStatus": "machine",
+      "examples": {
+        "it's a pity he couldn't do it": {
+          "text": "可惜他没能行",
+          "status": "machine"
+        }
+      }
+    },
+    "n:04829550": {
+      "definition": "了解他人痛苦的人道品质,并想对此有所作为",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "v:01821996": {
+      "definition": "人民遭受的苦痛",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
     "n:08664443": {
       "definition": "位于某些区域表面特征的点;",
       "definitionStatus": "machine",
@@ -76125,8 +76361,8 @@
       }
     },
     "a:01791911": {
-      "definition": "非详细或详尽; 简单",
-      "definitionStatus": "machine",
+      "definition": "未经复杂加工或详细铺陈的；简单的",
+      "definitionStatus": "project",
       "examples": {
         "plain food": {
           "text": "普通食品",
@@ -76286,8 +76522,8 @@
       }
     },
     "n:03954199": {
-      "definition": "结构的缩放",
-      "definitionStatus": "machine",
+      "definition": "结构的比例图",
+      "definitionStatus": "project",
       "examples": {
         "the plans for City Hall were on file": {
           "text": "市政厅的计划已经存档了",
@@ -78411,8 +78647,8 @@
       }
     },
     "n:03988170": {
-      "definition": "由固定在直立位置的木材或金属组成的直立体;",
-      "definitionStatus": "machine",
+      "definition": "用木材或金属制成并牢固竖立的柱状支撑物",
+      "definitionStatus": "project",
       "examples": {
         "he set a row of posts in the ground and strung barbwire between them": {
           "text": "他曾在地面上安置许多岗位,他们彼此之间,",
@@ -78593,8 +78829,8 @@
       }
     },
     "n:14482620": {
-      "definition": "实现《公约》的内在能力",
-      "definitionStatus": "machine",
+      "definition": "内在的、使某种状态得以形成的能力",
+      "definitionStatus": "project",
       "examples": {}
     },
     "n:11493827": {
@@ -78966,6 +79202,26 @@
       "definition": "经过大量练习后,技能很强",
       "definitionStatus": "machine",
       "examples": {}
+    },
+    "n:06693198": {
+      "definition": "表示认可和表扬",
+      "definitionStatus": "machine",
+      "examples": {
+        "he always appreciated praise for his work": {
+          "text": "他总是很欣赏他的作品",
+          "status": "machine"
+        }
+      }
+    },
+    "n:06693502": {
+      "definition": "以恭敬的言语为礼拜",
+      "definitionStatus": "machine",
+      "examples": {
+        "they sang a hymn of praise to God": {
+          "text": "他们唱着赞美上帝的颂歌",
+          "status": "machine"
+        }
+      }
     },
     "v:00856824": {
       "definition": "明示核准",
@@ -81716,16 +81972,16 @@
       }
     },
     "a:01918984": {
-      "definition": "(c) 发出微小的声音,如果有任何声音的话;",
-      "definitionStatus": "machine",
+      "definition": "没有噪声或喧闹；发出很少声音或不发声的",
+      "definitionStatus": "project",
       "examples": {
         "a quiet audience at the concert": {
           "text": "演唱会的观众安静",
           "status": "machine"
         },
         "the room was dark and quiet": {
-          "text": "房间又黑又安静",
-          "status": "machine"
+          "text": "房间昏暗而安静。",
+          "status": "project"
         }
       }
     },
@@ -82111,12 +82367,12 @@
       }
     },
     "v:02306281": {
-      "definition": "为特定目的募集资金",
-      "definitionStatus": "machine",
+      "definition": "为特定用途筹集资金",
+      "definitionStatus": "project",
       "examples": {
         "The President raised several million dollars for his college": {
-          "text": "总统为他的大学筹集了几百万美元",
-          "status": "machine"
+          "text": "那位President（总统或机构负责人）为自己的学院筹集了数百万美元。",
+          "status": "project"
         }
       }
     },
@@ -82295,6 +82551,21 @@
         },
         "Upraising ghosts": {
           "text": "唤起鬼魂",
+          "status": "machine"
+        }
+      }
+    },
+    "n:04922113": {
+      "definition": "由于你作为孩子对待的方式而获得的财产",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "s:02536605": {
+      "definition": "数量或价值增加",
+      "definitionStatus": "machine",
+      "examples": {
+        "a cost-raising increase in the basic wage rate": {
+          "text": "提高基本工资率的提高成本;",
           "status": "machine"
         }
       }
@@ -86123,12 +86394,12 @@
       "examples": {}
     },
     "v:01773346": {
-      "definition": "感觉痛苦或羞愧",
-      "definitionStatus": "machine",
+      "definition": "对某事感到怨愤或愤慨",
+      "definitionStatus": "project",
       "examples": {
         "She resents being paid less than her co-workers": {
-          "text": "她讨厌报酬比同事少",
-          "status": "machine"
+          "text": "她对薪酬低于同事感到怨愤。",
+          "status": "project"
         }
       }
     },
@@ -86771,8 +87042,8 @@
       }
     },
     "s:00353101": {
-      "definition": "改进或更新",
-      "definitionStatus": "machine",
+      "definition": "经过改进或更新的",
+      "definitionStatus": "project",
       "examples": {
         "a revised edition": {
           "text": "修订版",
@@ -87631,20 +87902,20 @@
       }
     },
     "n:13777764": {
-      "definition": "移动空间",
-      "definitionStatus": "machine",
+      "definition": "可供活动或移动的空间",
+      "definitionStatus": "project",
       "examples": {
         "room to pass": {
-          "text": "需要通过的房间",
-          "status": "machine"
+          "text": "可供通过的空间",
+          "status": "project"
         },
         "make way for": {
           "text": "让路",
           "status": "machine"
         },
         "hardly enough elbow room to turn around": {
-          "text": "手肘空间不够 无法转身",
-          "status": "machine"
+          "text": "活动空间小得几乎无法转身。",
+          "status": "project"
         }
       }
     },
@@ -92578,16 +92849,6 @@
         }
       }
     },
-    "v:01981436": {
-      "definition": "抵达岸上",
-      "definitionStatus": "machine",
-      "examples": {
-        "The ship landed in Pearl Harbor": {
-          "text": "飞船在珍珠港登陆",
-          "status": "machine"
-        }
-      }
-    },
     "v:01219004": {
       "definition": "支持,将固态或刚性置入",
       "definitionStatus": "machine",
@@ -93493,8 +93754,8 @@
       }
     },
     "s:01919428": {
-      "definition": "以无声为标志",
-      "definitionStatus": "machine",
+      "definition": "没有声音的",
+      "definitionStatus": "project",
       "examples": {
         "a silent house": {
           "text": "一个无声的房子",
@@ -94082,8 +94343,8 @@
       }
     },
     "n:08651247": {
-      "definition": "某物所在的一块土地(或将位于该地)",
-      "definitionStatus": "machine",
+      "definition": "某物所在或计划所在的一块土地",
+      "definitionStatus": "project",
       "examples": {
         "a good site for the school": {
           "text": "学校的好址",
@@ -94222,8 +94483,8 @@
       "examples": {}
     },
     "n:05637558": {
-      "definition": "通过培训获得的能力;",
-      "definitionStatus": "machine",
+      "definition": "通过训练获得的能力",
+      "definitionStatus": "project",
       "examples": {}
     },
     "n:05636887": {
@@ -97854,32 +98115,6 @@
         }
       }
     },
-    "n:08168978": {
-      "definition": "在单一政府之下由政治组成的人民机构",
-      "definitionStatus": "machine",
-      "examples": {
-        "the state has elected a new president": {
-          "text": "国家选举了一位新总统",
-          "status": "machine"
-        },
-        "African nations": {
-          "text": "非洲国家",
-          "status": "machine"
-        },
-        "students who had come to the nation's capitol": {
-          "text": "来参加全国大赛的学生",
-          "status": "machine"
-        },
-        "the country's largest manufacturer": {
-          "text": "国内最大的制造商",
-          "status": "machine"
-        },
-        "an industrialized land": {
-          "text": "工业用地",
-          "status": "machine"
-        }
-      }
-    },
     "n:14479615": {
       "definition": "(化学)三种传统物质状态是固体(固定形状和体积)和液体(固定体积和容器的形状)和气体(装填容器).",
       "definitionStatus": "machine",
@@ -97896,20 +98131,6 @@
       "examples": {
         "he was in such a state you just couldn't reason with him": {
           "text": "他的状态太糟了你根本无法和他解释",
-          "status": "machine"
-        }
-      }
-    },
-    "n:08544813": {
-      "definition": "被一国占领的领土",
-      "definitionStatus": "machine",
-      "examples": {
-        "he returned to the land of his birth": {
-          "text": "他回到他出生的国度",
-          "status": "machine"
-        },
-        "he visited several European countries": {
-          "text": "他访问了几个欧洲国家。",
           "status": "machine"
         }
       }
@@ -98270,8 +98491,8 @@
       }
     },
     "n:13757249": {
-      "definition": "步骤覆盖的距离",
-      "definitionStatus": "machine",
+      "definition": "一步所跨过的距离",
+      "definitionStatus": "project",
       "examples": {
         "he stepped off ten paces from the old tree and began to dig": {
           "text": "他从老树上走了十步 开始挖掘",
@@ -105336,7 +105557,7 @@
       "examples": {}
     },
     "n:01134861": {
-      "definition": "对某人或某物的管理、处理。",
+      "definition": "对某人或某事的处理或对待方式",
       "definitionStatus": "project",
       "examples": {
         "the handling of prisoners": {
@@ -106192,6 +106413,21 @@
           "status": "machine"
         }
       }
+    },
+    "s:00568881": {
+      "definition": "不捆绑在一起",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "a:00158407": {
+      "definition": "不与排他性关系有关联",
+      "definitionStatus": "machine",
+      "examples": {}
+    },
+    "s:00160288": {
+      "definition": "能够游荡的动物,",
+      "definitionStatus": "machine",
+      "examples": {}
     },
     "a:00337404": {
       "definition": "缺乏或表示缺乏信心或保证",
@@ -107774,8 +108010,8 @@
       "examples": {}
     },
     "n:04520170": {
-      "definition": "一辆装有封闭货物空间的卡车",
-      "definitionStatus": "machine",
+      "definition": "具有封闭载货空间的货车",
+      "definitionStatus": "project",
       "examples": {}
     },
     "n:07508996": {
@@ -107794,13 +108030,13 @@
       }
     },
     "n:04887129": {
-      "definition": "妄自尊大,妄自尊大,",
-      "definitionStatus": "machine",
+      "definition": "过分虚荣、自负的性格；不实的骄傲",
+      "definitionStatus": "project",
       "examples": {}
     },
     "n:03238586": {
-      "definition": "带有镜子或镜子的低桌,在化妆或化妆时坐在那里",
-      "definitionStatus": "machine",
+      "definition": "带一面或多面镜子的矮桌，用于坐着穿戴或化妆",
+      "definitionStatus": "project",
       "examples": {}
     },
     "v:02661252": {
@@ -108207,8 +108443,8 @@
       }
     },
     "n:01233156": {
-      "definition": "短期内见到某个人或地方或事物的行为",
-      "definitionStatus": "machine",
+      "definition": "短时间去看某人、某地或某物的行为",
+      "definitionStatus": "project",
       "examples": {
         "he dropped by for a visit": {
           "text": "他来拜访了",
@@ -109489,8 +109725,8 @@
       "examples": {}
     },
     "n:14462946": {
-      "definition": "缺陷或弱点",
-      "definitionStatus": "machine",
+      "definition": "缺陷或薄弱环节",
+      "definitionStatus": "project",
       "examples": {
         "he was quick to point out his wife's failings": {
           "text": "他很快地指出他妻子的过错",
@@ -111028,8 +111264,8 @@
       }
     },
     "n:04599396": {
-      "definition": "通过某人的努力或活动或机构生产或完成的产品或物品",
-      "definitionStatus": "machine",
+      "definition": "由人或事物的努力、活动或作用产生或完成的成果",
+      "definitionStatus": "project",
       "examples": {
         "it is not regarded as one of his more memorable works": {
           "text": "它不被视为他更令人难忘的作品之一",
@@ -111357,8 +111593,8 @@
       "examples": {}
     },
     "n:09632518": {
-      "definition": "在特定职业工作的人;",
-      "definitionStatus": "machine",
+      "definition": "从事某一具体职业的人",
+      "definitionStatus": "project",
       "examples": {
         "he is a good worker": {
           "text": "他是个好工人",

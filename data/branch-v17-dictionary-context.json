@@ -1,0 +1,1022 @@
+{
+  "S03.G01": {
+    "downtown": {
+      "zh": "市中心的",
+      "example": "The model shows a downtown square.",
+      "exampleZh": "模型展示一处市中心广场。",
+      "usageNote": "本课形容词，修饰square，说明城市中心区域的位置；不把这里的定语用法当成go downtown的副词用法。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "a:02494716"
+    },
+    "estate": {
+      "zh": "一大片私有土地；庄园",
+      "example": "The old map shows that this land was part of a private estate.",
+      "exampleZh": "旧地图显示，这块土地曾是一处私有庄园的一部分。",
+      "usageNote": "本课土地名词，旧地图说明广场用地曾是一处私有庄园的一部分；不采用遗产总额义，也不把estate agent整块当作这个词的同义表达。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:13246662"
+    },
+    "site": {
+      "zh": "所在地；场地",
+      "example": "I would visit the site before deciding where the entrance should be.",
+      "exampleZh": "我会先到场地查看，再决定入口应放在哪里。",
+      "usageNote": "本课土地或场地名词，指广场所在的实际地点，也可迁移到新图书馆场地；不选网站名词或选址动词。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:08651247"
+    },
+    "circular": {
+      "zh": "圆形的",
+      "example": "The circular garden is in the middle of the model.",
+      "exampleZh": "圆形花园在模型中间。",
+      "usageNote": "本课形状形容词，描述花园轮廓。原R01121还列循环的中文，但圆桌例句支持圆形义；不把花园形状当成循环过程。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "a:02040652"
+    },
+    "posts": {
+      "zh": "竖立的柱杆（复数）",
+      "example": "The wooden posts stand beside the gate on the model.",
+      "exampleZh": "模型上的木柱立在门旁。",
+      "usageNote": "本课名词复数，木制柱杆立在花园边缘；单数是post。不是职位、网上帖子或邮寄动作，任务不要求罗列这些无关义。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:03988170",
+      "forms": [
+        "post"
+      ]
+    },
+    "entrance": {
+      "zh": "进入某处的入口",
+      "example": "The entrance is across the square from the bus stop.",
+      "exampleZh": "入口在公交站对面的广场另一边。",
+      "usageNote": "本课地点名词，指可进入花园的位置；可以由一扇gate提供入口，但两词侧重点不同。不是进场行为或使人着迷的动词。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:03290771"
+    },
+    "gate": {
+      "zh": "围墙或栅栏上可开关的门",
+      "example": "The gate on the model faces the road.",
+      "exampleZh": "模型中的门朝向道路。",
+      "usageNote": "本课实体门名词，模型中门朝向道路；entrance说明入口位置，gate说明可开关的门。原故事未提供门的尺寸，不擅自补尺寸。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:03427296"
+    },
+    "van": {
+      "zh": "厢式货车",
+      "example": "The van leaves a narrow gap beside the gate.",
+      "exampleZh": "货车在门旁留下一条窄缝。",
+      "usageNote": "本课运送货物的车辆，停在入口旁形成障碍；复用现有车辆义，不用先锋群体、铁路货车或露营车义。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:04520170"
+    },
+    "way": {
+      "zh": "方向；路线",
+      "example": "Which way is the entrance?",
+      "exampleZh": "入口在哪个方向？",
+      "usageNote": "本课问路方向，不是方式或方法。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:08679972"
+    },
+    "get": {
+      "zh": "get through组合中表示设法通过",
+      "example": "A parent cannot get through with a pram because the van leaves a narrow gap.",
+      "exampleZh": "货车留下窄缝，所以一位家长推着婴儿车无法通过。",
+      "usageNote": "本课空间通行组合，with a pram表示带着婴儿车，不把整块误读为get through with something的完成某事义。实际障碍是货车留下的窄缝；并非门本身必然过窄。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "noMatch": true,
+      "note": "本课空间通行组合，with a pram表示带着婴儿车，不把整块误读为get through with something的完成某事义。实际障碍是货车留下的窄缝；并非门本身必然过窄。 当前WordNet没有与此处词性、整块或精确用义相符的匹配；项目解释与外部参考另列。",
+      "externalReferences": [
+        {
+          "label": "Collins · get through",
+          "url": "https://www.collinsdictionary.com/us/dictionary/english/get-through",
+          "accessedAt": "2026-10-02",
+          "evidenceType": "External evidence"
+        }
+      ]
+    },
+    "through": {
+      "zh": "get through组合中表示设法通过",
+      "example": "A parent cannot get through with a pram because the van leaves a narrow gap.",
+      "exampleZh": "货车留下窄缝，所以一位家长推着婴儿车无法通过。",
+      "usageNote": "本课空间通行组合，with a pram表示带着婴儿车，不把整块误读为get through with something的完成某事义。实际障碍是货车留下的窄缝；并非门本身必然过窄。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "noMatch": true,
+      "note": "本课空间通行组合，with a pram表示带着婴儿车，不把整块误读为get through with something的完成某事义。实际障碍是货车留下的窄缝；并非门本身必然过窄。 当前WordNet没有与此处词性、整块或精确用义相符的匹配；项目解释与外部参考另列。",
+      "externalReferences": [
+        {
+          "label": "Collins · get through",
+          "url": "https://www.collinsdictionary.com/us/dictionary/english/get-through",
+          "accessedAt": "2026-10-02",
+          "evidenceType": "External evidence"
+        }
+      ]
+    },
+    "leaves": {
+      "zh": "留下；留出",
+      "example": "The van leaves a narrow gap beside the gate.",
+      "exampleZh": "货车在门旁只留下一道窄缝。",
+      "usageNote": "leave第三人称单数，本课让窄缝存在；不是树叶或车辆离开。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "v:02721438"
+    },
+    "line": {
+      "zh": "地图上的线条",
+      "example": "A line on the map shows the path.",
+      "exampleZh": "地图上的一条线表示小路。",
+      "usageNote": "绘制的长线条，不是电话线路。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:06799897"
+    },
+    "worker": {
+      "zh": "工作人员",
+      "example": "A worker stands near the model.",
+      "exampleZh": "一位工作人员站在模型附近。",
+      "usageNote": "不把所有工作人员都解释为维修人员。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:09632518"
+    },
+    "plan": {
+      "zh": "规划图",
+      "example": "The plan shows an entrance near the road.",
+      "exampleZh": "规划图显示入口靠近道路。",
+      "usageNote": "本课图纸义，不是公寓维修方案。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:03954199"
+    }
+  },
+  "S03.G02": {
+    "downtown": {
+      "zh": "市中心的",
+      "example": "It is still a downtown square, even on the quieter side.",
+      "exampleZh": "即使在较安静的一侧，这里仍是市中心广场。",
+      "usageNote": "本课形容词，square仍位于市中心；较安静的一側仍可能听到声音。复用G01形容词义，不强迫在每条建议里重复地点标签。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "a:02494716"
+    },
+    "circular": {
+      "zh": "圆形的",
+      "example": "The circular garden stays on the revised drawing.",
+      "exampleZh": "修改后的图纸保留圆形花园。",
+      "usageNote": "本课形状形容词，花园的圆形轮廓保留。移动入口与修改花园形状不是同一件事；复用G01所选圆形义。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "a:02040652"
+    },
+    "posts": {
+      "zh": "竖立的柱杆（复数）",
+      "example": "Lin keeps the wooden posts around the garden.",
+      "exampleZh": "林保留花园周围的木柱。",
+      "usageNote": "本课保留花园边缘的木柱，名词复数；不是网上帖子或职位。复用G01物件义，仅提供当前改图事件的例句。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:03988170",
+      "forms": [
+        "post"
+      ]
+    },
+    "entrance": {
+      "zh": "进入某处的入口",
+      "example": "Lin moves the entrance to the side with more room on the drawing.",
+      "exampleZh": "林在图纸上把入口移到空间更大的一侧。",
+      "usageNote": "本课入口位置移到空间更大的一侧；不是进场行为，也不表示道路或送货路线已经真正改建。复用G01入口名词义。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:03290771"
+    },
+    "gate": {
+      "zh": "围墙或栅栏上可开关的门",
+      "example": "The bench near the gate is close to the road.",
+      "exampleZh": "门旁的长椅靠近道路。",
+      "usageNote": "本课长椅靠近实体门，门作为声音观察位置的地标；复用G01实体门义，描述时无需同时堆上entrance。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:03427296"
+    },
+    "quiet": {
+      "zh": "声音少的；安静的",
+      "example": "The side near the wall was quieter during our visit.",
+      "exampleZh": "我们查看期间，墙边那一侧更安静。",
+      "usageNote": "本课声音形容词；quieter是比较级，说明相对另一侧声音较少。quiet不总要求完全没有声音；不选沉默寡言或商业清淡义。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "a:01918984",
+      "forms": [
+        "quieter"
+      ]
+    },
+    "silent": {
+      "zh": "无声的；没有声音的",
+      "example": "The garden was quieter by the wall, but it was not silent.",
+      "exampleZh": "花园墙边更安静，但并非没有声音。",
+      "usageNote": "本课无声形容词，作为quiet的语义边界用于识别；树叶仍发出声音，因此较安静不等于无声。不强迫建议时把两个形容词并排输出。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "s:01919428"
+    },
+    "room": {
+      "zh": "可供通行或活动的空间",
+      "example": "The revised drawing puts the entrance on a side with more room.",
+      "exampleZh": "修改后的图纸把入口放在空间更大的一侧。",
+      "usageNote": "本课不可数空间名词，more room说明可用空间更多，不是更多房间。故事只说图纸移动了入口，没有提供通行宽度的测量。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:13777764"
+    },
+    "route": {
+      "zh": "从一处到另一处的路线",
+      "example": "Lin marks the delivery route on the drawing.",
+      "exampleZh": "林在图纸上标出送货路线。",
+      "usageNote": "本课图纸上的送货路线；复用已有路径名词义。标出delivery route不等于现场已实施车流安排。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:08616311"
+    },
+    "soundscape": {
+      "zh": "某处各种声音构成的整体；声景",
+      "example": "The soundscape changes from sharp vehicle sounds near the gate to soft leaf sounds by the wall.",
+      "exampleZh": "声景从门旁尖锐的车辆声，变为墙边轻柔的树叶声。",
+      "usageNote": "本课地点声音名词，关注公交车、货车与树叶等声音在所处地点的组合，不只是音量。原记录直接支持环境声音义；Oxford组合声音定义较宽，WordNet当前没有本词义项。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "noMatch": true,
+      "note": "本课地点声音名词，关注公交车、货车与树叶等声音在所处地点的组合，不只是音量。原记录直接支持环境声音义；Oxford组合声音定义较宽，WordNet当前没有本词义项。 当前WordNet没有与此处词性、整块或精确用义相符的匹配；项目解释与外部参考另列。",
+      "externalReferences": [
+        {
+          "label": "Oxford · soundscape",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/soundscape",
+          "accessedAt": "2026-10-02",
+          "evidenceType": "External evidence"
+        }
+      ]
+    },
+    "leaves": {
+      "zh": "树叶（复数）",
+      "example": "Leaves make a soft sound by the wall.",
+      "exampleZh": "墙旁的树叶发出轻柔声音。",
+      "usageNote": "leaf的复数名词；不是leave动词。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:13152742",
+      "forms": [
+        "leaf"
+      ]
+    },
+    "steps": {
+      "zh": "几步路；脚步距离",
+      "example": "Lin walks a few steps towards the wall.",
+      "exampleZh": "林朝墙边走了几步。",
+      "usageNote": "实际步行距离，不是操作步骤。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:13757249"
+    },
+    "against": {
+      "zh": "靠着；贴着",
+      "example": "Leaves move against the wall.",
+      "exampleZh": "树叶贴着墙移动。",
+      "usageNote": "本课空间介词，与作对照的against不同。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "noMatch": true,
+      "note": "本课空间介词，与作对照的against不同。 当前WordNet没有与此处词性、整块或精确用义相符的匹配；项目解释与外部参考另列。",
+      "externalReferences": [
+        {
+          "label": "Cambridge · against",
+          "url": "https://dictionary.cambridge.org/dictionary/english/against",
+          "accessedAt": "2026-10-02",
+          "evidenceType": "External evidence"
+        }
+      ]
+    },
+    "during": {
+      "zh": "在……期间",
+      "example": "That side was quieter during our visit.",
+      "exampleZh": "我们到访期间，那一侧更安静。",
+      "usageNote": "时间介词；这一时段不能代表全天所有条件。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "noMatch": true,
+      "note": "时间介词；这一时段不能代表全天所有条件。 当前WordNet没有与此处词性、整块或精确用义相符的匹配；项目解释与外部参考另列。"
+    },
+    "revised": {
+      "zh": "修改改进后的",
+      "example": "The revised drawing puts the entrance on a wider side.",
+      "exampleZh": "修改后的图纸把入口放在更宽的一侧。",
+      "usageNote": "图纸已修改，不是考前复习；画图本身不证明现场已改建。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "s:00353101"
+    }
+  },
+  "S05.C01": {
+    "visit": {
+      "zh": "短暂到访",
+      "example": "This visit lets Lin see the activity.",
+      "exampleZh": "这次到访让林看到了活动。",
+      "usageNote": "一次到访，不是看房或诊疗。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:01233156"
+    },
+    "line": {
+      "zh": "画在纸上的线条",
+      "example": "The child draws another line.",
+      "exampleZh": "孩子又画了一条线。",
+      "usageNote": "绘图线条，不是队列、电话线路。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:06799897",
+      "forms": [
+        "lines"
+      ]
+    },
+    "leaflet": {
+      "zh": "传单",
+      "example": "Lin reads the orange leaflet.",
+      "exampleZh": "林读着橙色传单。",
+      "usageNote": "本课单张宣传印纸；当前WN候选偏小册子，不冒充精确匹配。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "noMatch": true,
+      "note": "本课单张宣传印纸；当前WN候选偏小册子，不冒充精确匹配。 当前WordNet没有与此处词性、整块或精确用义相符的匹配；项目解释与外部参考另列。",
+      "externalReferences": [
+        {
+          "label": "Oxford · leaflet",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/leaflet_1",
+          "accessedAt": "2026-10-02",
+          "evidenceType": "External evidence"
+        }
+      ]
+    },
+    "inborn": {
+      "zh": "与生俱来的",
+      "example": "The leaflet uses the words \"develop inborn potentials\" without showing a lasting result.",
+      "exampleZh": "传单用了“发掘先天潜能”的措辞，却没有展示持久的结果。",
+      "usageNote": "识别传单引用的完整承诺。inborn指与生俱来的，potential在人的潜力义中通常不可数；保留来源potentials，不推荐把此复数块当主动输出套句。原中文还提兴趣，英语块并未明确说兴趣。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "s:01034153"
+    },
+    "potentials": {
+      "zh": "潜在能力",
+      "example": "The leaflet uses the words \"develop inborn potentials\" without showing a lasting result.",
+      "exampleZh": "传单用了“发掘先天潜能”的措辞，却没有展示持久的结果。",
+      "usageNote": "识别传单引用的完整承诺。inborn指与生俱来的，potential在人的潜力义中通常不可数；保留来源potentials，不推荐把此复数块当主动输出套句。原中文还提兴趣，英语块并未明确说兴趣。 人的潜力通常用不可数potential；原复数词块保留用于识别广告，不推荐照抄为主动表达。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:14482620",
+      "forms": [
+        "potential"
+      ],
+      "externalReferences": [
+        {
+          "label": "Collins · potential",
+          "url": "https://www.collinsdictionary.com/us/dictionary/english/potential",
+          "accessedAt": "2026-10-02",
+          "evidenceType": "External evidence"
+        }
+      ]
+    },
+    "master": {
+      "zh": "熟练掌握（动词）",
+      "example": "The promise to \"master cutting-edge technology\" is larger than the activity Lin can observe.",
+      "exampleZh": "“熟练掌握前沿技术”的承诺超出了林能观察到的活动范围。",
+      "usageNote": "master是及物动词，表示达到熟练掌握程度；cutting-edge在此形容技术处于最新前沿。这个承诺要求的结果超出故事中的一次试用，供识别与改写。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "v:00597634"
+    },
+    "cutting": {
+      "zh": "cutting-edge整块中的最前沿的",
+      "example": "The promise to \"master cutting-edge technology\" is larger than the activity Lin can observe.",
+      "exampleZh": "“熟练掌握前沿技术”的承诺超出了林能观察到的活动范围。",
+      "usageNote": "master是及物动词，表示达到熟练掌握程度；cutting-edge在此形容技术处于最新前沿。这个承诺要求的结果超出故事中的一次试用，供识别与改写。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "noMatch": true,
+      "note": "master是及物动词，表示达到熟练掌握程度；cutting-edge在此形容技术处于最新前沿。这个承诺要求的结果超出故事中的一次试用，供识别与改写。 当前WordNet没有与此处词性、整块或精确用义相符的匹配；项目解释与外部参考另列。",
+      "externalReferences": [
+        {
+          "label": "Oxford · cutting-edge",
+          "url": "https://www.oxfordlearnersdictionaries.com/us/definition/english/cutting-edge_2",
+          "accessedAt": "2026-10-02",
+          "evidenceType": "External evidence"
+        }
+      ]
+    },
+    "edge": {
+      "zh": "cutting-edge整块中的最前沿的",
+      "example": "The promise to \"master cutting-edge technology\" is larger than the activity Lin can observe.",
+      "exampleZh": "“熟练掌握前沿技术”的承诺超出了林能观察到的活动范围。",
+      "usageNote": "master是及物动词，表示达到熟练掌握程度；cutting-edge在此形容技术处于最新前沿。这个承诺要求的结果超出故事中的一次试用，供识别与改写。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "noMatch": true,
+      "note": "master是及物动词，表示达到熟练掌握程度；cutting-edge在此形容技术处于最新前沿。这个承诺要求的结果超出故事中的一次试用，供识别与改写。 当前WordNet没有与此处词性、整块或精确用义相符的匹配；项目解释与外部参考另列。",
+      "externalReferences": [
+        {
+          "label": "Oxford · cutting-edge",
+          "url": "https://www.oxfordlearnersdictionaries.com/us/definition/english/cutting-edge_2",
+          "accessedAt": "2026-10-02",
+          "evidenceType": "External evidence"
+        }
+      ]
+    },
+    "cutting-edge": {
+      "zh": "cutting-edge整块中的最前沿的",
+      "example": "The promise to \"master cutting-edge technology\" is larger than the activity Lin can observe.",
+      "exampleZh": "“熟练掌握前沿技术”的承诺超出了林能观察到的活动范围。",
+      "usageNote": "master是及物动词，表示达到熟练掌握程度；cutting-edge在此形容技术处于最新前沿。这个承诺要求的结果超出故事中的一次试用，供识别与改写。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "noMatch": true,
+      "note": "master是及物动词，表示达到熟练掌握程度；cutting-edge在此形容技术处于最新前沿。这个承诺要求的结果超出故事中的一次试用，供识别与改写。 当前WordNet没有与此处词性、整块或精确用义相符的匹配；项目解释与外部参考另列。",
+      "externalReferences": [
+        {
+          "label": "Oxford · cutting-edge",
+          "url": "https://www.oxfordlearnersdictionaries.com/us/definition/english/cutting-edge_2",
+          "accessedAt": "2026-10-02",
+          "evidenceType": "External evidence"
+        }
+      ]
+    },
+    "motor": {
+      "zh": "与身体动作控制有关的",
+      "example": "The child uses motor skills when he changes his grip and draws another line.",
+      "exampleZh": "孩子改变握笔姿势并再画一条线时，运用了控制动作的技能。",
+      "usageNote": "本课观察手部动作控制：握笔、调整力度、画线。motor skills是复数名词块；源例句中的fine更具体指小肌肉动作，不把所有运动技能都限为手部。观察运用不证明一次活动已提高技能。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "noMatch": true,
+      "note": "本课观察手部动作控制：握笔、调整力度、画线。motor skills是复数名词块；源例句中的fine更具体指小肌肉动作，不把所有运动技能都限为手部。观察运用不证明一次活动已提高技能。 当前WordNet没有与此处词性、整块或精确用义相符的匹配；项目解释与外部参考另列。",
+      "externalReferences": [
+        {
+          "label": "Cambridge · motor, body movement",
+          "url": "https://dictionary.cambridge.org/dictionary/english/motor",
+          "accessedAt": "2026-10-02",
+          "evidenceType": "External evidence"
+        }
+      ]
+    },
+    "skills": {
+      "zh": "通过训练获得的技能",
+      "example": "The child uses motor skills when he changes his grip and draws another line.",
+      "exampleZh": "孩子改变握笔姿势并再画一条线时，运用了控制动作的技能。",
+      "usageNote": "本课观察手部动作控制：握笔、调整力度、画线。motor skills是复数名词块；源例句中的fine更具体指小肌肉动作，不把所有运动技能都限为手部。观察运用不证明一次活动已提高技能。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:05637558",
+      "forms": [
+        "skill"
+      ]
+    },
+    "adjusted": {
+      "zh": "调节；改变",
+      "example": "The child adjusted his grip before drawing the bridge again.",
+      "exampleZh": "孩子再次画桥前调整了握笔姿势。",
+      "usageNote": "adjust后接要调整的对象；grip在此是手握物件的方式。one's按人物换成his或her；故事adjusted his grip是已发生的动作，不是性格适应或电影工作人员义。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "v:00296178",
+      "forms": [
+        "adjust",
+        "adjusts",
+        "adjusting"
+      ]
+    },
+    "grip": {
+      "zh": "握住；握持方式",
+      "example": "The child adjusted his grip before drawing the bridge again.",
+      "exampleZh": "孩子再次画桥前调整了握笔姿势。",
+      "usageNote": "adjust后接要调整的对象；grip在此是手握物件的方式。one's按人物换成his或her；故事adjusted his grip是已发生的动作，不是性格适应或电影工作人员义。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:00812526",
+      "externalReferences": [
+        {
+          "label": "Cambridge · grip",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/grip",
+          "accessedAt": "2026-10-02",
+          "evidenceType": "External evidence"
+        }
+      ]
+    },
+    "controlled": {
+      "zh": "受控制的",
+      "example": "His hand made small, controlled movements on the paper.",
+      "exampleZh": "他的手在纸上作出幅度小且受到控制的动作。",
+      "usageNote": "本课描述孩子手部动作，而非对智力作判断。controlled修饰movements，表示动作得到控制；可与握笔和力度这两个可见细节一起说明。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "a:00598679"
+    },
+    "guidance": {
+      "zh": "指导；行动建议",
+      "example": "The child can try the drawing tool with guidance.",
+      "exampleZh": "孩子可以在指导下尝试绘画工具。",
+      "usageNote": "with + guidance说明开展活动时有建议或帮助。guidance通常不可数；这里来自志愿者，不表示单靠提供帮助就保证学习结果。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:06650701"
+    },
+    "develop": {
+      "zh": "培养、发展潜在能力",
+      "example": "The leaflet uses the words \"develop inborn potentials\" without showing a lasting result.",
+      "exampleZh": "传单用了“发掘先天潜能”的措辞，却没有展示持久的结果。",
+      "usageNote": "识别传单引用的完整承诺。inborn指与生俱来的，potential在人的潜力义中通常不可数；保留来源potentials，不推荐把此复数块当主动输出套句。原中文还提兴趣，英语块并未明确说兴趣。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "noMatch": true,
+      "note": "识别传单引用的完整承诺。inborn指与生俱来的，potential在人的潜力义中通常不可数；保留来源potentials，不推荐把此复数块当主动输出套句。原中文还提兴趣，英语块并未明确说兴趣。 当前WordNet没有与此处词性、整块或精确用义相符的匹配；项目解释与外部参考另列。",
+      "externalReferences": [
+        {
+          "label": "Cambridge · develop, grow",
+          "url": "https://dictionary.cambridge.org/dictionary/english/develop",
+          "accessedAt": "2026-10-02",
+          "evidenceType": "External evidence"
+        }
+      ]
+    }
+  },
+  "S05.C02": {
+    "visit": {
+      "zh": "短暂到访",
+      "example": "This visit lets Lin see the activity.",
+      "exampleZh": "这次到访让林看到了活动。",
+      "usageNote": "一次到访，不是看房或诊疗。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:01233156"
+    },
+    "line": {
+      "zh": "画在纸上的线条",
+      "example": "The child draws another line.",
+      "exampleZh": "孩子又画了一条线。",
+      "usageNote": "绘图线条，不是队列、电话线路。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:06799897",
+      "forms": [
+        "lines"
+      ]
+    },
+    "leaflet": {
+      "zh": "传单",
+      "example": "Lin reads the orange leaflet.",
+      "exampleZh": "林读着橙色传单。",
+      "usageNote": "本课单张宣传印纸；当前WN候选偏小册子，不冒充精确匹配。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "noMatch": true,
+      "note": "本课单张宣传印纸；当前WN候选偏小册子，不冒充精确匹配。 当前WordNet没有与此处词性、整块或精确用义相符的匹配；项目解释与外部参考另列。",
+      "externalReferences": [
+        {
+          "label": "Oxford · leaflet",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/leaflet_1",
+          "accessedAt": "2026-10-02",
+          "evidenceType": "External evidence"
+        }
+      ]
+    },
+    "guidance": {
+      "zh": "指导；行动建议",
+      "example": "Children can try a tool with patient guidance.",
+      "exampleZh": "孩子们可以在耐心指导下尝试工具。",
+      "usageNote": "复用上一课活动伴随帮助的同一整块意义。这里patient补充耐心的方式；活动可尝试，帮助条件本身不保证儿童认知发展。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:06650701"
+    },
+    "cognitive": {
+      "zh": "认知的；涉及思考理解的",
+      "example": "They discussed cognitive development while asking what the drawings could show.",
+      "exampleZh": "他们在追问画作能说明什么时，讨论了认知发展。",
+      "usageNote": "讨论儿童思考和理解逐渐变化的过程。cognitive修饰development；本课用它命名讨论主题，不从画线更直断定课程造成认知发展，也不把它与手部动作技能混成一项。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "a:02898584",
+      "externalReferences": [
+        {
+          "label": "Cambridge · cognitive",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/cognitive",
+          "accessedAt": "2026-10-02",
+          "evidenceType": "External evidence"
+        }
+      ]
+    },
+    "development": {
+      "zh": "逐渐发展到更成熟阶段的过程",
+      "example": "They discussed cognitive development while asking what the drawings could show.",
+      "exampleZh": "他们在追问画作能说明什么时，讨论了认知发展。",
+      "usageNote": "讨论儿童思考和理解逐渐变化的过程。cognitive修饰development；本课用它命名讨论主题，不从画线更直断定课程造成认知发展，也不把它与手部动作技能混成一项。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:13464820"
+    },
+    "erudite": {
+      "zh": "博学的；有深厚学识的（正式）",
+      "example": "The erudite professor kept her note about the drawings plain.",
+      "exampleZh": "这位博学的教授把关于画作的批注写得简明易懂。",
+      "usageNote": "形容词，可描述人或其作品展示出深厚学识。这里故事已把教授描述为博学；书多本身不构成判定学识的标准。放在识别层，不因其学识就把意见当成因果证据。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "s:02084358",
+      "externalReferences": [
+        {
+          "label": "Oxford · erudite",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/erudite",
+          "accessedAt": "2026-10-02",
+          "evidenceType": "External evidence"
+        }
+      ]
+    },
+    "observation": {
+      "zh": "从观察中得到的信息",
+      "example": "One observation starts a question about the straighter lines.",
+      "exampleZh": "一次观察引出了关于线条变直的问题。",
+      "usageNote": "在本课中指看见某项具体表现所得的观察信息。它可以引出问题，不能独自排除家庭练习等其他原因；不是已完成的完整科学实验。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:05818741"
+    },
+    "evidence": {
+      "zh": "支持判断的事实或信息；证据",
+      "example": "The drawings alone are not enough evidence that the course caused the change.",
+      "exampleZh": "仅凭这些画作，不足以证明变化是课程造成的。",
+      "usageNote": "复用研究课不可数名词义。本课三张画提供观察信息，但家庭练习未知，因此不足以证明变化由本课程引起；证据的范围要与声称的结论相称。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:05823932"
+    },
+    "cause": {
+      "zh": "导致；引起",
+      "example": "The drawings do not show that the course caused the change.",
+      "exampleZh": "这些画作没有表明变化是这门课程造成的。",
+      "usageNote": "本课及物动词，cause a change或cause + 名词。故事caused是过去式；否定句表示目前画作没有证明因果，不表示课程被证明完全没有作用。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "v:01645601",
+      "forms": [
+        "caused",
+        "causes",
+        "causing"
+      ]
+    },
+    "patient": {
+      "zh": "耐心的",
+      "example": "Patient guidance gives the child time to ask a question.",
+      "exampleZh": "耐心的指导给孩子时间提出一个问题。",
+      "usageNote": "形容词修饰guidance，描述指导者耐心帮助的方式。与诊所已有patients病人名词义分开；耐心指导是条件，不能直接当成效果已被证实。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "a:01735736",
+      "contrasts": [
+        {
+          "senseId": "n:10405694",
+          "zh": "病人（名词）",
+          "example": "The patient is waiting at the clinic.",
+          "exampleZh": "病人正在诊所等候。",
+          "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。"
+        }
+      ]
+    },
+    "plain": {
+      "zh": "简明的；简单的",
+      "example": "The professor kept her note plain.",
+      "exampleZh": "教授把批注写得简明。",
+      "usageNote": "本课文字清楚简单，不是平原名词。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "a:01791911"
+    },
+    "note": {
+      "zh": "批注；解释文字",
+      "example": "The professor writes a note beside the drawings.",
+      "exampleZh": "教授在画旁写了一条批注。",
+      "usageNote": "纸上解释说明，不是租约备注。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:06763273"
+    },
+    "work": {
+      "zh": "作品；成果",
+      "example": "The parent looks at the child’s work.",
+      "exampleZh": "家长看孩子的作品。",
+      "usageNote": "本课名词作品，不是工作地点。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:04599396"
+    },
+    "alone": {
+      "zh": "仅凭；单单",
+      "example": "The drawings alone do not show the cause.",
+      "exampleZh": "仅凭这些画不能说明原因。",
+      "usageNote": "副词限定证据范围，不是独自一个人的形容词。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "r:00008600"
+    },
+    "full": {
+      "zh": "装满的",
+      "example": "The shelves are full of books.",
+      "exampleZh": "书架上装满了书。",
+      "usageNote": "full of + 内容，不是完整无缺。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "a:01083157"
+    },
+    "date": {
+      "zh": "记录的日期",
+      "example": "Each drawing has a date.",
+      "exampleZh": "每张画都有一个日期。",
+      "usageNote": "作品记录的日期，不是租住开始日或约会。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:15160579",
+      "forms": [
+        "dates"
+      ]
+    },
+    "over": {
+      "zh": "over time中的随着时间推移",
+      "example": "Changes develop over time.",
+      "exampleZh": "变化随着时间逐渐发展。",
+      "usageNote": "本例over是时间介词；不匹配当前WN时间副词，也不是移交物件。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "noMatch": true,
+      "note": "本例over是时间介词；不匹配当前WN时间副词，也不是移交物件。 当前WordNet没有与此处词性、整块或精确用义相符的匹配；项目解释与外部参考另列。"
+    },
+    "develop": {
+      "zh": "逐渐发展",
+      "example": "Changes in understanding develop over time.",
+      "exampleZh": "理解上的变化随着时间逐渐发展。",
+      "usageNote": "不及物进展义，与传单develop potentials的及物培养用义分开。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "v:00252019"
+    }
+  },
+  "S11.A01": {
+    "raise": {
+      "zh": "筹集钱款",
+      "example": "We are raising money for another water station.",
+      "exampleZh": "我们正在为另一座饮水站筹款。",
+      "usageNote": "raise money for + 用途，表示筹集钱款。不是提高某个金额，也不暗示筹款已获得照片许可。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "v:02306281",
+      "forms": [
+        "raising",
+        "raised",
+        "raises"
+      ]
+    },
+    "delighted": {
+      "zh": "很高兴的",
+      "example": "Lin is delighted to help with the water station.",
+      "exampleZh": "林很高兴帮忙建设饮水站。",
+      "usageNote": "delighted是很高兴的；to help说明乐意做的事。帮助项目不等于同意任何宣传方式。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "s:01805730"
+    },
+    "momentarily": {
+      "zh": "短暂地；片刻",
+      "example": "Lin is momentarily unsure when Mrs Mei sees the photograph.",
+      "exampleZh": "梅太太看到照片时，林一时拿不准情况。",
+      "usageNote": "本课momentarily unsure指短暂不确定。另有“很快；马上”义，不能在同一句中混用。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "r:00092814",
+      "contrasts": [
+        {
+          "senseId": "r:00034403",
+          "zh": "马上；很快",
+          "example": "The manager will be with you momentarily.",
+          "exampleZh": "经理很快就会来见你。",
+          "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。"
+        }
+      ]
+    },
+    "expression": {
+      "zh": "面部表情",
+      "example": "Mrs Mei’s expression changes when she sees the photograph.",
+      "exampleZh": "梅太太看到照片时，表情变了。",
+      "usageNote": "本课可看见的脸部表情；不是词语表达或数学表达式。表情变化提示需要询问，不能代替本人答复。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:04679738",
+      "contrasts": [
+        {
+          "senseId": "n:07151380",
+          "zh": "惯用词语或表达",
+          "example": "We checked the meaning of an unfamiliar expression.",
+          "exampleZh": "我们查了一个不熟悉的表达的意思。",
+          "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。"
+        }
+      ]
+    },
+    "candour": {
+      "zh": "坦率；真诚直言",
+      "example": "Mrs Mei answers with candour and explains her choice.",
+      "exampleZh": "梅太太坦率地回答，解释自己的选择。",
+      "usageNote": "英式拼写candour，美式candor。本课说明她诚实说出自己的意愿，不要求弱基础学习者用此抽象名词作拒绝。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:04871720",
+      "forms": [
+        "candor"
+      ]
+    },
+    "confidant": {
+      "zh": "可倾诉私事的知己",
+      "example": "Her confidant listens without answering for her.",
+      "exampleZh": "她的知己倾听，没有替她回答。",
+      "usageNote": "本课坐在旁边、值得信任的志愿者。confidant名词与confident自信的形容词不同；知己不代替本人作决定。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:09954639"
+    },
+    "resent": {
+      "zh": "对……感到怨愤；介意不公平的对待",
+      "example": "She would resent being shown only as someone who needs help.",
+      "exampleZh": "她会介意被展示成一个只需要帮助的人。",
+      "usageNote": "resent + 名词或doing，例句用被动being shown。可以先用do not want表达意愿，再识别较强的resent。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "v:01773346",
+      "forms": [
+        "resented",
+        "resents"
+      ],
+      "externalReferences": [
+        {
+          "label": "Cambridge · resent, +doing",
+          "url": "https://dictionary.cambridge.org/us/dictionary/learner-english/resent",
+          "accessedAt": "2026-10-02",
+          "evidenceType": "External evidence"
+        }
+      ]
+    },
+    "treatment": {
+      "zh": "对待某人的方式",
+      "example": "The treatment of a neighbour matters when we design the poster.",
+      "exampleZh": "设计海报时，怎样对待邻居很重要。",
+      "usageNote": "本课邻里之间怎样对待一个人，不是医疗治疗。名词the treatment of someone。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:01134861",
+      "contrasts": [
+        {
+          "senseId": "n:00658082",
+          "zh": "医疗治疗",
+          "example": "The patient asked about medical treatment.",
+          "exampleZh": "病人询问了医疗治疗。",
+          "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。"
+        }
+      ]
+    },
+    "permission": {
+      "zh": "许可",
+      "example": "Ask for permission before using the photograph on the poster.",
+      "exampleZh": "在海报上使用照片之前，先征求许可。",
+      "usageNote": "先明确要做什么，再让本人作选择。询问并不代表已获同意；支持项目也不代表同意照片使用。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:06689297"
+    },
+    "comfortable": {
+      "zh": "心理上愿意接受的；自在的",
+      "example": "Would you be comfortable with us using this photograph on the poster?",
+      "exampleZh": "你愿意让我们在海报上使用这张照片吗？",
+      "usageNote": "with后可接名词或us + doing，询问心理上是否愿意接受特定使用。这里comfortable不是椅子坐着舒适。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "a:00479330",
+      "contrasts": [
+        {
+          "senseId": "a:00476819",
+          "zh": "身体上舒适的",
+          "example": "The chair is comfortable to sit in.",
+          "exampleZh": "这把椅子坐着很舒适。",
+          "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。"
+        }
+      ]
+    }
+  },
+  "S11.A02": {
+    "weakness": {
+      "zh": "计划中的薄弱环节；缺陷",
+      "example": "There is a weakness in our plan: we did not ask permission.",
+      "exampleZh": "我们的计划有个缺口：我们没有征求许可。",
+      "usageNote": "a weakness in our plan指出流程缺少一环；不是批评邻居的身体能力，也不等于计划完全不可行。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:14462946"
+    },
+    "humility": {
+      "zh": "谦逊；不自大",
+      "example": "Asha accepts the criticism with humility and adds the missing step.",
+      "exampleZh": "阿莎谦逊地接受批评，补上缺失步骤。",
+      "usageNote": "本课阿莎愿意接受批评的态度。识别层，不强迫与modesty同时输出；具体说I missed a step更易调用。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:04889527"
+    },
+    "modesty": {
+      "zh": "谦虚；不夸耀自己",
+      "example": "Mrs Mei answers the praise with modesty.",
+      "exampleZh": "梅太太谦虚地回应称赞。",
+      "usageNote": "本课梅太太受到称赞后没有夸大自己的贡献。与humility有语义重叠，此处按不同互动识别，不教学成完全互斥。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:04900947"
+    },
+    "vanity": {
+      "zh": "虚荣；过分看重自己的形象",
+      "example": "Asha says that the project must not be about her own vanity.",
+      "exampleZh": "阿莎说，项目不能围着她自己的虚荣转。",
+      "usageNote": "本课过度关注自己姓名与名声的态度，不是浴室洗手柜或徒劳无价值义。识别层，不靠抽象态度列表完成任务。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:04887129",
+      "contrasts": [
+        {
+          "senseId": "n:03238586",
+          "zh": "梳妆台",
+          "example": "She put the mirror on the vanity.",
+          "exampleZh": "她把镜子放在梳妆台上。",
+          "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。"
+        }
+      ]
+    },
+    "estimate": {
+      "zh": "尚待确认的费用估计",
+      "example": "The cost is an estimate until the supplier gives us a price.",
+      "exampleZh": "供应商给我们价格之前，这个费用只是估计。",
+      "usageNote": "可数名词an estimate，本课供应商还没给正式价格。复用住房费用估计义，课程例句与词义注独立。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:05803379"
+    },
+    "permission": {
+      "zh": "许可",
+      "example": "We will ask for permission before using any photograph.",
+      "exampleZh": "我们会在使用任何照片之前征求许可。",
+      "usageNote": "计划中新添的步骤；许可需要针对用途取得，不由计划里写了这一步自动产生。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "n:06689297"
+    },
+    "raise": {
+      "zh": "筹集钱款",
+      "example": "Personal stories can help raise money for a reading room.",
+      "exampleZh": "个人故事可以帮助为阅读室筹款。",
+      "usageNote": "复用前课筹款表达；本课迁移到阅读室。不是本课新增来源词，源记录仍来自S11.A01。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "v:02306281"
+    },
+    "steer": {
+      "zh": "steer clear of整块中表示避开",
+      "example": "The team will steer clear of pictures that invite pity for a neighbour.",
+      "exampleZh": "团队会避开让邻居引起怜悯的图片。",
+      "usageNote": "习语后接人、事物或doing，本课避免让邻居引起怜悯的图片。不是驾驶方向；可先用avoid表达。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "noMatch": true,
+      "note": "习语后接人、事物或doing，本课避免让邻居引起怜悯的图片。不是驾驶方向；可先用avoid表达。 当前WordNet没有与此处词性、整块或精确用义相符的匹配；项目解释与外部参考另列。",
+      "externalReferences": [
+        {
+          "label": "Cambridge · steer clear of",
+          "url": "https://dictionary.cambridge.org/dictionary/english/steer-clear-of",
+          "accessedAt": "2026-10-02",
+          "evidenceType": "External evidence"
+        }
+      ]
+    },
+    "clear": {
+      "zh": "透明的",
+      "example": "Lin returns to the clear donation box.",
+      "exampleZh": "林回到透明捐款箱旁。",
+      "usageNote": "本课clear修饰箱子，指可以看见里面；steer clear of须整体阅读。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "a:00431447",
+      "uses": [
+        {
+          "zh": "steer clear of整块中表示避开",
+          "example": "The team will steer clear of pictures that invite pity for a neighbour.",
+          "exampleZh": "团队会避开让邻居引起怜悯的图片。",
+          "usageNote": "习语后接人、事物或doing，本课避免让邻居引起怜悯的图片。不是驾驶方向；可先用avoid表达。",
+          "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+          "noMatch": true,
+          "note": "习语后接人、事物或doing，本课避免让邻居引起怜悯的图片。不是驾驶方向；可先用avoid表达。 当前WordNet没有与此处词性、整块或精确用义相符的匹配；项目解释与外部参考另列。",
+          "externalReferences": [
+            {
+              "label": "Cambridge · steer clear of",
+              "url": "https://dictionary.cambridge.org/dictionary/english/steer-clear-of",
+              "accessedAt": "2026-10-02",
+              "evidenceType": "External evidence"
+            }
+          ],
+          "id": "avoid",
+          "pattern": "steer clear of",
+          "senseId": null
+        }
+      ]
+    },
+    "of": {
+      "zh": "……的；关系介词",
+      "example": "A drawing of the station is on the poster.",
+      "exampleZh": "海报上有一张饮水站的画。",
+      "usageNote": "这里of连接画和它的内容；若在steer clear of中则读整块避开。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "noMatch": true,
+      "note": "这里of连接画和它的内容；若在steer clear of中则读整块避开。 当前WordNet没有与此处词性、整块或精确用义相符的匹配；项目解释与外部参考另列。",
+      "uses": [
+        {
+          "zh": "steer clear of整块中表示避开",
+          "example": "The team will steer clear of pictures that invite pity for a neighbour.",
+          "exampleZh": "团队会避开让邻居引起怜悯的图片。",
+          "usageNote": "习语后接人、事物或doing，本课避免让邻居引起怜悯的图片。不是驾驶方向；可先用avoid表达。",
+          "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+          "noMatch": true,
+          "note": "习语后接人、事物或doing，本课避免让邻居引起怜悯的图片。不是驾驶方向；可先用avoid表达。 当前WordNet没有与此处词性、整块或精确用义相符的匹配；项目解释与外部参考另列。",
+          "externalReferences": [
+            {
+              "label": "Cambridge · steer clear of",
+              "url": "https://dictionary.cambridge.org/dictionary/english/steer-clear-of",
+              "accessedAt": "2026-10-02",
+              "evidenceType": "External evidence"
+            }
+          ],
+          "id": "avoid",
+          "pattern": "steer clear of",
+          "senseId": null
+        }
+      ]
+    },
+    "mark": {
+      "zh": "标示；加标签",
+      "example": "Mark the cost as an estimate until the price is confirmed.",
+      "exampleZh": "价格确认前，把费用标为估计。",
+      "usageNote": "mark + 对象 + as + 类别或状态，准确标出费用只是估计，不当作已确认价格。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "senseId": "v:01588493",
+      "forms": [
+        "marked",
+        "marking",
+        "marks"
+      ]
+    },
+    "can": {
+      "zh": "可以；获允许",
+      "example": "We can use personal stories, but only if people agree to this use.",
+      "exampleZh": "我们可以使用个人故事，但前提是当事人同意这种用途。",
+      "usageNote": "本课can表示允许这样使用，only if给必要许可条件；不是说故事在没有同意时物理上不能筹到钱。",
+      "provenance": "External evidence · WordNet原义保留；Researcher inference · 项目选义与原创双语例句，不是词典原例句。",
+      "noMatch": true,
+      "note": "本课can表示允许这样使用，only if给必要许可条件；不是说故事在没有同意时物理上不能筹到钱。 当前WordNet没有与此处词性、整块或精确用义相符的匹配；项目解释与外部参考另列。",
+      "externalReferences": [
+        {
+          "label": "Cambridge Grammar · can",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/can-could",
+          "accessedAt": "2026-10-02",
+          "evidenceType": "External evidence"
+        }
+      ]
+    }
+  }
+}

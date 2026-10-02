@@ -9,19 +9,52 @@
       "object": "Unfinished ledger",
       "zh": "未填完整的账本",
       "cue": "What is the money for, and what information is missing?",
-      "cueZh": "要为什么筹款，还缺哪项信息？"
+      "cueZh": "要为什么筹款，还缺哪项信息？",
+      "id": "S11.A01.L01",
+      "location": "At the unfinished ledger, beside the donation box.",
+      "locationZh": "未填完整的账本旁，挨着捐款箱。",
+      "previous": null,
+      "next": "S11.A01.L02",
+      "anchorUnitIds": [
+        "U.LEGACY.S11.A01.RAISE",
+        "U.LEGACY.S11.A01.DELIGHTED"
+      ]
     },
     {
       "object": "Unapproved photograph",
       "zh": "未获许可的照片",
       "cue": "What question must Asha ask before displaying it?",
-      "cueZh": "展示前阿莎应先问什么？"
+      "cueZh": "展示前阿莎应先问什么？",
+      "id": "S11.A01.L02",
+      "location": "At the poster table, with the photograph still unattached.",
+      "locationZh": "海报桌旁，照片还没有贴上。",
+      "previous": "S11.A01.L01",
+      "next": "S11.A01.L03",
+      "anchorUnitIds": [
+        "U.LEGACY.S11.A01.MOMENTARILY",
+        "U.LEGACY.S11.A01.EXPRESSION",
+        "U.PERMISSION.ASK",
+        "U.LEGACY.S11.A01.COMFORTABLE"
+      ]
     },
     {
       "object": "Quiet chair",
       "zh": "安静角落的椅子",
       "cue": "What does Mrs Mei choose, and what alternative does she suggest?",
-      "cueZh": "梅太太作出什么选择，又提出什么替代方案？"
+      "cueZh": "梅太太作出什么选择，又提出什么替代方案？",
+      "id": "S11.A01.L03",
+      "location": "At the quiet chair, listening to Mrs Mei’s choice.",
+      "locationZh": "安静角落的椅子旁，听梅太太作出选择。",
+      "previous": "S11.A01.L02",
+      "next": null,
+      "anchorUnitIds": [
+        "U.LEGACY.S11.A01.CANDOUR",
+        "U.LEGACY.S11.A01.CONFIDANT",
+        "U.LEGACY.S11.A01.RESENT",
+        "U.LEGACY.S11.A01.TREATMENT",
+        "U.LEGACY.S11.A01.REFUSE",
+        "U.LEGACY.S11.A01.ALTERNATIVE"
+      ]
     }
   ],
   "situation": "The clear donation box held only a few coins. Asha wanted to raise money for another drinking-water station. Lin was delighted to help, but the cost was still missing from the ledger. At the next table, a draft poster showed Mrs Mei beside her walking frame. Her expression changed. Lin was momentarily unsure what to say. Asha put down the tape. \"Would you be comfortable with us using this photograph on the poster?\" she asked. Mrs Mei answered with candour. \"I support the station, but please do not use my photograph. I would resent being shown only as someone who needs help.\" She sat on a chair in a quiet corner with her confidant, an older volunteer, who did not speak for her. \"The treatment of a neighbour matters,\" Mrs Mei added. \"Let us show the station instead.\" Asha turned the draft face down. \"Of course. How about a drawing of the station and its location?\" The tape stayed on the table.",
@@ -152,6 +185,100 @@
       "note": "treatment 在此是对人的态度和行为，不是医疗。",
       "type": "chunk",
       "sourceTerm": "treatment"
+    },
+    {
+      "id": "S11.A01.UG01",
+      "text": "momentarily",
+      "zh": "短暂地；片刻",
+      "note": "本课momentarily unsure指短暂不确定。另有“很快；马上”义，不能在同一句中混用。",
+      "type": "word",
+      "sourceTerm": "momentarily"
+    },
+    {
+      "id": "S11.A01.UG02",
+      "text": "expression",
+      "zh": "面部表情",
+      "note": "本课可看见的脸部表情；不是词语表达或数学表达式。表情变化提示需要询问，不能代替本人答复。",
+      "type": "word",
+      "sourceTerm": "expression"
+    },
+    {
+      "id": "S11.A01.UG03",
+      "text": "candour",
+      "zh": "坦率；真诚直言",
+      "note": "英式拼写candour，美式candor。本课说明她诚实说出自己的意愿，不要求弱基础学习者用此抽象名词作拒绝。",
+      "type": "word",
+      "sourceTerm": "candour"
+    },
+    {
+      "id": "S11.A01.UG04",
+      "text": "confidant",
+      "zh": "可倾诉私事的知己",
+      "note": "本课坐在旁边、值得信任的志愿者。confidant名词与confident自信的形容词不同；知己不代替本人作决定。",
+      "type": "word",
+      "sourceTerm": "confidant"
+    },
+    {
+      "id": "S11.A01.UG05",
+      "text": "resent",
+      "zh": "对……感到怨愤；介意不公平的对待",
+      "note": "resent + 名词或doing，例句用被动being shown。可以先用do not want表达意愿，再识别较强的resent。",
+      "type": "word",
+      "sourceTerm": "resent"
+    },
+    {
+      "id": "S11.A01.UG06",
+      "text": "treatment",
+      "zh": "对待某人的方式",
+      "note": "本课邻里之间怎样对待一个人，不是医疗治疗。名词the treatment of someone。",
+      "type": "word",
+      "sourceTerm": "treatment"
+    },
+    {
+      "id": "S11.A01.UG07",
+      "text": "ask for permission",
+      "zh": "征求许可",
+      "note": "先明确要做什么，再让本人作选择。询问并不代表已获同意；支持项目也不代表同意照片使用。",
+      "type": "chunk",
+      "matchTexts": [
+        "ask for permission",
+        "asking permission",
+        "asking for permission",
+        "ask permission"
+      ]
+    },
+    {
+      "id": "S11.A01.UG08",
+      "text": "Would you be comfortable with …?",
+      "zh": "这样做你觉得可以吗？",
+      "note": "with后可接名词或us + doing，询问心理上是否愿意接受特定使用。这里comfortable不是椅子坐着舒适。",
+      "type": "construction",
+      "matchTexts": [
+        "Would you be comfortable with us using this photograph",
+        "Would you be comfortable with us using this photograph on the poster?",
+        "Would you be comfortable with that?"
+      ]
+    },
+    {
+      "id": "S11.A01.UG09",
+      "text": "Please do not …",
+      "zh": "请不要……",
+      "note": "Please do not + 动词原形；礼貌但清楚地拒绝一个动作，不必为自己的选择编造理由。",
+      "type": "construction",
+      "matchTexts": [
+        "Please do not use my photograph."
+      ]
+    },
+    {
+      "id": "S11.A01.UG10",
+      "text": "How about … instead?",
+      "zh": "改用……怎么样？",
+      "note": "How about + 名词或doing提出替代方案；instead强调替代，也可省略。接受拒绝后询问替代，不把替代方案当作已获许可。",
+      "type": "construction",
+      "matchTexts": [
+        "How about a drawing of the station instead?",
+        "How about a drawing of the station and its location?"
+      ]
     }
   ],
   "retrievalPrompts": [
@@ -164,7 +291,20 @@
       ],
       "feedback": "Name the photograph and where it will appear. A request is not permission.",
       "activity": "request",
-      "targetTerms": []
+      "targetTerms": [],
+      "unitIds": [
+        "U.PERMISSION.ASK",
+        "U.LEGACY.S11.A01.COMFORTABLE"
+      ],
+      "cueZh": "要在社区海报上使用梅太太的一张照片。说明具体用途并询问她是否愿意。",
+      "checks": [
+        "说明是哪张照片。",
+        "说明会用在社区海报。",
+        "给本人明确作选择的机会。"
+      ],
+      "feedbackZh": "问清用途并等待答复，不能把提出请求当成已获同意。",
+      "taskMode": "recall",
+      "unitVersion": "pilot-17-0"
     },
     {
       "id": "S11.A01.P02",
@@ -175,7 +315,20 @@
       ],
       "feedback": "A refusal can be clear and polite. Supporting the project does not imply agreeing to a photograph.",
       "activity": "opinion",
-      "targetTerms": []
+      "targetTerms": [],
+      "unitIds": [
+        "U.LEGACY.S11.A01.REFUSE",
+        "U.LEGACY.S11.A01.ALTERNATIVE"
+      ],
+      "cueZh": "梅太太支持饮水站，却不愿展示自己的照片。以她的身份清楚拒绝，并提议换一张图。",
+      "checks": [
+        "明确不愿使用自己的照片。",
+        "提出饮水站图片等可行替代。",
+        "不把支持筹款说成同意照片使用。"
+      ],
+      "feedbackZh": "拒绝可以简短；替代建议不能削弱原来的拒绝。",
+      "taskMode": "recall",
+      "unitVersion": "pilot-17-0"
     },
     {
       "id": "S11.A01.P03",
@@ -189,7 +342,21 @@
       "activity": "explain",
       "targetTerms": [
         "resent"
-      ]
+      ],
+      "unitIds": [
+        "U.LEGACY.S11.A01.RESENT",
+        "U.LEGACY.S11.A01.TREATMENT",
+        "U.LEGACY.S11.A01.ALTERNATIVE"
+      ],
+      "cueZh": "在安静椅子旁，说明梅太太不愿被怎样展示、希望海报改展示什么。",
+      "checks": [
+        "说明她不想只被看作需要帮助的人。",
+        "换成饮水站。",
+        "允许用简单的does not want表达。"
+      ],
+      "feedbackZh": "先说出她本人的意愿；识别词candour与confidant不必硬塞进回答。",
+      "taskMode": "recall",
+      "unitVersion": "pilot-17-0"
     }
   ],
   "transferPrompt": {
@@ -201,7 +368,36 @@
     ],
     "feedback": "Change the purpose and location of use. Leave the person a real choice.",
     "activity": "request",
-    "targetTerms": []
+    "targetTerms": [],
+    "unitIds": [
+      "U.PERMISSION.ASK",
+      "U.LEGACY.S11.A01.COMFORTABLE",
+      "U.LEGACY.S11.A01.ALTERNATIVE"
+    ],
+    "cueZh": "另一家图书馆想把志愿者的照片放到公开网站。写短请求，说明用途，并在对方不愿意时提供选择。",
+    "checks": [
+      "用途换成图书馆公开网站。",
+      "询问本人。",
+      "提供不使用本人照片的替代。"
+    ],
+    "feedbackZh": "迁移的是具体询问与真实选择，不是机械复述社区海报。",
+    "taskMode": "transfer",
+    "unitVersion": "pilot-17-0"
   },
-  "learningUnitIds": []
+  "learningUnitIds": [
+    "U.LEGACY.S11.A01.RAISE",
+    "U.LEGACY.S11.A01.DELIGHTED",
+    "U.LEGACY.S11.A01.MOMENTARILY",
+    "U.LEGACY.S11.A01.EXPRESSION",
+    "U.LEGACY.S11.A01.CANDOUR",
+    "U.LEGACY.S11.A01.CONFIDANT",
+    "U.LEGACY.S11.A01.RESENT",
+    "U.LEGACY.S11.A01.TREATMENT",
+    "U.PERMISSION.ASK",
+    "U.LEGACY.S11.A01.COMFORTABLE",
+    "U.LEGACY.S11.A01.REFUSE",
+    "U.LEGACY.S11.A01.ALTERNATIVE"
+  ],
+  "easySummary": "Asha wants to raise money for a water station. Before using a photograph on the poster, she asks Mrs Mei. Mrs Mei supports the station but does not want her photograph used. Asha accepts the answer and offers a drawing of the station instead.",
+  "easySummaryZh": "阿莎想为饮水站筹款。她在使用海报照片前询问梅太太。梅太太支持饮水站，但不愿使用自己的照片。阿莎接受她的答复，改提画一张饮水站的图。"
 }

@@ -224,7 +224,7 @@
       "a patient smile": "一个耐心的微笑。",
       "was patient with the children": "对孩子们很有耐心。",
       "an exact and patient scientist": "一位严谨而有耐心的科学家。",
-      "please be patient": "请耐心等候。"
+      "please be patient": "请耐心等待。"
     }
   },
   "a:02760116": {
@@ -334,7 +334,7 @@
   },
   "n:05803379": {
     "examples": {
-      "an estimate of what it would cost": "对所需费用的估算"
+      "an estimate of what it would cost": "对所需费用的估计"
     }
   },
   "n:01232091": {
@@ -389,6 +389,92 @@
   "v:00918872": {
     "examples": {
       "find the product of two numbers": "求两个数的乘积"
+    }
+  },
+  "n:03290771": {
+    "examples": {
+      "they waited at the entrance to the garden": "他们在花园入口等候。"
+    }
+  },
+  "n:06799897": {
+    "examples": {
+      "He drew a line on the chart": "他在图表上画了一条线。"
+    }
+  },
+  "a:01918984": {
+    "examples": {
+      "the room was dark and quiet": "房间昏暗而安静。"
+    }
+  },
+  "n:13777764": {
+    "examples": {
+      "room to pass": "可供通过的空间",
+      "hardly enough elbow room to turn around": "活动空间小得几乎无法转身。"
+    }
+  },
+  "v:00597634": {
+    "examples": {
+      "She mastered Japanese in less than two years": "她用了不到两年就熟练掌握了日语。"
+    }
+  },
+  "n:00812526": {
+    "examples": {
+      "she kept a firm hold on the railing": "她牢牢握着栏杆。"
+    }
+  },
+  "n:13464820": {
+    "examples": {
+      "the development of his ideas took many years": "他的想法经过多年才逐渐发展起来。"
+    }
+  },
+  "s:02084358": {
+    "examples": {
+      "an erudite professor": "一位博学的教授"
+    }
+  },
+  "a:01083157": {
+    "examples": {
+      "a full glass": "装满的杯子"
+    }
+  },
+  "v:00252019": {
+    "examples": {
+      "This situation has developed over a long time": "这种局面是经过很长时间逐渐形成的。"
+    }
+  },
+  "v:02306281": {
+    "examples": {
+      "The President raised several million dollars for his college": "那位President（总统或机构负责人）为自己的学院筹集了数百万美元。"
+    }
+  },
+  "r:00092814": {
+    "examples": {
+      "we paused momentarily before proceeding": "我们暂停了片刻，然后继续。"
+    }
+  },
+  "n:04679738": {
+    "examples": {
+      "a sad expression": "悲伤的表情"
+    }
+  },
+  "v:01773346": {
+    "examples": {
+      "She resents being paid less than her co-workers": "她对薪酬低于同事感到怨愤。"
+    }
+  },
+  "n:06689297": {
+    "examples": {
+      "he asked permission to leave": "他请求获准离开。"
+    }
+  },
+  "a:00479330": {
+    "examples": {
+      "she felt comfortable with her fiance's parents": "她与未婚夫的父母相处时感到自在。"
+    }
+  },
+  "v:02721438": {
+    "examples": {
+      "This leaves no room for improvement": "这没有留下改进的余地。"
     }
   }
 }
