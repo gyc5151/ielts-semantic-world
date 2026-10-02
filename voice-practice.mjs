@@ -10,13 +10,13 @@ export function speakSentence(text, onStatus = () => {}, onComplete = () => {}) 
   const voices = speechSynthesis.getVoices();
   utterance.voice = voices.find((v) => v.lang === "en-GB") || voices.find((v) => /^en[-_]/i.test(v.lang)) || null;
   utterance.onerror = () => onStatus("朗读未完成，可重试或继续文字练习。");
-  utterance.onend = () => { onComplete(); onStatus("朗读结束。合成语音用于练习，不提供发音评分。"); };
-  onStatus("正在朗读 · 浏览器合成语音");
+  utterance.onend = () => { onComplete(); onStatus("播放结束"); };
+  onStatus("正在播放");
   speechSynthesis.speak(utterance);
 }
 export function mountRecorder(host, onReady) {
   let stream, recorder, blobUrl, timer, cancelled = false, chunks = [], seconds = 0, recordingBlob = null;
-  host.innerHTML = `<details class="oral-panel"><summary>先口头回答，再回听</summary><p>点击后请求麦克风权限。最多录两分钟，仅保留在本次页面会话；提交保存自评和录音时长。录音不会自动转写或判分。</p><div class="button-row"><button type="button" class="secondary-btn" data-record>开始录音</button><button type="button" class="secondary-btn" data-stop disabled>停止</button></div><p role="status" data-voice-status></p><audio controls data-recording hidden aria-label="回听自己的回答"></audio><button type="button" class="secondary-btn" data-use-recording hidden>用这次口头回答查看反馈</button></details>`;
+  host.innerHTML = `<details class="oral-panel"><summary>先口头回答，再回听</summary><p>录音最长两分钟，离开本题后不保留。</p><div class="button-row"><button type="button" class="secondary-btn" data-record>开始录音</button><button type="button" class="secondary-btn" data-stop disabled>停止</button></div><p role="status" data-voice-status></p><audio controls data-recording hidden aria-label="回听自己的回答"></audio><button type="button" class="secondary-btn" data-use-recording hidden>用这次口头回答查看反馈</button></details>`;
   const start = host.querySelector("[data-record]"), stop = host.querySelector("[data-stop]"), use = host.querySelector("[data-use-recording]"), player = host.querySelector("audio"), status = host.querySelector("[data-voice-status]");
   if (!navigator.mediaDevices?.getUserMedia || !window.MediaRecorder) { start.disabled = true; status.textContent = "此浏览器暂不能录音；你仍可自行口头回答并继续文字练习。"; }
   const release = () => { stream?.getTracks().forEach((t) => t.stop()); clearInterval(timer); };
@@ -38,7 +38,7 @@ export function mountRecorder(host, onReady) {
         start.disabled = false; stop.disabled = true;
         if (!blob.size) { status.textContent = "没有录到音频，请重试。"; return; }
         blobUrl = URL.createObjectURL(blob); player.src = blobUrl; player.hidden = false; use.hidden = false;
-        status.textContent = "录音结束，请回听后再提交；记录会标为口头自评。";
+        status.textContent = "录音完成";
       });
       recorder.start(); stop.disabled = false;
       status.textContent = "正在录音 · 0秒";

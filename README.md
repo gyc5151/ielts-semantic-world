@@ -4,7 +4,7 @@ Situation → Language: learn English through decisions, objects and events.
 
 **[Open the learning website](https://gyc5151.github.io/ielts-semantic-world/)**
 
-## Current version: pilot-17-0
+## Current version: pilot-18-0
 
 13 routes, 51 short bilingual scenes, 213 retrieval/transfer tasks:
 

@@ -5,52 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#f6f4ee" />
     <title>IELTS Semantic World · Scene Branches</title>
-    <link rel="stylesheet" href="./styles.css?v=pilot-17-0" />
-    <link rel="stylesheet" href="./themes.css?v=pilot-17-0" />
+    <link rel="stylesheet" href="./styles.css?v=pilot-18-0" />
+    <link rel="stylesheet" href="./themes.css?v=pilot-18-0" />
   </head>
   <body>
     <div class="app-shell">
       <aside class="sidebar" aria-label="学习导航">
         <a class="brand" href="#home" id="brandLink">
           <span class="brand-mark" aria-hidden="true">ISW</span>
-          <span><strong>IELTS Semantic World</strong><small>Situation → Language</small></span>
+          <span><strong>IELTS Semantic World</strong></span>
         </a>
         <div class="sidebar-section">
           <div class="eyebrow" id="sidebarEyebrow">IELTS / SEMANTIC WORLD</div>
-          <h2 id="sidebarTitle">从一个场景，走进一个世界。</h2>
-          <p class="meta" id="sidebarDescription">今天只选一条路，沿着物件说出事件。</p>
+          <h2 id="sidebarTitle">场景</h2>
+          <p class="meta" id="sidebarDescription" hidden></p>
         </div>
         <p class="scene-nav-hint" id="sceneNavHint"></p>
         <nav class="scene-nav" id="sceneNav" aria-label="微场景"></nav>
         <div class="sidebar-section sidebar-bottom">
-          <div class="progress-label"><span>本地练习记录</span><strong id="progressCount">0 / 0</strong></div>
+          <div class="progress-label"><span>练习进度</span><strong id="progressCount">0 / 0</strong></div>
           <div class="progress" aria-hidden="true"><div class="progress-track"><span class="progress-fill" id="progressBar"></span></div></div>
           <div class="sidebar-actions">
             <button class="secondary-btn" type="button" id="reviewNav">到期复习 <span id="dueCount">0</span></button>
             <button class="text-btn" type="button" id="exportBtn">导出记录</button>
           </div>
-          <p class="tiny-note">进度只保存在当前浏览器；本版不上传答题内容。</p>
         </div>
       </aside>
 
       <div class="content-column">
         <header class="topbar">
-          <span class="eyebrow" id="sceneCountLabel">文字原型 · 微场景</span>
+          <span class="eyebrow" id="sceneCountLabel">IELTS Semantic World</span>
           <div class="topbar-actions">
             <button class="text-btn" type="button" id="homeNav">学习路线</button>
             <button class="text-btn" type="button" id="reviewTopNav">复习</button>
             <button class="text-btn" type="button" id="unitsNav">表达记录</button>
-            <button class="text-btn" type="button" id="aboutNav">关于试学</button>
+            <button class="text-btn" type="button" id="aboutNav">关于</button>
           </div>
         </header>
         <p class="storage-warning" id="storageStatus" role="status" hidden>浏览器暂时不能保存记录；请在离开前导出练习记录。</p>
         <main class="main" id="app" tabindex="-1">
           <div class="loading">正在打开场景世界…</div>
         </main>
-        <footer class="site-footer">IELTS Semantic World · Scene learning prototype · Original practice material, not official IELTS questions.</footer>
+        <footer class="site-footer">IELTS Semantic World</footer>
       </div>
     </div>
     <dialog id="glossaryDialog" class="glossary-dialog" aria-labelledby="glossaryHeadword"></dialog>
-    <script type="module" src="./main.js?v=pilot-17-0"></script>
+    <script type="module" src="./main.js?v=pilot-18-0"></script>
   </body>
 </html>
