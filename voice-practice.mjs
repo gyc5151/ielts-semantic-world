@@ -16,7 +16,7 @@ export function speakSentence(text, onStatus = () => {}, onComplete = () => {}) 
 }
 export function mountRecorder(host, onReady) {
   let stream, recorder, blobUrl, timer, cancelled = false, chunks = [], seconds = 0, recordingBlob = null;
-  host.innerHTML = `<details class="oral-panel"><summary>先口头回答，再回听</summary><p>录音最长两分钟，离开本题后不保留。</p><div class="button-row"><button type="button" class="secondary-btn" data-record>开始录音</button><button type="button" class="secondary-btn" data-stop disabled>停止</button></div><p role="status" data-voice-status></p><audio controls data-recording hidden aria-label="回听自己的回答"></audio><button type="button" class="secondary-btn" data-use-recording hidden>用这次口头回答查看反馈</button></details>`;
+  host.innerHTML = `<details class="oral-panel"><summary>口头回答</summary><p>录音最长两分钟，离开本题后不保留。</p><div class="button-row"><button type="button" class="secondary-btn" data-record>开始录音</button><button type="button" class="secondary-btn" data-stop disabled>停止</button></div><p role="status" data-voice-status></p><audio controls data-recording hidden aria-label="回听自己的回答"></audio><button type="button" class="secondary-btn" data-use-recording hidden>提交录音</button></details>`;
   const start = host.querySelector("[data-record]"), stop = host.querySelector("[data-stop]"), use = host.querySelector("[data-use-recording]"), player = host.querySelector("audio"), status = host.querySelector("[data-voice-status]");
   if (!navigator.mediaDevices?.getUserMedia || !window.MediaRecorder) { start.disabled = true; status.textContent = "此浏览器暂不能录音；你仍可自行口头回答并继续文字练习。"; }
   const release = () => { stream?.getTracks().forEach((t) => t.stop()); clearInterval(timer); };

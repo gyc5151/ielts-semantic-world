@@ -1,9 +1,9 @@
-import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-18-1";
-import { nextReview, reviewDue } from "./learning.mjs?v=pilot-18-1";
-import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-18-1";
-import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-18-1";
+import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-18-2";
+import { nextReview, reviewDue } from "./learning.mjs?v=pilot-18-2";
+import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-18-2";
+import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-18-2";
 const DATA_URL = "./data/world.json";
-const ASSET_VERSION = "pilot-18-1";
+const ASSET_VERSION = "pilot-18-2";
 function fetchData(path) {
   const url = new URL(path, window.location.href);
   url.searchParams.set("v", ASSET_VERSION);
@@ -140,13 +140,9 @@ function renderChrome() {
   document.documentElement.dataset.branch = branch?.id || "world";
   document.querySelector("#sidebarEyebrow").textContent = branch ? branch.kind.replace(/支线$/, "").replace("主线", "住房") : "IELTS SEMANTIC WORLD";
   document.querySelector("#sidebarTitle").textContent = branch?.title || "场景";
-  document.querySelector("#sidebarDescription").textContent = branch?.description || "用真实的决定串起物件、动作与英语。今天只选一条路。";
-  const entries = allPrompts();
-  const answered = entries.filter(({ prompt }) => practice.reviews[prompt.id]).length;
+  document.querySelector("#sidebarDescription").textContent = "";
   document.querySelector("#sceneCountLabel").textContent = branch ? branch.title : "IELTS Semantic World";
   document.querySelector("#sceneNavHint").textContent = "";
-  document.querySelector("#progressCount").textContent = `${answered} / ${entries.length}`;
-  document.querySelector("#progressBar").style.width = `${entries.length ? (answered / entries.length) * 100 : 0}%`;
   document.querySelector("#dueCount").textContent = String(dueEntries().length);
   nav.innerHTML = `
     <button class="nav-item ${ui.page === "home" ? "active" : ""}" type="button" data-nav="home" ${ui.page === "home" ? 'aria-current="page"' : ""}><span class="nav-index">◎</span><span>世界入口</span></button>
@@ -230,7 +226,7 @@ function renderHome() {
     <section class="hero world-hero">
       <h1>IELTS Semantic World</h1>
       
-      <div class="hero-actions"><button class="primary-btn" type="button" id="startFirst">住房与通勤</button><button class="secondary-btn" type="button" id="openReview">查看到期复习</button><button class="secondary-btn" type="button" id="openUnits">查看表达记录</button></div>
+      <div class="hero-actions"><button class="primary-btn" type="button" id="startFirst">住房与通勤</button><button class="secondary-btn" type="button" id="openReview">复习</button><button class="secondary-btn" type="button" id="openUnits">表达记录</button></div>
       
     </section>
     <section class="section-heading"><h2>场景</h2></section>
@@ -243,12 +239,12 @@ function renderHome() {
       return `<article class="branch-card" data-branch-card="${escapeHtml(branch.id)}" data-theme="${escapeHtml(branch.theme)}">
         <div class="branch-art">${themeIllustration(branch.theme)}<span class="branch-kind">${escapeHtml(branch.kind.replace(/支线$/, "").replace("主线", "住房"))}</span></div>
         <div class="branch-card-body"><h3>${escapeHtml(branch.title)}</h3><p class="branch-subtitle" lang="en">${annotatedEnglish(branch.subtitle, scenes[0])}</p>
-        <p>${escapeHtml(branch.description)}</p><div class="branch-mini-route">${branch.route.slice(0, 3).map(escapeHtml).join(' → ')} → …</div>
+        <div class="branch-mini-route">${branch.route.slice(0, 3).map(escapeHtml).join(' → ')} → …</div>
         
         <button class="secondary-btn" type="button" data-open-branch="${escapeHtml(branch.id)}">${branch.kind === '主线' ? '住房与通勤' : `走进${escapeHtml(branch.title)}`} <span aria-hidden="true">↗</span></button></div>
       </article>`;
     }).join('')}</div>
-    <div class="empty-state" id="routeEmpty" hidden>没有找到这条路线。试试场景里的物件、地点或英文关键词。</div>
+    <div class="empty-state" id="routeEmpty" hidden>没有找到匹配的场景。</div>
     `;
   app.querySelector('#startFirst').addEventListener('click', () => openBranch('housing'));
   app.querySelector('#openReview').addEventListener('click', () => navigate('review'));
@@ -303,10 +299,10 @@ function renderBranch() {
   const done = tasks.filter((p) => practice.reviews[p.id]).length;
   app.innerHTML = `<section class="hero branch-hero">
     <div class="branch-hero-copy"><div class="eyebrow">${escapeHtml(branch.kind.replace(/支线$/, "").replace("主线", "住房"))}</div>
-    <h1>${escapeHtml(branch.title)}</h1><p class="branch-subtitle" lang="en">${annotatedEnglish(branch.subtitle, scenes[0])}</p><p>${escapeHtml(branch.description)}</p>
+    <h1>${escapeHtml(branch.title)}</h1><p class="branch-subtitle" lang="en">${annotatedEnglish(branch.subtitle, scenes[0])}</p>
     <div class="hero-actions"><button class="primary-btn" type="button" id="startBranch">${done ? '继续这条路线' : '从第一个场景开始'}</button><button class="secondary-btn" type="button" id="backWorld">世界入口</button></div></div>
     <div class="branch-hero-art">${themeIllustration(branch.theme)}</div></section>
-    <section class="memory-map" aria-label="支线物件路线"><h2>${escapeHtml(branch.entry)}</h2>${branchObjectMapHtml(branch, scenes, next)}<p class="route-return">↶ ${escapeHtml(branch.returnLabel)}</p></section>
+    <section class="memory-map" aria-label="支线物件路线"><h2>${escapeHtml(branch.entry)}</h2>${branchObjectMapHtml(branch, scenes, next)}</section>
     <section class="section-heading"><h2>故事</h2></section>
     <div class="split-grid">${scenes.map((scene, index) => `<article class="scene-card"><span class="badge">${String(index + 1).padStart(2, '0')}</span><h3>${annotatedEnglish(scene.title, scene)}</h3><button class="secondary-btn" type="button" data-open-scene="${escapeHtml(scene.id)}">进入${escapeHtml(scene.navTitle)} ↗</button></article>`).join('')}</div>
     ${branch.entrySceneId ? `<section class="branch-return-panel"><button class="secondary-btn" id="returnMain" type="button">${escapeHtml(branch.returnLabel)} ↶</button></section>` : ``}`;
@@ -438,7 +434,7 @@ function showEntryModal(scene, entry, trigger, relatedChunkId = null) {
     ${relatedChunk ? `<button class="glossary-related" type="button" data-related-chunk-open="${escapeHtml(relatedChunk.id)}" data-related-scene="${escapeHtml(scene.id)}">查看整块表达：${escapeHtml(relatedChunk.text)} ↗</button>` : ""}
     ${showProjectExample ? `<div class="glossary-example"><span>项目情境例句</span><p>${escapeHtml(entry.example)}</p>${textTranslation(entry.exampleZh, "例句中文")}</div>` : ""}
     ${wordnet ? dictionaryHtml(entry, scene.id, wordnet, dictionaryContext, dictionaryTranslations, dictionaryChinese, showDictionaryChinese) : `<p role="status" class="meta">${entry.dictionaryLoadChecked ? "词典暂不可用。可关闭窗口后重开重试，本情境释义仍可阅读。" : "正在载入词典；本情境释义可先阅读。"}</p>`}
-    <details class="glossary-source"><summary>${entry.type !== "word" ? "查看组成词的来源" : "查看词汇纳入依据"}</summary>${source ? `<p><strong>${escapeHtml(source.kind === "BRG" ? "SRC · BRG" : source.kind || "")}</strong> · ${escapeHtml(source.sourceLabel || "")}</p>${source.sourceRef ? `<small>${escapeHtml(source.sourceRef)}</small>` : ""}${source.sourceUrl ? `<a href="${escapeHtml(source.sourceUrl)}" target="_blank" rel="noopener noreferrer">查看外部词典 ↗</a>` : ""}` : `<p>Researcher inference · 根据本场景编写的辅助释义；未改动原始词表。</p>`}</details>
+    <details class="glossary-source"><summary>${entry.type !== "word" ? "组成词来源" : "来源"}</summary>${source ? `<p><strong>${escapeHtml(source.kind === "BRG" ? "SRC · BRG" : source.kind || "")}</strong> · ${escapeHtml(source.sourceLabel || "")}</p>${source.sourceRef ? `<small>${escapeHtml(source.sourceRef)}</small>` : ""}${source.sourceUrl ? `<a href="${escapeHtml(source.sourceUrl)}" target="_blank" rel="noopener noreferrer">查看外部词典 ↗</a>` : ""}` : `<p>Researcher inference · 根据本场景编写的辅助释义；未改动原始词表。</p>`}</details>
   </div>`;
   if (glossaryDialog.open) glossaryDialog.querySelector(".glossary-close").focus();
   else glossaryDialog.showModal();
@@ -513,8 +509,8 @@ function renderScene() {
       ${unitLearningHtml(scene)}
       ${memoryRouteHtml(scene)}
       ${unitsForScene(scene).length ? `<section class="listening-panel" id="listeningPanel" aria-label="句中听辨练习"></section>` : ""}
-      ${scene.recognitionTerms?.length ? `<aside class="recognition-note"><strong>这些词先读懂即可</strong><p>${scene.recognitionTerms.map((term) => annotatedEnglish(term, scene)).join(" · ")}</p></aside>` : ""}
-      ${sideDoors.map((branch) => `<section class="side-door"><span>这张桌子旁还有一扇侧门</span><h2>${escapeHtml(branch.title)}</h2><p>${escapeHtml(branch.description)}</p><button class="secondary-btn" type="button" data-side-door="${escapeHtml(branch.id)}">先走这条支线 ↗</button></section>`).join('')}
+      ${scene.recognitionTerms?.length ? `<details class="recognition-note"><summary>更多词语</summary><p>${scene.recognitionTerms.map((term) => annotatedEnglish(term, scene)).join(" · ")}</p></details>` : ""}
+      ${sideDoors.map((branch) => `<section class="side-door"><h2>${escapeHtml(branch.title)}</h2><button class="secondary-btn" type="button" data-side-door="${escapeHtml(branch.id)}">进入 ↗</button></section>`).join('')}
       
       <div class="button-row"><button class="primary-btn" type="button" id="beginScene">${done === total ? "重新练习本场景" : "开始练习"}</button>${nextScene ? `<button class="secondary-btn" type="button" id="nextScene">进入下一站：${escapeHtml(nextScene.navTitle || nextScene.title)} →</button>` : ""}<button class="secondary-btn" type="button" id="backHome">返回当前路线</button></div>
     </section>
@@ -558,10 +554,9 @@ function renderPrompt() {
   app.innerHTML = `
     <section class="prompt-page" data-activity="${escapeHtml(prompt.activity || "explain")}">
       <div class="prompt-topline"><span class="eyebrow">${ui.promptIndex + 1} / ${prompts.length}</span><span class="badge">${ui.reviewMode ? "到期复习" : isTransfer ? "另一段故事" : "练习"}</span></div>
-      <h1>${isTransfer ? "换一个情境，再说一次。" : activity.title}</h1>
+      <h1>${isTransfer ? "另一段故事" : activity.label}</h1>
       
       <div class="prompt-card">
-        <div class="activity-intro"><span class="activity-label">${activity.label}</span></div>
         <h2${cuePolicy.zh ? ' lang="zh-CN"' : ' lang="en"'}>${cuePolicy.zh ? escapeHtml(cuePolicy.zh) : annotatedEnglish(prompt.cue || "", scene)}</h2>
         ${cuePolicy.zh ? `<details class="text-translation" data-english-cue><summary>英文</summary><p lang="en">${annotatedEnglish(prompt.cue || "", scene)}</p></details>` : textTranslation(translated?.cue, "中文")}
         
@@ -1006,7 +1001,7 @@ function bindFeedback(scene, prompt, attempt) {
     attempt.revisions.push({ response, at: new Date().toISOString(), support: "reference" });
     save();
     app.querySelector("#revisionInput").value = "";
-    app.querySelector("#revisionStatus").textContent = `已保存 ${attempt.revisions.length} 次修订；原答和复习日期保留。`;
+    app.querySelector("#revisionStatus").textContent = `已保存`;
   });
 }
 function renderUnits() {
@@ -1052,7 +1047,7 @@ function mountListening(scene) {
       practice.listeningAttempts ||= [];
       practice.listeningAttempts.push({ id: globalThis.crypto?.randomUUID?.() || `${Date.now()}-${Math.random()}`, unitId: u.id, sceneId: scene.id, at: new Date().toISOString(), response: firstMeaning, status: button.dataset.listenRating === "independent" ? eligible ? "independent" : "assisted" : "partial", evidenceSource: "self-check", audioSource: "browser-synthetic", contentVersion: content.version });
       saved = true; save(); compare.querySelectorAll("button").forEach((b) => b.disabled = true);
-      host.querySelector("#listenStatus").textContent = "已记录本句听辨自评；不计作口头或书面调用。";
+      host.querySelector("#listenStatus").textContent = "已保存";
     }));
   });
 }
