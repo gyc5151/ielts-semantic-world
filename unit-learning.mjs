@@ -1,5 +1,5 @@
 // Unit evidence is self-checked; legacy task ratings never imply unit mastery.
-export const EVIDENCE_LABELS = { unobserved: "未用到", partial: "还不熟悉", assisted: "看提示后会用", independent: "自己用出来了" };
+export const EVIDENCE_LABELS = { unobserved: "未记录", partial: "还不熟悉", assisted: "看提示后会用", independent: "自己用出来了" };
 export function observationsFor(practice, unitId) {
   return (practice.attempts || []).flatMap((attempt) => Object.entries(attempt.unitAssessments || {})
     .filter(([id]) => id === unitId).map(([, status]) => ({ status, dimension: attempt.taskMode === "transfer" ? "transfer" : "recall", modality: attempt.responseMode || "written", at: attempt.attemptedAt, attemptId: attempt.id, support: attempt.support, unitVersion: attempt.unitVersion })));

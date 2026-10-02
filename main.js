@@ -1,9 +1,9 @@
-import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-18-0";
-import { nextReview, reviewDue } from "./learning.mjs?v=pilot-18-0";
-import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-18-0";
-import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-18-0";
+import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-18-1";
+import { nextReview, reviewDue } from "./learning.mjs?v=pilot-18-1";
+import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-18-1";
+import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-18-1";
 const DATA_URL = "./data/world.json";
-const ASSET_VERSION = "pilot-18-0";
+const ASSET_VERSION = "pilot-18-1";
 function fetchData(path) {
   const url = new URL(path, window.location.href);
   url.searchParams.set("v", ASSET_VERSION);
@@ -308,8 +308,8 @@ function renderBranch() {
     <div class="branch-hero-art">${themeIllustration(branch.theme)}</div></section>
     <section class="memory-map" aria-label="支线物件路线"><h2>${escapeHtml(branch.entry)}</h2>${branchObjectMapHtml(branch, scenes, next)}<p class="route-return">↶ ${escapeHtml(branch.returnLabel)}</p></section>
     <section class="section-heading"><h2>故事</h2></section>
-    <div class="split-grid">${scenes.map((scene, index) => `<article class="scene-card"><span class="badge">${String(index + 1).padStart(2, '0')}</span><h3>${annotatedEnglish(scene.title, scene)}</h3><p>${annotatedEnglish(scene.goal, scene)}</p><button class="secondary-btn" type="button" data-open-scene="${escapeHtml(scene.id)}">进入${escapeHtml(scene.navTitle)} ↗</button></article>`).join('')}</div>
-    ${branch.entrySceneId ? `<section class="branch-return-panel"><strong>回到主线的同一个物件</strong><p>这条支线从费用与合同接入。看完房间细节与预算，回去继续核实费用。</p><button class="secondary-btn" id="returnMain" type="button">${escapeHtml(branch.returnLabel)} ↶</button></section>` : ``}`;
+    <div class="split-grid">${scenes.map((scene, index) => `<article class="scene-card"><span class="badge">${String(index + 1).padStart(2, '0')}</span><h3>${annotatedEnglish(scene.title, scene)}</h3><button class="secondary-btn" type="button" data-open-scene="${escapeHtml(scene.id)}">进入${escapeHtml(scene.navTitle)} ↗</button></article>`).join('')}</div>
+    ${branch.entrySceneId ? `<section class="branch-return-panel"><button class="secondary-btn" id="returnMain" type="button">${escapeHtml(branch.returnLabel)} ↶</button></section>` : ``}`;
   app.querySelector('#startBranch').addEventListener('click', () => navigate('scene', next.id));
   app.querySelector('#backWorld').addEventListener('click', () => navigate('home'));
   app.querySelector('#returnMain')?.addEventListener('click', () => navigate('scene', branch.entrySceneId));
@@ -1017,7 +1017,7 @@ function renderUnits() {
   app.innerHTML = `<section class="simple-page"><h1>表达记录</h1><section class="unit-tools" aria-label="筛选表达记录"><label for="unitSearch">搜索表达</label><input id="unitSearch" type="search" placeholder="例如：延期、预约、passport…" autocomplete="off"/><label for="unitRoute">学习路线</label><select id="unitRoute"><option value="all">全部</option>${registeredBranches.map((b) => `<option value="${escapeHtml(b.id)}">${escapeHtml(b.title)}</option>`).join("")}</select><p id="unitResultCount" role="status"></p></section><div class="unit-progress-list">${summaries.map(({ unit: u, summary: v }) => {
     const recalled = v.observations.filter((o) => o.dimension === "recall" && o.status === "independent" && o.support === "none");
     const transferred = v.observations.filter((o) => o.dimension === "transfer" && o.status === "independent" && o.support === "none");
-    return `<article data-unit-card="${escapeHtml(u.id)}"><h2>${annotatedEnglish(u.form, getScene(u.sceneIds[0]), u.type === "word" ? u.example : null)}</h2><p>${escapeHtml(u.meaningZh)}</p><dl><div><dt>写出来</dt><dd>${recalled.filter((o) => o.modality === "written").length || "未练习"}</dd></div><div><dt>说出来</dt><dd>${recalled.filter((o) => o.modality === "spoken").length || "未练习"}</dd></div><div><dt>换个情境</dt><dd>${transferred.length || "未练习"}</dd></div><div><dt>听懂了</dt><dd>${v.listening ? escapeHtml({ independent: "自评：原先听懂", assisted: "自评：对照后理解", partial: "自评：还需练习" }[v.listening.status]) : "未练习"}</dd></div></dl><small>${v.latest ? `最近记录：${escapeHtml(EVIDENCE_LABELS[v.latest.status])} · ${dateLabel(v.latest.at)}` : "还没有练习记录"}</small><button class="text-btn" type="button" data-unit-scene="${escapeHtml(u.sceneIds[0])}">回到学习场景 ↗</button></article>`;
+    return `<article data-unit-card="${escapeHtml(u.id)}"><h2>${annotatedEnglish(u.form, getScene(u.sceneIds[0]), u.type === "word" ? u.example : null)}</h2><p>${escapeHtml(u.meaningZh)}</p><dl><div><dt>写出来</dt><dd>${recalled.filter((o) => o.modality === "written").length || "暂无记录"}</dd></div><div><dt>说出来</dt><dd>${recalled.filter((o) => o.modality === "spoken").length || "暂无记录"}</dd></div><div><dt>换个情境</dt><dd>${transferred.length || "暂无记录"}</dd></div><div><dt>听懂了</dt><dd>${v.listening ? escapeHtml({ independent: "自评：原先听懂", assisted: "自评：对照后理解", partial: "自评：还需练习" }[v.listening.status]) : "暂无记录"}</dd></div></dl><small>${v.latest ? `最近记录：${escapeHtml(EVIDENCE_LABELS[v.latest.status])} · ${dateLabel(v.latest.at)}` : "还没有练习记录"}</small><button class="text-btn" type="button" data-unit-scene="${escapeHtml(u.sceneIds[0])}">回到学习场景 ↗</button></article>`;
   }).join("")}</div></section>`;
   if (!registeredBranches.some((b) => b.id === unitScope)) unitScope = "all";
   app.querySelector("#unitSearch").value = unitQuery;
@@ -1103,5 +1103,5 @@ function filterUnitRecords() {
     card.hidden = !match;
     if (match) visible += 1;
   }
-  app.querySelector('#unitResultCount').textContent = ` ${visible} 个表达`;
+  app.querySelector('#unitResultCount').textContent = `${visible} 个表达`;
 }
