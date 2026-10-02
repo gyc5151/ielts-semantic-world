@@ -1,9 +1,9 @@
-import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-18-2";
-import { nextReview, reviewDue } from "./learning.mjs?v=pilot-18-2";
-import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-18-2";
-import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-18-2";
+import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-19-0";
+import { nextReview, reviewDue } from "./learning.mjs?v=pilot-19-0";
+import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-19-0";
+import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-19-0";
 const DATA_URL = "./data/world.json";
-const ASSET_VERSION = "pilot-18-2";
+const ASSET_VERSION = "pilot-19-0";
 function fetchData(path) {
   const url = new URL(path, window.location.href);
   url.searchParams.set("v", ASSET_VERSION);
@@ -413,6 +413,17 @@ function chunkWordButtons(scene, entry) {
   }).join("");
 }
 
+function sourceDetailHtml(source) {
+  if (!source) return "<p>项目编写的情境释义。</p>";
+  const original = source.sourceDerived;
+  const evidence = source.externalEvidence || [];
+  return `<p>${escapeHtml(source.sourceLabel || source.kind || "来源")}</p>
+    ${source.sourceRef ? `<small>${escapeHtml(source.sourceRef)}</small>` : ""}
+    ${original ? `<h3>原资料</h3><p>${escapeHtml(original.printedSurface || "")}${original.printedPOS ? ` · ${escapeHtml(original.printedPOS)}` : ""}</p>${original.printedChinese ? `<p>${escapeHtml(original.printedChinese)}</p>` : ""}${original.sourceSpan && original.sourceSpan !== original.printedSurface ? `<p>${escapeHtml(original.sourceSpan)}</p>` : ""}` : ""}
+    ${evidence.length ? `<details><summary>审校词典</summary>${evidence.map((item) => `<p><a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.publisher || "词典")} ↗</a></p><p>${escapeHtml(item.shortParaphrase)}</p>`).join("")}</details>` : ""}
+    ${source.sourceUrl ? `<a href="${escapeHtml(source.sourceUrl)}" target="_blank" rel="noopener noreferrer">词典 ↗</a>` : ""}`;
+}
+
 function showEntryModal(scene, entry, trigger, relatedChunkId = null) {
   const requestToken = Symbol();
   glossaryDialog.dictionaryToken = requestToken;
@@ -420,7 +431,9 @@ function showEntryModal(scene, entry, trigger, relatedChunkId = null) {
     if (glossaryDialog.open && glossaryDialog.dictionaryToken === requestToken) showEntryModal(scene, { ...entry, dictionaryLoadChecked: true }, null, relatedChunkId);
   });
   if (!glossaryDialog.open) glossaryReturnFocus = trigger;
-  const source = (scene.terms || []).find((term) => String(term.term).toLowerCase() === String(entry.sourceTerm || "").toLowerCase());
+  const source = (scene.terms || []).find((term) =>
+    String(term.term).toLowerCase() === String(entry.sourceTerm || "").toLowerCase() ||
+    entry.sourceSupplementOccurrenceIds?.includes(term.sourceOccurrenceId));
   const relatedChunk = (scene.glossary || []).find((item) => item.id === relatedChunkId && item.type !== "word");
   const contextExample = dictionaryContextFor(dictionaryContext, scene.id, entry.text.toLowerCase(), entry.dictionaryUsage)?.example;
   const showProjectExample = entry.example && (!wordnet || entry.example !== contextExample);
@@ -434,7 +447,7 @@ function showEntryModal(scene, entry, trigger, relatedChunkId = null) {
     ${relatedChunk ? `<button class="glossary-related" type="button" data-related-chunk-open="${escapeHtml(relatedChunk.id)}" data-related-scene="${escapeHtml(scene.id)}">查看整块表达：${escapeHtml(relatedChunk.text)} ↗</button>` : ""}
     ${showProjectExample ? `<div class="glossary-example"><span>项目情境例句</span><p>${escapeHtml(entry.example)}</p>${textTranslation(entry.exampleZh, "例句中文")}</div>` : ""}
     ${wordnet ? dictionaryHtml(entry, scene.id, wordnet, dictionaryContext, dictionaryTranslations, dictionaryChinese, showDictionaryChinese) : `<p role="status" class="meta">${entry.dictionaryLoadChecked ? "词典暂不可用。可关闭窗口后重开重试，本情境释义仍可阅读。" : "正在载入词典；本情境释义可先阅读。"}</p>`}
-    <details class="glossary-source"><summary>${entry.type !== "word" ? "组成词来源" : "来源"}</summary>${source ? `<p><strong>${escapeHtml(source.kind === "BRG" ? "SRC · BRG" : source.kind || "")}</strong> · ${escapeHtml(source.sourceLabel || "")}</p>${source.sourceRef ? `<small>${escapeHtml(source.sourceRef)}</small>` : ""}${source.sourceUrl ? `<a href="${escapeHtml(source.sourceUrl)}" target="_blank" rel="noopener noreferrer">查看外部词典 ↗</a>` : ""}` : `<p>Researcher inference · 根据本场景编写的辅助释义；未改动原始词表。</p>`}</details>
+    <details class="glossary-source"><summary>${entry.type !== "word" ? "组成词来源" : "来源"}</summary>${sourceDetailHtml(source)}</details>
   </div>`;
   if (glossaryDialog.open) glossaryDialog.querySelector(".glossary-close").focus();
   else glossaryDialog.showModal();
@@ -974,7 +987,7 @@ function promptCue(scene, prompt) {
 }
 function unitSourceHtml(unit) {
   if (!unit.sourceRecords.length) return "<p>项目依据本课沟通行为整理的构式。</p>";
-  return unit.sourceRecords.map((r) => `<p>${escapeHtml(r.kind)} · ${escapeHtml(r.sourceRef)}</p>${r.sourceRecord ? `<p class="meta">原记录词性：${escapeHtml(r.sourceRecord.POS || "未提供")} · 原中文：${escapeHtml(r.sourceRecord.Chinese_Meaning || "未提供")}</p>` : ""}${r.auditNote ? `<p class="meta">用义与来源核对：${escapeHtml(r.auditNote)}</p>` : ""}`).join("");
+  return unit.sourceRecords.map((r) => `${sourceDetailHtml(r)}${r.sourceRecord ? `<p class="meta">原记录词性：${escapeHtml(r.sourceRecord.POS || "未提供")} · 原中文：${escapeHtml(r.sourceRecord.Chinese_Meaning || "未提供")}</p>` : ""}${r.auditNote ? `<p class="meta">${escapeHtml(r.auditNote)}</p>` : ""}`).join("");
 }
 function unitMemoryHtml(unit, scene) {
   const ids = unit.sceneMemoryNodeIds?.[scene.id] || [];
@@ -985,7 +998,7 @@ function unitLearningHtml(scene) {
   const units = unitsForScene(scene);
   if (!units.length) return "";
   const names = { core: "常用表达", support: "更多表达", recognition: "拓展词语" };
-  return `<section class="unit-learning"><h2>词语与表达</h2>${Object.entries(names).map(([tier, label]) => `<details><summary>${label} · ${units.filter((u) => u.tier === tier).length}</summary><div class="unit-cards">${units.filter((u) => u.tier === tier).map((u) => `<article><strong lang="en">${annotatedEnglish(u.form, scene, u.type === "word" ? u.example : null)}</strong><p>${escapeHtml(u.meaningZh)}</p><details><summary>用法</summary><p>${escapeHtml(u.sense)}</p></details><p lang="en">${annotatedEnglish(u.example, scene)}</p>${textTranslation(u.exampleZh, "例句中文")}${unitMemoryHtml(u, scene)}<details><summary>来源与例句</summary>${unitSourceHtml(u)}<small>表达组合与例句为项目编写；原词条不修改。</small></details></article>`).join("")}</div></details>`).join("")}</section>`;
+  return `<section class="unit-learning"><h2>词语与表达</h2>${Object.entries(names).filter(([tier]) => units.some((u) => u.tier === tier)).map(([tier, label]) => `<details><summary>${label} · ${units.filter((u) => u.tier === tier).length}</summary><div class="unit-cards">${units.filter((u) => u.tier === tier).map((u) => `<article><strong lang="en">${annotatedEnglish(u.form, scene, u.type === "word" ? u.example : null)}</strong><p>${escapeHtml(u.meaningZh)}</p><details><summary>用法</summary><p>${escapeHtml(u.sense)}</p></details><p lang="en">${annotatedEnglish(u.example, scene)}</p>${textTranslation(u.exampleZh, "例句中文")}${unitMemoryHtml(u, scene)}<details><summary>来源与例句</summary>${unitSourceHtml(u)}<small>表达组合与例句为项目编写；原词条不修改。</small></details></article>`).join("")}</div></details>`).join("")}</section>`;
 }
 function unitAssessmentHtml(scene, prompt, attempt) {
   const sceneUnits = new Map(unitsForScene(scene).map((unit) => [unit.id, unit]));

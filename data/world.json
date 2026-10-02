@@ -1,7 +1,7 @@
 {
   "sceneId": "WORLD",
   "title": "IELTS Semantic World",
-  "version": "pilot-18-2",
+  "version": "pilot-19-0",
   "dictionaryFile": "./data/wordnet-s01.json",
   "dictionaryContextFile": "./data/s01-dictionary-context.json",
   "dictionaryTranslationFile": "./data/wordnet-translations-s01.json",
@@ -37,6 +37,7 @@
     "./data/s09-k04.json",
     "./data/s11-a01.json",
     "./data/s11-a02.json",
+    "./data/s04-w03.json",
     "./data/s08-c01.json",
     "./data/s08-c02.json",
     "./data/s08-c03.json",
@@ -147,11 +148,16 @@
         "仪器检查板",
         "透明烧瓶",
         "双栏结果表",
-        "数据库归档号"
+        "数据库归档号",
+        "瓶子旁的文件夹",
+        "两行相同的记录",
+        "找回的设置记录页",
+        "样本旁的记录本"
       ],
       "sceneIds": [
         "S04.W01",
-        "S04.W02"
+        "S04.W02",
+        "S04.W03"
       ]
     },
     {
@@ -438,7 +444,8 @@
     "./data/branch-v14-dictionary-context.json",
     "./data/branch-v15-dictionary-context.json",
     "./data/branch-v16-dictionary-context.json",
-    "./data/branch-v17-dictionary-context.json"
+    "./data/branch-v17-dictionary-context.json",
+    "./data/branch-v19-dictionary-context.json"
   ],
   "uiWordsFile": "./data/world-ui-words.json",
   "learningUnitsFile": "./data/learning-units.json",

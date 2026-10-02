@@ -104,7 +104,6 @@ export function dictionaryHtml(entry, sceneId, wordnet, contexts, translations, 
   return `<section class="dictionary-section${showChinese ? " dictionary-chinese-visible" : ""}" aria-label="外部词典义项">
     <div class="dictionary-heading"><span>英语词典资料</span><strong>Princeton WordNet 3.0</strong></div>
     <button class="secondary-btn dictionary-translation-toggle" type="button" data-dictionary-chinese aria-pressed="${showChinese}">${showChinese ? "隐藏中文释义与例句译文" : "显示中文释义与例句译文"}</button>
-    <p class="dictionary-translation-note">中文帮助理解；机器辅助译文尚未逐条校订，不是词典官方中文。</p>
     ${record.lemmas.length > 1 ? `<p class="dictionary-lemma">词形可能对应：${record.lemmas.map(html).join(" / ")}；需结合本句判断。</p>` : record.lemma !== surface ? `<p class="dictionary-lemma">${html(entry.text)} → 词元 ${html(record.lemma)}</p>` : ""}
     <div class="dictionary-tabs" role="tablist" aria-label="选择词典内容">
       ${[["current", "本句用法"], ["contrasts", "一词多义"], ["full", "完整词典"]].map(([id, label]) => `<button type="button" role="tab" id="dictionary-tab-${id}" aria-controls="dictionary-panel-${id}" aria-selected="${id === "current"}" tabindex="${id === "current" ? "0" : "-1"}" data-dictionary-tab="${id}">${label}</button>`).join("")}

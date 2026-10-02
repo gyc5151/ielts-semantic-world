@@ -31895,8 +31895,8 @@
       "examples": {}
     },
     "n:06593099": {
-      "definition": "被编译(作为单一的书或文件) 的东西",
-      "definitionStatus": "machine",
+      "definition": "汇编而成的材料，如单一的书或文件",
+      "definitionStatus": "project",
       "examples": {}
     },
     "v:01197338": {
@@ -33728,12 +33728,12 @@
       "examples": {}
     },
     "v:01734502": {
-      "definition": "制作、执行或再次表演",
-      "definitionStatus": "machine",
+      "definition": "再次制作、做或表演某事",
+      "definitionStatus": "project",
       "examples": {
         "He could never replicate his brilliant performance of the magic trick": {
-          "text": "他永远无法复制他出色的魔术表演",
-          "status": "machine"
+          "text": "他再也无法重现自己那次精彩的魔术表演。",
+          "status": "project"
         }
       }
     },
@@ -112702,6 +112702,50 @@
           "status": "machine"
         }
       }
+    },
+    "v:01626138": {
+      "examples": {
+        "compile a list": {
+          "text": "编制一份清单",
+          "status": "project"
+        }
+      },
+      "definition": "把现有材料整理在一起",
+      "definitionStatus": "project"
+    },
+    "s:02063903": {
+      "examples": {
+        "a duplicate key": {
+          "text": "一把复制的钥匙",
+          "status": "project"
+        }
+      },
+      "definition": "从原件复制而成的",
+      "definitionStatus": "project"
+    },
+    "v:00172505": {
+      "examples": {
+        "optimize your resources": {
+          "text": "尽可能有效利用你的资源",
+          "status": "project"
+        }
+      },
+      "definition": "使最优化；尽可能有效利用",
+      "definitionStatus": "project"
+    },
+    "s:00228645": {
+      "examples": {
+        "an optimum return on capital": {
+          "text": "资本的最佳回报",
+          "status": "project"
+        },
+        "optimal concentration of a drug": {
+          "text": "药物的最佳浓度",
+          "status": "project"
+        }
+      },
+      "definition": "在明示或隐含限制下最理想的",
+      "definitionStatus": "project"
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "pilot-17-0",
+  "version": "pilot-19-0",
   "scope": "Editorial learning units for listed sceneIds; not entire seed vocabulary or learner mastery",
   "units": [
     {
@@ -3699,6 +3699,411 @@
       ],
       "sourceRecords": [],
       "unitVersion": "pilot-11-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.S04.W03.COMPILE",
+      "form": "compile",
+      "type": "word",
+      "meaningZh": "汇整资料",
+      "sense": "compile the records into one file：把分散的记录汇整成一份文件。",
+      "tier": "core",
+      "example": "Lin needs to compile the records into one file.",
+      "exampleZh": "林需要把记录汇整成一份文件。",
+      "sourceSupplementOccurrenceIds": [
+        "SV2.TENK.P050.bc9ecaeb804f"
+      ],
+      "memoryNodeIds": [
+        "S04.W03.L01"
+      ],
+      "admission": {
+        "basis": "Source-derived supplement occurrence; external-sense evidence reviewed separately by root; scene use and example are Researcher inference",
+        "necessityZh": "报告前需要整理分散的样本记录；与单纯收集样本及逐项比对记录区分。",
+        "externalReviewRef": "tmp/source-audit-v2/admission/processes-review-v2.json",
+        "reviewStatus": "root source-sense authoring approval read; scene integration review pending",
+        "reviewedAt": "2026-10-02"
+      },
+      "sourceSupplementSenseId": "assemble-information",
+      "sourceTerm": "compile",
+      "sceneMemoryNodeIds": {
+        "S04.W03": [
+          "S04.W03.L01"
+        ]
+      },
+      "sceneIds": [
+        "S04.W03"
+      ],
+      "glossaryIds": [
+        "S04.W03.G01"
+      ],
+      "sourceRecords": [
+        {
+          "kind": "SRC",
+          "sourceOccurrenceId": "SV2.TENK.P050.bc9ecaeb804f",
+          "sourceLabel": "Source-derived · 补录原始来源；教学形态与义项另经项目审校",
+          "sourceRef": "SV2.TENK.P050.bc9ecaeb804f; tenk; PDF page 50",
+          "originalContext": "compile",
+          "sourceDerived": {
+            "pdfPage": 50,
+            "printedSurface": "compile",
+            "printedPOS": "vt.",
+            "printedChinese": "",
+            "kind": "image-only-lower-page-head",
+            "sourceSpan": "compile",
+            "evidenceType": "Source-derived"
+          },
+          "externalEvidence": [
+            {
+              "url": "https://dictionary.cambridge.org/us/dictionary/english/compile",
+              "shortParaphrase": "汇整资料。条目范围：gather information from different places and arrange it; separate IT sense",
+              "publisher": "Cambridge University Press"
+            }
+          ],
+          "admissionDecisionRef": "tmp/source-audit-v2/admission/source-admission-decisions-v2.json#sourceOccurrenceId=SV2.TENK.P050.bc9ecaeb804f&senseId=assemble-information"
+        }
+      ],
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-19-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.S04.W03.DUPLICATE",
+      "form": "duplicate",
+      "type": "word",
+      "meaningZh": "重复的；多出的一份",
+      "sense": "形容词，放在名词前：duplicate entry。这里是同一文件导入两次形成的多余记录。名词和形容词词尾读/ət/，动词词尾读/eɪt/。",
+      "tier": "core",
+      "example": "The second row is a duplicate entry.",
+      "exampleZh": "第二行是一条重复录入的记录。",
+      "sourceSupplementOccurrenceIds": [
+        "SV2.TENK.P050.b966150275e2"
+      ],
+      "memoryNodeIds": [
+        "S04.W03.L02"
+      ],
+      "admission": {
+        "basis": "Source-derived supplement occurrence; external-sense evidence reviewed separately by root; scene use and example are Researcher inference",
+        "necessityZh": "核对数据行数时要说清重复录入与另一次实际检测的区别。",
+        "externalReviewRef": "tmp/source-audit-v2/admission/processes-review-v2.json",
+        "reviewStatus": "root source-sense authoring approval read; scene integration review pending",
+        "reviewedAt": "2026-10-02"
+      },
+      "sourceSupplementSenseId": "unnecessary-second-entry",
+      "sourceTerm": "duplicate",
+      "sceneMemoryNodeIds": {
+        "S04.W03": [
+          "S04.W03.L02"
+        ]
+      },
+      "sceneIds": [
+        "S04.W03"
+      ],
+      "glossaryIds": [
+        "S04.W03.G02"
+      ],
+      "sourceRecords": [
+        {
+          "kind": "SRC",
+          "sourceOccurrenceId": "SV2.TENK.P050.b966150275e2",
+          "sourceLabel": "Source-derived · 补录原始来源；教学形态与义项另经项目审校",
+          "sourceRef": "SV2.TENK.P050.b966150275e2; tenk; PDF page 50",
+          "originalContext": "duplicate",
+          "sourceDerived": {
+            "pdfPage": 50,
+            "printedSurface": "duplicate",
+            "printedPOS": "vt./a./n.",
+            "printedChinese": "vt. 复制 a. 复制的 n. 复制品，副本",
+            "kind": "image-only-lower-page-head",
+            "sourceSpan": "duplicate",
+            "evidenceType": "Source-derived"
+          },
+          "externalEvidence": [
+            {
+              "url": "https://dictionary.cambridge.org/us/dictionary/english/duplicate",
+              "shortParaphrase": "重复的；多出的一份。条目范围：verb, adjective and count noun; Business duplicate record/payment; pronunciation differs by POS",
+              "publisher": "Cambridge University Press"
+            }
+          ],
+          "admissionDecisionRef": "tmp/source-audit-v2/admission/source-admission-decisions-v2.json#sourceOccurrenceId=SV2.TENK.P050.b966150275e2&senseId=unnecessary-second-entry"
+        }
+      ],
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-19-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.S04.W03.REPLICATE",
+      "form": "replicate",
+      "type": "word",
+      "meaningZh": "按同样方式复现",
+      "sense": "replicate the test：以同样方法再次进行实际检测，新的读数可以略有不同。",
+      "tier": "core",
+      "example": "We will replicate the test using the same method.",
+      "exampleZh": "我们会使用同一方法再做一次检测。",
+      "sourceSupplementOccurrenceIds": [
+        "SV2.TENK.P050.b4c1f866c899"
+      ],
+      "memoryNodeIds": [
+        "S04.W03.L03"
+      ],
+      "admission": {
+        "basis": "Source-derived supplement occurrence; external-sense evidence reviewed separately by root; scene use and example are Researcher inference",
+        "necessityZh": "对异常结果开展实际再检测，核查先前观察；本课不是跨实验室独立复现研究。",
+        "externalReviewRef": "tmp/source-audit-v2/admission/processes-review-v2.json",
+        "reviewStatus": "root source-sense authoring approval read; scene integration review pending",
+        "reviewedAt": "2026-10-02"
+      },
+      "sourceSupplementSenseId": "repeat-under-same-method",
+      "sourceTerm": "replicate",
+      "sceneMemoryNodeIds": {
+        "S04.W03": [
+          "S04.W03.L03"
+        ]
+      },
+      "sceneIds": [
+        "S04.W03"
+      ],
+      "glossaryIds": [
+        "S04.W03.G03"
+      ],
+      "sourceRecords": [
+        {
+          "kind": "SRC",
+          "sourceOccurrenceId": "SV2.TENK.P050.b4c1f866c899",
+          "sourceLabel": "Source-derived · 补录原始来源；教学形态与义项另经项目审校",
+          "sourceRef": "SV2.TENK.P050.b4c1f866c899; tenk; PDF page 50",
+          "originalContext": "replicate",
+          "sourceDerived": {
+            "pdfPage": 50,
+            "printedSurface": "replicate",
+            "printedPOS": "vt./a./n.",
+            "printedChinese": "vt. 复制；a. 复制的；n. 复制品",
+            "kind": "image-only-lower-page-head",
+            "sourceSpan": "replicate",
+            "evidenceType": "Source-derived"
+          },
+          "externalEvidence": [
+            {
+              "url": "https://dictionary.cambridge.org/dictionary/english/replicate",
+              "shortParaphrase": "按同样方式复现。条目范围：formal transitive repetition/reproduction; specialised biological senses separate",
+              "publisher": "Cambridge University Press"
+            }
+          ],
+          "admissionDecisionRef": "tmp/source-audit-v2/admission/source-admission-decisions-v2.json#sourceOccurrenceId=SV2.TENK.P050.b4c1f866c899&senseId=repeat-under-same-method"
+        }
+      ],
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-19-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.S04.W03.COMPILATION",
+      "form": "compilation",
+      "type": "word",
+      "meaningZh": "汇编；合集",
+      "sense": "可数名词，指汇集而成的材料，这里是发给导师的记录汇编。",
+      "tier": "support",
+      "example": "The compilation contains the checked records from both locations.",
+      "exampleZh": "汇编文件包含两个地点经核对的记录。",
+      "sourceSupplementOccurrenceIds": [
+        "SV2.TENK.P050.2ec4a6b34f2e"
+      ],
+      "memoryNodeIds": [
+        "S04.W03.L02"
+      ],
+      "admission": {
+        "basis": "Source-derived supplement occurrence; external-sense evidence reviewed separately by root; scene use and example are Researcher inference",
+        "necessityZh": "谈论最终可交付的记录汇编，需要指称文件而不是编写动作；可用report作较简单替代。",
+        "externalReviewRef": "tmp/source-audit-v2/admission/processes-review-v2.json",
+        "reviewStatus": "root source-sense authoring approval read; scene integration review pending",
+        "reviewedAt": "2026-10-02"
+      },
+      "sourceSupplementSenseId": "assembled-collection",
+      "sourceTerm": "compilation",
+      "sceneMemoryNodeIds": {
+        "S04.W03": [
+          "S04.W03.L02"
+        ]
+      },
+      "sceneIds": [
+        "S04.W03"
+      ],
+      "glossaryIds": [
+        "S04.W03.G04"
+      ],
+      "sourceRecords": [
+        {
+          "kind": "SRC",
+          "sourceOccurrenceId": "SV2.TENK.P050.2ec4a6b34f2e",
+          "sourceLabel": "Source-derived · 补录原始来源；教学形态与义项另经项目审校",
+          "sourceRef": "SV2.TENK.P050.2ec4a6b34f2e; tenk; PDF page 50",
+          "originalContext": "compilation",
+          "sourceDerived": {
+            "pdfPage": 50,
+            "printedSurface": "compilation",
+            "printedPOS": "n.",
+            "printedChinese": "编辑；汇编；合集",
+            "kind": "image-only-lower-page-head",
+            "sourceSpan": "compilation",
+            "evidenceType": "Source-derived"
+          },
+          "externalEvidence": [
+            {
+              "url": "https://dictionary.cambridge.org/us/dictionary/english/compilation",
+              "shortParaphrase": "汇编；合集。条目范围：count collection and uncount assembling process",
+              "publisher": "Cambridge University Press"
+            }
+          ],
+          "admissionDecisionRef": "tmp/source-audit-v2/admission/source-admission-decisions-v2.json#sourceOccurrenceId=SV2.TENK.P050.2ec4a6b34f2e&senseId=assembled-collection"
+        }
+      ],
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-19-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.S04.W03.OPTIMISE",
+      "form": "optimise",
+      "type": "word",
+      "meaningZh": "优化；尽可能有效利用",
+      "sense": "optimise the recording process：使记录流程更有效。optimise和optimize是同一动词的两种拼写。",
+      "tier": "support",
+      "example": "They want to optimise the recording process.",
+      "exampleZh": "她们想优化记录流程。",
+      "sourceSupplementOccurrenceIds": [
+        "SV2.TENK.P050.f6c067059287"
+      ],
+      "memoryNodeIds": [
+        "S04.W03.L04"
+      ],
+      "admission": {
+        "basis": "Source-derived supplement occurrence; external-sense evidence reviewed separately by root; scene use and example are Researcher inference",
+        "necessityZh": "比较两种工作安排并减少往返和等待；未声称所有实验流程已达到全局最优。",
+        "externalReviewRef": "tmp/source-audit-v2/admission/processes-review-v2.json",
+        "reviewStatus": "root source-sense authoring approval read; scene integration review pending",
+        "reviewedAt": "2026-10-02"
+      },
+      "aliases": [
+        "optimize"
+      ],
+      "sourceSupplementSenseId": "make-best-use",
+      "sourceTerm": "optimise",
+      "sceneMemoryNodeIds": {
+        "S04.W03": [
+          "S04.W03.L04"
+        ]
+      },
+      "sceneIds": [
+        "S04.W03"
+      ],
+      "glossaryIds": [
+        "S04.W03.G05"
+      ],
+      "sourceRecords": [
+        {
+          "kind": "SRC",
+          "sourceOccurrenceId": "SV2.TENK.P050.f6c067059287",
+          "sourceLabel": "Source-derived · 补录原始来源；教学形态与义项另经项目审校",
+          "sourceRef": "SV2.TENK.P050.f6c067059287; tenk; PDF page 50",
+          "originalContext": "optimise",
+          "sourceDerived": {
+            "pdfPage": 50,
+            "printedSurface": "optimise",
+            "printedPOS": "vt.",
+            "printedChinese": "优化；充分利用",
+            "kind": "image-only-lower-page-head",
+            "sourceSpan": "optimise",
+            "evidenceType": "Source-derived"
+          },
+          "externalEvidence": [
+            {
+              "url": "https://www.oxfordlearnersdictionaries.com/definition/english/optimize",
+              "shortParaphrase": "优化；尽可能有效利用。条目范围：British also optimise; optimize something; resource use and computing senses",
+              "publisher": "Oxford University Press"
+            }
+          ],
+          "admissionDecisionRef": "tmp/source-audit-v2/admission/source-admission-decisions-v2.json#sourceOccurrenceId=SV2.TENK.P050.f6c067059287&senseId=make-best-use"
+        }
+      ],
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-19-0",
+      "generatedFrom": "branch-authoring"
+    },
+    {
+      "id": "U.S04.W03.OPTIMAL",
+      "form": "optimal",
+      "type": "word",
+      "meaningZh": "在给定条件下最合适的",
+      "sense": "optimal arrangement：在给定条件下最合适的安排。可用for说明适用的团队或用途。",
+      "tier": "support",
+      "example": "This is the optimal arrangement for our two-person team.",
+      "exampleZh": "这是最适合我们两人团队的安排。",
+      "sourceSupplementOccurrenceIds": [
+        "SV2.TENK.P050.4ccbd88768d3"
+      ],
+      "memoryNodeIds": [
+        "S04.W03.L04"
+      ],
+      "admission": {
+        "basis": "Source-derived supplement occurrence; external-sense evidence reviewed separately by root; scene use and example are Researcher inference",
+        "necessityZh": "说清比较后的最佳安排与适用条件；不需要弱基础者优先主动背诵。",
+        "externalReviewRef": "tmp/source-audit-v2/admission/processes-review-v2.json",
+        "reviewStatus": "root source-sense authoring approval read; scene integration review pending",
+        "reviewedAt": "2026-10-02"
+      },
+      "sourceSupplementSenseId": "best-for-stated-conditions",
+      "sourceTerm": "optimal",
+      "sceneMemoryNodeIds": {
+        "S04.W03": [
+          "S04.W03.L04"
+        ]
+      },
+      "sceneIds": [
+        "S04.W03"
+      ],
+      "glossaryIds": [
+        "S04.W03.G06"
+      ],
+      "sourceRecords": [
+        {
+          "kind": "SRC",
+          "sourceOccurrenceId": "SV2.TENK.P050.4ccbd88768d3",
+          "sourceLabel": "Source-derived · 补录原始来源；教学形态与义项另经项目审校",
+          "sourceRef": "SV2.TENK.P050.4ccbd88768d3; tenk; PDF page 50",
+          "originalContext": "optimal",
+          "sourceDerived": {
+            "pdfPage": 50,
+            "printedSurface": "optimal",
+            "printedPOS": "a.",
+            "printedChinese": "最优的",
+            "kind": "image-only-lower-page-head",
+            "sourceSpan": "optimal",
+            "evidenceType": "Source-derived"
+          },
+          "externalEvidence": [
+            {
+              "url": "https://dictionary.cambridge.org/dictionary/english/optimal",
+              "shortParaphrase": "在给定条件下最合适的。条目范围：best/most effective in a particular situation",
+              "publisher": "Cambridge University Press"
+            }
+          ],
+          "admissionDecisionRef": "tmp/source-audit-v2/admission/source-admission-decisions-v2.json#sourceOccurrenceId=SV2.TENK.P050.4ccbd88768d3&senseId=best-for-stated-conditions"
+        }
+      ],
+      "sourceKind": "SRC",
+      "evidenceLabel": "Researcher inference · editorial sense/chunk and original example; underlying sourceRecords remain source-derived",
+      "reviewStatus": "project-reviewed",
+      "unitVersion": "pilot-19-0",
       "generatedFrom": "branch-authoring"
     },
     {

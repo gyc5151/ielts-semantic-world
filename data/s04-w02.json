@@ -56,7 +56,8 @@
         "U.RESEARCH.EVIDENCE.N",
         "U.RESEARCH.LIMITED_CONCLUSION",
         "U.LEGACY.S01.H02.TOTAL"
-      ]
+      ],
+      "nextNodeId": "S04.W03.L01"
     }
   ],
   "situation": "A small amount of water sat in a transparent flask. The researcher added a test substance and watched it dissolve in the fluid. Another sample was left unchanged for comparison. Lin recorded what happened before opening the results sheet. A visible change was part of the chemical analysis, not proof of who had caused the difference. The left column held qualitative observations, such as colour. The right held quantitative measurements from the checked instrument. The team repeated the test and collated the records in a database. Both location and date stayed attached to every result. Back at the data table, Lin wrote: We found a difference, but we need more evidence to determine its source.",
