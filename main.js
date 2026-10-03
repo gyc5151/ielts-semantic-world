@@ -1,14 +1,15 @@
-import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-20-0";
-import { nextReview, reviewDue } from "./learning.mjs?v=pilot-20-0";
-import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-20-0";
-import { buildTaskRegistry, createTaskResolver, taskCuePolicy, rebuildPractice, calendarDay, dueUnitTracks, choosePracticeTarget, validTimeZone } from "./unit-review-scheduler.mjs?v=pilot-20-0";
-import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-20-0";
-const DATA_URL = "./data/world.json";
-const ASSET_VERSION = "pilot-20-0";
+import { DataStore } from "./data-store.mjs?v=pilot-21-0";
+import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-21-0";
+import { nextReview, reviewDue } from "./learning.mjs?v=pilot-21-0";
+import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-21-0";
+import { buildTaskRegistry, createTaskResolver, taskCuePolicy, rebuildPractice, calendarDay, dueUnitTracks, choosePracticeTarget, validTimeZone } from "./unit-review-scheduler.mjs?v=pilot-21-0";
+import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-21-0";
+const DATA_URL = "./data/runtime.json";
+const ASSET_VERSION = "pilot-21-0";
 function fetchData(path) {
   const url = new URL(path, window.location.href);
   url.searchParams.set("v", ASSET_VERSION);
-  return fetch(url, { cache: "no-store" });
+  return fetch(url, { cache: "no-cache" });
 }
 const STORAGE_KEY = "ielts-semantic-world-s01-trial-v1";
 const MIGRATION_BACKUP_KEY = `${STORAGE_KEY}-pre-unit-review-v3`;
@@ -28,6 +29,14 @@ const nav = document.querySelector("#sceneNav");
 const glossaryDialog = document.querySelector("#glossaryDialog");
 let glossaryReturnFocus = null;
 let content;
+let dataStore;
+let routeGeneration = 0;
+let modalGeneration = 0;
+let routeSearchGeneration = 0;
+let taskHistory = [];
+let unitMetadata = [];
+let unitPage = 0;
+const UNIT_PAGE_SIZE = 50;
 let contentReady = false;
 let worldQuery = "";
 let worldCategory = "all";
@@ -117,7 +126,7 @@ function dateLabel(iso) {
 }
 
 function getScene(id) {
-  return content.microScenes.find((scene) => scene.id === id);
+  return dataStore?.getScene(id);
 }
 
 function promptsFor(scene) {
@@ -169,19 +178,58 @@ function unitNextDate(unitId) {
   return Object.values(practice.unitReviews[unitId]?.tracks || {}).map((track) => track.nextDueDate).filter(Boolean).sort()[0] || null;
 }
 
-function openReview(entry, support = "none") {
+async function hydrateScene(id) {
+  const bundle = await dataStore.ensureScene(id);
+  const full = new Map(learningUnits.map(unit => [unit.id, unit]));
+  bundle.units.forEach(unit => full.set(unit.id, unit));
+  learningUnits = [...full.values()];
+  Object.assign(dictionaryContext, bundle.contexts);
+  textTranslations[id] = bundle.translation;
+  assertWordCoverage(bundle.scene);
+  const current = buildTaskRegistry([bundle.scene], bundle.units, textTranslations, content.version);
+  taskRegistry = [...taskRegistry.filter(task => task.sceneId !== id), ...current];
+  refreshTaskResolver();
+  return bundle.scene;
+}
+
+function refreshTaskResolver() {
+  resolveTask = createTaskResolver(taskRegistry, taskHistory);
+}
+
+async function hydrateHistory(attempts) {
+  const rows = await dataStore.taskHistoryFor(attempts);
+  taskHistory = [...new Map([...taskHistory, ...rows].map(row => [row.receiptId, row])).values()];
+  refreshTaskResolver();
+}
+
+function contentError(error, retry) {
+  app.innerHTML = `<section class="simple-page"><h1>内容暂未载入</h1><p role="status">${escapeHtml(error.message)}</p><button class="secondary-btn" type="button" id="retryContent">重试</button></section>`;
+  app.querySelector('#retryContent').addEventListener('click', retry);
+}
+
+async function openReview(entry, support = "none") {
   const target = entry.target || (entry.prompt && { sceneId: entry.scene.id, promptId: entry.prompt.id, responseMode: "written" });
   if (!target) return;
-  clearSessionRecordings();
-  const scene = getScene(target.sceneId);
-  const index = scene && promptsFor(scene).findIndex((prompt) => prompt.id === target.promptId);
-  if (!scene || index < 0) return;
-  ui = { page: "prompt", sceneId: scene.id, promptIndex: index, reviewMode: true, revealed: false,
-    support, submittedAttemptId: null, preferredResponseMode: target.responseMode,
-    reviewUnitIds: entry.unitId ? [entry.unitId] : [], reviewTrackKey: entry.trackKey || null };
-  render();
-  app.focus({ preventScroll: true });
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  preserveDraft();
+  clearSessionRecordings(); stopVoicePractice();
+  const generation = ++routeGeneration; ++modalGeneration;
+  if (glossaryDialog.open) glossaryDialog.close();
+  app.innerHTML = '<div class="loading">正在打开练习…</div>';
+  try {
+    const scene = await hydrateScene(target.sceneId);
+    if (generation !== routeGeneration) return;
+    const index = promptsFor(scene).findIndex(prompt => prompt.id === target.promptId);
+    if (index < 0) throw new Error('这道练习不在当前课程中');
+    dataStore.pinScene(scene.id);
+    ui = { page: "prompt", sceneId: scene.id, promptIndex: index, reviewMode: true, revealed: false,
+      support, submittedAttemptId: null, preferredResponseMode: target.responseMode,
+      reviewUnitIds: entry.unitId ? [entry.unitId] : [], reviewTrackKey: entry.trackKey || null };
+    // Preserve direct-review state when closing a popup. A later explicit
+    // history navigation restores the scene page as it did before this release.
+    const hash = `#scene/${encodeURIComponent(scene.id)}`;
+    if (location.hash !== hash) history.pushState(null, '', hash);
+    render(); app.focus({ preventScroll: true }); window.scrollTo({ top: 0, behavior: 'smooth' });
+  } catch (error) { if (generation === routeGeneration) contentError(error, () => openReview(entry, support)); }
 }
 
 function latestAttempt(promptId) {
@@ -240,21 +288,43 @@ function renderChrome() {
   nav.querySelectorAll("[data-scene]").forEach((button) => button.addEventListener("click", () => navigate("scene", button.dataset.scene)));
 }
 
-function navigate(page, sceneId = null, { updateUrl = true } = {}) {
-  if (!contentReady) return;
-  clearSessionRecordings();
-  if (ui.page === "prompt" && !ui.revealed) {
-    const input = app.querySelector("#answerInput");
+function preserveDraft() {
+  if (ui.page === 'prompt' && !ui.revealed) {
+    const input = app.querySelector('#answerInput');
     if (input) drafts[`${ui.sceneId}:${ui.promptIndex}`] = { response: input.value, support: ui.support };
   }
-  ui = { page, sceneId, promptIndex: 0, reviewMode: false, revealed: false, support: "none", submittedAttemptId: null };
+}
+
+async function navigate(page, sceneId = null, { updateUrl = true } = {}) {
+  if (!contentReady) return;
+  preserveDraft(); clearSessionRecordings(); stopVoicePractice();
+  const generation = ++routeGeneration; ++modalGeneration; ++routeSearchGeneration;
+  if (glossaryDialog.open) glossaryDialog.close();
+  const branchId = activeBranchId;
   if (updateUrl) {
-    const hash = page === "scene" ? `#scene/${encodeURIComponent(sceneId)}` : page === "branch" ? `#branch/${encodeURIComponent(activeBranchId)}` : `#${page}`;
-    if (window.location.hash !== hash) window.history.pushState(null, "", hash);
+    const hash = page === 'scene' ? `#scene/${encodeURIComponent(sceneId)}` : page === 'branch' ? `#branch/${encodeURIComponent(branchId)}` : `#${page}`;
+    if (window.location.hash !== hash) window.history.pushState(null, '', hash);
   }
-  render();
-  app.focus({ preventScroll: true });
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  try {
+    if (page === 'scene') {
+      app.innerHTML = '<div class="loading">正在打开场景…</div>';
+      await hydrateScene(sceneId);
+    } else if (page === 'units') {
+      app.innerHTML = '<div class="loading">正在打开表达记录…</div>';
+      unitMetadata = await dataStore.unitMetadata();
+      // Metadata remains complete even if its courses are not loaded.
+      const complete = new Map(unitMetadata.map(unit => [unit.id, unit]));
+      learningUnits.forEach(unit => { if (unit.sourceRecords) complete.set(unit.id, unit); });
+      learningUnits = [...complete.values()];
+    }
+    if (generation !== routeGeneration) return;
+    activeBranchId = branchId;
+    dataStore.pinScene(page === 'scene' ? sceneId : null);
+    ui = { page, sceneId, promptIndex: 0, reviewMode: false, revealed: false, support: 'none', submittedAttemptId: null };
+    render(); app.focus({ preventScroll: true }); window.scrollTo({ top: 0, behavior: 'smooth' });
+  } catch (error) {
+    if (generation === routeGeneration) contentError(error, () => navigate(page, sceneId, { updateUrl: false }));
+  }
 }
 
 function restoreRoute() {
@@ -341,19 +411,37 @@ function renderHome() {
   filterRoutes();
 }
 
-function filterRoutes() {
+async function filterRoutes() {
+  const generation = ++routeSearchGeneration;
   const groups = { home: 'life', community: 'public', urban: 'public', science: 'study', campus: 'study', nature: 'nature', travel: 'life', commerce: 'life', kitchen: 'life', health: 'life' };
   const query = worldQuery.trim().toLocaleLowerCase();
-  let visible = 0;
-  for (const card of app.querySelectorAll('[data-branch-card]')) {
-    const branch = getBranch(card.dataset.branchCard);
-    const search = [branch.title, branch.subtitle, branch.description, ...branch.route, ...branchScenes(branch).flatMap((scene) => [scene.navTitle, scene.title, scene.goal, textTranslations[scene.id]?.goal || '', ...(scene.terms || []).map((term) => term.term), ...(scene.glossary || []).flatMap((entry) => [entry.text, entry.zh])])].join(' ').toLocaleLowerCase();
-    const matches = (!query || search.includes(query)) && (worldCategory === 'all' || groups[branch.theme] === worldCategory);
-    card.hidden = !matches;
-    if (matches) visible += 1;
+  const category = worldCategory;
+  const count = app.querySelector('#routeResultCount');
+  if (!count) return;
+  let matches = null;
+  try {
+    if (query) {
+      count.textContent = '正在搜索…';
+      matches = new Set((await dataStore.search(query, 'route')).map(doc => doc.id));
+    }
+    if (generation !== routeSearchGeneration || ui.page !== 'home') return;
+    let visible = 0;
+    for (const card of app.querySelectorAll('[data-branch-card]')) {
+      const branch = getBranch(card.dataset.branchCard);
+      const selected = (!matches || matches.has(branch.id)) && (category === 'all' || groups[branch.theme] === category);
+      card.hidden = !selected;
+      if (selected) visible += 1;
+    }
+    count.textContent = query || category !== 'all' ? `${visible} 条路线` : '';
+    app.querySelector('#routeEmpty').hidden = visible !== 0;
+  } catch (_) {
+    if (generation !== routeSearchGeneration || ui.page !== 'home') return;
+    // Previous cards are not presented as a final complete query result.
+    count.textContent = '搜索暂不可用。';
+    const retry = document.createElement('button'); retry.className = 'text-btn'; retry.type = 'button'; retry.textContent = '重试';
+    retry.addEventListener('click', filterRoutes); count.append(retry);
+    app.querySelector('#routeEmpty').hidden = true;
   }
-  app.querySelector('#routeResultCount').textContent = query || worldCategory !== "all" ? `${visible} 条路线` : "";
-  app.querySelector('#routeEmpty').hidden = visible !== 0;
 }
 
 const ACTIVITY_META = {
@@ -505,8 +593,14 @@ function sourceDetailHtml(source) {
 function showEntryModal(scene, entry, trigger, relatedChunkId = null) {
   const requestToken = Symbol();
   glossaryDialog.dictionaryToken = requestToken;
-  if (!dictionaryFinished && !entry.dictionaryLoadChecked) ensureDictionary().then(() => {
-    if (glossaryDialog.open && glossaryDialog.dictionaryToken === requestToken) showEntryModal(scene, { ...entry, dictionaryLoadChecked: true }, null, relatedChunkId);
+  glossaryDialog.entryContext = { scene, entry, relatedChunkId };
+  if (!entry.dictionaryLoadChecked) ensureDictionary(scene, entry, false).then(result => {
+    if (!glossaryDialog.open || glossaryDialog.dictionaryToken !== requestToken) return;
+    wordnet = result.wordnet; dictionaryTranslations = result.translations; dictionaryChinese = result.chinese;
+    showEntryModal(scene, { ...entry, dictionaryLoadChecked: true, dictionaryChineseLoaded: result.chineseState === 'ready' }, null, relatedChunkId);
+  }, () => {
+    if (glossaryDialog.open && glossaryDialog.dictionaryToken === requestToken)
+      showEntryModal(scene, { ...entry, dictionaryLoadChecked: true, dictionaryError: true }, null, relatedChunkId);
   });
   if (!glossaryDialog.open) glossaryReturnFocus = trigger;
   const source = (scene.terms || []).find((term) =>
@@ -524,16 +618,21 @@ function showEntryModal(scene, entry, trigger, relatedChunkId = null) {
     ${entry.type !== "word" ? `<div class="glossary-components"><span>单词</span><div>${chunkWordButtons(scene, entry)}</div></div>` : ""}
     ${relatedChunk ? `<button class="glossary-related" type="button" data-related-chunk-open="${escapeHtml(relatedChunk.id)}" data-related-scene="${escapeHtml(scene.id)}">查看整块表达：${escapeHtml(relatedChunk.text)} ↗</button>` : ""}
     ${showProjectExample ? `<div class="glossary-example"><span>项目情境例句</span><p>${escapeHtml(entry.example)}</p>${textTranslation(entry.exampleZh, "例句中文")}</div>` : ""}
-    ${wordnet ? dictionaryHtml(entry, scene.id, wordnet, dictionaryContext, dictionaryTranslations, dictionaryChinese, showDictionaryChinese) : `<p role="status" class="meta">${entry.dictionaryLoadChecked ? "词典暂不可用。可关闭窗口后重开重试，本情境释义仍可阅读。" : "正在载入词典；本情境释义可先阅读。"}</p>`}
+    ${entry.dictionaryLoadChecked && !entry.dictionaryError && wordnet ? dictionaryHtml(entry, scene.id, wordnet, dictionaryContext, dictionaryTranslations, dictionaryChinese, showDictionaryChinese && entry.dictionaryChineseLoaded) : `<p role="status" class="meta">${entry.dictionaryLoadChecked ? "词典暂不可用。本情境释义仍可阅读。" : "正在载入词典；本情境释义可先阅读。"}</p>${entry.dictionaryError ? '<button class="text-btn" type="button" data-dictionary-retry>重试词典</button>' : ''}` }
     <details class="glossary-source"><summary>${entry.type !== "word" ? "组成词来源" : "来源"}</summary>${sourceDetailHtml(source)}</details>
   </div>`;
   if (glossaryDialog.open) glossaryDialog.querySelector(".glossary-close").focus();
   else glossaryDialog.showModal();
   glossaryDialog.scrollTop = 0;
+  if (entry.dictionaryLoadChecked && !entry.dictionaryError && showDictionaryChinese && !entry.dictionaryChineseLoaded) loadModalChinese();
 }
 
-function openGlossary(sceneId, entryId, trigger) {
-  const scene = getScene(sceneId);
+async function openGlossary(sceneId, entryId, trigger) {
+  const generation = ++modalGeneration, route = routeGeneration;
+  let scene;
+  try { scene = await hydrateScene(sceneId); }
+  catch (error) { if (generation === modalGeneration && route === routeGeneration) showModalLoadError(error, trigger, () => openGlossary(sceneId, entryId, trigger)); return; }
+  if (generation !== modalGeneration || route !== routeGeneration) return;
   const entry = scene?.glossary?.find((item) => item.id === entryId);
   if (entry) {
     markLookupSupport();
@@ -541,8 +640,12 @@ function openGlossary(sceneId, entryId, trigger) {
   }
 }
 
-function openWord(sceneId, word, trigger, relatedChunkId, contextSentence, dictionaryUsage) {
-  const scene = getScene(sceneId);
+async function openWord(sceneId, word, trigger, relatedChunkId, contextSentence, dictionaryUsage) {
+  const generation = ++modalGeneration, route = routeGeneration;
+  let scene;
+  try { scene = await hydrateScene(sceneId); }
+  catch (error) { if (generation === modalGeneration && route === routeGeneration) showModalLoadError(error, trigger, () => openWord(sceneId, word, trigger, relatedChunkId, contextSentence, dictionaryUsage)); return; }
+  if (generation !== modalGeneration || route !== routeGeneration) return;
   if (!scene) return;
   markLookupSupport();
   const curated = (scene.glossary || []).find((item) => item.type === "word" && item.text.toLowerCase() === word);
@@ -556,6 +659,14 @@ function openWord(sceneId, word, trigger, relatedChunkId, contextSentence, dicti
   entry.contextSentence = contextSentence;
   entry.dictionaryUsage = dictionaryUsage;
   showEntryModal(scene, entry, trigger, relatedChunkId);
+}
+
+function showModalLoadError(error, trigger, retry) {
+  glossaryDialog.dictionaryToken = Symbol();
+  if (!glossaryDialog.open) glossaryReturnFocus = trigger;
+  glossaryDialog.innerHTML = `<div class="glossary-modal"><button class="glossary-close" type="button" aria-label="关闭释义窗口">×</button><h2 id="glossaryHeadword">词义暂未载入</h2><p role="status">${escapeHtml(error.message)}</p><button class="secondary-btn" type="button" id="retryWordData">重试</button></div>`;
+  glossaryDialog.querySelector('#retryWordData').addEventListener('click', retry);
+  if (!glossaryDialog.open) glossaryDialog.showModal();
 }
 
 function markLookupSupport() {
@@ -923,13 +1034,21 @@ app.addEventListener("toggle", (event) => {
 }, true);
 glossaryDialog.addEventListener("click", (event) => {
   const toggle = event.target.closest("[data-dictionary-chinese]");
+  if (event.target.closest('[data-dictionary-retry]')) {
+    const current = glossaryDialog.entryContext;
+    if (current) showEntryModal(current.scene, { ...current.entry, dictionaryLoadChecked: false, dictionaryError: false }, null, current.relatedChunkId);
+    return;
+  }
   if (toggle) {
-    showDictionaryChinese = toggle.getAttribute("aria-pressed") !== "true";
-    toggle.setAttribute("aria-pressed", String(showDictionaryChinese));
-    toggle.textContent = showDictionaryChinese ? "隐藏中文释义与例句译文" : "显示中文释义与例句译文";
-    glossaryDialog.querySelector(".dictionary-section").classList.toggle("dictionary-chinese-visible", showDictionaryChinese);
-    glossaryDialog.querySelectorAll(".example-translation").forEach((detail) => { detail.open = showDictionaryChinese; });
-    markTranslationSupport();
+    const current = glossaryDialog.entryContext;
+    if (!current) return;
+    showDictionaryChinese = toggle.getAttribute('aria-pressed') !== 'true';
+    if (showDictionaryChinese && !current.entry.dictionaryChineseLoaded) { loadModalChinese(); return; }
+    toggle.setAttribute('aria-pressed', String(showDictionaryChinese));
+    toggle.textContent = showDictionaryChinese ? '隐藏中文释义与例句译文' : '显示中文释义与例句译文';
+    glossaryDialog.querySelector('.dictionary-section').classList.toggle('dictionary-chinese-visible', showDictionaryChinese);
+    glossaryDialog.querySelectorAll('.example-translation').forEach(detail => { detail.open = showDictionaryChinese; });
+    if (showDictionaryChinese) markTranslationSupport();
     return;
   }
   const component = event.target.closest("[data-dialog-word]");
@@ -949,6 +1068,28 @@ glossaryDialog.addEventListener("click", (event) => {
   }
   if (event.target === glossaryDialog || event.target.closest(".glossary-close")) glossaryDialog.close();
 });
+function loadModalChinese() {
+  const current = glossaryDialog.entryContext;
+  const toggle = glossaryDialog.querySelector('[data-dictionary-chinese]');
+  if (!current || !toggle || toggle.disabled) return;
+  const token = glossaryDialog.dictionaryToken;
+  const tab = glossaryDialog.querySelector('[data-dictionary-tab][aria-selected="true"]')?.dataset.dictionaryTab || 'current';
+  toggle.disabled = true; toggle.textContent = '正在载入中文…';
+  ensureDictionary(current.scene, current.entry, true).then(result => {
+    if (!glossaryDialog.open || glossaryDialog.dictionaryToken !== token) return;
+    wordnet = result.wordnet; dictionaryTranslations = result.translations; dictionaryChinese = result.chinese;
+    showDictionaryChinese = true;
+    showEntryModal(current.scene, { ...current.entry, dictionaryChineseLoaded: true }, null, current.relatedChunkId);
+    activateDictionaryTab(tab); markTranslationSupport();
+    glossaryDialog.querySelector('[data-dictionary-chinese]')?.focus();
+  }, () => {
+    if (!glossaryDialog.open || glossaryDialog.dictionaryToken !== token) return;
+    showDictionaryChinese = false;
+    toggle.disabled = false; toggle.setAttribute('aria-pressed', 'false');
+    toggle.textContent = '中文暂未载入，重试';
+  });
+}
+
 function activateDictionaryTab(id) {
   glossaryDialog.querySelectorAll("[data-dictionary-tab]").forEach((button) => {
     const selected = button.dataset.dictionaryTab === id;
@@ -968,6 +1109,7 @@ glossaryDialog.addEventListener("keydown", (event) => {
   tabs[next].focus();
 });
 glossaryDialog.addEventListener("close", () => {
+  ++modalGeneration; glossaryDialog.dictionaryToken = Symbol();
   if (glossaryReturnFocus?.isConnected) glossaryReturnFocus.focus();
   glossaryReturnFocus = null;
 });
@@ -975,106 +1117,28 @@ glossaryDialog.addEventListener("close", () => {
 try {
   const response = await fetchData(DATA_URL);
   if (!response.ok) throw new Error(`HTTP ${response.status}`);
-  content = await response.json();
-  if (Array.isArray(content.sceneFiles)) {
-    content.microScenes = [];
-    for (const path of content.sceneFiles) {
-      const sceneResponse = await fetchData(path);
-      if (!sceneResponse.ok) throw new Error(`${path} 场景内容未载入（HTTP ${sceneResponse.status}）`);
-      content.microScenes.push(await sceneResponse.json());
-    }
+  dataStore = await new DataStore(await response.json()).initialize();
+  content = { version: dataStore.manifest.contentVersion, release: dataStore.release,
+    branches: dataStore.navigation.branches, microScenes: dataStore.navigation.scenes,
+    counts: dataStore.manifest.counts };
+  for (const summary of content.microScenes) {
+    summary.wordLookup = { ...dataStore.uiWords, ...summary.wordLookup };
+    for (const [scope, entries] of Object.entries(summary.labelContext || {}))
+      dictionaryContext[scope] = { ...dictionaryContext[scope], ...entries };
   }
-  if (!Array.isArray(content.microScenes) || !content.microScenes.length) throw new Error("缺少微场景内容");
-  if (content.learningUnitsFile) {
-    const response = await fetchData(content.learningUnitsFile);
-    if (!response.ok) throw new Error("学习单位未载入");
-    learningUnits = (await response.json()).units || [];
-  }
-  if (content.memoryRouteFile) {
-    const response = await fetchData(content.memoryRouteFile);
-    if (!response.ok) throw new Error("空间路线未载入");
-    const route = await response.json();
-    content.microScenes.forEach((scene) => { if (route.scenes?.[scene.id]) scene.memoryNodes = route.scenes[scene.id].memoryNodes; });
-  }
-  const lookups = [];
-  for (const scene of content.microScenes) {
-    const wordResponse = await fetchData(scene.wordFile);
-    if (!wordResponse.ok) throw new Error(`${scene.id} 词义数据未载入（HTTP ${wordResponse.status}）`);
-    const lookup = await wordResponse.json();
-    if (lookup.sceneId !== scene.id || !lookup.words) throw new Error(`${scene.id} 词义数据不匹配`);
-    lookups.push(lookup.words);
-  }
-  content.microScenes.forEach((scene, index) => {
-    scene.wordLookup = lookups[index];
-    assertWordCoverage(scene);
-  });
-  if (content.uiWordsFile) {
-    const response = await fetchData(content.uiWordsFile);
-    if (!response.ok) throw new Error("路线标题词义未载入");
-    const labels = (await response.json()).words;
-    content.microScenes.forEach((scene) => { scene.wordLookup = { ...labels, ...scene.wordLookup }; });
-  }
-  for (const path of content.dictionaryContextFiles || [content.dictionaryContextFile || "./data/s01-dictionary-context.json"]) {
-    try {
-      const contextResponse = await fetchData(path);
-      if (contextResponse.ok) {
-        const scopes = await contextResponse.json();
-        for (const [scope, entries] of Object.entries(scopes)) {
-          dictionaryContext[scope] = { ...dictionaryContext[scope], ...entries };
-        }
-      }
-    } catch (_) { /* Unmatched senses retain an explicit caveat. */ }
-  }
-  for (const path of content.textTranslationFiles || [content.textTranslationFile || "./data/s01-text-translations.json"]) {
-    try {
-      const response = await fetchData(path);
-      if (response.ok) Object.assign(textTranslations, (await response.json()).scenes || {});
-    } catch (_) { /* English reading remains available without its Chinese layer. */ }
-  }
-  taskRegistry = buildTaskRegistry(content.microScenes, learningUnits, textTranslations, content.version || "v1");
-  let taskHistory = [];
-  try {
-    const response = await fetchData("./data/unit-task-manifest.json");
-    if (response.ok) {
-      const manifest = await response.json();
-      if (manifest.schemaVersion === 1 && Array.isArray(manifest.tasks)) taskHistory = manifest.tasks;
-    }
-  } catch (_) { /* Unknown historical input remains unscheduled; current tasks still work. */ }
-  resolveTask = createTaskResolver(taskRegistry, taskHistory);
+  taskRegistry = dataStore.prompts.tasks;
+  // Resolve all local original facts before replacing a derived schedule cache.
+  // A failed published history shard leaves the original storage untouched.
+  await hydrateHistory(practice.attempts);
   practice = rebuildPractice(practice, scheduleOptions());
-  // The migration backup must succeed before the original storage is replaced.
   persistPractice(practice);
   contentReady = true;
   restoreRoute();
-} catch (error) {
-  app.innerHTML = `<section class="simple-page"><h1>内容尚未载入</h1><p>${escapeHtml(error.message)}</p><p>请刷新重试；如果持续无法载入，请检查网络连接。</p></section>`;
-}
+} catch (error) { contentError(error, () => location.reload()); }
 
-let dictionaryLoading = null;
-let dictionaryFinished = false;
-async function ensureDictionary() {
-  if (!dictionaryLoading) dictionaryLoading = (async () => {
-  try {
-    const dictionaryResponse = await fetchData(content.dictionaryFile || "./data/wordnet-s01.json");
-    if (dictionaryResponse.ok) wordnet = await dictionaryResponse.json();
-  } catch (_) {
-    // Dictionary data is supplementary; the authored scene still works offline.
-  }
-  try {
-    const translationResponse = await fetchData(content.dictionaryTranslationFile || "./data/wordnet-translations-s01.json");
-    if (translationResponse.ok) dictionaryTranslations = await translationResponse.json();
-  } catch (_) {
-    // Original examples remain readable without project translations.
-  }
-  try {
-    const response = await fetchData(content.dictionaryChineseFile || "./data/wordnet-zh-s01.json");
-    if (response.ok) dictionaryChinese = (await response.json()).senses || {};
-  } catch (_) { /* Original dictionary data remains available. */ }
-
-  })();
-  await dictionaryLoading;
-  dictionaryFinished = Boolean(wordnet);
-  if (!wordnet) dictionaryLoading = null;
+async function ensureDictionary(scene, entry, chinese = showDictionaryChinese) {
+  const context = dictionaryContextFor(dictionaryContext, scene.id, entry.text.toLowerCase(), entry.dictionaryUsage);
+  return dataStore.dictionary(entry.text.toLowerCase(), context?.headword || null, { chinese });
 }
 
 function unitsForScene(scene) {
@@ -1119,18 +1183,24 @@ function bindFeedback(scene, prompt, attempt) {
   });
 }
 function renderUnits() {
-  const summaries = learningUnits.map((u) => ({ unit: u, summary: unitSummary(practice, u.id) }));
+  const summaries = filteredUnitRecords();
+  const pages = Math.max(1, Math.ceil(summaries.length / UNIT_PAGE_SIZE));
+  unitPage = Math.min(unitPage, pages - 1);
+  const pageRows = summaries.slice(unitPage * UNIT_PAGE_SIZE, (unitPage + 1) * UNIT_PAGE_SIZE);
   const registeredScenes = new Set(learningUnits.flatMap((u) => u.sceneIds));
   const registeredBranches = content.branches.filter((b) => b.sceneIds.some((id) => registeredScenes.has(id)));
   const today = calendarDay(new Date().toISOString(), scheduleOptions().timeZone);
-  app.innerHTML = `<section class="simple-page"><h1>表达记录</h1><section class="unit-tools" aria-label="筛选表达记录"><label for="unitSearch">搜索表达</label><input id="unitSearch" type="search" placeholder="例如：延期、预约、passport…" autocomplete="off"/><label for="unitRoute">学习路线</label><select id="unitRoute"><option value="all">全部</option>${registeredBranches.map((b) => `<option value="${escapeHtml(b.id)}">${escapeHtml(b.title)}</option>`).join("")}</select><label for="unitState">练习记录</label><select id="unitState"><option value="all">全部</option><option value="due">待复习</option><option value="independent">自己用出来了</option><option value="assisted">使用过提示</option><option value="partial">还不熟悉</option><option value="unobserved">暂无记录</option><option value="unknown">旧记录</option></select><p id="unitResultCount" role="status"></p></section><div class="unit-progress-list">${summaries.map(({ unit: u, summary: v }) => {
+  app.innerHTML = `<section class="simple-page"><h1>表达记录</h1><section class="unit-tools" aria-label="筛选表达记录"><label for="unitSearch">搜索表达</label><input id="unitSearch" type="search" placeholder="例如：延期、预约、passport…" autocomplete="off"/><label for="unitRoute">学习路线</label><select id="unitRoute"><option value="all">全部</option>${registeredBranches.map((b) => `<option value="${escapeHtml(b.id)}">${escapeHtml(b.title)}</option>`).join("")}</select><label for="unitState">练习记录</label><select id="unitState"><option value="all">全部</option><option value="due">待复习</option><option value="independent">自己用出来了</option><option value="assisted">使用过提示</option><option value="partial">还不熟悉</option><option value="unobserved">暂无记录</option><option value="unknown">旧记录</option></select><p id="unitResultCount" role="status"></p></section><div class="unit-progress-list">${pageRows.map(({ unit: u, summary: v }) => {
     const recalled = v.observations.filter((o) => o.dimension === "recall" && o.status === "independent" && o.support === "none" && o.contextVerified);
     const transferred = v.observations.filter((o) => o.dimension === "transfer" && o.status === "independent" && o.support === "none" && o.contextVerified);
     const tracks = Object.entries(practice.unitReviews[u.id]?.tracks || {});
     const due = unitNextDate(u.id);
     const buttons = tracks.length ? tracks.map(([key, track]) => `<div><span>${escapeHtml(trackLabel(key))} · ${dateLabel(track.nextDueDate)}</span><button class="text-btn" type="button" data-unit-practice="${escapeHtml(u.id)}" data-unit-track="${escapeHtml(key)}">练习 ↗</button></div>`).join("") : `<button class="text-btn" type="button" data-unit-practice="${escapeHtml(u.id)}" data-unit-track="recall.written">练习 ↗</button>`;
     return `<article data-unit-card="${escapeHtml(u.id)}"><h2>${annotatedEnglish(u.form, getScene(u.sceneIds[0]), u.type === "word" ? u.example : null)}</h2><p>${escapeHtml(u.meaningZh)}</p>${v.latest || v.listening || tracks.length ? `<dl><div><dt>写出来</dt><dd>${recalled.filter((o) => o.modality === "written").length || "—"}</dd></div><div><dt>说出来</dt><dd>${recalled.filter((o) => o.modality === "spoken").length || "—"}</dd></div><div><dt>换个情境</dt><dd>${transferred.length || "—"}</dd></div><div><dt>听懂了</dt><dd>${v.listening ? escapeHtml({ independent: "自评：原先听懂", assisted: "自评：对照后理解", partial: "自评：还需练习" }[v.listening.status]) : "—"}</dd></div></dl>` : ""}<small>${v.latest ? v.latest.contextVerified ? `${escapeHtml(EVIDENCE_LABELS[v.latest.status])} · ${dateLabel(v.latest.at)}` : "旧记录：尚未核对任务" : v.listening ? "" : "暂无记录"}</small>${due ? `<p>${due <= today ? "待复习" : "下次"} · ${dateLabel(due)}</p>` : ""}<details><summary>练习</summary>${buttons}<p role="status" data-unit-entry-status></p></details><button class="text-btn" type="button" data-unit-scene="${escapeHtml(u.sceneIds[0])}">回到学习场景 ↗</button></article>`;
-  }).join("")}</div></section>`;
+  }).join("")}</div><div class="button-row" aria-label="表达列表翻页"><button class="secondary-btn" id="unitPrevious" type="button" ${unitPage === 0 ? 'disabled' : ''}>上一页</button><span>${unitPage + 1} / ${pages}</span><button class="secondary-btn" id="unitNext" type="button" ${unitPage + 1 === pages ? 'disabled' : ''}>下一页</button></div></section>`;
+  app.querySelector('#unitResultCount').textContent = `${summaries.length} 个表达`;
+  app.querySelector('#unitPrevious').addEventListener('click', () => { unitPage -= 1; renderUnits(); app.focus({preventScroll:true}); });
+  app.querySelector('#unitNext').addEventListener('click', () => { unitPage += 1; renderUnits(); app.focus({preventScroll:true}); });
   if (!registeredBranches.some((b) => b.id === unitScope)) unitScope = "all";
   app.querySelector("#unitSearch").value = unitQuery;
   app.querySelector("#unitRoute").value = unitScope;
@@ -1138,7 +1208,6 @@ function renderUnits() {
   app.querySelector("#unitSearch").addEventListener("input", (event) => { unitQuery = event.target.value; filterUnitRecords(); });
   app.querySelector("#unitRoute").addEventListener("change", (event) => { unitScope = event.target.value; filterUnitRecords(); });
   app.querySelector("#unitState").addEventListener("change", (event) => { unitViewFilter = event.target.value; filterUnitRecords(); });
-  filterUnitRecords();
   app.querySelectorAll("[data-unit-scene]").forEach((b) => b.addEventListener("click", () => navigate("scene", b.dataset.unitScene)));
   app.querySelectorAll("[data-unit-practice]").forEach((button) => button.addEventListener("click", () => {
     const unitId = button.dataset.unitPractice;
@@ -1205,12 +1274,18 @@ function renderImport() {
       panel.querySelector("button").disabled = false;
     } catch (error) { panel.querySelector("#importStatus").textContent = `未导入：${error.message}`; }
   });
-  panel.querySelector("button").addEventListener("click", () => {
+  panel.querySelector("button").addEventListener("click", async () => {
     if (!importCandidate) return;
+    const candidate = importCandidate;
+    panel.querySelector("button").disabled = true;
     let merged;
-    try { merged = mergePractice(practice, importCandidate, scheduleOptions()); }
-    catch (error) { panel.querySelector("#importStatus").textContent = `未合并：${error.message}`; return; }
-    if (!persistPractice(merged)) { panel.querySelector("#importStatus").textContent = "未合并：本机暂不能保存，请保留备份。"; return; }
+    try {
+      await hydrateHistory([...practice.attempts, ...candidate.attempts]);
+      if (importCandidate !== candidate || !panel.isConnected) return;
+      merged = mergePractice(practice, candidate, scheduleOptions());
+    }
+    catch (error) { panel.querySelector("#importStatus").textContent = `未合并：${error.message}`; panel.querySelector("button").disabled = false; return; }
+    if (!persistPractice(merged)) { panel.querySelector("#importStatus").textContent = "未合并：本机暂不能保存，请保留备份。"; panel.querySelector("button").disabled = false; return; }
     practice = merged; importCandidate = null; panel.querySelector("button").disabled = true;
     panel.querySelector("#importStatus").textContent = "已合并并保存；本机原答保留。"; renderChrome();
   });
@@ -1222,24 +1297,28 @@ function clearSessionRecordings() {
   sessionRecordings.clear();
 }
 
-function filterUnitRecords() {
+function filteredUnitRecords() {
   const query = unitQuery.trim().toLocaleLowerCase();
   const today = calendarDay(new Date().toISOString(), scheduleOptions().timeZone);
-  let visible = 0;
-  for (const card of app.querySelectorAll('[data-unit-card]')) {
-    const unit = learningUnits.find((u) => u.id === card.dataset.unitCard);
-    const summary = unitSummary(practice, unit.id);
-    const observed = summary.observations.filter((o) => o.status !== "unobserved");
+  return learningUnits.map(unit => ({ unit, summary: unitSummary(practice, unit.id) })).filter(({ unit, summary }) => {
+    const observed = summary.observations.filter(o => o.status !== 'unobserved');
     const due = unitNextDate(unit.id);
-    const inRoute = unitScope === 'all' || unit.sceneIds.some((id) => branchForScene(getScene(id))?.id === unitScope);
-    const inState = unitViewFilter === "all"
-      || (unitViewFilter === "due" && due && due <= today)
-      || (unitViewFilter === "unobserved" && !observed.length)
-      || (unitViewFilter === "unknown" && observed.some((o) => !o.contextVerified))
-      || (["independent", "assisted", "partial"].includes(unitViewFilter) && observed.some((o) => o.contextVerified && o.status === unitViewFilter));
-    const match = inRoute && inState && (!query || [unit.form, unit.meaningZh, unit.sense].join(' ').toLocaleLowerCase().includes(query));
-    card.hidden = !match;
-    if (match) visible += 1;
-  }
-  app.querySelector('#unitResultCount').textContent = `${visible} 个表达`;
+    const inRoute = unitScope === 'all' || unit.sceneIds.some(id => branchForScene(getScene(id))?.id === unitScope);
+    const inState = unitViewFilter === 'all'
+      || (unitViewFilter === 'due' && due && due <= today)
+      || (unitViewFilter === 'unobserved' && !observed.length)
+      || (unitViewFilter === 'unknown' && observed.some(o => !o.contextVerified))
+      || (['independent', 'assisted', 'partial'].includes(unitViewFilter) && observed.some(o => o.contextVerified && o.status === unitViewFilter));
+    return inRoute && inState && (!query || [unit.form, unit.meaningZh, unit.sense].join(' ').toLocaleLowerCase().includes(query));
+  });
+}
+
+function filterUnitRecords() {
+  const focus = document.activeElement;
+  const inputId = focus?.id;
+  const selection = inputId === 'unitSearch' ? [focus.selectionStart, focus.selectionEnd] : null;
+  unitPage = 0;
+  renderUnits();
+  const restored = inputId && app.querySelector(`#${inputId}`);
+  if (restored) { restored.focus({ preventScroll: true }); if (selection) restored.setSelectionRange(...selection); }
 }

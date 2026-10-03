@@ -1,17 +1,34 @@
 // Unit evidence is self-checked; legacy task ratings never imply unit mastery.
-import { rebuildPractice, validTimeZone } from "./unit-review-scheduler.mjs?v=pilot-20-0";
+import { rebuildPractice, validTimeZone } from "./unit-review-scheduler.mjs?v=pilot-21-0";
 export const EVIDENCE_LABELS = { unobserved: "未记录", partial: "还不熟悉", assisted: "看提示后会用", independent: "自己用出来了" };
+const evidenceIndexes = new WeakMap();
+function indexesFor(practice) {
+  if (!evidenceIndexes.has(practice)) {
+    const byUnit = new Map(), listening = new Map();
+    const observations = Array.isArray(practice.unitEvidence) ? practice.unitEvidence
+      : (practice.attempts || []).flatMap(attempt => Object.entries(attempt.unitAssessments || {}).map(([unitId, status]) => ({
+        unitId, reportedStatus: status, status: status === 'independent' ? 'assisted' : status,
+        dimension: attempt.taskMode || 'unknown', modality: attempt.responseMode || 'unknown',
+        at: attempt.attemptedAt, attemptId: attempt.id, support: attempt.support || 'unknown',
+        unitVersion: attempt.unitVersion, contextVerified: false })));
+    for (const observation of observations) {
+      if (!byUnit.has(observation.unitId)) byUnit.set(observation.unitId, []);
+      byUnit.get(observation.unitId).push(observation);
+    }
+    for (const attempt of practice.listeningAttempts || []) listening.set(attempt.unitId, attempt);
+    evidenceIndexes.set(practice, { byUnit, listening });
+  }
+  return evidenceIndexes.get(practice);
+}
 export function observationsFor(practice, unitId) {
-  if (Array.isArray(practice.unitEvidence)) return practice.unitEvidence.filter((observation) => observation.unitId === unitId);
-  return (practice.attempts || []).flatMap((attempt) => Object.entries(attempt.unitAssessments || {})
-    .filter(([id]) => id === unitId).map(([, status]) => ({ reportedStatus: status, status: status === "independent" ? "assisted" : status, dimension: attempt.taskMode || "unknown", modality: attempt.responseMode || "unknown", at: attempt.attemptedAt, attemptId: attempt.id, support: attempt.support || "unknown", unitVersion: attempt.unitVersion, contextVerified: false })));
+  return indexesFor(practice).byUnit.get(unitId) || [];
 }
 export function unitSummary(practice, unitId) {
   const observations = observationsFor(practice, unitId);
   return { observations, latest: observations.at(-1) || null,
-    independentRecall: observations.filter((o) => o.dimension === "recall" && o.status === "independent" && o.support === "none" && o.contextVerified).length,
-    independentTransfer: observations.filter((o) => o.dimension === "transfer" && o.status === "independent" && o.support === "none" && o.contextVerified).length,
-    listening: (practice.listeningAttempts || []).filter((a) => a.unitId === unitId).at(-1) || null };
+    independentRecall: observations.filter(o => o.dimension === 'recall' && o.status === 'independent' && o.support === 'none' && o.contextVerified).length,
+    independentTransfer: observations.filter(o => o.dimension === 'transfer' && o.status === 'independent' && o.support === 'none' && o.contextVerified).length,
+    listening: indexesFor(practice).listening.get(unitId) || null };
 }
 export function normalisePractice(value) {
   if (value?.schemaVersion != null && (!Number.isInteger(value.schemaVersion) || value.schemaVersion < 1)) throw new Error("备份版本格式无效");

@@ -4,7 +4,7 @@ Situation → Language: learn English through decisions, objects and events.
 
 **[Open the learning website](https://gyc5151.github.io/ielts-semantic-world/)**
 
-## Current version: pilot-20-0
+## Current version: pilot-21-0
 
 13 routes, 52 short bilingual scenes, 218 retrieval/transfer tasks:
 
@@ -56,3 +56,9 @@ The Chinese dictionary support layer uses an Argos/OPUS-MT model. See [model att
 ## Deployment
 
 Only static runtime website files and attribution are included. GitHub Pages publishes the root of `main`; `.nojekyll` skips Jekyll processing. Authoring files, original source materials, models and practice/audit records are not part of this repository.
+
+## Resource loading
+
+Navigation opens from a fixed release directory. Course text, word meanings and unit details load for the selected course. Dictionary English senses and Chinese support load independently for the selected word. Search covers the complete published route directory; expression records use complete metadata and 50-item pages. Original learning IDs and the existing practice storage key are preserved. Resource errors can be retried without clearing practice records.
+
+The compiled startup directory is 225,007 raw JSON bytes for this release; opening a course and resolving existing records adds its required resources. This is a file inventory, not a measured loading-time or learner-effect result.
