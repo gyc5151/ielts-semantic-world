@@ -1,11 +1,11 @@
-import { DataStore } from "./data-store.mjs?v=pilot-22-0";
-import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-22-0";
-import { nextReview, reviewDue } from "./learning.mjs?v=pilot-22-0";
-import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-22-0";
-import { buildTaskRegistry, createTaskResolver, taskCuePolicy, rebuildPractice, calendarDay, dueUnitTracks, choosePracticeTarget, validTimeZone } from "./unit-review-scheduler.mjs?v=pilot-22-0";
-import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-22-0";
+import { DataStore } from "./data-store.mjs?v=pilot-22-0-r1";
+import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-22-0-r1";
+import { nextReview, reviewDue } from "./learning.mjs?v=pilot-22-0-r1";
+import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-22-0-r1";
+import { buildTaskRegistry, createTaskResolver, taskCuePolicy, rebuildPractice, calendarDay, dueUnitTracks, choosePracticeTarget, validTimeZone } from "./unit-review-scheduler.mjs?v=pilot-22-0-r1";
+import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-22-0-r1";
 const DATA_URL = "./data/runtime.json";
-const ASSET_VERSION = "pilot-22-0";
+const ASSET_VERSION = "pilot-22-0-r1";
 function fetchData(path) {
   const url = new URL(path, window.location.href);
   url.searchParams.set("v", ASSET_VERSION);
@@ -444,11 +444,11 @@ async function filterRoutes() {
 }
 
 const ACTIVITY_META = {
-  explain: { label: '说明发生了什么', title: '把这件事说明白。', hint: '用英语说一两句：信息 → 原因或下一步。', placeholder: 'Explain what happened and why…', goal: '说明关键事实，并给出它带来的原因或行动。' },
-  request: { label: '开口询问', title: '这次，请开口询问。', hint: '写一句明确、礼貌、对方能够回答的请求或问题。', placeholder: 'Ask what you need to know…', goal: '把人物需要知道或需要对方做的事说清楚。' },
-  compare: { label: '比较两边', title: '把两边的信息说清楚。', hint: '写两句：两者在哪一方面不同，这如何影响选择？', placeholder: 'Compare the two options or observations…', goal: '沿同一个比较维度说出差异与后果。' },
-  rewrite: { label: '修改一句话', title: '让这句话更准确。', hint: '重新写一句：保留有根据的信息，修改过大的承诺或遗漏。', placeholder: 'Write a clearer, more accurate version…', goal: '根据情境修改原句；不需要把所有词都换掉。' },
-  opinion: { label: '观点与条件', title: '说出观点，也留好条件。', hint: '写两三句：你的观点 → 一个具体理由或例子 → 必要条件。', placeholder: 'Give a view, a reason and a condition…', goal: '提出可解释的看法，并说明它在哪些条件下适用。' }
+  explain: { label: '说明发生了什么', placeholder: 'Your answer…' },
+  request: { label: '开口询问', placeholder: 'Your answer…' },
+  compare: { label: '比较两边', placeholder: 'Your answer…' },
+  rewrite: { label: '修改一句话', placeholder: 'Your answer…' },
+  opinion: { label: '表达观点', placeholder: 'Your answer…' }
 };
 
 function branchObjectMapHtml(branch, scenes, next) {
@@ -671,7 +671,7 @@ async function openUnitExpression(unitId, trigger) {
     if (!unit) throw new Error('表达详情尚未载入');
     markLookupSupport();
     showEntryModal(scene, { text: unit.form, type: unit.type, zh: unit.meaningZh,
-      note: unit.sense, example: unit.example, exampleZh: unit.exampleZh,
+      note: unitUsageNote(unit, scene), example: unit.example, exampleZh: unit.exampleZh,
       unitSources: unit.sourceRecords }, trigger);
   } catch (error) {
     if (generation === modalGeneration && route === routeGeneration)
@@ -781,17 +781,17 @@ function renderPrompt() {
         
       </div>
       ${prompt.draft ? `<section class="rewrite-draft"><span>需要修改的原句</span><p lang="en">${annotatedEnglish(prompt.draft, scene)}</p>${textTranslation(translated?.draft, '中文')}</section>` : ""}
-      ${ui.support === "chinese" || ui.support === "story" ? `<div class="hint-panel"><strong>${ui.support === "story" ? "原文已重新打开" : "提示"}</strong>${ui.support === "story" ? readingHtml(scene) : `<p>${escapeHtml(isTransfer ? "先说清新人物遇到什么问题、有哪些条件，再给出行动、判断或请求。用自己的句子表达。" : (scene.zhSupport || "先说清谁遇到什么问题、想得到什么结果，再找英语表达。"))}</p>`}</div>` : ""}
+      ${ui.support === "chinese" || ui.support === "story" ? `<div class="hint-panel"><strong>${ui.support === "story" ? "原文" : "词义"}</strong>${ui.support === "story" ? readingHtml(scene) : promptHintHtml(scene, prompt, translated)}</div>` : ""}
       ${!ui.revealed ? `
         <label class="answer-label" for="answerInput">Your answer</label>
         <textarea id="answerInput" class="answer-input" rows="5" placeholder="${activity.placeholder}" autocomplete="off" spellcheck="true"></textarea>
         ${prompt.unitIds?.length ? `<div id="oralPractice"></div>` : ""}
         <div class="button-row"><button class="primary-btn" type="button" id="submitAnswer">提交并查看参考表达</button><button class="secondary-btn" type="button" id="cannotRecall">暂时想不出</button></div>
         ${scene.memoryNodes?.length ? `<details class="memory-hint" data-memory-hint><summary>故事里的物件</summary>${memoryRouteHtml(scene)}</details>` : ""}
-        <div class="hint-actions"><button class="text-btn" type="button" id="showChinese">${ui.support === "chinese" ? "已打开提示" : "提示"}</button>${isTransfer ? "" : `<button class="text-btn" type="button" id="showStory">重新看英文情境</button>`}</div>
+        <div class="hint-actions"><button class="text-btn" type="button" id="showChinese">${ui.support === "chinese" ? "已打开提示" : "提示"}</button>${isTransfer ? "" : `<button class="text-btn" type="button" id="showStory">原文</button>`}</div>
         <small class="lookup-status" id="lookupStatus" ${["word", "translation", "memory", "english-input", "audio", "reference"].includes(ui.support) ? "" : "hidden"}>已查看提示</small>
       ` : renderFeedback(scene, prompt, saved)}
-      <div class="prompt-footer"><button class="text-btn" type="button" id="backScene">${isTransfer ? "← 返回当前路线" : "← 返回情境"}</button><span>${ui.promptIndex + 1} / ${prompts.length}</span></div>
+      <div class="prompt-footer"><button class="text-btn" type="button" id="backScene">${isTransfer ? "← 返回目录" : "← 返回故事"}</button></div>
     </section>
   `;
   app.querySelector("#backScene").addEventListener("click", () => isTransfer ? openBranch(branchForScene(scene).id) : navigate("scene", scene.id));
@@ -1178,11 +1178,24 @@ function unitSourceHtml(unit) {
   if (!unit.sourceRecords.length) return "<p>项目依据本课沟通行为整理的构式。</p>";
   return unit.sourceRecords.map((r) => `${sourceDetailHtml(r)}${r.sourceRecord ? `<p class="meta">原记录词性：${escapeHtml(r.sourceRecord.POS || "未提供")} · 原中文：${escapeHtml(r.sourceRecord.Chinese_Meaning || "未提供")}</p>` : ""}${r.auditNote ? `<p class="meta">${escapeHtml(r.auditNote)}</p>` : ""}`).join("");
 }
+function unitUsageNote(unit, scene) {
+  const curated = (scene.glossary || []).find(entry => entry.text?.toLowerCase() === unit.form.toLowerCase());
+  const context = dictionaryContextFor(dictionaryContext, scene.id, unit.form.toLowerCase());
+  return curated?.note || context?.usageNote || (/[\u3400-\u9fff]/.test(unit.sense || "") ? unit.sense : "");
+}
+
+function promptHintHtml(scene, prompt, translated) {
+  const ids = new Set(prompt.unitIds || []);
+  const meanings = [...new Set(unitsForScene(scene).filter(unit => ids.has(unit.id)).map(unit => unit.meaningZh).filter(Boolean))];
+  if (meanings.length) return `<ul>${meanings.map(meaning => `<li>${escapeHtml(meaning)}</li>`).join("")}</ul>`;
+  return `<p>${escapeHtml(translated?.cue || "暂无词义提示")}</p>`;
+}
+
 function unitLearningHtml(scene) {
   const units = unitsForScene(scene);
   if (!units.length) return "";
   const names = { core: "常用表达", support: "更多表达", recognition: "拓展词语" };
-  return `<section class="unit-learning"><h2>词语与表达</h2>${Object.entries(names).filter(([tier]) => units.some((u) => u.tier === tier)).map(([tier, label]) => `<details><summary>${label}</summary><div class="unit-cards">${units.filter((u) => u.tier === tier).map((u) => `<article><strong lang="en">${annotatedEnglish(u.form, scene, u.type === "word" ? u.example : null)}</strong><p>${escapeHtml(u.meaningZh)}</p><details><summary>用法</summary><p>${escapeHtml(u.sense)}</p></details><p lang="en">${annotatedEnglish(u.example, scene)}</p>${textTranslation(u.exampleZh, "例句中文")}<details><summary>来源与例句</summary>${unitSourceHtml(u)}<small>表达组合与例句为项目编写；原词条不修改。</small></details></article>`).join("")}</div></details>`).join("")}</section>`;
+  return `<section class="unit-learning"><h2>词语与表达</h2>${Object.entries(names).filter(([tier]) => units.some((u) => u.tier === tier)).map(([tier, label]) => `<details><summary>${label}</summary><div class="unit-cards">${units.filter((u) => u.tier === tier).map((u) => `<article><strong lang="en">${annotatedEnglish(u.form, scene, u.type === "word" ? u.example : null)}</strong><p>${escapeHtml(u.meaningZh)}</p>${unitUsageNote(u, scene) ? `<details><summary>用法</summary><p>${escapeHtml(unitUsageNote(u, scene))}</p></details>` : ""}<p lang="en">${annotatedEnglish(u.example, scene)}</p>${textTranslation(u.exampleZh, "例句中文")}<details><summary>来源与例句</summary>${unitSourceHtml(u)}<small>例句：项目编写</small></details></article>`).join("")}</div></details>`).join("")}</section>`;
 }
 function unitAssessmentHtml(scene, prompt, attempt) {
   const sceneUnits = new Map(unitsForScene(scene).map((unit) => [unit.id, unit]));
@@ -1260,7 +1273,7 @@ function mountListening(scene) {
     if (!shown) { firstMeaning = host.querySelector("textarea").value.trim(); eligible = played && Boolean(firstMeaning); }
     shown = true;
     const compare = host.querySelector("#listeningCompare"); compare.hidden = false;
-    compare.innerHTML = `<p lang="en">${annotatedEnglish(u.example, scene)}</p><p>${escapeHtml(u.meaningZh)} · ${escapeHtml(u.sense)}</p><div class="button-row"><button class="secondary-btn" type="button" data-listen-rating="independent" ${saved ? "disabled" : ""}>${eligible ? "原先听懂了" : "对照后理解了"}</button><button class="secondary-btn" type="button" data-listen-rating="partial" ${saved ? "disabled" : ""}>还需再听</button></div>`;
+    compare.innerHTML = `<p lang="en">${annotatedEnglish(u.example, scene)}</p><p>${escapeHtml(u.meaningZh)}</p><div class="button-row"><button class="secondary-btn" type="button" data-listen-rating="independent" ${saved ? "disabled" : ""}>${eligible ? "原先听懂了" : "对照后理解了"}</button><button class="secondary-btn" type="button" data-listen-rating="partial" ${saved ? "disabled" : ""}>还需再听</button></div>`;
     compare.querySelectorAll("[data-listen-rating]").forEach((button) => button.addEventListener("click", () => {
       if (saved) return;
       practice.listeningAttempts ||= [];
