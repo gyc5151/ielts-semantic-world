@@ -1,11 +1,11 @@
-import { DataStore } from "./data-store.mjs?v=pilot-21-0-r1";
-import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-21-0-r1";
-import { nextReview, reviewDue } from "./learning.mjs?v=pilot-21-0-r1";
-import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-21-0-r1";
-import { buildTaskRegistry, createTaskResolver, taskCuePolicy, rebuildPractice, calendarDay, dueUnitTracks, choosePracticeTarget, validTimeZone } from "./unit-review-scheduler.mjs?v=pilot-21-0-r1";
-import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-21-0-r1";
+import { DataStore } from "./data-store.mjs?v=pilot-21-0-r2";
+import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-21-0-r2";
+import { nextReview, reviewDue } from "./learning.mjs?v=pilot-21-0-r2";
+import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-21-0-r2";
+import { buildTaskRegistry, createTaskResolver, taskCuePolicy, rebuildPractice, calendarDay, dueUnitTracks, choosePracticeTarget, validTimeZone } from "./unit-review-scheduler.mjs?v=pilot-21-0-r2";
+import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-21-0-r2";
 const DATA_URL = "./data/runtime.json";
-const ASSET_VERSION = "pilot-21-0-r1";
+const ASSET_VERSION = "pilot-21-0-r2";
 function fetchData(path) {
   const url = new URL(path, window.location.href);
   url.searchParams.set("v", ASSET_VERSION);
@@ -267,12 +267,11 @@ function renderChrome() {
   if (branch) activeBranchId = branch.id;
   document.documentElement.dataset.theme = branch?.theme || "world";
   document.documentElement.dataset.branch = branch?.id || "world";
-  document.querySelector("#sidebarEyebrow").textContent = branch ? branch.kind.replace(/支线$/, "").replace("主线", "住房") : "IELTS SEMANTIC WORLD";
   document.querySelector("#sidebarTitle").textContent = branch?.title || "场景";
-  document.querySelector("#sidebarDescription").textContent = "";
   document.querySelector("#sceneCountLabel").textContent = branch ? branch.title : "IELTS Semantic World";
-  document.querySelector("#sceneNavHint").textContent = "";
-  document.querySelector("#dueCount").textContent = String(dueEntries().length);
+  const dueCount = dueEntries().length;
+  document.querySelector("#dueCount").textContent = String(dueCount);
+  document.querySelector("#dueCount").hidden = dueCount === 0;
   nav.innerHTML = `
     <button class="nav-item ${ui.page === "home" ? "active" : ""}" type="button" data-nav="home" ${ui.page === "home" ? 'aria-current="page"' : ""}><span class="nav-index">◎</span><span>世界入口</span></button>
     ${branch ? `<button class="nav-item ${ui.page === "branch" ? "active" : ""}" type="button" data-branch="${escapeHtml(branch.id)}" ${ui.page === "branch" ? 'aria-current="page"' : ""}><span class="nav-index">↳</span><span>${escapeHtml(branch.title)}</span></button>` : ""}
@@ -388,7 +387,7 @@ function renderHome() {
       const tasks = scenes.flatMap(promptsFor);
       const done = tasks.filter((prompt) => taskCompleted(prompt.id)).length;
       return `<article class="branch-card" data-branch-card="${escapeHtml(branch.id)}" data-theme="${escapeHtml(branch.theme)}">
-        <div class="branch-art">${themeIllustration(branch.theme)}<span class="branch-kind">${escapeHtml(branch.kind.replace(/支线$/, "").replace("主线", "住房"))}</span></div>
+        <div class="branch-art">${themeIllustration(branch.theme)}</div>
         <div class="branch-card-body"><h3>${escapeHtml(branch.title)}</h3><p class="branch-subtitle" lang="en">${annotatedEnglish(branch.subtitle, scenes[0])}</p>
         <div class="branch-mini-route">${branch.route.slice(0, 3).map(escapeHtml).join(' → ')} → …</div>
         
@@ -467,9 +466,9 @@ function renderBranch() {
   const next = scenes.find((scene) => promptsFor(scene).some((p) => !taskCompleted(p.id))) || scenes[0];
   const done = tasks.filter((p) => taskCompleted(p.id)).length;
   app.innerHTML = `<section class="hero branch-hero">
-    <div class="branch-hero-copy"><div class="eyebrow">${escapeHtml(branch.kind.replace(/支线$/, "").replace("主线", "住房"))}</div>
+    <div class="branch-hero-copy">
     <h1>${escapeHtml(branch.title)}</h1><p class="branch-subtitle" lang="en">${annotatedEnglish(branch.subtitle, scenes[0])}</p>
-    <div class="hero-actions"><button class="primary-btn" type="button" id="startBranch">${done ? '继续这条路线' : '从第一个场景开始'}</button><button class="secondary-btn" type="button" id="backWorld">世界入口</button></div></div>
+    <div class="hero-actions"><button class="primary-btn" type="button" id="startBranch">${done ? '继续阅读' : '开始阅读'}</button><button class="secondary-btn" type="button" id="backWorld">全部故事</button></div></div>
     <div class="branch-hero-art">${themeIllustration(branch.theme)}</div></section>
     <section class="memory-map" aria-label="支线物件路线"><h2>${escapeHtml(branch.entry)}</h2>${branchObjectMapHtml(branch, scenes, next)}</section>
     <section class="section-heading"><h2>故事</h2></section>
@@ -716,7 +715,6 @@ function renderScene() {
   const done = promptsFor(scene).filter((prompt) => taskCompleted(prompt.id)).length;
   app.innerHTML = `
     <section class="scene-intro">
-      <div class="eyebrow">${escapeHtml(branchForScene(scene).title)}</div>
       <h1>${annotatedEnglish(scene.title, scene)}</h1>
       
       ${textTranslation(textTranslations[scene.id]?.title || "", "中文")}
@@ -733,7 +731,7 @@ function renderScene() {
       ${scene.recognitionTerms?.length ? `<details class="recognition-note"><summary>更多词语</summary><p>${scene.recognitionTerms.map((term) => annotatedEnglish(term, scene)).join(" · ")}</p></details>` : ""}
       ${sideDoors.map((branch) => `<section class="side-door"><h2>${escapeHtml(branch.title)}</h2><button class="secondary-btn" type="button" data-side-door="${escapeHtml(branch.id)}">进入 ↗</button></section>`).join('')}
       
-      <div class="button-row"><button class="primary-btn" type="button" id="beginScene">${done === total ? "重新练习本场景" : "开始练习"}</button>${nextScene ? `<button class="secondary-btn" type="button" id="nextScene">进入下一站：${escapeHtml(nextScene.navTitle || nextScene.title)} →</button>` : ""}<button class="secondary-btn" type="button" id="backHome">返回当前路线</button></div>
+      <div class="button-row"><button class="primary-btn" type="button" id="beginScene">${done === total ? "再练一次" : "练习"}</button>${nextScene ? `<button class="secondary-btn" type="button" id="nextScene">${escapeHtml(nextScene.navTitle || nextScene.title)} →</button>` : ""}<button class="secondary-btn" type="button" id="backHome">返回目录</button></div>
     </section>
   `;
   mountListening(scene);
