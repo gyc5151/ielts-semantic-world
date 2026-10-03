@@ -1,11 +1,11 @@
-import { DataStore } from "./data-store.mjs?v=pilot-22-0-r1";
-import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-22-0-r1";
-import { nextReview, reviewDue } from "./learning.mjs?v=pilot-22-0-r1";
-import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-22-0-r1";
-import { buildTaskRegistry, createTaskResolver, taskCuePolicy, rebuildPractice, calendarDay, dueUnitTracks, choosePracticeTarget, validTimeZone } from "./unit-review-scheduler.mjs?v=pilot-22-0-r1";
-import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-22-0-r1";
+import { DataStore } from "./data-store.mjs?v=pilot-22-0-r2";
+import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-22-0-r2";
+import { nextReview, reviewDue } from "./learning.mjs?v=pilot-22-0-r2";
+import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-22-0-r2";
+import { buildTaskRegistry, createTaskResolver, taskCuePolicy, rebuildPractice, calendarDay, dueUnitTracks, choosePracticeTarget, validTimeZone } from "./unit-review-scheduler.mjs?v=pilot-22-0-r2";
+import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-22-0-r2";
 const DATA_URL = "./data/runtime.json";
-const ASSET_VERSION = "pilot-22-0-r1";
+const ASSET_VERSION = "pilot-22-0-r2";
 function fetchData(path) {
   const url = new URL(path, window.location.href);
   url.searchParams.set("v", ASSET_VERSION);
@@ -835,12 +835,8 @@ function renderFeedback(scene, prompt, attempt) {
       
       <div class="your-answer"><span class="meta">${attempt?.responseMode === "spoken" ? "你的口头回答" : "你的原答"}${attempt?.support !== "none" ? " · 使用了提示" : " · 未使用提示"}</span><p>${attempt?.response ? escapeHtml(attempt.response) : "（这次暂时想不出）"}</p>${sessionRecordings.has(attempt?.id) ? `<audio class="feedback-recording" controls src="${escapeHtml(sessionRecordings.get(attempt.id))}" aria-label="回听提交前的口头回答"></audio>` : ""}</div>
       <div class="sample-answers"><strong>参考说法</strong>${answers.map((answer, index) => `<div><p lang="en">“${annotatedEnglish(answer, scene)}”</p>${textTranslation(translated?.acceptableAnswers?.[index], "参考表达中文")}</div>`).join("")}</div>
-      <p class="feedback-note">${annotatedEnglish(prompt.feedback || "比较你的说法是否完成了情境中的交流目的。合理改述也可以正确。", scene)}</p>
-      ${textTranslation(prompt.feedbackZh || translated?.feedback, "用法反馈中文")}
-      ${prompt.checks?.length ? `<div class="specific-checks"><strong>先核对这几件事</strong><ul>${prompt.checks.map((c) => `<li>${escapeHtml(c)}</li>`).join("")}</ul></div>` : ""}
       ${unitAssessmentHtml(scene, prompt, attempt)}
-      ${prompt.unitIds?.length ? `<section class="revision-panel"><label for="revisionInput">参考之后，重新写一版</label><textarea id="revisionInput" rows="3" class="answer-input" placeholder="保留原答，写出你的改进版本…"></textarea><button type="button" class="secondary-btn" id="saveRevision">保存修订</button><p role="status" id="revisionStatus"></p>${attempt?.revisions?.length ? `<details><summary>已保存 ${attempt.revisions.length} 次修订</summary>${attempt.revisions.map((r) => `<p>${escapeHtml(r.response)}</p>`).join("")}</details>` : ""}</section>` : ""}
-      ${textTranslation(translated?.function, "本题语言目标中文")}
+      ${prompt.unitIds?.length ? `<section class="revision-panel"><label for="revisionInput">修改回答</label><textarea id="revisionInput" rows="3" class="answer-input" placeholder="Your answer…"></textarea><button type="button" class="secondary-btn" id="saveRevision">保存修订</button><p role="status" id="revisionStatus"></p>${attempt?.revisions?.length ? `<details><summary>已保存 ${attempt.revisions.length} 次修订</summary>${attempt.revisions.map((r) => `<p>${escapeHtml(r.response)}</p>`).join("")}</details>` : ""}</section>` : ""}
       ${terms.length ? `<details class="source-details"><summary>查看本题相关表达与来源</summary><div class="term-list">${terms.map((term) => `<div class="term-item"><span class="source-pill ${String(term.kind || "").toLowerCase()}">${escapeHtml(term.kind === "BRG" ? "SRC · BRG" : (term.kind || "候选"))}</span><strong>${escapeHtml(term.term)}</strong><span>${escapeHtml(term.sourceLabel || "")}</span>${term.sourceUrl ? `<a href="${escapeHtml(term.sourceUrl)}" target="_blank" rel="noopener noreferrer">来源 ↗</a>` : ""}${term.sourceRef ? `<small>${escapeHtml(term.sourceRef)}</small>` : ""}</div>`).join("")}</div></details>` : ""}
       <div class="self-check"><strong>这次说得怎么样？</strong><div class="rating-row">
         <button class="rating-btn ${rating === "good" ? "selected" : ""}" type="button" data-rating="good" ${rating || !attempt?.response ? "disabled" : ""}>${attempt?.support !== "none" ? "提示后能表达" : "能独立表达"}</button>
@@ -858,7 +854,7 @@ function submitAnswer(empty, oral = null) {
   const response = empty ? "" : oral ? "（口头回答）" : app.querySelector("#answerInput").value.trim();
   if (!empty && !response) {
     app.querySelector("#answerInput").focus();
-    app.querySelector("#answerInput").setAttribute("placeholder", "先尝试写一句英语；如果暂时想不出，可点击旁边的按钮。");
+    app.querySelector("#answerInput").setAttribute("placeholder", "请输入回答");
     return;
   }
   const now = new Date().toISOString();
