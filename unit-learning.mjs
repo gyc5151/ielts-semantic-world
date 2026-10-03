@@ -1,18 +1,23 @@
 // Unit evidence is self-checked; legacy task ratings never imply unit mastery.
+import { rebuildPractice, validTimeZone } from "./unit-review-scheduler.mjs?v=pilot-20-0";
 export const EVIDENCE_LABELS = { unobserved: "未记录", partial: "还不熟悉", assisted: "看提示后会用", independent: "自己用出来了" };
 export function observationsFor(practice, unitId) {
+  if (Array.isArray(practice.unitEvidence)) return practice.unitEvidence.filter((observation) => observation.unitId === unitId);
   return (practice.attempts || []).flatMap((attempt) => Object.entries(attempt.unitAssessments || {})
-    .filter(([id]) => id === unitId).map(([, status]) => ({ status, dimension: attempt.taskMode === "transfer" ? "transfer" : "recall", modality: attempt.responseMode || "written", at: attempt.attemptedAt, attemptId: attempt.id, support: attempt.support, unitVersion: attempt.unitVersion })));
+    .filter(([id]) => id === unitId).map(([, status]) => ({ reportedStatus: status, status: status === "independent" ? "assisted" : status, dimension: attempt.taskMode || "unknown", modality: attempt.responseMode || "unknown", at: attempt.attemptedAt, attemptId: attempt.id, support: attempt.support || "unknown", unitVersion: attempt.unitVersion, contextVerified: false })));
 }
 export function unitSummary(practice, unitId) {
   const observations = observationsFor(practice, unitId);
   return { observations, latest: observations.at(-1) || null,
-    independentRecall: observations.filter((o) => o.dimension === "recall" && o.status === "independent" && o.support === "none").length,
-    independentTransfer: observations.filter((o) => o.dimension === "transfer" && o.status === "independent" && o.support === "none").length,
+    independentRecall: observations.filter((o) => o.dimension === "recall" && o.status === "independent" && o.support === "none" && o.contextVerified).length,
+    independentTransfer: observations.filter((o) => o.dimension === "transfer" && o.status === "independent" && o.support === "none" && o.contextVerified).length,
     listening: (practice.listeningAttempts || []).filter((a) => a.unitId === unitId).at(-1) || null };
 }
 export function normalisePractice(value) {
+  if (value?.schemaVersion != null && (!Number.isInteger(value.schemaVersion) || value.schemaVersion < 1)) throw new Error("备份版本格式无效");
+  if (value?.schemaVersion > 3) throw new Error("备份版本较新，请先更新应用");
   if (!value || !Array.isArray(value.attempts) || !value.reviews || typeof value.reviews !== "object" || Array.isArray(value.reviews)) throw new Error("备份缺少有效答题及复习记录");
+  if (value.listeningAttempts != null && !Array.isArray(value.listeningAttempts)) throw new Error("听辨记录格式无效");
   if (value.attempts.length > 100000 || (value.listeningAttempts || []).length > 100000) throw new Error("备份记录过多");
   const seen = new Set();
   const attempts = value.attempts.map((a) => {
@@ -24,9 +29,12 @@ export function normalisePractice(value) {
   });
   const reviews = Object.fromEntries(Object.entries(value.reviews).filter(([id, r]) => /^[A-Z0-9.]+$/.test(id) && r && Number.isInteger(r.stage) && r.stage >= 0 && r.stage <= 4 && (!r.nextDue || Number.isFinite(Date.parse(r.nextDue)))));
   const listeningAttempts = (Array.isArray(value.listeningAttempts) ? value.listeningAttempts : []).filter((a) => a && typeof a.id === "string" && /^U\.[A-Z0-9_.]+$/.test(a.unitId) && ["independent", "assisted", "partial"].includes(a.status) && Number.isFinite(Date.parse(a.at))).map((a) => ({ ...a, evidenceSource: "self-check" }));
-  return { attempts, reviews, listeningAttempts, schemaVersion: 2 };
+  const timeZone = validTimeZone(value.unitReviewMeta?.timeZone) ? value.unitReviewMeta.timeZone : null;
+  // Imported schedules are never authoritative. Rebuild after merging originals.
+  return { ...value, attempts, reviews, listeningAttempts, schemaVersion: 3,
+    unitReviews: {}, unitReviewMeta: { schedulerVersion: 1, timeZone } };
 }
-export function mergePractice(current, incoming) {
+export function mergePractice(current, incoming, options) {
   // Local duplicates win: this prevents replacing an original answer after seeing feedback.
   const attempts = new Map(incoming.attempts.map((a) => [a.id, a]));
   current.attempts.forEach((a) => attempts.set(a.id, a));
@@ -37,5 +45,6 @@ export function mergePractice(current, incoming) {
   }
   const listening = new Map((incoming.listeningAttempts || []).map((a) => [a.id, a]));
   (current.listeningAttempts || []).forEach((a) => listening.set(a.id, a));
-  return { schemaVersion: 2, attempts: sorted, reviews, listeningAttempts: [...listening.values()] };
+  return rebuildPractice({ ...current, schemaVersion: 3, attempts: sorted, reviews,
+    listeningAttempts: [...listening.values()] }, options);
 }

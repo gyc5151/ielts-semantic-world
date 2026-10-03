@@ -1,15 +1,26 @@
-import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-19-0";
-import { nextReview, reviewDue } from "./learning.mjs?v=pilot-19-0";
-import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-19-0";
-import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-19-0";
+import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-20-0";
+import { nextReview, reviewDue } from "./learning.mjs?v=pilot-20-0";
+import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-20-0";
+import { buildTaskRegistry, createTaskResolver, taskCuePolicy, rebuildPractice, calendarDay, dueUnitTracks, choosePracticeTarget, validTimeZone } from "./unit-review-scheduler.mjs?v=pilot-20-0";
+import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-20-0";
 const DATA_URL = "./data/world.json";
-const ASSET_VERSION = "pilot-19-0";
+const ASSET_VERSION = "pilot-20-0";
 function fetchData(path) {
   const url = new URL(path, window.location.href);
   url.searchParams.set("v", ASSET_VERSION);
   return fetch(url, { cache: "no-store" });
 }
 const STORAGE_KEY = "ielts-semantic-world-s01-trial-v1";
+const MIGRATION_BACKUP_KEY = `${STORAGE_KEY}-pre-unit-review-v3`;
+let originalStorage = null;
+let migrationRequired = false;
+let storageReadBlocked = false;
+let lastSaveFailed = false;
+let taskRegistry = [];
+let resolveTask = null;
+let unitViewFilter = "all";
+const browserTimeZone = () => Intl.DateTimeFormat().resolvedOptions().timeZone || "Asia/Shanghai";
+const emptyPractice = () => ({ schemaVersion: 3, attempts: [], reviews: {}, listeningAttempts: [], unitReviews: {}, unitReviewMeta: { schedulerVersion: 1, timeZone: browserTimeZone() } });
 
 
 const app = document.querySelector("#app");
@@ -46,20 +57,51 @@ let ui = {
 
 function readSaved() {
   try {
-    const value = JSON.parse(localStorage.getItem(STORAGE_KEY) || "null");
-    if (value && Array.isArray(value.attempts) && value.reviews && typeof value.reviews === "object") {
-      return { ...value, schemaVersion: 2, listeningAttempts: Array.isArray(value.listeningAttempts) ? value.listeningAttempts : [] };
-    }
+    originalStorage = localStorage.getItem(STORAGE_KEY);
+    if (!originalStorage) return emptyPractice();
+    const value = JSON.parse(originalStorage);
+    migrationRequired = !value.schemaVersion || value.schemaVersion < 3;
+    return normalisePractice(value);
   } catch (_) {
-    // A broken browser record should never block access to learning content.
+    // Never overwrite unreadable or future-version records with an empty state.
+    storageReadBlocked = true;
+    showStorageStatus("本机旧记录暂时无法读取；请先导出备份。新练习暂不写入旧记录。");
   }
-  return { schemaVersion: 2, attempts: [], reviews: {}, listeningAttempts: [] };
+  return emptyPractice();
+}
+
+function showStorageStatus(message) {
+  const status = document.querySelector("#storageStatus");
+  if (status) { status.hidden = false; status.textContent = message; }
+}
+
+function scheduleOptions(value = practice) {
+  return { resolveContext: resolveTask, timeZone: validTimeZone(value.unitReviewMeta?.timeZone) ? value.unitReviewMeta.timeZone : browserTimeZone() };
+}
+
+function persistPractice(next) {
+  if (storageReadBlocked) { lastSaveFailed = true; return false; }
+  try {
+    if (migrationRequired && originalStorage && localStorage.getItem(MIGRATION_BACKUP_KEY) === null) {
+      localStorage.setItem(MIGRATION_BACKUP_KEY, originalStorage);
+    }
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
+    migrationRequired = false;
+    lastSaveFailed = false;
+    document.querySelector("#storageStatus").hidden = true;
+    return true;
+  } catch (_) {
+    lastSaveFailed = true;
+    showStorageStatus("本机暂不能保存记录；旧记录未被清空，请在离开前导出备份。");
+    return false;
+  }
 }
 
 function save() {
-  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(practice)); }
-  catch (_) { document.querySelector("#storageStatus").hidden = false; }
+  if (resolveTask) practice = rebuildPractice(practice, scheduleOptions());
+  const saved = persistPractice(practice);
   renderChrome();
+  return saved;
 }
 
 function escapeHtml(value = "") {
@@ -70,7 +112,8 @@ function escapeHtml(value = "") {
 
 function dateLabel(iso) {
   if (!iso) return "—";
-  return new Intl.DateTimeFormat("zh-CN", { month: "short", day: "numeric" }).format(new Date(iso));
+  const date = /^\d{4}-\d{2}-\d{2}$/.test(iso) ? new Date(`${iso}T12:00:00`) : new Date(iso);
+  return new Intl.DateTimeFormat("zh-CN", { month: "short", day: "numeric" }).format(date);
 }
 
 function getScene(id) {
@@ -102,15 +145,53 @@ function assertWordCoverage(scene) {
 
 function dueEntries() {
   const now = Date.now();
-  return allPrompts().filter(({ prompt }) => {
+  const today = calendarDay(new Date(now).toISOString(), scheduleOptions().timeZone);
+  const units = dueUnitTracks(practice.unitReviews, today).map((entry) => {
+    const target = choosePracticeTarget(entry, taskRegistry);
+    const scene = getScene(target?.sceneId || entry.lastSceneId);
+    const prompt = target && scene && promptsFor(scene).find((item) => item.id === target.promptId);
+    return { ...entry, kind: "unit", target, scene, prompt };
+  });
+  const legacy = allPrompts().filter(({ prompt }) => {
+    // New registered tasks are scheduled only by explicit unit assessments.
+    if (prompt.unitIds?.length && latestAttempt(prompt.id)?.unitReviewContext) return false;
+    const last = latestAttempt(prompt.id);
+    if (prompt.unitIds?.length && last && resolveTask?.(last) &&
+      ["recall", "transfer"].includes(last.taskMode) && Object.values(last.unitAssessments || {}).some((status) => status !== "unobserved")) return false;
     const record = practice.reviews[prompt.id];
     const due = reviewDue(record);
     return due && new Date(due).getTime() <= now;
-  });
+  }).map((entry) => ({ ...entry, kind: "legacy" }));
+  return [...units, ...legacy];
+}
+
+function unitNextDate(unitId) {
+  return Object.values(practice.unitReviews[unitId]?.tracks || {}).map((track) => track.nextDueDate).filter(Boolean).sort()[0] || null;
+}
+
+function openReview(entry, support = "none") {
+  const target = entry.target || (entry.prompt && { sceneId: entry.scene.id, promptId: entry.prompt.id, responseMode: "written" });
+  if (!target) return;
+  clearSessionRecordings();
+  const scene = getScene(target.sceneId);
+  const index = scene && promptsFor(scene).findIndex((prompt) => prompt.id === target.promptId);
+  if (!scene || index < 0) return;
+  ui = { page: "prompt", sceneId: scene.id, promptIndex: index, reviewMode: true, revealed: false,
+    support, submittedAttemptId: null, preferredResponseMode: target.responseMode,
+    reviewUnitIds: entry.unitId ? [entry.unitId] : [], reviewTrackKey: entry.trackKey || null };
+  render();
+  app.focus({ preventScroll: true });
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 function latestAttempt(promptId) {
   return [...practice.attempts].reverse().find((attempt) => attempt.promptId === promptId);
+}
+
+// A finished attempt is navigation history, never proof of unit proficiency.
+function taskCompleted(promptId) {
+  return Boolean(practice.reviews[promptId] || practice.attempts.some((attempt) =>
+    attempt.promptId === promptId && ["good", "partial", "again"].includes(attempt.selfRating)));
 }
 
 function getBranch(id) {
@@ -149,7 +230,7 @@ function renderChrome() {
     ${branch ? `<button class="nav-item ${ui.page === "branch" ? "active" : ""}" type="button" data-branch="${escapeHtml(branch.id)}" ${ui.page === "branch" ? 'aria-current="page"' : ""}><span class="nav-index">↳</span><span>${escapeHtml(branch.title)}</span></button>` : ""}
     ${branch ? branchScenes(branch).map((item, index) => {
       const total = promptsFor(item).length;
-      const done = promptsFor(item).filter((prompt) => practice.reviews[prompt.id]).length;
+      const done = promptsFor(item).filter((prompt) => taskCompleted(prompt.id)).length;
       const selected = ui.sceneId === item.id && ["scene", "prompt"].includes(ui.page);
       return `<button class="nav-item ${selected ? "active" : ""}" type="button" data-scene="${escapeHtml(item.id)}" ${selected ? 'aria-current="page"' : ""}><span class="nav-index">${String(index + 1).padStart(2, "0")}</span><span>${escapeHtml(item.navTitle || item.title)}</span></button>`;
     }).join("") : content.branches.map((item) => `<button class="nav-item" type="button" data-branch="${escapeHtml(item.id)}"><span class="nav-index">${item.kind === "主线" ? "01" : "↳"}</span><span>${escapeHtml(item.title)}</span></button>`).join("")}
@@ -235,7 +316,7 @@ function renderHome() {
     <div class="branch-grid">${content.branches.map((branch) => {
       const scenes = branchScenes(branch);
       const tasks = scenes.flatMap(promptsFor);
-      const done = tasks.filter((prompt) => practice.reviews[prompt.id]).length;
+      const done = tasks.filter((prompt) => taskCompleted(prompt.id)).length;
       return `<article class="branch-card" data-branch-card="${escapeHtml(branch.id)}" data-theme="${escapeHtml(branch.theme)}">
         <div class="branch-art">${themeIllustration(branch.theme)}<span class="branch-kind">${escapeHtml(branch.kind.replace(/支线$/, "").replace("主线", "住房"))}</span></div>
         <div class="branch-card-body"><h3>${escapeHtml(branch.title)}</h3><p class="branch-subtitle" lang="en">${annotatedEnglish(branch.subtitle, scenes[0])}</p>
@@ -295,8 +376,8 @@ function renderBranch() {
   if (!branch) return navigate('home');
   const scenes = branchScenes(branch);
   const tasks = scenes.flatMap(promptsFor);
-  const next = scenes.find((scene) => promptsFor(scene).some((p) => !practice.reviews[p.id])) || scenes[0];
-  const done = tasks.filter((p) => practice.reviews[p.id]).length;
+  const next = scenes.find((scene) => promptsFor(scene).some((p) => !taskCompleted(p.id))) || scenes[0];
+  const done = tasks.filter((p) => taskCompleted(p.id)).length;
   app.innerHTML = `<section class="hero branch-hero">
     <div class="branch-hero-copy"><div class="eyebrow">${escapeHtml(branch.kind.replace(/支线$/, "").replace("主线", "住房"))}</div>
     <h1>${escapeHtml(branch.title)}</h1><p class="branch-subtitle" lang="en">${annotatedEnglish(branch.subtitle, scenes[0])}</p>
@@ -314,12 +395,9 @@ function renderBranch() {
 
 function memoryRouteHtml(scene) {
   if (!scene.memoryNodes?.length) return '';
-  const nodes = content.microScenes.flatMap((s) => s.memoryNodes || []);
   return `<section class="memory-stations" aria-label="本节物件线索"><h2>故事里的物件</h2><div class="memory-station-grid">${scene.memoryNodes.map((node, index) => {
-    const nextId = node.nextNodeId || node.next;
-    const next = nodes.find((n) => n.id === nextId);
     const location = node.locationRelationZh || node.locationZh;
-    return `<details class="memory-station"><summary><span class="station-number">${String(index + 1).padStart(2, '0')}</span><strong>${escapeHtml(node.zh)}</strong></summary><div><p lang="en">${annotatedEnglish(node.object, scene)}</p><p lang="en">${annotatedEnglish(node.cue, scene)}</p>${textTranslation(node.cueZh, '线索中文')}${location ? `<p class="meta">${escapeHtml(location)}</p>` : ""}${node.id ? `<small>${next ? `下一物件：${escapeHtml(next.zh)}` : nextId ? '下一位置见路线页' : '本段终点'}</small>` : ""}</div></details>`;
+    return `<details class="memory-station"><summary><span class="station-number">${String(index + 1).padStart(2, '0')}</span><strong>${escapeHtml(node.zh)}</strong></summary><div><p lang="en">${annotatedEnglish(node.object, scene)}</p><p lang="en">${annotatedEnglish(node.cue, scene)}</p>${textTranslation(node.cueZh, '中文')}${location ? `<p>${escapeHtml(location)}</p>` : ""}</div></details>`;
   }).join('')}</div></section>`;
 }
 
@@ -505,7 +583,7 @@ function renderScene() {
   const nextScene = routeScenes[routeScenes.findIndex((item) => item.id === scene.id) + 1];
   const sideDoors = content.branches.filter((branch) => branch.entrySceneId === scene.id);
   const total = promptsFor(scene).length;
-  const done = promptsFor(scene).filter((prompt) => practice.reviews[prompt.id]).length;
+  const done = promptsFor(scene).filter((prompt) => taskCompleted(prompt.id)).length;
   app.innerHTML = `
     <section class="scene-intro">
       <div class="eyebrow">${escapeHtml(branchForScene(scene).title)}</div>
@@ -537,7 +615,7 @@ function renderScene() {
   });
   app.querySelector("#beginScene").addEventListener("click", () => {
     ui.page = "prompt";
-    const firstUntried = promptsFor(scene).findIndex((prompt) => !practice.reviews[prompt.id]);
+    const firstUntried = promptsFor(scene).findIndex((prompt) => !taskCompleted(prompt.id));
     ui.promptIndex = firstUntried >= 0 ? firstUntried : 0;
     ui.revealed = false;
     ui.support = "none";
@@ -558,7 +636,7 @@ function renderPrompt() {
   if (!prompt) return navigate("scene", scene.id);
   const isTransfer = ui.promptIndex === prompts.length - 1;
   const activity = ACTIVITY_META[prompt.activity] || ACTIVITY_META.explain;
-  const draft = drafts[`${scene.id}:${ui.promptIndex}`];
+  const draft = ui.reviewMode ? null : drafts[`${scene.id}:${ui.promptIndex}`];
   if (!ui.revealed && ui.support === "none" && draft) ui.support = draft.support;
   const translated = textTranslations[scene.id]?.prompts?.[prompt.id];
   const cuePolicy = promptCue(scene, prompt);
@@ -583,7 +661,7 @@ function renderPrompt() {
         <div class="button-row"><button class="primary-btn" type="button" id="submitAnswer">提交并查看参考表达</button><button class="secondary-btn" type="button" id="cannotRecall">暂时想不出</button></div>
         ${scene.memoryNodes?.length ? `<details class="memory-hint" data-memory-hint><summary>故事里的物件</summary>${memoryRouteHtml(scene)}</details>` : ""}
         <div class="hint-actions"><button class="text-btn" type="button" id="showChinese">${ui.support === "chinese" ? "已打开提示" : "提示"}</button>${isTransfer ? "" : `<button class="text-btn" type="button" id="showStory">重新看英文情境</button>`}</div>
-        <small class="lookup-status" id="lookupStatus" ${["word", "translation", "memory", "english-input", "audio"].includes(ui.support) ? "" : "hidden"}>已查看提示</small>
+        <small class="lookup-status" id="lookupStatus" ${["word", "translation", "memory", "english-input", "audio", "reference"].includes(ui.support) ? "" : "hidden"}>已查看提示</small>
       ` : renderFeedback(scene, prompt, saved)}
       <div class="prompt-footer"><button class="text-btn" type="button" id="backScene">${isTransfer ? "← 返回当前路线" : "← 返回情境"}</button><span>${ui.promptIndex + 1} / ${prompts.length}</span></div>
     </section>
@@ -596,6 +674,10 @@ function renderPrompt() {
     return;
   }
   if (app.querySelector("#oralPractice")) mountRecorder(app.querySelector("#oralPractice"), (recording) => submitAnswer(false, { responseMode: "spoken", recording }));
+  if (ui.preferredResponseMode === "spoken") {
+    const panel = app.querySelector("#oralPractice details");
+    if (panel) panel.open = true;
+  }
   app.querySelector("#answerInput").value = draft?.response || "";
   app.querySelector("#answerInput").addEventListener("input", (event) => { drafts[`${scene.id}:${ui.promptIndex}`] = { response: event.target.value, support: ui.support }; });
   app.querySelector("#submitAnswer").addEventListener("click", () => submitAnswer(false));
@@ -636,7 +718,7 @@ function renderFeedback(scene, prompt, attempt) {
         <button class="rating-btn ${rating === "good" ? "selected" : ""}" type="button" data-rating="good" ${rating || !attempt?.response ? "disabled" : ""}>${attempt?.support !== "none" ? "提示后能表达" : "能独立表达"}</button>
         <button class="rating-btn ${rating === "partial" ? "selected" : ""}" type="button" data-rating="partial" ${rating ? "disabled" : ""}>表达了部分</button>
         <button class="rating-btn ${rating === "again" ? "selected" : ""}" type="button" data-rating="again" ${rating ? "disabled" : ""}>还需要帮助</button>
-      </div><small id="ratingStatus">${rating ? (reviewDue(practice.reviews[prompt.id]) ? `已记录；下次复习 ${dateLabel(reviewDue(practice.reviews[prompt.id]))}。` : "已记录；稍后再复习。") : "选择后保存"}</small></div>
+      </div><small id="ratingStatus">${rating ? ratingDateLabel(prompt) : "选择后保存"}</small></div>
       <button class="primary-btn" type="button" id="nextPrompt" ${rating ? "" : "disabled"}>${ui.reviewMode ? "完成这次复习" : "下一步 →"}</button>
     </div>
   `;
@@ -652,6 +734,7 @@ function submitAnswer(empty, oral = null) {
     return;
   }
   const now = new Date().toISOString();
+  const publishedTask = taskRegistry.find((task) => task.sceneId === scene.id && task.promptId === prompt.id);
   const attempt = {
     id: globalThis.crypto?.randomUUID ? crypto.randomUUID() : `${Date.now()}-${Math.random().toString(36).slice(2)}`,
     promptId: prompt.id,
@@ -662,6 +745,9 @@ function submitAnswer(empty, oral = null) {
     recording: oral ? { durationSeconds: oral.recording.durationSeconds, audioStored: false } : null,
     taskMode: prompt.unitIds?.length ? prompt.taskMode : "application",
     unitVersion: prompt.unitVersion || null,
+    unitReviewContext: publishedTask ? { schemaVersion: 1, receiptId: publishedTask.receiptId } : null,
+    reviewUnitIds: ui.reviewUnitIds || [],
+    reviewTrackKey: ui.reviewTrackKey || null,
     unitAssessments: {},
     revisions: [],
     attemptedAt: now,
@@ -692,16 +778,22 @@ function rateAnswer(rating) {
   attempt.evidenceSource = "self-check";
   attempt.selfRating = rating;
   attempt.ratedAt = new Date().toISOString();
-  const previous = practice.reviews[prompt.id] || { stage: 0 };
-  const schedule = nextReview(previous, attempt, new Date());
-  practice.reviews[prompt.id] = {
-    ...schedule,
-    lastRating: rating,
-    lastAttemptAt: attempt.ratedAt,
-    lastAttemptId: attempt.id,
-  };
+  if (!prompt.unitIds?.length) {
+    const previous = practice.reviews[prompt.id] || { stage: 0 };
+    const schedule = nextReview(previous, attempt, new Date(attempt.attemptedAt));
+    practice.reviews[prompt.id] = { ...schedule, lastRating: rating,
+      lastAttemptAt: attempt.attemptedAt, lastAttemptId: attempt.id };
+  }
   save();
   renderPrompt();
+}
+
+function ratingDateLabel(prompt) {
+  if (lastSaveFailed) return "尚未保存，请导出备份。";
+  const due = prompt.unitIds?.length
+    ? prompt.unitIds.map(unitNextDate).filter(Boolean).sort()[0]
+    : reviewDue(practice.reviews[prompt.id]);
+  return due ? `已记录；下次 ${dateLabel(due)}。` : "已记录。";
 }
 
 function nextPrompt() {
@@ -717,25 +809,23 @@ function nextPrompt() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
+function trackLabel(key) {
+  return `${key.startsWith("transfer.") ? "另一段故事 · " : ""}${key.endsWith(".spoken") ? "说一说" : "写一写"}`;
+}
+
 function renderReview() {
   const due = dueEntries();
   const reviewed = allPrompts().filter(({ prompt }) => practice.reviews[prompt.id]);
   app.innerHTML = `
     <section class="simple-page"><h1>复习</h1>
-      
-      <div class="metric-row"><div><strong>${due.length}</strong><span>现在到期</span></div><div><strong>${reviewed.length}</strong><span>已练习</span></div><div><strong>${practice.attempts.length}</strong><span>答题记录</span></div></div>
-      <div class="button-row"><button type="button" class="secondary-btn" id="reviewUnits">表达记录</button></div><h2>到期问题</h2>
-      <div class="review-list">${due.length ? due.map(({ scene, prompt }) => `<div class="review-item"><span>${escapeHtml(scene.navTitle || scene.id)}</span><strong>${escapeHtml((ACTIVITY_META[prompt.activity] || ACTIVITY_META.explain).label)}</strong><button class="text-btn" type="button" data-review-prompt="${escapeHtml(prompt.id)}">练习 ↗</button></div>`).join("") : `<div class="empty-state">今天没有待复习的内容。</div>`}</div>
-      ${reviewed.length ? `<h2>最近练过</h2><div class="history-list">${reviewed.map(({ scene, prompt }) => { const last = latestAttempt(prompt.id); const record = practice.reviews[prompt.id]; return `<div><span>${escapeHtml(scene.navTitle || scene.id)}</span><small>${last?.selfRating === "good" ? "自评：能表达" : last?.selfRating === "partial" ? "自评：部分" : "自评：需帮助"} · ${reviewDue(record) ? `下次 ${dateLabel(reviewDue(record))}` : "稍后再复习"}</small></div>`; }).join("")}</div>` : ""}
+      <div class="button-row"><button type="button" class="secondary-btn" id="reviewUnits">表达记录</button></div>
+      <div class="review-list">${due.length ? due.map((entry, index) => `<div class="review-item"><span>${escapeHtml(entry.scene?.navTitle || entry.lastSceneId || "原场景")}</span><strong>${entry.kind === "unit" ? escapeHtml(trackLabel(entry.trackKey)) : "旧练习"}</strong>${entry.kind === "unit" && !entry.target ? `<small>暂无对应练习</small>${entry.scene ? `<button class="text-btn" type="button" data-review-scene="${escapeHtml(entry.scene.id)}">返回场景 ↗</button>` : ""}` : `<button class="text-btn" type="button" data-review-entry="${index}">练习 ↗</button>`}</div>`).join("") : `<div class="empty-state">今天没有待复习的内容。</div>`}</div>
+      ${reviewed.length ? `<details><summary>旧练习记录</summary><div class="history-list">${reviewed.map(({ scene, prompt }) => { const last = latestAttempt(prompt.id); const record = practice.reviews[prompt.id]; return `<div><span>${escapeHtml(scene.navTitle || scene.id)}</span><small>${last?.selfRating === "good" ? "自评：能表达" : last?.selfRating === "partial" ? "自评：部分" : "自评：需帮助"} · ${reviewDue(record) ? dateLabel(reviewDue(record)) : "暂无日期"}</small></div>`; }).join("")}</div></details>` : ""}
     </section>
   `;
   app.querySelector("#reviewUnits").addEventListener("click", () => navigate("units"));
-  app.querySelectorAll("[data-review-prompt]").forEach((button) => button.addEventListener("click", () => {
-    const found = allPrompts().find(({ prompt }) => prompt.id === button.dataset.reviewPrompt);
-    if (!found) return;
-    ui = { page: "prompt", sceneId: found.scene.id, promptIndex: promptsFor(found.scene).findIndex((prompt) => prompt.id === found.prompt.id), reviewMode: true, revealed: false, support: "none", submittedAttemptId: null };
-    render();
-  }));
+  app.querySelectorAll("[data-review-entry]").forEach((button) => button.addEventListener("click", () => openReview(due[Number(button.dataset.reviewEntry)])));
+  app.querySelectorAll("[data-review-scene]").forEach((button) => button.addEventListener("click", () => navigate("scene", button.dataset.reviewScene)));
 }
 
 function renderAbout() {
@@ -743,7 +833,7 @@ function renderAbout() {
     <section class="simple-page"><h1>关于</h1>
       <div class="about-copy">
       <details><summary>阅读与查词</summary><p>点击英文单词查看本句意思，↗ 查看整段搭配。中文译文可随时展开。</p></details>
-      <details><summary>练习与复习</summary><p>回答后自行评价。查词、看译文或提示后的回答会单独记录，不作自动评分。首次独立表达后，安排第 1、7、30 天复习，之后每 60 天复习一次。</p></details>
+      <details><summary>练习与复习</summary><p>回答后分别评价用到的表达，不作自动评分。写作、口头表达和另一情境分别记录；提示后的回答不作独立成功。每种表达首次独立使用后安排第 1、7、30 天，之后每 60 天复习；提前练习不跳过日期。</p></details>
       <details><summary>记录与备份</summary><p>记录只保存在当前浏览器，不上传答题内容。导出可备份，恢复时预览并合并。录音只保留在当前题目中，不包含在备份里。</p></details>
       <details><summary>内容与词典来源</summary><p>故事、情境例句和中文辅助由项目编写；原始词汇资料另列来源。SRC 为原资料，BRG 为跨场景借用，EXP 和 COL 为场景扩展与搭配。词条来源不代表整句来自原资料。</p><p>英文词典使用 Princeton WordNet 3.0 的义项与原例句，缺失义项或例句会标明。中文译解与机器辅助译文另行标注，机器译文尚未逐条校订。材料为原创练习，非官方 IELTS 试题。</p><p>WordNet 3.0 © 2006 Princeton University · <a href="./data/WORDNET_LICENSE.txt" target="_blank" rel="noopener noreferrer">版权与许可</a> · <a href="./data/TRANSLATION_MODEL_ATTRIBUTION.md" target="_blank" rel="noopener noreferrer">翻译模型来源</a></p></details>
       </div>
@@ -763,7 +853,14 @@ function renderAbout() {
   });
   app.querySelector("#confirmExport").addEventListener("click", exportPractice);
   app.querySelector("#confirmClear").addEventListener("click", () => {
-    practice = { schemaVersion: 2, attempts: [], reviews: {}, listeningAttempts: [] };
+    try {
+      localStorage.removeItem(MIGRATION_BACKUP_KEY);
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(emptyPractice()));
+    } catch (_) { showStorageStatus("清除未完成，请检查浏览器存储后重试。"); return; }
+    storageReadBlocked = false;
+    migrationRequired = false;
+    originalStorage = null;
+    practice = emptyPractice();
     for (const key of Object.keys(drafts)) delete drafts[key];
     save();
     render();
@@ -772,6 +869,7 @@ function renderAbout() {
 
 function exportPractice() {
   const payload = { app: "IELTS Semantic World S01 Trial", exportedAt: new Date().toISOString(), contentVersion: content?.version || "v1", practice };
+  if (storageReadBlocked && originalStorage) payload.unreadableOriginalStorage = originalStorage;
   const objectUrl = URL.createObjectURL(new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" }));
   const link = document.createElement("a");
   link.href = objectUrl;
@@ -933,6 +1031,19 @@ try {
       if (response.ok) Object.assign(textTranslations, (await response.json()).scenes || {});
     } catch (_) { /* English reading remains available without its Chinese layer. */ }
   }
+  taskRegistry = buildTaskRegistry(content.microScenes, learningUnits, textTranslations, content.version || "v1");
+  let taskHistory = [];
+  try {
+    const response = await fetchData("./data/unit-task-manifest.json");
+    if (response.ok) {
+      const manifest = await response.json();
+      if (manifest.schemaVersion === 1 && Array.isArray(manifest.tasks)) taskHistory = manifest.tasks;
+    }
+  } catch (_) { /* Unknown historical input remains unscheduled; current tasks still work. */ }
+  resolveTask = createTaskResolver(taskRegistry, taskHistory);
+  practice = rebuildPractice(practice, scheduleOptions());
+  // The migration backup must succeed before the original storage is replaced.
+  persistPractice(practice);
   contentReady = true;
   restoreRoute();
 } catch (error) {
@@ -977,28 +1088,18 @@ function unitsForScene(scene) {
   }));
 }
 function promptCue(scene, prompt) {
-  const hasTarget = (text) => (prompt.targetTerms || []).some((term) => {
-    const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-    return new RegExp(`(^|[^A-Za-z])${escaped}([^A-Za-z]|$)`, "i").test(text || "");
-  });
-  const translated = textTranslations[scene.id]?.prompts?.[prompt.id]?.cue;
-  const zh = prompt.cueZh || (hasTarget(prompt.cue) && translated && !hasTarget(translated) ? translated : null);
-  return { zh, englishTargetInput: !zh && hasTarget(prompt.cue) };
+  return taskCuePolicy(scene, prompt, learningUnits, textTranslations);
 }
+
 function unitSourceHtml(unit) {
   if (!unit.sourceRecords.length) return "<p>项目依据本课沟通行为整理的构式。</p>";
   return unit.sourceRecords.map((r) => `${sourceDetailHtml(r)}${r.sourceRecord ? `<p class="meta">原记录词性：${escapeHtml(r.sourceRecord.POS || "未提供")} · 原中文：${escapeHtml(r.sourceRecord.Chinese_Meaning || "未提供")}</p>` : ""}${r.auditNote ? `<p class="meta">${escapeHtml(r.auditNote)}</p>` : ""}`).join("");
-}
-function unitMemoryHtml(unit, scene) {
-  const ids = unit.sceneMemoryNodeIds?.[scene.id] || [];
-  const places = (scene.memoryNodes || []).filter((node) => ids.includes(node.id));
-  return places.length ? `<p class="meta">地点：${places.map((node) => escapeHtml(node.zh)).join("；")}</p>` : "";
 }
 function unitLearningHtml(scene) {
   const units = unitsForScene(scene);
   if (!units.length) return "";
   const names = { core: "常用表达", support: "更多表达", recognition: "拓展词语" };
-  return `<section class="unit-learning"><h2>词语与表达</h2>${Object.entries(names).filter(([tier]) => units.some((u) => u.tier === tier)).map(([tier, label]) => `<details><summary>${label} · ${units.filter((u) => u.tier === tier).length}</summary><div class="unit-cards">${units.filter((u) => u.tier === tier).map((u) => `<article><strong lang="en">${annotatedEnglish(u.form, scene, u.type === "word" ? u.example : null)}</strong><p>${escapeHtml(u.meaningZh)}</p><details><summary>用法</summary><p>${escapeHtml(u.sense)}</p></details><p lang="en">${annotatedEnglish(u.example, scene)}</p>${textTranslation(u.exampleZh, "例句中文")}${unitMemoryHtml(u, scene)}<details><summary>来源与例句</summary>${unitSourceHtml(u)}<small>表达组合与例句为项目编写；原词条不修改。</small></details></article>`).join("")}</div></details>`).join("")}</section>`;
+  return `<section class="unit-learning"><h2>词语与表达</h2>${Object.entries(names).filter(([tier]) => units.some((u) => u.tier === tier)).map(([tier, label]) => `<details><summary>${label}</summary><div class="unit-cards">${units.filter((u) => u.tier === tier).map((u) => `<article><strong lang="en">${annotatedEnglish(u.form, scene, u.type === "word" ? u.example : null)}</strong><p>${escapeHtml(u.meaningZh)}</p><details><summary>用法</summary><p>${escapeHtml(u.sense)}</p></details><p lang="en">${annotatedEnglish(u.example, scene)}</p>${textTranslation(u.exampleZh, "例句中文")}<details><summary>来源与例句</summary>${unitSourceHtml(u)}<small>表达组合与例句为项目编写；原词条不修改。</small></details></article>`).join("")}</div></details>`).join("")}</section>`;
 }
 function unitAssessmentHtml(scene, prompt, attempt) {
   const sceneUnits = new Map(unitsForScene(scene).map((unit) => [unit.id, unit]));
@@ -1014,27 +1115,44 @@ function bindFeedback(scene, prompt, attempt) {
     attempt.revisions.push({ response, at: new Date().toISOString(), support: "reference" });
     save();
     app.querySelector("#revisionInput").value = "";
-    app.querySelector("#revisionStatus").textContent = `已保存`;
+    app.querySelector("#revisionStatus").textContent = lastSaveFailed ? "尚未保存，请导出备份。" : "已保存";
   });
 }
 function renderUnits() {
   const summaries = learningUnits.map((u) => ({ unit: u, summary: unitSummary(practice, u.id) }));
   const registeredScenes = new Set(learningUnits.flatMap((u) => u.sceneIds));
   const registeredBranches = content.branches.filter((b) => b.sceneIds.some((id) => registeredScenes.has(id)));
-  const observed = summaries.filter(({ summary }) => summary.observations.some((o) => o.status !== "unobserved")).length;
-  app.innerHTML = `<section class="simple-page"><h1>表达记录</h1><section class="unit-tools" aria-label="筛选表达记录"><label for="unitSearch">搜索表达</label><input id="unitSearch" type="search" placeholder="例如：延期、预约、passport…" autocomplete="off"/><label for="unitRoute">学习路线</label><select id="unitRoute"><option value="all">全部</option>${registeredBranches.map((b) => `<option value="${escapeHtml(b.id)}">${escapeHtml(b.title)}</option>`).join("")}</select><p id="unitResultCount" role="status"></p></section><div class="unit-progress-list">${summaries.map(({ unit: u, summary: v }) => {
-    const recalled = v.observations.filter((o) => o.dimension === "recall" && o.status === "independent" && o.support === "none");
-    const transferred = v.observations.filter((o) => o.dimension === "transfer" && o.status === "independent" && o.support === "none");
-    return `<article data-unit-card="${escapeHtml(u.id)}"><h2>${annotatedEnglish(u.form, getScene(u.sceneIds[0]), u.type === "word" ? u.example : null)}</h2><p>${escapeHtml(u.meaningZh)}</p><dl><div><dt>写出来</dt><dd>${recalled.filter((o) => o.modality === "written").length || "暂无记录"}</dd></div><div><dt>说出来</dt><dd>${recalled.filter((o) => o.modality === "spoken").length || "暂无记录"}</dd></div><div><dt>换个情境</dt><dd>${transferred.length || "暂无记录"}</dd></div><div><dt>听懂了</dt><dd>${v.listening ? escapeHtml({ independent: "自评：原先听懂", assisted: "自评：对照后理解", partial: "自评：还需练习" }[v.listening.status]) : "暂无记录"}</dd></div></dl><small>${v.latest ? `最近记录：${escapeHtml(EVIDENCE_LABELS[v.latest.status])} · ${dateLabel(v.latest.at)}` : "还没有练习记录"}</small><button class="text-btn" type="button" data-unit-scene="${escapeHtml(u.sceneIds[0])}">回到学习场景 ↗</button></article>`;
+  const today = calendarDay(new Date().toISOString(), scheduleOptions().timeZone);
+  app.innerHTML = `<section class="simple-page"><h1>表达记录</h1><section class="unit-tools" aria-label="筛选表达记录"><label for="unitSearch">搜索表达</label><input id="unitSearch" type="search" placeholder="例如：延期、预约、passport…" autocomplete="off"/><label for="unitRoute">学习路线</label><select id="unitRoute"><option value="all">全部</option>${registeredBranches.map((b) => `<option value="${escapeHtml(b.id)}">${escapeHtml(b.title)}</option>`).join("")}</select><label for="unitState">练习记录</label><select id="unitState"><option value="all">全部</option><option value="due">待复习</option><option value="independent">自己用出来了</option><option value="assisted">使用过提示</option><option value="partial">还不熟悉</option><option value="unobserved">暂无记录</option><option value="unknown">旧记录</option></select><p id="unitResultCount" role="status"></p></section><div class="unit-progress-list">${summaries.map(({ unit: u, summary: v }) => {
+    const recalled = v.observations.filter((o) => o.dimension === "recall" && o.status === "independent" && o.support === "none" && o.contextVerified);
+    const transferred = v.observations.filter((o) => o.dimension === "transfer" && o.status === "independent" && o.support === "none" && o.contextVerified);
+    const tracks = Object.entries(practice.unitReviews[u.id]?.tracks || {});
+    const due = unitNextDate(u.id);
+    const buttons = tracks.length ? tracks.map(([key, track]) => `<div><span>${escapeHtml(trackLabel(key))} · ${dateLabel(track.nextDueDate)}</span><button class="text-btn" type="button" data-unit-practice="${escapeHtml(u.id)}" data-unit-track="${escapeHtml(key)}">练习 ↗</button></div>`).join("") : `<button class="text-btn" type="button" data-unit-practice="${escapeHtml(u.id)}" data-unit-track="recall.written">练习 ↗</button>`;
+    return `<article data-unit-card="${escapeHtml(u.id)}"><h2>${annotatedEnglish(u.form, getScene(u.sceneIds[0]), u.type === "word" ? u.example : null)}</h2><p>${escapeHtml(u.meaningZh)}</p>${v.latest || v.listening || tracks.length ? `<dl><div><dt>写出来</dt><dd>${recalled.filter((o) => o.modality === "written").length || "—"}</dd></div><div><dt>说出来</dt><dd>${recalled.filter((o) => o.modality === "spoken").length || "—"}</dd></div><div><dt>换个情境</dt><dd>${transferred.length || "—"}</dd></div><div><dt>听懂了</dt><dd>${v.listening ? escapeHtml({ independent: "自评：原先听懂", assisted: "自评：对照后理解", partial: "自评：还需练习" }[v.listening.status]) : "—"}</dd></div></dl>` : ""}<small>${v.latest ? v.latest.contextVerified ? `${escapeHtml(EVIDENCE_LABELS[v.latest.status])} · ${dateLabel(v.latest.at)}` : "旧记录：尚未核对任务" : v.listening ? "" : "暂无记录"}</small>${due ? `<p>${due <= today ? "待复习" : "下次"} · ${dateLabel(due)}</p>` : ""}<details><summary>练习</summary>${buttons}<p role="status" data-unit-entry-status></p></details><button class="text-btn" type="button" data-unit-scene="${escapeHtml(u.sceneIds[0])}">回到学习场景 ↗</button></article>`;
   }).join("")}</div></section>`;
   if (!registeredBranches.some((b) => b.id === unitScope)) unitScope = "all";
   app.querySelector("#unitSearch").value = unitQuery;
   app.querySelector("#unitRoute").value = unitScope;
+  app.querySelector("#unitState").value = unitViewFilter;
   app.querySelector("#unitSearch").addEventListener("input", (event) => { unitQuery = event.target.value; filterUnitRecords(); });
   app.querySelector("#unitRoute").addEventListener("change", (event) => { unitScope = event.target.value; filterUnitRecords(); });
+  app.querySelector("#unitState").addEventListener("change", (event) => { unitViewFilter = event.target.value; filterUnitRecords(); });
   filterUnitRecords();
   app.querySelectorAll("[data-unit-scene]").forEach((b) => b.addEventListener("click", () => navigate("scene", b.dataset.unitScene)));
+  app.querySelectorAll("[data-unit-practice]").forEach((button) => button.addEventListener("click", () => {
+    const unitId = button.dataset.unitPractice;
+    const trackKey = button.dataset.unitTrack;
+    const unit = learningUnits.find((item) => item.id === unitId);
+    const track = practice.unitReviews[unitId]?.tracks[trackKey];
+    const entry = { unitId, trackKey, lastSceneId: track?.lastSceneId || unit.sceneIds[0], lastPromptId: track?.lastPromptId };
+    const target = choosePracticeTarget(entry, taskRegistry);
+    if (!target) { button.closest("article").querySelector("[data-unit-entry-status]").textContent = "暂无对应练习，可回到场景阅读。"; return; }
+    // This page has already shown the target English; do not label immediate use independent.
+    openReview({ ...entry, target }, "reference");
+  }));
 }
+
 function mountListening(scene) {
   const host = app.querySelector("#listeningPanel");
   if (!host) return;
@@ -1059,8 +1177,8 @@ function mountListening(scene) {
       if (saved) return;
       practice.listeningAttempts ||= [];
       practice.listeningAttempts.push({ id: globalThis.crypto?.randomUUID?.() || `${Date.now()}-${Math.random()}`, unitId: u.id, sceneId: scene.id, at: new Date().toISOString(), response: firstMeaning, status: button.dataset.listenRating === "independent" ? eligible ? "independent" : "assisted" : "partial", evidenceSource: "self-check", audioSource: "browser-synthetic", contentVersion: content.version });
-      saved = true; save(); compare.querySelectorAll("button").forEach((b) => b.disabled = true);
-      host.querySelector("#listenStatus").textContent = "已保存";
+      saved = true; const persisted = save(); compare.querySelectorAll("button").forEach((b) => b.disabled = true);
+      host.querySelector("#listenStatus").textContent = persisted ? "已保存" : "尚未保存，请导出备份。";
     }));
   });
 }
@@ -1068,7 +1186,7 @@ function renderImport() {
   importCandidate = null;
   app.querySelector("#importPanel")?.remove();
   const panel = document.createElement("section"); panel.id = "importPanel"; panel.className = "import-panel";
-  panel.innerHTML = `<h2>恢复练习备份</h2><p>选择本应用导出的 JSON。先预览，再合并；重复答题ID保留本机版本，复习日期选较新的记录。不会清除已有答题。</p><label for="importFile">备份文件</label><input type="file" id="importFile" accept=".json,application/json"/><p id="importStatus" role="status"></p><button type="button" class="secondary-btn" id="confirmImport" disabled>确认合并记录</button>`;
+  panel.innerHTML = `<h2>恢复练习备份</h2><p>重复答题保留本机原答；复习日期按合并后的表达记录重新计算。</p><label for="importFile">备份文件</label><input type="file" id="importFile" accept=".json,application/json"/><p id="importStatus" role="status"></p><button type="button" class="secondary-btn" id="confirmImport" disabled>确认合并记录</button>`;
   app.append(panel); panel.scrollIntoView({ block: "nearest" });
   panel.querySelector("input").addEventListener("change", async (event) => {
     importCandidate = null; panel.querySelector("button").disabled = true;
@@ -1077,19 +1195,22 @@ function renderImport() {
       if (file.size > 10 * 1024 * 1024) throw new Error("文件超过10MB，请检查备份内容");
       const payload = JSON.parse(await file.text());
       if (!payload.app?.startsWith("IELTS Semantic World")) throw new Error("这不是本应用导出的备份");
-      if (payload.practice?.schemaVersion > 2) throw new Error("备份版本较新，请先更新应用");
+      if (payload.unreadableOriginalStorage != null) throw new Error("此备份还包含未修复的原始旧记录，请保留原文件；不能把它当作空记录恢复");
+      if (payload.practice?.schemaVersion > 3) throw new Error("备份版本较新，请先更新应用");
       importCandidate = normalisePractice(payload.practice);
       const localIds = new Set(practice.attempts.map((a) => a.id));
       const duplicate = importCandidate.attempts.filter((a) => localIds.has(a.id)).length;
-      panel.querySelector("#importStatus").textContent = `${importCandidate.attempts.length} 条答题、${importCandidate.listeningAttempts.length} 条听辨；其中 ${duplicate} 条答题ID重复，将保留本机版本。备份课程版本：${payload.contentVersion || "旧版"}。尚未写入。`;
+      const zoneNote = validTimeZone(importCandidate.unitReviewMeta?.timeZone) && importCandidate.unitReviewMeta.timeZone !== scheduleOptions().timeZone ? `日期按本机已固定时区 ${scheduleOptions().timeZone} 重新计算。` : "";
+      panel.querySelector("#importStatus").textContent = `${importCandidate.attempts.length} 条答题、${importCandidate.listeningAttempts.length} 条听辨；其中 ${duplicate} 条答题ID重复，将保留本机版本。备份课程版本：${payload.contentVersion || "旧版"}。${zoneNote}尚未写入。`;
       panel.querySelector("button").disabled = false;
     } catch (error) { panel.querySelector("#importStatus").textContent = `未导入：${error.message}`; }
   });
   panel.querySelector("button").addEventListener("click", () => {
     if (!importCandidate) return;
-    const merged = mergePractice(practice, importCandidate);
-    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(merged)); }
-    catch (_) { panel.querySelector("#importStatus").textContent = "未合并：本机无法保存记录，请保留备份。"; return; }
+    let merged;
+    try { merged = mergePractice(practice, importCandidate, scheduleOptions()); }
+    catch (error) { panel.querySelector("#importStatus").textContent = `未合并：${error.message}`; return; }
+    if (!persistPractice(merged)) { panel.querySelector("#importStatus").textContent = "未合并：本机暂不能保存，请保留备份。"; return; }
     practice = merged; importCandidate = null; panel.querySelector("button").disabled = true;
     panel.querySelector("#importStatus").textContent = "已合并并保存；本机原答保留。"; renderChrome();
   });
@@ -1103,11 +1224,20 @@ function clearSessionRecordings() {
 
 function filterUnitRecords() {
   const query = unitQuery.trim().toLocaleLowerCase();
+  const today = calendarDay(new Date().toISOString(), scheduleOptions().timeZone);
   let visible = 0;
   for (const card of app.querySelectorAll('[data-unit-card]')) {
     const unit = learningUnits.find((u) => u.id === card.dataset.unitCard);
+    const summary = unitSummary(practice, unit.id);
+    const observed = summary.observations.filter((o) => o.status !== "unobserved");
+    const due = unitNextDate(unit.id);
     const inRoute = unitScope === 'all' || unit.sceneIds.some((id) => branchForScene(getScene(id))?.id === unitScope);
-    const match = inRoute && (!query || [unit.form, unit.meaningZh, unit.sense].join(' ').toLocaleLowerCase().includes(query));
+    const inState = unitViewFilter === "all"
+      || (unitViewFilter === "due" && due && due <= today)
+      || (unitViewFilter === "unobserved" && !observed.length)
+      || (unitViewFilter === "unknown" && observed.some((o) => !o.contextVerified))
+      || (["independent", "assisted", "partial"].includes(unitViewFilter) && observed.some((o) => o.contextVerified && o.status === unitViewFilter));
+    const match = inRoute && inState && (!query || [unit.form, unit.meaningZh, unit.sense].join(' ').toLocaleLowerCase().includes(query));
     card.hidden = !match;
     if (match) visible += 1;
   }
