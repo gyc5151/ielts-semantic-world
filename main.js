@@ -1,11 +1,11 @@
-import { DataStore } from "./data-store.mjs?v=pilot-21-0";
-import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-21-0";
-import { nextReview, reviewDue } from "./learning.mjs?v=pilot-21-0";
-import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-21-0";
-import { buildTaskRegistry, createTaskResolver, taskCuePolicy, rebuildPractice, calendarDay, dueUnitTracks, choosePracticeTarget, validTimeZone } from "./unit-review-scheduler.mjs?v=pilot-21-0";
-import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-21-0";
+import { DataStore } from "./data-store.mjs?v=pilot-21-0-r1";
+import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-21-0-r1";
+import { nextReview, reviewDue } from "./learning.mjs?v=pilot-21-0-r1";
+import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-21-0-r1";
+import { buildTaskRegistry, createTaskResolver, taskCuePolicy, rebuildPractice, calendarDay, dueUnitTracks, choosePracticeTarget, validTimeZone } from "./unit-review-scheduler.mjs?v=pilot-21-0-r1";
+import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-21-0-r1";
 const DATA_URL = "./data/runtime.json";
-const ASSET_VERSION = "pilot-21-0";
+const ASSET_VERSION = "pilot-21-0-r1";
 function fetchData(path) {
   const url = new URL(path, window.location.href);
   url.searchParams.set("v", ASSET_VERSION);
@@ -619,7 +619,7 @@ function showEntryModal(scene, entry, trigger, relatedChunkId = null) {
     ${relatedChunk ? `<button class="glossary-related" type="button" data-related-chunk-open="${escapeHtml(relatedChunk.id)}" data-related-scene="${escapeHtml(scene.id)}">查看整块表达：${escapeHtml(relatedChunk.text)} ↗</button>` : ""}
     ${showProjectExample ? `<div class="glossary-example"><span>项目情境例句</span><p>${escapeHtml(entry.example)}</p>${textTranslation(entry.exampleZh, "例句中文")}</div>` : ""}
     ${entry.dictionaryLoadChecked && !entry.dictionaryError && wordnet ? dictionaryHtml(entry, scene.id, wordnet, dictionaryContext, dictionaryTranslations, dictionaryChinese, showDictionaryChinese && entry.dictionaryChineseLoaded) : `<p role="status" class="meta">${entry.dictionaryLoadChecked ? "词典暂不可用。本情境释义仍可阅读。" : "正在载入词典；本情境释义可先阅读。"}</p>${entry.dictionaryError ? '<button class="text-btn" type="button" data-dictionary-retry>重试词典</button>' : ''}` }
-    <details class="glossary-source"><summary>${entry.type !== "word" ? "组成词来源" : "来源"}</summary>${sourceDetailHtml(source)}</details>
+    <details class="glossary-source"><summary>${entry.type !== "word" ? "组成词来源" : "来源"}</summary>${entry.unitSources ? unitSourceHtml({sourceRecords:entry.unitSources}) : sourceDetailHtml(source)}</details>
   </div>`;
   if (glossaryDialog.open) glossaryDialog.querySelector(".glossary-close").focus();
   else glossaryDialog.showModal();
@@ -659,6 +659,25 @@ async function openWord(sceneId, word, trigger, relatedChunkId, contextSentence,
   entry.contextSentence = contextSentence;
   entry.dictionaryUsage = dictionaryUsage;
   showEntryModal(scene, entry, trigger, relatedChunkId);
+}
+
+async function openUnitExpression(unitId, trigger) {
+  const generation = ++modalGeneration, route = routeGeneration;
+  const meta = learningUnits.find(unit => unit.id === unitId);
+  if (!meta) return;
+  try {
+    const scene = await hydrateScene(meta.sceneIds[0]);
+    if (generation !== modalGeneration || route !== routeGeneration) return;
+    const unit = unitsForScene(scene).find(value => value.id === unitId);
+    if (!unit) throw new Error('表达详情尚未载入');
+    markLookupSupport();
+    showEntryModal(scene, { text: unit.form, type: unit.type, zh: unit.meaningZh,
+      note: unit.sense, example: unit.example, exampleZh: unit.exampleZh,
+      unitSources: unit.sourceRecords }, trigger);
+  } catch (error) {
+    if (generation === modalGeneration && route === routeGeneration)
+      showModalLoadError(error, trigger, () => openUnitExpression(unitId, trigger));
+  }
 }
 
 function showModalLoadError(error, trigger, retry) {
@@ -1015,6 +1034,8 @@ document.querySelector("#unitsNav").addEventListener("click", () => navigate("un
 document.querySelector("#aboutNav").addEventListener("click", () => navigate("about"));
 document.querySelector("#exportBtn").addEventListener("click", exportPractice);
 app.addEventListener("click", (event) => {
+  const expression = event.target.closest('[data-unit-expression]');
+  if (expression && app.contains(expression)) { openUnitExpression(expression.dataset.unitExpression, expression); return; }
   const word = event.target.closest("[data-word]");
   if (word && app.contains(word)) {
     openWord(word.dataset.wordScene, word.dataset.word, word, word.dataset.relatedChunk, word.dataset.wordSentence, word.dataset.wordUsage);
@@ -1196,7 +1217,7 @@ function renderUnits() {
     const tracks = Object.entries(practice.unitReviews[u.id]?.tracks || {});
     const due = unitNextDate(u.id);
     const buttons = tracks.length ? tracks.map(([key, track]) => `<div><span>${escapeHtml(trackLabel(key))} · ${dateLabel(track.nextDueDate)}</span><button class="text-btn" type="button" data-unit-practice="${escapeHtml(u.id)}" data-unit-track="${escapeHtml(key)}">练习 ↗</button></div>`).join("") : `<button class="text-btn" type="button" data-unit-practice="${escapeHtml(u.id)}" data-unit-track="recall.written">练习 ↗</button>`;
-    return `<article data-unit-card="${escapeHtml(u.id)}"><h2>${annotatedEnglish(u.form, getScene(u.sceneIds[0]), u.type === "word" ? u.example : null)}</h2><p>${escapeHtml(u.meaningZh)}</p>${v.latest || v.listening || tracks.length ? `<dl><div><dt>写出来</dt><dd>${recalled.filter((o) => o.modality === "written").length || "—"}</dd></div><div><dt>说出来</dt><dd>${recalled.filter((o) => o.modality === "spoken").length || "—"}</dd></div><div><dt>换个情境</dt><dd>${transferred.length || "—"}</dd></div><div><dt>听懂了</dt><dd>${v.listening ? escapeHtml({ independent: "自评：原先听懂", assisted: "自评：对照后理解", partial: "自评：还需练习" }[v.listening.status]) : "—"}</dd></div></dl>` : ""}<small>${v.latest ? v.latest.contextVerified ? `${escapeHtml(EVIDENCE_LABELS[v.latest.status])} · ${dateLabel(v.latest.at)}` : "旧记录：尚未核对任务" : v.listening ? "" : "暂无记录"}</small>${due ? `<p>${due <= today ? "待复习" : "下次"} · ${dateLabel(due)}</p>` : ""}<details><summary>练习</summary>${buttons}<p role="status" data-unit-entry-status></p></details><button class="text-btn" type="button" data-unit-scene="${escapeHtml(u.sceneIds[0])}">回到学习场景 ↗</button></article>`;
+    return `<article data-unit-card="${escapeHtml(u.id)}"><h2>${annotatedEnglish(u.form, dataStore.sceneDirectory.get(u.sceneIds[0]), u.type === "word" ? u.example : null)}${u.type !== "word" ? `<button class="glossary-chunk-marker" type="button" data-unit-expression="${escapeHtml(u.id)}" aria-label="查看整个表达 ${escapeHtml(u.form)} 的搭配">↗</button>` : ""}</h2><p>${escapeHtml(u.meaningZh)}</p>${v.latest || v.listening || tracks.length ? `<dl><div><dt>写出来</dt><dd>${recalled.filter((o) => o.modality === "written").length || "—"}</dd></div><div><dt>说出来</dt><dd>${recalled.filter((o) => o.modality === "spoken").length || "—"}</dd></div><div><dt>换个情境</dt><dd>${transferred.length || "—"}</dd></div><div><dt>听懂了</dt><dd>${v.listening ? escapeHtml({ independent: "自评：原先听懂", assisted: "自评：对照后理解", partial: "自评：还需练习" }[v.listening.status]) : "—"}</dd></div></dl>` : ""}<small>${v.latest ? v.latest.contextVerified ? `${escapeHtml(EVIDENCE_LABELS[v.latest.status])} · ${dateLabel(v.latest.at)}` : "旧记录：尚未核对任务" : v.listening ? "" : "暂无记录"}</small>${due ? `<p>${due <= today ? "待复习" : "下次"} · ${dateLabel(due)}</p>` : ""}<details><summary>练习</summary>${buttons}<p role="status" data-unit-entry-status></p></details><button class="text-btn" type="button" data-unit-scene="${escapeHtml(u.sceneIds[0])}">回到学习场景 ↗</button></article>`;
   }).join("")}</div><div class="button-row" aria-label="表达列表翻页"><button class="secondary-btn" id="unitPrevious" type="button" ${unitPage === 0 ? 'disabled' : ''}>上一页</button><span>${unitPage + 1} / ${pages}</span><button class="secondary-btn" id="unitNext" type="button" ${unitPage + 1 === pages ? 'disabled' : ''}>下一页</button></div></section>`;
   app.querySelector('#unitResultCount').textContent = `${summaries.length} 个表达`;
   app.querySelector('#unitPrevious').addEventListener('click', () => { unitPage -= 1; renderUnits(); app.focus({preventScroll:true}); });
