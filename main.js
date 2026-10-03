@@ -1,11 +1,11 @@
-import { DataStore } from "./data-store.mjs?v=pilot-23-0-r1";
-import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-23-0-r1";
-import { nextReview, reviewDue } from "./learning.mjs?v=pilot-23-0-r1";
-import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-23-0-r1";
-import { buildTaskRegistry, createTaskResolver, taskCuePolicy, rebuildPractice, calendarDay, dueUnitTracks, choosePracticeTarget, validTimeZone } from "./unit-review-scheduler.mjs?v=pilot-23-0-r1";
-import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-23-0-r1";
+import { DataStore } from "./data-store.mjs?v=pilot-24-0";
+import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-24-0";
+import { nextReview, reviewDue } from "./learning.mjs?v=pilot-24-0";
+import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-24-0";
+import { buildTaskRegistry, createTaskResolver, taskCuePolicy, rebuildPractice, calendarDay, dueUnitTracks, choosePracticeTarget, validTimeZone } from "./unit-review-scheduler.mjs?v=pilot-24-0";
+import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-24-0";
 const DATA_URL = "./data/runtime.json";
-const ASSET_VERSION = "pilot-23-0-r1";
+const ASSET_VERSION = "pilot-24-0";
 function fetchData(path) {
   const url = new URL(path, window.location.href);
   url.searchParams.set("v", ASSET_VERSION);
@@ -360,6 +360,7 @@ function themeIllustration(theme) {
     home: '<path d="M35 103V50l57-34 57 34v53M58 103V65h33v38M106 64h22v22h-22M158 104h41l-5-23h-31zM179 81V48m0 14c-30-1-25-26-25-26 22 0 25 26 25 26m0 5c30-1 25-26 25-26-22 0-25 26-25 26"/>',
     community: '<rect x="25" y="18" width="116" height="90" rx="4"/><path d="M42 37h62M42 50h82M42 72h38m-38 13h48m3-17 20 12-20 12"/><circle cx="181" cy="56" r="29"/><path d="M181 38v20l16 9M162 100h39"/>',
     science: '<path d="M47 17h36m-28 0v34l-29 47q-4 10 7 10h64q11 0 7-10L75 51V17M41 81h47M145 33h49m-41 0v55q16 38 33 0V33M153 69h33M124 108h91"/><path d="m119 19 14 11 18-15"/>',
+    industry: '<path d="M22 107V59l35-21v21l35-21v21h36v48zM104 59V21h16v38M33 78h17v13H33zM65 78h17v13H65zM98 78h17v29M147 107h62M150 67h46v40h-46zM150 67l23-12 23 12M173 67v40M150 83h46M21 113h108"/>',
     urban: '<path d="M25 22h180v82H25zM25 48h180M25 78h180M66 22v82M147 22v82"/><path d="M85 58h43v11H85M104 84v19M52 29v10m113 22v12"/><circle cx="177" cy="35" r="7"/>',
     travel: '<rect x="27" y="19" width="99" height="79" rx="12"/><path d="M40 38h73v28H40zM45 98l-9 14m73-14 9 14M49 111h54M62 19v-7h30v7"/><circle cx="46" cy="81" r="4"/><circle cx="107" cy="81" r="4"/><rect x="154" y="54" width="50" height="53" rx="5"/><path d="M169 54V42h20v12M168 66v29m22-29v29M153 26h50m-9-7 9 7-9 7"/>',
     commerce: '<path d="M29 41h94l9 65H20zM46 43V31a16 16 0 0 1 32 0v12M151 16h54v92l-9-7-9 7-9-7-9 7-9-7-9 7zM162 36h32m-32 14h25m-25 16h32m-32 20h18"/><circle cx="107" cy="33" r="13"/><path d="m100 33 5 5 9-11"/>',
@@ -412,7 +413,7 @@ function renderHome() {
 
 async function filterRoutes() {
   const generation = ++routeSearchGeneration;
-  const groups = { home: 'life', community: 'public', urban: 'public', science: 'study', campus: 'study', nature: 'nature', travel: 'life', commerce: 'life', kitchen: 'life', health: 'life' };
+  const groups = { home: 'life', community: 'public', urban: 'public', science: 'study', industry: 'study', campus: 'study', nature: 'nature', travel: 'life', commerce: 'life', kitchen: 'life', health: 'life' };
   const query = worldQuery.trim().toLocaleLowerCase();
   const category = worldCategory;
   const count = app.querySelector('#routeResultCount');
@@ -493,7 +494,7 @@ function chunkMatches(value, scene) {
   const lower = source.toLowerCase();
   const candidates = [];
   for (const entry of scene.glossary || []) {
-    if (!["chunk", "construction"].includes(entry.type) || !entry.text) continue;
+    if ((!['chunk', 'construction'].includes(entry.type) && !entry.matchAsWhole) || !entry.text) continue;
     for (const rawText of new Set([entry.text, ...(entry.matchTexts || [])])) {
       // A quoted statement can end with a comma where its standalone example
       // ends with a full stop. Match the same words and keep punctuation outside.
@@ -580,7 +581,9 @@ function chunkWordButtons(scene, entry) {
 
 function sourceDetailHtml(source) {
   if (!source) return "<p>项目编写的情境释义。</p>";
-  const original = source.sourceDerived;
+  const record = source.sourceRecord;
+  const original = source.sourceDerived || (record ? {printedSurface: record.Source_Term, printedPOS: record.POS,
+    printedChinese: record.Chinese_Meaning, sourceSpan: record.Source_Context} : null);
   const evidence = source.externalEvidence || [];
   return `<p>${escapeHtml(source.sourceLabel || source.kind || "来源")}</p>
     ${source.sourceRef ? `<small>${escapeHtml(source.sourceRef)}</small>` : ""}
@@ -605,7 +608,9 @@ function showEntryModal(scene, entry, trigger, relatedChunkId = null) {
   const source = (scene.terms || []).find((term) =>
     String(term.term).toLowerCase() === String(entry.sourceTerm || "").toLowerCase() ||
     entry.sourceSupplementOccurrenceIds?.includes(term.sourceOccurrenceId));
-  const relatedChunk = (scene.glossary || []).find((item) => item.id === relatedChunkId && item.type !== "word");
+  const sourceRecords = entry.unitSources || unitsForScene(scene).find(unit =>
+    unit.glossaryIds?.includes(entry.id) || unit.form.toLowerCase() === entry.text.toLowerCase())?.sourceRecords;
+  const relatedChunk = (scene.glossary || []).find((item) => item.id === relatedChunkId && (item.type !== "word" || item.matchAsWhole));
   const contextExample = dictionaryContextFor(dictionaryContext, scene.id, entry.text.toLowerCase(), entry.dictionaryUsage)?.example;
   const showProjectExample = entry.example && (entry.type !== "word" || !wordnet || entry.example !== contextExample);
   glossaryDialog.innerHTML = `<div class="glossary-modal">
@@ -618,7 +623,7 @@ function showEntryModal(scene, entry, trigger, relatedChunkId = null) {
     ${relatedChunk ? `<button class="glossary-related" type="button" data-related-chunk-open="${escapeHtml(relatedChunk.id)}" data-related-scene="${escapeHtml(scene.id)}">查看整块表达：${escapeHtml(relatedChunk.text)} ↗</button>` : ""}
     ${showProjectExample ? `<div class="glossary-example"><span>项目情境例句</span><p>${escapeHtml(entry.example)}</p>${textTranslation(entry.exampleZh, "例句中文")}</div>` : ""}
     ${entry.dictionaryLoadChecked && !entry.dictionaryError && wordnet ? dictionaryHtml(entry, scene.id, wordnet, dictionaryContext, dictionaryTranslations, dictionaryChinese, showDictionaryChinese && entry.dictionaryChineseLoaded) : `<p role="status" class="meta">${entry.dictionaryLoadChecked ? "词典暂不可用。本情境释义仍可阅读。" : "正在载入词典；本情境释义可先阅读。"}</p>${entry.dictionaryError ? '<button class="text-btn" type="button" data-dictionary-retry>重试词典</button>' : ''}` }
-    <details class="glossary-source"><summary>来源</summary>${entry.unitSources ? unitSourceHtml({sourceRecords:entry.unitSources}) : sourceDetailHtml(source)}</details>
+    <details class="glossary-source"><summary>来源</summary>${sourceRecords?.length ? unitSourceHtml({sourceRecords}) : sourceDetailHtml(source)}</details>
   </div>`;
   if (glossaryDialog.open) glossaryDialog.querySelector(".glossary-close").focus();
   else glossaryDialog.showModal();
@@ -1170,7 +1175,7 @@ function promptCue(scene, prompt) {
 
 function unitSourceHtml(unit) {
   if (!unit.sourceRecords.length) return "<p>项目依据本课沟通行为整理的构式。</p>";
-  return unit.sourceRecords.map((r) => `${sourceDetailHtml(r)}${r.sourceRecord ? `<p class="meta">原记录词性：${escapeHtml(r.sourceRecord.POS || "未提供")} · 原中文：${escapeHtml(r.sourceRecord.Chinese_Meaning || "未提供")}</p>` : ""}${r.auditNote ? `<p class="meta">${escapeHtml(r.auditNote)}</p>` : ""}`).join("");
+  return unit.sourceRecords.map((r) => `${sourceDetailHtml(r)}${r.auditNote ? `<p class="meta">${escapeHtml(r.auditNote)}</p>` : ""}`).join("");
 }
 function unitUsageNote(unit, scene) {
   const curated = (scene.glossary || []).find(entry => entry.text?.toLowerCase() === unit.form.toLowerCase());
