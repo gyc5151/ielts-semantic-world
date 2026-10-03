@@ -4,16 +4,16 @@ Situation → Language: learn English through decisions, objects and events.
 
 **[Open the learning website](https://gyc5151.github.io/ielts-semantic-world/)**
 
-## Current version: pilot-21-0
+## Current version: pilot-22-0
 
-13 routes, 52 short bilingual scenes, 218 retrieval/transfer tasks:
+13 routes, 54 short bilingual scenes, 226 retrieval/transfer tasks:
 
 | Route | Contents | UI setting |
 |---|---|---|
-| Housing & Commuting | Nine scenes from searching to settling in | Warm paper |
+| Housing & Commuting | 11 scenes from searching to settling in | Warm paper |
 | Blue bill | Two housing side scenes | Home and household budget |
 | Changed notice | Two community-centre side scenes | Notice board |
-| Water sample | Two research side scenes | Laboratory record |
+| Water sample | 3 research side scenes | Laboratory record |
 | Tides and birds | Two wetland side scenes | Field notebook |
 | Square and entrance | Two town-square side scenes | Site plan and observation |
 | Workshop leaflet | Two university side scenes | Leaflet and margin notes |
@@ -24,7 +24,7 @@ Situation → Language: learn English through decisions, objects and events.
 | A recipe on the kitchen table | Four food scenes about a menu, preparation, equipment and the table | Recipe paper and kitchen counter |
 | The notes at the clinic | 7 health-language scenes about checking in, describing symptoms, asking about services and checking records | Arrival card and records tray |
 
-Every route uses clickable English words and expression blocks, optional Chinese support, contextual usage, multiple WordNet senses and original examples, independent recall and spaced review. S01 main lessons and branch scenes have expandable object cues. 52 lessons have 408 editorial word-sense/chunk/construction units with self-checked observations, sentence listening and session-only recording. Each of these lessons has at most five Core targets; Support and Recognition expressions remain available for understanding. Expression records have search, route and practice-state filters. Written and spoken recall and transfer have separate unit-level dates; assisted practice does not advance independent success. Backup restore merges original facts and rebuilds review dates. Using cues before answering is recorded as assisted practice.
+Every route uses clickable English words and expression blocks, optional Chinese support, contextual usage, multiple WordNet senses and original examples, independent recall and spaced review. S01 main lessons and branch scenes have expandable object cues. 54 lessons have 416 editorial word-sense/chunk/construction units with self-checked observations, sentence listening and session-only recording. Each of these lessons has at most five Core targets; Support and Recognition expressions remain available for understanding. Expression records have search, route and practice-state filters. Written and spoken recall and transfer have separate unit-level dates; assisted practice does not advance independent success. Backup restore merges original facts and rebuilds review dates. Using cues before answering is recorded as assisted practice.
 
 Direct links:
 
@@ -61,4 +61,4 @@ Only static runtime website files and attribution are included. GitHub Pages pub
 
 Navigation opens from a fixed release directory. Course text, word meanings and unit details load for the selected course. Dictionary English senses and Chinese support load independently for the selected word. Search covers the complete published route directory; expression records use complete metadata and 50-item pages. Original learning IDs and the existing practice storage key are preserved. Resource errors can be retried without clearing practice records.
 
-The compiled startup directory is 225,007 raw JSON bytes for this release; opening a course and resolving existing records adds its required resources. This is a file inventory, not a measured loading-time or learner-effect result.
+The compiled startup directory is 232,787 raw JSON bytes for this release; opening a course and resolving existing records adds its required resources. This is a file inventory, not a measured loading-time or learner-effect result.
