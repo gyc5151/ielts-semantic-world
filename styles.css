@@ -1399,7 +1399,7 @@ ul.review-list {
   gap: 10px;
 }
 
-.prompt-card h2 {
+.prompt-card h1, .prompt-card h2 {
   font-size: clamp(1.35rem, 2.1vw, 1.8rem);
   line-height: 1.48;
 }
@@ -1907,7 +1907,7 @@ ul.review-list {
 .dictionary-full-sense summary .dictionary-definition-zh { color: #466257; font-size: .83rem; margin-top: 5px; }
 .glossary-modal-top { position: sticky; top: -1px; z-index: 2; padding: 5px 0; background: var(--paper); }
 .storage-warning { margin: 12px 24px; padding: 12px; color: #864932; background: #fff1dc; border-radius: 10px; }
-.prompt-card h2 { font-family: var(--font-ui); font-size: clamp(1.08rem, 1.8vw, 1.35rem); line-height: 1.8; }
+.prompt-card h1, .prompt-card h2 { font-family: var(--font-ui); font-size: clamp(1.08rem, 1.8vw, 1.35rem); line-height: 1.8; }
 @media (max-width: 480px) {
   .topbar { flex-wrap: wrap; gap: 7px; }
   .topbar-actions { flex-wrap: wrap; gap: 6px 12px; }

@@ -772,15 +772,13 @@ function renderPrompt() {
   const saved = ui.submittedAttemptId ? practice.attempts.find((attempt) => attempt.id === ui.submittedAttemptId) : null;
   app.innerHTML = `
     <section class="prompt-page" data-activity="${escapeHtml(prompt.activity || "explain")}">
-      <div class="prompt-topline"><span class="eyebrow">${ui.promptIndex + 1} / ${prompts.length}</span><span class="badge">${ui.reviewMode ? "到期复习" : isTransfer ? "另一段故事" : "练习"}</span></div>
-      <h1>${isTransfer ? "另一段故事" : activity.label}</h1>
       
       <div class="prompt-card">
-        <h2${cuePolicy.zh ? ' lang="zh-CN"' : ' lang="en"'}>${cuePolicy.zh ? escapeHtml(cuePolicy.zh) : annotatedEnglish(prompt.cue || "", scene)}</h2>
+        <h1${cuePolicy.zh ? ' lang="zh-CN"' : ' lang="en"'}>${cuePolicy.zh ? escapeHtml(cuePolicy.zh) : annotatedEnglish(prompt.cue || "", scene)}</h1>
         ${cuePolicy.zh ? `<details class="text-translation" data-english-cue><summary>英文</summary><p lang="en">${annotatedEnglish(prompt.cue || "", scene)}</p></details>` : textTranslation(translated?.cue, "中文")}
         
       </div>
-      ${prompt.draft ? `<section class="rewrite-draft"><span>需要修改的原句</span><p lang="en">${annotatedEnglish(prompt.draft, scene)}</p>${textTranslation(translated?.draft, '中文')}</section>` : ""}
+      ${prompt.draft ? `<section class="rewrite-draft"><span>原句</span><p lang="en">${annotatedEnglish(prompt.draft, scene)}</p>${textTranslation(translated?.draft, '中文')}</section>` : ""}
       ${ui.support === "chinese" || ui.support === "story" ? `<div class="hint-panel"><strong>${ui.support === "story" ? "原文" : "词义"}</strong>${ui.support === "story" ? readingHtml(scene) : promptHintHtml(scene, prompt, translated)}</div>` : ""}
       ${!ui.revealed ? `
         <label class="answer-label" for="answerInput">Your answer</label>
@@ -834,15 +832,15 @@ function renderFeedback(scene, prompt, attempt) {
       <h2>参考表达</h2>
       
       <div class="your-answer"><span class="meta">${attempt?.responseMode === "spoken" ? "你的口头回答" : "你的原答"}${attempt?.support !== "none" ? " · 使用了提示" : " · 未使用提示"}</span><p>${attempt?.response ? escapeHtml(attempt.response) : "（这次暂时想不出）"}</p>${sessionRecordings.has(attempt?.id) ? `<audio class="feedback-recording" controls src="${escapeHtml(sessionRecordings.get(attempt.id))}" aria-label="回听提交前的口头回答"></audio>` : ""}</div>
-      <div class="sample-answers"><strong>参考说法</strong>${answers.map((answer, index) => `<div><p lang="en">“${annotatedEnglish(answer, scene)}”</p>${textTranslation(translated?.acceptableAnswers?.[index], "参考表达中文")}</div>`).join("")}</div>
+      <div class="sample-answers">${answers.map((answer, index) => `<div><p lang="en">“${annotatedEnglish(answer, scene)}”</p>${textTranslation(translated?.acceptableAnswers?.[index], "参考表达中文")}</div>`).join("")}</div>
       ${unitAssessmentHtml(scene, prompt, attempt)}
       ${prompt.unitIds?.length ? `<section class="revision-panel"><label for="revisionInput">修改回答</label><textarea id="revisionInput" rows="3" class="answer-input" placeholder="Your answer…"></textarea><button type="button" class="secondary-btn" id="saveRevision">保存修订</button><p role="status" id="revisionStatus"></p>${attempt?.revisions?.length ? `<details><summary>已保存 ${attempt.revisions.length} 次修订</summary>${attempt.revisions.map((r) => `<p>${escapeHtml(r.response)}</p>`).join("")}</details>` : ""}</section>` : ""}
-      ${terms.length ? `<details class="source-details"><summary>查看本题相关表达与来源</summary><div class="term-list">${terms.map((term) => `<div class="term-item"><span class="source-pill ${String(term.kind || "").toLowerCase()}">${escapeHtml(term.kind === "BRG" ? "SRC · BRG" : (term.kind || "候选"))}</span><strong>${escapeHtml(term.term)}</strong><span>${escapeHtml(term.sourceLabel || "")}</span>${term.sourceUrl ? `<a href="${escapeHtml(term.sourceUrl)}" target="_blank" rel="noopener noreferrer">来源 ↗</a>` : ""}${term.sourceRef ? `<small>${escapeHtml(term.sourceRef)}</small>` : ""}</div>`).join("")}</div></details>` : ""}
+      ${terms.length ? `<details class="source-details"><summary>表达与来源</summary><div class="term-list">${terms.map((term) => `<div class="term-item"><span class="source-pill ${String(term.kind || "").toLowerCase()}">${escapeHtml(term.kind === "BRG" ? "SRC · BRG" : (term.kind || "候选"))}</span><strong>${escapeHtml(term.term)}</strong><span>${escapeHtml(term.sourceLabel || "")}</span>${term.sourceUrl ? `<a href="${escapeHtml(term.sourceUrl)}" target="_blank" rel="noopener noreferrer">来源 ↗</a>` : ""}${term.sourceRef ? `<small>${escapeHtml(term.sourceRef)}</small>` : ""}</div>`).join("")}</div></details>` : ""}
       <div class="self-check"><strong>这次说得怎么样？</strong><div class="rating-row">
         <button class="rating-btn ${rating === "good" ? "selected" : ""}" type="button" data-rating="good" ${rating || !attempt?.response ? "disabled" : ""}>${attempt?.support !== "none" ? "提示后能表达" : "能独立表达"}</button>
         <button class="rating-btn ${rating === "partial" ? "selected" : ""}" type="button" data-rating="partial" ${rating ? "disabled" : ""}>表达了部分</button>
         <button class="rating-btn ${rating === "again" ? "selected" : ""}" type="button" data-rating="again" ${rating ? "disabled" : ""}>还需要帮助</button>
-      </div><small id="ratingStatus">${rating ? ratingDateLabel(prompt) : "选择后保存"}</small></div>
+      </div><small id="ratingStatus" ${rating ? "" : "hidden"}>${rating ? ratingDateLabel(prompt) : ""}</small></div>
       <button class="primary-btn" type="button" id="nextPrompt" ${rating ? "" : "disabled"}>${ui.reviewMode ? "完成这次复习" : "下一步 →"}</button>
     </div>
   `;
