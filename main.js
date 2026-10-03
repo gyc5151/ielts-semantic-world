@@ -1,11 +1,11 @@
-import { DataStore } from "./data-store.mjs?v=pilot-22-0-r2";
-import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-22-0-r2";
-import { nextReview, reviewDue } from "./learning.mjs?v=pilot-22-0-r2";
-import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-22-0-r2";
-import { buildTaskRegistry, createTaskResolver, taskCuePolicy, rebuildPractice, calendarDay, dueUnitTracks, choosePracticeTarget, validTimeZone } from "./unit-review-scheduler.mjs?v=pilot-22-0-r2";
-import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-22-0-r2";
+import { DataStore } from "./data-store.mjs?v=pilot-23-0-r1";
+import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-23-0-r1";
+import { nextReview, reviewDue } from "./learning.mjs?v=pilot-23-0-r1";
+import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-23-0-r1";
+import { buildTaskRegistry, createTaskResolver, taskCuePolicy, rebuildPractice, calendarDay, dueUnitTracks, choosePracticeTarget, validTimeZone } from "./unit-review-scheduler.mjs?v=pilot-23-0-r1";
+import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-23-0-r1";
 const DATA_URL = "./data/runtime.json";
-const ASSET_VERSION = "pilot-22-0-r2";
+const ASSET_VERSION = "pilot-23-0-r1";
 function fetchData(path) {
   const url = new URL(path, window.location.href);
   url.searchParams.set("v", ASSET_VERSION);
@@ -607,7 +607,7 @@ function showEntryModal(scene, entry, trigger, relatedChunkId = null) {
     entry.sourceSupplementOccurrenceIds?.includes(term.sourceOccurrenceId));
   const relatedChunk = (scene.glossary || []).find((item) => item.id === relatedChunkId && item.type !== "word");
   const contextExample = dictionaryContextFor(dictionaryContext, scene.id, entry.text.toLowerCase(), entry.dictionaryUsage)?.example;
-  const showProjectExample = entry.example && (!wordnet || entry.example !== contextExample);
+  const showProjectExample = entry.example && (entry.type !== "word" || !wordnet || entry.example !== contextExample);
   glossaryDialog.innerHTML = `<div class="glossary-modal">
     <div class="glossary-modal-top"><span class="glossary-type">${entry.type === "word" ? "WORD / 单词" : "CHUNK / 表达块"}</span><button class="glossary-close" type="button" aria-label="关闭释义窗口">×</button></div>
     <h2 class="glossary-headword" id="glossaryHeadword">${escapeHtml(entry.text)}</h2>
@@ -618,7 +618,7 @@ function showEntryModal(scene, entry, trigger, relatedChunkId = null) {
     ${relatedChunk ? `<button class="glossary-related" type="button" data-related-chunk-open="${escapeHtml(relatedChunk.id)}" data-related-scene="${escapeHtml(scene.id)}">查看整块表达：${escapeHtml(relatedChunk.text)} ↗</button>` : ""}
     ${showProjectExample ? `<div class="glossary-example"><span>项目情境例句</span><p>${escapeHtml(entry.example)}</p>${textTranslation(entry.exampleZh, "例句中文")}</div>` : ""}
     ${entry.dictionaryLoadChecked && !entry.dictionaryError && wordnet ? dictionaryHtml(entry, scene.id, wordnet, dictionaryContext, dictionaryTranslations, dictionaryChinese, showDictionaryChinese && entry.dictionaryChineseLoaded) : `<p role="status" class="meta">${entry.dictionaryLoadChecked ? "词典暂不可用。本情境释义仍可阅读。" : "正在载入词典；本情境释义可先阅读。"}</p>${entry.dictionaryError ? '<button class="text-btn" type="button" data-dictionary-retry>重试词典</button>' : ''}` }
-    <details class="glossary-source"><summary>${entry.type !== "word" ? "组成词来源" : "来源"}</summary>${entry.unitSources ? unitSourceHtml({sourceRecords:entry.unitSources}) : sourceDetailHtml(source)}</details>
+    <details class="glossary-source"><summary>来源</summary>${entry.unitSources ? unitSourceHtml({sourceRecords:entry.unitSources}) : sourceDetailHtml(source)}</details>
   </div>`;
   if (glossaryDialog.open) glossaryDialog.querySelector(".glossary-close").focus();
   else glossaryDialog.showModal();

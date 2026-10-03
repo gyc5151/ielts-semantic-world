@@ -81,9 +81,14 @@ function senseHtml(sense, editorial, entry, record, translations, chinese = {}, 
 }
 
 export function dictionaryHtml(entry, sceneId, wordnet, contexts, translations, chinese = {}, showChinese = false) {
-  if (entry.type !== "word") return "";
   const surface = entry.text.toLowerCase();
   const context = dictionaryContextFor(contexts, sceneId, surface, entry.dictionaryUsage);
+  if (entry.type !== "word") {
+    const candidates = [...(context?.externalReferences || []), ...(entry.externalEvidence || []).map(item => ({url: item.url, label: item.publisher || "词典参考"}))];
+    const references = [...new Map(candidates.filter(item => /^https?:\/\//i.test(item.url || "")).map(item => [item.url, item])).values()];
+    if (!context?.noMatch && !references.length) return "";
+    return `<section class="dictionary-section" aria-label="表达参考资料">${context?.noMatch && context.note ? `<p class="dictionary-guidance">${html(context.note)}</p>` : ""}${references.length ? `<div class="dictionary-links">${references.map(item => `<a href="${html(item.url)}" target="_blank" rel="noopener noreferrer">${html(item.label)} ↗</a>`).join("")}</div>` : ""}</section>`;
+  }
   const record = dictionaryRecordFor(wordnet, surface, context?.headword);
   const senses = record.senses || [];
   const matching = context?.senseId ? senses.find((sense) => sense.id === context.senseId) : null;

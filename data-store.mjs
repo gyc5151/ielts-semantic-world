@@ -1,4 +1,4 @@
-import { ResourceLoader, resourceBucket } from './resource-loader.mjs?v=pilot-22-0-r1';
+import { ResourceLoader, resourceBucket } from './resource-loader.mjs?v=pilot-23-0-r1';
 
 // Catalogue IDs cover the whole published world. Loaded scene count never
 // becomes a vocabulary, course, or proficiency count.
@@ -38,6 +38,21 @@ export class DataStore {
       prompts.prompts.length !== this.manifest.counts.tasks || prompts.prompts.some(prompt => !ids.has(prompt.sceneId))) {
       throw new Error('全局内容目录不完整');
     }
+    if (navigation.projectionVersion === 2) {
+      const grouped = new Map([...ids].map(id => [id, []]));
+      const promptIds = new Set();
+      for (const prompt of prompts.prompts) {
+        if (promptIds.has(prompt.id)) throw new Error('全局练习目录存在重复');
+        promptIds.add(prompt.id); grouped.get(prompt.sceneId).push(prompt);
+      }
+      for (const scene of navigation.scenes) {
+        const rows = grouped.get(scene.id);
+        if (!rows.length || rows.at(-1).taskMode !== 'transfer' || rows.slice(0, -1).some(row => row.taskMode === 'transfer'))
+          throw new Error('场景练习目录不完整');
+        scene.retrievalPrompts = rows.slice(0, -1);
+        scene.transferPrompt = rows.at(-1);
+      }
+    } else if (navigation.projectionVersion != null) throw new Error('此导航版本暂不支持');
     this.navigation = navigation;
     this.prompts = prompts;
     this.uiWords = uiWords;
@@ -146,7 +161,7 @@ export class DataStore {
   searchInWorker(docs, query, kind) {
     let initial = false;
     if (!this.searchWorker) {
-      this.searchWorker = new Worker(new URL('./search-worker.mjs?v=pilot-22-0-r1', import.meta.url), { type: 'module' });
+      this.searchWorker = new Worker(new URL('./search-worker.mjs?v=pilot-23-0-r1', import.meta.url), { type: 'module' });
       initial = true;
       this.searchWorker.addEventListener('message', event => {
         const pending = this.searchJobs.get(event.data.id);

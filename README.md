@@ -4,9 +4,9 @@ Situation → Language: learn English through decisions, objects and events.
 
 **[Open the learning website](https://gyc5151.github.io/ielts-semantic-world/)**
 
-## Current version: pilot-22-0
+## Current version: pilot-23-0
 
-13 routes, 54 short bilingual scenes, 226 retrieval/transfer tasks:
+13 routes, 56 short bilingual scenes, 234 retrieval/transfer tasks:
 
 | Route | Contents | UI setting |
 |---|---|---|
@@ -18,13 +18,13 @@ Situation → Language: learn English through decisions, objects and events.
 | Square and entrance | Two town-square side scenes | Site plan and observation |
 | Workshop leaflet | Two university side scenes | Leaflet and margin notes |
 | Photograph and consent | Two community side scenes | Poster and planning book |
-| Before the deadline | 8 work/study scenes from arrangements to campus learning and a job enquiry | Campus calendar |
+| Before the deadline | 10 work/study scenes from arrangements to campus learning and a job enquiry | Campus calendar |
 | A room after the journey | 5 travel scenes from departure to checking in, transport and a guided walk | Station board and ticket |
 | The question behind the receipt | Four shopping scenes about choosing, paying, delivery and a service enquiry | Receipt and parcel |
 | A recipe on the kitchen table | Four food scenes about a menu, preparation, equipment and the table | Recipe paper and kitchen counter |
 | The notes at the clinic | 7 health-language scenes about checking in, describing symptoms, asking about services and checking records | Arrival card and records tray |
 
-Every route uses clickable English words and expression blocks, optional Chinese support, contextual usage, multiple WordNet senses and original examples, independent recall and spaced review. S01 main lessons and branch scenes have expandable object cues. 54 lessons have 416 editorial word-sense/chunk/construction units with self-checked observations, sentence listening and session-only recording. Each of these lessons has at most five Core targets; Support and Recognition expressions remain available for understanding. Expression records have search, route and practice-state filters. Written and spoken recall and transfer have separate unit-level dates; assisted practice does not advance independent success. Backup restore merges original facts and rebuilds review dates. Using cues before answering is recorded as assisted practice.
+Every route uses clickable English words and expression blocks, optional Chinese support, contextual usage, multiple WordNet senses and original examples, independent recall and spaced review. S01 main lessons and branch scenes have expandable object cues. 56 lessons have 423 editorial word-sense/chunk/construction units with self-checked observations, sentence listening and session-only recording. Each of these lessons has at most five Core targets; Support and Recognition expressions remain available for understanding. Expression records have search, route and practice-state filters. Written and spoken recall and transfer have separate unit-level dates; assisted practice does not advance independent success. Backup restore merges original facts and rebuilds review dates. Using cues before answering is recorded as assisted practice.
 
 Direct links:
 
@@ -61,4 +61,4 @@ Only static runtime website files and attribution are included. GitHub Pages pub
 
 Navigation opens from a fixed release directory. Course text, word meanings and unit details load for the selected course. Dictionary English senses and Chinese support load independently for the selected word. Search covers the complete published route directory; expression records use complete metadata and 50-item pages. Original learning IDs and the existing practice storage key are preserved. Resource errors can be retried without clearing practice records.
 
-The compiled startup directory is 232,787 raw JSON bytes for this release; opening a course and resolving existing records adds its required resources. This is a file inventory, not a measured loading-time or learner-effect result.
+The compiled startup directory is 182,976 raw JSON bytes for this release; opening a course and resolving existing records adds its required resources. This is a file inventory, not a measured loading-time or learner-effect result.
