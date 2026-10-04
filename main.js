@@ -1,11 +1,11 @@
-import { DataStore } from "./data-store.mjs?v=pilot-31-0";
-import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-31-0-r3";
-import { nextReview, reviewDue } from "./learning.mjs?v=pilot-31-0";
-import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-31-0";
-import { buildTaskRegistry, createTaskResolver, taskCuePolicy, rebuildPractice, calendarDay, dueUnitTracks, choosePracticeTarget, validTimeZone } from "./unit-review-scheduler.mjs?v=pilot-31-0";
-import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-31-0";
+import { DataStore } from "./data-store.mjs?v=pilot-32-0";
+import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-32-0";
+import { nextReview, reviewDue } from "./learning.mjs?v=pilot-32-0";
+import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-32-0";
+import { buildTaskRegistry, createTaskResolver, taskCuePolicy, rebuildPractice, calendarDay, dueUnitTracks, choosePracticeTarget, validTimeZone } from "./unit-review-scheduler.mjs?v=pilot-32-0";
+import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-32-0";
 const DATA_URL = "./data/runtime.json";
-const ASSET_VERSION = "pilot-31-0";
+const ASSET_VERSION = "pilot-32-0";
 function fetchData(path) {
   const url = new URL(path, window.location.href);
   url.searchParams.set("v", ASSET_VERSION);
@@ -144,7 +144,7 @@ function assertWordCoverage(scene) {
   }
   const missing = new Set();
   for (const passage of passages) {
-    for (const match of String(passage || "").matchAll(/[A-Za-z]+(?:['’][A-Za-z]+)?/g)) {
+    for (const match of String(passage || "").matchAll(/[A-Za-zÀ-ÖØ-öø-ÿ]+(?:['’][A-Za-zÀ-ÖØ-öø-ÿ]+)?/g)) {
       const word = match[0].toLowerCase().replaceAll("’", "'");
       if (!scene.wordLookup[word]?.zh) missing.add(word);
     }
@@ -507,9 +507,9 @@ function chunkMatches(value, scene) {
         const start = lower.indexOf(needle, from);
         if (start < 0) break;
         const fullEnd = start + needle.length;
-        if (!/[A-Za-z]/.test(source[start - 1] || "") && !/[A-Za-z]/.test(source[fullEnd] || "")) {
+        if (!/[A-Za-zÀ-ÖØ-öø-ÿ]/.test(source[start - 1] || "") && !/[A-Za-zÀ-ÖØ-öø-ÿ]/.test(source[fullEnd] || "")) {
           // Put the expression button after the final word, before punctuation.
-          const finalWord = [...text.matchAll(/[A-Za-z]+(?:['’][A-Za-z]+)?/g)].at(-1);
+          const finalWord = [...text.matchAll(/[A-Za-zÀ-ÖØ-öø-ÿ]+(?:['’][A-Za-zÀ-ÖØ-öø-ÿ]+)?/g)].at(-1);
           if (finalWord) candidates.push({ start, end: start + finalWord.index + finalWord[0].length, entry });
         }
         from = fullEnd;
@@ -526,7 +526,7 @@ function chunkMatches(value, scene) {
 function annotatedEnglish(value, scene, contextExample = null) {
   const source = String(value || "");
   const chunks = chunkMatches(source, scene);
-  const words = /[A-Za-z]+(?:['’][A-Za-z]+)?/g;
+  const words = /[A-Za-zÀ-ÖØ-öø-ÿ]+(?:['’][A-Za-zÀ-ÖØ-öø-ÿ]+)?/g;
   let html = "";
   let previousEnd = 0;
   for (const match of source.matchAll(words)) {
@@ -579,7 +579,7 @@ function markTranslationSupport() {
 }
 
 function chunkWordButtons(scene, entry) {
-  return [...entry.text.matchAll(/[A-Za-z]+(?:['’][A-Za-z]+)?/g)].map((match) => {
+  return [...entry.text.matchAll(/[A-Za-zÀ-ÖØ-öø-ÿ]+(?:['’][A-Za-zÀ-ÖØ-öø-ÿ]+)?/g)].map((match) => {
     const word = match[0].toLowerCase().replaceAll("’", "'");
     const usage = usageForOccurrence(dictionaryContext, scene.id, word, entry.text, match.index);
     return `<button class="glossary-component-word" type="button" data-dialog-word="${escapeHtml(word)}" data-dialog-scene="${escapeHtml(scene.id)}" data-dialog-chunk="${escapeHtml(entry.id)}" data-dialog-sentence="${escapeHtml(entry.text)}" ${usage ? `data-word-usage="${escapeHtml(usage)}"` : ""} aria-label="查看组成单词 ${escapeHtml(match[0])}">${escapeHtml(match[0])}</button>`;
