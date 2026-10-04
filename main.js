@@ -567,8 +567,6 @@ function readingHtml(scene) {
 function markTranslationSupport() {
   if (ui.page === "prompt" && !ui.revealed) {
     if (ui.support === "none") ui.support = "translation";
-    const status = app.querySelector("#lookupStatus");
-    if (status) { status.hidden = false; status.textContent = "已查看提示"; }
   }
 }
 
@@ -589,7 +587,7 @@ function sourceDetailHtml(source) {
   return `<p>${escapeHtml(source.sourceLabel || source.kind || "来源")}</p>
     ${source.sourceRef ? `<small>${escapeHtml(source.sourceRef)}</small>` : ""}
     ${original ? `<h3>原资料</h3><p>${escapeHtml(original.printedSurface || "")}${original.printedPOS ? ` · ${escapeHtml(original.printedPOS)}` : ""}</p>${original.printedChinese ? `<p>${escapeHtml(original.printedChinese)}</p>` : ""}${original.sourceSpan && original.sourceSpan !== original.printedSurface ? `<p>${escapeHtml(original.sourceSpan)}</p>` : ""}` : ""}
-    ${evidence.length ? `<details><summary>审校词典</summary>${evidence.map((item) => `<p><a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.publisher || "词典")} ↗</a></p><p>${escapeHtml(item.shortParaphrase)}</p>`).join("")}</details>` : ""}
+    ${evidence.length ? `<details><summary>词典来源</summary>${evidence.map((item) => `<p><a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.publisher || "词典")} ↗</a></p><p>${escapeHtml(item.shortParaphrase)}</p>`).join("")}</details>` : ""}
     ${source.sourceUrl ? `<a href="${escapeHtml(source.sourceUrl)}" target="_blank" rel="noopener noreferrer">词典 ↗</a>` : ""}`;
 }
 
@@ -1038,8 +1036,6 @@ app.addEventListener("toggle", (event) => {
   if (event.target.matches?.("[data-memory-hint]") && event.target.open) markMemorySupport();
   if (event.target.matches?.("[data-english-cue]") && event.target.open && ui.page === "prompt" && !ui.revealed) {
     if (ui.support === "none") ui.support = "english-input";
-    const status = app.querySelector("#lookupStatus");
-    if (status) { status.hidden = false; status.textContent = "已查看提示"; }
   }
 }, true);
 glossaryDialog.addEventListener("click", (event) => {
@@ -1166,8 +1162,8 @@ function promptCue(scene, prompt) {
 }
 
 function unitSourceHtml(unit) {
-  if (!unit.sourceRecords.length) return "<p>项目依据本课沟通行为整理的构式。</p>";
-  return unit.sourceRecords.map((r) => `${sourceDetailHtml(r)}${r.auditNote ? `<p class="meta">${escapeHtml(r.auditNote)}</p>` : ""}`).join("");
+  if (!unit.sourceRecords.length) return "<p>项目编写</p>";
+  return unit.sourceRecords.map(sourceDetailHtml).join("");
 }
 function unitUsageNote(unit, scene) {
   const curated = (scene.glossary || []).find(entry => entry.text?.toLowerCase() === unit.form.toLowerCase());
