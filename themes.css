@@ -257,3 +257,15 @@ html[data-theme="kitchen"] .memory-station { border-top: 3px solid #8ba66f; }
 html[data-theme="health"] .story-card { border-top: 4px solid #8fb9af; border-radius: 8px 8px 18px 18px; }
 html[data-theme="health"] .object-route li { background: #fffefa; border-left: 3px solid #8fb9af; }
 html[data-theme="health"] .memory-station { border-left: 4px solid #8fb9af; }
+
+/* Information: two printed pages, an annotation and a quiet desk. */
+[data-theme="media"] {
+  --canvas: #f0f2f5; --paper: #fffefb; --paper-warm: #e7edf2;
+  --ink: #293b4f; --muted: #5e6e80; --line: #d2dbe5;
+  --teal: #536b86; --teal-deep: #344d67; --teal-pale: #e8edf4;
+  --side-bg: #2d4057; --side-mark: #758699;
+  --hero-start: #fff9e9; --hero-end: #e6edf4; --theme-accent: #536b86;
+}
+.branch-card[data-theme="media"] .branch-art { background: #e7edf2; color: #536b86; }
+html[data-theme="media"] .story-card { border-top: 4px solid #c4ad73; border-radius: 4px 4px 12px 12px; }
+html[data-theme="media"] .memory-station { border-left: 3px solid #c4ad73; }

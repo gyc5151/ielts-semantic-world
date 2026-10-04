@@ -1,11 +1,11 @@
-import { DataStore } from "./data-store.mjs?v=pilot-24-0";
-import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-24-0";
-import { nextReview, reviewDue } from "./learning.mjs?v=pilot-24-0";
-import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-24-0";
-import { buildTaskRegistry, createTaskResolver, taskCuePolicy, rebuildPractice, calendarDay, dueUnitTracks, choosePracticeTarget, validTimeZone } from "./unit-review-scheduler.mjs?v=pilot-24-0";
-import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-24-0";
+import { DataStore } from "./data-store.mjs?v=pilot-25-0";
+import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-25-0-r1";
+import { nextReview, reviewDue } from "./learning.mjs?v=pilot-25-0";
+import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-25-0";
+import { buildTaskRegistry, createTaskResolver, taskCuePolicy, rebuildPractice, calendarDay, dueUnitTracks, choosePracticeTarget, validTimeZone } from "./unit-review-scheduler.mjs?v=pilot-25-0";
+import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-25-0";
 const DATA_URL = "./data/runtime.json";
-const ASSET_VERSION = "pilot-24-0";
+const ASSET_VERSION = "pilot-25-0";
 function fetchData(path) {
   const url = new URL(path, window.location.href);
   url.searchParams.set("v", ASSET_VERSION);
@@ -144,8 +144,8 @@ function assertWordCoverage(scene) {
   }
   const missing = new Set();
   for (const passage of passages) {
-    for (const match of String(passage || "").matchAll(/[A-Za-z]+(?:'[A-Za-z]+)?/g)) {
-      const word = match[0].toLowerCase();
+    for (const match of String(passage || "").matchAll(/[A-Za-z]+(?:['’][A-Za-z]+)?/g)) {
+      const word = match[0].toLowerCase().replaceAll("’", "'");
       if (!scene.wordLookup[word]?.zh) missing.add(word);
     }
   }
@@ -360,6 +360,7 @@ function themeIllustration(theme) {
     home: '<path d="M35 103V50l57-34 57 34v53M58 103V65h33v38M106 64h22v22h-22M158 104h41l-5-23h-31zM179 81V48m0 14c-30-1-25-26-25-26 22 0 25 26 25 26m0 5c30-1 25-26 25-26-22 0-25 26-25 26"/>',
     community: '<rect x="25" y="18" width="116" height="90" rx="4"/><path d="M42 37h62M42 50h82M42 72h38m-38 13h48m3-17 20 12-20 12"/><circle cx="181" cy="56" r="29"/><path d="M181 38v20l16 9M162 100h39"/>',
     science: '<path d="M47 17h36m-28 0v34l-29 47q-4 10 7 10h64q11 0 7-10L75 51V17M41 81h47M145 33h49m-41 0v55q16 38 33 0V33M153 69h33M124 108h91"/><path d="m119 19 14 11 18-15"/>',
+    media: '<rect x="27" y="20" width="73" height="90" rx="3"/><rect x="113" y="20" width="73" height="90" rx="3"/><path d="M40 40h45m-45 15h45m-45 15h30m51-30h45m-45 15h45m-45 15h30M42 89l10-10 13 12 20-24M130 89h43M190 79h20v24h-20m20-18h5a7 7 0 0 1 0 14h-5"/>',
     industry: '<path d="M22 107V59l35-21v21l35-21v21h36v48zM104 59V21h16v38M33 78h17v13H33zM65 78h17v13H65zM98 78h17v29M147 107h62M150 67h46v40h-46zM150 67l23-12 23 12M173 67v40M150 83h46M21 113h108"/>',
     urban: '<path d="M25 22h180v82H25zM25 48h180M25 78h180M66 22v82M147 22v82"/><path d="M85 58h43v11H85M104 84v19M52 29v10m113 22v12"/><circle cx="177" cy="35" r="7"/>',
     travel: '<rect x="27" y="19" width="99" height="79" rx="12"/><path d="M40 38h73v28H40zM45 98l-9 14m73-14 9 14M49 111h54M62 19v-7h30v7"/><circle cx="46" cy="81" r="4"/><circle cx="107" cy="81" r="4"/><rect x="154" y="54" width="50" height="53" rx="5"/><path d="M169 54V42h20v12M168 66v29m22-29v29M153 26h50m-9-7 9 7-9 7"/>',
@@ -413,7 +414,7 @@ function renderHome() {
 
 async function filterRoutes() {
   const generation = ++routeSearchGeneration;
-  const groups = { home: 'life', community: 'public', urban: 'public', science: 'study', industry: 'study', campus: 'study', nature: 'nature', travel: 'life', commerce: 'life', kitchen: 'life', health: 'life' };
+  const groups = { home: 'life', community: 'public', urban: 'public', science: 'study', industry: 'study', media: 'study', campus: 'study', nature: 'nature', travel: 'life', commerce: 'life', kitchen: 'life', health: 'life' };
   const query = worldQuery.trim().toLocaleLowerCase();
   const category = worldCategory;
   const count = app.querySelector('#routeResultCount');
@@ -508,7 +509,7 @@ function chunkMatches(value, scene) {
         const fullEnd = start + needle.length;
         if (!/[A-Za-z]/.test(source[start - 1] || "") && !/[A-Za-z]/.test(source[fullEnd] || "")) {
           // Put the expression button after the final word, before punctuation.
-          const finalWord = [...text.matchAll(/[A-Za-z]+(?:'[A-Za-z]+)?/g)].at(-1);
+          const finalWord = [...text.matchAll(/[A-Za-z]+(?:['’][A-Za-z]+)?/g)].at(-1);
           if (finalWord) candidates.push({ start, end: start + finalWord.index + finalWord[0].length, entry });
         }
         from = fullEnd;
@@ -525,7 +526,7 @@ function chunkMatches(value, scene) {
 function annotatedEnglish(value, scene, contextExample = null) {
   const source = String(value || "");
   const chunks = chunkMatches(source, scene);
-  const words = /[A-Za-z]+(?:'[A-Za-z]+)?/g;
+  const words = /[A-Za-z]+(?:['’][A-Za-z]+)?/g;
   let html = "";
   let previousEnd = 0;
   for (const match of source.matchAll(words)) {
@@ -536,8 +537,8 @@ function annotatedEnglish(value, scene, contextExample = null) {
     const contextualOccurrence = contextExample ? [...String(contextExample).matchAll(words)].find((item) => item[0].toLowerCase() === match[0].toLowerCase()) : null;
     const contextOffset = contextualOccurrence ? contextualOccurrence.index : start;
     const sentence = sentenceAt(contextualOccurrence ? String(contextExample) : source, contextOffset);
-    const usage = usageForOccurrence(dictionaryContext, scene.id, match[0].toLowerCase(), sentence.text, contextOffset - sentence.start);
-    html += `<button class="glossary-word${chunk ? " glossary-word--chunk" : ""}" type="button" data-word="${escapeHtml(match[0].toLowerCase())}" data-word-scene="${escapeHtml(scene.id)}" data-word-sentence="${escapeHtml(sentence.text)}" ${usage ? `data-word-usage="${escapeHtml(usage)}"` : ""} ${chunk ? `data-related-chunk="${escapeHtml(chunk.entry.id)}"` : ""} aria-label="查看单词 ${escapeHtml(match[0])} 的意思">${escapeHtml(match[0])}</button>`;
+    const usage = usageForOccurrence(dictionaryContext, scene.id, match[0].toLowerCase().replaceAll("’", "'"), sentence.text, contextOffset - sentence.start);
+    html += `<button class="glossary-word${chunk ? " glossary-word--chunk" : ""}" type="button" data-word="${escapeHtml(match[0].toLowerCase().replaceAll("’", "'"))}" data-word-scene="${escapeHtml(scene.id)}" data-word-sentence="${escapeHtml(sentence.text)}" ${usage ? `data-word-usage="${escapeHtml(usage)}"` : ""} ${chunk ? `data-related-chunk="${escapeHtml(chunk.entry.id)}"` : ""} aria-label="查看单词 ${escapeHtml(match[0])} 的意思">${escapeHtml(match[0])}</button>`;
     if (chunk && end === chunk.end) {
       html += `<button class="glossary-chunk-marker" type="button" data-glossary-id="${escapeHtml(chunk.entry.id)}" data-glossary-scene="${escapeHtml(scene.id)}" aria-label="查看整个表达 ${escapeHtml(chunk.entry.text)} 的搭配" title="查看整个表达 ${escapeHtml(chunk.entry.text)}">↗</button>`;
     }
@@ -572,8 +573,8 @@ function markTranslationSupport() {
 }
 
 function chunkWordButtons(scene, entry) {
-  return [...entry.text.matchAll(/[A-Za-z]+(?:'[A-Za-z]+)?/g)].map((match) => {
-    const word = match[0].toLowerCase();
+  return [...entry.text.matchAll(/[A-Za-z]+(?:['’][A-Za-z]+)?/g)].map((match) => {
+    const word = match[0].toLowerCase().replaceAll("’", "'");
     const usage = usageForOccurrence(dictionaryContext, scene.id, word, entry.text, match.index);
     return `<button class="glossary-component-word" type="button" data-dialog-word="${escapeHtml(word)}" data-dialog-scene="${escapeHtml(scene.id)}" data-dialog-chunk="${escapeHtml(entry.id)}" data-dialog-sentence="${escapeHtml(entry.text)}" ${usage ? `data-word-usage="${escapeHtml(usage)}"` : ""} aria-label="查看组成单词 ${escapeHtml(match[0])}">${escapeHtml(match[0])}</button>`;
   }).join("");
@@ -609,9 +610,9 @@ function showEntryModal(scene, entry, trigger, relatedChunkId = null) {
     String(term.term).toLowerCase() === String(entry.sourceTerm || "").toLowerCase() ||
     entry.sourceSupplementOccurrenceIds?.includes(term.sourceOccurrenceId));
   const sourceRecords = entry.unitSources || unitsForScene(scene).find(unit =>
-    unit.glossaryIds?.includes(entry.id) || unit.form.toLowerCase() === entry.text.toLowerCase())?.sourceRecords;
+    unit.id === entry.sourceUnitId || unit.glossaryIds?.includes(entry.id) || unit.form.toLowerCase() === entry.text.toLowerCase())?.sourceRecords;
   const relatedChunk = (scene.glossary || []).find((item) => item.id === relatedChunkId && (item.type !== "word" || item.matchAsWhole));
-  const contextExample = dictionaryContextFor(dictionaryContext, scene.id, entry.text.toLowerCase(), entry.dictionaryUsage)?.example;
+  const contextExample = dictionaryContextFor(dictionaryContext, scene.id, entry.text.toLowerCase().replaceAll("’", "'"), entry.dictionaryUsage)?.example;
   const showProjectExample = entry.example && (entry.type !== "word" || !wordnet || entry.example !== contextExample);
   glossaryDialog.innerHTML = `<div class="glossary-modal">
     <div class="glossary-modal-top"><span class="glossary-type">${entry.type === "word" ? "WORD / 单词" : "CHUNK / 表达块"}</span><button class="glossary-close" type="button" aria-label="关闭释义窗口">×</button></div>
@@ -659,6 +660,7 @@ async function openWord(sceneId, word, trigger, relatedChunkId, contextSentence,
   const context = dictionaryContextFor(dictionaryContext, sceneId, word, dictionaryUsage);
   if (context?.zh) entry.zh = context.zh;
   if (context?.usageNote) entry.note = context.usageNote;
+  if (context?.sourceUnitId) entry.sourceUnitId = context.sourceUnitId;
   if (!entry.sourceTerm) entry.sourceTerm = (scene.terms || []).find((term) => term.term.toLowerCase() === word)?.term;
   entry.contextSentence = contextSentence;
   entry.dictionaryUsage = dictionaryUsage;
@@ -1145,8 +1147,8 @@ try {
 } catch (error) { contentError(error, () => location.reload()); }
 
 async function ensureDictionary(scene, entry, chinese = showDictionaryChinese) {
-  const context = dictionaryContextFor(dictionaryContext, scene.id, entry.text.toLowerCase(), entry.dictionaryUsage);
-  return dataStore.dictionary(entry.text.toLowerCase(), context?.headword || null, { chinese });
+  const context = dictionaryContextFor(dictionaryContext, scene.id, entry.text.toLowerCase().replaceAll("’", "'"), entry.dictionaryUsage);
+  return dataStore.dictionary(entry.text.toLowerCase().replaceAll("’", "'"), context?.dictionaryLemma || context?.headword || null, { chinese });
 }
 
 function unitsForScene(scene) {

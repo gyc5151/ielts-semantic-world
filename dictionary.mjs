@@ -81,7 +81,7 @@ function senseHtml(sense, editorial, entry, record, translations, chinese = {}, 
 }
 
 export function dictionaryHtml(entry, sceneId, wordnet, contexts, translations, chinese = {}, showChinese = false) {
-  const surface = entry.text.toLowerCase();
+  const surface = entry.text.toLowerCase().replaceAll("’", "'");
   const context = dictionaryContextFor(contexts, sceneId, surface, entry.dictionaryUsage);
   if (entry.type !== "word") {
     const candidates = [...(context?.externalReferences || []), ...(entry.externalEvidence || []).map(item => ({url: item.url, label: item.publisher || "词典参考"}))];
@@ -89,7 +89,7 @@ export function dictionaryHtml(entry, sceneId, wordnet, contexts, translations, 
     if (!context?.noMatch && !references.length) return "";
     return `<section class="dictionary-section" aria-label="表达参考资料">${context?.noMatch && context.note ? `<p class="dictionary-guidance">${html(context.note)}</p>` : ""}${references.length ? `<div class="dictionary-links">${references.map(item => `<a href="${html(item.url)}" target="_blank" rel="noopener noreferrer">${html(item.label)} ↗</a>`).join("")}</div>` : ""}</section>`;
   }
-  const record = dictionaryRecordFor(wordnet, surface, context?.headword);
+  const record = dictionaryRecordFor(wordnet, surface, context?.dictionaryLemma || context?.headword);
   const senses = record.senses || [];
   const matching = context?.senseId ? senses.find((sense) => sense.id === context.senseId) : null;
   const contrasts = (context?.contrasts || []).map((editorial) => ({ editorial, sense: senses.find((sense) => sense.id === editorial.senseId) })).filter((item) => item.sense);
@@ -116,7 +116,7 @@ export function dictionaryHtml(entry, sceneId, wordnet, contexts, translations, 
     <div role="tabpanel" id="dictionary-panel-current" aria-labelledby="dictionary-tab-current">${currentHtml}${referenceHtml}</div>
     <div role="tabpanel" id="dictionary-panel-contrasts" aria-labelledby="dictionary-tab-contrasts" hidden>${contrastHtml}</div>
     <div role="tabpanel" id="dictionary-panel-full" aria-labelledby="dictionary-tab-full" hidden>${fullHtml}</div>
-    <div class="dictionary-links"><a href="https://dictionary.cambridge.org/dictionary/english/${html(encodeURIComponent(surface))}" target="_blank" rel="noopener noreferrer">剑桥学习者词典 ↗</a><a href="https://wordnet.princeton.edu/" target="_blank" rel="noopener noreferrer">WordNet 来源 ↗</a></div>
+    <div class="dictionary-links"><a href="https://dictionary.cambridge.org/dictionary/english/${html(encodeURIComponent(context?.headword || record.lemma || surface))}" target="_blank" rel="noopener noreferrer">剑桥学习者词典 ↗</a><a href="https://wordnet.princeton.edu/" target="_blank" rel="noopener noreferrer">WordNet 来源 ↗</a></div>
     <small class="dictionary-credit">WordNet 3.0 © 2006 Princeton University；<a href="./data/WORDNET_LICENSE.txt" target="_blank" rel="noopener noreferrer">版权声明与免责声明</a>。中文译解和情境例句由本项目编写。</small>
   </section>`;
 }

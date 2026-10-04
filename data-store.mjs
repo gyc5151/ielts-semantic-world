@@ -1,4 +1,4 @@
-import { ResourceLoader, resourceBucket } from './resource-loader.mjs?v=pilot-24-0';
+import { ResourceLoader, resourceBucket } from './resource-loader.mjs?v=pilot-25-0';
 
 // Catalogue IDs cover the whole published world. Loaded scene count never
 // becomes a vocabulary, course, or proficiency count.
@@ -161,7 +161,7 @@ export class DataStore {
   searchInWorker(docs, query, kind) {
     let initial = false;
     if (!this.searchWorker) {
-      this.searchWorker = new Worker(new URL('./search-worker.mjs?v=pilot-24-0', import.meta.url), { type: 'module' });
+      this.searchWorker = new Worker(new URL('./search-worker.mjs?v=pilot-25-0', import.meta.url), { type: 'module' });
       initial = true;
       this.searchWorker.addEventListener('message', event => {
         const pending = this.searchJobs.get(event.data.id);
