@@ -98,13 +98,13 @@ export function dictionaryHtml(entry, sceneId, wordnet, contexts, translations, 
     : `<p class="dictionary-guidance">${context?.noMatch ? html(context.note || "本地词典未收录本句义项。") : "本句词典义项尚未校订。"}</p>${context?.example ? `<div class="dictionary-project-example"><span>本项目情境例句</span><p lang="en">${html(context.example)}</p>${translationHtml(context.exampleZh, "project", showChinese)}</div>` : ""}`;
   const references = (context?.externalReferences || []).filter((reference) => /^https?:\/\//i.test(reference.url || ""));
   const referenceHtml = references.length
-    ? `<div class="dictionary-links">${references.map((reference) => `<a href="${html(reference.url)}" target="_blank" rel="noopener noreferrer">${html(reference.label)} ↗</a>`).join("")}</div><small>外部参考仅提供链接；本项目选义与例句另行标记。</small>`
+    ? `<div class="dictionary-links">${references.map((reference) => `<a href="${html(reference.url)}" target="_blank" rel="noopener noreferrer">${html(reference.label)} ↗</a>`).join("")}</div>`
     : "";
   const contrastHtml = contrasts.length
     ? `<div class="dictionary-senses">${contrasts.map(({ sense, editorial }) => senseHtml(sense, editorial, entry, record, translations, chinese, showChinese)).join("")}</div>`
     : `<p class="dictionary-guidance">多义对比待补充。</p>`;
   const fullHtml = senses.length
-    ? `<p class="dictionary-guidance">WordNet 全部义项。原例句可能使用同义词；排序不代表本句用法。</p><div class="dictionary-full-list">${senses.map((sense) => `<details class="dictionary-full-sense"><summary><span>${html(POS_LABELS[sense.pos] || sense.pos)}</span> ${html(sense.definition)}${chinese[sense.id]?.definition ? `<span class="dictionary-definition-zh" lang="zh-CN">${html(chinese[sense.id].definition)}</span>` : ""}</summary>${senseHtml(sense, null, entry, record, translations, chinese, showChinese, true)}</details>`).join("")}</div>`
+    ? `<div class="dictionary-full-list">${senses.map((sense) => `<details class="dictionary-full-sense"><summary><span>${html(POS_LABELS[sense.pos] || sense.pos)}</span> ${html(sense.definition)}${chinese[sense.id]?.definition ? `<span class="dictionary-definition-zh" lang="zh-CN">${html(chinese[sense.id].definition)}</span>` : ""}</summary>${senseHtml(sense, null, entry, record, translations, chinese, showChinese, true)}</details>`).join("")}</div>`
     : `<p class="dictionary-empty">${wordnet ? "WordNet 没有收录这个词形的可用义项。" : "词典资料暂未载入。"}仍可通过下方链接查词。</p>`;
   return `<section class="dictionary-section${showChinese ? " dictionary-chinese-visible" : ""}" aria-label="外部词典义项">
     <div class="dictionary-heading"><span>英语词典资料</span><strong>Princeton WordNet 3.0</strong></div>

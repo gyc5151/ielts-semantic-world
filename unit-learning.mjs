@@ -1,5 +1,5 @@
 // Unit evidence is self-checked; legacy task ratings never imply unit mastery.
-import { rebuildPractice, validTimeZone } from "./unit-review-scheduler.mjs?v=pilot-27-0";
+import { rebuildPractice, validTimeZone } from "./unit-review-scheduler.mjs?v=pilot-28-0";
 export const EVIDENCE_LABELS = { unobserved: "未记录", partial: "还不熟悉", assisted: "看提示后会用", independent: "自己用出来了" };
 const evidenceIndexes = new WeakMap();
 function indexesFor(practice) {
