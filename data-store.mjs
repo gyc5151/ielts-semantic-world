@@ -1,4 +1,25 @@
-import { ResourceLoader, resourceBucket } from './resource-loader.mjs?v=pilot-28-0';
+import { ResourceLoader, resourceBucket } from './resource-loader.mjs?v=pilot-30-0';
+
+// Expand only trusted resource data. Old releases keep their original task arrays.
+function expandPromptIndex(payload, release) {
+  if (payload.projectionVersion == null) return payload;
+  if (payload.projectionVersion !== 2 || payload.contentVersion !== release ||
+      !Array.isArray(payload.prompts) || !Array.isArray(payload.taskRows) ||
+      payload.prompts.length !== payload.taskRows.length) throw new Error('练习目录不完整');
+  const seen = new Set();
+  const tasks = payload.taskRows.map(row => {
+    if (!Number.isInteger(row.promptIndex) || seen.has(row.promptIndex)) throw new Error('练习目录不完整');
+    const prompt = payload.prompts[row.promptIndex];
+    if (!prompt || !Array.isArray(prompt.unitIds) || !prompt.unitVersion || !prompt.taskMode ||
+        Object.keys(row).some(key => !['promptIndex', 'englishTargetInput', 'responseModes', 'canOpenWithoutStory'].includes(key)))
+      throw new Error('练习目录不完整');
+    seen.add(row.promptIndex);
+    const { promptIndex, ...flags } = row;
+    return { sceneId: prompt.sceneId, promptId: prompt.id, contentVersion: release,
+      unitVersion: prompt.unitVersion, unitIds: prompt.unitIds, taskMode: prompt.taskMode, ...flags };
+  });
+  return { prompts: payload.prompts, tasks };
+}
 
 // Catalogue IDs cover the whole published world. Loaded scene count never
 // becomes a vocabulary, course, or proficiency count.
@@ -29,10 +50,11 @@ export class DataStore {
   async initialize() {
     this.manifest = await this.loader.read(this.pointer.manifest);
     if (this.manifest.runtimeApiVersion !== 1) throw new Error('运行时与内容目录不匹配');
-    const [navigation, prompts, uiWords] = await Promise.all([
+    const [navigation, promptPayload, uiWords] = await Promise.all([
       this.loader.read(this.manifest.navigation), this.loader.read(this.manifest.prompts),
       this.loader.read(this.manifest.uiWords),
     ]);
+    const prompts = expandPromptIndex(promptPayload, this.release);
     const ids = new Set(navigation.scenes.map(scene => scene.id));
     if (ids.size !== this.manifest.counts.scenes || navigation.branches.length !== this.manifest.counts.branches ||
       prompts.prompts.length !== this.manifest.counts.tasks || prompts.prompts.some(prompt => !ids.has(prompt.sceneId))) {
@@ -161,7 +183,7 @@ export class DataStore {
   searchInWorker(docs, query, kind) {
     let initial = false;
     if (!this.searchWorker) {
-      this.searchWorker = new Worker(new URL('./search-worker.mjs?v=pilot-28-0', import.meta.url), { type: 'module' });
+      this.searchWorker = new Worker(new URL('./search-worker.mjs?v=pilot-30-0', import.meta.url), { type: 'module' });
       initial = true;
       this.searchWorker.addEventListener('message', event => {
         const pending = this.searchJobs.get(event.data.id);

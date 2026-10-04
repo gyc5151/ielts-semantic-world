@@ -1958,3 +1958,14 @@ ul.review-list {
 .unit-tools p { grid-column: 1 / -1; margin: 0; font-size: .85rem; color: var(--muted); }
 .unit-progress-list article[hidden] { display: none; }
 @media (max-width: 640px) { .unit-tools { grid-template-columns: 1fr; } }
+/* Authored documents share the word/phrase controls and optional translation. */
+.reading-block { margin: 1.5rem 0 2rem; }
+.reading-block h2 { font-size: 1.2rem; line-height: 1.5; margin-bottom: 1rem; }
+.reading-block--notice, .reading-block--advert, .reading-block--bill {
+  padding: 1.25rem; border: 1px solid var(--border, #d9dfd8); border-radius: .5rem;
+  background: var(--surface, #fafbf8);
+}
+.reading-block--message, .reading-block--letter {
+  padding-left: 1.25rem; border-left: 3px solid var(--accent, #78998b);
+}
+.reading-block--dialogue .reading-block-text p { margin-bottom: .8rem; }

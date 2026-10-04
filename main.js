@@ -1,11 +1,11 @@
-import { DataStore } from "./data-store.mjs?v=pilot-28-0";
-import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-28-0-r1";
-import { nextReview, reviewDue } from "./learning.mjs?v=pilot-28-0";
-import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-28-0";
-import { buildTaskRegistry, createTaskResolver, taskCuePolicy, rebuildPractice, calendarDay, dueUnitTracks, choosePracticeTarget, validTimeZone } from "./unit-review-scheduler.mjs?v=pilot-28-0";
-import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-28-0";
+import { DataStore } from "./data-store.mjs?v=pilot-30-0";
+import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-30-0-r1";
+import { nextReview, reviewDue } from "./learning.mjs?v=pilot-30-0";
+import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-30-0";
+import { buildTaskRegistry, createTaskResolver, taskCuePolicy, rebuildPractice, calendarDay, dueUnitTracks, choosePracticeTarget, validTimeZone } from "./unit-review-scheduler.mjs?v=pilot-30-0";
+import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-30-0";
 const DATA_URL = "./data/runtime.json";
-const ASSET_VERSION = "pilot-28-0";
+const ASSET_VERSION = "pilot-30-0";
 function fetchData(path) {
   const url = new URL(path, window.location.href);
   url.searchParams.set("v", ASSET_VERSION);
@@ -556,6 +556,14 @@ function textTranslation(zh, label = "查看中文译解") {
 }
 
 function readingHtml(scene) {
+  if (scene.readingBlocks?.length) {
+    return scene.readingBlocks.map(block => {
+      const lines = String(block.en).split('\n').filter(Boolean);
+      const headingKey = text => String(text || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+      if (block.title && headingKey(lines[0]) === headingKey(block.title)) lines.shift();
+      return `<section class="reading-block reading-block--${escapeHtml(block.kind)}">${block.title ? `<h2 lang="en">${annotatedEnglish(block.title, scene)}</h2>` : ''}<div class="reading-block-text">${lines.map(line => `<p lang="en">${annotatedEnglish(line, scene)}</p>`).join('')}</div>${textTranslation(block.zh, '中文')}</section>`;
+    }).join('');
+  }
   const translation = textTranslations[scene.id];
   const pairs = translation?.paragraphs;
   if (pairs?.length && pairs.map((pair) => pair.en).join(" ") === scene.situation) {
@@ -661,6 +669,10 @@ async function openWord(sceneId, word, trigger, relatedChunkId, contextSentence,
   if (context?.zh) entry.zh = context.zh;
   if (context?.usageNote) entry.note = context.usageNote;
   if (context?.sourceUnitId) entry.sourceUnitId = context.sourceUnitId;
+  if (context?.example) {
+    entry.example = context.example;
+    entry.exampleZh = context.exampleZh || "";
+  }
   if (!entry.sourceTerm) entry.sourceTerm = (scene.terms || []).find((term) => term.term.toLowerCase() === word)?.term;
   entry.contextSentence = contextSentence;
   entry.dictionaryUsage = dictionaryUsage;
@@ -1155,6 +1167,7 @@ function unitsForScene(scene) {
     exampleZh: u.sceneExampleZhs?.[scene.id] || u.exampleZh,
     sense: u.sceneSenses?.[scene.id] || u.sense,
     meaningZh: u.sceneMeaningZhs?.[scene.id] || u.meaningZh,
+    memoryNodeIds: u.sceneMemoryNodeIds?.[scene.id] || u.memoryNodeIds,
   }));
 }
 function promptCue(scene, prompt) {
