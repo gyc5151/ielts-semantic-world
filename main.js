@@ -693,21 +693,12 @@ function showModalLoadError(error, trigger, retry) {
 }
 
 function markLookupSupport() {
-  if (ui.page === "prompt" && !ui.revealed && ui.support === "none") {
-    ui.support = "word";
-    const status = app.querySelector("#lookupStatus");
-    if (status) status.hidden = false;
-  }
+  if (ui.page === "prompt" && !ui.revealed && ui.support === "none") ui.support = "word";
 }
 
 function markMemorySupport() {
   if (ui.page !== "prompt" || ui.revealed) return;
   if (ui.support === "none") ui.support = "memory";
-  const status = app.querySelector("#lookupStatus");
-  if (status) {
-    status.hidden = false;
-    status.textContent = "已查看提示";
-  }
 }
 
 function renderScene() {
@@ -789,10 +780,9 @@ function renderPrompt() {
         <label class="answer-label" for="answerInput">Your answer</label>
         <textarea id="answerInput" class="answer-input" rows="5" placeholder="${activity.placeholder}" autocomplete="off" spellcheck="true"></textarea>
         ${prompt.unitIds?.length ? `<div id="oralPractice"></div>` : ""}
-        <div class="button-row"><button class="primary-btn" type="button" id="submitAnswer">提交并查看参考表达</button><button class="secondary-btn" type="button" id="cannotRecall">暂时想不出</button></div>
+        <div class="button-row"><button class="primary-btn" type="button" id="submitAnswer">提交回答</button><button class="secondary-btn" type="button" id="cannotRecall">暂时想不出</button></div>
         ${scene.memoryNodes?.length ? `<details class="memory-hint" data-memory-hint><summary>故事里的物件</summary>${memoryRouteHtml(scene)}</details>` : ""}
-        <div class="hint-actions"><button class="text-btn" type="button" id="showChinese">${ui.support === "chinese" ? "已打开提示" : "提示"}</button>${isTransfer ? "" : `<button class="text-btn" type="button" id="showStory">原文</button>`}</div>
-        <small class="lookup-status" id="lookupStatus" ${["word", "translation", "memory", "english-input", "audio", "reference"].includes(ui.support) ? "" : "hidden"}>已查看提示</small>
+        <div class="hint-actions"><button class="text-btn" type="button" id="showChinese">提示</button>${isTransfer ? "" : `<button class="text-btn" type="button" id="showStory">原文</button>`}</div>
       ` : renderFeedback(scene, prompt, saved)}
       <div class="prompt-footer"><button class="text-btn" type="button" id="backScene">${isTransfer ? "← 返回目录" : "← 返回故事"}</button></div>
     </section>
@@ -836,7 +826,7 @@ function renderFeedback(scene, prompt, attempt) {
       
       <h2>参考表达</h2>
       
-      <div class="your-answer"><span class="meta">${attempt?.responseMode === "spoken" ? "你的口头回答" : "你的原答"}${attempt?.support !== "none" ? " · 使用了提示" : " · 未使用提示"}</span><p>${attempt?.response ? escapeHtml(attempt.response) : "（这次暂时想不出）"}</p>${sessionRecordings.has(attempt?.id) ? `<audio class="feedback-recording" controls src="${escapeHtml(sessionRecordings.get(attempt.id))}" aria-label="回听提交前的口头回答"></audio>` : ""}</div>
+      <div class="your-answer"><span class="meta">${attempt?.responseMode === "spoken" ? "你的口头回答" : "你的原答"}</span><p>${attempt?.response ? escapeHtml(attempt.response) : "（这次暂时想不出）"}</p>${sessionRecordings.has(attempt?.id) ? `<audio class="feedback-recording" controls src="${escapeHtml(sessionRecordings.get(attempt.id))}" aria-label="回听提交前的口头回答"></audio>` : ""}</div>
       <div class="sample-answers">${answers.map((answer, index) => `<div><p lang="en">“${annotatedEnglish(answer, scene)}”</p>${textTranslation(translated?.acceptableAnswers?.[index], "参考表达中文")}</div>`).join("")}</div>
       ${unitAssessmentHtml(scene, prompt, attempt)}
       ${prompt.unitIds?.length ? `<section class="revision-panel"><label for="revisionInput">修改回答</label><textarea id="revisionInput" rows="3" class="answer-input" placeholder="Your answer…"></textarea><button type="button" class="secondary-btn" id="saveRevision">保存修订</button><p role="status" id="revisionStatus"></p>${attempt?.revisions?.length ? `<details><summary>已保存 ${attempt.revisions.length} 次修订</summary>${attempt.revisions.map((r) => `<p>${escapeHtml(r.response)}</p>`).join("")}</details>` : ""}</section>` : ""}
@@ -1200,7 +1190,7 @@ function unitAssessmentHtml(scene, prompt, attempt) {
   const sceneUnits = new Map(unitsForScene(scene).map((unit) => [unit.id, unit]));
   const units = (prompt.unitIds || []).map((id) => sceneUnits.get(id)).filter(Boolean);
   if (!units.length) return "";
-  return `<section class="unit-assessment"><h3>用到了哪些表达？</h3>${units.map((u) => `<label><span>${annotatedEnglish(u.form, scene, u.type === "word" ? u.example : null)} · ${escapeHtml(u.meaningZh)}</span><select data-unit-assessment="${escapeHtml(u.id)}" ${attempt?.selfRating ? "disabled" : ""}>${Object.entries(EVIDENCE_LABELS).map(([status, label]) => `<option value="${status}" ${attempt?.unitAssessments?.[u.id] === status ? "selected" : ""} ${status === "independent" && (!attempt?.response || attempt?.support !== "none") ? "disabled" : ""}>${label}</option>`).join("")}</select></label>`).join("")}</section>`;
+  return `<section class="unit-assessment"><h3>表达</h3>${units.map((u) => `<label><span>${annotatedEnglish(u.form, scene, u.type === "word" ? u.example : null)} · ${escapeHtml(u.meaningZh)}</span><select data-unit-assessment="${escapeHtml(u.id)}" ${attempt?.selfRating ? "disabled" : ""}>${Object.entries(EVIDENCE_LABELS).map(([status, label]) => `<option value="${status}" ${attempt?.unitAssessments?.[u.id] === status ? "selected" : ""} ${status === "independent" && (!attempt?.response || attempt?.support !== "none") ? "disabled" : ""}>${label}</option>`).join("")}</select></label>`).join("")}</section>`;
 }
 function bindFeedback(scene, prompt, attempt) {
   app.querySelector("#saveRevision")?.addEventListener("click", () => {
@@ -1227,7 +1217,7 @@ function renderUnits() {
     const tracks = Object.entries(practice.unitReviews[u.id]?.tracks || {});
     const due = unitNextDate(u.id);
     const buttons = tracks.length ? tracks.map(([key, track]) => `<div><span>${escapeHtml(trackLabel(key))} · ${dateLabel(track.nextDueDate)}</span><button class="text-btn" type="button" data-unit-practice="${escapeHtml(u.id)}" data-unit-track="${escapeHtml(key)}">练习 ↗</button></div>`).join("") : `<button class="text-btn" type="button" data-unit-practice="${escapeHtml(u.id)}" data-unit-track="recall.written">练习 ↗</button>`;
-    return `<article data-unit-card="${escapeHtml(u.id)}"><h2>${annotatedEnglish(u.form, dataStore.sceneDirectory.get(u.sceneIds[0]), u.type === "word" ? u.example : null)}${u.type !== "word" ? `<button class="glossary-chunk-marker" type="button" data-unit-expression="${escapeHtml(u.id)}" aria-label="查看整个表达 ${escapeHtml(u.form)} 的搭配">↗</button>` : ""}</h2><p>${escapeHtml(u.meaningZh)}</p>${v.latest || v.listening || tracks.length ? `<dl><div><dt>写出来</dt><dd>${recalled.filter((o) => o.modality === "written").length || "—"}</dd></div><div><dt>说出来</dt><dd>${recalled.filter((o) => o.modality === "spoken").length || "—"}</dd></div><div><dt>换个情境</dt><dd>${transferred.length || "—"}</dd></div><div><dt>听懂了</dt><dd>${v.listening ? escapeHtml({ independent: "自评：原先听懂", assisted: "自评：对照后理解", partial: "自评：还需练习" }[v.listening.status]) : "—"}</dd></div></dl>` : ""}<small>${v.latest ? v.latest.contextVerified ? `${escapeHtml(EVIDENCE_LABELS[v.latest.status])} · ${dateLabel(v.latest.at)}` : "旧记录：尚未核对任务" : v.listening ? "" : "暂无记录"}</small>${due ? `<p>${due <= today ? "待复习" : "下次"} · ${dateLabel(due)}</p>` : ""}<details><summary>练习</summary>${buttons}<p role="status" data-unit-entry-status></p></details><button class="text-btn" type="button" data-unit-scene="${escapeHtml(u.sceneIds[0])}">回到学习场景 ↗</button></article>`;
+    return `<article data-unit-card="${escapeHtml(u.id)}"><h2>${annotatedEnglish(u.form, dataStore.sceneDirectory.get(u.sceneIds[0]), u.type === "word" ? u.example : null)}${u.type !== "word" ? `<button class="glossary-chunk-marker" type="button" data-unit-expression="${escapeHtml(u.id)}" aria-label="查看整个表达 ${escapeHtml(u.form)} 的搭配">↗</button>` : ""}</h2><p>${escapeHtml(u.meaningZh)}</p>${v.latest || v.listening || tracks.length ? `<dl><div><dt>写出来</dt><dd>${recalled.filter((o) => o.modality === "written").length || "—"}</dd></div><div><dt>说出来</dt><dd>${recalled.filter((o) => o.modality === "spoken").length || "—"}</dd></div><div><dt>换个情境</dt><dd>${transferred.length || "—"}</dd></div><div><dt>听懂了</dt><dd>${v.listening ? escapeHtml({ independent: "自评：原先听懂", assisted: "自评：对照后理解", partial: "自评：还需练习" }[v.listening.status]) : "—"}</dd></div></dl>` : ""}${v.latest ? `<small>${v.latest.contextVerified ? `${escapeHtml(EVIDENCE_LABELS[v.latest.status])} · ${dateLabel(v.latest.at)}` : "旧记录：尚未核对任务"}</small>` : ""}${due ? `<p>${due <= today ? "待复习" : "下次"} · ${dateLabel(due)}</p>` : ""}<details><summary>练习</summary>${buttons}<p role="status" data-unit-entry-status></p></details><button class="text-btn" type="button" data-unit-scene="${escapeHtml(u.sceneIds[0])}">回到学习场景 ↗</button></article>`;
   }).join("")}</div><div class="button-row" aria-label="表达列表翻页"><button class="secondary-btn" id="unitPrevious" type="button" ${unitPage === 0 ? 'disabled' : ''}>上一页</button><span>${unitPage + 1} / ${pages}</span><button class="secondary-btn" id="unitNext" type="button" ${unitPage + 1 === pages ? 'disabled' : ''}>下一页</button></div></section>`;
   app.querySelector('#unitResultCount').textContent = `${summaries.length} 个表达`;
   app.querySelector('#unitPrevious').addEventListener('click', () => { unitPage -= 1; renderUnits(); app.focus({preventScroll:true}); });
