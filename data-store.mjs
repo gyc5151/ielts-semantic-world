@@ -1,4 +1,4 @@
-import { ResourceLoader, resourceBucket } from './resource-loader.mjs?v=pilot-30-0';
+import { ResourceLoader, resourceBucket } from './resource-loader.mjs?v=pilot-31-0';
 
 // Expand only trusted resource data. Old releases keep their original task arrays.
 function expandPromptIndex(payload, release) {
@@ -183,7 +183,7 @@ export class DataStore {
   searchInWorker(docs, query, kind) {
     let initial = false;
     if (!this.searchWorker) {
-      this.searchWorker = new Worker(new URL('./search-worker.mjs?v=pilot-30-0', import.meta.url), { type: 'module' });
+      this.searchWorker = new Worker(new URL('./search-worker.mjs?v=pilot-31-0', import.meta.url), { type: 'module' });
       initial = true;
       this.searchWorker.addEventListener('message', event => {
         const pending = this.searchJobs.get(event.data.id);

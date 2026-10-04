@@ -1,11 +1,11 @@
-import { DataStore } from "./data-store.mjs?v=pilot-30-0";
-import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-30-0-r1";
-import { nextReview, reviewDue } from "./learning.mjs?v=pilot-30-0";
-import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-30-0";
-import { buildTaskRegistry, createTaskResolver, taskCuePolicy, rebuildPractice, calendarDay, dueUnitTracks, choosePracticeTarget, validTimeZone } from "./unit-review-scheduler.mjs?v=pilot-30-0";
-import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-30-0";
+import { DataStore } from "./data-store.mjs?v=pilot-31-0";
+import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-31-0-r3";
+import { nextReview, reviewDue } from "./learning.mjs?v=pilot-31-0";
+import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-31-0";
+import { buildTaskRegistry, createTaskResolver, taskCuePolicy, rebuildPractice, calendarDay, dueUnitTracks, choosePracticeTarget, validTimeZone } from "./unit-review-scheduler.mjs?v=pilot-31-0";
+import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-31-0";
 const DATA_URL = "./data/runtime.json";
-const ASSET_VERSION = "pilot-30-0";
+const ASSET_VERSION = "pilot-31-0";
 function fetchData(path) {
   const url = new URL(path, window.location.href);
   url.searchParams.set("v", ASSET_VERSION);
@@ -615,8 +615,11 @@ function showEntryModal(scene, entry, trigger, relatedChunkId = null) {
   const source = (scene.terms || []).find((term) =>
     String(term.term).toLowerCase() === String(entry.sourceTerm || "").toLowerCase() ||
     entry.sourceSupplementOccurrenceIds?.includes(term.sourceOccurrenceId));
-  const sourceRecords = entry.unitSources || unitsForScene(scene).find(unit =>
-    unit.id === entry.sourceUnitId || unit.glossaryIds?.includes(entry.id) || unit.form.toLowerCase() === entry.text.toLowerCase())?.sourceRecords;
+  const sceneUnits = unitsForScene(scene);
+  const sourceUnit = (entry.sourceUnitId && sceneUnits.find(unit => unit.id === entry.sourceUnitId))
+    || sceneUnits.find(unit => unit.glossaryIds?.includes(entry.id))
+    || sceneUnits.find(unit => unit.form.toLowerCase() === entry.text.toLowerCase());
+  const sourceRecords = entry.unitSources || sourceUnit?.sourceRecords;
   const relatedChunk = (scene.glossary || []).find((item) => item.id === relatedChunkId && (item.type !== "word" || item.matchAsWhole));
   const modalDictionaryContext = dictionaryContextFor(dictionaryContext, scene.id, entry.text.toLowerCase().replaceAll("’", "'"), entry.dictionaryUsage);
   const contextExample = modalDictionaryContext?.example;
@@ -691,7 +694,8 @@ async function openUnitExpression(unitId, trigger) {
     markLookupSupport();
     showEntryModal(scene, { text: unit.form, type: unit.type, zh: unit.meaningZh,
       note: unitUsageNote(unit, scene), example: unit.example, exampleZh: unit.exampleZh,
-      unitSources: unit.sourceRecords }, trigger);
+      unitSources: unit.sourceRecords, sourceUnitId: unit.id,
+      dictionaryUsage: unit.dictionaryUsage }, trigger);
   } catch (error) {
     if (generation === modalGeneration && route === routeGeneration)
       showModalLoadError(error, trigger, () => openUnitExpression(unitId, trigger));
