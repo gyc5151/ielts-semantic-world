@@ -979,7 +979,7 @@ ul.review-list {
 .glossary-modal-top {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 16px;
   margin-bottom: 13px;
 }

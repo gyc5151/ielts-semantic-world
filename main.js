@@ -393,7 +393,7 @@ function renderHome() {
         <div class="branch-card-body"><h3>${escapeHtml(branch.title)}</h3><p class="branch-subtitle" lang="en">${annotatedEnglish(branch.subtitle, scenes[0])}</p>
         <div class="branch-mini-route">${branch.route.slice(0, 3).map(escapeHtml).join(' → ')} → …</div>
         
-        <button class="secondary-btn" type="button" data-open-branch="${escapeHtml(branch.id)}">${branch.kind === '主线' ? '住房与通勤' : `走进${escapeHtml(branch.title)}`} <span aria-hidden="true">↗</span></button></div>
+        <button class="secondary-btn" type="button" data-open-branch="${escapeHtml(branch.id)}">阅读 <span aria-hidden="true">↗</span></button></div>
       </article>`;
     }).join('')}</div>
     <div class="empty-state" id="routeEmpty" hidden>没有找到匹配的场景。</div>
@@ -472,7 +472,7 @@ function renderBranch() {
     <h1>${escapeHtml(branch.title)}</h1><p class="branch-subtitle" lang="en">${annotatedEnglish(branch.subtitle, scenes[0])}</p>
     <div class="hero-actions"><button class="primary-btn" type="button" id="startBranch">${done ? '继续阅读' : '开始阅读'}</button><button class="secondary-btn" type="button" id="backWorld">全部故事</button></div></div>
     <div class="branch-hero-art">${themeIllustration(branch.theme)}</div></section>
-    <section class="memory-map" aria-label="支线物件路线"><h2>${escapeHtml(branch.entry)}</h2>${branchObjectMapHtml(branch, scenes, next)}</section>
+    <section class="memory-map" aria-label="故事里的物件">${branchObjectMapHtml(branch, scenes, next)}</section>
     <section class="section-heading"><h2>故事</h2></section>
     <div class="split-grid">${scenes.map((scene, index) => `<article class="scene-card"><span class="badge">${String(index + 1).padStart(2, '0')}</span><h3>${annotatedEnglish(scene.title, scene)}</h3><button class="secondary-btn" type="button" data-open-scene="${escapeHtml(scene.id)}">进入${escapeHtml(scene.navTitle)} ↗</button></article>`).join('')}</div>
     ${branch.entrySceneId ? `<section class="branch-return-panel"><button class="secondary-btn" id="returnMain" type="button">${escapeHtml(branch.returnLabel)} ↶</button></section>` : ``}`;
@@ -617,7 +617,7 @@ function showEntryModal(scene, entry, trigger, relatedChunkId = null) {
   const wholeEntryHasSense = entry.type !== "word" && modalDictionaryContext?.senseId && !modalDictionaryContext.noMatch;
   const showProjectExample = entry.example && ((entry.type !== "word" && !wholeEntryHasSense) || !wordnet || entry.example !== contextExample);
   glossaryDialog.innerHTML = `<div class="glossary-modal">
-    <div class="glossary-modal-top"><span class="glossary-type">${entry.type === "word" ? "WORD / 单词" : "CHUNK / 表达块"}</span><button class="glossary-close" type="button" aria-label="关闭释义窗口">×</button></div>
+    <div class="glossary-modal-top"><button class="glossary-close" type="button" aria-label="关闭释义窗口">×</button></div>
     <h2 class="glossary-headword" id="glossaryHeadword">${escapeHtml(entry.text)}</h2>
     ${entry.contextSentence ? `<details class="glossary-context"><summary>情境句</summary><p lang="en">${escapeHtml(entry.contextSentence)}</p></details>` : ""}
     <div class="glossary-zh"><span>本句意思</span><strong>${escapeHtml(entry.zh || "释义待补")}</strong></div>
