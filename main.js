@@ -1,11 +1,11 @@
-import { DataStore } from "./data-store.mjs?v=pilot-26-0";
-import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-26-0-r1";
-import { nextReview, reviewDue } from "./learning.mjs?v=pilot-26-0";
-import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-26-0";
-import { buildTaskRegistry, createTaskResolver, taskCuePolicy, rebuildPractice, calendarDay, dueUnitTracks, choosePracticeTarget, validTimeZone } from "./unit-review-scheduler.mjs?v=pilot-26-0";
-import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-26-0";
+import { DataStore } from "./data-store.mjs?v=pilot-27-0";
+import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-27-0-r1";
+import { nextReview, reviewDue } from "./learning.mjs?v=pilot-27-0";
+import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-27-0";
+import { buildTaskRegistry, createTaskResolver, taskCuePolicy, rebuildPractice, calendarDay, dueUnitTracks, choosePracticeTarget, validTimeZone } from "./unit-review-scheduler.mjs?v=pilot-27-0";
+import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-27-0";
 const DATA_URL = "./data/runtime.json";
-const ASSET_VERSION = "pilot-26-0";
+const ASSET_VERSION = "pilot-27-0";
 function fetchData(path) {
   const url = new URL(path, window.location.href);
   url.searchParams.set("v", ASSET_VERSION);
@@ -612,8 +612,10 @@ function showEntryModal(scene, entry, trigger, relatedChunkId = null) {
   const sourceRecords = entry.unitSources || unitsForScene(scene).find(unit =>
     unit.id === entry.sourceUnitId || unit.glossaryIds?.includes(entry.id) || unit.form.toLowerCase() === entry.text.toLowerCase())?.sourceRecords;
   const relatedChunk = (scene.glossary || []).find((item) => item.id === relatedChunkId && (item.type !== "word" || item.matchAsWhole));
-  const contextExample = dictionaryContextFor(dictionaryContext, scene.id, entry.text.toLowerCase().replaceAll("’", "'"), entry.dictionaryUsage)?.example;
-  const showProjectExample = entry.example && (entry.type !== "word" || !wordnet || entry.example !== contextExample);
+  const modalDictionaryContext = dictionaryContextFor(dictionaryContext, scene.id, entry.text.toLowerCase().replaceAll("’", "'"), entry.dictionaryUsage);
+  const contextExample = modalDictionaryContext?.example;
+  const wholeEntryHasSense = entry.type !== "word" && modalDictionaryContext?.senseId && !modalDictionaryContext.noMatch;
+  const showProjectExample = entry.example && ((entry.type !== "word" && !wholeEntryHasSense) || !wordnet || entry.example !== contextExample);
   glossaryDialog.innerHTML = `<div class="glossary-modal">
     <div class="glossary-modal-top"><span class="glossary-type">${entry.type === "word" ? "WORD / 单词" : "CHUNK / 表达块"}</span><button class="glossary-close" type="button" aria-label="关闭释义窗口">×</button></div>
     <h2 class="glossary-headword" id="glossaryHeadword">${escapeHtml(entry.text)}</h2>

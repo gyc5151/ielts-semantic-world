@@ -83,7 +83,7 @@ function senseHtml(sense, editorial, entry, record, translations, chinese = {}, 
 export function dictionaryHtml(entry, sceneId, wordnet, contexts, translations, chinese = {}, showChinese = false) {
   const surface = entry.text.toLowerCase().replaceAll("’", "'");
   const context = dictionaryContextFor(contexts, sceneId, surface, entry.dictionaryUsage);
-  if (entry.type !== "word") {
+  if (entry.type !== "word" && (!context?.senseId || context.noMatch)) {
     const candidates = [...(context?.externalReferences || []), ...(entry.externalEvidence || []).map(item => ({url: item.url, label: item.publisher || "词典参考"}))];
     const references = [...new Map(candidates.filter(item => /^https?:\/\//i.test(item.url || "")).map(item => [item.url, item])).values()];
     if (!context?.noMatch && !references.length) return "";
