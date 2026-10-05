@@ -1112,15 +1112,16 @@ function loadModalChinese() {
   const toggle = glossaryDialog.querySelector('[data-dictionary-chinese]');
   if (!current || !toggle || toggle.disabled) return;
   const token = glossaryDialog.dictionaryToken;
-  const tab = glossaryDialog.querySelector('[data-dictionary-tab][aria-selected="true"]')?.dataset.dictionaryTab || 'current';
   toggle.disabled = true; toggle.textContent = '正在载入中文…';
   ensureDictionary(current.scene, current.entry, true).then(result => {
     if (!glossaryDialog.open || glossaryDialog.dictionaryToken !== token) return;
+    const tab = glossaryDialog.querySelector('[data-dictionary-tab][aria-selected="true"]')?.dataset.dictionaryTab || 'current';
+    const focusedTab = document.activeElement?.closest('[data-dictionary-tab]')?.dataset.dictionaryTab;
     wordnet = result.wordnet; dictionaryTranslations = result.translations; dictionaryChinese = result.chinese;
     showDictionaryChinese = true;
     showEntryModal(current.scene, { ...current.entry, dictionaryChineseLoaded: true }, null, current.relatedChunkId);
     activateDictionaryTab(tab); markTranslationSupport();
-    glossaryDialog.querySelector('[data-dictionary-chinese]')?.focus();
+    glossaryDialog.querySelector(focusedTab ? `[data-dictionary-tab="${focusedTab}"]` : '[data-dictionary-chinese]')?.focus();
   }, () => {
     if (!glossaryDialog.open || glossaryDialog.dictionaryToken !== token) return;
     showDictionaryChinese = false;
