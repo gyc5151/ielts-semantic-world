@@ -4,9 +4,9 @@ Situation → Language: learn English through decisions, objects and events.
 
 **[Open the learning website](https://gyc5151.github.io/ielts-semantic-world/)**
 
-## Current version: pilot-37-0
+## Current version: pilot-38-0
 
-31 routes, 170 short bilingual scenes, 691 retrieval/transfer tasks:
+32 routes, 186 short bilingual scenes, 755 retrieval/transfer tasks:
 
 | Route | Contents | UI setting |
 |---|---|---|
@@ -20,6 +20,7 @@ Situation → Language: learn English through decisions, objects and events.
 | 社区中心的一份工作 / A Job at the Centre | 8 scenes | campus |
 | 照片与告示之间 / Council & Neighbours | 2 scenes | community |
 | 诊所里的几张便签 / The notes at the clinic | 7 scenes | health |
+| 楼上的社区编辑室 / The Room Above the Library | 16 scenes | media |
 | 河街的周末 / Market Weekend | 7 scenes | civic |
 | 篱笆那边的农场 / Farm Visit | 4 scenes | nature |
 | 温室外的小径 / The Path Beyond the Greenhouse | 16 scenes | nature |
@@ -42,7 +43,7 @@ Situation → Language: learn English through decisions, objects and events.
 | 改动的约定 / Before the deadline | 10 scenes | campus |
 | 传单背后的工作坊 / What a short workshop can offer | 2 scenes | campus |
 
-Every route uses clickable English words and expression blocks, optional Chinese support, contextual usage, multiple WordNet senses and original examples, independent recall and spaced review. S01 main lessons and branch scenes have expandable object cues. 170 lessons have 1161 editorial word-sense/chunk/construction units with self-checked observations, sentence listening and session-only recording. Each of these lessons has at most five Core targets; Support and Recognition expressions remain available for understanding. Expression records have search, route and practice-state filters. Written and spoken recall and transfer have separate unit-level dates; assisted practice does not advance independent success. Backup restore merges original facts and rebuilds review dates. Using cues before answering is recorded as assisted practice.
+Every route uses clickable English words and expression blocks, optional Chinese support, contextual usage, multiple WordNet senses and original examples, independent recall and spaced review. S01 main lessons and branch scenes have expandable object cues. 186 lessons have 1264 editorial word-sense/chunk/construction units with self-checked observations, sentence listening and session-only recording. Each of these lessons has at most five Core targets; Support and Recognition expressions remain available for understanding. Expression records have search, route and practice-state filters. Written and spoken recall and transfer have separate unit-level dates; assisted practice does not advance independent success. Backup restore merges original facts and rebuilds review dates. Using cues before answering is recorded as assisted practice.
 
 Direct links:
 
@@ -79,4 +80,4 @@ Only static runtime website files and attribution are included. GitHub Pages pub
 
 Navigation opens from a fixed release directory. Course text, word meanings and unit details load for the selected course. Dictionary English senses and Chinese support load independently for the selected word. Search covers the complete published route directory; expression records use complete metadata and 50-item pages. Original learning IDs and the existing practice storage key are preserved. Resource errors can be retried without clearing practice records.
 
-The compiled startup directory is 151,735 raw JSON bytes for this release; opening a course and resolving existing records adds its required resources. This is a file inventory, not a measured loading-time or learner-effect result.
+The compiled startup directory is 164,307 raw JSON bytes for this release; opening a course and resolving existing records adds its required resources. This is a file inventory, not a measured loading-time or learner-effect result.

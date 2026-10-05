@@ -95,7 +95,7 @@ export function dictionaryHtml(entry, sceneId, wordnet, contexts, translations, 
   const contrasts = (context?.contrasts || []).map((editorial) => ({ editorial, sense: senses.find((sense) => sense.id === editorial.senseId) })).filter((item) => item.sense);
   const currentHtml = matching
     ? senseHtml(matching, { ...context, zh: entry.zh }, entry, record, translations, chinese, showChinese)
-    : `<p class="dictionary-guidance">${context?.noMatch ? html(context.note || "本地词典未收录本句义项。") : "本句词典义项尚未校订。"}</p>${context?.example ? `<div class="dictionary-project-example"><span>本项目情境例句</span><p lang="en">${html(context.example)}</p>${translationHtml(context.exampleZh, "project", showChinese)}</div>` : ""}`;
+    : `<p class="dictionary-guidance">${context?.noMatch ? html(context.note || "本句释义由项目编写。") : "本句词典义项尚未校订。"}</p>${context?.example ? `<div class="dictionary-project-example"><span>本项目情境例句</span><p lang="en">${html(context.example)}</p>${translationHtml(context.exampleZh, "project", showChinese)}</div>` : ""}`;
   const references = (context?.externalReferences || []).filter((reference) => /^https?:\/\//i.test(reference.url || ""));
   const referenceHtml = references.length
     ? `<div class="dictionary-links">${references.map((reference) => `<a href="${html(reference.url)}" target="_blank" rel="noopener noreferrer">${html(reference.label)} ↗</a>`).join("")}</div>`
