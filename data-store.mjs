@@ -1,4 +1,4 @@
-import { ResourceLoader, resourceBucket } from './resource-loader.mjs?v=pilot-32-0';
+import { ResourceLoader, resourceBucket } from './resource-loader.mjs?v=pilot-33-0';
 
 // Expand only trusted resource data. Old releases keep their original task arrays.
 function expandPromptIndex(payload, release) {
@@ -54,13 +54,33 @@ export class DataStore {
       this.loader.read(this.manifest.navigation), this.loader.read(this.manifest.prompts),
       this.loader.read(this.manifest.uiWords),
     ]);
-    const prompts = expandPromptIndex(promptPayload, this.release);
+    let completePrompts = promptPayload;
+    if (promptPayload.projectionVersion === 3) {
+      if (promptPayload.contentVersion !== this.release || !Array.isArray(promptPayload.parts) ||
+          !promptPayload.parts.length || promptPayload.count !== this.manifest.counts.tasks)
+        throw new Error('练习目录不完整');
+      const parts = await Promise.all(promptPayload.parts.map(ref => this.loader.read(ref)));
+      if (parts.some(part => !Array.isArray(part))) throw new Error('练习目录不完整');
+      const rows = parts.flat();
+      if (rows.length !== promptPayload.count || rows.some(row => !row.prompt || !row.taskRow))
+        throw new Error('练习目录不完整');
+      completePrompts = { projectionVersion: 2, contentVersion: this.release,
+        prompts: rows.map(row => row.prompt), taskRows: rows.map(row => row.taskRow) };
+    }
+    const prompts = expandPromptIndex(completePrompts, this.release);
+    if (navigation.projectionVersion === 3) {
+      if (!Array.isArray(navigation.sceneParts) || !navigation.sceneParts.length || navigation.scenes != null)
+        throw new Error('场景目录不完整');
+      const parts = await Promise.all(navigation.sceneParts.map(ref => this.loader.read(ref)));
+      if (parts.some(part => !Array.isArray(part))) throw new Error('场景目录不完整');
+      navigation.scenes = parts.flat();
+    }
     const ids = new Set(navigation.scenes.map(scene => scene.id));
     if (ids.size !== this.manifest.counts.scenes || navigation.branches.length !== this.manifest.counts.branches ||
       prompts.prompts.length !== this.manifest.counts.tasks || prompts.prompts.some(prompt => !ids.has(prompt.sceneId))) {
       throw new Error('全局内容目录不完整');
     }
-    if (navigation.projectionVersion === 2) {
+    if ([2, 3].includes(navigation.projectionVersion)) {
       const grouped = new Map([...ids].map(id => [id, []]));
       const promptIds = new Set();
       for (const prompt of prompts.prompts) {
@@ -183,7 +203,7 @@ export class DataStore {
   searchInWorker(docs, query, kind) {
     let initial = false;
     if (!this.searchWorker) {
-      this.searchWorker = new Worker(new URL('./search-worker.mjs?v=pilot-32-0', import.meta.url), { type: 'module' });
+      this.searchWorker = new Worker(new URL('./search-worker.mjs?v=pilot-33-0', import.meta.url), { type: 'module' });
       initial = true;
       this.searchWorker.addEventListener('message', event => {
         const pending = this.searchJobs.get(event.data.id);
