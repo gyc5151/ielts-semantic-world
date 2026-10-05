@@ -1,4 +1,4 @@
-import { ResourceLoader, resourceBucket } from './resource-loader.mjs?v=pilot-35-0';
+import { ResourceLoader, resourceBucket } from './resource-loader.mjs?v=pilot-36-0';
 
 // Expand only trusted resource data. Old releases keep their original task arrays.
 function expandPromptIndex(payload, release) {
@@ -54,20 +54,6 @@ export class DataStore {
       this.loader.read(this.manifest.navigation), this.loader.read(this.manifest.prompts),
       this.loader.read(this.manifest.uiWords),
     ]);
-    let completePrompts = promptPayload;
-    if (promptPayload.projectionVersion === 3) {
-      if (promptPayload.contentVersion !== this.release || !Array.isArray(promptPayload.parts) ||
-          !promptPayload.parts.length || promptPayload.count !== this.manifest.counts.tasks)
-        throw new Error('练习目录不完整');
-      const parts = await Promise.all(promptPayload.parts.map(ref => this.loader.read(ref)));
-      if (parts.some(part => !Array.isArray(part))) throw new Error('练习目录不完整');
-      const rows = parts.flat();
-      if (rows.length !== promptPayload.count || rows.some(row => !row.prompt || !row.taskRow))
-        throw new Error('练习目录不完整');
-      completePrompts = { projectionVersion: 2, contentVersion: this.release,
-        prompts: rows.map(row => row.prompt), taskRows: rows.map(row => row.taskRow) };
-    }
-    const prompts = expandPromptIndex(completePrompts, this.release);
     if (navigation.projectionVersion === 3) {
       if (!Array.isArray(navigation.sceneParts) || !navigation.sceneParts.length || navigation.scenes != null)
         throw new Error('场景目录不完整');
@@ -77,30 +63,56 @@ export class DataStore {
     }
     const ids = new Set(navigation.scenes.map(scene => scene.id));
     if (ids.size !== this.manifest.counts.scenes || navigation.branches.length !== this.manifest.counts.branches ||
-      prompts.prompts.length !== this.manifest.counts.tasks || prompts.prompts.some(prompt => !ids.has(prompt.sceneId))) {
-      throw new Error('全局内容目录不完整');
-    }
-    if ([2, 3].includes(navigation.projectionVersion)) {
-      const grouped = new Map([...ids].map(id => [id, []]));
-      const promptIds = new Set();
-      for (const prompt of prompts.prompts) {
-        if (promptIds.has(prompt.id)) throw new Error('全局练习目录存在重复');
-        promptIds.add(prompt.id); grouped.get(prompt.sceneId).push(prompt);
-      }
-      for (const scene of navigation.scenes) {
-        const rows = grouped.get(scene.id);
-        if (!rows.length || rows.at(-1).taskMode !== 'transfer' || rows.slice(0, -1).some(row => row.taskMode === 'transfer'))
-          throw new Error('场景练习目录不完整');
-        scene.retrievalPrompts = rows.slice(0, -1);
-        scene.transferPrompt = rows.at(-1);
-      }
-    } else if (navigation.projectionVersion != null) throw new Error('此导航版本暂不支持');
+        ![undefined, 2, 3].includes(navigation.projectionVersion)) throw new Error('全局内容目录不完整');
     this.navigation = navigation;
-    this.prompts = prompts;
+    this.promptPayload = promptPayload;
+    this.prompts = { prompts: [], tasks: [] };
+    // The current directory remains complete, but stories do not need to read
+    // every task in the world. Older payload versions retain eager behavior.
+    if (promptPayload.projectionVersion === 4) {
+      if (promptPayload.contentVersion !== this.release || !Array.isArray(promptPayload.parts) ||
+          !promptPayload.parts.length || promptPayload.count !== this.manifest.counts.tasks)
+        throw new Error('练习目录不完整');
+    } else await this.taskDirectory();
     this.uiWords = uiWords;
     this.sceneDirectory = new Map(navigation.scenes.map(scene => [scene.id, scene]));
     this.branchDirectory = new Map(navigation.branches.map(branch => [branch.id, branch]));
     return this;
+  }
+  async taskDirectory() {
+    return this.once('task-directory', async () => {
+      const payload = this.promptPayload;
+      let complete = payload;
+      if ([3, 4].includes(payload.projectionVersion)) {
+        const parts = await Promise.all(payload.parts.map(ref => this.loader.read(ref)));
+        if (parts.some(part => !Array.isArray(part))) throw new Error('练习目录不完整');
+        const rows = parts.flat();
+        if (payload.contentVersion !== this.release || rows.length !== payload.count ||
+            rows.some(row => !row.prompt || !row.taskRow)) throw new Error('练习目录不完整');
+        complete = { projectionVersion: 2, contentVersion: this.release,
+          prompts: rows.map(row => row.prompt), taskRows: rows.map(row => row.taskRow) };
+      }
+      const prompts = expandPromptIndex(complete, this.release);
+      const grouped = new Map(this.navigation.scenes.map(scene => [scene.id, []]));
+      const promptIds = new Set();
+      if (prompts.prompts.length !== this.manifest.counts.tasks) throw new Error('全局练习目录不完整');
+      for (const prompt of prompts.prompts) {
+        if (promptIds.has(prompt.id) || !grouped.has(prompt.sceneId)) throw new Error('全局练习目录存在重复或无效场景');
+        promptIds.add(prompt.id); grouped.get(prompt.sceneId).push(prompt);
+      }
+      // Validate every scene before committing any projection. Failed loads
+      // cannot silently hide review tasks or be cached as an empty success.
+      for (const rows of grouped.values()) {
+        if (!rows.length || rows.at(-1).taskMode !== 'transfer' || rows.slice(0, -1).some(row => row.taskMode === 'transfer'))
+          throw new Error('场景练习目录不完整');
+      }
+      for (const scene of this.navigation.scenes) {
+        const rows = grouped.get(scene.id);
+        scene.retrievalPrompts = rows.slice(0, -1); scene.transferPrompt = rows.at(-1);
+      }
+      this.prompts = prompts;
+      return prompts;
+    });
   }
   getScene(id) { return this.sceneCache.get(id)?.scene || this.sceneDirectory.get(id); }
   pinScene(id) { this.activeSceneId = id; this.trimScenes(); }
@@ -203,7 +215,7 @@ export class DataStore {
   searchInWorker(docs, query, kind) {
     let initial = false;
     if (!this.searchWorker) {
-      this.searchWorker = new Worker(new URL('./search-worker.mjs?v=pilot-35-0', import.meta.url), { type: 'module' });
+      this.searchWorker = new Worker(new URL('./search-worker.mjs?v=pilot-36-0', import.meta.url), { type: 'module' });
       initial = true;
       this.searchWorker.addEventListener('message', event => {
         const pending = this.searchJobs.get(event.data.id);

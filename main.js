@@ -1,11 +1,11 @@
-import { DataStore } from "./data-store.mjs?v=pilot-35-0";
-import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-35-0";
-import { nextReview, reviewDue } from "./learning.mjs?v=pilot-35-0";
-import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-35-0";
-import { buildTaskRegistry, createTaskResolver, taskCuePolicy, rebuildPractice, calendarDay, dueUnitTracks, choosePracticeTarget, validTimeZone } from "./unit-review-scheduler.mjs?v=pilot-35-0";
-import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-35-0";
+import { DataStore } from "./data-store.mjs?v=pilot-36-0";
+import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-36-0";
+import { nextReview, reviewDue } from "./learning.mjs?v=pilot-36-0";
+import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-36-0";
+import { buildTaskRegistry, createTaskResolver, taskCuePolicy, rebuildPractice, calendarDay, dueUnitTracks, choosePracticeTarget, validTimeZone } from "./unit-review-scheduler.mjs?v=pilot-36-0";
+import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-36-0";
 const DATA_URL = "./data/runtime.json";
-const ASSET_VERSION = "pilot-35-0";
+const ASSET_VERSION = "pilot-36-0";
 function fetchData(path) {
   const url = new URL(path, window.location.href);
   url.searchParams.set("v", ASSET_VERSION);
@@ -192,6 +192,12 @@ async function hydrateScene(id) {
   return bundle.scene;
 }
 
+async function hydrateTaskDirectory() {
+  const directory = await dataStore.taskDirectory();
+  taskRegistry = directory.tasks;
+  refreshTaskResolver();
+}
+
 function refreshTaskResolver() {
   resolveTask = createTaskResolver(taskRegistry, taskHistory);
 }
@@ -308,8 +314,12 @@ async function navigate(page, sceneId = null, { updateUrl = true } = {}) {
     if (page === 'scene') {
       app.innerHTML = '<div class="loading">正在打开场景…</div>';
       await hydrateScene(sceneId);
+    } else if (page === 'review') {
+      app.innerHTML = '<div class="loading">正在打开复习…</div>';
+      await hydrateTaskDirectory();
     } else if (page === 'units') {
       app.innerHTML = '<div class="loading">正在打开表达记录…</div>';
+      await hydrateTaskDirectory();
       unitMetadata = await dataStore.unitMetadata();
       // Metadata remains complete even if its courses are not loaded.
       const complete = new Map(unitMetadata.map(unit => [unit.id, unit]));
@@ -755,14 +765,21 @@ function renderScene() {
     event.currentTarget.textContent = show ? "隐藏全文译文" : "显示全文译文";
     app.querySelectorAll(".text-translation").forEach((detail) => { detail.open = show; });
   });
-  app.querySelector("#beginScene").addEventListener("click", () => {
-    ui.page = "prompt";
-    const firstUntried = promptsFor(scene).findIndex((prompt) => !taskCompleted(prompt.id));
-    ui.promptIndex = firstUntried >= 0 ? firstUntried : 0;
-    ui.revealed = false;
-    ui.support = "none";
-    ui.reviewMode = false;
-    render();
+  app.querySelector("#beginScene").addEventListener("click", async () => {
+    const generation = ++routeGeneration;
+    app.innerHTML = '<div class="loading">正在打开练习…</div>';
+    const begin = async () => {
+      try {
+        await hydrateTaskDirectory();
+        if (generation !== routeGeneration) return;
+        ui.page = "prompt";
+        const firstUntried = promptsFor(scene).findIndex((prompt) => !taskCompleted(prompt.id));
+        ui.promptIndex = firstUntried >= 0 ? firstUntried : 0;
+        ui.revealed = false; ui.support = "none"; ui.reviewMode = false;
+        render();
+      } catch (error) { if (generation === routeGeneration) contentError(error, begin); }
+    };
+    await begin();
   });
   app.querySelector("#nextScene")?.addEventListener("click", () => navigate("scene", nextScene.id));
   app.querySelector("#backHome").addEventListener("click", () => openBranch(branchForScene(scene).id));
@@ -1149,6 +1166,10 @@ try {
       dictionaryContext[scope] = { ...dictionaryContext[scope], ...entries };
   }
   taskRegistry = dataStore.prompts.tasks;
+  // Existing records need the complete current directory before schedule
+  // rebuilding; an untouched browser can read stories without that request.
+  if (practice.attempts.length || Object.keys(practice.reviews).length || Object.keys(practice.unitReviews).length)
+    await hydrateTaskDirectory();
   // Resolve all local original facts before replacing a derived schedule cache.
   // A failed published history shard leaves the original storage untouched.
   await hydrateHistory(practice.attempts);
