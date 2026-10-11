@@ -10,7 +10,15 @@ export function dictionaryContextFor(contexts, sceneId, surface, usageId = null)
     if (!match) continue;
     const [headword, base] = match;
     const usage = base.uses?.find((item) => item.id === usageId);
-    return { ...base, ...usage, headword };
+    const global = contexts?.["*"]?.[headword] || {};
+    const excludedSenseIds = [...new Set([...(global.excludedSenseIds || []), ...(base.excludedSenseIds || []), ...(usage?.excludedSenseIds || [])])];
+    const excludedExamples = {};
+    for (const policy of [global, base, usage]) {
+      for (const [senseId, examples] of Object.entries(policy?.excludedExamples || {})) {
+        excludedExamples[senseId] = [...new Set([...(excludedExamples[senseId] || []), ...examples])];
+      }
+    }
+    return { ...base, ...usage, headword, excludedSenseIds, excludedExamples };
   }
   return null;
 }
@@ -50,6 +58,12 @@ export function usageForOccurrence(contexts, sceneId, surface, sentence, offset)
 }
 
 function hasTarget(example, lemma, surface) {
+  const text = example.toLowerCase();
+  for (const phrase of [lemma, surface].map((value) => value.replaceAll("_", " "))) {
+    if (!/[\s-]/.test(phrase)) continue;
+    const escaped = phrase.replace(/[.*+?^${}()|[\]\\]/g, "\\$&").replace(/\s+/g, "\\s+");
+    if (new RegExp(`(^|[^a-z])${escaped}(?=$|[^a-z])`, "i").test(text)) return true;
+  }
   const forms = new Set([lemma, surface, lemma + "s", lemma + "ed", lemma + "ing"]);
   if (lemma.endsWith("e")) { forms.add(lemma + "d"); forms.add(lemma.slice(0, -1) + "ing"); }
   if (lemma.endsWith("y")) forms.add(lemma.slice(0, -1) + "ies");
@@ -89,7 +103,15 @@ export function dictionaryHtml(entry, sceneId, wordnet, contexts, translations, 
     if (!context?.noMatch && !references.length) return "";
     return `<section class="dictionary-section" aria-label="表达参考资料">${context?.noMatch && context.note ? `<p class="dictionary-guidance">${html(context.note)}</p>` : ""}${references.length ? `<div class="dictionary-links">${references.map(item => `<a href="${html(item.url)}" target="_blank" rel="noopener noreferrer">${html(item.label)} ↗</a>`).join("")}</div>` : ""}</section>`;
   }
-  const record = dictionaryRecordFor(wordnet, surface, context?.dictionaryLemma || context?.headword);
+  const archivalRecord = dictionaryRecordFor(wordnet, surface, context?.dictionaryLemma || context?.headword);
+  const excludedSenseIds = new Set(context?.excludedSenseIds || []);
+  const record = {
+    ...archivalRecord,
+    senses: archivalRecord.senses.filter((sense) => !excludedSenseIds.has(sense.id)).map((sense) => ({
+      ...sense,
+      examples: (sense.examples || []).filter((example) => !(context?.excludedExamples?.[sense.id] || []).includes(example)),
+    })),
+  };
   const senses = record.senses || [];
   const matching = context?.senseId ? senses.find((sense) => sense.id === context.senseId) : null;
   const contrasts = (context?.contrasts || []).map((editorial) => ({ editorial, sense: senses.find((sense) => sense.id === editorial.senseId) })).filter((item) => item.sense);
