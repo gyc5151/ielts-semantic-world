@@ -1501,6 +1501,27 @@ ul.review-list {
   color: #496362;
 }
 
+.response-guidance {
+  display: grid;
+  gap: .65rem;
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: white;
+  overflow-wrap: anywhere;
+}
+
+.response-guidance h3,
+.response-guidance p,
+.response-guidance ul {
+  margin: 0;
+}
+
+.response-guidance ul { padding-left: 1.2rem; }
+.response-guidance li + li { margin-top: .4rem; }
+.response-guidance summary { cursor: pointer; }
+.response-guidance details[open] p { margin-top: .65rem; }
+
 .source-details {
   padding: 13px 17px;
   border: 1px solid var(--line);

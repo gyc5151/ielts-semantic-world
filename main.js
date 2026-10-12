@@ -1,11 +1,11 @@
-import { DataStore } from "./data-store.mjs?v=pilot-41-0";
-import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-41-0";
-import { nextReview, reviewDue } from "./learning.mjs?v=pilot-41-0";
-import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-41-0";
-import { buildTaskRegistry, createTaskResolver, taskCuePolicy, rebuildPractice, calendarDay, dueUnitTracks, choosePracticeTarget, validTimeZone } from "./unit-review-scheduler.mjs?v=pilot-41-0";
-import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-41-0";
+import { DataStore } from "./data-store.mjs?v=pilot-42-1";
+import { dictionaryHtml, dictionaryContextFor, sentenceAt, usageForOccurrence } from "./dictionary.mjs?v=pilot-42-1";
+import { nextReview, reviewDue } from "./learning.mjs?v=pilot-42-1";
+import { EVIDENCE_LABELS, unitSummary, normalisePractice, mergePractice } from "./unit-learning.mjs?v=pilot-42-1";
+import { buildTaskRegistry, createTaskResolver, taskCuePolicy, rebuildPractice, calendarDay, dueUnitTracks, choosePracticeTarget, validTimeZone } from "./unit-review-scheduler.mjs?v=pilot-42-1";
+import { speakSentence, mountRecorder, stopVoicePractice } from "./voice-practice.mjs?v=pilot-42-1";
 const DATA_URL = "./data/runtime.json";
-const ASSET_VERSION = "pilot-41-0";
+const ASSET_VERSION = "pilot-42-1";
 function fetchData(path) {
   const url = new URL(path, window.location.href);
   url.searchParams.set("v", ASSET_VERSION);
@@ -140,7 +140,8 @@ function allPrompts() {
 function assertWordCoverage(scene) {
   const passages = [scene.title, scene.goal, scene.situation, scene.easySummary || "", ...unitsForScene(scene).flatMap((u) => [u.form, u.example]), ...(scene.memoryNodes || []).flatMap((n) => [n.object, n.cue])];
   for (const prompt of promptsFor(scene)) {
-    passages.push(prompt.function, prompt.cue, prompt.feedback, prompt.draft || "", ...(prompt.acceptableAnswers || []));
+    passages.push(prompt.function, prompt.cue, prompt.feedback, prompt.feedbackZh || "",
+      prompt.answerRangeZh || "", ...(prompt.checks || []), prompt.draft || "", ...(prompt.acceptableAnswers || []));
   }
   const missing = new Set();
   for (const passage of passages) {
@@ -851,6 +852,20 @@ function termsForPrompt(scene, prompt) {
   return (scene.terms || []).filter((item) => names.has(String(item.term).toLowerCase()));
 }
 
+function feedbackGuidanceHtml(scene, prompt, translated) {
+  const checks = Array.isArray(prompt.checks)
+    ? prompt.checks.filter((item) => typeof item === "string" && item.trim()) : [];
+  const explanation = prompt.feedbackZh || translated?.feedback || prompt.feedback || "";
+  const alternatives = prompt.answerRangeZh || translated?.answerRangeZh || "";
+  if (!checks.length && !explanation && !alternatives) return "";
+  return `<section class="response-guidance" aria-label="表达说明">
+    <h3>表达说明</h3>
+    ${checks.length ? `<ul>${checks.map((item) => `<li>${annotatedEnglish(item, scene)}</li>`).join("")}</ul>` : ""}
+    ${explanation ? `<p>${annotatedEnglish(explanation, scene)}</p>` : ""}
+    ${alternatives ? `<details><summary>其他说法</summary><p>${annotatedEnglish(alternatives, scene)}</p></details>` : ""}
+  </section>`;
+}
+
 function renderFeedback(scene, prompt, attempt) {
   const answers = prompt.acceptableAnswers || prompt.sampleAnswers || [];
   const terms = termsForPrompt(scene, prompt);
@@ -862,7 +877,8 @@ function renderFeedback(scene, prompt, attempt) {
       <h2>参考表达</h2>
       
       <div class="your-answer"><span class="meta">${attempt?.responseMode === "spoken" ? "你的口头回答" : "你的原答"}</span><p>${attempt?.response ? escapeHtml(attempt.response) : "（这次暂时想不出）"}</p>${sessionRecordings.has(attempt?.id) ? `<audio class="feedback-recording" controls src="${escapeHtml(sessionRecordings.get(attempt.id))}" aria-label="回听提交前的口头回答"></audio>` : ""}</div>
-      <div class="sample-answers">${answers.map((answer, index) => `<div><p lang="en">“${annotatedEnglish(answer, scene)}”</p>${textTranslation(translated?.acceptableAnswers?.[index], "参考表达中文")}</div>`).join("")}</div>
+      <div class="sample-answers">${answers.map((answer, index) => `<div><p lang="en">“${annotatedEnglish(answer, scene)}”</p>${textTranslation(prompt.acceptableAnswersZh?.[index] ?? translated?.acceptableAnswers?.[index], "参考表达中文")}</div>`).join("")}</div>
+      ${feedbackGuidanceHtml(scene, prompt, translated)}
       ${unitAssessmentHtml(scene, prompt, attempt)}
       ${prompt.unitIds?.length ? `<section class="revision-panel"><label for="revisionInput">修改回答</label><textarea id="revisionInput" rows="3" class="answer-input" placeholder="Your answer…"></textarea><button type="button" class="secondary-btn" id="saveRevision">保存修订</button><p role="status" id="revisionStatus"></p>${attempt?.revisions?.length ? `<details><summary>已保存 ${attempt.revisions.length} 次修订</summary>${attempt.revisions.map((r) => `<p>${escapeHtml(r.response)}</p>`).join("")}</details>` : ""}</section>` : ""}
       ${terms.length ? `<details class="source-details"><summary>表达与来源</summary><div class="term-list">${terms.map((term) => `<div class="term-item"><span class="source-pill ${String(term.kind || "").toLowerCase()}">${escapeHtml(term.kind === "BRG" ? "SRC · BRG" : (term.kind || "候选"))}</span><strong>${escapeHtml(term.term)}</strong><span>${escapeHtml(term.sourceLabel || "")}</span>${term.sourceUrl ? `<a href="${escapeHtml(term.sourceUrl)}" target="_blank" rel="noopener noreferrer">来源 ↗</a>` : ""}${term.sourceRef ? `<small>${escapeHtml(term.sourceRef)}</small>` : ""}</div>`).join("")}</div></details>` : ""}
